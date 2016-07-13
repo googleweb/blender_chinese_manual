@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Inverse Kinematics" href="index.html"/>
+        <link rel="next" title="Spline IK" href="spline_ik.html"/>
+        <link rel="prev" title="Inverse Kinematics" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">Armatures</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Posing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing.html">Editing Poses</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Inverse Kinematics</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spline_ik.html">Spline IK</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pose_library.html">Pose Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization.html">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Posing</a> &raquo;</li>
+      
+          <li><a href="index.html">Inverse Kinematics</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/posing/inverse_kinematics/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>IK simplifies the animation process,
+and makes it possible to make more advanced animations with lesser effort.</p>
+<p>IK allows you to position the last bone in a bone chain and the other bones are positioned
+automatically. This is like how moving someone&#8217;s finger would cause his arm to follow it.
+By normal posing techniques, you would have to start from the root bone,
+and set bones sequentially till you reach the tip bone: When each parent bone is moved,
+its child bone would inherit its location and rotation.
+Thus making tiny precise changes in poses becomes harder farther down the chain,
+as you may have to adjust all the parent bones first.</p>
+<p>This effort is effectively avoided by use of IK.</p>
+<div class="section" id="automatic-ik">
+<h2>Automatic IK<a class="headerlink" href="#automatic-ik" title="Permalink to this headline">¶</a></h2>
+<p>Automatic IK is a tool for quick posing, it can be enabled in the tool shelf in the 3D视图,
+when in pose mode. When the Auto IK option is enabled, translating a bone will activate
+inverse kinematics and rotate the parent bone, and the parent’s parent, and so on, to
+follow the selected bone. The IK chain can only extend from a child to a parent bone
+if the child is <em>connected</em> to it.</p>
+<p>The length of the chain is increased
+(if there is a connected parent available to add to it)
+with <code class="kbd docutils literal"><span class="pre">Ctrl-PageUp</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-WheelDown</span></code>,
+and decreased with <code class="kbd docutils literal"><span class="pre">Ctrl-PageDown</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-WheelUp</span></code>.
+However, the initial chain length is 0, which effectively
+means follow the connections to parent bones as far as possible, with no length limit.
+So pressing <code class="kbd docutils literal"><span class="pre">Ctrl-PageUp</span></code> the first time sets the chain length to 1 (move only the selected bone),
+and pressing <code class="kbd docutils literal"><span class="pre">Ctrl-PageDown</span></code> at this point sets it back to 0 (unlimited) again.
+Thus, you have to press <code class="kbd docutils literal"><span class="pre">Ctrl-PageUp</span></code> <em>more than once</em> from the initial state
+to set a finite chain length greater than 1.</p>
+<p>This is a more limited feature than using an IK constraint, which can be configured,
+but it can be useful for quick posing.</p>
+</div>
+<div class="section" id="ik-contraints">
+<h2>IK Contraints<a class="headerlink" href="#ik-contraints" title="Permalink to this headline">¶</a></h2>
+<p>IK is mostly done with bone constraints.
+They work by the same method but offer more choices and settings.
+Please refer to these pages for detail about the settings for the contraints:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../constraints/tracking/ik_solver.html"><span class="doc">IK Solver</span></a></li>
+<li><a class="reference internal" href="../../constraints/tracking/spline_ik.html"><span class="doc">Spline IK</span></a></li>
+</ul>
+</div>
+<div class="section" id="armature-ik-panel">
+<h2>Armature IK Panel<a class="headerlink" href="#armature-ik-panel" title="Permalink to this headline">¶</a></h2>
+<p>This panel is used to select the IK Solver type for the armature. <em>Standard</em> or <em>iTaSC</em>.</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/ik_armature_ik_panel.jpg" src="../../../_images/ik_armature_ik_panel.jpg" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Properties ‣ Armature ‣ Inverse Kinematics Panel</span></span></p>
+</div>
+<p>Most the time people will use the <em>Standard</em> IK solver.
+There is some documentation for the <em>iTaSC</em> &#8220;instantaneous Task Specification using
+Constraints&#8221; IK solver here.</p>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver">Robot IK Solver</a></p>
+</div>
+<div class="section" id="bone-ik-panel">
+<h2>Bone IK Panel<a class="headerlink" href="#bone-ik-panel" title="Permalink to this headline">¶</a></h2>
+<p>This panel is used to control how the <em>Pose Bones</em> work in the IK chain.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/ik_bone_ik_panel.jpg" src="../../../_images/ik_bone_ik_panel.jpg" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Properties ‣ Bone ‣ Inverse Kinematics Panel</span></span></p>
+</div>
+<dl class="docutils">
+<dt>Lock</dt>
+<dd>Disallow movement around the axis.</dd>
+<dt>Stiffness</dt>
+<dd>Stiffness around the axis. Influence disabled if using <em>Lock</em>.</dd>
+<dt>Limit</dt>
+<dd>Limit movement around the axis.</dd>
+<dt>Stretch</dt>
+<dd>Stretch influence to IK target. 0.000 is the same as disabled.</dd>
+</dl>
+</div>
+<div class="section" id="arm-rig-example">
+<h2>Arm Rig 例子<a class="headerlink" href="#arm-rig-example" title="Permalink to this headline">¶</a></h2>
+<p>This arm uses two bones to overcome the twist problem for the forearm.
+IK locking is used to stop the forearm from bending,
+but the forearm can still be twisted manually by pressing <code class="kbd docutils literal"><span class="pre">R-Y-Y</span></code> in <em>姿态模式</em>,
+or by using other constraints.</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/ik_arm_example.jpg" src="../../../_images/ik_arm_example.jpg" />
+<p class="caption"><span class="caption-text">IK Arm 例子.</span></p>
+</div>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/File:IK_Arm_例子.blend">IK Arm 例子.</a></p>
+<p>Note that, if a <em>Pole Target</em> is used, IK locking will not work on the root boot.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spline_ik.html" class="btn btn-neutral float-right" title="Spline IK" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Inverse Kinematics" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

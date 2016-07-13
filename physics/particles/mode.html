@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>粒子模式 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Particles" href="index.html"/>
+        <link rel="next" title="Smoke Simulation" href="../smoke/index.html"/>
+        <link rel="prev" title="Texture Influence" href="texture_influence.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physic-types">Physic Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Particles</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emission.html">Particle Emission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="physics/index.html">Particle 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization.html">Particle Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache_and_bake.html">Cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hair/index.html">Hair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="children.html">Children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertexgroups.html">Vertex Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">粒子模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Particles</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emission.html">Particle Emission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="physics/index.html">Particle 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization.html">Particle Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache_and_bake.html">Cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hair/index.html">Hair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="children.html">Children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertexgroups.html">Vertex Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">粒子模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Particles</a> &raquo;</li>
+      
+    <li>粒子模式</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/particles/mode.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="particle-mode">
+<h1>粒子模式<a class="headerlink" href="#particle-mode" title="Permalink to this headline">¶</a></h1>
+<p>Using <em>粒子模式</em> you can edit the key-points (Keyframes)
+and paths of <em>Baked</em>
+<a class="reference internal" href="hair/index.html"><span class="doc">Hair</span></a>,
+<a class="reference internal" href="index.html"><span class="doc">Particle</span></a>,
+<a class="reference internal" href="../cloth/index.html"><span class="doc">Cloth</span></a>, and
+<a class="reference internal" href="../soft_body/index.html"><span class="doc">Soft Body</span></a> simulations.
+(You can also edit and style hair before baking).</p>
+<p>Since working in particle mode is pretty easy and very similar to working with vertices in the
+3D视图, we will show how to set up a particle system and then give a reference of the
+various functions.</p>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Only Frames Baked to Memory are Editable!</p>
+<p class="last">If you cannot edit the particles, check that you are not baking to a
+<a class="reference internal" href="cache_and_bake.html"><span class="doc">Disk Cache</span></a>.</p>
+</div>
+<div class="section" id="setup-for-hair-particles">
+<h3>Setup for Hair Particles<a class="headerlink" href="#setup-for-hair-particles" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Create a <em>Hair</em> particle system.</li>
+<li>Give it an initial velocity in the <em>Normal</em> direction.</li>
+<li>Create a simulation</li>
+<li>Check the <em>Hair Dynamics</em> box.</li>
+</ol>
+<div class="figure" id="id1">
+<img alt="../../_images/particle_mode.jpg" src="../../_images/particle_mode.jpg" />
+<p class="caption"><span class="caption-text">Editing hair strands in 粒子模式.</span></p>
+</div>
+<div class="figure" id="id2">
+<img alt="../../_images/physics_particle_mode_example.gif" src="../../_images/physics_particle_mode_example.gif" />
+<p class="caption"><span class="caption-text">Editing a baked particle simulation&#8217;s particle paths in 粒子模式.</span></p>
+</div>
+</div>
+<div class="section" id="setup-for-particle-cloth-and-soft-body-simulations">
+<h3>Setup for Particle, Cloth, and Soft Body Simulations<a class="headerlink" href="#setup-for-particle-cloth-and-soft-body-simulations" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Use <em>Emitter</em> particles, or a cloth/soft-body simulation</li>
+<li>Create a simulation - set up objects and or emitters,
+set your time range (use a small range if you are just starting out and experimenting),
+set up the simulation how you want it, using <code class="kbd docutils literal"><span class="pre">Alt-A</span></code> to preview it.</li>
+</ol>
+</div>
+<div class="section" id="bake-the-simulation">
+<h3>Bake the Simulation<a class="headerlink" href="#bake-the-simulation" title="Permalink to this headline">¶</a></h3>
+<p>Once you are happy with the general simulation, <a class="reference internal" href="cache_and_bake.html"><span class="doc">bake</span></a>
+the simulation from object mode. The simulation must be baked to enable editing.</p>
+</div>
+<div class="section" id="edit-the-simulation">
+<h3>Edit the Simulation<a class="headerlink" href="#edit-the-simulation" title="Permalink to this headline">¶</a></h3>
+<p>Switch to <em>Particle Edit</em> from the <em>Mode dropdown menu</em> in the bottom menu bar
+of the <em>3D视图</em> to edit the particle&#8217;s paths/Keyframes.
+You may need to press <code class="kbd docutils literal"><span class="pre">T</span></code> from within the 3D视图 to see the <em>Particle Edit</em> panel.
+Move to the frame you want to edit and use the various <em>Particle Edit</em> tools to edit your simulation.
+Work slowly, previewing your changes with <code class="kbd docutils literal"><span class="pre">Alt-A</span></code>, and save often so that you can go back to the previous
+version should something happen, or that you do not like the latest changes you have made.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>To be able to clearly see what you are working on:</p>
+<ol class="last arabic simple">
+<li>Open the <em>Particle Edit Properties</em> panel with <code class="kbd docutils literal"><span class="pre">N</span></code>.</li>
+<li>Select <em>Point select mode</em> (<a class="reference internal" href="../../_images/icons_hair-points.png"><img alt="hair-point-button" src="../../_images/icons_hair-points.png" style="width: 1.1em;" /></a>) in the header of the 3D视图.
+This will display key points along the particle path.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="selecting">
+<h2>Selecting<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Single: <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</li>
+<li>All: <code class="kbd docutils literal"><span class="pre">A</span></code>.</li>
+<li>Linked: Move the mouse over a keypoint and press <code class="kbd docutils literal"><span class="pre">L</span></code>.</li>
+<li>Border select: <code class="kbd docutils literal"><span class="pre">B</span></code>.</li>
+<li>First/last: <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Select First / Select Last</span>.</li>
+</ul>
+<p>You may also use the <em>Select</em> Menu.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Selections</p>
+<p>Selections are extremely useful for modifying only the particles that you want.
+Hover over a particle path and press <code class="kbd docutils literal"><span class="pre">L</span></code> to link-select it,
+hover over the next and press <code class="kbd docutils literal"><span class="pre">L</span></code> to add that path to the selection.
+To remove a path, hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> and press <code class="kbd docutils literal"><span class="pre">L</span></code>. To Deselect all press <code class="kbd docutils literal"><span class="pre">A</span></code>.</p>
+<p class="last">The method to select individual points is the same as in edit mode.
+<code class="kbd docutils literal"><span class="pre">RMB</span></code> to select, <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> to add/remove a point from the selection.</p>
+</div>
+<div class="section" id="select-modes">
+<h3>Select Modes<a class="headerlink" href="#select-modes" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/particle_select-display-mode.jpg"><img alt="../../_images/particle_select-display-mode.jpg" src="../../_images/particle_select-display-mode.jpg" style="width: 640px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Path</dt>
+<dd>No keypoints are visible, you can select/deselect only all particles.</dd>
+<dt>Point</dt>
+<dd>You see all of the keypoints.</dd>
+<dt>Tip</dt>
+<dd>You can see and edit (including the brushes) only the tip of the particles, i.e. the last keypoint.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="brush">
+<h2>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h2>
+<p>With the buttons you can select the type of &#8220;Comb&#8221; utility you want to use.
+Below the brush types, their settings appear:</p>
+<dl class="docutils">
+<dt>None</dt>
+<dd>No special tool, just edit the keypoints as &#8220;normal&#8221; vertices.</dd>
+<dt>Comb</dt>
+<dd>Moves the keypoints (similar to &#8220;proportional editing&#8221;).</dd>
+<dt>Smooth</dt>
+<dd>Parallels visually adjacent segments.</dd>
+<dt>Add</dt>
+<dd><p class="first">Adds new particles.</p>
+<dl class="last docutils">
+<dt>Count</dt>
+<dd>The number of new particles per step.</dd>
+<dt>Interpolate</dt>
+<dd>Interpolate the shape of new hairs from existing ones.</dd>
+<dt>Steps</dt>
+<dd>Amount of brush steps</dd>
+<dt>Keys</dt>
+<dd>How many keys to make new particles with.</dd>
+</dl>
+</dd>
+<dt>Length</dt>
+<dd>Scales the segments, so it makes the hair longer with <em>Grow</em> or shorter with <em>Shrink</em>.</dd>
+<dt>Puff</dt>
+<dd><p class="first">Rotates the hair around it&#8217;s first keypoint (root).
+So it makes the hair stand up with <em>Add</em> or lay down with <em>Sub</em>.</p>
+<dl class="last docutils">
+<dt>Puff Volume</dt>
+<dd>Apply puff to unselected end-points, (helps maintain hair volume when puffing root)</dd>
+</dl>
+</dd>
+<dt>Cut</dt>
+<dd>Scales the segments until the last keypoint reaches the brush.</dd>
+<dt>Weight</dt>
+<dd>This is especially useful for softbody animations, because the weight defines the softbody <em>Goal</em>.
+A keypoint with a weight of 1 will not move at all,
+a keypoint with a weight of 0 subjects fully to softbody animation.
+This value is scaled by the <em>GMin</em> - <em>GMax</em> range of softbody goals...</dd>
+</dl>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Common Options:</dt>
+<dd><dl class="first last docutils">
+<dt>Radius</dt>
+<dd><p class="first">Set the radius if the brush.</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Brush Size</p>
+<p class="last">Press <code class="kbd docutils literal"><span class="pre">F</span></code> to resize the brush while working.</p>
+</div>
+</dd>
+<dt>Strength</dt>
+<dd>Set the strength of the brush effect (not for Add brush).</dd>
+<dt>Add/Sub Grow/Shrink</dt>
+<dd>Sets the brush to add the effect or reverse it.</dd>
+</dl>
+</dd>
+<dt>Deflect Emitter,</dt>
+<dd><p class="first">Do not move keypoints through the emitting mesh.</p>
+<dl class="last docutils">
+<dt>Distance</dt>
+<dd>The distance to keep from the Emitter.</dd>
+</dl>
+</dd>
+<dt>Keep</dt>
+<dd><dl class="first last docutils">
+<dt>Length</dt>
+<dd>Keep the length of the segments between the keypoints when combing or smoothing the hair.
+This is done by moving all the other keypoints.</dd>
+<dt>Root</dt>
+<dd>Keep first key unmodified, so you cannot transplant hair.</dd>
+</dl>
+</dd>
+<dt>X Mirror</dt>
+<dd>Enable mirror editing across the local x axis.</dd>
+<dt>Draw</dt>
+<dd><dl class="first last docutils">
+<dt>Path Steps</dt>
+<dd>Drawing steps, sets the smoothness of the drawn path.</dd>
+<dt>Show Children</dt>
+<dd>Draws the children of the particles too.
+This allows to fine tune the particles and see their effects on the result,
+but it may slow down your system if you have many children.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="editing">
+<h2>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Beware of Undo!</p>
+<p class="last">Using <em>Undo</em> in <em>粒子模式</em> can have strange results. Remember to save often!</p>
+</div>
+<div class="section" id="moving-keypoints-or-particles">
+<h3>Moving keypoints or particles<a class="headerlink" href="#moving-keypoints-or-particles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>To move selected keypoints press <code class="kbd docutils literal"><span class="pre">G</span></code>, or use one of the various other methods to grab vertices.</li>
+<li>To move a particle root you have to turn off <em>Keep</em> <em>Root</em> in the Tool Shelf.</li>
+<li>You can do many of the things like with vertices, including scaling,
+rotating and removing (complete particles or single keys).</li>
+<li>You may not duplicate or extrude keys or particles,
+but you can subdivide particles which adds new keypoints
+<code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Subdivide`or :kbd:`Numpad2</span>.</li>
+<li>Alternatively you can rekey a particle
+<code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Rekey</span> or <code class="kbd docutils literal"><span class="pre">Numpad1</span></code> and choose the number of keys.</li>
+</ul>
+<p>How smoothly the hair and particle paths are displayed depends on the <em>Path Steps</em>
+setting in the Tool Shelf. Low settings produce blocky interpolation between points,
+while high settings produce a smooth curve.</p>
+</div>
+<div class="section" id="mirroring-particles">
+<h3>Mirroring Particles<a class="headerlink" href="#mirroring-particles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>If you want to create an X-Axis symmetrical haircut you have to do following steps:
+- Select all particles with <code class="kbd docutils literal"><span class="pre">A</span></code>.
+- Mirror the particles with <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code>, or use the <span class="menuselection">Particle ‣ Mirror</span> menu.
+- Turn on <em>X-Axis Mirror Editing</em> in the <em>Particle</em> menu.</li>
+</ul>
+<p>It may happen that after mirroring two particles occupy nearly the same place.
+Since this would be a waste of memory and rendertime,
+you can <em>Remove doubles</em> either from the <em>Specials</em> <code class="kbd docutils literal"><span class="pre">W</span></code>
+or the <em>Particle</em> menu.</p>
+</div>
+<div class="section" id="hiding-unhiding">
+<h3>Hiding/Unhiding<a class="headerlink" href="#hiding-unhiding" title="Permalink to this headline">¶</a></h3>
+<p>Hiding and unhiding of particles works similar as with vertices in the 3D视图.
+Select one or more keypoints of the particle you want to hide and press <code class="kbd docutils literal"><span class="pre">H</span></code>.
+The particle in fact doesn&#8217;t vanish, only the key points.</p>
+<p>Hidden particles (i.e. particles whose keypoints are hidden)
+do not react on the various brushes. But:</p>
+<p>If you use <em>Mirror Editing</em> even particles with hidden keypoints may be moved,
+if their mirrored counterpart is moved.</p>
+<p>To un-hide all hidden particles press <code class="kbd docutils literal"><span class="pre">Alt-H</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../smoke/index.html" class="btn btn-neutral float-right" title="Smoke Simulation" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="texture_influence.html" class="btn btn-neutral" title="Texture Influence" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

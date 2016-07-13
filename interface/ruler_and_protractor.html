@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ruler and Protractor &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="用户界面" href="index.html"/>
+        <link rel="next" title="Grease Pencil" href="grease_pencil/index.html"/>
+        <link rel="prev" title="Undo and Redo" href="undo_and_redo.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#editor-controls">Editor Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">界面 Controls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tools">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="undo_and_redo.html">Undo and Redo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ruler and Protractor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shortcuts">Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="grease_pencil/index.html">Grease Pencil</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">用户界面</a> &raquo;</li>
+      
+    <li>Ruler and Protractor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/interface/ruler_and_protractor.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ruler-and-protractor">
+<h1>Ruler and Protractor<a class="headerlink" href="#ruler-and-protractor" title="Permalink to this headline">¶</a></h1>
+<p>The ruler can be accessed from the toolshelf,
+once activated you can use the ruler to measure lengths and angles in the scene.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/editors_3dview_ruler_example.jpg"><img alt="../_images/editors_3dview_ruler_example.jpg" src="../_images/editors_3dview_ruler_example.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">例子 of the ruler and protractor.</span></p>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../_images/editors_3dview_ruler_thickness.jpg"><img alt="../_images/editors_3dview_ruler_thickness.jpg" src="../_images/editors_3dview_ruler_thickness.jpg" style="width: 592px;" /></a>
+<p class="caption"><span class="caption-text">例子 using the ruler to measure thickness.</span></p>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../_images/editors_3dview_ruler_basic.jpg" src="../_images/editors_3dview_ruler_basic.jpg" />
+</div>
+<p>Here are common steps for using the ruler.</p>
+<ul class="simple">
+<li>Activate the Ruler from the toolshelf.</li>
+<li>Click and drag in the view-port to define the initial start/end point for the ruler.</li>
+<li>Orbit the view and click on either end of the ruler to re-position it.
+Holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> enables snap to elements.</li>
+<li>Click on the middle to measure angles.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Return</span></code> to store the ruler for later use or <code class="kbd docutils literal"><span class="pre">Esc</span></code> to cancel.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Editing operations can be used while the ruler is running,
+however, tools like the knife cannot be used at the same time.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unit settings and scale from the scene are used for displaying dimensions.</p>
+</div>
+</div>
+<div class="section" id="shortcuts">
+<h2>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> Adds new ruler.</li>
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> Drag end-points to place them, Hold Ctrl to snap, Hold Shift to measure thickness.</li>
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> Drag center-point to measure angles, drag out of the view to convert back to a ruler.</li>
+<li><code class="kbd docutils literal"><span class="pre">Delete</span></code> Deletes the ruler.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code> Copies the rulers value to the clipboard.</li>
+<li><code class="kbd docutils literal"><span class="pre">Esc</span></code> Exits</li>
+<li><code class="kbd docutils literal"><span class="pre">Return</span></code> Saves the rulers for the next time the tool is activated.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="grease_pencil/index.html" class="btn btn-neutral float-right" title="Grease Pencil" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="undo_and_redo.html" class="btn btn-neutral" title="Undo and Redo" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

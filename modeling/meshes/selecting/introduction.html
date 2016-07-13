@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Selecting" href="index.html"/>
+        <link rel="next" title="Basic Selection" href="basics.html"/>
+        <link rel="prev" title="Selecting" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_structures.html">Mesh Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Selecting</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics.html">Basic Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="advanced.html">高级应用 Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edges.html">Selecting Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">Selecting Faces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="index.html">Selecting</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/meshes/selecting/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>There are many ways to select elements, and it depends on what <em>Mesh Select Mode</em>
+you are in as to what selection tools are available.
+First we will go through these modes and after that a look is taken at basic selection tools.</p>
+<div class="section" id="selection-mode">
+<h2>Selection Mode<a class="headerlink" href="#selection-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-mode-header-widgets">
+<h3>Select Mode Header Widgets<a class="headerlink" href="#select-mode-header-widgets" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">3D视图 Header ‣ Select Mode</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></code></div>
+</div>
+</div>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-mode-buttons.jpg"><img alt="../../../_images/modeling-meshes-selection-mode-buttons.jpg" src="../../../_images/modeling-meshes-selection-mode-buttons.jpg" style="width: 190px;" /></a>
+<p class="caption"><span class="caption-text">编辑模式 selection buttons.</span></p>
+</div>
+<p>In <em>编辑模式</em> there are three different selection modes.
+You can enter the different modes by selecting one of the three buttons in the header.</p>
+<dl class="docutils">
+<dt>Vertices</dt>
+<dd><p class="first">In this mode vertices are drawn as points.</p>
+<p class="last">Selected vertices are drawn in orange, unselected vertices in black,
+and the active or last selected vertex in white.</p>
+</dd>
+<dt>Edges</dt>
+<dd><p class="first">In this mode the vertices are not drawn.</p>
+<p class="last">Instead the selected edges are drawn in orange,
+unselected edges black, and the active or last selected edge in white.</p>
+</dd>
+<dt>Faces</dt>
+<dd><p class="first">In this mode the faces are drawn with a selection point in the middle which is used for selecting a face.</p>
+<p class="last">Selected faces and their selection point are drawn in orange,
+unselected faces are drawn in black, and the active or last selected face is highlighted in white.</p>
+</dd>
+</dl>
+<p>When using these button, you can make use of modifier keys, see: <a class="reference internal" href="#switching-select-mode">Switching Select Mode</a>.</p>
+<p>Almost all tools are available in all three mesh selection modes.
+So you can <em>Rotate</em>, <em>Scale</em>, <em>Extrude</em>, etc. in all modes.
+Of course rotating and scaling a <em>single</em> vertex will not do anything useful
+<em>(without setting the 轴心点 to another location)</em>,
+so some tools are more or less applicable in some modes.</p>
+</div>
+<div class="section" id="switching-select-mode">
+<h3>Switching Select Mode<a class="headerlink" href="#switching-select-mode" title="Permalink to this headline">¶</a></h3>
+<p>When switching modes in an &#8220;ascendant&#8221; way (i.e. from simpler to more complex), from
+<em>Vertices</em> to <em>Edges</em> and from <em>Edges</em> to <em>Faces</em>,
+the selected parts will still be selected if they form a complete element in the new mode.</p>
+<p>For example, if all four edges in a face are selected,
+switching from <em>Edges</em> mode to <em>Faces</em> mode will keep the face selected.
+All selected parts that do not form a complete set in the new mode will be unselected.</p>
+<p>Hence, switching in a &#8220;descendant&#8221; way (i.e. from more complex to simpler),
+all elements defining the &#8220;high-level&#8221; element (like a face) will be selected
+(the four vertices or edges of a quadrangle, for example).</p>
+<div class="section" id="multiple-selection-modes">
+<h4>Multiple Selection Modes<a class="headerlink" href="#multiple-selection-modes" title="Permalink to this headline">¶</a></h4>
+<p>By holding <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> when selecting a selection mode,
+you can enable multiple <em>Selection Modes</em> at once.</p>
+<p>This allows you to quickly select Vertices/Edges/Faces,
+without first having to switch modes.</p>
+</div>
+<div class="section" id="expanding-selection-modes">
+<h4>Expanding Selection Modes<a class="headerlink" href="#expanding-selection-modes" title="Permalink to this headline">¶</a></h4>
+<p>By holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> when selecting a higher selection mode,
+all elements touching the current selection will be added,
+even if the selection does not form a complete higher element.</p>
+<p>See Fig. <a class="reference internal" href="#fig-mesh-select-intro-selection-modes"><span class="std std-ref">Selection Modes.</span></a> for examples of the different modes.</p>
+<table border="1" class="docutils" id="id2">
+<span id="fig-mesh-select-intro-selection-modes"></span><caption><span class="caption-text">Selection Modes.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/editmodeverticemodeexample.jpg"><img alt="../../../_images/editmodeverticemodeexample.jpg" src="../../../_images/editmodeverticemodeexample.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Vertices mode example.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/editmodeedgemodeexample.jpg"><img alt="../../../_images/editmodeedgemodeexample.jpg" src="../../../_images/editmodeedgemodeexample.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edges mode example.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/editmodefacemodeexample.jpg"><img alt="../../../_images/editmodefacemodeexample.jpg" src="../../../_images/editmodefacemodeexample.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Faces mode example.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/editmodemixedmodeexample.jpg"><img alt="../../../_images/editmodemixedmodeexample.jpg" src="../../../_images/editmodemixedmodeexample.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Mixed mode example.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="selection-tools">
+<h2>Selection Tools<a class="headerlink" href="#selection-tools" title="Permalink to this headline">¶</a></h2>
+<p>The select menu in edit mode contains tools for selecting components.
+These are described in more detail in the following pages.</p>
+<dl class="docutils">
+<dt>Border Select <code class="kbd docutils literal"><span class="pre">B</span></code></dt>
+<dd>Enables a rectangular region for selection</dd>
+<dt>Circle Select <code class="kbd docutils literal"><span class="pre">C</span></code></dt>
+<dd>Enables a circular shaped region for selection</dd>
+<dt>(De)select All <code class="kbd docutils literal"><span class="pre">A</span></code></dt>
+<dd>Select all or none of the mesh components.</dd>
+<dt>Invert Selection <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></dt>
+<dd>Selects all geometry that are not selected, and deselect currently selected components.</dd>
+<dt>Select Random</dt>
+<dd>Selects a random group of vertices, edges, or faces, based on a percentage value.</dd>
+<dt>Checker Deselect</dt>
+<dd>Deselect alternating faces, to create a checker like pattern.</dd>
+<dt>Select Sharp Edges</dt>
+<dd>This option will select all edges that are between two faces forming an angle less than a given value,
+which is asked you <em>via</em> a small pop-up menu.
+The lower is this angle limit, the sharper will be the selected edges.
+At 180, <strong>all</strong> <a class="reference internal" href="../../../glossary/index.html#term-manifold"><span class="xref std std-term">manifold</span></a> edges will be selected.</dd>
+<dt>Linked Flat Faces <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-Alt-F</span></code></dt>
+<dd>Select connected faces based on a threshold of the angle between them.
+This is useful for selecting faces that are planar.</dd>
+<dt>Interior Faces</dt>
+<dd>Select faces where all edges have more than two faces.</dd>
+<dt>Side of Active</dt>
+<dd>Selects all data on the mesh in a single axis</dd>
+<dt>Select Faces by Sides</dt>
+<dd>Selects all faces that have a specified number of edges.</dd>
+<dt>Non Manifold <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-Alt-M</span></code></dt>
+<dd>Selects <a class="reference internal" href="../../../glossary/index.html#term-non-manifold"><span class="xref std std-term">non-manifold</span></a> geometry. See <a class="reference internal" href="advanced.html"><span class="doc">Mesh 高级应用 Selection</span></a>.</dd>
+<dt>Loose</dt>
+<dd>Select all vertices or edges that do not form part of a face.</dd>
+<dt>Similar <code class="kbd docutils literal"><span class="pre">Shift-G</span></code></dt>
+<dd><p class="first">Select geometry based on how similar certain properties are to it.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The items shown in the menu depend on the <a class="reference internal" href="#selection-mode">Selection Mode</a>.</p>
+</div>
+</dd>
+<dt>More <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code></dt>
+<dd>Propagates selection by adding geometry that are adjacent to selected elements.</dd>
+<dt>Less <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></dt>
+<dd>Deselects geometry that form the bounds of the current selection</dd>
+<dt>Mirror</dt>
+<dd>Select mesh items at the mirrored location.</dd>
+<dt>Pick Linked <code class="kbd docutils literal"><span class="pre">L</span></code></dt>
+<dd>Selects all geometry connected to the geometry under the cursor.</dd>
+<dt>Linked <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code></dt>
+<dd>Selects all geometry that are connected to the current selection.</dd>
+<dt>Vertex Path</dt>
+<dd>Selects a vertex path between two selected vertices</dd>
+<dt>Edge Loop</dt>
+<dd>Selects a loop of edges from a selected edge</dd>
+<dt>Edge Ring</dt>
+<dd>Selects edges parallel to a selected edge in the same ring of faces</dd>
+<dt>Loop Inner-Region</dt>
+<dd>Converts a closed selection of edges to the region of faces it encloses</dd>
+<dt>Boundary Loop</dt>
+<dd>Converts a selection of faces to the ring of edges enclosing it</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basics.html" class="btn btn-neutral float-right" title="Basic Selection" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Selecting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

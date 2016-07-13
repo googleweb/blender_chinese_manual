@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shear &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Deforming" href="index.html"/>
+        <link rel="next" title="To Sphere" href="to_sphere.html"/>
+        <link rel="prev" title="Push/Pull" href="push_pull.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/index.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">Normals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">Vertex Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">Edge Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">Face Tools</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Deforming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">Duplicating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">Subdividing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">Mesh Clean-up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">Miscellaneous Editing Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="../index.html">Editing</a> &raquo;</li>
+      
+          <li><a href="index.html">Deforming</a> &raquo;</li>
+      
+    <li>Shear</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/modeling/meshes/editing/deforming/shear.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shear">
+<h1>Shear<a class="headerlink" href="#shear" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object and 编辑模式s</div>
+<div class="line">Menu:     <span class="menuselection">Object/Mesh/Curve/Surface ‣ 变换 ‣ Shear</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-Alt-S</span></code></div>
+</div>
+</div>
+<p>Shearing is a form of movement where parallel surfaces move past one another. During this transform,
+movement of the selected elements will occur along the horizontal axis of the current view.
+The axis location will be defined by the
+<a class="reference internal" href="../../../../editors/3dview/transform/transform_control/pivot_point/index.html"><span class="doc">轴心点</span></a>.
+Everything that is &#8220;above&#8221; this axis will move (Shear)
+in the same direction as your mouse pointer (but always parallel to the horizontal axis).
+Everything that is &#8220;below&#8221; the horizontal axis will move in the opposite direction.</p>
+<p><a class="reference internal" href="../../../../editors/3dview/transform/transform_control/pivot_point/index.html"><span class="doc">轴心点s</span></a></p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/editors_3dview_transformations-advanced-shear_toolshelf-f6.jpg"><img alt="../../../../_images/editors_3dview_transformations-advanced-shear_toolshelf-f6.jpg" src="../../../../_images/editors_3dview_transformations-advanced-shear_toolshelf-f6.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Shear Offset Factor.</span></p>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Select the elements you want to operate on and activate the <em>Shear</em> transform
+function. The <em>Shear</em> option can be invoked from the
+<span class="menuselection">Object/Mesh/Curve/Surface ‣ 变换 ‣ Shear</span> menu option or by pressing
+<code class="kbd docutils literal"><span class="pre">Shift-Ctrl-Alt-S</span></code>. The amount of movement given to the selection can be determined
+interactively by moving the mouse or by typing a number.
+Pressing <code class="kbd docutils literal"><span class="pre">Return</span></code> will confirm the transformation. The confirmed transformation can
+be further edited by pressing F6 or by going into the Toolshelf <code class="kbd docutils literal"><span class="pre">T</span></code> and altering
+the Offset slider provided that no other actions take place between the <em>Shear</em>
+transform confirmation and accessing the slider.</p>
+<p>Note that the result of the <em>Shear</em> transform is also dependant on the number and
+type of selected elements (Objects, vertices, faces etc).
+See below for the result of using <em>Shear</em> on a number of different elements.</p>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/editors_3dview_transformations-advanced-shear_mesh.jpg"><img alt="../../../../_images/editors_3dview_transformations-advanced-shear_mesh.jpg" src="../../../../_images/editors_3dview_transformations-advanced-shear_mesh.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">The effects of a Shear transform with different 轴心点s. See the text below for additional information.</span></p>
+</div>
+<p>The three frames of the image above show the effects of shearing on the selected vertices when
+the 轴心点 is altered.
+In frame B, the <a class="reference internal" href="../../../../editors/3dview/transform/transform_control/pivot_point/index.html"><span class="doc">轴心点</span></a>
+is set to <em>质心点</em> (indicated by the yellow line)
+and the mouse was moved to the left during the transform. In frame C,
+the <em>轴心点</em> is set to the 3D cursor which is located above the mesh
+(indicated again by the yellow line). When the mouse is moved to the left during a
+<em>Shear</em> transform the selected vertices are moved to the right as they are below the horizontal axis.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Shear transform magnitude</p>
+<p class="last">The magnitude of the <em>Shear</em> transform applied to the selected elements is
+directly proportional to the distance from the horizontal axis.
+i.e. the further from the axis, the greater the movement.</p>
+</div>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/editors_3dview_transformations-advanced-shear_objects.jpg"><img alt="../../../../_images/editors_3dview_transformations-advanced-shear_objects.jpg" src="../../../../_images/editors_3dview_transformations-advanced-shear_objects.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">The effects of a Shear transform on Objects with different 轴心点s.
+See the text below for additional information.</span></p>
+</div>
+<p>The three frames of the image above show the effects of shearing on the selected Objects when
+the <em>轴心点</em> is altered. In frame B,
+the <em>轴心点</em> is set to <em>质心点</em> (indicated by the yellow line)
+and the mouse was moved to the left during the transform. In frame C,
+the <em>轴心点</em> is set to the 3D cursor which is located above the Objects
+(indicated again by the yellow line). When the mouse is moved to the left during a
+<em>Shear</em> transform all of the selected Objects are moved to the right as they are
+below the horizontal axis. Again, note that the magnitude of the transform is proportional to
+the distance from the horizontal axis. In this case,
+the lower Objects move further than the upper ones.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="to_sphere.html" class="btn btn-neutral float-right" title="To Sphere" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="push_pull.html" class="btn btn-neutral" title="Push/Pull" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

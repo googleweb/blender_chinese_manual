@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Bones" href="index.html"/>
+        <link rel="next" title="Selecting" href="selecting.html"/>
+        <link rel="prev" title="Bones" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Bones</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html">Bones</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="index.html">Bones</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/armatures/bones/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprinciples3dvieweditmodeoctahedron.jpg"><img alt="../../../_images/riggingboneprinciples3dvieweditmodeoctahedron.jpg" src="../../../_images/riggingboneprinciples3dvieweditmodeoctahedron.jpg" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-text">The elements of a bone.</span></p>
+</div>
+<p>Bones are the base elements of armatures.</p>
+<p>They have three elements:</p>
+<ul class="simple">
+<li>the &#8220;start point&#8221; named <em>root</em> or <em>head</em>,</li>
+<li>the &#8220;body&#8221; itself,</li>
+<li>and the &#8220;end point&#8221; named <em>tip</em> or <em>tail</em>.</li>
+</ul>
+<p>With the default armature in edit-mode,
+you can select the root and the tip, and move them as you do with mesh vertices.</p>
+<p>Both root and tip (the &#8220;ends&#8221;) define the bone by their respective position.</p>
+<p>They also have a radius property, only useful for the envelope deformation method (see below).</p>
+<div class="section" id="bones-visualization">
+<h2>Bones Visualization<a class="headerlink" href="#bones-visualization" title="Permalink to this headline">¶</a></h2>
+<p>Bones can be visualized in various ways: <em>Octahedron</em>, <em>Stick</em>,
+<em>B-Bone</em>, <em>Envelope</em> and <em>Wire</em>. Custom shapes can be used, too!</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg"><img alt="../../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg" src="../../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Octahedral bone display.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprincipalsbonedisplaystick.jpg"><img alt="../../../_images/riggingboneprincipalsbonedisplaystick.jpg" src="../../../_images/riggingboneprincipalsbonedisplaystick.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Stick bone display.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprincipalsbonedisplaybbone.jpg"><img alt="../../../_images/riggingboneprincipalsbonedisplaybbone.jpg" src="../../../_images/riggingboneprincipalsbonedisplaybbone.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">B-Bone bone display.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprincipalsbonedisplayenvelope.jpg"><img alt="../../../_images/riggingboneprincipalsbonedisplayenvelope.jpg" src="../../../_images/riggingboneprincipalsbonedisplayenvelope.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Envelope bone display.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Since armatures are made of bones, you will find more about this when we&#8217;ll talk about
+<a class="reference internal" href="../visualization.html"><span class="doc">Armatures Visualization</span></a>.</p>
+<p>Activating <em>Axes</em> checkmark on the <em>Armature</em>/<em>Display</em> panel,
+will show local axes for each bone&#8217;s tip. The Y axis is always aligned along the bone,
+oriented from root to tip. So, this is the &#8220;roll&#8221; axis of the bones.</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/riggingboneprincipalsbonepropertieseditor.jpg"><img alt="../../../_images/riggingboneprincipalsbonepropertieseditor.jpg" src="../../../_images/riggingboneprincipalsbonepropertieseditor.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Bone tab.</span></p>
+</div>
+</div>
+<div class="section" id="bones-properties">
+<h2>Bones properties<a class="headerlink" href="#bones-properties" title="Permalink to this headline">¶</a></h2>
+<p>When bones are selected (hence in <em>编辑模式</em> and <em>姿态模式</em>), their
+properties are shown in the <em>Bone</em> tab of the Properties editor.</p>
+<p>This shows different panels used to control features of each selected bone;
+the panels change depending on which mode you&#8217;re working in.</p>
+</div>
+<div class="section" id="bones-rigidity">
+<h2>Bones Rigidity<a class="headerlink" href="#bones-rigidity" title="Permalink to this headline">¶</a></h2>
+<p>Even though bones are rigid (i.e. behave as rigid sticks),
+they are made out of <em>segments</em>. <em>Segments</em> are small,
+rigid linked elements that can rotate between each other. By default,
+each new bone has only one segment and as such it cannot &#8220;bend&#8221; along its length.
+It is a rigid bone.</p>
+<p>You can see these segments in <em>物体模式</em> and in <em>姿态模式</em>,
+and only if bones are visualized as <em>B-bones</em>;
+while in <em>编辑模式</em> bones are always drawn as rigid sticks.
+Note that in the special case of a single bone,
+you cannot see these segments in <em>物体模式</em>, because they&#8217;re aligned.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
+<span id="fig-rig-bone-intro-bbone"></span><a class="reference internal image-reference" href="../../../_images/riggingbboneex3dvieweditmode.jpg"><img alt="../../../_images/riggingbboneex3dvieweditmode.jpg" src="../../../_images/riggingbboneex3dvieweditmode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">An armature of B-Bones, in 编辑模式.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/riggingbboneex3dviewprinciples.jpg"><img alt="../../../_images/riggingbboneex3dviewprinciples.jpg" src="../../../_images/riggingbboneex3dviewprinciples.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The Bézier curve superposed to the chain, with its handles placed at bones&#8217; ends.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id9">
+<span id="fig-rig-bone-intro-same"></span><a class="reference internal image-reference" href="../../../_images/riggingbboneex3dviewobjectmode.jpg"><img alt="../../../_images/riggingbboneex3dviewobjectmode.jpg" src="../../../_images/riggingbboneex3dviewobjectmode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The same armature in 物体模式.</span></p>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>When you connect bones to form a <a class="reference internal" href="../structure.html#armature-bone-chain"><span class="std std-ref">chain</span></a>,
+Blender calculates a Bézier curve passing through all the bones&#8217; ends,
+and bones&#8217; segments in the chain will bend and roll to follow this invisible curve.</p>
+<p>There is no direct access to the curve.
+It can only be controlled by some extent using bone properties,
+as explained in the <a class="reference internal" href="../editing/properties.html#armature-bone-rigid"><span class="std std-ref">editing pages</span></a>.</p>
+<p>In Fig. <a class="reference internal" href="#fig-rig-bone-intro-bbone"><span class="std std-ref">An armature of B-Bones, in 编辑模式.</span></a> we connected three bones,
+each one made of five segments. These are <em>B-bones</em> but as you see,
+in <em>编辑模式</em> they are shown as rigid elements.
+Look at Fig. <a class="reference internal" href="#fig-rig-bone-intro-same"><span class="std std-ref">The same armature in 物体模式.</span></a>,
+we can see how the bones&#8217; segments smoothly &#8220;blend&#8221; into each other, even for roll.</p>
+<p>Of course,
+a geometry influenced by the chain is smoothly deformed according to the Bézier curve!
+In fact,
+smooth bones are an easy way to replace long chains of many small rigid bones posed using IK...</p>
+<p>However, if the chain has an influence on objects rather than geometry,
+the segments&#8217; orientation is not taken in account
+(details are explained in the <a class="reference internal" href="../../skinning/index.html"><span class="doc">skinning part</span></a>).</p>
+<p>When not visualized as <em>B-Bone</em> s, bones are always shown as rigid sticks,
+even though the bone segments are still present and effective
+(see <a class="reference internal" href="../../skinning/obdata.html"><span class="doc">skinning to ObData</span></a>).</p>
+<p>This means that even in e.g. <em>Octahedron</em> visualization,
+if some bones in a chain have several segments,
+they will nonetheless smoothly deform their geometry...</p>
+</div>
+<div class="section" id="bones-influence">
+<span id="armature-bone-influence"></span><h2>Bones Influence<a class="headerlink" href="#bones-influence" title="Permalink to this headline">¶</a></h2>
+<p>Basically, a bone controls a geometry when vertices &#8220;follow&#8221; the bone. This is like how the
+muscles and skin of your finger follow your finger-bone when you move a finger.</p>
+<p>To do this, you have to define the strength of <em>influences</em> a bone has on a certain vertex.</p>
+<p>The simplest way is to have each bone affecting those parts of the geometry that are within a
+given range from it. This is called the <em>envelope technique</em>,
+because each bone can control only the geometry &#8220;enveloped&#8221; by its own influence area.</p>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../../../_images/riggingenvelopeprinciples3dvieweditmode.jpg"><img alt="../../../_images/riggingenvelopeprinciples3dvieweditmode.jpg" src="../../../_images/riggingenvelopeprinciples3dvieweditmode.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">A bone in Envelope visualization, in 编辑模式.</span></p>
+</div>
+<p>If a bone is visualized as <em>Envelope</em>,
+in <em>编辑模式</em> and in <em>姿态模式</em> you can see the area of influence,
+which depends on:</p>
+<ul class="simple">
+<li>the <em>distance</em> property</li>
+<li>the root&#8217;s radius and the tip&#8217;s radius.</li>
+</ul>
+<div class="figure" id="id11">
+<a class="reference internal image-reference" href="../../../_images/riggingenvelopeex3dviewposemode.jpg"><img alt="../../../_images/riggingenvelopeex3dviewposemode.jpg" src="../../../_images/riggingenvelopeex3dviewposemode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Our armature in Envelope visualization, in 姿态模式.</span></p>
+</div>
+<p>All these influence parameters are further detailed in the <a class="reference internal" href="../../skinning/index.html"><span class="doc">skinning pages</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selecting.html" class="btn btn-neutral float-right" title="Selecting" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Bones" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

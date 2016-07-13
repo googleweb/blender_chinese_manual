@@ -1,0 +1,42 @@
+.. 编辑器 Note: This page gets copied into render/cycles/nodes/types/color/gamma
+.. 编辑器 Note: This page gets copied into render/blender_render/materials/nodes/types/color/gamma
+
+**********
+Gamma Node
+**********
+
+.. figure:: /images/compositing_nodes_gamma.png
+   :align: right
+   :width: 150px
+
+   Gamma Node.
+
+Use this node to apply a gamma correction.
+
+Inputs
+======
+
+图像
+   Standard image input. 
+Gamma
+   A exponential brightness factor.
+
+
+Properties
+==========
+
+This node has no properties.
+
+
+Outputs
+=======
+
+图像
+   Standard image output
+
+
+例子s
+========
+
+.. figure:: /images/nodes-gamma.jpg
+   :width: 320px

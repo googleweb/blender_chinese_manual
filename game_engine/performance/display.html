@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Display &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Performance" href="index.html"/>
+        <link rel="next" title="简介" href="level_of_detail.html"/>
+        <link rel="prev" title="System" href="system.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">游戏引擎简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">游戏材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logic/index.html">逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Performance</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">System</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Display</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="level_of_detail.html">简介</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">游戏引擎</a> &raquo;</li>
+      
+          <li><a href="index.html">Performance</a> &raquo;</li>
+      
+    <li>Display</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/game_engine/performance/display.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="display">
+<h1>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Display</em> panel in the <em>渲染</em> tab of the <em>Properties</em> editor,
+let the game developer specify the maximum frame rate of the animations shown during
+the game execution, whether to see informations like framerate and profile, debug properties,
+physics geometry visualization, warnings,
+if the mouse cursor is shown during the game execution, and options to specify the framing
+style of the game to fit the window with the specified resolution.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../_images/gameengine_performance_render_display.jpg" src="../../_images/gameengine_performance_render_display.jpg" />
+<p class="caption"><span class="caption-text">Display panel at the 渲染 tab.</span></p>
+</div>
+<dl class="docutils">
+<dt>动画 Frame Rate</dt>
+<dd>This numeric field/slider specify the maximum frame rate at which the game will run.
+Minimum is 1, maximum is 120.</dd>
+<dt>Debug Properties</dt>
+<dd>When checked, if a property was previously checked to be debugged during the game,
+the values of this property will be shown with the <code class="docutils literal"><span class="pre">Framerate</span> <span class="pre">and</span> <span class="pre">Profile</span></code> contents.</dd>
+<dt>Framerate and Profile</dt>
+<dd>When checked, this will show values for each of the calculations Blender is doing while the game is running,
+plus the properties marked to be debugged.</dd>
+<dt>物理 visualization</dt>
+<dd>Shows a visualization of physics bounds and interactions (like hulls and collision shapes), and their interaction.</dd>
+<dt>Deprecation Warnings</dt>
+<dd>Every time when the game developer uses a deprecated functionality
+(which in some cases are outdated or crippled OpenGL Graphic cards functions),
+the system will emit warnings about the deprecated function.</dd>
+<dt>Mouse Cursor</dt>
+<dd>Whether to show or not the mouse cursor when the game is running.</dd>
+<dt>Framing</dt>
+<dd><p class="first">There are three types of framing available:</p>
+<dl class="last docutils">
+<dt>Letterbox</dt>
+<dd>Show the entire viewport of the game in display window, using horizontal and/or vertical bars when needed.</dd>
+<dt>Extend</dt>
+<dd>Show the entire viewport of the game in display window, viewing more horizontally or vertically.</dd>
+<dt>Scale</dt>
+<dd>Stretch or Squeeze the viewport to fill the display window.</dd>
+</dl>
+</dd>
+<dt>Color Bar</dt>
+<dd>This will let the game developer choose the bar colors when using the <em>Letterbox</em> Framing mode.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="level_of_detail.html" class="btn btn-neutral float-right" title="简介" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="system.html" class="btn btn-neutral" title="System" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

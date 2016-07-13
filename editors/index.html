@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑器 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="next" title="3D视图" href="3dview/index.html"/>
+        <link rel="prev" title="Converting Sketches to Objects" href="../interface/grease_pencil/converting_to_geometry.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">编辑器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#d">3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#animation">动画</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph_editor/index.html">Graph Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dope_sheet/index.html">Dope Sheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nla.html">NLA Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#image-video">图像/视频</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nodes-logic">节点/逻辑</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logic_editor.html">逻辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">Properties Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outliner.html">Outliner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preferences/index.html">Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other">其他</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python_console.html">Python控制台</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+    <li>编辑器</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/editors/index.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editors">
+<span id="editors-index"></span><h1>编辑器<a class="headerlink" href="#editors" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../_images/editors_menu.png" src="../_images/editors_menu.png" />
+<p class="caption"><span class="caption-text">The Editor selection menu.</span></p>
+</div>
+<p>Blender provides a number of different <em>Editor</em> types for displaying and modifying different aspects of data.</p>
+<p>It is also possible to open the same Editor type multiple times to have different views on the same data.</p>
+<p>There is also documentation on the <a class="reference internal" href="../interface/editors/index.html"><span class="doc">general interface</span></a> of editors.</p>
+<div class="section" id="d">
+<h2>3D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="3dview/index.html">3D视图</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="animation">
+<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph_editor/index.html">Graph Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dope_sheet/index.html">Dope Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nla.html">NLA Editor</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="image-video">
+<h2>图像/视频<a class="headerlink" href="#image-video" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="nodes-logic">
+<h2>节点/逻辑<a class="headerlink" href="#nodes-logic" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logic_editor.html">逻辑编辑器</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="properties/index.html">Properties Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outliner.html">Outliner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info/index.html">信息编辑器</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="other">
+<h2>其他<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_browser/index.html">文件浏览器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_console.html">Python控制台</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3dview/index.html" class="btn btn-neutral float-right" title="3D视图" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../interface/grease_pencil/converting_to_geometry.html" class="btn btn-neutral" title="Converting Sketches to Objects" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

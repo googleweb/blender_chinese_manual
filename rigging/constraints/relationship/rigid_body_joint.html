@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rigid Body Joint Constraint &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Constraints" href="../index.html"/>
+        <link rel="next" title="Shrinkwrap Constraint" href="shrinkwrap.html"/>
+        <link rel="prev" title="Pivot Constraint" href="pivot.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Constraints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">Motion Tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">Tracking</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">Relationship</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="action.html">Action Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="follow_path.html">Follow Path Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Rigid Body Joint Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">Shrinkwrap Constraint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Constraints</a> &raquo;</li>
+      
+    <li>Rigid Body Joint Constraint</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/constraints/relationship/rigid_body_joint.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rigid-body-joint-constraint">
+<h1>Rigid Body Joint Constraint<a class="headerlink" href="#rigid-body-joint-constraint" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Rigid Body Joint</em> constraint is very special, it is used by the
+physics part of the Blender 游戏引擎 to simulate a joint between its owner and its target.
+It offers four joint types: hinge type, ball-and-socket type, cone-twist, and generic six-DoF
+(degrees of freedom) type.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This constaint only works with the <a class="reference internal" href="../../../game_engine/index.html"><span class="doc">游戏引擎</span></a>.</p>
+</div>
+<p>The joint point and axes are defined and fixed relative to the owner.
+The target moves as if it were stuck to the center point of a stick,
+the other end of the stick rotating around the joint/轴心点...</p>
+<p>This constraint is of no use in most &#8220;standard&#8221; static or animated projects. However,
+you can use its results outside of the BGE, through the <span class="menuselection">Game ‣ Record 动画</span>.
+see <a class="reference internal" href="../../../game_engine/physics/using_ge.html"><span class="doc">Rigid Bodies</span></a> for more info on this topic).</p>
+<p>For a demo file that shows some of the different types, see: <a class="reference external" href="https://wiki.blender.org/index.php/Media:BGE-物理-RigidBodyJoints.blend">BGE-物理-RigidBodyJoints.blend</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order for this constraint to work properly, both objects (so
+the owner and the target object) need to have <em>Collision Bounds</em> enabled.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/constraints-relationship-rigidbodyjoint.jpg"><img alt="../../../_images/constraints-relationship-rigidbodyjoint.jpg" src="../../../_images/constraints-relationship-rigidbodyjoint.jpg" style="width: 304px;" /></a>
+<p class="caption"><span class="caption-text">Rigid Body Joint panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Target</dt>
+<dd>This constraint uses one target, and is not functional (red state) when it has none.</dd>
+<dt>Joint Type:</dt>
+<dd><dl class="first last docutils">
+<dt>Ball</dt>
+<dd>works like an ideal ball-and-socket joint, i.e. allows rotations around all axes like a shoulder joint.</dd>
+<dt>Hinge</dt>
+<dd><p class="first">works in one plane, like an elbow: the owner and target can only rotate around the X axis of the pivot
+(joint point).</p>
+<dl class="last docutils">
+<dt>Limits</dt>
+<dd>Angular limits for the X axis</dd>
+</dl>
+</dd>
+<dt>Cone Twist</dt>
+<dd><p class="first">similar to <em>Ball</em>, this is a point-to-point joint with limits added for the cone and twist axis</p>
+<dl class="last docutils">
+<dt>Limits</dt>
+<dd>Angular limits</dd>
+</dl>
+</dd>
+<dt>Generic 6DOF</dt>
+<dd><p class="first">works like the <em>Ball</em> option,
+but the target is no longer constrained at a fixed distance from the 轴心点, by default
+(hence the six degrees of freedom: rotation and translation around/along the three axes).
+In fact, there is no longer a joint by default, with this option,
+but it enables additional settings which allow you to restrict some of these DoF:</p>
+<dl class="last docutils">
+<dt>Limits</dt>
+<dd>Linear and angular limits for a given axis (of the pivot) in Blender Units and degrees respectively.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Child Object</dt>
+<dd>normally, leave this blank. You can reset it to blank by right clicking and selecting Reset to Default Value.</dd>
+<dt>Linked Collision</dt>
+<dd>When enabled, this will disable the collision detection between the owner and the target
+(in the physical engine of the BGE).</dd>
+<dt>Display Pivot</dt>
+<dd>When enabled, this will draw the pivot of the joint in the 3D视图s.
+Most useful, especially with the <em>Generic 6DOF</em> joint type!</dd>
+<dt>Pivot</dt>
+<dd>These three numeric fields allow you to relocate the 轴心点, <em>in the owner&#8217;s space</em>.</dd>
+<dt>Axis</dt>
+<dd>These three numeric fields allow you to rotate the 轴心点, <em>in the owner&#8217;s space</em>.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shrinkwrap.html" class="btn btn-neutral float-right" title="Shrinkwrap Constraint" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pivot.html" class="btn btn-neutral" title="Pivot Constraint" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Speaker &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Objects Types" href="index.html"/>
+        <link rel="next" title="相机" href="camera/index.html"/>
+        <link rel="prev" title="Empties" href="empties.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="index.html">Objects Types</a> &raquo;</li>
+      
+    <li>Speaker</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/3dview/object/types/speaker.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="speaker">
+<h1>Speaker<a class="headerlink" href="#speaker" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../../_images/editors_3dview_objects_speaker.png" src="../../../../_images/editors_3dview_objects_speaker.png" />
+<p class="caption"><span class="caption-text">Speaker Object.</span></p>
+</div>
+<p>The speaker object is used to give sound in the 3D视图.
+After adding the object the various settings can be changed in the properties editor.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sound">
+<h3>Sound<a class="headerlink" href="#sound" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Mute</dt>
+<dd>Toggles whether or not the sound can be heard.</dd>
+<dt>Volume</dt>
+<dd>Adjust the loudness of the sound</dd>
+<dt>Pitch</dt>
+<dd>Can be used to bend the pitch of the sound to be either deeper or higher.</dd>
+</dl>
+</div>
+<div class="section" id="distance">
+<h3>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right">
+<img alt="../../../../_images/editors_3dview_objects_speaker_settings.png" src="../../../../_images/editors_3dview_objects_speaker_settings.png" />
+</div>
+<p>Volume:</p>
+<dl class="docutils">
+<dt>Minimum</dt>
+<dd>Minimum volume, no matter how far the object is.</dd>
+<dt>Maximum</dt>
+<dd>Maximum volume, no matter how far the object is.</dd>
+<dt>Attenuation</dt>
+<dd>How strong the distance affects the volume.</dd>
+</dl>
+<p>Distance:</p>
+<dl class="docutils">
+<dt>Maximum</dt>
+<dd>Maximum distance for volume calculation.</dd>
+<dt>参考</dt>
+<dd>参考 distance at which volume is 100%.</dd>
+</dl>
+</div>
+<div class="section" id="cone">
+<h3>Cone<a class="headerlink" href="#cone" title="Permalink to this headline">¶</a></h3>
+<p>Angle:</p>
+<dl class="docutils">
+<dt>Outer</dt>
+<dd>Angle of the outer cone in degrees. Outside this cone the volume is the outer cone volume (see below).
+Between the inner and outer cone the volume is interpolated.</dd>
+<dt>Inner</dt>
+<dd>Angle of the inner cone in degrees. Inside the cone the volume is 100%.</dd>
+</dl>
+<p>Volume:</p>
+<dl class="docutils">
+<dt>Outer</dt>
+<dd>Volume outside the outer cone.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="camera/index.html" class="btn btn-neutral float-right" title="相机" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="empties.html" class="btn btn-neutral" title="Empties" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

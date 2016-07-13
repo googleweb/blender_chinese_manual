@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Applying Textures &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="UV Editing" href="index.html"/>
+        <link rel="next" title="Painting" href="../painting.html"/>
+        <link rel="prev" title="Editing UVs" href="layout_editing.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../painting.html">Painting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masking.html">Masking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">UV Editing</a> &raquo;</li>
+      
+    <li>Applying Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/uv_image/uv_editing/applying_image.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="applying-textures">
+<h1>Applying Textures<a class="headerlink" href="#applying-textures" title="Permalink to this headline">¶</a></h1>
+<p>Sooner or later, you may want to use an image texture on your model.
+If you are using an external application, you need to know where on the mesh you are painting.
+You may also need to test your UV mapping with a test image.
+This section covers how to export an outline of your UV map,
+and how to load images into the UV/图像 editor.</p>
+<div class="section" id="exporting-uv-layout-image">
+<span id="uv-image-export-layout"></span><h2>Exporting UV Layout 图像<a class="headerlink" href="#exporting-uv-layout-image" title="Permalink to this headline">¶</a></h2>
+<p>As a way of communicating to an artist who is painting your UV Texture for you,
+Blender has a tool called <em>Save UV Face Layout</em>
+(located in the UV/图像编辑器, <span class="menuselection">UVs ‣ Save UV Face Layout</span>)
+that saves an image as a <code class="docutils literal"><span class="pre">Targa</span></code> (<code class="docutils literal"><span class="pre">.tga</span></code>), <code class="docutils literal"><span class="pre">EPS</span></code>, or an <code class="docutils literal"><span class="pre">SVG</span></code> format for the object you have selected.</p>
+<p>The image is an outline of the UV face mapping.
+Activating the tool brings up the 文件浏览器 with options for saving the layout:</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/texture-uv-layout-export.jpg" src="../../../_images/texture-uv-layout-export.jpg" />
+<p class="caption"><span class="caption-text">Export Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>All UVs</dt>
+<dd>if disabled, then only the UV faces selected will be outlined</dd>
+<dt>Modified</dt>
+<dd>Export UVs from the modified mesh.</dd>
+<dt>Format</dt>
+<dd>Select the type of image file to save (<code class="docutils literal"><span class="pre">.png</span></code>, <code class="docutils literal"><span class="pre">.eps</span></code>, <code class="docutils literal"><span class="pre">.svg</span></code>)</dd>
+<dt>Size</dt>
+<dd>select the size of the image in pixels. The image be square.</dd>
+<dt>Fill Opacity</dt>
+<dd>Set the opacity of the fill</dd>
+</dl>
+<p>The image will be lines defining the UV edges that are within the image area of the UV mapping
+area. Edges outside the boundary, even if selected, will not be shown in the saved graphic.</p>
+<p>The artist will use this as a transparent layer in their paint program as a guide when
+painting your texture. The example below shows Blender in the background,
+and the Gimp working on the texture, using the saved layout as a guide.
+Note that targa format supports the Alpha channel,
+so you can paint transparent areas of the mesh.</p>
+<p>For using images as textures, see the page on <a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 Textures</span></a></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/texture-uv-layout.jpg"><img alt="../../../_images/texture-uv-layout.jpg" src="../../../_images/texture-uv-layout.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">A UV Layout in the UV/图像编辑器.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/texture-uv-layout2.jpg"><img alt="../../../_images/texture-uv-layout2.jpg" src="../../../_images/texture-uv-layout2.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">A UV Layout in an 图像编辑器.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="applying-textures-to-uvs">
+<span id="face-textures"></span><h2>Applying Textures to UVs<a class="headerlink" href="#applying-textures-to-uvs" title="Permalink to this headline">¶</a></h2>
+<p>The UV/图像编辑器 allows you to map textures directly to the mesh faces.
+The 3D视图 editor shows you the object being textured.
+If you set this editor into Textured viewport shading,
+you will immediately see any changes made in the UV/图像 and this editor,
+and vice versa.</p>
+<p>You can edit and load images,
+and even play a game in the Blender 游戏引擎 with UV textures for characters and object,
+without a material, and still see them in the 3D视图.
+This is because no real rendering is taking place; it is all just viewport shading.
+If you were to apply an image to UVs then render, the texture would not show up by default</p>
+<p>To render an image however, you must</p>
+<ul class="simple">
+<li>create a Material for the object, and</li>
+<li>tell Blender to use the UV Textures on faces when rendering.</li>
+</ul>
+<p>To create a Material, you have to click <em>Add New</em> Material in the Shading context.</p>
+<p>There are two ways to tell Blender to use the UV Texture when rendering:
+the Proper way and the Quick Way:</p>
+<div class="section" id="use-uv-coordinates">
+<h3>Use UV Coordinates<a class="headerlink" href="#use-uv-coordinates" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id5">
+<img alt="../../../_images/texture-uv-coords.jpg" src="../../../_images/texture-uv-coords.jpg" />
+<p class="caption"><span class="caption-text">A texture setup to map using its UV coordinates.</span></p>
+</div>
+<p>In the Texture channel panel,
+Add a New Texture and define the texture as an image and load the image you want to use.
+In the Mapping section, choose UV from the Coordinates menu, and select the UV layer to use.</p>
+<p>Make sure it is mapped to Color in the Influence section as well
+(it will be mapped to Color by default, and the UV Texture is named &#8220;UVTex&#8221; by default).
+If the image has an alpha channel and you want to use it,
+click &#8220;UseAlpha&#8221; in the Map 图像 panel.</p>
+<p>Full details of using 图像 textures are on the
+<a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 Textures</span></a> page.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Material is Required for 渲染ing</p>
+<p class="last">You can perform UV Texturing on a mesh within Blender without assigning a material,
+and you will even see it in your 3D视图 in textured viewport mode. However, when you render,
+you will just get a default gray if the object does not have a Material assigned.
+You will get a black if you do not load an image. If you do not create a texture that uses the image,
+or enable <em>Face Texture</em>, your object will render according to the procedural material settings.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Face Textures<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id6">
+<img alt="../../../_images/texture-uv-layout-facetex.jpg" src="../../../_images/texture-uv-layout-facetex.jpg" />
+<p class="caption"><span class="caption-text">The Material panel with activated Face Textures button.</span></p>
+</div>
+<p>An alternate way is to set up a Face Textures Material as shown. To do so,
+with the Properties editor displayed, press <code class="kbd docutils literal"><span class="pre">F5</span></code> to display the Shader Buttons.
+In the Properties editor, Material settings, click <em>Add New</em> material.</p>
+<p>On the Options panel, enable <em>Face Textures</em>. This way is quick,
+but bypasses the normal rendering system for fast results,
+but results which do not respect transparency and proper shading.</p>
+</div>
+</div>
+<div class="section" id="loading-and-saving-images">
+<h2>Loading and Saving 图像s<a class="headerlink" href="#loading-and-saving-images" title="Permalink to this headline">¶</a></h2>
+<p>In the UV/图像 editor, you can assign certain faces certain textures. To do so,
+first you need an image to work with.
+In the <em>图像 Menu</em> you can open an image file with the <em>文件浏览器</em>.
+If you have images in the file already, that you want to use,
+click the <em>Browse</em> button in the <em>Header</em>,
+or make a new texture by clicking the <em>New</em> button.</p>
+<p>In a team environment, or if you are using an external paint program to edit the image while
+the blend-file is active, and the file is updated and re-saved, use the UV/图像编辑器 to
+<span class="menuselection">图像 ‣ Reload</span> it and see the latest and greatest in Blender. Also,
+use Reload if you have mapped more faces to an image,
+and the 3D视图 will be updated with the latest image mapping back to faces.</p>
+<p>If you move the image file, Blender may not be able to find it,
+and you will have to <span class="menuselection">图像 ‣ Replace</span> it.
+Use this option to map a UV layout to a different image altogether.</p>
+<div class="section" id="replacing-the-active-image">
+<h3>Replacing the active 图像<a class="headerlink" href="#replacing-the-active-image" title="Permalink to this headline">¶</a></h3>
+<p>Recall that each face gets coordinates and a link to an image.
+To map a face to a different image, simply select that face (or faces) and use the UV/图像
+Editor 图像 menu to <em>Replace</em> the current image with an existing file
+(such as a <code class="docutils literal"><span class="pre">JPG</span></code> or <code class="docutils literal"><span class="pre">PNG</span></code> file).</p>
+</div>
+<div class="section" id="new-images">
+<h3>New 图像s<a class="headerlink" href="#new-images" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../../../_images/texture-uv-layout-testgrid.jpg"><img alt="../../../_images/texture-uv-layout-testgrid.jpg" src="../../../_images/texture-uv-layout-testgrid.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">The new 图像 pop-up menu.</span></p>
+</div>
+<p>When you select <em>New 图像</em> you are presented with several options. This
+<em>Generated</em> image can also be modified afterward in the <em>Properties Panel</em>:</p>
+<dl class="docutils">
+<dt>图像 Name</dt>
+<dd>Set the name if the generated image</dd>
+<dt>Width and Height</dt>
+<dd>Set the size if the image in pixels</dd>
+<dt>Color</dt>
+<dd>Sets the default fill color if creating a blank image.</dd>
+<dt>Alpha</dt>
+<dd>Adds an alpha channel to the image</dd>
+<dt>Generated Type</dt>
+<dd><p class="first">The type of image to generate:</p>
+<dl class="last docutils">
+<dt>UV Grid</dt>
+<dd>Creates a checkerboard pattern with a colored + in each square.</dd>
+<dt>Color Grid</dt>
+<dd>Creates a UV Test Grid, which is useful for testing how UVs have been mapped, and to reduce stretching.
+There are two types available, which can be set after the image has been created.</dd>
+<dt>Blank</dt>
+<dd>Generates a blank image of the specified color.</dd>
+</dl>
+</dd>
+<dt>32 bit</dt>
+<dd>Creates a 32 bit image. This is a larger file size,
+but holds much more color information than the standard 8 bit image.
+For close ups and large gradients, it may be better to use a 32 bit image.</dd>
+</dl>
+</div>
+<div class="section" id="using-the-test-grid">
+<h3>Using the Test Grid<a class="headerlink" href="#using-the-test-grid" title="Permalink to this headline">¶</a></h3>
+<p>Use the UV Test Grid option to check for undue stretching or distortion of faces. If your
+image is a base uniform pattern and you want the application of that image to your model to
+look like cloth, you do <strong>not</strong> want any stretching (unless you want the cloth to look like spandex).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/texture-uv-layout-testgrid2.jpg"><img alt="../../../_images/texture-uv-layout-testgrid2.jpg" src="../../../_images/texture-uv-layout-testgrid2.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The test grid applied to the UV&#8217;s.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/texture-uv-layout-testgrid3.jpg"><img alt="../../../_images/texture-uv-layout-testgrid3.jpg" src="../../../_images/texture-uv-layout-testgrid3.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">A preview of the texture on the geometry.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>When you render, the mesh will have the test grid as its colors,
+and the UV Texture will be the size image you specified.
+You can save the UV image using the <span class="menuselection">图像 ‣ Save</span> menu.</p>
+</div>
+<div class="section" id="image-settings">
+<h3>图像 设置<a class="headerlink" href="#image-settings" title="Permalink to this headline">¶</a></h3>
+<p>When an image has been loaded or created in the UV/图像 editor,
+an additional section appears in the <em>Properties Panel</em>.
+The first row of buttons allow you to:</p>
+<ul class="simple">
+<li>Browse for an image</li>
+<li>Change the image name</li>
+<li>Set as <em>Fake User</em></li>
+<li>Create a <em>New 图像</em></li>
+<li><em>Open</em> an image</li>
+<li><em>Unlink Data-Block</em></li>
+</ul>
+<p>Select the image type in the <em>Source</em> menu. Each has different options:</p>
+<dl class="docutils">
+<dt>Generated</dt>
+<dd><p class="first">Generates a new image:</p>
+<p>Width and Height of image in pixels</p>
+<dl class="last docutils">
+<dt>Blank</dt>
+<dd>Creates a Blank image</dd>
+<dt>UV grid</dt>
+<dd>Creates a checkerboard pattern with colored plus symbols in each square.</dd>
+<dt>Color Grid</dt>
+<dd>Creates a more complex colored grid with letters and numbers denoting locations in the grid.</dd>
+</dl>
+</dd>
+<dt>File</dt>
+<dd><p class="first">Use for loading image files:</p>
+<dl class="last docutils">
+<dt>Fields</dt>
+<dd>Use if image is made of fields. You can set it to use <em>Upper First</em> or Lower First</dd>
+<dt>Premultiply</dt>
+<dd>Converts RGB from key alpha to premultiplied alpha.</dd>
+</dl>
+</dd>
+<dt>Movie and Sequence</dt>
+<dd><dl class="first last docutils">
+<dt>Frames</dt>
+<dd>Set the number of frames to use</dd>
+<dt>Start</dt>
+<dd>Set the starting frame of the movie/sequence</dd>
+<dt>Offset</dt>
+<dd>Offset the number of frame used in the animation</dd>
+<dt>Fields</dt>
+<dd>Set the number fields per rendered frame to use(2 fields is 1 frame)</dd>
+<dt>Auto Refresh</dt>
+<dd>Always refresh images on frame changes.</dd>
+<dt>Cyclic</dt>
+<dd>Cycle the images in a movie/sequence.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="saving-images">
+<h3>Saving 图像s<a class="headerlink" href="#saving-images" title="Permalink to this headline">¶</a></h3>
+<p>图像s can be saved to external files if they were created or edited in Blender with tools in
+the <em>图像</em> menu. If images are already files, use the <em>Save</em> command
+<code class="kbd docutils literal"><span class="pre">Alt-S</span></code>. You can also <em>Save As</em> <code class="kbd docutils literal"><span class="pre">F3</span></code>
+if the image was generated or you want to save as a different name.
+Using <em>Save as Copy</em>, <code class="kbd docutils literal"><span class="pre">F3</span></code> will save the file to a specified name,
+but will keep the old one open in the 图像 editor.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../../data_system/introduction.html#pack-unpack-data"><span class="std std-ref">Pack and Unpack Data</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="modifying-your-image-texture">
+<h2>Modifying your 图像 Texture<a class="headerlink" href="#modifying-your-image-texture" title="Permalink to this headline">¶</a></h2>
+<p>To modify your new Texture, you can:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../render/workflows/bake.html"><span class="doc">渲染 Bake</span></a> an image based on how the mesh looks<ul>
+<li>The 渲染 Bake feature provides several tools to replace the current image
+based on a render of <a class="reference internal" href="../../../sculpt_paint/painting/vertex_paint/index.html#painting-vertex-index"><span class="std std-ref">Vertex Paint</span></a> colors,
+Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.</li>
+</ul>
+</li>
+<li>Paint using <a class="reference internal" href="../../../sculpt_paint/painting/texture_paint/introduction.html"><span class="doc">Texture Paint</span></a>.<ul>
+<li>Use the UV/图像编辑器 menu <span class="menuselection">图像 ‣ New</span>. Then start painting your mesh with</li>
+</ul>
+</li>
+<li>Use external software to create an image<ul>
+<li>Using your favorite image painting program, you could use an exported UV layout to create a texture.
+Then save your changes, and back in Blender,
+use the <span class="menuselection">图像 ‣ Open</span> menu command to load it as your UV image
+for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
+Using the <em>Edit Externally</em> tool in the <em>图像</em> menu, Blender will open an image editor,
+as specified in the <em>用户首选项</em> and load in the image to be edited.</li>
+</ul>
+</li>
+<li>Use the &#8220;projection painting&#8221; feature of recent versions of Blender</li>
+<li>Use the Bake uV-Textures to Vertex Colors add-on to create an image from vertex colors</li>
+<li>Some combination of the above.</li>
+</ul>
+<p>The first three options, (UV Painter, 渲染 Bake, and Texture Baker)
+replace the image with an image that they create.
+Texture paint and external software can be used to add or enhance the image.
+Regardless of which method you use, ultimately you must either</p>
+<ul class="simple">
+<li>save your texture in a separate image file (for example <code class="docutils literal"><span class="pre">JPG</span></code> for colors, <code class="docutils literal"><span class="pre">PNG</span></code> with RGBA for alpha),</li>
+<li>pack the image inside the blend-file (UV/图像编辑器 <span class="menuselection">图像 ‣ Pack as PNG</span>),</li>
+<li>or do both.</li>
+</ul>
+<p>The advantage to saving as a separate file is that you can easily switch textures just by
+copying other image files over it, and you can use external editing programs to work on it.
+The advantage of packing is that your whole project is kept in the blend-file,
+and that you only have to manage one file.</p>
+<p>You can invert the colors of an image by selecting the <em>Invert</em> menu.
+in the <em>图像</em> menu</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../painting.html" class="btn btn-neutral float-right" title="Painting" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layout_editing.html" class="btn btn-neutral" title="Editing UVs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

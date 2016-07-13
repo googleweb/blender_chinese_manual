@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basic Selection &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Selecting" href="index.html"/>
+        <link rel="next" title="高级应用 Selection" href="advanced.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Selecting</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Basic Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="advanced.html">高级应用 Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edges.html">Selecting Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">Selecting Faces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="index.html">Selecting</a> &raquo;</li>
+      
+    <li>Basic Selection</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/meshes/selecting/basics.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-selection">
+<h1>Basic Selection<a class="headerlink" href="#basic-selection" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">RMB</span></code> and <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code></div>
+</div>
+</div>
+<p>The most common way to select an element is to <code class="kbd docutils literal"><span class="pre">RMB</span></code> on that item;
+this will replace the existing selection with the new item.</p>
+<div class="section" id="adding-to-a-selection">
+<h2>Adding to a Selection<a class="headerlink" href="#adding-to-a-selection" title="Permalink to this headline">¶</a></h2>
+<p>To add to the existing selection, hold down <code class="kbd docutils literal"><span class="pre">Shift</span></code> while right clicking.
+Clicking again on a selected item will deselect it.</p>
+<p>As in <em>物体模式</em>, there is a unique <em>active</em> element,
+displayed in a lighter shade (in general, the last element selected).
+Depending on the tools used, this element might be very important!</p>
+<p>Note that there is no option to choose what element to select between overlapping ones
+(like the <code class="kbd docutils literal"><span class="pre">Alt-RMB</span></code> click in <em>物体模式</em>). However,
+if you are in solid, shaded, or textured viewport shading mode
+(not bounding box or wireframe),
+you will have a fourth button in the header that looks like a cube,
+just right of the select mode ones.</p>
+<p>When enabled, this limits your ability to select based on visible elements
+(as if the object was solid), and prevents you from accidentally selecting, moving,
+deleting or otherwise working on backside or hidden items.</p>
+</div>
+<div class="section" id="selecting-elements-in-a-region">
+<h2>Selecting Elements in a Region<a class="headerlink" href="#selecting-elements-in-a-region" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">B</span></code>, <code class="kbd docutils literal"><span class="pre">C</span></code>, and <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> click and drag</div>
+</div>
+</div>
+<p>Region selection allows you to select groups of elements within a 2D region in your 3D视图.
+The region can be either a circle or rectangle.
+The circular region is only available in <em>编辑模式</em>. The rectangular region,
+or <em>Border Select, is available in both *编辑模式</em> and <em>物体模式</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>What is selected using both these tools is affected by the <em>Limit Selection to visible</em> feature
+(available under the 3D视图) in <em>Solid Viewport Shading Mode</em>.</p>
+<p>For example,</p>
+<ul class="last simple">
+<li>in solid shading mode and face selection mode, all faces <em>within</em> the selection area will be selected;</li>
+<li>while in the wireframe shading mode and face selection mode,
+only faces whose handle are within the selection area will be selected.</li>
+</ul>
+</div>
+<div class="section" id="rectangular-region-border-select">
+<h3>Rectangular region (Border select)<a class="headerlink" href="#rectangular-region-border-select" title="Permalink to this headline">¶</a></h3>
+<p><em>Border Select</em> is available in either <em>编辑模式</em> or <em>物体模式</em>. To activate the tool use the <code class="kbd docutils literal"><span class="pre">B</span></code>.
+Use <em>Border Select</em> to select a group of objects by drawing a rectangle while holding down <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+In doing this you will select all objects that lie within or touch this rectangle.
+If any object that was last active appears in the group it will become selected <em>and</em> active.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<span id="fig-mesh-select-basics-start"></span><a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-borderselect1.jpg"><img alt="../../../_images/modeling-meshes-selection-borderselect1.jpg" src="../../../_images/modeling-meshes-selection-borderselect1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Start.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<span id="fig-mesh-select-basics-selecting"></span><a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-borderselect2.jpg"><img alt="../../../_images/modeling-meshes-selection-borderselect2.jpg" src="../../../_images/modeling-meshes-selection-borderselect2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Selecting.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<span id="fig-mesh-select-basics-complete"></span><a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-borderselect3.jpg"><img alt="../../../_images/modeling-meshes-selection-borderselect3.jpg" src="../../../_images/modeling-meshes-selection-borderselect3.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Complete.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In Fig. <a class="reference internal" href="#fig-mesh-select-basics-start"><span class="std std-ref">Start.</span></a>, <em>Border Select</em> has been activated and is indicated by showing a
+dotted cross-hair cursor. In Fig. <a class="reference internal" href="#fig-mesh-select-basics-selecting"><span class="std std-ref">Selecting.</span></a>
+the <em>selection region</em> is being chosen by drawing a rectangle with the <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+The selection area is only covering the selection handles of three faces. Finally,
+by releasing <code class="kbd docutils literal"><span class="pre">LMB</span></code> the selection is complete; see Fig. <a class="reference internal" href="#fig-mesh-select-basics-complete"><span class="std std-ref">Complete.</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Border select adds to the previous selection,
+so in order to select only the contents of the rectangle, deselect all with <code class="kbd docutils literal"><span class="pre">A</span></code> first.
+In addition, you can use <code class="kbd docutils literal"><span class="pre">MMB</span></code> while you draw the border to deselect all objects within the rectangle.</p>
+</div>
+</div>
+<div class="section" id="circular-region">
+<h3>Circular region<a class="headerlink" href="#circular-region" title="Permalink to this headline">¶</a></h3>
+<p>This selection tool is only available in <em>编辑模式</em> and can be activated with <code class="kbd docutils literal"><span class="pre">C</span></code>.
+Once in this mode the cursor changes to a dashed cross-hair with a 2D circle surrounding it.
+The tool will operate on whatever the current select mode is.
+Clicking or dragging with the <code class="kbd docutils literal"><span class="pre">LMB</span></code>,
+causing elements to be inside the circle will cause those elements to be selected.</p>
+<p>You can enlarge or shrink the circle region using <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> and <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code>,
+or the <code class="kbd docutils literal"><span class="pre">Wheel</span></code>.</p>
+<table border="1" class="docutils" id="id4">
+<span id="fig-mesh-select-basic-circle"></span><caption><span class="caption-text">Circle Region Select.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-circularselect1.jpg"><img alt="../../../_images/modeling-meshes-selection-circularselect1.jpg" src="../../../_images/modeling-meshes-selection-circularselect1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-circularselect2.jpg"><img alt="../../../_images/modeling-meshes-selection-circularselect2.jpg" src="../../../_images/modeling-meshes-selection-circularselect2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Fig. <a class="reference internal" href="#fig-mesh-select-basic-circle"><span class="std std-ref">Circle Region Select.</span></a> is an example of selecting edges while in <em>Edge Select Mode</em>.
+As soon as an edge intersects the circle the edge becomes selected.
+The tool is interactive such that edges are selected while the circle region is being dragged with the <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+<p>If you want to deselect elements, hold <code class="kbd docutils literal"><span class="pre">MMB</span></code> and begin clicking or dragging again.</p>
+<p>For <em>Faces</em> select mode, the circle must intersect the face indicators usually represented by small pixel squares;
+one at the center of each face.</p>
+<p>To exit from this tool, click <code class="kbd docutils literal"><span class="pre">RMB</span></code>, or press <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</p>
+</div>
+<div class="section" id="lasso-region">
+<h3>Lasso region<a class="headerlink" href="#lasso-region" title="Permalink to this headline">¶</a></h3>
+<p><em>Lasso</em> select is similar to <em>Border</em> select in that you select objects based on a region,
+except <em>Lasso</em> is a hand-drawn region that generally forms a circular/round-shaped form; kind of like a lasso.</p>
+<p><em>Lasso</em> is available in either <em>编辑模式</em> or <em>物体模式</em>.
+To activate the tool use the <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> while dragging.
+The one difference between <em>Lasso</em> and <em>Border</em> select is that in <em>物体模式</em>,
+<em>Lasso</em> only selects objects where the lasso region intersects the objects&#8217; center.</p>
+<p>To deselect, use <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-LMB</span></code> while dragging.</p>
+<table border="1" class="docutils" id="id7">
+<span id="fig-mesh-select-basic-lasso"></span><caption><span class="caption-text">Lasso selection.</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-lassoselect1.jpg"><img alt="../../../_images/modeling-meshes-selection-lassoselect1.jpg" src="../../../_images/modeling-meshes-selection-lassoselect1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Start.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-lassoselect2.jpg"><img alt="../../../_images/modeling-meshes-selection-lassoselect2.jpg" src="../../../_images/modeling-meshes-selection-lassoselect2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Selecting.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modeling-meshes-selection-lassoselect3.jpg"><img alt="../../../_images/modeling-meshes-selection-lassoselect3.jpg" src="../../../_images/modeling-meshes-selection-lassoselect3.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Complete.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Fig. <a class="reference internal" href="#fig-mesh-select-basic-lasso"><span class="std std-ref">Lasso selection.</span></a> is an example of using the <em>Lasso select tool</em> in <em>Vertex Select Mode</em>.</p>
+</div>
+</div>
+<div class="section" id="additional-selection-tools">
+<h2>Additional Selection Tools<a class="headerlink" href="#additional-selection-tools" title="Permalink to this headline">¶</a></h2>
+<p>The select menu in edit mode contains additional tool for selecting components:</p>
+<dl class="docutils">
+<dt>(De)select All <code class="kbd docutils literal"><span class="pre">A</span></code></dt>
+<dd>Select all or none of the mesh components.</dd>
+<dt>Invert Selection <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></dt>
+<dd>Selects all components that are not selected, and deselect currently selected components.</dd>
+<dt>More <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code></dt>
+<dd>Propagates selection by adding components that are adjacent to selected elements.</dd>
+<dt>Less <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></dt>
+<dd>Deselects components that form the bounds of the current selection</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced.html" class="btn btn-neutral float-right" title="高级应用 Selection" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

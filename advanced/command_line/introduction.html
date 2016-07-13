@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Command Line" href="index.html"/>
+        <link rel="next" title="Command Line Arguments" href="arguments.html"/>
+        <link rel="prev" title="Command Line" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级应用</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../scripting/index.html">Scripting &amp; Extending Blender</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Command Line</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#platform-dependant-instructions">Platform Dependant Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#console-window-status-and-error-messages">Console Window Status and Error Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arguments.html">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../limits.html">Working Limits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">高级应用</a> &raquo;</li>
+      
+          <li><a href="index.html">Command Line</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/advanced/command_line/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Console Window</em> is an operating system text window that displays messages about
+Blender operations, status, and internal errors.</p>
+<p>Use Cases:</p>
+<ul class="simple">
+<li>If Blender exits unexpectedly, the messages may indicate the cause or error.</li>
+<li>To see the output of Python scripts <code class="docutils literal"><span class="pre">print()</span></code> command.</li>
+<li>To launch Blender with different <a class="reference internal" href="arguments.html"><span class="doc">Arguments</span></a>.</li>
+<li>When troubleshooting, to see the output of <code class="docutils literal"><span class="pre">--debug</span></code> messages.</li>
+</ul>
+<div class="section" id="platform-dependant-instructions">
+<h2>Platform Dependant Instructions<a class="headerlink" href="#platform-dependant-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../_images/interface-window_system-console-linux.jpg"><img alt="../../_images/interface-window_system-console-linux.jpg" src="../../_images/interface-window_system-console-linux.jpg" style="width: 360px;" /></a>
+<p class="caption"><span class="caption-text">Starting Blender from a Linux console window.</span></p>
+</div>
+<p>The Blender <em>Console Window</em> in Linux will typically only be visible on the desktop
+if Blender is manually started from a terminal, as Blender outputs to the
+<em>Console Window</em> it is started from.</p>
+<p>Depending on your desktop environment setup, a Blender icon may appear on your desktop or an
+entry for Blender added to your menu after you install Blender.
+When you start Blender using a desktop icon or menu entry rather than a Terminal window, the
+Blender <em>Console Window</em> text will most likely be hidden on the Terminal that your
+<a class="reference external" href="https://en.wikipedia.org/wiki/Xwindows">XWindows</a> server was started from.</p>
+<p>This screenshot shows Blender started from a Linux Terminal and the
+resulting console text being printed to it.</p>
+</div>
+<div class="section" id="mac-osx">
+<h3>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../_images/interface-window_system-console-mac.jpg"><img alt="../../_images/interface-window_system-console-mac.jpg" src="../../_images/interface-window_system-console-mac.jpg" style="width: 360px;" /></a>
+<p class="caption"><span class="caption-text">Starting Blender from a Mac OSX console window.</span></p>
+</div>
+<p>Mac-OSX uses &#8220;files&#8221; with the <code class="docutils literal"><span class="pre">.app</span></code> extension called <em>applications</em>.
+These files are actually folders that appear as files in Finder.
+In order to run Blender you will have to specify that path to the Blender executable inside this folder,
+to get all output printed to the terminal.
+You can start a terminal from Applications &#8211;&gt; Utilities.
+The path to the executable in the <code class="docutils literal"><span class="pre">.app</span></code> folder is <code class="docutils literal"><span class="pre">./blender.app/Contents/MacOS/blender</span></code>.</p>
+<p>If you have Blender installed in the Applications folder,
+the following command can be used:</p>
+<pre class="literal-block">
+/Applications/blender-2.77/blender.app/Contents/MacOS/blender
+</pre>
+</div>
+<div class="section" id="ms-windows">
+<h3>MS-Windows<a class="headerlink" href="#ms-windows" title="Permalink to this headline">¶</a></h3>
+<p>When Blender is started on a MS-Windows operating system,
+the <em>Console Window</em> is first created as a separate window on the desktop.
+The main Blender window will also appear and the <em>Console Window</em> will then be toggled off.
+To display the console again, go to <span class="menuselection">Window ‣ Toggle System Console</span>.</p>
+<div class="figure" id="id3">
+<img alt="../../_images/interface_window_system-console_windows.png" src="../../_images/interface_window_system-console_windows.png" />
+<p class="caption"><span class="caption-text">Blender’s Console Window on MS-Windows.</span></p>
+</div>
+<p>The screenshot shows the Blender <em>Console Window</em> on MS-Windows
+directly after starting Blender and then a short while later after opening a file along with
+the relevant messages.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Closing the Blender Console Window</p>
+<p>Closing the <em>Console Window</em> will also close Blender, losing any unsaved work.</p>
+<p class="last">To turn off the console without closing Blender,
+just run <em>Toggle System Console</em> again from the menu (as mentioned above).</p>
+</div>
+</div>
+</div>
+<div class="section" id="console-window-status-and-error-messages">
+<h2>Console Window Status and Error Messages<a class="headerlink" href="#console-window-status-and-error-messages" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Blender Console Window</em> can display many different types of Status and Error Messages.
+Some messages simply inform the user what Blender is doing, but have no real impact on Blender&#8217;s ability to function.
+其他 messages can indicate serious errors that will most likely prevent Blender carrying out a particular task and
+may even make Blender non-responsive or shut down completely. The <em>Blender Console Window</em> messages can
+also originate internally from within the Blender code or from external sources such as
+<a class="reference internal" href="../scripting/python/addons.html"><span class="doc">Python scripts</span></a>.</p>
+<div class="section" id="common-messages">
+<h3>Common Messages<a class="headerlink" href="#common-messages" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">found bundled python: (FOLDER)</p>
+<blockquote>
+<div><p>This message indicates that Blender was able to find the <a class="reference internal" href="../scripting/index.html#scripting-index"><span class="std std-ref">Python</span></a>
+library for the Python interpreter embedded within Blender.
+If this folder is missing or unable to be found,
+it is likely that an error will occur, and this message will not appear.</p>
+</div></blockquote>
+</li>
+<li><p class="first">malloc returns nil()</p>
+<blockquote>
+<div><p>When Blender carries out operations that require extra memory (RAM), it calls a function called malloc
+(short for memory allocate) which tries to allocate a requested amount of memory for Blender.
+If this cannot be satisfied, malloc will return nil/null/0 to indicate that it failed to carry out the request.
+If this happens Blender will not be able to carry out the operation requested by the user.
+This will most likely result in Blender operating very slowly or shutting down.
+If you want to avoid running out of memory you can install more memory in your system,
+reduce the amount of detail in your Blender models,
+or shut down other programs and services which may be taking up memory that Blender could use.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="Command Line Arguments" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Command Line" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

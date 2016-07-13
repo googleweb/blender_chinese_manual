@@ -1,0 +1,127 @@
+
+*****
+Bones
+*****
+
+.. admonition:: 参考
+   :class: refbox
+
+   | Mode:     物体模式, 编辑模式 and 姿态模式
+   | Panel:    All in Properties editor, *Bone* property
+
+
+Let us first have a general grasp of the various panels gathering the bone settings,
+in Properties editor, *Bone* tab:
+
+.. figure:: /images/riggingboneprincipalsbonepropertieseditor.jpg
+
+   The Bone tab.
+
+
+Relations
+=========
+
+.. figure:: /images/riggingeditingbonecxtrelationspanel.jpg
+
+   The Relations panel.
+
+
+In this panel you can arrange sets of bones in different layers for easier manipulation.
+
+.. note::
+
+   This mode is only available in 编辑模式.
+
+
+Display
+=======
+
+.. figure:: /images/riggingeditingbonecxtdisplaypanel.jpg
+
+   The Display panel.
+
+
+Display panel lets you customize the look of your bones taking the shape of a another existing object.
+
+.. note::
+
+   This mode is only available in 物体模式.
+
+
+
+Deform
+======
+
+.. figure:: /images/riggingeditingbonecxtdeformpanel.jpg
+
+   The Deform panel.
+
+
+In this panel you can set basic properties of the bones.
+
+Turning the Deform option on and off,
+includes the active bone in the Automatic Weight Calculation when the Mesh is
+Parented to the Armature using the Armature Deform with the "With Automatic Weights" option.
+
+Also it's worth noting that by turning off a bone's deform option, makes it not influence the mesh at all,
+overriding any weights that it might have been assigned before; It mutes its influence.
+
+
+变换
+=========
+
+.. Todo, images are the same
+
+.. figure:: /images/riggingeditingbonecxttransformpanel.jpg
+
+   The 变换 panel(edit mode).
+
+
+When in edit mode you can use this panel to control position and roll of individual bones.
+
+When in pose mode you can only set location for the main bone, and you can now set rotation and scale.
+
+.. figure:: /images/riggingeditingbonecxttransformppanel.jpg
+
+   The 变换 panel(pose mode).
+
+.. note::
+
+   This mode is only available in Edit 姿态模式s.
+
+
+变换 Locks
+===============
+
+.. figure:: /images/riggingeditingbonecxttranformlockspanel.jpg
+
+   The 变换 Locks panel.
+
+
+This panel appears only in pose mode and allows you to restrict position,
+rotation and scale by axis on each bone in the armature.
+
+.. note::
+
+   This mode is only available in 姿态模式.
+
+
+Inverse Kinematics
+==================
+
+.. figure:: /images/riggingeditingbonecxtinversekinematicspanel.jpg
+
+   The Inverse Kinematics panel.
+
+
+This panel controls the way a bone or set of bones behave when linked in an inverse kinematic chain.
+
+.. note::
+
+   This mode is only available in 姿态模式.
+
+
+Custom Properties
+=================
+
+See the :doc:`Custom Properties </data_system/custom_properties>` page for more information.

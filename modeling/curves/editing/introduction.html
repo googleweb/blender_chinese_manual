@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Curve Editing &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Curve Deform" href="deform.html"/>
+        <link rel="prev" title="Editing" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Curves</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Curve Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform.html">Curve Deform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extrude.html">Curve Extrusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">Curves</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Curve Editing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/curves/editing/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="curve-editing">
+<h1>Curve Editing<a class="headerlink" href="#curve-editing" title="Permalink to this headline">¶</a></h1>
+<p>This page covers the basics of curve editing. Curve basics,
+selecting and advanced editing are covered in the following pages:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../introduction.html"><span class="doc">Curve basics</span></a></li>
+<li><a class="reference internal" href="../selecting.html"><span class="doc">Curve Selecting</span></a></li>
+</ul>
+<div class="section" id="curve-display">
+<h2>Curve Display<a class="headerlink" href="#curve-display" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="display-options">
+<h3>Display Options<a class="headerlink" href="#display-options" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/editing_curves_curve-display-panel.jpg" src="../../../_images/editing_curves_curve-display-panel.jpg" />
+<p class="caption"><span class="caption-text">Curve Display panel.</span></p>
+</div>
+<p>When in 编辑模式, the Properties Shelf <code class="kbd docutils literal"><span class="pre">N</span></code> contains options in the
+<em>Curve Display</em> panel for how curves are displayed in the 3D视图.</p>
+<dl class="docutils">
+<dt>Handles</dt>
+<dd>Toggles the display of Bézier handles while in edit mode. This does not affect the appearance of the curve itself.</dd>
+<dt>Normals</dt>
+<dd>Toggles the display of Curve Normals.</dd>
+<dt>Normal Size</dt>
+<dd>Sets the display scale of curve normals.</dd>
+</dl>
+</div>
+<div class="section" id="hiding-elements">
+<span id="curves-hiding"></span><h3>Hiding Elements<a class="headerlink" href="#hiding-elements" title="Permalink to this headline">¶</a></h3>
+<p>When in <em>编辑模式</em>, you can hide and reveal elements from the display.
+This can be useful in complex models with many elements on the Screen.</p>
+<dl class="docutils">
+<dt>Hide Selected elements</dt>
+<dd>Use <code class="kbd docutils literal"><span class="pre">H</span></code>, or the <span class="menuselection">Curve ‣ Show/Hide ‣ Hide Selected</span> menu option from the 3D视图 header.</dd>
+<dt>Show Hidden elements</dt>
+<dd>Use <code class="kbd docutils literal"><span class="pre">Alt-H</span></code>, or the
+<span class="menuselection">Curve ‣ Show/Hide ‣ Show Hidden</span> menu option from the 3D视图 header.</dd>
+<dt>Hide Unselected elements</dt>
+<dd>Use <code class="kbd docutils literal"><span class="pre">Shift-H</span></code>,
+or the <span class="menuselection">Curve ‣ Show/Hide ‣ Hide Unselected</span> menu option from the 3D视图 header.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="translation-rotation-scale">
+<h2>Translation, Rotation, Scale<a class="headerlink" href="#translation-rotation-scale" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ 变换 ‣ Grab/Move, Rotate, Scale, ...</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">G</span></code>, <code class="kbd docutils literal"><span class="pre">R</span></code>, <code class="kbd docutils literal"><span class="pre">S</span></code></div>
+</div>
+</div>
+<p>Like other elements in Blender, Curve control points can be grabbed/moved <code class="kbd docutils literal"><span class="pre">G</span></code>,
+rotated <code class="kbd docutils literal"><span class="pre">R</span></code> or scaled <code class="kbd docutils literal"><span class="pre">S</span></code>
+as described in the <a class="reference internal" href="../../../editors/3dview/transform/introduction.html"><span class="doc">Basic 变换ations</span></a> section.
+When in <em>编辑模式</em>, <a class="reference internal" href="../../../editors/3dview/transform/transform_control/proportional_edit.html"><span class="doc">proportional editing</span></a>
+is also available for transformation actions.</p>
+</div>
+<div class="section" id="snapping">
+<h2>Snapping<a class="headerlink" href="#snapping" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Curve Tools</div>
+</div>
+</div>
+<p><a class="reference internal" href="../../../editors/3dview/transform/transform_control/precision/snap.html"><span class="doc">Mesh snapping</span></a>
+also works with curve components.
+Both control points and their handles will be affected by snapping,
+except for within itself (other components of the active curve).
+Snapping works with 2D curves but points will be constrained to the local XY axes.</p>
+</div>
+<div class="section" id="deforming-tools">
+<h2>Deforming Tools<a class="headerlink" href="#deforming-tools" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ 变换</span></div>
+</div>
+</div>
+<p>The <em>To Sphere</em>, <em>Shear</em>, <em>Warp</em> and <em>Push/Pull</em> transform tools are described in the
+<a class="reference internal" href="../../../editors/3dview/transform/introduction.html"><span class="doc">变换ations</span></a> sections.
+The two other tools, <em>Tilt</em> and <em>Shrink/Fatten Radius</em> are related to
+<a class="reference internal" href="extrude.html"><span class="doc">Curve Extrusion</span></a>.</p>
+<div class="section" id="smoothing">
+<h3>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ smooth</span></div>
+</div>
+</div>
+<p>Curve smoothing is available through the specials menu. For Bézier curves, this smoothing
+operation reduces the distance between the selected control point/s and
+their neighbors, while keeping the neighbors anchored.
+Does not effect control point tangents.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/modeling_curves_smoothing_example1.jpg" src="../../../_images/modeling_curves_smoothing_example1.jpg" />
+<p class="caption"><span class="caption-text">Original, unsmoothed Curve.</span></p>
+</div>
+<div class="figure" id="id3">
+<img alt="../../../_images/modeling_curves_smoothing_example2.jpg" src="../../../_images/modeling_curves_smoothing_example2.jpg" />
+<p class="caption"><span class="caption-text">Entire curve smoothed over 200 times by holding <code class="kbd docutils literal"><span class="pre">Shift-R</span></code> to repeat last step.</span></p>
+</div>
+<div class="figure" id="id4">
+<img alt="../../../_images/modeling_curves_smoothing_example3.jpg" src="../../../_images/modeling_curves_smoothing_example3.jpg" />
+<p class="caption"><span class="caption-text">Only three control points in the center smoothed over 200 times.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="mirror">
+<h2>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Mirror</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code></div>
+</div>
+</div>
+<p>The <em>Mirror</em> tool is also available, behaving exactly as with
+<a class="reference internal" href="../../meshes/editing/deforming/mirror.html"><span class="doc">mesh vertices</span></a>,</p>
+</div>
+<div class="section" id="set-bezier-handle-type">
+<h2>Set Bézier Handle Type<a class="headerlink" href="#set-bezier-handle-type" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    <span class="menuselection">Curve Tools ‣ Handles</span></div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Control Points ‣ Set Handle Type</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">V</span></code></div>
+</div>
+</div>
+<p>Handle types are a property of <a class="reference internal" href="../introduction.html"><span class="doc">Bézier curves.</span></a> and can be used to alter features of the curve.
+For example, switching to <em>Vector handles</em> can be used to create curves with sharp corners.
+Read the <a class="reference internal" href="../introduction.html"><span class="doc">Bézier curves</span></a> page for more details.</p>
+</div>
+<div class="section" id="extending-curves">
+<span id="modeling-curves-extending"></span><h2>Extending Curves<a class="headerlink" href="#extending-curves" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Extrude</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>, <code class="kbd docutils literal"><span class="pre">E</span></code></div>
+</div>
+</div>
+<p>Once a curve is created you can add new segments (in fact,
+new control points defining new segments), either by extruding,
+or placing new handles with <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>.
+Each new segment is added to one end of the curve.
+The Bézier curve can only be extend at the endpoints.
+<code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> on inner control points will make unconnected duplicates.</p>
+</div>
+<div class="section" id="subdivision">
+<span id="modeling-curves-subdivision"></span><h2>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Curve Tools</div>
+<div class="line">Menu:     <span class="menuselection">SurfaceTools ‣ 建模 ‣ Subdivide</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W</span></code></div>
+</div>
+</div>
+<p>Curve subdivision simply subdivides all selected segments by adding one or more control points
+between the selected segments. To control the number of cuts,
+press <code class="kbd docutils literal"><span class="pre">W</span></code> to make a single subdivision.
+Then press <code class="kbd docutils literal"><span class="pre">F6</span></code> to bring up the <em>Number of Cuts</em> menu.</p>
+</div>
+<div class="section" id="duplication">
+<h2>Duplication<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Duplicate</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-D</span></code></div>
+</div>
+</div>
+<p>This command duplicates the selected control points,
+along with the curve segments implicitly selected (if any).
+The copy is selected and placed in <em>Grab</em> mode, so you can move it to another place.</p>
+</div>
+<div class="section" id="joining-curve-segments">
+<span id="modeling-curves-joining-segments"></span><h2>Joining Curve Segments<a class="headerlink" href="#joining-curve-segments" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Make Segment</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">F</span></code></div>
+</div>
+</div>
+<p>Two open curves can be combined into one by creating a segment between the two curves.
+To join two separated curves,
+select one end control point from each curve then press <code class="kbd docutils literal"><span class="pre">F</span></code>.
+The two curves are joined by a segment to become a single curve.</p>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/editing_curves_two-curves-joined.jpg"><img alt="../../../_images/editing_curves_two-curves-joined.jpg" src="../../../_images/editing_curves_two-curves-joined.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Curves before and after joining.</span></p>
+</div>
+<p>Additionally, you can close a curve by joining the endpoints but note that you can only join
+curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS)</p>
+</div>
+<div class="section" id="separating-curves">
+<h2>Separating Curves<a class="headerlink" href="#separating-curves" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Separate</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">P</span></code></div>
+</div>
+</div>
+<p>Curve objects that are made of multiple distinct curves can be separated into their own
+objects by selecting the desired segments and pressing <code class="kbd docutils literal"><span class="pre">P</span></code>. Note,
+if there is only one curve in a Curve object,
+pressing <code class="kbd docutils literal"><span class="pre">P</span></code> will create a new Curve object with no control points.</p>
+</div>
+<div class="section" id="deleting-elements">
+<h2>Deleting Elements<a class="headerlink" href="#deleting-elements" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Delete...</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">X</span></code>, <code class="kbd docutils literal"><span class="pre">Del</span></code></div>
+</div>
+</div>
+<p>Options for the <em>Erase</em> pop-up menu:</p>
+<dl class="docutils">
+<dt>Selected</dt>
+<dd>This will delete the selected control points, <em>without</em> breaking the curve (i.e.
+the adjacent points will be directly linked, joined, once the intermediary ones are deleted).
+Remember that NURBS order cannot be higher than its number of control points,
+so it might decrease when you delete some control point.
+Of course, when only one point remains, there is no more visible curve,
+and when all points are deleted, the curve itself is deleted.</dd>
+<dt>Segment</dt>
+<dd>This option is somewhat the opposite to the preceding one, as it will cut the curve,
+without removing any control points, by erasing one selected segment.
+This option always removes <em>only one</em> segment (the last &#8220;selected&#8221; one),
+even when several are in the selection.
+So to delete all segments in your selection, you will have to repetitively use the same erase option...</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/editing_curves_delete-selected.jpg"><img alt="../../../_images/editing_curves_delete-selected.jpg" src="../../../_images/editing_curves_delete-selected.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Deleting Curve Selected.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../_images/editing_curves_delete-segment.jpg"><img alt="../../../_images/editing_curves_delete-segment.jpg" src="../../../_images/editing_curves_delete-segment.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Deleting Curve segments.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="opening-and-closing-a-curve">
+<span id="modeling-curves-opening-and-closing"></span><h2>Opening and Closing a Curve<a class="headerlink" href="#opening-and-closing-a-curve" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Toggle Cyclic</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></div>
+</div>
+</div>
+<p>This toggles between an open curve and closed curve (Cyclic).
+Only curves with at least one selected control point will be closed/open.
+The shape of the closing segment is based on the start and end handles for Bézier curves,
+and as usual on adjacent control points for NURBS.
+The only time a handle is adjusted after closing is if the handle is an <em>Auto</em> one.
+Fig. <a class="reference internal" href="#fig-curves-editing-open-close"><span class="std std-ref">Open and Closed curves.</span></a> is the same Bézier curve open and closed.</p>
+<p>This action only works on the original starting control-point or the last control-point added.
+Deleting a segment(s) doesn&#8217;t change how the action applies;
+it still operates only on the starting and last control-points. This means that
+<code class="kbd docutils literal"><span class="pre">Alt-C</span></code> may actually join two curves instead of closing a single curve! Remember
+that when a 2D curve is closed, it creates a renderable flat face.</p>
+<div class="figure" id="id8">
+<span id="fig-curves-editing-open-close"></span><a class="reference internal image-reference" href="../../../_images/editing_curves_open-closed-cyclic.jpg"><img alt="../../../_images/editing_curves_open-closed-cyclic.jpg" src="../../../_images/editing_curves_open-closed-cyclic.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Open and Closed curves.</span></p>
+</div>
+</div>
+<div class="section" id="switch-direction">
+<span id="curve-switch-direction"></span><h2>Switch Direction<a class="headerlink" href="#switch-direction" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Segments ‣ Switch Direction</span>,
+<span class="menuselection">Specials ‣ Switch Direction</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W-Numpad2</span></code></div>
+</div>
+</div>
+<p>This command will &#8220;reverse&#8221; the direction of any curve with at least one selected element
+(i.e. the start point will become the end one, and <em>vice versa</em>).
+This is mainly useful when using a curve as path, or using the bevel and taper options.</p>
+</div>
+<div class="section" id="converting-tools">
+<h2>Converting Tools<a class="headerlink" href="#converting-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="converting-curve-type">
+<h3>Converting Curve Type<a class="headerlink" href="#converting-curve-type" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Curve Tools &#8211;&gt; Set Spline type</div>
+</div>
+</div>
+<div class="figure align-right" id="id9">
+<a class="reference internal image-reference" href="../../../_images/editing_curves_set-spline-type.jpg"><img alt="../../../_images/editing_curves_set-spline-type.jpg" src="../../../_images/editing_curves_set-spline-type.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Set Spline Type button.</span></p>
+</div>
+<p>You can convert splines in a curve object between Bézier, NURBS, and Poly curves.
+Press <code class="kbd docutils literal"><span class="pre">T</span></code> to bring up the Toolshelf. Clicking on the <em>Set Spline Type</em>
+button will allow you to select the Spline type (Poly, Bézier or NURBS).</p>
+<p>Note, this is not a &#8220;smart&#8221; conversion, i.e. Blender does not try to keep the same shape,
+nor the same number of control points. For example, when converting a NURBS to a Bézier,
+each group of three NURBS control points become a unique Bézier one (center point and two handles).</p>
+</div>
+<div class="section" id="convert-curve-to-mesh">
+<h3>Convert Curve to Mesh<a class="headerlink" href="#convert-curve-to-mesh" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Object ‣ Convert to ‣ Mesh From Curve/Meta/Surface/Text</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></div>
+</div>
+</div>
+<p>There is also an &#8220;external&#8221; conversion, from curve to mesh, that only works in <em>物体模式</em>.
+It transforms a <em>Curve</em> object into a <em>Mesh</em> object,
+using the curve resolution to create edges and vertices.
+Note that it also keeps the faces and volumes created by closed and extruded curves.</p>
+</div>
+<div class="section" id="convert-mesh-to-curve">
+<h3>Convert Mesh to Curve<a class="headerlink" href="#convert-mesh-to-curve" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Object ‣ Convert to ‣ Curve From Mesh/Text</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></div>
+</div>
+</div>
+<p>Mesh objects that consist of a series of connected vertices can be converted into curve
+objects. The resulting curve will be a Poly curve type,
+but can be converted to have smooth segments as described above.</p>
+</div>
+</div>
+<div class="section" id="curve-parenting">
+<h2>Curve Parenting<a class="headerlink" href="#curve-parenting" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code></div>
+</div>
+</div>
+<p>You can make other selected objects <a class="reference internal" href="../../../editors/3dview/object/relationships/parents.html#object-parenting"><span class="std std-ref">children</span></a>
+of one or three control points <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>, as with mesh objects.</p>
+<p>To select a mesh(that is in view) while editing a curve, <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> click on it.
+Select either one or three control points,
+then <code class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></code> the object and use <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> to make a vertex parent.
+Selecting three control points will make the child follow
+the median point between the three vertices. An alternative would be to use a
+<a class="reference internal" href="../../../rigging/constraints/relationship/child_of.html"><span class="doc">Child of Constraint</span></a></p>
+</div>
+<div class="section" id="hooks">
+<h2>Hooks<a class="headerlink" href="#hooks" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Curve ‣ control points ‣ hooks</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-H</span></code></div>
+</div>
+</div>
+<p><a class="reference internal" href="../../modifiers/deform/hooks.html"><span class="doc">Hooks</span></a> can be added to control one or more points with other objects.</p>
+</div>
+<div class="section" id="set-goal-weight">
+<span id="modeling-curve-weight"></span><h2>Set Goal Weight<a class="headerlink" href="#set-goal-weight" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Set Goal Weight</span></div>
+</div>
+</div>
+<p>This sets the &#8220;goal weight&#8221; of selected control points,
+which is used when a curve has <a class="reference internal" href="../../../physics/soft_body/index.html"><span class="doc">Soft Body</span></a> physics,
+forcing the curve to &#8220;stick&#8221; to their original positions, based on the weight.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="deform.html" class="btn btn-neutral float-right" title="Curve Deform" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

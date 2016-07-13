@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Options &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+    <li>Options</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/sculpt_paint/sculpting/options.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tools-tab">
+<h2>Tools Tab<a class="headerlink" href="#tools-tab" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="brush">
+<h3>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Brush Type</dt>
+<dd><p class="first">Brushes are brush presets. They are a combination of a &#8216;tool&#8217;,
+along with stroke, texture, and options.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/sculpt_brushes.png" src="../../_images/sculpt_brushes.png" />
+<p class="caption"><span class="caption-text">Sculpt brushes.</span></p>
+</div>
+<dl class="last docutils">
+<dt>Blob</dt>
+<dd>Pushes mesh outward or inward into a spherical shape with settings to
+control the amount of pinching at the edge of the sphere.</dd>
+<dt>Clay</dt>
+<dd>Similar to the <em>Draw</em> brush, but includes settings to adjust the plane on which the brush acts.</dd>
+<dt>Clay Strips</dt>
+<dd>Similar to the <em>Clay</em> brush, but it uses a cube test to define the brush area of influence rather than a sphere.</dd>
+<dt>Crease</dt>
+<dd>Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.</dd>
+<dt>Draw</dt>
+<dd>Moves vertices inward or outward,
+based the average normal of the vertices contained within the drawn brush stroke.</dd>
+<dt>Fill</dt>
+<dd>Works like the Flatten brush, but only brings vertices below the brush plane upwards.
+The inverse of the Scrape brush is to <em>Deepen</em> by pushing vertices above the plane downward.</dd>
+<dt>Flatten</dt>
+<dd>The <em>Flatten</em> brush finds an &#8216;area plane&#8217;
+located by default at the average height above/below the vertices within the brush area.
+The vertices are then pulled towards this plane.
+The inverse of the Flatten brush is the <em>Contrast</em>
+brush which pushes vertices up or down away from the brush plane.</dd>
+<dt>Grab</dt>
+<dd>Used to drag a group of points around. Unlike the other brushes,
+<em>Grab</em> does not modify different points as the brush is dragged across the model.
+Instead, <em>Grab</em> selects a group of vertices on mousedown, and pulls them to follow the mouse.
+The effect is similar to moving a group of vertices in <em>编辑模式</em> with proportional-editing enabled,
+except that <em>Grab</em> can make use of other 雕刻模式 options (like textures and symmetry).</dd>
+<dt>Inflate</dt>
+<dd>Similar to <em>Draw</em>, except that vertices in <em>Inflate</em> mode are displaced in the direction of their own normals.</dd>
+<dt>Layer</dt>
+<dd>This brush is similar to <em>Draw</em>, except that the height of the displacement layer is capped.
+This creates the appearance of a solid layer being drawn.
+This brush does not draw on top of itself; a brush stroke intersects itself.
+Releasing the mouse button and starting a new stroke will reset the depth and paint on top of the previous stroke.</dd>
+<dt>Nudge</dt>
+<dd>Moves vertices in the direction of the brush stroke.</dd>
+<dt>Pinch</dt>
+<dd>Pulls vertices towards the center of the brush.
+The inverse setting is <em>Magnify</em>, in which vertices are pushed away from the center of the brush.</dd>
+<dt>Rotate</dt>
+<dd>Rotates vertices within the brush in the direction the cursor is moved.</dd>
+<dt>Scrape</dt>
+<dd>The <em>Scrape</em> brush works like the Flatten brush, but only brings vertices above the plane downwards.
+The inverse of the Scrape brush is to <em>Peak</em> by pushing vertices above the plane up away from the plane.</dd>
+<dt>Smooth</dt>
+<dd>As the name suggests,
+eliminates irregularities in the area of the mesh within the brush&#8217;s
+influence by smoothing the positions of the vertices.</dd>
+<dt>Snake Hook</dt>
+<dd>Pulls vertices along with the movement of the brush to create long, snake-like forms.</dd>
+<dt>Thumb</dt>
+<dd>Similar to the <em>Nudge</em> brush, this one flattens the mesh in the brush area,
+while moving it in the direction of the brush stroke.</dd>
+</dl>
+</dd>
+<dt>Radius</dt>
+<dd>This option controls the radius of the brush, measured in pixels.
+<code class="kbd docutils literal"><span class="pre">F</span></code> allows you to change the brush size interactively by
+dragging the mouse and then <code class="kbd docutils literal"><span class="pre">LMB</span></code> (the texture of the brush should be visible inside the circle).
+Typing a number then enter while using <code class="kbd docutils literal"><span class="pre">F</span></code> allows you to enter the size numerically.
+Brush size can be affected by enabling the pressure sensitivity icon,
+if you are using a <a class="reference internal" href="../../getting_started/installing/configuration/hardware.html#hardware-tablet"><span class="std std-ref">Graphics Tablet</span></a>.</dd>
+<dt>Strength</dt>
+<dd><p class="first">Controls how much each application of the brush affects the model.
+For example, higher values cause the <em>Draw</em> brush to add depth to the model more quickly,
+and cause the <em>Smooth</em> brush to smooth the model more quickly.
+This setting is not available for <em>Grab</em>, <em>Snake Hook</em>, or <em>Rotate</em>.</p>
+<p>You can change the brush strength interactively by pressing <code class="kbd docutils literal"><span class="pre">Shift-F</span></code>
+in the 3D视图 and then moving the brush and then <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+You can enter the size numerically also while in <code class="kbd docutils literal"><span class="pre">Shift-F</span></code> sizing.
+Brush strength can be affected by enabling the pressure sensitivity icon,
+if a supported tablet is being used.</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If the range of strengths doesn&#8217;t seem to fit the model (for example,
+if even the lowest strength setting still makes too large of a change on the model)
+then you can scale the model (in <em>编辑模式</em>, not <em>物体模式</em>).
+Larger sizes will make the brush&#8217;s effect smaller, and vice versa.</p>
+</div>
+</dd>
+<dt>Autosmooth</dt>
+<dd>Sets the amount of smoothing to be applied to each stroke.</dd>
+<dt>Normal Weight</dt>
+<dd><p class="first">Constrains brush movement along the surface normal.
+Especially useful with the <em>Grab Brush</em>, can be temporarily enabled by holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code>.</p>
+<p class="last">Applies to <em>Grab</em> and <em>Snake Hook</em> brushes.</p>
+</dd>
+<dt>Sculpt Plane</dt>
+<dd>Use this menu to set the plane in which the sculpting takes place.</dd>
+<dt>Front Faces Only</dt>
+<dd>When enabled, the brush only affects vertices that are facing the viewer.</dd>
+<dt>Add/Subtract</dt>
+<dd>TODO.</dd>
+<dt>Accumulate</dt>
+<dd>Causes stroke dabs to accumulate on top of each other.</dd>
+</dl>
+</div>
+<div class="section" id="texture-panel">
+<h3>Texture Panel<a class="headerlink" href="#texture-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Texture</dt>
+<dd>Texture to be used to determine the strength of brush.</dd>
+<dt>Brush Mapping</dt>
+<dd><p class="first">Sets the way the texture is mapped to the brush stroke:</p>
+<dl class="last docutils">
+<dt>Fixed</dt>
+<dd>If <em>Fixed</em> is enabled, the texture follows the mouse,
+so it appears that the texture is being dragged across the model.</dd>
+<dt>Tiled</dt>
+<dd>The <em>Tile</em> option tiles the texture across the screen,
+so moving the brush appears to move separately from the texture.
+The <em>Tile</em> option is most useful with tileable images, rather than procedural textures.</dd>
+<dt>3D</dt>
+<dd>The <em>3D</em> option allows the brush to take full advantage of procedural textures.
+This mode uses vertex coordinates rather than the brush location to determine what area of the texture to use.</dd>
+</dl>
+</dd>
+<dt>Angle</dt>
+<dd><p class="first">This is the rotation angle of the texture brush.
+It can be changed interactively via <code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code> in the 3D视图.
+While in the interactive rotation you can enter a value numerically as well. Can be set to:</p>
+<dl class="last docutils">
+<dt>User</dt>
+<dd>Directly input the angle value.</dd>
+<dt>Rake</dt>
+<dd>Angle follows the direction of the brush stroke. Not available with <em>3D</em> textures.</dd>
+<dt>Random</dt>
+<dd>Angle is randomized.</dd>
+</dl>
+</dd>
+<dt>Rake</dt>
+<dd>TODO.</dd>
+<dt>Random</dt>
+<dd>TODO.</dd>
+<dt>Offset</dt>
+<dd>Fine tunes the texture map placement in the x, y, and z axes.</dd>
+<dt>Size</dt>
+<dd>This setting allows you to modify the scaling factor of the texture. Not available for <em>Drag</em> textures.</dd>
+<dt>Sample Bias</dt>
+<dd>Value added to texture samples.</dd>
+</dl>
+</div>
+<div class="section" id="stroke-panel">
+<h3>Stroke Panel<a class="headerlink" href="#stroke-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Stroke Method</dt>
+<dd>Defines the way brush strokes are applied to the mesh:</dd>
+<dt>Dots</dt>
+<dd>Standard brush stroke.</dd>
+<dt>Drag Dot</dt>
+<dd>Creates a single displacement in the brush shape. Click then drag on mesh to desired location, then release.</dd>
+<dt>Space</dt>
+<dd>Creates brush stroke as a series of dots, whose spacing is determined by the <em>Spacing</em> setting.
+<em>Spacing</em> represents the percentage of the brush diameter.</dd>
+<dt>Anchored</dt>
+<dd>Creates a single displacement at the brush location.
+Clicking and dragging will resize the brush diameter.
+When <em>Edge to Edge</em> the brush location and orientation is determined by a two point circle,
+where the first click is one point, and dragging places the second point, opposite from the first.</dd>
+<dt>Airbrush</dt>
+<dd>Flow of the brush continues as long as the mouse click is held, determined by the <em>Rate</em> setting.
+If disabled, the brush only modifies the model when the brush changes its location.
+This option is not available for the <em>Grab</em> brush.</dd>
+</dl>
+<p>The following parameters are available for the <em>Dots</em>, <em>Space</em>,
+and <em>Airbrush</em> strokes:</p>
+<dl class="docutils">
+<dt>Jitter</dt>
+<dd>Jitters the position of the brush while painting.</dd>
+<dt>Smooth stroke</dt>
+<dd><p class="first">Brush lags behind mouse and follows a smoother path. When enabled, the following become active:</p>
+<dl class="last docutils">
+<dt>Radius</dt>
+<dd>Sets the minimum distance from the last point before stroke continues.</dd>
+<dt>Factor</dt>
+<dd>Sets the amount of smoothing</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="curve-panel">
+<h3>Curve Panel<a class="headerlink" href="#curve-panel" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Curve</em> section allows you to use a curve control to the right to modify the
+intensity of the brush from its centre (left part of the curve) towards its borders
+(right part of the curve).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Read more about using the <a class="reference internal" href="../../interface/controls/extended_controls.html#ui-curve-widget"><span class="std std-ref">Curve Widget</span></a>.</p>
+</div>
+</div>
+<div class="section" id="symmetry-panel">
+<h3>Symmetry Panel<a class="headerlink" href="#symmetry-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Mirror</dt>
+<dd>Mirror the brush strokes across the selected local axes.
+Note that if you want to alter the directions the axes point in,
+you must rotate the model in <em>编辑模式</em>, not <em>物体模式</em></dd>
+<dt>Radial</dt>
+<dd>These settings allow for radial symmetry in the desired axes.
+The number determines how many times the stroke will be repeated within 360 degrees around the central axes.</dd>
+<dt>Feather</dt>
+<dd>Reduces the strength of the stroke where it overlaps the planes of symmetry.</dd>
+<dt>Lock</dt>
+<dd>These three buttons allow you to block any modification/deformation
+of your model along selected local axes, while you are sculpting it.</dd>
+<dt>Tiling</dt>
+<dd>Using this option allows you to seamlessly tile your strokes along the given
+axes.</dd>
+<dt>Tile Offset</dt>
+<dd>The default tile size is set to one <abbr title="Blender Unit">BU</abbr>. The offset allows the
+option to alter the tile size along all three axes.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="options-tab">
+<h2>Options Tab<a class="headerlink" href="#options-tab" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overlay-panel">
+<h3>Overlay Panel<a class="headerlink" href="#overlay-panel" title="Permalink to this headline">¶</a></h3>
+<p>When enabled, the brush texture is shown in the viewport</p>
+<dl class="docutils">
+<dt>View</dt>
+<dd>The eye icon is used as a toggle to show or hide the given brush texture</dd>
+<dt>Alpha</dt>
+<dd>You can change the amount of transparency used when showing the texture using
+the Alpha slider</dd>
+<dt>Stroke Overlay</dt>
+<dd>The brush icon allows you to turn off the viewport overlay during strokes</dd>
+</dl>
+</div>
+<div class="section" id="options-panel">
+<h3>Options Panel<a class="headerlink" href="#options-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Gravity</dt>
+<dd><dl class="first last docutils">
+<dt>Factor</dt>
+<dd>Setting the factor allows you to add gravity to your brush strokes, giving
+it a draping effect.</dd>
+<dt>Orientation</dt>
+<dd>Using another object, the gravity can be oriented to the set object&#8217;s local
+Z axis, changing the direction of the gravity.</dd>
+</dl>
+</dd>
+<dt>Threaded Sculpt</dt>
+<dd>Takes advantage of multiple CPU processors to improve sculpting performance.</dd>
+<dt>Fast Navigation</dt>
+<dd>For <em>Multires</em> models, show low resolution while navigation the viewport.</dd>
+<dt>Use Deform Only</dt>
+<dd>Limits active modifiers on the active object to Deform modifiers, and Multiresolution</dd>
+<dt>Show Diffuse Color</dt>
+<dd>Allows the active object to show it&#8217;s diffuse color when sculpting</dd>
+<dt>Unified 设置:</dt>
+<dd><dl class="first last docutils">
+<dt>Size</dt>
+<dd>Forces the brush size to be shared across brushes.</dd>
+<dt>Strength</dt>
+<dd>Forces the brush strength to be shared across brushes.</dd>
+<dt>Color</dt>
+<dd>Not Used in 雕刻模式</dd>
+</dl>
+</dd>
+<dt>Show Brush</dt>
+<dd>Shows the brush shape in the viewport.</dd>
+<dt>Color (Add/Subtract)</dt>
+<dd>Set the color of the brush ring when its particular effect is active</dd>
+</dl>
+</div>
+<div class="section" id="appearance-panel">
+<h3>Appearance Panel<a class="headerlink" href="#appearance-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Show Brush</dt>
+<dd>Shows the brush shape in the viewport.</dd>
+<dt>Color (Add/Subtract)</dt>
+<dd>Set the color of the brush ring when its particular effect is active</dd>
+<dt>Custom Icon</dt>
+<dd>Append an image file to the active brush as an icon.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

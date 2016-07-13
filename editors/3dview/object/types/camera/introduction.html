@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="相机" href="index.html"/>
+        <link rel="next" title="相机 Lens" href="lens.html"/>
+        <link rel="prev" title="相机" href="index.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects Types</a> &raquo;</li>
+      
+          <li><a href="index.html">相机</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/object/types/camera/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>A <em>相机</em> is an object that provides a means of rendering images from Blender.
+It defines which portions of a scene is visible in the rendered image.
+By default a scene contains one camera. However, A scene can contain more than one camera,
+but only one of them will be used at a time.
+So you will only need to add a new camera if you are making cuts between them.
+See <a class="reference internal" href="../../../../../animation/camera.html"><span class="doc">Animating 相机s</span></a>.</p>
+<div class="section" id="changing-the-active-camera">
+<h2>Changing the Active 相机<a class="headerlink" href="#changing-the-active-camera" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad0</span></code></div>
+</div>
+</div>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/cameraview-activecamera.jpg" src="../../../../../_images/cameraview-activecamera.jpg" />
+<p class="caption"><span class="caption-text">Active camera (left one).</span></p>
+</div>
+<p>The <em>active</em> camera is the camera that is currently being used for rendering and camera view
+<code class="kbd docutils literal"><span class="pre">Numpad0</span></code>.</p>
+<p>Select the camera you would like to make active and press <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad0</span></code>
+(by doing so, you also switch the view to camera view). In order to render,
+each scene <strong>must</strong> have an active camera.</p>
+<p>The active camera can also be set in the <em>Scene</em> tab of the <em>Properties Editor</em></p>
+<p>The camera with the solid triangle on top is the active camera.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The active camera, as well as the layers, can be specific to a given view,
+or global (locked) to the whole scene - see
+<a class="reference internal" href="../../../display/panels.html"><span class="doc">Local 相机</span></a>.</p>
+</div>
+</div>
+<div class="section" id="camera-settings">
+<span id="id1"></span><h2>相机 设置<a class="headerlink" href="#camera-settings" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Editor:   <span class="menuselection">Properties ‣  相机</span></div>
+</div>
+</div>
+<p>相机s are invisible in renders, so they do not have any material or texture settings.
+However, they do have <em>Object</em> and <em>Editing</em> setting panels available
+which are displayed when a camera is the selected (active!) object.</p>
+<div class="section" id="lens">
+<h3>Lens<a class="headerlink" href="#lens" title="Permalink to this headline">¶</a></h3>
+<p>The camera lens options control the way 3D objects are represented in a 2D image.
+See <a class="reference internal" href="lens.html"><span class="doc">相机 Lens</span></a> for details.</p>
+</div>
+<div class="section" id="camera">
+<h3>相机<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<img alt="../../../../../_images/camera-presets-panel.jpg" src="../../../../../_images/camera-presets-panel.jpg" />
+<p class="caption"><span class="caption-text">相机 Presets panel.</span></p>
+</div>
+<dl class="docutils" id="render-camera-sensor-size">
+<dt>Sensor size</dt>
+<dd>This setting is an alternative way to control the focal-length,
+it is useful to match the camera in Blender to a physical camera &amp; lens combination,
+e.g. for <a class="reference internal" href="../../../../movie_clip_editor/index.html"><span class="doc">motion tracking</span></a>.</dd>
+</dl>
+</div>
+<div class="section" id="depth-of-field">
+<span id="render-camera-dof"></span><h3>Depth of Field<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<img alt="../../../../../_images/camera_dof_panel.jpg" src="../../../../../_images/camera_dof_panel.jpg" />
+<p class="caption"><span class="caption-text">相机 Depth of Field Panel.</span></p>
+</div>
+<p>Real world cameras transmit light through a lens that bends and focuses it onto the sensor.
+Because of this, objects that are a certain distance away are in focus,
+but objects in front and behind that are blurred.</p>
+<p>The area in focus is called the <em>focal point</em> and can be set using either an exact value,
+or by using the distance between the camera and a chosen object:</p>
+<dl class="docutils">
+<dt>Focus Object</dt>
+<dd>Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
+Typically this is used to give precise control over the position of the focal point,
+and also allows it to be animated or constrained to another object.</dd>
+<dt>Distance</dt>
+<dd><p class="first">Sets the distance to the focal point when no <em>Focus Object</em> is specified.
+If <em>Limits</em> are enabled, a yellow cross is shown on the camera line of sight at this distance.</p>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Hover the mouse over the <em>Distance</em> property and press <code class="kbd docutils literal"><span class="pre">E</span></code> to use a special <em>Depth Picker</em>.
+Then click on a point in the 3D视图 to sample the distance from that point to the camera.</p>
+</div>
+</dd>
+<dt>High Quality</dt>
+<dd>In order for the viewport to offer an accurate representation of depth of field,
+like a render, you must enable High Quality. Without it, you may notice a
+difference in shading.</dd>
+<dt>Viewport F-stop</dt>
+<dd>Controls the real-time focal blur effect used during sequencer or OpenGL rendering and,
+when enabled, camera views in the 3D视图.
+The amount of blur depends on this setting, along with Focal Length and Sensor Size.
+Smaller Viewport F-stop values result in more blur.</dd>
+<dt>Blades</dt>
+<dd>Add a number of polygonal <em>blades</em> to the blur effect, in order to achieve a
+a <em>bokeh effect</em> in the viewport. To enable this feature, the blades must be
+set to at least 3 (3 sides, triangle)</dd>
+</dl>
+<div class="figure" id="id5">
+<img alt="../../../../../_images/camera_dof_bokeh.jpg" src="../../../../../_images/camera_dof_bokeh.jpg" />
+<p class="caption"><span class="caption-text">The viewport bokeh effect with the blades set to 3.</span></p>
+</div>
+</div>
+<div class="section" id="display">
+<h3>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id6">
+<img alt="../../../../../_images/camera-display-panel.jpg" src="../../../../../_images/camera-display-panel.jpg" />
+<p class="caption"><span class="caption-text">相机 Display Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Limits</dt>
+<dd>Shows a line which indicates <em>Start</em> and <em>End Clipping</em> values.</dd>
+<dt>Mist</dt>
+<dd>Toggles viewing of the mist limits on and off.
+The limits are shown as two connected white dots on the camera line of sight.
+The mist limits and other options are set in the <em>World</em> panel,
+in the <a class="reference internal" href="../../../../../render/blender_render/world/mist.html"><span class="doc">Mist section</span></a>.</dd>
+</dl>
+<div class="figure" id="id7">
+<img alt="../../../../../_images/camera-camera-view.jpg" src="../../../../../_images/camera-camera-view.jpg" />
+<p class="caption"><span class="caption-text">相机 view displaying safe areas, sensor and name.</span></p>
+</div>
+<dl class="docutils">
+<dt>Sensor</dt>
+<dd>Displays a dotted frame in camera view.</dd>
+<dt>Name</dt>
+<dd>Toggle name display on and off in camera view.</dd>
+<dt>Size</dt>
+<dd>Size of the camera icon in the 3D视图. This setting has no effect on the render output of a camera,
+and is only a cosmetic setting.
+The camera icon can also be scaled using the standard Scale <code class="kbd docutils literal"><span class="pre">S</span></code> transform key.</dd>
+<dt>Passepartout, Alpha</dt>
+<dd>This mode darkens the area outside of the camera&#8217;s field of view, based on the <em>Alpha</em> setting.</dd>
+</dl>
+<div class="section" id="composition-guides">
+<h4>Composition Guides<a class="headerlink" href="#composition-guides" title="Permalink to this headline">¶</a></h4>
+<p><em>Composition Guides</em> are available from the drop-down menu, which can help when framing a shot.
+There are eight types of guides available:</p>
+<dl class="docutils">
+<dt>Center</dt>
+<dd>Adds lines dividing the frame in half vertically and horizontally.</dd>
+<dt>Center Diagonal</dt>
+<dd>Adds lines connecting opposite corners.</dd>
+<dt>Thirds</dt>
+<dd>Adds lines dividing the frame in thirds vertically and horizontally.</dd>
+<dt>Golden</dt>
+<dd>Divides the width and height into Golden proportions (About 0.618 of the size from all sides of the frame).</dd>
+<dt>Golden Triangle A</dt>
+<dd>Draws a diagonal line from the lower-left to upper-right corners,
+then adds perpendicular lines that pass through the top left and bottom right corners.</dd>
+<dt>Golden Triangle B</dt>
+<dd>Same as A, but with the opposite corners.</dd>
+<dt>Harmonious Triangle A</dt>
+<dd>Draws a diagonal line from the lower-left to upper-right corners,
+then lines from the top left and bottom right corners to 0.618 the lengths of the opposite side.</dd>
+<dt>Harmonious Triangle B</dt>
+<dd>Same as A, but with the opposite corners.</dd>
+</dl>
+</div>
+<div class="section" id="safe-areas">
+<h4>Safe Areas<a class="headerlink" href="#safe-areas" title="Permalink to this headline">¶</a></h4>
+<p>When this is enabled, extra dotted frames are drawn when in camera view, delimiting the area considered as
+&#8220;safe&#8221; for important elements.
+<a class="reference internal" href="safe_areas.html"><span class="doc">More information about them in the safe areas section</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="render-border">
+<h2>渲染 Border<a class="headerlink" href="#render-border" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">View ‣ 渲染 Border</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code></div>
+</div>
+</div>
+<div class="figure" id="id8">
+<img alt="../../../../../_images/editors_3dview_navigating_camera-view-render-border-toggle.jpg" src="../../../../../_images/editors_3dview_navigating_camera-view-render-border-toggle.jpg" />
+<p class="caption"><span class="caption-text">渲染 Border toggle.</span></p>
+</div>
+<p>While in camera view, you can define a subregion to render by drawing out a rectangle within the cameras frame.
+Your renders will now be limited to the part of scene visible within the render border.
+This can be very useful for reducing render times for quick previews on an area of interest.</p>
+<p>The border can be disabled by disabling the <em>Border</em> option in the <em>Dimensions</em> panel
+in the <em>渲染</em> tab or by activating the option again and
+selecting <em>渲染 Border</em> larger than the camera view.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Anti-Aliasing and blur options with borders</p>
+<p>Note that when 渲染 Borders are activated,
+Full Sampling Anti-Aliasing will be disabled while Sampled Motion Blur will become available.</p>
+<p class="last"><a class="reference internal" href="../../../../../render/blender_render/antialiasing.html"><span class="doc">Read more about Anti-Aliasing</span></a>
+<a class="reference internal" href="../../../../../render/blender_render/motion_blur.html"><span class="doc">Read more about Motion Blur</span></a></p>
+</div>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_navigating_camera-view-render-border.jpg"><img alt="../../../../../_images/editors_3dview_navigating_camera-view-render-border.jpg" src="../../../../../_images/editors_3dview_navigating_camera-view-render-border.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">渲染 border and associated render.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lens.html" class="btn btn-neutral float-right" title="相机 Lens" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="相机" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

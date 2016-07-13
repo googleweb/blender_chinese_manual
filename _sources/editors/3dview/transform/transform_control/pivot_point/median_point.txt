@@ -1,0 +1,57 @@
+.. |pivot-icon| image:: /images/editors_3dview_header-pivot-point.jpg
+
+************
+质心点
+************
+
+.. admonition:: 参考
+   :class: refbox
+
+   | Mode:     物体模式 and 编辑模式
+   | Menu:     Select from the |pivot-icon| icon in the 3D视图 header.
+   | Hotkey:   :kbd:`Ctrl-,`
+
+
+The 质心点 can be considered to be broadly similar to the concept of Center
+of Gravity (COG). If we assume that every element (Object, face, vertex etc)
+of the selection has the same mass,
+the median point would sit at the point of equilibrium for the selection (the COG).
+
+
+In 物体模式
+==============
+
+In 物体模式, Blender only considers the Object centers when determining the median point.
+This can lead to some counterintuitive results. In the Fig. :ref:`fig-view3d-median-point-object-mode` below,
+you can see that the median point is between the Object centers and can be nowhere near the
+Objects' mesh.
+
+.. _fig-view3d-median-point-object-mode:
+
+.. figure:: /images/editors_3dview_transform_control-pivot_point-median_point-median-point-objects.jpg
+   :width: 640px
+
+   Median points in 物体模式. 
+
+   The Median point is indicated by the yellow dot.
+
+
+In 编辑模式
+============
+
+In 编辑模式,
+the median point is determined via the part of the selection that has the most elements.
+For example, in the Fig. :ref:`fig-view3d-median-point-edit-mode`,
+when there are two cubes with an equal number of vertices,
+the median point lies directly between the two cubes. However,
+if we subdivide one cube multiple times so that it has many more vertices,
+you can see that the median point has shifted to the region with the most vertices.
+
+.. _fig-view3d-median-point-edit-mode:
+
+.. figure:: /images/editors_3dview_transform_control-pivot_point-median_point-median-point-vertices.jpg
+   :width: 640px
+
+   Median points in 编辑模式.
+
+   The Median point is indicated by the yellow dot.

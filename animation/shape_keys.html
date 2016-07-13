@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shape Keys &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="动画" href="index.html"/>
+        <link rel="next" title="Animating 相机s" href="camera.html"/>
+        <link rel="prev" title="Markers" href="markers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">Keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markers.html">Markers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shape Keys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shape-keys-panel">Shape Keys Panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#relative-shape-keys">Relative Shape Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#absolute-shape-keys">Absolute Shape Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-for-relative-shape-keys">Workflow For Relative Shape Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-for-absolute-shape-keys">Workflow For Absolute Shape Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-details-on-absolute-shape-keys">More Details On Absolute Shape Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shape-key-operators">Shape Key Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation-techniques">动画 Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">动画</a> &raquo;</li>
+      
+    <li>Shape Keys</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/animation/shape_keys.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shape-keys">
+<h1>Shape Keys<a class="headerlink" href="#shape-keys" title="Permalink to this headline">¶</a></h1>
+<p><em>Shape Keys</em> are used on Objects like <em>Mesh</em>, <em>Curve</em>, <em>Surface</em>, <em>Lattice</em>.
+They are used to deform the object vertices into a new shape.</p>
+<div class="figure" id="id1">
+<img alt="../_images/shape_keys_visual.jpg" src="../_images/shape_keys_visual.jpg" />
+<p class="caption"><span class="caption-text">A mesh with different shape keys applied.</span></p>
+</div>
+<p>There are two types of Shape Keys.</p>
+<dl class="docutils">
+<dt>Relative</dt>
+<dd>Which are relative to the Basis or selected shape key.
+They are mainly used as, for limb joints, muscles, or Facial 动画.</dd>
+<dt>Absolute</dt>
+<dd>Which are relative to the previous and next shape key.
+They are mainly used to deform the objects into different shapes over time.</dd>
+</dl>
+<p>The shape key data, the deformation of the objects vertices,
+is usually modified in the 3D视图 by selecting a shape key,
+then moving the object vertices to a new position.</p>
+<div class="section" id="shape-keys-panel">
+<h2>Shape Keys Panel<a class="headerlink" href="#shape-keys-panel" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Panel:    <span class="menuselection">Properties editor ‣ Object Data ‣ Shape Keys</span></div>
+</div>
+</div>
+<div class="figure" id="id2">
+<img alt="../_images/shape_keys3.jpg" src="../_images/shape_keys3.jpg" />
+<p class="caption"><span class="caption-text">Shape Keys. Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Relative</dt>
+<dd>Set the shape keys to Relative or Absolute.</dd>
+<dt>Name</dt>
+<dd>Name of the Shape Key.</dd>
+<dt>Value</dt>
+<dd>Current Value of the Shape Key (0.0 to 1.0).</dd>
+<dt>Mute</dt>
+<dd>This visually disables the shape key in the 3D视图.</dd>
+<dt>Add</dt>
+<dd>Add a new shape key to the list.</dd>
+<dt>Remove</dt>
+<dd>Remove a shape key from the list.</dd>
+</dl>
+<div class="figure" id="id3">
+<img alt="../_images/shape_key_specials2.jpg" src="../_images/shape_key_specials2.jpg" />
+<p class="caption"><span class="caption-text">Shape Keys Specials.</span></p>
+</div>
+<dl class="docutils">
+<dt>Specials</dt>
+<dd><p class="first">A menu with some operators.</p>
+<dl class="last docutils">
+<dt>Transfer Shape Key</dt>
+<dd>Transfer the active <em>Shape Key</em> from a different object.
+Select two objects, the active Shape Key is copied to the active object.</dd>
+<dt>Join as Shapes</dt>
+<dd>Transfer the <em>Current Shape</em> from a different object.
+Select two objects, the Shape is copied to the active object.</dd>
+<dt>Mirror Shape Key</dt>
+<dd>If your mesh is nice and symmetrical, in <em>物体模式</em>, you can mirror the shape keys on the X axis.
+This will nott work unless the mesh vertices are perfectly symmetrical.
+Use the <span class="menuselection">Mesh ‣ Symmetrize</span> function in <em>编辑模式</em>.</dd>
+<dt>Mirror Shape Key (Topology)</dt>
+<dd>This is the same as <em>Mirror Shape Key</em> though it detects
+the mirrored vertices based on the topology of the mesh.
+The mesh vertices do not have to be perfectly symmetrical for this one to work.</dd>
+<dt>New Shape From Mix</dt>
+<dd>Add a new shape key with the current deformed shape of the object.</dd>
+<dt>Delete All Shapes</dt>
+<dd>Delete all shape keys.</dd>
+</dl>
+</dd>
+<dt>Move</dt>
+<dd>Move shape key up or down in the list.</dd>
+<dt>Show Active</dt>
+<dd>Show the shape of the active shape key in the 3D视图.
+<em>Show Active</em> is enabled while the object is in <em>编辑模式</em>, unless the setting below is enabled.</dd>
+<dt>编辑模式</dt>
+<dd>Modify the shape key settings while the object is in <em>编辑模式</em>.</dd>
+</dl>
+<div class="section" id="relative-shape-keys">
+<h3>Relative Shape Keys<a class="headerlink" href="#relative-shape-keys" title="Permalink to this headline">¶</a></h3>
+<p>Relative shape keys deform from a selected shape key.
+By default, all relative shape keys deform from the first shape key called the Basis shape key.</p>
+<div class="figure" id="id4">
+<img alt="../_images/shape_keys_relative3.jpg" src="../_images/shape_keys_relative3.jpg" />
+<p class="caption"><span class="caption-text">Relative Shape Keys. Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Clear Weights</dt>
+<dd>Set all values to 0.</dd>
+<dt>Name</dt>
+<dd>Name of the active shape key.</dd>
+<dt>Value</dt>
+<dd>The value of the active shape key.</dd>
+<dt>Range</dt>
+<dd>Min and Max range of the active shape key value.</dd>
+<dt>Vertex Group</dt>
+<dd>Limit the active shape key deformation to a vertex group.</dd>
+<dt>Relative</dt>
+<dd>Select the shape key to deform from.</dd>
+</dl>
+</div>
+<div class="section" id="absolute-shape-keys">
+<h3>Absolute Shape Keys<a class="headerlink" href="#absolute-shape-keys" title="Permalink to this headline">¶</a></h3>
+<p>Absolute shape keys deform from the previous and to the next shape key.
+They are mainly used to deform the object into different shapes over time.</p>
+<div class="figure" id="id5">
+<img alt="../_images/shape_keys_absolute2.jpg" src="../_images/shape_keys_absolute2.jpg" />
+<p class="caption"><span class="caption-text">Absolute Shape Keys. Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Reset Timing</dt>
+<dd><p class="first">Reset the timing for absolute shape keys.
+For example, if you have the shape keys, Basis, Key_1, Key_2, in that order.</p>
+<dl class="last docutils">
+<dt>Reset Timing will loop the shape keys, and set the shape keyframes to +0.1.</dt>
+<dd>Basis 0.1
+Key_1 0.2
+Key_2 0.3</dd>
+<dt>Evaluation Time will show this as frame 100.</dt>
+<dd>Basis 10.0
+Key_1 20.0
+Key_2 30.0</dd>
+</dl>
+</dd>
+<dt>Name</dt>
+<dd>Name of the active shape key.</dd>
+<dt>Interpolation</dt>
+<dd>This controls the interpolation between shape keys.</dd>
+</dl>
+<div class="figure" id="id6">
+<img alt="../_images/shape_keys_interpolation.jpg" src="../_images/shape_keys_interpolation.jpg" />
+<p class="caption"><span class="caption-text">Different types of interpolation.</span></p>
+</div>
+<dl class="docutils">
+<dt>Evaluation Time</dt>
+<dd><p class="first">This is used to control the shape key influence.</p>
+<dl class="docutils">
+<dt>For example, if you have the shape keys, Basis, Key_1, Key_2, in that order, and you reset timing.</dt>
+<dd>Basis 10.0
+Key_1 20.0
+Key_2 30.0</dd>
+</dl>
+<p class="last">You can control the shape key influence with Evaluation Time.
+Here keyframes have been used to control Evaluation Time for animation.</p>
+</dd>
+</dl>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/shape_keys_evaluation.jpg"><img alt="../_images/shape_keys_evaluation.jpg" src="../_images/shape_keys_evaluation.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">动画 with Evaluation Time.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="workflow-for-relative-shape-keys">
+<h2>Workflow For Relative Shape Keys<a class="headerlink" href="#workflow-for-relative-shape-keys" title="Permalink to this headline">¶</a></h2>
+<p>This example shows you how to make a cube mesh transform into a sphere.</p>
+<ul class="simple">
+<li>In <em>物体模式</em> add two shape keys via the <em>Shape Key Panel</em>.</li>
+<li><em>Basis</em> is the rest shape. &#8220;Key 1&#8221; will be the new shape.</li>
+<li>With <em>Key 1</em> selected, switch to <em>编辑模式</em>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Shift-Alt-S</span></code> <em>To Sphere</em>, move the mouse right, then <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</li>
+<li>Switch to <em>物体模式</em>.</li>
+<li>Set the <em>Value</em> for &#8220;Key 1&#8221; to see the transformation between the shape keys.</li>
+</ul>
+<div class="figure" id="id8">
+<img alt="../_images/shape_keys_workflow_2.jpg" src="../_images/shape_keys_workflow_2.jpg" />
+<p class="caption"><span class="caption-text">Shape Key workflow.</span></p>
+</div>
+</div>
+<div class="section" id="workflow-for-absolute-shape-keys">
+<h2>Workflow For Absolute Shape Keys<a class="headerlink" href="#workflow-for-absolute-shape-keys" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Select the default Cube.</li>
+<li>Switch to 编辑模式.</li>
+<li>Switch to Face Select mode (if you are not already in it)</li>
+</ul>
+<div class="figure">
+<img alt="../_images/absolute_sk_workflow_1.jpg" src="../_images/absolute_sk_workflow_1.jpg" />
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/absolute_sk_workflow_2.jpg"><img alt="../_images/absolute_sk_workflow_2.jpg" src="../_images/absolute_sk_workflow_2.jpg" style="width: 150px;" /></a>
+</div>
+<ul class="simple">
+<li>Select the top face.</li>
+<li>Extrude up <code class="kbd docutils literal"><span class="pre">E</span> <span class="pre">1</span></code> confirm with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/absolute_sk_workflow_3.jpg"><img alt="../_images/absolute_sk_workflow_3.jpg" src="../_images/absolute_sk_workflow_3.jpg" style="width: 150px;" /></a>
+</div>
+<ul class="simple">
+<li>Select a side face on the top half. (the one at x=1 if possible)</li>
+<li>Extrude out <code class="kbd docutils literal"><span class="pre">E</span> <span class="pre">1</span></code> confirm with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</li>
+<li>Switch back to 物体模式.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/absolute_sk_workflow_4.jpg"><img alt="../_images/absolute_sk_workflow_4.jpg" src="../_images/absolute_sk_workflow_4.jpg" style="width: 300px;" /></a>
+</div>
+<ul class="simple">
+<li>Add a basis shape keys and two more via the + button on the Shape Key Panel.</li>
+<li>Uncheck the Relative checkbox.</li>
+<li>Click the Reset Timing button.</li>
+<li>Switch to 编辑模式.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/absolute_sk_workflow5.jpg"><img alt="../_images/absolute_sk_workflow5.jpg" src="../_images/absolute_sk_workflow5.jpg" style="width: 500px;" /></a>
+</div>
+<ul class="simple">
+<li>Select shape key Key 2 to edit the third shape key.</li>
+<li>Select the extruded side face and <code class="kbd docutils literal"><span class="pre">G</span> <span class="pre">Z</span> <span class="pre">1</span></code> confirm with <code class="kbd docutils literal"><span class="pre">LMB</span></code></li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/absolute_sk_workflow_6.jpg"><img alt="../_images/absolute_sk_workflow_6.jpg" src="../_images/absolute_sk_workflow_6.jpg" style="width: 500px;" /></a>
+</div>
+<ul class="simple">
+<li>Select shape key Basis to edit the first shape key.</li>
+<li>Select the extruded size face and
+<code class="kbd docutils literal"><span class="pre">S</span> <span class="pre">0</span> <span class="pre">.</span> <span class="pre">5</span></code> confirm with <code class="kbd docutils literal"><span class="pre">LMB</span></code>, then <code class="kbd docutils literal"><span class="pre">G</span> <span class="pre">X</span> <span class="pre">Minus</span> <span class="pre">1</span></code> confirm with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</li>
+<li>Switch to 物体模式.</li>
+<li>Drag the Evaluation Time slider to make its value vary from 10 to 30.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/absolute_sk_workflow_7.gif" src="../_images/absolute_sk_workflow_7.gif" />
+</div>
+</div>
+<div class="section" id="more-details-on-absolute-shape-keys">
+<h2>More Details On Absolute Shape Keys<a class="headerlink" href="#more-details-on-absolute-shape-keys" title="Permalink to this headline">¶</a></h2>
+<p>The thing to remember about absolute shape keys is that they are
+incomplete until you click the Reset Timing button. When you create a
+shape key its &#8220;frame&#8221; property is zero (<a class="reference external" href="https://developer.blender.org/T39897">https://developer.blender.org/T39897</a>),
+which is a completely useless value.
+This frame value is not displayed on the UI so you cannot
+easily tell if something is wrong or screwy until your animation
+starts misbehaving.</p>
+<p>The number displayed to the right of the key name is the value and is used in relative shape
+keys. It has no effect on absolute shape keys, so ignore it.</p>
+<p>When you reset the timings Blender iterates through the shape keys
+assigning them frame values incrementing by 0.1 from key to key.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">name</th>
+<th class="head">frame</th>
+<th class="head">evaluation time</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Basis</td>
+<td>0.1</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>Key 1</td>
+<td>0.2</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td>Key 2</td>
+<td>0.3</td>
+<td>30</td>
+</tr>
+<tr class="row-odd"><td>Key 3</td>
+<td>0.4</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>If you delete a shape key this does not automatically alter the frame values
+assigned to remaining shape keys.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">name</th>
+<th class="head">frame</th>
+<th class="head">evaluation time</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Basis</td>
+<td>0.1</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>Key 1</td>
+<td>0.2</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td>Key 3</td>
+<td>0.4</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>The Evaluation Time is how you choose which shape key is active, and how active it is.
+The interesting values range from 10 ... (<em>n</em> × 10) where <em>n</em> is the number of shape keys.
+(assuming you have not deleted or added any keys since the last Reset Timing).
+If you are using shape keys for animation,
+99% of the time you will be putting keyframes on this Evaluation Time field.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">if you are having problems with your absolute shape keys,
+there is a good chance that you need to Reset Timing.</p>
+</div>
+</div>
+<div class="section" id="shape-key-operators">
+<h2>Shape Key Operators<a class="headerlink" href="#shape-key-operators" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>3D视图 <em>编辑模式</em> <span class="menuselection">Mesh ‣ Vertices ‣ Shape Propagate</span></dt>
+<dd>Apply selected vertex locations to all other shape keys.</dd>
+<dt>3D视图 <em>编辑模式</em> <span class="menuselection">Mesh ‣ Vertices ‣ Blend From Shape</span></dt>
+<dd>Blend in shape from a shape key.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="camera.html" class="btn btn-neutral float-right" title="Animating 相机s" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="markers.html" class="btn btn-neutral" title="Markers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="界面" href="index.html"/>
+        <link rel="next" title="窗口系统" href="editors/index.html"/>
+        <link rel="prev" title="界面" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">界面</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#slash-screen">Slash Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screens">Screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-elements">Screen Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-of-an-editor">Components of an Editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#regions">Regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#header">Header</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#panels">Panels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabs">Tabs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pinning">Pinning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#editor-controls">Editor Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">界面 Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">界面</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/interface/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="slash-screen">
+<span id="splash"></span><h2>Slash Screen<a class="headerlink" href="#slash-screen" title="Permalink to this headline">¶</a></h2>
+<p>When starting Blender, the splash screen appears in the center of the window.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/splash-screen_current.png"><img alt="../_images/splash-screen_current.png" src="../_images/splash-screen_current.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">Blender Splash Screen.</span></p>
+</div>
+<p>To close the splash screen start a new project,
+click anywhere outside the splash screen (but inside Blender Window) or press <code class="kbd docutils literal"><span class="pre">Esc</span></code>.
+The splash screen will disappear revealing the startup scene.</p>
+<p>To reopen the splash click on the Blender icon in the 信息编辑器 header or
+select <span class="menuselection">Help ‣ Splash Screen</span> also in the 信息编辑器.</p>
+<dl class="docutils">
+<dt>Titel</dt>
+<dd>Besides the Blender icon and text, it shows the Blender version. i.e. the current version is 2.77.</dd>
+<dt>图像</dt>
+<dd>An image where you can identify package and version.</dd>
+<dt>Date</dt>
+<dd>At the top-right corner, you can see the date on that Blender version was compiled.</dd>
+<dt>Hash</dt>
+<dd>The Git Hash. This can be useful to give to support personnel, when diagnosing a problem.</dd>
+<dt>Branch</dt>
+<dd>Optional branch id.</dd>
+<dt>Interaction</dt>
+<dd>Key configuration the same as <span class="menuselection">User preferences ‣ Input</span>.</dd>
+<dt>Links</dt>
+<dd>Links official web pages, the same could be found in the <em>Help</em> Menu of the 信息编辑器.
+See <a class="reference internal" href="../getting_started/help.html#help-menu"><span class="std std-ref">Help Menu</span></a>.</dd>
+<dt>Recent</dt>
+<dd>Your most recently opened Blender files. This gives quick and easy access to your recent projects.</dd>
+<dt>Recover Last Session</dt>
+<dd>Blender will try to recover the last session based on temporary files. See <a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">Recovering Data</span></a>.</dd>
+</dl>
+</div>
+<div class="section" id="screens">
+<h2>Screens<a class="headerlink" href="#screens" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/blender_default_startup.png"><img alt="../_images/blender_default_startup.png" src="../_images/blender_default_startup.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-text">After closing splash screen, this is what the default Blender window looks like.</span></p>
+</div>
+<p>Blender&#8217;s user interface is consistent across all platforms.
+The interface can be customized to match specific tasks using Screen Layouts,
+which can then be named and saved for later use.</p>
+<p>Blender also makes heavy use of keyboard shortcuts to speed up work.
+These can also be customized in the <a class="reference internal" href="../preferences/input.html#prefs-input-keymap-editor"><span class="std std-ref">Keymap Editor</span></a>.</p>
+</div>
+<div class="section" id="screen-elements">
+<h2>Screen Elements<a class="headerlink" href="#screen-elements" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../_images/getting_started-basics_interface_introduction_05.png"><img alt="../_images/getting_started-basics_interface_introduction_05.png" src="../_images/getting_started-basics_interface_introduction_05.png" style="width: 350px;" /></a>
+</div>
+<p>The Blender window is organized into one or more <em>Areas</em> with each area
+containing an <em>Editor</em>. 编辑器 are divided into a <a class="reference internal" href="#header">Header</a> and one or more
+<a class="reference internal" href="#regions">Regions</a>. Regions can have smaller structuring elements like <a class="reference internal" href="#panels">panels</a> with
+buttons, controls and widgets placed within them.</p>
+<p>The composition of various Areas with predefined 编辑器 in them is
+called a <em>Screen Layout</em>. By default Blender starts up with a layout of
+five 编辑器 as shown in the image below.</p>
+<div class="figure" id="id3">
+<img alt="../_images/getting_started-basics_interface_introduction_02.png" src="../_images/getting_started-basics_interface_introduction_02.png" />
+<p class="caption"><span class="caption-text">Blender&#8217;s default Screen Layout with five 编辑器: Info (1), 3D视图
+(2), Outliner (3), Properties (4) and Timeline (5)</span></p>
+</div>
+</div>
+<div class="section" id="components-of-an-editor">
+<h2>Components of an Editor<a class="headerlink" href="#components-of-an-editor" title="Permalink to this headline">¶</a></h2>
+<p>In general an editor provides a way to view and modify your work through
+a specific part of Blender.</p>
+<p>The image below shows the 3D视图 as an example of an editor.</p>
+<div class="figure" id="id4">
+<img alt="../_images/getting_started-basics_interface_introduction_04.png" src="../_images/getting_started-basics_interface_introduction_04.png" />
+<p class="caption"><span class="caption-text">The 3D视图.</span></p>
+</div>
+<p>编辑器 are consistently organized into following parts:</p>
+<div class="section" id="regions">
+<h3>Regions<a class="headerlink" href="#regions" title="Permalink to this headline">¶</a></h3>
+<p>At least one region of an editor is always visible. It’s called the
+main region and is the most prominent part of the editor. In the
+3D视图 above this is marked with a green frame.</p>
+<p>Aside from that there can be more regions available. In the 3D视图 above
+these are the <em>Toolshelf</em> (toggle visibility with <code class="kbd docutils literal"><span class="pre">T</span></code>) on the
+left side and the <em>Properties</em> (toggle visibility with <code class="kbd docutils literal"><span class="pre">N</span></code>) on
+the right side. They’re marked with red frames. Additional regions
+mostly show context-sensitive content.</p>
+<p>Each editor has a specific purpose, so the main region and the
+availability of additional regions are different between editors.
+See specific documentation about each editor in the
+<a class="reference internal" href="../editors/index.html"><span class="doc">编辑器</span></a> chapter.</p>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Useful Hotkeys</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="kbd docutils literal"><span class="pre">T</span></code></td>
+<td>Toggle visibility of Toolshelf Region</td>
+</tr>
+<tr class="row-even"><td><code class="kbd docutils literal"><span class="pre">N</span></code></td>
+<td>Toggle visibility of Properties Region</td>
+</tr>
+<tr class="row-odd"><td><code class="kbd docutils literal"><span class="pre">F5</span></code></td>
+<td>Flip the Region under the mouse pointer to the opposite side</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="header">
+<h3>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>A header is a small horizontal part of an editor and sits either at the top or bottom of the area.
+It acts as a container for menus and commonly used tools.
+Much like additional regions the header can be hidden.</p>
+<p>The 3D视图 above the header is marked with a purple frame.</p>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">Useful Hotkeys</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="kbd docutils literal"><span class="pre">F5</span></code></td>
+<td>Move Header from Top to Bottom (mouse pointer must be over it)</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a class="reference internal" href="editors/headers.html"><span class="doc">标题栏</span></a> for details.</p>
+</div>
+</div>
+<div class="section" id="panels">
+<h2>Panels<a class="headerlink" href="#panels" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<img alt="../_images/getting_started-basics_interface_introduction_06.png" src="../_images/getting_started-basics_interface_introduction_06.png" />
+</div>
+<p>The smallest organizational unit in the user interface is a panel,
+which can be collapsed to hide its contents by clicking on its header.
+This is where the buttons, menus, checkboxes, etc. are located.</p>
+<p>Panels are usually found in the side regions of an editor,
+but also make up most of the <a class="reference internal" href="../editors/properties/index.html"><span class="doc">Properties Editor</span></a>&#8216;s main region.</p>
+<p>In the image on the right there are three panels: <em>变换</em>, <em>Edit</em> and <em>History</em>.
+The edit panel is expanded and the other two panels are collapsed.
+Note that you can change the order of panels by clicking
+on the handle in the upper right corner of a panel&#8217;s title.</p>
+<p>See: <a class="reference internal" href="editors/panels.html"><span class="doc">panels</span></a> for details.</p>
+</div>
+<div class="section" id="tabs">
+<h2>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<img alt="../_images/getting_started-basics_interface_introduction_07.png" src="../_images/getting_started-basics_interface_introduction_07.png" />
+</div>
+<p>The Toolshelf has been further structured
+into a set of context sensitive vertical tabs.</p>
+<p>In the image to the right you can see the tabs: <em>Tools</em>, <em>Create</em>, etc.
+The <em>Tools</em> tab is currently selected, showing a set of panels containing various tools.</p>
+<div class="section" id="pinning">
+<h3>Pinning<a class="headerlink" href="#pinning" title="Permalink to this headline">¶</a></h3>
+<p>Often it is desirable to view panels from different
+tabs at the same time. This has been solved
+by making panels pinnable.</p>
+<p>A pinned panel remains visible regardless of which tab has been selected.
+You can pin a panel by <code class="kbd docutils literal"><span class="pre">Shift</span></code> clicking its header, or by right clicking on the header and choosing <em>Pin</em>.</p>
+<p>Shown in the image above is an example of the <em>Mesh Options</em> pinned in the tools tab.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editors/index.html" class="btn btn-neutral float-right" title="窗口系统" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="界面" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

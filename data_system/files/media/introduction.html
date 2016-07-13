@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Media Formats" href="index.html"/>
+        <link rel="next" title="Supported Graphics Formats" href="image_formats.html"/>
+        <link rel="prev" title="Media Formats" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_blocks.html">Data-Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom_properties.html">Custom Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scenes.html">Scenes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Files</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../open.html">打开文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../save.html">Saving Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export.html">Importing and Exporting Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../relative_paths.html">Relative Paths</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Media Formats</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="image_formats.html">Supported Graphics Formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="video_formats.html">Supported 视频 Formats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">数据系统</a> &raquo;</li>
+      
+          <li><a href="../index.html">Files</a> &raquo;</li>
+      
+          <li><a href="index.html">Media Formats</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/data_system/files/media/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="color-spaces">
+<h2>Color Spaces<a class="headerlink" href="#color-spaces" title="Permalink to this headline">¶</a></h2>
+<p>When loading and saving media formats it is important to color management in mind.
+File formats such as PNG or JPEG will typically store colors in a color space ready for
+display, not in a linear space. When they are, for example, used as textures in renders,
+they need to be converted to linear first, and when saving renders for display on the web,
+they also need to be converted to a display space. 其他 file formats like OpenEXR store
+linear color spaces and as such are useful as intermediate files in production.</p>
+<p>When working with image files, the default color space is usually the right one.
+If this is not the case,
+the color space of the image file can be configured in the image settings. A common situation
+where manual changes are needed is when working with or baking normal maps or displacement
+maps, for example. Such maps do not actually store colors, just data encoded as colors.
+In such cases they should be marked as <em>Non-Color Data</em>.</p>
+<p>图像 data-blocks will always store float buffers in memory in the scene linear color space,
+while a byte buffer in memory and files on disk are stored in the color space specified with
+this setting:</p>
+<dl class="docutils">
+<dt>Color Space</dt>
+<dd>The color space of the image on disk. This depends on the file format,
+for example PNG or JPEG images are often stored in sRGB, while OpenEXR images are stored in a linear color space.
+Some images such as normal, bump or stencil maps do not strictly contain &#8216;colors&#8217;,
+and on such values no color space conversion should ever be applied.
+For such images the color space should be set to None.</dd>
+</dl>
+<div class="figure" id="id1">
+<img alt="../../../_images/render_post_cm_image_settings.jpg" src="../../../_images/render_post_cm_image_settings.jpg" />
+<p class="caption"><span class="caption-text">图像 settings for color management.</span></p>
+</div>
+<p>By default only renders are displayed and saved with the render view transformations applied.
+These are the 渲染 Result and Viewer image data-blocks,
+and the files saved directly to disk with the 渲染 动画 operator.
+However, when loading a render saved to an intermediate OpenEXR file,
+Blender cannot detect automatically that this is a render (it could be e.g.
+an image texture or displacement map).
+We need to specify that this is a render and that we want the transformations applied,
+with these two settings:</p>
+<dl class="docutils">
+<dt>View as 渲染</dt>
+<dd>Display the image data-block (not only renders) with view transform, exposure, gamma, RGB curves applied.
+Useful for viewing rendered frames in linear OpenEXR files the same as when rendering them directly.</dd>
+<dt>Save as 渲染</dt>
+<dd>Option in the image save operator to apply the view transform, exposure, gamma, RGB curves.
+This is useful for saving linear OpenEXR to e.g. PNG or JPEG files in display space.</dd>
+</dl>
+</div>
+<div class="section" id="opencolorio-configuration">
+<h2>OpenColorIO Configuration<a class="headerlink" href="#opencolorio-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Blender comes with a standard OpenColorIO configuration that contains a number of useful
+display devices and view transforms.
+The reference linear color space used is the linear color space with Rec.
+709 chromaticities and D65 white point.</p>
+<p>However, OpenColorIO was also designed to give a consistent user experience across
+<a class="reference external" href="http://opencolorio.org/CompatibleSoftware.html">multiple applications</a>,
+and for this a single shared configuration file can be used. Blender will use the standard
+OCIO environment variable to read an OpenColorIO configuration other than the default Blender
+one. More information about how to set up such a workflow can be found on the
+<a class="reference external" href="http://opencolorio.org/">OpenColorIO website</a>.</p>
+<p>We currently use the following color space roles:</p>
+<dl class="docutils">
+<dt>scene_linear</dt>
+<dd>color space used for rendering, compositing, and storing all float precision images in memory.</dd>
+<dt>default_sequencer</dt>
+<dd>default color space for sequencer, <em>scene_linear</em> if not specified</dd>
+<dt>default_byte</dt>
+<dd>default color space for byte precision images and files, <em>texture_paint</em> if not specified.</dd>
+<dt>default_float</dt>
+<dd>default color space for float precision images and files, <em>scene_linear</em> if not specified.</dd>
+</dl>
+<p>The standard Blender configuration also includes some support for
+<a class="reference external" href="https://www.oscars.org/science-technology/sci-tech-projects/aces">ACES</a>
+(<a class="reference external" href="https://github.com/ampas/aces-dev">code and documentation</a>),
+even though we have a different linear color space.
+It&#8217;s possible to load and save EXR files with the Linear ACES color space,
+and the RRT view transform can be used to view images with their standard display transform.
+However, the ACES gamut is larger than the Rec. 709 gamut,
+so for best results an ACES specific configuration file should be used.
+OpenColorIO provides an <a class="reference external" href="http://opencolorio.org/configurations/index.html">ACES configuration</a>,
+though it may need a few more tweaks to be usable in production.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="image_formats.html" class="btn btn-neutral float-right" title="Supported Graphics Formats" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Media Formats" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

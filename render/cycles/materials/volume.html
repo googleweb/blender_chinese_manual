@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Volume &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Materials" href="index.html"/>
+        <link rel="next" title="Texture Editing" href="texture_editing.html"/>
+        <link rel="prev" title="Surface" href="surface.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings/index.html">渲染 设置</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Materials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displacement.html">Displacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surface.html">Surface</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Volume</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture_editing.html">Texture Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">Lamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reducing_noise.html">Reducing Noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gpu_rendering.html">GPU 渲染ing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../osl.html">Open Shading Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">渲染 Baking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Cycles 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Materials</a> &raquo;</li>
+      
+    <li>Volume</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/cycles/materials/volume.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="volume">
+<h1>Volume<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h1>
+<p>Volume rendering can be used to render effects like fire, smoke, mist, absorption in glass,
+and many other effects that cannot be represented by surface meshes alone.</p>
+<p>To set up a volume, you create a mesh that defines the bounds within which the volume exists.
+In the material you typically remove the surface nodes and instead connect volume nodes to
+define the shading inside the volume.
+For effects such as absorption in glass you can use both a surface and volume shader.
+The world can also use a volume shader to create effects such as mist.</p>
+<div class="section" id="volume-shaders">
+<h2>Volume Shaders<a class="headerlink" href="#volume-shaders" title="Permalink to this headline">¶</a></h2>
+<p>We support three volume shader nodes,
+that model particular effects as light passes through the volume and interacts with it.</p>
+<ul class="simple">
+<li>Volume Absorption will absorb part of the light as it passes through the volume.
+This can be used to shade for example black smoke or colored glass objects, or mixed with the volume scatter node.
+This node is somewhat similar to the transparent BSDF node,
+it blocks part of the light and lets other light pass straight through.</li>
+<li>Volume Scatter lets light scatter in other directions as it hits particles in the volume.
+The anisotropy defines in which direction the light is more likely to scatter.
+A value of 0 will let light scatter evenly in all directions (somewhat similar to the diffuse BSDF node),
+negative values let light scatter mostly backwards, and positive values let light scatter mostly forward.
+This can be used to shade white smoke or clouds for example.</li>
+<li>Emission will emit light from the volume. This can be used to shade fire for example.</li>
+</ul>
+<div class="figure" id="id1">
+<img alt="../../../_images/cycles_materials_volume.jpg" src="../../../_images/cycles_materials_volume.jpg" />
+<p class="caption"><span class="caption-text">Volume Shader: Absorption/Absorption + Scatter/Emission.</span></p>
+</div>
+<div class="section" id="density">
+<h3>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
+<p>All volume shaders have a density input.
+The density defines how much of the light will interact with the volume,
+getting absorbed or scattered, and how much will pass straight through. For effects such as
+smoke you would specify a density field to indicate where in the volume there is smoke and how
+much (density bigger than 0), and where there is no smoke (density equals 0).</p>
+<p>Volumes in real life consist of particles,
+a higher density means there are more particles per unit volume. More particles means there is
+a higher chance for light to collide with a particle and get absorbed or scattered,
+rather than passing straight through.</p>
+</div>
+</div>
+<div class="section" id="volume-material">
+<h2>Volume Material<a class="headerlink" href="#volume-material" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interaction-with-the-surface-shader">
+<h3>Interaction with the Surface Shader<a class="headerlink" href="#interaction-with-the-surface-shader" title="Permalink to this headline">¶</a></h3>
+<p>A material may have both a surface and a volume shader, or only one of either.
+Using both may be useful for materials such as glass, water or ice,
+where you want some of the light to be absorbed as it passes through the surface,
+combined with e.g. a glass or glossy shader at the surface.</p>
+<p>When the surface shader does not reflect or absorb light, it enters into the volume.
+If no volume shader is specified, it will pass straight through to the other side of the mesh.
+If it is defined,
+a volume shader describes the light interaction as it passes through the volume of the mesh.
+Light may be scattered, absorbed, or emitted at any point in the volume.</p>
+</div>
+<div class="section" id="mesh-topology">
+<h3>Mesh Topology<a class="headerlink" href="#mesh-topology" title="Permalink to this headline">¶</a></h3>
+<p>网格 used for volume render should be closed and <a class="reference internal" href="../../../glossary/index.html#term-manifold"><span class="xref std std-term">manifold</span></a>.
+That means that there should be no holes in the mesh. Each edge must be connected to exactly two
+faces such that there are no holes or T-shaped faces where three or more faces are connected to an
+edge.</p>
+<p>Normals must point outside for correct results.
+The normals are used to determine if a ray enters or exits a volume,
+and if they point in a wrong direction, or there is a hole in the mesh,
+then the renderer is unable to decide what is the inside or outside of the volume.</p>
+<p>These rules are the same as for rendering glass refraction correctly.</p>
+</div>
+</div>
+<div class="section" id="volume-world">
+<h2>Volume World<a class="headerlink" href="#volume-world" title="Permalink to this headline">¶</a></h2>
+<p>A volume shader can also be applied to the entirely world, filling the entire space.</p>
+<p>Currently this is most useful for night time or other dark scenes,
+as the world surface shader or sun lamps will have no effect if a volume shader is used.
+This is because the world background is assumed to be infinitely far away,
+which is accurate enough for the sun for example.
+However, for modeling effects such as fog or atmospheric scattering,
+it is not a good assumption that the volume fills the entire space,
+as most of the distance between the sun and the earth is empty space.
+For such effects it is be better to create a volume object surrounding the scene.
+The size of this object will determine how much light is scattered or absorbed.</p>
+</div>
+<div class="section" id="smoke">
+<h2>Smoke<a class="headerlink" href="#smoke" title="Permalink to this headline">¶</a></h2>
+<p>Creating a smoke material for cycles can be difficult however
+the image below shows a good setup on how to do this.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/cycles_materials_smoke.png" src="../../../_images/cycles_materials_smoke.png" />
+<p class="caption"><span class="caption-text">Smoke and Fire Material.</span></p>
+</div>
+</div>
+<div class="section" id="scattering-bounces">
+<h2>Scattering Bounces<a class="headerlink" href="#scattering-bounces" title="Permalink to this headline">¶</a></h2>
+<p>Real world effects such as scattering in clouds or subsurface scattering require many
+scattering bounces. However, unbiased rendering of such effects is slow and noisy. In typical
+movie production scenes only 0 or 1 bounces might be used to keep render times under control.
+The effect you get when rendering with zero volume bounces is what is known as &#8220;single
+scattering&#8221;, the effect from more bounces is &#8220;multiple scattering&#8221;.</p>
+<p>For rendering materials like skin or milk, the subsurface scattering shader is an
+approximation of such multiple scattering effects that is significantly more efficient but not
+as accurate.</p>
+<p>For materials such as clouds or smoke that do not have a well defined surface,
+volume rendering is required. These look best with many scattering bounces,
+but in practice one might have to limit the number of bounces to keep render times acceptable.</p>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>Currently we do not support:</p>
+<ul class="simple">
+<li>Correct ray visibility for volume meshes</li>
+</ul>
+<p>Not available on GPU:</p>
+<ul class="simple">
+<li>Equi Angular/MIS Volume Sampling</li>
+<li>Volume Multi Light sampling</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="texture_editing.html" class="btn btn-neutral float-right" title="Texture Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="surface.html" class="btn btn-neutral" title="Surface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

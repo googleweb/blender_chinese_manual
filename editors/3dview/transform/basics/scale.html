@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scale &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Basic 变换s" href="index.html"/>
+        <link rel="next" title="Duplication" href="../duplication/index.html"/>
+        <link rel="prev" title="Rotate" href="rotate.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../index.html">变换</a> &raquo;</li>
+      
+          <li><a href="index.html">Basic 变换s</a> &raquo;</li>
+      
+    <li>Scale</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/3dview/transform/basics/scale.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scale">
+<h1>Scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object and 编辑模式s</div>
+<div class="line">Menu:     <span class="menuselection">Object/Mesh/Curve/Surface ‣ 变换 ‣ Scale</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">S</span></code></div>
+</div>
+</div>
+<p>Pressing <code class="kbd docutils literal"><span class="pre">S</span></code> will enter the <em>Scale</em> transformation mode where the
+selected element is scaled inward or outward according to the mouse pointer&#8217;s location. The
+element&#8217;s scale will increase as the mouse pointer is moved away from the 轴心点 and
+decrease as the pointer is moved towards it. If the mouse pointer crosses from the original side of the
+<a class="reference internal" href="../transform_control/pivot_point/index.html"><span class="doc">轴心点</span></a> to the opposite side,
+the scale will continue in the negative direction and flip the element.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/editors_3dview_transformations-basic-scale-scale_basic_usage.jpg"><img alt="../../../../_images/editors_3dview_transformations-basic-scale-scale_basic_usage.jpg" src="../../../../_images/editors_3dview_transformations-basic-scale-scale_basic_usage.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">Basic scale usage. From left to right, the panels show: the original Object,
+a scaled down Object, a scaled up Object and a scale-flipped Object.</span></p>
+</div>
+<p>There are multiple ways to scale an element which include:</p>
+<ul class="simple">
+<li>The keyboard shortcut <code class="kbd docutils literal"><span class="pre">S</span></code></li>
+<li>The 3D manipulator widget</li>
+<li>The Properties menu <code class="kbd docutils literal"><span class="pre">N</span></code></li>
+</ul>
+<p>Basic scale usage and common options are described below. For additional information, you may
+wish to read the <a class="reference internal" href="../transform_control/index.html"><span class="doc">变换控制</span></a>
+and <a class="reference internal" href="../transform_control/transform_orientations.html"><span class="doc">变换 Orientations</span></a>
+pages which provide more information about options such as Precision, Axis Locking, Numeric Input,
+Snapping and the different types of 轴心点.</p>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scaling-using-the-keyboard-shortcut">
+<h3>Scaling using the keyboard shortcut<a class="headerlink" href="#scaling-using-the-keyboard-shortcut" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to select the elements you want to scale.</li>
+<li>Tap <code class="kbd docutils literal"><span class="pre">S</span></code> once to enter scale mode.</li>
+<li>Scale the elements by moving the mouse.</li>
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> click to accept changes.</li>
+</ul>
+<p>The amount of scaling will be displayed in the bottom left hand corner of the 3D视图 editor.</p>
+<div class="figure" id="id2">
+<img alt="../../../../_images/editors_3dview_transformations-basic-scale-scale_value_header.jpg" src="../../../../_images/editors_3dview_transformations-basic-scale-scale_value_header.jpg" />
+<p class="caption"><span class="caption-text">Scale values.</span></p>
+</div>
+<div class="section" id="constraining-the-scaling-axis-axis-locking">
+<h4>Constraining the scaling axis (axis locking)<a class="headerlink" href="#constraining-the-scaling-axis-axis-locking" title="Permalink to this headline">¶</a></h4>
+<p>Scaling can be constrained to a particular axis or axes through the use of
+<a class="reference internal" href="../transform_control/precision/axis_locking.html"><span class="doc">Axis Locking</span></a>.
+To constrain scaling, the following shortcuts can be used:</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">S</span></code>, <code class="kbd docutils literal"><span class="pre">X</span></code>: Scale only along the <em>X-Axis</em></li>
+<li><code class="kbd docutils literal"><span class="pre">S</span></code>, <code class="kbd docutils literal"><span class="pre">Y</span></code>: Scale only along the <em>Y-Axis</em></li>
+<li><code class="kbd docutils literal"><span class="pre">S</span></code>, <code class="kbd docutils literal"><span class="pre">Z</span></code>: Scale only along the <em>Z-Axis</em></li>
+</ul>
+<p>Axis locking can also be enabled by pressing the <code class="kbd docutils literal"><span class="pre">MMB</span></code> after enabling scaling and
+moving the mouse in the desired direction e.g.</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">S</span></code>, move the mouse along the X axis, <code class="kbd docutils literal"><span class="pre">MMB</span></code>: Scale only along the <em>X-Axis</em></li>
+</ul>
+</div>
+<div class="section" id="fine-tuning-the-scaling">
+<h4>Fine Tuning The Scaling<a class="headerlink" href="#fine-tuning-the-scaling" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="../transform_control/precision/introduction.html"><span class="doc">Precise control</span></a>
+can be had over scaling through the use of the <code class="kbd docutils literal"><span class="pre">Shift</span></code> and <code class="kbd docutils literal"><span class="pre">Ctrl</span></code>
+keys to limit scaling to discrete amounts.
+You can also enter a <a class="reference internal" href="../transform_control/precision/numeric_input.html"><span class="doc">numerical value</span></a>
+in Blender Units (BU) to specify the amount of scaling after after initiating a scale transformation.</p>
+<ul class="simple">
+<li>Hold <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> down while scaling to scale the selected element in degree 0.1 BU increments.</li>
+<li>Hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> down while scaling to scale the selected element in very fine increments.</li>
+<li>Hold <code class="kbd docutils literal"><span class="pre">Shift-Ctrl</span></code> down while scaling to scale the selected element in 0.01 BU increments.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">S</span></code>, type in a number and press <code class="kbd docutils literal"><span class="pre">Return</span></code> to confirm.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Orientation dependent scaling</p>
+<p class="last">By default, all scaling happens around a Global Orientation.
+You can change the scaling orientation by pressing the axis key twice. For example, pressing
+<code class="kbd docutils literal"><span class="pre">S</span></code>, <code class="kbd docutils literal"><span class="pre">X</span></code>, <code class="kbd docutils literal"><span class="pre">X</span></code> will by default set scaling to occur around the local orientation.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../transform_control/precision/introduction.html"><span class="doc">Read more about Precision Control</span></a></li>
+<li><a class="reference internal" href="../transform_control/precision/numeric_input.html"><span class="doc">Read more about Numerical 变换ations</span></a></li>
+<li><a class="reference internal" href="../transform_control/transform_orientations.html"><span class="doc">Read more about 变换 Orientations</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="scaling-with-the-3d-transform-manipulator">
+<h3>Scaling with the 3D 变换 Manipulator<a class="headerlink" href="#scaling-with-the-3d-transform-manipulator" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/widget3d-transform-scale.jpg"><img alt="../../../../_images/widget3d-transform-scale.jpg" src="../../../../_images/widget3d-transform-scale.jpg" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-text">Scaling 变换 Manipulator.</span></p>
+</div>
+<p>In the 3D视图 header, ensure that the 变换 Manipulator is enabled (the red, green,
+and blue triad is selected). Set the manipulator type to scale
+(the highlighted square icon shown below).</p>
+<div class="figure" id="id4">
+<img alt="../../../../_images/editors_3dview_transformations-basic-scale-scale_manipulator_header.jpg" src="../../../../_images/editors_3dview_transformations-basic-scale-scale_manipulator_header.jpg" />
+<p class="caption"><span class="caption-text">Todo.</span></p>
+</div>
+<ul class="simple">
+<li>Select your element with <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</li>
+<li>Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> and drag any of the three colored axes on the scaling manipulator to scale
+your object along that axis.
+You can also use <code class="kbd docutils literal"><span class="pre">Shift</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> or numeric input with the 3D manipulator widget for further control.</li>
+<li>Your changes will be applied when you release <code class="kbd docutils literal"><span class="pre">LMB</span></code> or press <code class="kbd docutils literal"><span class="pre">Spacebar</span></code> or
+<code class="kbd docutils literal"><span class="pre">Return</span></code>. Your changes will be cancelled if you press <code class="kbd docutils literal"><span class="pre">RMB</span></code> or <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</li>
+</ul>
+<p><a class="reference internal" href="../transform_control/manipulators.html"><span class="doc">Read more about the 3D 变换 Manipulator</span></a></p>
+</div>
+<div class="section" id="scaling-with-the-properties-panel">
+<h3>Scaling with the Properties Panel<a class="headerlink" href="#scaling-with-the-properties-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/editors_3dview_transformations-basic-scale-scale_properties_panel.jpg"><img alt="../../../../_images/editors_3dview_transformations-basic-scale-scale_properties_panel.jpg" src="../../../../_images/editors_3dview_transformations-basic-scale-scale_properties_panel.jpg" style="width: 180px;" /></a>
+<p class="caption"><span class="caption-text">Scale transform properties panel.</span></p>
+</div>
+<p>Scale values can also be specified in the Properties panel <code class="kbd docutils literal"><span class="pre">N</span></code>
+by altering the amount value in the scaling slider of the 变换 panel.
+Scaling along particular axes can be enabled or disabled by toggling the padlock icon.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../../../interface/editors/panels.html"><span class="doc">Read more about Panels</span></a></li>
+<li><a class="reference internal" href="../transform_control/transform_orientations.html"><span class="doc">Read more about scaling modes</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../duplication/index.html" class="btn btn-neutral float-right" title="Duplication" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rotate.html" class="btn btn-neutral" title="Rotate" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

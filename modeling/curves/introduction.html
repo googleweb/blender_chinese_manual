@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Curves" href="index.html"/>
+        <link rel="next" title="Selecting" href="selecting.html"/>
+        <link rel="prev" title="Curves" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Curves</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#curve-primitives">Curve Primitives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bezier-curves">Bézier Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-properties">Curve Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">Non-Uniform Rational B-Splines (NURBS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#path">Path</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">Curves</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/curves/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id2">
+<img alt="../../_images/logofinal.jpg" src="../../_images/logofinal.jpg" />
+<p class="caption"><span class="caption-text">Bird logo made from Bézier curves.</span></p>
+</div>
+<p>Curves and <a class="reference internal" href="../surfaces/introduction.html"><span class="doc">Surfaces</span></a> are particular types of Blender Objects.
+They are expressed by mathematical functions rather than a series of points.</p>
+<p>Blender offers both <a class="reference internal" href="#bezier-curves">Bézier Curves</a> and <a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">Non-Uniform Rational B-Splines (NURBS)</a>.
+Both Bézier curves and NURBS curves and surfaces are defined in terms of a set of &#8220;control points&#8221;
+(or &#8220;control vertices&#8221;) which define a &#8220;control polygon&#8221;.</p>
+<p>Both Bézier and NURBs curves are named after their mathematical definitions, and choosing between them
+is often more a matter of how they are computed behind the scenes than how they appear from a modeler&#8217;s
+perspective. Bézier curves are generally more intuitive because they start and end at the
+control points that you set,
+but NURBs curves are more efficient for the computer to calculate when there are many twists and turns in a curve.</p>
+<p>The main advantage to using curves instead of polygonal meshes is that curves are defined by
+less data and so can produce results using less memory and storage space at modeling
+time. However, this procedural approach to surfaces can increase demands at render time.</p>
+<p>Certain modeling techniques, such as
+<a class="reference internal" href="editing/extrude.html"><span class="doc">extruding a profile along a path</span></a>,
+are possible only using curves. On the other hand, when using curves,
+vertex-level control is more difficult and if fine control is necessary,
+<a class="reference internal" href="../meshes/editing/introduction.html"><span class="doc">mesh editing</span></a> may be a better modeling option.</p>
+<p>Bézier curves are the most commonly used curves for designing letters or logos.
+They are also widely used in animation, both as <a class="reference internal" href="../../animation/object_path.html"><span class="doc">paths</span></a>
+for objects to move along and as <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-Curves</span></a>
+to change the properties of objects as a function of time.</p>
+<div class="section" id="curve-primitives">
+<h2>Curve Primitives<a class="headerlink" href="#curve-primitives" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../../_images/modeling_curves_add-curve-menu.jpg" src="../../_images/modeling_curves_add-curve-menu.jpg" />
+<p class="caption"><span class="caption-text">Add Curve menu.</span></p>
+</div>
+<p>In 物体模式, the <em>Add Curve</em> menu,
+Blender provides five different curve primitives:</p>
+<dl class="docutils">
+<dt>Bézier Curve</dt>
+<dd>Adds an open 2D Bézier curve with two control points.</dd>
+<dt>Bézier Circle</dt>
+<dd>Adds a closed, circle-shaped 2D Bézier curve (made of four control points).</dd>
+<dt>NURBS Curve</dt>
+<dd>Adds an open 2D NURBS curve, with four control points, with <em>Uniform</em> knots.</dd>
+<dt>NURBS Circle</dt>
+<dd>Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).</dd>
+<dt>Path</dt>
+<dd>Adds a NURBS open 3D curve made of five aligned control points,
+with <em>Endpoint</em> knots and the <em>CurvePath</em> setting enabled.</dd>
+</dl>
+</div>
+<div class="section" id="bezier-curves">
+<span id="curves-bezier"></span><h2>Bézier Curves<a class="headerlink" href="#bezier-curves" title="Permalink to this headline">¶</a></h2>
+<p>The main elements used in editing Bézier Curves are the Control Points and Handles. A Segment
+(the actual Curve) is found between two Control Points. In the image below, the Control Points
+can be found in the middle of the pink line while the Handles comprise the extensions from the
+Control Point. By default the arrows on the Segment represents the direction and
+<em>relative</em> speed and direction of movement Objects will have when moving along the curve.
+This can be altered by defining a custom F-Curve.</p>
+<div class="figure" id="id4">
+<img alt="../../_images/modeling_curves_control-points-handles.jpg" src="../../_images/modeling_curves_control-points-handles.jpg" />
+<p class="caption"><span class="caption-text">Bézier Curve in 编辑模式.</span></p>
+</div>
+<div class="section" id="editing-bezier-curves">
+<h3>Editing Bézier Curves<a class="headerlink" href="#editing-bezier-curves" title="Permalink to this headline">¶</a></h3>
+<p>A Bézier curve can be edited by moving the locations of the Control Points and Handles.</p>
+<ul class="simple">
+<li>Add a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the <em>Add</em> menu, followed by <span class="menuselection">Curve ‣ Bézier</span>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
+<li>Select one of the Control Points and move it around.
+Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
+<li>Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.</li>
+</ul>
+<p>To add more Control Points</p>
+<ul class="simple">
+<li>Select at least two adjacent Control Points.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">W</span></code> and select <em>Subdivide</em>.</li>
+<li>Optionally, you can press <code class="kbd docutils literal"><span class="pre">F6</span></code> immediately after the subdivision to modify the number of subdivisions.</li>
+</ul>
+<p>Note that while in <em>编辑模式</em> you cannot directly select a Segment. To do so,
+select all of the Control Points that make up the Segment you want to move.</p>
+<p>There are four Bézier curve handle types.
+They can be accessed by pressing <code class="kbd docutils literal"><span class="pre">V</span></code> and selecting from the list that appears,
+or by pressing the appropriate hotkey combination. Handles can be rotated, moved,
+scaled and shrunk/fattened like any vertex in a mesh.</p>
+<div class="section" id="bezier-curve-handle-types">
+<h4>Bézier Curve Handle Types<a class="headerlink" href="#bezier-curve-handle-types" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils" id="curve-handle-type-auto">
+<dt>Automatic <code class="kbd docutils literal"><span class="pre">V-A</span></code></dt>
+<dd><p class="first">This handle has a completely automatic length and direction which is set by Blender to
+ensure the smoothest result.
+These handles convert to <em>Aligned</em> handles when moved.</p>
+<div class="last figure">
+<img alt="../../_images/modeling_curves_automatic-handles.jpg" src="../../_images/modeling_curves_automatic-handles.jpg" />
+</div>
+</dd>
+<dt>Vector <code class="kbd docutils literal"><span class="pre">V-V</span></code></dt>
+<dd><p class="first">Both parts of a handle always point to the previous handle or the next handle which allows
+you to create curves or sections thereof made of straight lines or with sharp corners.
+Vector handles convert to <em>Free</em> handles when moved.</p>
+<div class="last figure">
+<img alt="../../_images/modeling_curves_vector-handles.jpg" src="../../_images/modeling_curves_vector-handles.jpg" />
+</div>
+</dd>
+<dt>Aligned <code class="kbd docutils literal"><span class="pre">V-L</span></code></dt>
+<dd><p class="first">These handles always lie in a straight line, and give a continuous curve without sharp angles.</p>
+<div class="last figure">
+<img alt="../../_images/modeling_curves_aligned-handles.jpg" src="../../_images/modeling_curves_aligned-handles.jpg" />
+</div>
+</dd>
+<dt>Free <code class="kbd docutils literal"><span class="pre">V-F</span></code></dt>
+<dd><p class="first">The handles are independent of each other.</p>
+<div class="last figure">
+<img alt="../../_images/modeling_curves_free-handles.jpg" src="../../_images/modeling_curves_free-handles.jpg" />
+</div>
+</dd>
+</dl>
+<p>Additionally, the <code class="kbd docutils literal"><span class="pre">V-T</span></code> shortcut can be used to toggle between Free and Aligned handle types.</p>
+</div>
+</div>
+</div>
+<div class="section" id="curve-properties">
+<h2>Curve Properties<a class="headerlink" href="#curve-properties" title="Permalink to this headline">¶</a></h2>
+<p>Curve Properties can be set from the <em>Object Data</em> option in the
+<em>Properties Header</em> (shown below in blue).</p>
+<div class="figure">
+<img alt="../../_images/properties_header-curve.jpg" src="../../_images/properties_header-curve.jpg" />
+</div>
+<div class="section" id="shape">
+<h3>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id5">
+<img alt="../../_images/modeling_curves_shape-panel.jpg" src="../../_images/modeling_curves_shape-panel.jpg" />
+<p class="caption"><span class="caption-text">Curves Shape panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>2D and 3D Curves</dt>
+<dd>By default, new curves are set to be 3D, which means that Control Points can be placed anywhere in 3D space.
+Curves can also be set to 2D which constrain the Control Points to the Curve&#8217;s local XY axis.</dd>
+</dl>
+<dl class="docutils" id="curve-resolution">
+<dt>Resolution</dt>
+<dd><p class="first">The <em>resolution</em> property defines the number of points that are computed between every pair of Control Points.
+Curves can be made more or less smooth by increasing and decreasing the resolution respectively.
+The <em>Preview U</em> setting determines the resolution in the 3D视图 while the <em>渲染 U</em> setting
+determines the Curve&#8217;s render resolution. If <em>渲染 U</em> is set to zero (0),
+then the <em>Preview U</em> setting is used for both the 3D视图 and render resolution.</p>
+<div class="last figure" id="id6">
+<img alt="../../_images/modeling_curves_shape-resolution.jpg" src="../../_images/modeling_curves_shape-resolution.jpg" />
+<p class="caption"><span class="caption-text">Curves with a resolution of 3 (left) and 12 (right).</span></p>
+</div>
+</dd>
+<dt>Twisting</dt>
+<dd><p class="first">A 3D Curve has Control Points that are not located on the Curve&#8217;s local XY plane.
+This gives the Curve a twist which can affect the Curve normals.
+You can alter how the twist of the Curve is calculated by choosing from <em>Minimum,
+Tangent</em> and <em>Z-Up</em> options from the drop-down menu.</p>
+<div class="last figure" id="id7">
+<img alt="../../_images/modeling_curves_shape-twist.jpg" src="../../_images/modeling_curves_shape-twist.jpg" />
+<p class="caption"><span class="caption-text">Curves with a twist of minimum (left) and tangent (right).</span></p>
+</div>
+</dd>
+<dt>Fill</dt>
+<dd><p class="first">Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
+When set to <em>Half</em> (the default) the Curve is displayed as half a cylinder.
+The <em>Fill Deformed</em> option allows you to indicate whether the Curve should be filled before or after
+(default) applying any Shape Keys or 修改器.</p>
+<div class="last figure" id="id8">
+<img alt="../../_images/modeling_curves_shape-fill.jpg" src="../../_images/modeling_curves_shape-fill.jpg" />
+<p class="caption"><span class="caption-text">Curves with a fill of half (left) and full (right).</span></p>
+</div>
+</dd>
+<dt>Path/Curve-Deform</dt>
+<dd>These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+The <em>Radius, Stretch</em> and <em>Bounds Clamp</em> options control how Objects use the
+Curve and are dealt with in more detail in the appropriate links below.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="editing/introduction.html"><span class="doc">Basic Curve Editing</span></a></li>
+<li><a class="reference internal" href="../../animation/object_path.html"><span class="doc">动画 Paths</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="geometry">
+<h3>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id9">
+<img alt="../../_images/modeling_curves_geometry-panel.jpg" src="../../_images/modeling_curves_geometry-panel.jpg" />
+<p class="caption"><span class="caption-text">Curves Geometry panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Modification</dt>
+<dd><dl class="first last docutils">
+<dt>Offset</dt>
+<dd>By default, text Objects are treated as curves. The Offset option will alter the space between letters.</dd>
+<dt>Extrude</dt>
+<dd>Will extrude the curve along both the positive and negative local Z axes.</dd>
+</dl>
+</dd>
+<dt>Bevel</dt>
+<dd><dl class="first last docutils">
+<dt>Depth</dt>
+<dd><p class="first">Changes the size of the bevel</p>
+<div class="last figure" id="id10">
+<img alt="../../_images/modeling_curves_geometry-bevel-depth.jpg" src="../../_images/modeling_curves_geometry-bevel-depth.jpg" />
+<p class="caption"><span class="caption-text">A Curve with different Bevel depths applied.</span></p>
+</div>
+</dd>
+<dt>Resolution</dt>
+<dd><p class="first">Alters the smoothness of the bevel</p>
+<div class="last figure" id="id11">
+<img alt="../../_images/modeling_curves_geometry-bevel-resolution.jpg" src="../../_images/modeling_curves_geometry-bevel-resolution.jpg" />
+<p class="caption"><span class="caption-text">A Curve with different resolutions applied.</span></p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>Taper Object</dt>
+<dd><p class="first">Tapering a Curve causes it to get thinner towards one end.
+You can also alter the proportions of the Taper throughout the tapered object
+by moving/scaling/rotating the Control Points of the Taper Object.
+The Taper Object can only be another Curve.
+Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.</p>
+<div class="last figure" id="id12">
+<img alt="../../_images/modeling_curves_geometry-taper.jpg" src="../../_images/modeling_curves_geometry-taper.jpg" />
+<p class="caption"><span class="caption-text">A Curve before (left) and after (right) a Bézier Curve Taper Object was applied.</span></p>
+</div>
+</dd>
+<dt>Bevel Object</dt>
+<dd><p class="first">Beveling a Bézier Curve with a Bézier Curve as the Bevel Object generally gives it the appearance of a plane,
+while using a Bézier Circle as the Bevel Object will give it the appearance of a cylinder.
+The Bevel Object can only be another Curve.
+Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape.
+Given the options available, it is best to experiment and see the results of this operation.</p>
+<div class="last figure" id="id13">
+<img alt="../../_images/modeling_curves_geometry-bevel.jpg" src="../../_images/modeling_curves_geometry-bevel.jpg" />
+<p class="caption"><span class="caption-text">A Curve with the Bevel Object as a Bézier Curve (left) and as a Bézier Circle (right).</span></p>
+</div>
+</dd>
+<dt>Fill Caps</dt>
+<dd>Seals the ends of a beveled Curve.</dd>
+<dt>Map Taper</dt>
+<dd><p class="first">For Curves using a Taper Object and with modifications to the <em>Start/End Bevel Factor</em>
+the <em>Map Taper</em> option will apply the taper to the beveled part of the Curve (not the whole Curve).</p>
+<div class="last figure" id="id14">
+<img alt="../../_images/modeling_curves_geometry-map-taper.jpg" src="../../_images/modeling_curves_geometry-map-taper.jpg" />
+<p class="caption"><span class="caption-text">A Curve without (left) and with (right) Map Taper applied.</span></p>
+</div>
+</dd>
+<dt>Start Bevel Factor and End Bevel Factor</dt>
+<dd><p class="first">These options determine where to start the Bevel operation on the Curve being beveled.
+Increasing the <em>Start Bevel Factor</em> to 0.5 will start beveling the Curve 50% of the distance from the start
+of the Curve (in effect shortening the Curve).
+Decreasing the <em>End Bevel Factor</em> by 0.25 will start beveling the Curve 25% of the distance from the end
+of the Curve (again, shortening the Curve).</p>
+<div class="last figure" id="id15">
+<img alt="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" src="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" />
+<p class="caption"><span class="caption-text">A Curve with no Bevel factor applied (left),
+with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="path-animation">
+<h3>Path 动画<a class="headerlink" href="#path-animation" title="Permalink to this headline">¶</a></h3>
+<p>The Path 动画 settings can be used to determine how Objects move along a certain path.
+See the link below for further information.</p>
+<p><a class="reference internal" href="../../animation/object_path.html"><span class="doc">Read more about utilizing Curves for paths during animation</span></a></p>
+</div>
+<div class="section" id="active-spline">
+<h3>Active Spline<a class="headerlink" href="#active-spline" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id16">
+<img alt="../../_images/modeling_curves_active-spline-panel.jpg" src="../../_images/modeling_curves_active-spline-panel.jpg" />
+<p class="caption"><span class="caption-text">Curves Active Spline panel.</span></p>
+</div>
+<p>The <em>Active Spline</em> panel becomes available during <em>编辑模式</em>.</p>
+<dl class="docutils">
+<dt>Cyclic</dt>
+<dd>Closes the Curve.</dd>
+<dt>Resolution</dt>
+<dd>Alters the smoothness of each segment by changing the number of subdivisions.</dd>
+<dt>Interpolation</dt>
+<dd><dl class="first last docutils">
+<dt>Tilt</dt>
+<dd>Alters how the tilt of a segment is calculated.</dd>
+<dt>Radius</dt>
+<dd>Alters how the radius of a Beveled Curve is calculated.
+The effects are easier to see after Shrinking/Fattening a control point <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>.</dd>
+<dt>Smooth</dt>
+<dd>Smooths the normals of the Curve</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="non-uniform-rational-b-splines-nurbs">
+<span id="modeling-curve-nurbs"></span><h2>Non-Uniform Rational B-Splines (NURBS)<a class="headerlink" href="#non-uniform-rational-b-splines-nurbs" title="Permalink to this headline">¶</a></h2>
+<p>One of the major differences between Bézier Objects and NURBS Objects is that Bézier Curves
+are approximations. For example, a Bézier circle is an <em>approximation</em> of a circle,
+whereas a NURBS circle is an <em>exact</em> circle.
+NURBS theory can be a <em>very</em> complicated topic. For an introduction,
+please consult the <a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">Wikipedia page.</a> In practice,
+many of the Bézier curve operations discussed above apply to NURBS curves in the same manner.
+The following text will concentrate only on those aspects that are unique to NURBS curves.</p>
+<div class="section" id="editing-nurbs-curves">
+<h3>Editing NURBS Curves<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
+<p>A NURBS Curve is edited by moving the location of the Control Points.</p>
+<ul class="simple">
+<li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS curve</span>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
+<li>Select one of the Control Points and move it around.
+Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
+<li>If you want to add additional Control Points, select both of them, press <code class="kbd docutils literal"><span class="pre">W</span></code> and select <em>Subdivide</em>.
+Press <code class="kbd docutils literal"><span class="pre">F6</span></code> immediately after to determine how many subdivisions to make.</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Active Spline<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id17">
+<img alt="../../_images/modeling_curves_nurbs-active-spline-panel.jpg" src="../../_images/modeling_curves_nurbs-active-spline-panel.jpg" />
+<p class="caption"><span class="caption-text">NURBS Active Spline panel.</span></p>
+</div>
+<dl class="docutils" id="modeling-curve-knot">
+<dt>Knots</dt>
+<dd><p class="first">One of the characteristics of a NURBS object is the <em>knot vector</em>. This is a sequence of
+numbers used to determine the influence of the control points on the curve.
+While you cannot edit the knot vectors directly, you can influence them through the
+<em>Endpoint</em> and <em>Bézier</em> options in the Active Spline panel. Note that the
+<em>Endpoint</em> and <em>Bézier</em> settings only apply to open NURBS curves.</p>
+<dl class="last docutils">
+<dt>Cyclic</dt>
+<dd><p class="first">Makes the NURBS curve cyclic.</p>
+<div class="last figure" id="id18">
+<img alt="../../_images/modeling_curves_nurbs-cyclic.jpg" src="../../_images/modeling_curves_nurbs-cyclic.jpg" />
+<p class="caption"><span class="caption-text">A NURBS curve with Cyclic applied.</span></p>
+</div>
+</dd>
+<dt>Bézier</dt>
+<dd>Makes the NURBS curve act like a Bézier curve.</dd>
+<dt>Endpoint</dt>
+<dd><p class="first">Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</p>
+<div class="last figure" id="id19">
+<a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-endpoint.jpg"><img alt="../../_images/modeling_curves_nurbs-endpoint.jpg" src="../../_images/modeling_curves_nurbs-endpoint.jpg" style="width: 511px;" /></a>
+<p class="caption"><span class="caption-text">A NURBS curve with Endpoint enabled.</span></p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils" id="modeling-curve-order">
+<dt>Order</dt>
+<dd><p class="first">The order of the NURBS curve determines the area of influence of the control points over the curve.
+Higher order values means that a single control point has a greater
+influence over a greater relative proportion of the curve.
+The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</p>
+<div class="last figure" id="id20">
+<a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-order.jpg"><img alt="../../_images/modeling_curves_nurbs-order.jpg" src="../../_images/modeling_curves_nurbs-order.jpg" style="width: 511px;" /></a>
+<p class="caption"><span class="caption-text">NURBS curves with orders of 2 (left), 4 (middle) and 6 (right).</span></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="path">
+<h2>Path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, Curves are often used as <a class="reference internal" href="../../animation/object_path.html"><span class="doc">paths</span></a>.
+Any curve can be used as a Path if the <em>Path 动画</em> option is selected.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selecting.html" class="btn btn-neutral float-right" title="Selecting" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Curves" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

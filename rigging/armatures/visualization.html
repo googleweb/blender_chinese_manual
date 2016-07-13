@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Armature visualization &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Armatures" href="index.html"/>
+        <link rel="next" title="Editing" href="editing/index.html"/>
+        <link rel="prev" title="Armature Structure" href="structure.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bones/index.html">Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">Armature Structure</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Armature visualization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#display-panel">Display Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#armature-layers">Armature Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bone-layers">Bone Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hiding-bones">Hiding Bones</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="index.html">Armatures</a> &raquo;</li>
+      
+    <li>Armature visualization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rigging/armatures/visualization.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="armature-visualization">
+<h1>Armature visualization<a class="headerlink" href="#armature-visualization" title="Permalink to this headline">¶</a></h1>
+<p>We have four basic bone visualization: Octahedral, Stick, B-Bone, Envelope and Wire:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg"><img alt="../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg" src="../../_images/riggingboneprincipalsbonedisplayoctahedral.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Octahedral bone display.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/riggingboneprincipalsbonedisplaystick.jpg"><img alt="../../_images/riggingboneprincipalsbonedisplaystick.jpg" src="../../_images/riggingboneprincipalsbonedisplaystick.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Stick bone display.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/riggingboneprincipalsbonedisplaybbone.jpg"><img alt="../../_images/riggingboneprincipalsbonedisplaybbone.jpg" src="../../_images/riggingboneprincipalsbonedisplaybbone.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">B-Bone bone display.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/riggingboneprincipalsbonedisplayenvelope.jpg"><img alt="../../_images/riggingboneprincipalsbonedisplayenvelope.jpg" src="../../_images/riggingboneprincipalsbonedisplayenvelope.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Envelope bone display.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="display-panel">
+<h2>Display Panel<a class="headerlink" href="#display-panel" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object, Edit and 姿态模式</div>
+<div class="line">Panel:    <span class="menuselection">Object Data ‣ Display</span></div>
+</div>
+</div>
+<p>But let us first see some general visualization properties of armatures,
+found in the <em>Display</em> panel of the <em>Object data</em> tab.</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/riggingeditingobjectdatapropertycxtdisplaypanel.jpg"><img alt="../../_images/riggingeditingobjectdatapropertycxtdisplaypanel.jpg" src="../../_images/riggingeditingobjectdatapropertycxtdisplaypanel.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Display panel.</span></p>
+</div>
+<div class="section" id="bone-types">
+<h3>Bone Types<a class="headerlink" href="#bone-types" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Octahedral bone</dt>
+<dd><p class="first">This is the default visualization, well suited for most of editing tasks. It materializes:</p>
+<ul class="simple">
+<li>The bone root (&#8220;big&#8221; end) and tip (&#8220;small&#8221; end).</li>
+<li>The bone &#8220;size&#8221; (its thickness is proportional to its length).</li>
+<li>The bone roll (as it has a square section).</li>
+</ul>
+<div class="last figure" id="id7">
+<a class="reference internal image-reference" href="../../_images/riggingoctahedronex3dvieweditmode.jpg"><img alt="../../_images/riggingoctahedronex3dvieweditmode.jpg" src="../../_images/riggingoctahedronex3dvieweditmode.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Note the 40- rolled Bone.001 bone.</span></p>
+</div>
+</dd>
+<dt>Stick bone</dt>
+<dd><p class="first">This is the simplest and most non-intrusive visualization.
+It just materializes bones by sticks of constant (and small) thickness,
+so it gives you no information about root and tip, nor bone size or roll angle.</p>
+<div class="last figure" id="id8">
+<a class="reference internal image-reference" href="../../_images/riggingstickex3dviewposemode.jpg"><img alt="../../_images/riggingstickex3dviewposemode.jpg" src="../../_images/riggingstickex3dviewposemode.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Note that Bone.001 roll angle is not visible (except by its XZ axes).</span></p>
+</div>
+</dd>
+<dt>B-Bone bone</dt>
+<dd><p class="first">This visualization shows the curves of &#8220;smooth&#8221; multi-segmented bones;
+see the <a class="reference internal" href="editing/properties.html#armature-bone-rigid"><span class="std std-ref">bone page</span></a> for details.</p>
+<div class="last figure">
+<a class="reference internal image-reference" href="../../_images/riggingbboneex3dvieweditmode.jpg"><img alt="../../_images/riggingbboneex3dvieweditmode.jpg" src="../../_images/riggingbboneex3dvieweditmode.jpg" style="width: 250px;" /></a>
+</div>
+</dd>
+<dt>Envelope bone</dt>
+<dd><p class="first">This visualization materializes the bone deformation influence.
+More on this in the <a class="reference internal" href="bones/introduction.html#armature-bone-influence"><span class="std std-ref">bone page</span></a>.</p>
+<div class="last figure">
+<a class="reference internal image-reference" href="../../_images/riggingenvelopeex3dviewposemode.jpg"><img alt="../../_images/riggingenvelopeex3dviewposemode.jpg" src="../../_images/riggingenvelopeex3dviewposemode.jpg" style="width: 250px;" /></a>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="draw-options">
+<h3>Draw Options<a class="headerlink" href="#draw-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Names</dt>
+<dd>When enabled, the name of each bone is drawn.</dd>
+<dt>Colors</dt>
+<dd>This is only relevant for <em>姿态模式</em>, and is described in detail <a class="reference internal" href="../posing/visualization.html"><span class="doc">there</span></a>.</dd>
+<dt>Axes</dt>
+<dd>When enabled, the (local) axes of each bone are drawn (only relevant for <em>编辑模式</em> and <em>姿态模式</em>).</dd>
+<dt>X-Ray</dt>
+<dd>When enabled, the bones of the armature will always be drawn on top of the solid objects
+(meshes, surfaces, ...) - i.e. they will always be visible and selectable
+(this is the same option as the one found in the <em>Display</em> panel of the <em>Object data</em> tab.
+Very useful when not in <em>Wireframe</em> mode.</dd>
+<dt>Shapes</dt>
+<dd>When enabled, the default standard bone shape is replaced,
+in <em>物体模式</em> and <em>姿态模式</em>,
+by the shape of a chosen object (see <a class="reference internal" href="#shaped-bones">Shaped Bones</a> for details).</dd>
+<dt>Delay Refresh</dt>
+<dd>When enabled, the bone doesn&#8217;t deform its children when manipulating the bone in pose mode.</dd>
+</dl>
+</div>
+<div class="section" id="shaped-bones">
+<h3>Shaped Bones<a class="headerlink" href="#shaped-bones" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object and 姿态模式</div>
+<div class="line">Panel:    <span class="menuselection">Bone ‣ Display</span></div>
+</div>
+</div>
+<p>Blender allows you to give to each bone of an armature a specific shape
+(in <em>物体模式</em> and <em>姿态模式</em>), using another object as &#8220;template&#8221;.
+First of all, you have to enable the <em>Shapes</em> button (<em>Armature</em> panel).</p>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/riggingeditingbonecxtdisplaypanel.jpg"><img alt="../../_images/riggingeditingbonecxtdisplaypanel.jpg" src="../../_images/riggingeditingbonecxtdisplaypanel.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Display panel.</span></p>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Wireframe</dt>
+<dd>When enabled, bone is displayed in wireframe mode regardless of the viewport drawing mode.
+Useful for non-obstructive custom bone chains.</dd>
+<dt>Hide</dt>
+<dd>Bone is not visible when not in <em>编辑模式</em>.</dd>
+<dt>Custom Shape</dt>
+<dd>Object that defines the custom shape of the selected bone.</dd>
+<dt>Custom At</dt>
+<dd>Bone that defines the display transform of this shape bone</dd>
+</dl>
+<p>To assign a custom shape to a bone, you have to:</p>
+<ul class="simple">
+<li>Switch to <em>姿态模式</em> <code class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></code>.</li>
+<li>Select the relevant bone by clicking on it with <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</li>
+<li>Go to the <em>Display</em> panel <em>Custom Shape</em> field and select the 3D object previously created in the scene;
+in this example we are using a cube and a cone. Tou can optionally set the <em>At</em> field to another bone.</li>
+</ul>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/riggingeditingbonecxtdisplaypanel2.jpg"><img alt="../../_images/riggingeditingbonecxtdisplaypanel2.jpg" src="../../_images/riggingeditingbonecxtdisplaypanel2.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Display panel.</span></p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/riggingboneshapeex3dviewobjectmode.jpg"><img alt="../../_images/riggingboneshapeex3dviewobjectmode.jpg" src="../../_images/riggingboneshapeex3dviewobjectmode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The armature with shapes assigned to two bones, in 物体模式.
+Note the centers of the Cone and Cube objects.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../_images/riggingboneshapeex3dviewposemode.jpg"><img alt="../../_images/riggingboneshapeex3dviewposemode.jpg" src="../../_images/riggingboneshapeex3dviewposemode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The same armature in 姿态模式...</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>These shapes will never be rendered - like any bone, they are only visible in 3D视图s.</li>
+<li>Even if any type of object seems to be accepted by the <em>OB</em> field (meshes, curves, even metas...),
+only meshes really work - all other types just make the bone invisible; nothing is drawn...</li>
+<li>The center of the shape object will be at the <em>root of the bone</em>
+(see the <a class="reference internal" href="bones/index.html"><span class="doc">bone page</span></a> for root/tip).</li>
+<li>The object properties of the shape are ignored
+(i.e. if you make a parallelepiped out of a cube by modifying its dimensions in <em>物体模式</em>,
+you will still have a cube shaped bone...).</li>
+<li>The &#8220;along bone&#8221; axis is the Y one,
+and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.</li>
+<li>If you need to remove the custom shape of the bone,
+just right click in the <em>Custom Shape</em> field and select <em>Reset to default value</em> in the pop-up menu.</li>
+</ul>
+</div>
+<p>So to summarize all this, you should use meshes as shape objects,
+with their center at their lower -Y end, and an overall Y length of 1.0 BU.</p>
+</div>
+</div>
+<div class="section" id="armature-layers">
+<span id="id1"></span><h2>Armature Layers<a class="headerlink" href="#armature-layers" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object, Edit and 姿态模式</div>
+<div class="line">Panel:    <span class="menuselection">Object data ‣ Skeleton</span></div>
+</div>
+</div>
+<div class="figure" id="id13">
+<a class="reference internal image-reference" href="../../_images/riggingeditingobjectdatapropertycxtskeletonpanel.jpg"><img alt="../../_images/riggingeditingobjectdatapropertycxtskeletonpanel.jpg" src="../../_images/riggingeditingobjectdatapropertycxtskeletonpanel.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Skeleton panel.</span></p>
+</div>
+<p>Each armature has 32 &#8220;Armature layers&#8221; which allow you to organize your armature by
+&#8220;regrouping&#8221; sets of bones into layers; this works similar to scene layers
+(those containing your objects). You can then &#8220;move&#8221; a bone to a given layer,
+hide or show one or several layers, etc.</p>
+<div class="section" id="showing-hiding-bone-layers">
+<h3>Showing/hiding bone layers<a class="headerlink" href="#showing-hiding-bone-layers" title="Permalink to this headline">¶</a></h3>
+<p>Only bones in active layers will be visible/editable - but they will always be effective
+(i.e move objects or deform geometry), whether in an active layer or not. To
+(de)activate a layer, you have several options, depending in which mode you are in:</p>
+<ul class="simple">
+<li>In all modes, use the row of small buttons at the top of the <em>Display Options</em> group, <em>Armature</em> panel.
+If you want to enable/disable several layers at once, as usual, hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> while clicking...</li>
+<li>In <em>编辑模式</em> and <em>姿态模式</em>, you can also do this from the <em>3D视图</em>,
+either by using the menu <span class="menuselection">Armature ‣ Switch Armature Layers</span> or
+<span class="menuselection">Pose ‣ Switch Armature Layers</span>, or the <code class="kbd docutils literal"><span class="pre">Shift-M</span></code> shortcut,
+to display a small pop-up menu containing the same buttons as described above
+(here again, you can use <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> clicks to (de)select several layers at once).</li>
+</ul>
+</div>
+<div class="section" id="protected-layers">
+<h3>Protected Layers<a class="headerlink" href="#protected-layers" title="Permalink to this headline">¶</a></h3>
+<p>You can lock a given bone layer for all <a class="reference internal" href="../../data_system/linked_libraries.html#object-proxy"><span class="std std-ref">proxies</span></a>
+of your armature, i.e. all bones in this layer won&#8217;t be editable.
+To do so, in the <em>Skeleton</em> panel, <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> click on the relevant button, the layer lock will be enabled.</p>
+<p>Protected layers in proxy are restored to proxy settings on file reload and undo.</p>
+</div>
+</div>
+<div class="section" id="bone-layers">
+<h2>Bone Layers<a class="headerlink" href="#bone-layers" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object, Edit and 姿态模式</div>
+<div class="line">Panel:    <span class="menuselection">Bone ‣ Relations</span></div>
+</div>
+</div>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../../_images/riggingeditingbonecxtrelationspanel.jpg"><img alt="../../_images/riggingeditingbonecxtrelationspanel.jpg" src="../../_images/riggingeditingbonecxtrelationspanel.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Relations panel.</span></p>
+</div>
+<div class="section" id="moving-bones-between-layers">
+<h3>Moving bones between layers<a class="headerlink" href="#moving-bones-between-layers" title="Permalink to this headline">¶</a></h3>
+<p>Obviously, you have to be in <em>编辑模式</em> or <em>姿态模式</em> to move bones between
+layers - note that as with objects, bones can lay in several layers at once,
+just use the usual <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> clicks... First of all,
+you have to select the chosen bone(s)!</p>
+<ul class="simple">
+<li>In the Properties editor, use the &#8220;layer buttons&#8221; of each selected bone &#8220;sub-panel&#8221; (<em>Armature Bones</em> panel)
+to control in which layer(s) it lays.</li>
+<li>In the <em>3D视图</em> editor, use the menu <span class="menuselection">Armature ‣ Move Bone To Layer</span> or
+<span class="menuselection">Pose ‣ Move Bone To Layer</span> or press <code class="kbd docutils literal"><span class="pre">M</span></code> to show the usual pop-up layers menu.
+Note that this way, you assign the same layers to all selected bones.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hiding-bones">
+<span id="armature-bone-hide"></span><h2>Hiding Bones<a class="headerlink" href="#hiding-bones" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Edit and 姿态模式</div>
+<div class="line">Panel:    <span class="menuselection">Bone ‣ Display</span></div>
+</div>
+</div>
+<div class="figure" id="id15">
+<a class="reference internal image-reference" href="../../_images/riggingeditingbonecxtdisplaypanel.jpg"><img alt="../../_images/riggingeditingbonecxtdisplaypanel.jpg" src="../../_images/riggingeditingbonecxtdisplaypanel.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The Display panel.</span></p>
+</div>
+<p>You do not have to use bone layers to show/hide some bones. As with objects,
+vertices or control points, you can use <code class="kbd docutils literal"><span class="pre">H</span></code>:</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">H</span></code> will hide the selected bone(s).</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift-H</span></code> will hide all bones <em>but the selected one(s)</em>.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-H</span></code> will show all hidden bones.</li>
+</ul>
+<p>You can also use the <em>Hide</em> check button of the <em>Display</em> panel,
+<em>Bone</em> tab).</p>
+<p>Note that hidden bones are specific to a mode - i.e.
+you can hide some bones in <em>编辑模式</em>,
+they will still be visible in <em>姿态模式</em>, and vice-versa.
+Hidden bone in <em>姿态模式</em> are also invisible in <em>物体模式</em>.
+And in <em>编辑模式</em>, the bone to hide must be fully selected,
+not just his root or tip.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing/index.html" class="btn btn-neutral float-right" title="Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structure.html" class="btn btn-neutral" title="Armature Structure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

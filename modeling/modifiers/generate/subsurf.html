@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Subdivision Surface Modifier &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="Triangulate Modifier" href="triangulate.html"/>
+        <link rel="prev" title="Solidify Modifier" href="solidify.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">Modify</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">Generate</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">Array Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">Bevel Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">Boolean Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">Build Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">Decimate Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">Edge Split Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">Mask Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">Mirror Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">Multiresolution Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">Remesh Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">Screw Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">Skin Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">Solidify Modifier</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Subdivision Surface Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">Triangulate Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">Wireframe Modifier</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">Deform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>Subdivision Surface Modifier</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/subsurf.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subdivision-surface-modifier">
+<h1>Subdivision Surface Modifier<a class="headerlink" href="#subdivision-surface-modifier" title="Permalink to this headline">¶</a></h1>
+<p>Subdivision Surface (<em>Subsurf</em> in short) is a method of subdividing the faces of a mesh to give a smooth appearance,
+to enable modeling of complex smooth surfaces with simple, low-vertex meshes.
+This allows high resolution mesh modeling without the need to save and maintain huge amounts of data and gives
+a smooth <em>organic</em> look to the object.</p>
+<p>This process creates virtual geometry that is generated non-destructively without modifying the original mesh,
+but it can be converted to real geometry that you could edit with the <em>Apply</em> button.</p>
+<p>Also, like the rest of the 修改器, order of execution has an important bearing on the results.
+For this, see the documentation on the <a class="reference internal" href="../introduction.html#modifier-stack"><span class="std std-ref">Modifier Stack</span></a>.</p>
+<p>Keep in mind that this is a different operation than its companion,
+<a class="reference internal" href="../../meshes/smoothing.html"><span class="doc">Smooth Shading</span></a>.
+You can see the difference between the two in the grid image below.</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/modeling_modifiers_subsurf_grid.png" src="../../../_images/modeling_modifiers_subsurf_grid.png" />
+<p class="caption"><span class="caption-text">Subsurfs levels 0 to 3, without and with Smooth Shading.</span></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The Subsurf modifier does not allow you to edit the new subdivided geometry without applying it,
+but the <a class="reference internal" href="multiresolution.html"><span class="doc">Multires</span></a> modifier does (in sculpt mode).</p>
+</div>
+<div class="section" id="modifier-settings">
+<h2>Modifier 设置<a class="headerlink" href="#modifier-settings" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../_images/modifier-subsurf.jpg" src="../../../_images/modifier-subsurf.jpg" />
+<p class="caption"><span class="caption-text">Modifier&#8217;s Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Type</dt>
+<dd><p class="first">This toggle button allows you to choose the subdivision algorithm:</p>
+<dl class="last docutils">
+<dt>Catmull-Clark</dt>
+<dd>The default option, subdivides and smooths the surfaces.
+According to <a class="reference external" href="https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface">its Wikipedia page</a>,
+the &#8220;arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of the
+resulting surfaces rather than on a mathematical derivation.&#8221;</dd>
+<dt>Simple</dt>
+<dd>Only subdivides the surfaces, without any smoothing
+(the same as <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Subdivide</span>, in 编辑模式).
+Can be used, for example, to increase base mesh resolution when using displacement maps.</dd>
+</dl>
+</dd>
+<dt>Subdivisions</dt>
+<dd><p class="first">Recursively adds more geometry. For details on polygon counts, see the <a class="reference internal" href="#subsurf-performance"><span class="std std-ref">Performance Considerations</span></a> section.</p>
+<dl class="last docutils">
+<dt>View</dt>
+<dd>The number of subdivision levels shown in the 3D视图.</dd>
+<dt>渲染</dt>
+<dd>The number of subdivision levels shown in renders.</dd>
+</dl>
+</dd>
+</dl>
+<p>The right combination of these settings will allow you to keep a fast and lightweight
+approximation of your model when interacting with it in 3D, but use a higher quality version when rendering.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Be careful not to set the <em>View</em> subdivisions higher than the <em>渲染</em> subdivisions,
+this would mean the 3D视图 will be higher quality than the render.</p>
+</div>
+<dl class="docutils">
+<dt>Options:</dt>
+<dd><dl class="first docutils">
+<dt>Subdivide UVs</dt>
+<dd>When enabled, the UV maps will also be subsurfed
+(i.e. Blender will add &#8220;virtual&#8221; coordinates for all sub-faces created by this modifier).</dd>
+</dl>
+<div class="figure" id="id3">
+<img alt="../../../_images/modifier-generate-subsurf-subdivideuvs.jpg" src="../../../_images/modifier-generate-subsurf-subdivideuvs.jpg" />
+<p class="caption"><span class="caption-text">Subdivide UVs on and off.</span></p>
+</div>
+<dl class="last docutils">
+<dt>Optimal Display</dt>
+<dd>When drawing the wireframe of this object, the wires of the new subdivided edges will be skipped
+(only draws the edges of the original geometry)</dd>
+<dt>Opensubdiv</dt>
+<dd>See the <a class="reference internal" href="#modeling-modifiers-opensubdiv"><span class="std std-ref">OpenSubdiv</span></a> section.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="opensubdiv">
+<span id="modeling-modifiers-opensubdiv"></span><h2>OpenSubdiv<a class="headerlink" href="#opensubdiv" title="Permalink to this headline">¶</a></h2>
+<p>OpenSubdiv is a option of Subsurf modifier.
+When this option is enabled for Subsurf modifier from the very top of the modifier stack,
+evaluation will happen on the compute device selected in the 用户首选项.
+Best performance will be achieved when using GLSL evaluation.
+As a result performance of the modifier will be much higher which is great for animations.</p>
+<p>To enable OpenSubdiv you must first choose the fastest compute device.
+To do this see the <a class="reference internal" href="../../../preferences/system.html#prefs-system-opensubdiv"><span class="std std-ref">OpenSubdiv Compute</span></a> section. To find more on OpenSubdiv read the
+<a class="reference external" href="https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.76/OpenSubdiv">Release Notes</a>.</p>
+<div class="section" id="improving-performance">
+<h3>Improving Performance<a class="headerlink" href="#improving-performance" title="Permalink to this headline">¶</a></h3>
+<p>In order to utilize maximum performance form OpenSubdiv the following things are required:</p>
+<ul class="simple">
+<li>Subsurf modifier must be last in the <a class="reference internal" href="../introduction.html#modifier-stack"><span class="std std-ref">Modifier Stack</span></a>.</li>
+<li>There should be no modifiers prior to Subsurf which changes mesh topology across the time.</li>
+<li>其他 objects should not use geometry of OpenSubdiv mesh</li>
+</ul>
+</div>
+</div>
+<div class="section" id="edit-cage">
+<h2>Edit Cage<a class="headerlink" href="#edit-cage" title="Permalink to this headline">¶</a></h2>
+<p>To view and edit the results of the subdivision while you&#8217;re editing the mesh,
+you must enable the <em>Editing Cage</em> (the triangle button in the modifier&#8217;s header).
+This lets you grab the vertices as they lie in their new smoothed locations, rather than on the original mesh.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/subsurfeditcageoff.jpg"><img alt="../../../_images/subsurfeditcageoff.jpg" src="../../../_images/subsurfeditcageoff.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edit Cage Off (Default).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/subsurfeditcageon.jpg"><img alt="../../../_images/subsurfeditcageon.jpg" src="../../../_images/subsurfeditcageon.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edit Cage On.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>With the edit cage off, some vertices are buried under the subsurfed mesh. With dense vertex configurations,
+you might even have to temporarily disable the modifier or view
+<a class="reference internal" href="../../../editors/3dview/display/shading.html"><span class="doc">wireframe</span></a> shading so that you can see these vertices.</p>
+<p>With the edit cage on, you do not have this problem. It does, however,
+have its own disadvantage&#8212;it can look <em>too</em> nice, hiding irregularities.
+Notice the three quads running in the middle of Suzanne&#8217;s ear:
+you can only tell how crooked they are in the &#8220;edit cage off&#8221; version. When you are modeling, you will more often
+want to see your mesh deformities in their full ugliness so that you can apply your skills until it is sheer
+prettiness.</p>
+</div>
+<div class="section" id="control">
+<h2>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
+<p>Subsurf rounds off edges, and often this is not what you want. There are several solutions.</p>
+<div class="section" id="weighted-edge-creases">
+<span id="modifiers-generate-subsurf-creases"></span><h3>Weighted Edge Creases<a class="headerlink" href="#weighted-edge-creases" title="Permalink to this headline">¶</a></h3>
+<p>Weighted edge creases for subdivision surfaces allows you to change the way
+Subsurf subdivides the geometry to give the edges a smooth or sharp appearance.</p>
+<div class="figure" id="id6">
+<img alt="../../../_images/subsurfwithcrease.jpg" src="../../../_images/subsurfwithcrease.jpg" />
+<p class="caption"><span class="caption-text">A Subsurfed Cube with Creased Edges.</span></p>
+</div>
+<p>The crease weight of selected edges can be changed in the <em>变换</em> panel of the properties region
+<code class="kbd docutils literal"><span class="pre">N</span></code>, or by using the shortcut <code class="kbd docutils literal"><span class="pre">Shift-E</span></code> and moving the mouse closer
+or further from the selected edges to adjust the crease weight.
+A higher value makes the edge &#8220;stronger&#8221; and more resistant to the smoothing effect of subdivision surfaces.</p>
+</div>
+<div class="section" id="edge-loops">
+<h3>Edge Loops<a class="headerlink" href="#edge-loops" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id7">
+<img alt="../../../_images/cubewithedgeloops.jpg" src="../../../_images/cubewithedgeloops.jpg" />
+<p class="caption"><span class="caption-text">A Subsurf Level 2 Cube, the same with an extra Edge Loop, and the same with six extra Edge Loops.</span></p>
+</div>
+<p>The Subsurf modifier demonstrates why good, clean topology is so important.
+As you can see in the figure, the Subsurf modifier has a drastic effect on a default Cube.
+Until you add in additional Loops (with <code class="kbd docutils literal"><span class="pre">Ctrl-R</span></code>), the shape is almost unrecognizable as a cube.</p>
+<p>A mesh with deliberate topology has good placement of Edge Loops,
+which allow the placement of more Loops (or removal of Loops,
+with <code class="kbd docutils literal"><span class="pre">X</span></code> <span class="menuselection">‣ Edge Loop</span>) to control the sharpness/smoothness of the resultant mesh.</p>
+</div>
+</div>
+<div class="section" id="performance-considerations">
+<span id="subsurf-performance"></span><h2>Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permalink to this headline">¶</a></h2>
+<p>Higher levels of subdivisions mean more vertices, and more vertices means more memory will be used
+(both video memory for display, and system RAM for rendering).
+Blender could potentially crash or hang if you do not have enough memory.</p>
+<p>When using high levels of subdivision with a graphics card that has a low total amount
+of Vram, some parts of the geometry will disappear visually. Your mesh will actually be intact,
+because the render is generated using your Object Data,
+(even though it cannot be shown by your graphics card).</p>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>To quickly add a subsurf modifier to one or more objects, select it/them and press <code class="kbd docutils literal"><span class="pre">Ctrl-1</span></code>.
+That will add a subsurf modifier with <em>View Subdivisions</em> on 1.</p>
+<p>You can use other numbers too, such as <code class="kbd docutils literal"><span class="pre">Ctrl-2</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-3</span></code>, etc, to add a subsurf with that number of
+subdivisions. The <em>渲染 Subdivisions</em> will always be on 2 when added like this.</p>
+<p>If an object already has a subsurf modifier, doing this will simply change its subdivision level instead of adding
+another modifier.</p>
+</div>
+<div class="section" id="known-limitations">
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="non-contiguous-normals">
+<h3>Non Contiguous Normals<a class="headerlink" href="#non-contiguous-normals" title="Permalink to this headline">¶</a></h3>
+<p>Blender&#8217;s subdivision system produces nice smooth subsurfed meshes, but any subsurfed face
+(that is, any small face created by the algorithm from a single face of the original mesh),
+shares the overall normal orientation of that original face.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/subsurf05b.jpg"><img alt="../../../_images/subsurf05b.jpg" src="../../../_images/subsurf05b.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Comparison of good normals and bad normals.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/subsurf05a.jpg"><img alt="../../../_images/subsurf05a.jpg" src="../../../_images/subsurf05a.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Side view of image on left.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Abrupt normal changes can produce ugly black gouges even though
+these flipped normals are not an issue for the shape itself.</p>
+<p>A quick way to fix this is to use Blender&#8217;s
+<a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Recalculate Normals</span></a> operation in 编辑模式.</p>
+<p>If you still have some ugly black gouges you will have to
+<a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Manually Flip the Normals</span></a>.</p>
+</div>
+<div class="section" id="concave-ngons">
+<h3>Concave NGons<a class="headerlink" href="#concave-ngons" title="Permalink to this headline">¶</a></h3>
+<p>While NGons are supported,
+concave ngons may give ugly overlapping results.</p>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modifier-subsurf_ngon_concave.png"><img alt="../../../_images/modifier-subsurf_ngon_concave.png" src="../../../_images/modifier-subsurf_ngon_concave.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The ngons on the right show overlapping subsurf result.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="triangulate.html" class="btn btn-neutral float-right" title="Triangulate Modifier" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solidify.html" class="btn btn-neutral" title="Solidify Modifier" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

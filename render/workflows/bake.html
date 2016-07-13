@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>渲染 Baking &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Workflows" href="index.html"/>
+        <link rel="next" title="Multiview" href="multiview/index.html"/>
+        <link rel="prev" title="Command Line" href="command_line.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workflows</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="animations.html">渲染ing 动画s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command_line.html">Command Line</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">渲染 Baking</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#workflow">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="multiview/index.html">Multiview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Workflows</a> &raquo;</li>
+      
+    <li>渲染 Baking</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/workflows/bake.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="render-baking">
+<h1>渲染 Baking<a class="headerlink" href="#render-baking" title="Permalink to this headline">¶</a></h1>
+<p>Baking, in general, is the act of pre-computing something in order to speed up some other
+process later down the line.
+渲染ing from scratch takes a lot of time depending on the options you choose.
+Therefore, Blender allows you to &#8220;bake&#8221; some parts of the render ahead of time, for select objects.
+Then, when you press 渲染, the entire scene is rendered much faster,
+since the colors of those objects do not have to be recomputed.</p>
+<p>渲染 baking creates 2D bitmap images of a mesh object&#8217;s rendered surface.
+These images can be re-mapped onto the object using the object&#8217;s UV coordinates.
+Baking is done for each individual mesh, and can only be done if that mesh has been UV-unwrapped.
+While it takes time to set up and perform, it saves render time. If you are rendering a long animation,
+the time spent baking can be much less than time spent rendering out each frame of a long animation.</p>
+<p>Use 渲染 Bake in intensive light/shadow solutions,
+such as AO or soft shadows from area lights. If you bake AO for the main objects,
+you will not have to enable it for the full render, saving render time.</p>
+<p>Use <em>Full 渲染</em> or <em>Textures</em> to create an image texture;
+baked procedural textures can be used as a starting point for further texture painting.
+Use <em>Normals</em> to make a low-resolution mesh look like a high-resolution mesh.
+To do that, UV-unwrap a high-resolution, finely sculpted mesh and bake its normals.
+Save that normal map, and <em>Mapping</em> (texture settings)
+the UV of a similarly unwrapped low-resolution mesh.
+The low-resolution mesh will look just like the high-resolution,
+but will have much fewer faces/polygons.</p>
+<p class="rubric">Advantages</p>
+<ul class="simple">
+<li>Can significantly reduce render times</li>
+<li>Texture painting made easier</li>
+<li>Reduced polygon count</li>
+<li>Repeated renders are made faster, multiplying the time savings</li>
+</ul>
+<p class="rubric">Disadvantages</p>
+<ul class="simple">
+<li>Object must be UV-unwrapped.</li>
+<li>If shadows are baked, lights and object cannot move with respect to each other.</li>
+<li>Large textures (e.g. 4096×4096) can be memory intensive, and be just as slow as the rendered solution.</li>
+<li>Human (labor) time must be spent unwrapping and baking and saving files and applying the textures to a channel.</li>
+</ul>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../_images/render-bake-ao.jpg" src="../../_images/render-bake-ao.jpg" />
+<p class="caption"><span class="caption-text">Ambient Occlusion.</span></p>
+</div>
+<div class="section" id="bake-mode">
+<h3>Bake Mode<a class="headerlink" href="#bake-mode" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="full-render">
+<h4>Full 渲染<a class="headerlink" href="#full-render" title="Permalink to this headline">¶</a></h4>
+<p>Bakes all materials, textures, and lighting except specularity and SSS.</p>
+</div>
+<div class="section" id="ambient-occlusion">
+<h4>Ambient Occlusion<a class="headerlink" href="#ambient-occlusion" title="Permalink to this headline">¶</a></h4>
+<p>Bakes ambient occlusion as specified in the World panels. Ignores all lights in the scene.</p>
+<dl class="docutils">
+<dt>Normalized</dt>
+<dd>Normalize without using material&#8217;s settings.</dd>
+</dl>
+</div>
+<div class="section" id="shadow">
+<h4>Shadow<a class="headerlink" href="#shadow" title="Permalink to this headline">¶</a></h4>
+<p>Bakes shadows and lighting.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/render-bake-norm.jpg" src="../../_images/render-bake-norm.jpg" />
+<p class="caption"><span class="caption-text">Normals.</span></p>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/render-bake-normspace.jpg" src="../../_images/render-bake-normspace.jpg" />
+<p class="caption"><span class="caption-text">Normal Space.</span></p>
+</div>
+</div>
+<div class="section" id="normals">
+<h4>Normals<a class="headerlink" href="#normals" title="Permalink to this headline">¶</a></h4>
+<p>Bakes tangent and camera-space normals (amongst many others) to an RGB image.</p>
+<dl class="docutils">
+<dt>Normal Space</dt>
+<dd><p class="first">Normals can be baked in different spaces:</p>
+<dl class="last docutils">
+<dt>相机 space</dt>
+<dd>Default method.</dd>
+<dt>World space</dt>
+<dd>Normals in world coordinates, dependent on object transformation and deformation.</dd>
+<dt>Object space</dt>
+<dd>Normals in object coordinates, independent of object transformation, but dependent on deformation.</dd>
+<dt>Tangent space</dt>
+<dd>Normals in tangent space coordinates, independent of object transformation and deformation.
+This is the new default, and the right choice in most cases,
+since then the normal map can be used for animated objects too.</dd>
+</dl>
+</dd>
+</dl>
+<p>For materials the same spaces can be chosen as well, in the image texture options,
+next to the existing <em>Normal Map</em> setting. For correct results,
+the setting here should match the setting used for baking.</p>
+</div>
+<div class="section" id="textures">
+<h4>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h4>
+<p>Bakes colors of materials and textures only, without shading.</p>
+<div class="figure" id="id4">
+<img alt="../../_images/render-bake-disp.jpg" src="../../_images/render-bake-disp.jpg" />
+<p class="caption"><span class="caption-text">Displacement.</span></p>
+</div>
+</div>
+<div class="section" id="displacement">
+<h4>Displacement<a class="headerlink" href="#displacement" title="Permalink to this headline">¶</a></h4>
+<p>Similar to baking normal maps,
+displacement maps can also be baked from a high-res object to an unwrapped low-res object,
+using the <em>Selected to Active</em> option.</p>
+<dl class="docutils">
+<dt>Normalized</dt>
+<dd>Normalize to the distance.</dd>
+</dl>
+<p>When using this in conjunction with a subsurf and displacement modifier within Blender, it&#8217;s
+necessary to temporarily add a heavy subsurf modifier to the &#8216;low res&#8217; model before baking.
+This means that if you then use a displacement modifier on top of the subsurf,
+the displacement will be correct,
+since it&#8217;s stored as a relative difference to the subsurfed geometry,
+rather than the original base mesh (which can get distorted significantly by a subsurf).
+The higher the render level subsurf while baking, the more accurate the displacements will be.
+This technique may also be useful when saving the displacement map out for use in external
+renderers.</p>
+</div>
+<div class="section" id="emission">
+<h4>Emission<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h4>
+<p>Bakes Emit, or the Glow color of a material.</p>
+</div>
+<div class="section" id="alpha">
+<h4>Alpha<a class="headerlink" href="#alpha" title="Permalink to this headline">¶</a></h4>
+<p>Bakes Alpha values, or transparency of a material.</p>
+</div>
+<div class="section" id="mirror-color-and-intensity">
+<h4>Mirror Color and Intensity<a class="headerlink" href="#mirror-color-and-intensity" title="Permalink to this headline">¶</a></h4>
+<p>Bakes Mirror color or intensity values.</p>
+</div>
+<div class="section" id="specular-color-and-intensity">
+<h4>Specular Color and Intensity<a class="headerlink" href="#specular-color-and-intensity" title="Permalink to this headline">¶</a></h4>
+<p>Bakes specular color or specular intensity values.</p>
+<div class="figure" id="id5">
+<img alt="../../_images/render-bake-fullrender.jpg" src="../../_images/render-bake-fullrender.jpg" />
+<p class="caption"><span class="caption-text">Full 渲染.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="additional-options">
+<h3>Additional Options<a class="headerlink" href="#additional-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Clear</dt>
+<dd>If selected, clears the image to selected background color (default is black) before baking render.</dd>
+<dt>Margin</dt>
+<dd>Baked result is extended this many pixels beyond the border of each UV &#8220;island,&#8221; to soften seams in the texture.</dd>
+<dt>Split</dt>
+<dd><dl class="first last docutils">
+<dt>Fixed</dt>
+<dd>Slit quads predictably (0,1,2) (0,2,3).</dd>
+<dt>Fixed alternate</dt>
+<dd>Slit quads predictably (1,2,3) (1,3,0).</dd>
+<dt>Automatic</dt>
+<dd>Split quads to give the least distortion while baking.</dd>
+</dl>
+</dd>
+<dt>Select to Active</dt>
+<dd><p class="first">Enable information from other objects to be baked onto the active object.</p>
+<dl class="last docutils">
+<dt>Distance</dt>
+<dd>Controls how far a point on another object can be away from the point on the active object.
+Only needed for <em>Selected to Active</em>.
+A typical use case is to make a detailed, high poly object,
+and then bake it&#8217;s normals onto an object with a low polygon count.
+The resulting normal map can then be applied to make the low poly object look more detailed.</dd>
+<dt>Bias</dt>
+<dd>Bias towards further away from the object (in Blender units)</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Mesh Must be Visible in 渲染</p>
+<p class="last">If a mesh is not visible in regular render,
+for example because it is disabled for rendering in the Outliner or has the DupliVerts setting enabled,
+it cannot be baked to.</p>
+</div>
+</div>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>In a 3D视图 editor, select a mesh and enter UV/Face Select mode</li>
+<li><a class="reference internal" href="../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">Unwrap the mesh object</span></a></li>
+<li>In a UV/图像编辑器, either create a new image or open an existing one.
+If your 3D视图 is in textured display mode, you should now see the image mapped to your mesh.
+Ensure that all faces are selected.</li>
+<li>In the Bake panel at the bottom of the <em>渲染 menu</em>, bake your desired type of image
+(<em>Full 渲染</em> etcetera.)</li>
+<li>When rendering is complete, Blender replaces the image with the Baked image.</li>
+<li>Save the image.</li>
+<li>Apply the image to the mesh as a UV texture. For displacement and normal maps,
+refer to <a class="reference internal" href="../blender_render/textures/influence/material/bump_and_normal.html"><span class="doc">Bump and Normal Maps</span></a>.
+For full and texture bakes,
+refer to <a class="reference internal" href="../blender_render/textures/index.html"><span class="doc">Textures</span></a>.</li>
+<li>Refine the image using the process described below,
+or embellish with <a class="reference internal" href="../../painting_sculpting/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">Texture Paint</span></a>
+or an external image editor.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multiview/index.html" class="btn btn-neutral float-right" title="Multiview" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="command_line.html" class="btn btn-neutral" title="Command Line" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

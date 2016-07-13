@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Light Paths &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="渲染 设置" href="index.html"/>
+        <link rel="next" title="渲染 Layers and Passes" href="passes.html"/>
+        <link rel="prev" title="Integrator" href="integrator.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">渲染 设置</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Light Paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="passes.html">渲染 Layers and Passes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motion_blur.html">Motion Blur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">Lamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reducing_noise.html">Reducing Noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gpu_rendering.html">GPU 渲染ing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../osl.html">Open Shading Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">渲染 Baking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Cycles 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">渲染 设置</a> &raquo;</li>
+      
+    <li>Light Paths</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/cycles/settings/light_paths.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="light-paths">
+<h1>Light Paths<a class="headerlink" href="#light-paths" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ray-types">
+<h2>Ray Types<a class="headerlink" href="#ray-types" title="Permalink to this headline">¶</a></h2>
+<p>Ray types can be divided into four categories:</p>
+<ul class="simple">
+<li>相机: the ray comes straight from the camera</li>
+<li>Reflection: the ray is generated by a reflection off a surface</li>
+<li>Transmission: the ray is generated by a transmission through a surface</li>
+<li>Shadow: the ray is used for (transparent) shadows</li>
+</ul>
+<p>Reflection and transmission rays can further have these properties:</p>
+<ul class="simple">
+<li>Diffuse: the ray is generated by a diffuse reflection or transmission (translucency)</li>
+<li>Glossy: the ray is generated by a glossy specular reflection or transmission</li>
+<li>Singular: the ray is generated by a perfectly sharp reflection or transmission</li>
+</ul>
+<p>The Light Path node can be used to find out the type of ray the shading is being computed for.</p>
+<div class="figure">
+<img alt="../../../_images/cycles_light_path_rays.png" src="../../../_images/cycles_light_path_rays.png" />
+</div>
+</div>
+<div class="section" id="bounce-control">
+<h2>Bounce Control<a class="headerlink" href="#bounce-control" title="Permalink to this headline">¶</a></h2>
+<p>The maximum number of light bounces can be controlled manually.
+While ideally this should be infinite,
+in practice a smaller number of bounces may be sufficient,
+or some light interactions may be intentionally left out for faster convergence.
+The number of diffuse reflection,
+glossy reflection and transmission bounces can also be controlled individually.</p>
+<p>Light paths are terminated probabilistically when specifying a minimum number of light bounces
+lower than the maximum. In that case paths longer than minimum will be randomly stopped when
+they are expected to contribute less light to the image.
+This will still converge to the same image, but renders faster while possibly being noisier.</p>
+<p>A common source of noise is caustics, which are diffuse bounces followed by a glossy bounce
+(assuming we start from the camera). An option is available to disable these entirely.</p>
+</div>
+<div class="section" id="transparency">
+<span id="render-cycles-light-paths-transparency"></span><h2>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h2>
+<p>The transparent <abbr title="Bidirectional scattering distribution function">BSDF</abbr> shader is given
+special treatment. When a ray passes through it, light passes straight on,
+as if there was no geometry there.
+The ray type does not change when passing through a transparent BSDF.</p>
+<p>Alpha pass output is also different for the transparent <abbr title="Bidirectional scattering distribution function">BSDF</abbr>. 其他 transmission <abbr title="Bidirectional scattering distribution function">BSDF</abbr> s are considered opaque, because they change the light direction.
+As such they cannot be used for alpha-over compositing, while this is possible with the
+transparent <abbr title="Bidirectional scattering distribution function">BSDF</abbr>.</p>
+<p>The maximum number of transparent bounces is controlled separately from other bounces.
+It is also possible to use probabilistic termination of transparent bounces,
+which might help rendering many layers of transparency.</p>
+<p>Note that while semantically the ray passes through as if no geometry was hit, rendering
+performance is affected as each transparency step requires executing the shader and tracing a
+ray.</p>
+</div>
+<div class="section" id="ray-visibility">
+<h2>Ray Visibility<a class="headerlink" href="#ray-visibility" title="Permalink to this headline">¶</a></h2>
+<p>Objects can be set to be invisible to particular ray types:</p>
+<ul class="simple">
+<li>相机</li>
+<li>Diffuse reflection</li>
+<li>Glossy reflection</li>
+<li>Transmission</li>
+<li>Shadow</li>
+</ul>
+<p>This can be used, for example, to make an emitting mesh invisible to camera rays.
+For duplicators, visibility is inherited; if the parent object is hidden for some ray types,
+the children will be hidden for these too.</p>
+<p>In terms of performance, using these options is more efficient that using a shader node setup
+that achieves the same effect.
+Objects invisible to a certain ray will be skipped in ray traversal already,
+leading to fewer rays cast and shaders executed.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="passes.html" class="btn btn-neutral float-right" title="渲染 Layers and Passes" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="integrator.html" class="btn btn-neutral" title="Integrator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

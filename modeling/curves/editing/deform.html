@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Curve Deform &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Curve Extrusion" href="extrude.html"/>
+        <link rel="prev" title="Curve Editing" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Curves</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Curve Editing</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Curve Deform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extrude.html">Curve Extrusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">Curves</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Curve Deform</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/curves/editing/deform.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="curve-deform">
+<h1>Curve Deform<a class="headerlink" href="#curve-deform" title="Permalink to this headline">¶</a></h1>
+<p><em>Curve Deform</em> provides a simple but efficient method of defining a deformation on a mesh.
+By parenting a mesh object to a curve, you can deform the mesh up or down the curve by moving the mesh along,
+or orthogonal to, the dominant axis.
+This is a most useful tool to make an object follow a complex path,
+like e.g. a sheet of paper inside a printer, a film inside a camera, the water of a canal...</p>
+<p>The <em>Curve Deform</em> works on a (global) dominant axis, X, Y, or Z.
+This means that when you move your mesh in the dominant direction,
+the mesh will traverse along the curve. Moving the mesh in an orthogonal direction will move
+the mesh object closer or further away from the curve.
+The default settings in Blender map the Y axis to the dominant axis. When you move the object
+beyond the curve endings the object will continue to deform based on the direction vector of
+the curve endings.</p>
+<p>If the &#8220;curve path&#8221; is <em>3D</em>, the <em>Tilt</em> value of its control points will be used
+(see the <a class="reference internal" href="extrude.html"><span class="doc">Extrusion</span></a> section above)
+to twist the &#8220;curved&#8221; object around it.
+Unfortunately, the other <em>Radius</em> property is not used (it would have been possible, for example,
+to make it control the size of the &#8220;curved&#8221; object...).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Try to position your object over the curve immediately after you have added it,
+before adding the curve deform. This gives the best control over how the deformation works.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Use modifiers!</p>
+<p class="last">The <em>Curve Deform</em> relationship is now also a modifier, called <a class="reference internal" href="../../modifiers/deform/curve.html"><span class="doc">Curve</span></a>.
+The <em>Curve</em> modifier function acts the same as its counterpart,
+except that when the modifier is used, the &#8220;dominant axis&#8221; is set inside its properties -
+and the <em>Track</em> X, Y, Z buttons no longer have an effect on it.
+And you have some goodies, like the possibility, if &#8220;curving&#8221; a mesh, to only curve one of its vertex groups...</p>
+</div>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../../_images/curvesdeform_parentmenu.jpg" src="../../../_images/curvesdeform_parentmenu.jpg" />
+<p class="caption"><span class="caption-text">Make Parent menu.</span></p>
+</div>
+<p>When parenting an object (mesh, curve, meta, ...) to a curve <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>,
+you will be presented with a menu (<em>Make Parent</em> <em>menu</em>).</p>
+<p>By selecting <em>Curve Deform</em>, you enable the curve deform function on the mesh object.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/curvesdeform_animpanel.jpg" src="../../../_images/curvesdeform_animpanel.jpg" />
+<p class="caption"><span class="caption-text">动画 settings panel.</span></p>
+</div>
+<p>The dominant axis setting is set on the mesh object.
+By default the dominant axis in Blender is the Y Axis.
+This can be changed by selecting one of the
+<em>Track</em> X, Y or Z buttons in the <em>动画</em> Panel,
+(<em>动画 settings panel</em>), in Object tab.</p>
+<p>Cyclic (or closed)
+curves work as expected where the object deformations traverse along the path in cycles.
+Note however that when you have more than one curve in the &#8220;parent&#8221; object,
+its &#8220;children&#8221; will only follow the first one.</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/curve-shape_panel.png" src="../../../_images/curve-shape_panel.png" />
+<p class="caption"><span class="caption-text">Curve Shape Panel.</span></p>
+</div>
+<p>The <em>Stretch</em> curve option allows you to let the mesh object stretch, or squeeze, over the entire curve.
+This option is in <em>Object Data</em> properties.</p>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Let us make a simple example:</p>
+<ul class="simple">
+<li>Remove default cube object from scene and add a Monkey with
+<span class="menuselection">Add ‣ Mesh ‣ Monkey</span></li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to exit <em>编辑模式</em>.</li>
+<li>Now add a curve with <span class="menuselection">Add ‣ Curve ‣ Bézier Curve</span>.</li>
+</ul>
+<div class="figure" id="id4">
+<span id="fig-curves-deform-edit"></span><img alt="../../../_images/curvesdeform_exampleeditcurve.jpg" src="../../../_images/curvesdeform_exampleeditcurve.jpg" />
+<p class="caption"><span class="caption-text">Edit Curve.</span></p>
+</div>
+<ul class="simple">
+<li>While in <em>编辑模式</em>, move the control points of the curve
+as shown in Fig. <a class="reference internal" href="#fig-curves-deform-edit"><span class="std std-ref">Edit Curve.</span></a>, then exit <em>编辑模式</em> <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</li>
+</ul>
+<div class="figure" id="id5">
+<span id="fig-curves-deform-monkey-curve"></span><img alt="../../../_images/curvesdeform_examplemonkeyoncurve1.jpg" src="../../../_images/curvesdeform_examplemonkeyoncurve1.jpg" />
+<p class="caption"><span class="caption-text">Monkey on a Curve.</span></p>
+</div>
+<ul class="simple">
+<li>Now, you can use the new, modern, modifier way of &#8220;curving&#8221; the Monkey:<ul>
+<li>Select the Monkey <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</li>
+<li>In the <em>Object 修改器</em> properties, <em>修改器</em> panel, add a <em>Curve</em> modifier.</li>
+<li>Type the name of the curve (should be &#8220;Curve&#8221;) in the <em>Ob</em> field of the modifier,
+and optionally change the dominant axis to Y.</li>
+</ul>
+</li>
+<li>Or you can choose the old, deprecated method (note that it creates a &#8220;virtual&#8221; modifier...):<ul>
+<li>Select the Monkey <code class="kbd docutils literal"><span class="pre">RMB</span></code>, and then shift select the curve <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> to open up the <em>Make Parent</em> menu.</li>
+<li>Select <span class="menuselection">Make Parent ‣ Curve Deform</span>.</li>
+</ul>
+</li>
+<li>The Monkey should be positioned on the curve, as in Fig. <a class="reference internal" href="#fig-curves-deform-monkey-curve"><span class="std std-ref">Monkey on a Curve.</span></a>.</li>
+<li>Now if you select the Monkey <code class="kbd docutils literal"><span class="pre">RMB</span></code>, and move it <code class="kbd docutils literal"><span class="pre">G</span></code>,
+in the Y-direction (the dominant axis by default), the monkey will deform nicely along the curve.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you press <code class="kbd docutils literal"><span class="pre">MMB</span></code> (or one of <code class="kbd docutils literal"><span class="pre">X</span></code>, <code class="kbd docutils literal"><span class="pre">Y</span></code>, <code class="kbd docutils literal"><span class="pre">Z</span></code>)
+while moving the Monkey you will constrain the movement to one axis only.</p>
+</div>
+<ul class="simple">
+<li>In Fig. <a class="reference internal" href="#fig-curves-deform-monkey-deform"><span class="std std-ref">Monkey deformations.</span></a>, you can see the Monkey at different positions along the curve.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Moving the Monkey in directions other than the dominant axis will create some odd deformations.
+Sometimes this is what you want to achieve, so you will need to experiment and try it out!</p>
+</div>
+<div class="figure" id="id6">
+<span id="fig-curves-deform-monkey-deform"></span><a class="reference internal image-reference" href="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg"><img alt="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg" src="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Monkey deformations.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="extrude.html" class="btn btn-neutral float-right" title="Curve Extrusion" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Curve Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

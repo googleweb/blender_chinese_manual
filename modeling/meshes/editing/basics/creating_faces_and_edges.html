@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Make Edge/Face &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Basics" href="index.html"/>
+        <link rel="next" title="Mirror Editing" href="mirror.html"/>
+        <link rel="prev" title="Deleting and Merging" href="deleting.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_structures.html">Mesh Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">Normals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">Vertex Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">Edge Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">Face Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deforming/index.html">Deforming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">Duplicating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">Subdividing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">Mesh Clean-up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">Miscellaneous Editing Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="../index.html">Editing</a> &raquo;</li>
+      
+          <li><a href="index.html">Basics</a> &raquo;</li>
+      
+    <li>Make Edge/Face</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/modeling/meshes/editing/basics/creating_faces_and_edges.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="make-edge-face">
+<h1>Make Edge/Face<a class="headerlink" href="#make-edge-face" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Faces ‣ Make Face/Edge</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">F</span></code></div>
+</div>
+</div>
+<p>This is a context-sensitive tool which creates geometry by filling in the selection.
+When only two vertices are selected it will create an edge, otherwise it will create faces.</p>
+<p>The typical use case is to select vertices and press <code class="kbd docutils literal"><span class="pre">F</span></code>,
+however, Blender also supports creating faces from different selections to help quickly build
+up geometry.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>The following methods are used automatically depending on the context.</p>
+<div class="section" id="isolated-vertices">
+<h3>Isolated vertices<a class="headerlink" href="#isolated-vertices" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_verts_simple_before.jpg"><img alt="../../../../_images/bmesh_make_face_verts_simple_before.jpg" src="../../../../_images/bmesh_make_face_verts_simple_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_verts_simple_after.jpg"><img alt="../../../../_images/bmesh_make_face_verts_simple_after.jpg" src="../../../../_images/bmesh_make_face_verts_simple_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="isolated-edges">
+<h3>Isolated edges<a class="headerlink" href="#isolated-edges" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_edges_simple_before.jpg"><img alt="../../../../_images/bmesh_make_face_edges_simple_before.jpg" src="../../../../_images/bmesh_make_face_edges_simple_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_edges_simple_after.jpg"><img alt="../../../../_images/bmesh_make_face_edges_simple_after.jpg" src="../../../../_images/bmesh_make_face_edges_simple_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="n-gon-from-edges">
+<h3>N-gon from edges<a class="headerlink" href="#n-gon-from-edges" title="Permalink to this headline">¶</a></h3>
+<p>When there are many edges Blender will make an ngon,
+note that this doesn&#8217;t support holes, to support holes you need to use the
+<a class="reference internal" href="../faces.html#modeling-meshes-editing-fill"><span class="std std-ref">Fill</span></a> Faces tool.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_edges_ngon_before.jpg"><img alt="../../../../_images/bmesh_make_face_edges_ngon_before.jpg" src="../../../../_images/bmesh_make_face_edges_ngon_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_edges_ngon_simple_after.jpg"><img alt="../../../../_images/bmesh_make_face_edges_ngon_simple_after.jpg" src="../../../../_images/bmesh_make_face_edges_ngon_simple_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mixed-vertices-edges">
+<h3>Mixed vertices/edges<a class="headerlink" href="#mixed-vertices-edges" title="Permalink to this headline">¶</a></h3>
+<p>Existing edges are used to make the face as well as an extra vertex.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_mix_simple_before.jpg"><img alt="../../../../_images/bmesh_make_face_mix_simple_before.jpg" src="../../../../_images/bmesh_make_face_mix_simple_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_mix_simple_after.jpg"><img alt="../../../../_images/bmesh_make_face_mix_simple_after.jpg" src="../../../../_images/bmesh_make_face_mix_simple_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="edge-net">
+<h3>Edge-Net<a class="headerlink" href="#edge-net" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes you may have many connected edges without interior faces.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_net_before.jpg"><img alt="../../../../_images/bmesh_make_face_net_before.jpg" src="../../../../_images/bmesh_make_face_net_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_net_after.jpg"><img alt="../../../../_images/bmesh_make_face_net_after.jpg" src="../../../../_images/bmesh_make_face_net_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="point-cloud">
+<h3>Point Cloud<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h3>
+<p>When there are many isolated vertices,
+Blender will calculate the edges for an n-gon.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_cloud_before.jpg"><img alt="../../../../_images/bmesh_make_face_cloud_before.jpg" src="../../../../_images/bmesh_make_face_cloud_before.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_make_face_cloud_after.jpg"><img alt="../../../../_images/bmesh_make_face_cloud_after.jpg" src="../../../../_images/bmesh_make_face_cloud_after.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="single-vertex-selection">
+<h3>Single Vertex Selection<a class="headerlink" href="#single-vertex-selection" title="Permalink to this headline">¶</a></h3>
+<p>With a single vertex selected on a boundary,
+the face will be created along the boundary,
+this saves manually selecting the other two vertices.
+Notice this tool can run multiple times to continue creating faces.</p>
+<div class="figure">
+<img alt="../../../../_images/mesh_face_create_boundary.jpg" src="../../../../_images/mesh_face_create_boundary.jpg" />
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>For other ways to create faces see:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../faces.html#modeling-meshes-editing-fill"><span class="std std-ref">Fill</span></a></li>
+<li><a class="reference internal" href="../faces.html#modeling-meshes-editing-grid-fill"><span class="std std-ref">Grid Fill</span></a></li>
+<li><a class="reference internal" href="../edges.html#modeling-meshes-editing-bridge-edge-loops"><span class="std std-ref">Bridge Edge Loops</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mirror.html" class="btn btn-neutral float-right" title="Mirror Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deleting.html" class="btn btn-neutral" title="Deleting and Merging" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

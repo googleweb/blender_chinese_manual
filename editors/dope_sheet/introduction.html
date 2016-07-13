@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Dope Sheet" href="index.html"/>
+        <link rel="next" title="Action Editor" href="action.html"/>
+        <link rel="prev" title="Dope Sheet" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">Graph Editor</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Dope Sheet</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="action.html">Action Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shapekey.html">Shape Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../nla.html">NLA Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Dope Sheet</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/dope_sheet/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/dopesheet-overview.jpg"><img alt="../../_images/dopesheet-overview.jpg" src="../../_images/dopesheet-overview.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The DopeSheet.</span></p>
+</div>
+<p>Classical hand-drawn animators often made a chart, showing exactly when each drawing,
+sound and camera move would occur, and for how long. They nicknamed this the &#8220;dopesheet&#8221;.
+While CG foundations dramatically differ from classical hand-drawn animation,
+Blender&#8217;s <em>Dopesheet</em> inherits a similar directive.
+It gives the animator a &#8220;birds-eye-view&#8221; of every thing occurring within a scene.</p>
+<div class="section" id="dope-sheet-modes">
+<h2>Dope Sheet Modes<a class="headerlink" href="#dope-sheet-modes" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../_images/dopesheet-modes.jpg" src="../../_images/dopesheet-modes.jpg" />
+<p class="caption"><span class="caption-text">Dope Sheet Modes.</span></p>
+</div>
+<p>There are four basic views for the Dopesheet.These all view different contexts of animation:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="#"><span class="doc">DopeSheet</span></a></dt>
+<dd>The dopeSheet allow you to edit multiple actions at once.</dd>
+<dt><a class="reference internal" href="action.html"><span class="doc">Action Editor</span></a></dt>
+<dd><em>Action Editor</em> is the default, and most useful one. It is here that you can define and control your actions.</dd>
+<dt><a class="reference internal" href="shapekey.html"><span class="doc">Shape Key Editor</span></a></dt>
+<dd><em>ShapeKey Editor</em> is dedicated to the <em>Shapekey</em> data-blocks.
+It uses/edits the same action data-block as the previous mode.
+It seems to be an old and useless thing,
+as the <em>Action Editor</em> mode handles <em>Shape</em> channels very well, and this mode adds nothing...</dd>
+<dt><a class="reference internal" href="../../interface/grease_pencil/index.html"><span class="doc">Grease Pencil</span></a></dt>
+<dd><p class="first"><em>Grease Pencil</em> is dedicated to the <a class="reference internal" href="../../interface/grease_pencil/layers_and_animation.html"><span class="doc">grease pencil tool&#8217;s</span></a>
+keyframes- for each grease pencil layer, you have a strip along which you can grab its keys,
+and hence easily re-time your animated sketches.
+As it is just another way to see and edit the grease pencil data,
+this mode uses no data-block (and hence has nothing to do with actions).</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that you will have as much top-level grease pencil channels as you have sketched windows
+(3D视图s, <em>UV/图像编辑器</em>, etc.)</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Action Editor</em> interface is somewhat similar to the <em>Graph Editor</em>
+one, it is divided in three areas:</p>
+<div class="figure" id="id3">
+<span id="fig-dope-sheet-action"></span><a class="reference internal image-reference" href="../../_images/actioneditor.jpg"><img alt="../../_images/actioneditor.jpg" src="../../_images/actioneditor.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">The Action Editor, Action Editor mode, with an Object and Shape channels.</span></p>
+</div>
+<dl class="docutils">
+<dt>The header bar</dt>
+<dd>Here you find the menus, a first block of controls related to the editor &#8220;mode&#8221;,
+a second one concerning the action data-blocks, and a few other tools
+(like the copy/paste buttons, and snapping type).</dd>
+<dt>The main area</dt>
+<dd>It contains the keyframes for all visible action channels.
+As with the other &#8220;time&#8221; editor, the X-axis represents time.
+The Y-axis has no mean in itself, unlike with the <em>Graph Editor</em>, it is just a sort of &#8220;stack&#8221; of action channels -
+each one being shown as an horizontal colored strip (of a darker shade &#8220;during&#8221; the animated/keyed period).
+On these channel strips lay the keyframes, visualized as light-gray (unselected) or yellow (selected) diamonds.
+One of the key feature of this editor is that it allow you to visualize immediately which channel (i.e. F-Curve)
+is <em>really</em> affected. When the value of a given channel does not change at all between two neighboring keyframes,
+a gray (unselected) or yellow (selected) line is drawn between them.</dd>
+<dt>The left &#8220;list-tree&#8221;</dt>
+<dd><p class="first">This part shows the action&#8217;s channel &#8220;headers&#8221; and their hierarchy. Basically, there are:</p>
+<ul class="simple">
+<li>&#8220;Top-level&#8221; channels, which represent whole F-Curve data-blocks
+(so there is one for <em>Object</em> one, one for <em>Shape</em> one, etc.).
+They gather <em>all</em> keyframes defined in their underlying F-Curve data-block.</li>
+<li>&#8220;Mid-level&#8221; channels, which seem currently to have no use
+(there iss one per top-level channel, they are all named <em>F-Curves</em>, and have no option at all).</li>
+<li>&#8220;Low-level&#8221; channels, which represent individual F-Curve,
+with their own keyframes (fortunately, only keyed frames are shown!).</li>
+</ul>
+<p>Each level can be expended/collapsed by the small arrow to the left of its &#8220;parent&#8221; channel.
+To the right of the channel&#8217;s headers, there are some channel&#8217;s setting controls:</p>
+<ul>
+<li><p class="first">Clicking on the small &#8220;eye&#8221; will allow you to mute that channel (and all its &#8220;children&#8221; channels, if any!).</p>
+</li>
+<li><p class="first">Clicking on the small &#8220;lock&#8221; will allow you to prevent this channel and its children to be edited</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">note that this is also working inside the NLA,
+but that it does not prevent edition of the underlying F-Curve).</p>
+</div>
+</li>
+</ul>
+<p class="last">A channel can be selected (text in white, strip in gray-blue color) or not
+(text in black, strip in pink-brown color.), use <code class="kbd docutils literal"><span class="pre">LMB</span></code> clicks to toggle this state.
+You can access some channel&#8217;s properties by clicking <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> on its header.
+Finally, you can have another column with value-sliders,
+allowing you to change the value of current keyframes, or to add new ones.
+These are obviously only available for low-level channels (i.e. individual F-Curve ).
+See <a class="reference internal" href="#view-menu">View Menu</a> below for how to show these sliders.</p>
+</dd>
+</dl>
+<div class="section" id="view-menu">
+<h3>View Menu<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<img alt="../../_images/actioneditor-sliders.jpg" src="../../_images/actioneditor-sliders.jpg" />
+<p class="caption"><span class="caption-text">the action editor showing sliders.</span></p>
+</div>
+<dl class="docutils">
+<dt>Realtime Updates</dt>
+<dd>When transforming keyframes, changes to the animation data are flushed to other views</dd>
+<dt>Show Frame Number Indicator</dt>
+<dd>Show frame number beside the current frame indicator line</dd>
+<dt>Show Sliders</dt>
+<dd>A toggle option that shows the value sliders for the channels.
+See the Fig. <a class="reference internal" href="#fig-dope-sheet-action"><span class="std std-ref">The Action Editor, Action Editor mode, with an Object and Shape channels.</span></a>.</dd>
+<dt>Use Group Colors</dt>
+<dd>Draw groups and channels with colors matching their corresponding groups.</dd>
+<dt>AutoMerge Keyframes</dt>
+<dd>Automatically merge nearby keyframes</dd>
+<dt>Sync Markers</dt>
+<dd>Sync Markers with keyframe edits</dd>
+<dt>Show Seconds</dt>
+<dd>Whether to show the time in the X-axis as frames or as seconds</dd>
+<dt>Set Preview Range <code class="kbd docutils literal"><span class="pre">P</span></code></dt>
+<dd>Interactively define frame range used for playback.
+Allow you to define a temporary preview range to use for the <code class="kbd docutils literal"><span class="pre">Alt-A</span></code> realtime playback
+(this is the same thing as the <em>Playback Range</em> option of the
+<a class="reference internal" href="../timeline.html#animation-editors-timeline-headercontrols"><span class="std std-ref">Tmeline editor header</span></a>).</dd>
+<dt>Clear Preview Range <code class="kbd docutils literal"><span class="pre">Alt-P</span></code></dt>
+<dd>Clears the preview range</dd>
+<dt>Auto-Set Preview Range</dt>
+<dd>Automatically sets the preview range to playback the whole action.</dd>
+</dl>
+</div>
+<div class="section" id="marker-menu">
+<h3>Marker Menu<a class="headerlink" href="#marker-menu" title="Permalink to this headline">¶</a></h3>
+<p>See the <a class="reference internal" href="../../animation/markers.html"><span class="doc">Markers page</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="action.html" class="btn btn-neutral float-right" title="Action Editor" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Dope Sheet" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

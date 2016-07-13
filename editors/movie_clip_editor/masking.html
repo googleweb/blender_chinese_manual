@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Masking &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Movie Clip Editor" href="index.html"/>
+        <link rel="next" title="文本编辑器" href="../text_editor.html"/>
+        <link rel="prev" title="Dope Sheet View" href="tracking/dopesheet.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Movie Clip Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Intruduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">Movie Clip Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tracking/index.html">Motion Tracking</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Masking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Movie Clip Editor</a> &raquo;</li>
+      
+    <li>Masking</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/movie_clip_editor/masking.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="masking">
+<h1>Masking<a class="headerlink" href="#masking" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Masks have many purposes. They can be used in a motion tracking workflow to mask out,
+or influence a particular object in the footage.
+They can be used for manual rotoscoping to pull a particular object out of the footage,
+or as a rough matte for green screen keying. Masks are independent from a particular image of movie clip,
+and so they can just as well be used for creating motion graphics or other effects in the compositor.
+These masks can also be used in other places in Blender.</p>
+</div>
+<div class="section" id="editing-masks">
+<h2>Editing Masks<a class="headerlink" href="#editing-masks" title="Permalink to this headline">¶</a></h2>
+<p>Masks can be created in the image and movie clip editors, by changing the mode from View to Mask in the header.
+This will add various tools and properties to the editor panels,
+while hiding others that are not needed for interacting with masks.
+The tools and panels available to edit masks are the same in both editors,
+with the exception that linking masks to motion tracking data is only possible in the movie clip editor.</p>
+<p>Once set to Mask mode, a Mask data-block can be added. Any image, movie clip,
+render or compositing result can be used as a backdrop to draw masks over.
+To get interactive feedback on the resulting mask,
+a Mask node can be connected directly to a Viewer node in the compositor,
+which will then keep updating the compositing result while editing.</p>
+<div class="section" id="s-curves">
+<h3>S-Curves<a class="headerlink" href="#s-curves" title="Permalink to this headline">¶</a></h3>
+<p>The curve type used for creating mask splines is almost a Bézier curve, but with some differences.
+The curve needed to support feathering in a way that stuck to the curve as you edited it,
+for ease of editing an animation. These are called S-Curves.</p>
+<p>Besides the handles, every control point also has points that define the feather between
+the current point and the next point on the spline. Each feather point is stored in UV space,
+where U means position across spline segment, and V means distance between main spline and feather points.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/editors_movie-clip_masking_scurve.png" src="../../_images/editors_movie-clip_masking_scurve.png" />
+<p class="caption"><span class="caption-text">S- Curve Explained</span></p>
+</div>
+<p>This allows for deforming the main spline in almost any way,
+and the feather will be updated automatically to reflect that change.
+For example if there is just rotation of the spline,
+feather would stay completely unchanged. If one point&#8217;s feather is moved,
+the other feathers will be automatically stretched uniformly along that segment
+and the overall shape will be almost the same as artists would want it to be.</p>
+</div>
+<div class="section" id="control-points">
+<h3>Control Points<a class="headerlink" href="#control-points" title="Permalink to this headline">¶</a></h3>
+<p>Editing of mask splines happens in a way similar to editing Bézier curves or paths in GIMP or other curve editors:
+control points are added to define the spline itself, and handles of different types are used to create smooth bends.
+This makes it possible to define a mask with few points to easily follow an object in footage.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> is used to place new control points and define handle orientations</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-C</span></code> to close the mask by joining the last control point to the first.</li>
+<li>Existing control points can be translated, scaled and rotated with the usual G, S, R shortcuts.</li>
+<li><code class="kbd docutils literal"><span class="pre">X</span></code> or Delete removes control points.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
+<p>The usual selection and hide/reveal tools are available:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">A</span></code> toggle select all</li>
+<li><code class="kbd docutils literal"><span class="pre">B</span></code> , <code class="kbd docutils literal"><span class="pre">C</span></code> border and circle Select</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code> select linked from selection, L: select linked with mouse</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-Alt-LMB</span></code> lasso select</li>
+<li><code class="kbd docutils literal"><span class="pre">H</span></code> hide selected, <code class="kbd docutils literal"><span class="pre">Shift-H</span></code> hide unselected, <code class="kbd docutils literal"><span class="pre">Alt-H</span></code> reveal</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="curve-handles">
+<h3>Curve Handles<a class="headerlink" href="#curve-handles" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">Alt-C</span></code> cycle toggle spline, to create a close curve or open it again</li>
+<li><code class="kbd docutils literal"><span class="pre">V</span></code> set handle type for selected spline points</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-N</span></code> make normals (handle directions) consistent</li>
+<li>Switch Direction handle directions in/out.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="feather">
+<span id="mask-feather"></span><h3>Feather<a class="headerlink" href="#feather" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to control feather of mask, including a way to define non-linear feather.
+Linear feather is controlled by a slider,
+non-linear feather is controlled in the same curve-based way to define feather falloff.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> is used to define a feathering outline curve. To create an initial feather,
+sliding from a spline control point outside or inside will create and position feather points.
+After this <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code>
+will insert new feather point and mouse sliding can be used to move them around.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-S</span></code> will scale the feather size.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="animating">
+<h2>Animating<a class="headerlink" href="#animating" title="Permalink to this headline">¶</a></h2>
+<p>Masks can be driven over the time so that they follow some object from the footage,
+e.g. a running actor. This animation can be done in several ways:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Control points can be parented to motion tracks.
+This way is the main way to interact with masks in a motion tracking workflow.</li>
+<li>Keyframe animation of control points using a shape keying system.
+This can be useful when there are not enough good feature points to track in the footage,
+or the mask is not based on footage.</li>
+</ul>
+</div></blockquote>
+<p>For animation more complex mask shapes, it is also possible to do more high level animation:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Splines and mask layers can be animated as a whole, instead of individual control points.</li>
+<li>Masks can be parented to motion tracking data.
+Works for both individual mask point parenting and for overall spline.
+To select motion track to be parented to use <code class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></code>.
+To parent selected mask points to active motion track use <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>.</li>
+<li>Mask animation timing can be edited from the Dope Sheet.
+Here there is a mask mode where mask keyframes can be selected and edited.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="shape-keys">
+<h3>Shape Keys<a class="headerlink" href="#shape-keys" title="Permalink to this headline">¶</a></h3>
+<p>Masks can be animated with shape keyframing. This works on the level of mask layers,
+so inserting a shape key will keyframe all the splines and points contained in it.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">I</span></code> will insert a shape key for the active mask layer at the current frame</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-I</span></code>  will clear the shape key for the active mask layer at the current frame.</li>
+<li>Feather Reset 动画: Resets the feather offset across all animated frames.</li>
+<li>Re-Key Points of Selected Shapes:
+Re-interpolate selected points on across the range of keys selected in the dope sheet.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../text_editor.html" class="btn btn-neutral float-right" title="文本编辑器" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tracking/dopesheet.html" class="btn btn-neutral" title="Dope Sheet View" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>设置 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Soft Body" href="index.html"/>
+        <link rel="next" title="Forces" href="forces/index.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Soft Body</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body">Soft Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-cache">Soft Body Cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-goal">Soft Body Goal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-edges">Soft Body Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-self-collision">Soft Body Self Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-body-solver">Soft Body Solver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html">Simple 例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Soft Body</a> &raquo;</li>
+      
+    <li>设置</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/soft_body/settings.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="settings">
+<h1>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Soft Body</dt>
+<dd>This creates the soft body modifier on the selected object</dd>
+<dt>渲染</dt>
+<dd>Enable soft body during render</dd>
+<dt>Display</dt>
+<dd>Display soft body in real time.</dd>
+</dl>
+<div class="section" id="soft-body">
+<h2>Soft Body<a class="headerlink" href="#soft-body" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Friction</dt>
+<dd>The friction of the surrounding medium. Generally friction dampens a movement.</dd>
+<dt>Mass</dt>
+<dd>Mass value for vertices.
+Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass.
+Larger mass means larger inertia, so also braking a Soft Body is more difficult.</dd>
+<dt>Vertex Group Mass</dt>
+<dd>Use a specified vertex group for mass values</dd>
+<dt>Speed</dt>
+<dd>You can control the internal timing of the Softbody system with this value.</dd>
+</dl>
+</div>
+<div class="section" id="soft-body-cache">
+<h2>Soft Body Cache<a class="headerlink" href="#soft-body-cache" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Caching and cach options are documented <a class="reference internal" href="../baking.html"><span class="doc">Here</span></a>.</p>
+</div>
+</div>
+<div class="section" id="soft-body-goal">
+<h2>Soft Body Goal<a class="headerlink" href="#soft-body-goal" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Use Goal</dt>
+<dd>Soft Body Goal acts like a pin on a chosen set of vertices;
+controlling how much of an effect soft body has on them.
+Enabling this tells Blender to use the position / animated position of a vertex in the simulation.
+Animating the vertices can be done in all the usual ways before the Soft Body simulation is applied.
+The <em>goal</em> is the desired end-position for vertices.
+How a softbody tries to achieve this goal can be defined using stiffness forces and damping.</dd>
+<dt>Default</dt>
+<dd>A <em>Goal</em> value of 1.0 means no Soft Body simulation, the vertex stays at its original (animated)
+position. When setting <em>Goal</em> to 0.0, the object is only influenced by physical laws.
+By setting goal values between 0.0 and 1.0,
+you can blend between having the object affected only by the animation system,
+and having the object affected only by the soft body effect.</dd>
+<dt>Minimum / Maximum</dt>
+<dd>When you paint the values in vertex-groups (using <em>权重绘制模式</em>),
+you can use the <em>G Min</em> and <em>G Max</em> to fine-tune (clamp) the weight values.
+The lowest vertex-weight (blue) will become <em>G Min</em>, the highest value (red) becomes <em>G Max</em>
+(please note that the blue-red color scale may be altered by 用户首选项).</dd>
+<dt>Stiffness</dt>
+<dd>The spring stiffness for <em>Goal</em>. A low value creates very weak springs
+(more flexible &#8220;attachment&#8221; to the goal), a high value creates a strong spring
+(a stiffer &#8220;attachment&#8221; to the goal).</dd>
+<dt>Damping</dt>
+<dd>The friction for <em>Goal</em>. Higher values dampen the effect of the goal on the soft body.</dd>
+<dt>Vertex Group</dt>
+<dd>Use a vertex group to allow per-vertex goal weights
+(multiplied by the <em>Default</em> goal).</dd>
+</dl>
+</div>
+<div class="section" id="soft-body-edges">
+<h2>Soft Body Edges<a class="headerlink" href="#soft-body-edges" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Use Edges</dt>
+<dd>The edges in a Mesh Object can act as springs as well, like threads in fabric.</dd>
+<dt>Pull</dt>
+<dd>The spring stiffness for edges (how much the edges are stretched). A low value means very weak springs
+(a very elastic material), a high value is a strong spring (a stiffer material) that resists being pulled apart.
+0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or leather.</dd>
+<dt>Push</dt>
+<dd>How much the Softbody resist being scrunched together, like a compression spring. Low values for fabric,
+high values for inflated objects and stiff material.</dd>
+<dt>Damp</dt>
+<dd>The friction for edge springs. High values (max of 50) dampen the edge stiffness effect and calm down the cloth.</dd>
+<dt>Plastic</dt>
+<dd>Plasticity, permanent deformation of the object.</dd>
+<dt>Bending</dt>
+<dd>This option creates virtual connections between a vertex and the one after the next. This includes diagonal edges.
+Damping applies also to these connections.</dd>
+<dt>Length</dt>
+<dd>The edges can shrink or been blown up. This value is given in percent, 0 disables this function.
+100% means no change, the body keeps 100% of his size.</dd>
+<dt>Stiff Quads</dt>
+<dd>For quad faces, the diagonal edges are used as springs.
+This stops quad faces to collapse completely on collisions (what they would do otherwise).</dd>
+<dt>Shear</dt>
+<dd>Stiffness of the virtual springs for quad faces.</dd>
+<dt>Aerodynamics</dt>
+<dd><dl class="first last docutils">
+<dt>Simple</dt>
+<dd>If you turn on <em>Aero</em> the force is not confined to the vertices, but has an effect also on the edges.
+The angle and the relative speed between medium and edge is used to calculate the force on the edge.
+This force results that vertices with little connecting edges (front of a plane)
+fall faster than vertices with more connecting edges (middle of a plane).
+If all vertices have the same amount of edges in a direction they fall with equal speed.
+An edge moving in its own direction feels no force,
+and an edge moving perpendicular to its own direction feels maximum force
+(think of a straw moving through air). Try it with an <em>Factor</em> of 30 at first.</dd>
+<dt>Lift Force</dt>
+<dd>Use an aerodynamic model that is closer to physical laws and looks more interesting.
+Disable for a more muted simulation.</dd>
+<dt>Factor</dt>
+<dd>How much aerodynamic effect to use</dd>
+</dl>
+</dd>
+<dt>Edge</dt>
+<dd>Checks for edges of the softbody mesh colliding.</dd>
+<dt>Face</dt>
+<dd>Checks for any portion of the face of the softbody mesh colliding (compute intensive!).
+While <em>CFace</em> enabled is great, and solves lots of collision errors,
+there doesn&#8217;t seem to be any dampening settings for it,
+so parts of the softbody object near a collision mesh tend to &#8220;jitter&#8221; as they bounce off and fall back,
+even when there&#8217;s no motion of any meshes. Edge collision has dampening, so that can be controlled,
+but Deflection dampening value on a collision object doesn&#8217;t seem to affect the face collision.</dd>
+</dl>
+</div>
+<div class="section" id="soft-body-self-collision">
+<h2>Soft Body Self Collision<a class="headerlink" href="#soft-body-self-collision" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Self Collision</em> is working only if you have activated <em>Use Edges</em>.</p>
+</div>
+<dl class="docutils">
+<dt>Self Collision</dt>
+<dd>When enabled, allows you to control how Blender will prevent the Soft Body from intersecting with itself.
+Every vertex is surrounded with an elastic virtual ball.
+Vertices may not penetrate the balls of other vertices.
+If you want a good result you may have to adjust the size of these balls.
+Normally it works pretty well with the default options.</dd>
+<dt>Manual</dt>
+<dd>The <em>Ball Size</em> directly sets the ball size (in BU).</dd>
+<dt>Averavge (&#8220;average&#8221;)</dt>
+<dd>The average length of all edges attached to the vertex is calculated and then multiplied
+with the <em>Ball Size</em> setting. Works well with evenly distributed vertices.</dd>
+<dt>Minimal / Maximal</dt>
+<dd>The ball size is as large as the smallest/largest spring length of the vertex multiplied with the <em>Ball Size</em>.</dd>
+<dt>AvMiMax</dt>
+<dd>Size = ((Min + Max)/2) × <em>Ball Size</em>.</dd>
+<dt>Size</dt>
+<dd>Default 0.49 BU or fraction of the length of attached edges.
+The edge length is computed based on the algorithm you choose.
+You know how when someone stands too close to you, and feel uncomfortable?
+We call that our &#8220;personal space&#8221;, and this setting is the factor that is multiplied by the spring length.
+It is a spherical distance (radius) within which, if another vertex of the same mesh enters,
+the vertex starts to deflect in order to avoid a self-collision.
+Set this value to the fractional distance between vertices that you want them to have their own &#8220;space&#8221;.
+Too high of a value will include too many vertices all the time and slow down the calculation.
+Too low of a level will let other vertices get too close and thus possibly intersect because
+there won&#8217;t be enough time to slow them down.</dd>
+<dt>Stiffness</dt>
+<dd>Default 1.0. How elastic that ball of personal space is.</dd>
+<dt>Dampening</dt>
+<dd>Default 0.5. How the vertex reacts.
+A low value just slows down the vertex as it gets too close. A high value repulses it.</dd>
+</dl>
+<p>Collisions with other objects are set in the (other) <a class="reference internal" href="../collision.html"><span class="doc">Collision panel</span></a>.
+To collide with another object they have to share at least one common layer.</p>
+</div>
+<div class="section" id="soft-body-solver">
+<h2>Soft Body Solver<a class="headerlink" href="#soft-body-solver" title="Permalink to this headline">¶</a></h2>
+<p>These settings determine the accurateness of the simulation.</p>
+<dl class="docutils">
+<dt>Min Step</dt>
+<dd>Minimum simulation steps per frame. Increase this value, if the Soft Body misses fast moving collision objects.</dd>
+<dt>Max Step</dt>
+<dd>Maximum simulation steps per frame.
+Normally the number of simulation steps is set dynamically
+(with the <em>Error Limit</em>) but you have probably a good reason to change it.</dd>
+<dt>Auto-Step</dt>
+<dd>helps the Solver figure out how much work it needs to do based on how fast things are moving.</dd>
+<dt>Error Limit</dt>
+<dd>Rules the overall quality of the solution delivered. Default 0.1.
+The most critical setting that says how precise the solver should check for collisions.
+Start with a value that is 1/2 the average edge length.
+If there are visible errors, jitter, or over-exaggerated responses, decrease the value.
+The solver keeps track of how &#8220;bad&#8221; it is doing and the <em>Error Limit</em> causes the solver to
+do some &#8220;adaptive step sizing&#8221;.</dd>
+<dt>Fuzzy</dt>
+<dd>Fuzziness while on collision, high values make collision handling faster but less stable.</dd>
+<dt>Choke</dt>
+<dd>Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.</dd>
+<dt>Print Performance to Console</dt>
+<dd>Prints on the console how the solver is doing.</dd>
+<dt>Estimate Matrix</dt>
+<dd>Estimate matrix... split to COM, ROT, SCALE</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="forces/index.html" class="btn btn-neutral float-right" title="Forces" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

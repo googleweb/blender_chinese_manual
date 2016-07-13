@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Particle Visualization &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Particles" href="index.html"/>
+        <link rel="next" title="Cache" href="cache_and_bake.html"/>
+        <link rel="prev" title="Fluid 物理" href="physics/fluid.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Particles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emission.html">Particle Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physics/index.html">Particle 物理</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Particle Visualization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#viewport-display">Viewport Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-settings">渲染 设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cache_and_bake.html">Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hair/index.html">Hair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="children.html">Children</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vertexgroups.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mode.html">粒子模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Particles</a> &raquo;</li>
+      
+    <li>Particle Visualization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/particles/visualization.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="particle-visualization">
+<h1>Particle Visualization<a class="headerlink" href="#particle-visualization" title="Permalink to this headline">¶</a></h1>
+<p>With the items in the <em>Display</em> and <em>渲染</em> panel you can set the way the particles will be
+rendered or depicted in the view ports in various ways.
+Some option are valid only for the 3D视图, the particles then are rendered always as
+<a class="reference internal" href="../../render/blender_render/materials/special_effects/halo.html"><span class="doc">Halos</span></a>.
+Some of the options will be rendered as shown in the 3D视图.</p>
+<div class="section" id="viewport-display">
+<h2>Viewport Display<a class="headerlink" href="#viewport-display" title="Permalink to this headline">¶</a></h2>
+<p>The Display Panel controls how particles are displayed in the 3D视图.
+This does not necessarily determine how they will appear when rendered.</p>
+<dl class="docutils">
+<dt>None</dt>
+<dd>The particles are not shown in the 3D视图 and are not rendered. The emitter may be rendered though.</dd>
+<dt>Point</dt>
+<dd>Particles are displayed as square points. Their size is independent of the distance from the camera.</dd>
+<dt>Circle</dt>
+<dd>Particles are displayed as circles that face the view. Their size is independent of the distance from the camera.</dd>
+<dt>Cross</dt>
+<dd>Particles are displayed as 6-point crosses that align to the rotation of the particles.
+Their size is independent of the distance from the camera.</dd>
+<dt>Axis</dt>
+<dd>Particles are displayed as 3-point axes.
+This useful if you want to see the orientation and rotation of particles in the view port.
+Increase the <em>Draw Size</em> until you can clearly distinguish the axis.</dd>
+</dl>
+<p>Particles visualized like Point, Circle, Cross and Axis do not have any special options,
+but can be very useful when you have multiple particle systems at play,
+if you do not want to confuse particles of one system from another (e.g.
+in simulations using <em>Boids</em> physics).</p>
+<dl class="docutils">
+<dt>Display</dt>
+<dd>Specifies the percentage of all particles to show in the viewport (all particles are still rendered).</dd>
+<dt>Draw Size</dt>
+<dd>Specifies how large (in pixels) the particles are drawn in the viewport.</dd>
+<dt>Size</dt>
+<dd>Draw the size of the particles with a circle.</dd>
+<dt>Velocity</dt>
+<dd>Draw the velocity of the particles with a line that points in the direction of motion,
+and length relative to speed.</dd>
+<dt>Number</dt>
+<dd>Draw the id-numbers of the particles in the order of emission.</dd>
+</dl>
+<div class="section" id="color">
+<h3>Color<a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h3>
+<p>The Color Menu allows you to draw particles according to certain particle properties.</p>
+<dl class="docutils">
+<dt>None</dt>
+<dd>Particles are black.</dd>
+<dt>Material</dt>
+<dd>Particles are colored according to the material they are given.</dd>
+<dt>Velocity</dt>
+<dd>Color particles according to their speed.
+The color is a ramp from blue to green to red, Blue being the slowest,
+and Red being velocities approaching the value of <em>Max</em> or above.
+Increasing <em>Max</em> allows for a wider range of particle velocities.</dd>
+<dt>Acceleration</dt>
+<dd>Color particles according to their acceleration.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="render-settings">
+<h2>渲染 设置<a class="headerlink" href="#render-settings" title="Permalink to this headline">¶</a></h2>
+<p>The 渲染 Panel controls how particles appear when they are rendered.</p>
+<dl class="docutils">
+<dt>Material Index</dt>
+<dd>Set which of the object&#8217;s material is used to shade the particles.</dd>
+<dt>Parent</dt>
+<dd>Use a different object&#8217;s coordinates to determine the birth of particles.</dd>
+<dt>Emitter</dt>
+<dd>When disabled, the emitter is no longer rendered. Activate the button <em>Emitter</em> to also render the mesh.</dd>
+<dt>Parents</dt>
+<dd>渲染 also parent particles if child particles are used.
+Children have a lot of different deformation options,
+so the straight parents would stand between their curly children.
+So by default <em>Parents</em> are not rendered if you activate <em>Children</em>..
+See <a class="reference internal" href="children.html"><span class="doc">Children</span></a></dd>
+<dt>Unborn</dt>
+<dd>渲染 particles before they are born.</dd>
+<dt>Died</dt>
+<dd>渲染 particles after they have died.
+This is very useful if particles die in a collision <em>Die on hit</em>, so you can cover objects with particles.</dd>
+</dl>
+<div class="section" id="none">
+<h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p>When set to <em>None</em> particles are not rendered.
+This is useful if you are using the particles to duplicate objects.</p>
+</div>
+<div class="section" id="halo">
+<h3>Halo<a class="headerlink" href="#halo" title="Permalink to this headline">¶</a></h3>
+<p>Halo particles are rendered as <a class="reference internal" href="../../render/blender_render/materials/special_effects/halo.html"><span class="doc">Halo Type Materials</span></a>.</p>
+<dl class="docutils">
+<dt>Trail Count</dt>
+<dd>Set the number of trail particles. When greater than 1, additional options appear.</dd>
+<dt>Length in Frames</dt>
+<dd>Path timing is in absolute frames.</dd>
+<dt>Length</dt>
+<dd>End time of drawn path.</dd>
+<dt>Random</dt>
+<dd>Give path lengths a random variation.</dd>
+</dl>
+</div>
+<div class="section" id="line">
+<h3>Line<a class="headerlink" href="#line" title="Permalink to this headline">¶</a></h3>
+<p>The Line visualization mode creates (more or less thin)
+polygon lines with the strand renderer in the direction of particles velocities. The thickness
+of the line is set with the parameter <em>Start</em> of the <em>Strands</em> shader
+(<em>Material</em> tab, <em>Links and Pipeline</em> panel).</p>
+<dl class="docutils">
+<dt>Back</dt>
+<dd>Set the length of the particle&#8217;s tail.</dd>
+<dt>Front</dt>
+<dd>Set the length of the particle&#8217;s head.</dd>
+<dt>Speed</dt>
+<dd>Multiply the line length by particles&#8217; speed. The faster, the longer the line.</dd>
+<dt>Trail Count</dt>
+<dd>See description in <a class="reference internal" href="#halo">Halo</a>.</dd>
+</dl>
+</div>
+<div class="section" id="path">
+<h3>Path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id1">
+<img alt="../../_images/visualisationpanelpath.jpg" src="../../_images/visualisationpanelpath.jpg" />
+<p class="caption"><span class="caption-text">The Visualization panel for Path visualization.</span></p>
+</div>
+<p>The <em>Path</em> visualization needs a <a class="reference internal" href="hair/index.html"><span class="doc">Hair</span></a> particle system or
+<a class="reference internal" href="physics/keyed.html"><span class="doc">Keyed</span></a> particles.</p>
+<dl class="docutils">
+<dt>Strand render</dt>
+<dd>[Keypointstrands] Use the strand primitive for rendering. Very fast and effective renderer.</dd>
+<dt>Adaptive render</dt>
+<dd>Tries to remove unnecessary geometry from the paths before rendering particle strands in
+order to make the render faster and easier on memory.</dd>
+<dt>Angle</dt>
+<dd>How many degrees path has to curve to produce another render segment
+(straight parts of paths need fewer segments).</dd>
+<dt>Pixel</dt>
+<dd>How many pixels path has to cover to produce another render segment
+(very short hair or long hair viewed from far away need fewer parts). (only for Adaptive render).</dd>
+<dt>B-Spline</dt>
+<dd>Interpolate hair using B-Splines.
+This may be an option for you if you want to use low <em>渲染</em> values.
+You loose a bit of control but gain smoother paths.</dd>
+<dt>Steps</dt>
+<dd>Set the number of subdivisions of the rendered paths (the value is a power of 2).
+You should set this value carefully,
+because if you increase the render value by two you need four times more memory to render.
+Also the rendering is faster if you use low render values (sometimes drastically).
+But how low you can go with this value depends on the waviness of the hair.(the value is a power of 2).
+This means 0 steps give 1 subdivision,
+1 give 2 subdivisions, 2 &#8211;&gt; 4, 3 &#8211;&gt; 8, 4 &#8211;&gt; 16, ... <em>n</em> &#8211;&gt; <em>n</em><sup>2</sup>.</dd>
+</dl>
+<div class="section" id="timing-options">
+<h4>Timing Options<a class="headerlink" href="#timing-options" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Absolute Path Time</dt>
+<dd>Path timing is in absolute frames.</dd>
+<dt>Start</dt>
+<dd>Start time of the drawn path.</dd>
+<dt>End</dt>
+<dd>End time of the drawn path.</dd>
+<dt>Random</dt>
+<dd>Give the path length a random variation.</dd>
+</dl>
+<p>Please see also the manual page about
+<a class="reference internal" href="../../render/blender_render/materials/properties/strands.html"><span class="doc">Strands</span></a> for an in depth description.</p>
+</div>
+</div>
+<div class="section" id="object">
+<h3>Object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h3>
+<p>In the Object visualization mode the specified object (<em>Dupli Object:</em> field)
+is duplicated in place of each particle.
+The duplicated object has to be at the center of the coordinate system,
+or it will get an offset to the particle.</p>
+<dl class="docutils">
+<dt>Global</dt>
+<dd>Use object&#8217;s global coordinates for duplication.</dd>
+<dt>Size</dt>
+<dd>Size of the objects</dd>
+<dt>Random Size</dt>
+<dd>Give the objects a random size variation.</dd>
+</dl>
+</div>
+<div class="section" id="group">
+<h3>Group<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h3>
+<p>In the Group visualization mode, the objects that belong to the group (<em>GR:</em> field)
+are duplicated sequentially in the place of the particles.</p>
+<dl class="docutils">
+<dt>WholeGroup</dt>
+<dd>Use the whole group at once, instead of one of its elements, the group being displayed in place of each particle.</dd>
+<dt>Use Count</dt>
+<dd>Use objects multiple times in the same groups.
+Specify the order and number of times to repeat each object with the list box that appears.
+You can duplicate an object in the list with the <code class="kbd docutils literal"><span class="pre">Plus</span></code> button,
+or remove a duplicate with the <code class="kbd docutils literal"><span class="pre">Minus</span></code> button.</dd>
+<dt>Use Global</dt>
+<dd>Use object&#8217;s global coordinates for duplication.</dd>
+<dt>Pick Random</dt>
+<dd>The objects in the group are selected in a random order, and only one object is displayed in place of a particle.
+Please note that this mechanism fully replaces old Blender particles system using parentage
+and DupliVerts to replace particles with actual geometry.
+This method is fully deprecated and doesn&#8217;t work anymore.</dd>
+<dt>Size</dt>
+<dd>Size of the objects</dd>
+<dt>Random Size</dt>
+<dd>Give the objects a random size variation.</dd>
+</dl>
+</div>
+<div class="section" id="billboard">
+<h3>Billboard<a class="headerlink" href="#billboard" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<img alt="../../_images/visualisationpanelbillboard.jpg" src="../../_images/visualisationpanelbillboard.jpg" />
+<p class="caption"><span class="caption-text">Billboard visualization for particles.</span></p>
+</div>
+<p><em>Billboards</em> are aligned square planes. They are aligned to the camera by default,
+but you can choose another object that they should be aligned to.</p>
+<p>If you move a billboard around it&#8217;s target, it always faces the center of it&#8217;s target.
+The size of a billboard is set with the parameter <em>Size</em> of the particle
+(in Blender Units).
+You can use them e.g. for <a class="reference external" href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics)">Sprites</a>,
+or to replace <em>Halo</em> visualization.
+Everything that can be done with a halo can also be done with a billboard.
+But billboards are real objects, they are seen by raytracing,
+they appear behind transparent objects,
+they may have an arbitrary form and receive light and shadows.
+They are a bit more difficult to set up and take more render time and resources.</p>
+<p>Texturing billboards (including animated textures with alpha) is done by using uv coordinates
+that are generated automatically for them so they can take an arbitrary shape.
+This works well for animations, because the alignment of the billboards can be dynamic.
+The textures can be animated in several ways:</p>
+<ul class="simple">
+<li>Depending on the particle lifetime (relative time).</li>
+<li>Depending on the particle starting time.</li>
+<li>Depending on the frame (absolute time).</li>
+</ul>
+<p>You can use different sections of an image texture:</p>
+<ul class="simple">
+<li>Depending on the lifetime of the billboard.</li>
+<li>Depending on the emission time.</li>
+<li>Depending on align or tilt.</li>
+</ul>
+<p>Since you use normal materials for the billboard you have all freedoms in mixing textures to
+your liking. The material itself is animated in absolute time.</p>
+<p>The main thing to understand is that if the object doesn&#8217;t have any <em>UV Layers</em>,
+you need to create at least one in the <em>Objects Data</em> tab,
+for any of these to work. Moreover,
+the texture has to be set to UV coordinates in the <em>Map Input</em> panel.
+If you want to see examples for some of the animation possibilities, see the
+<a class="reference external" href="https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Billboard_动画">Billboard 动画 Tutorial</a>.</p>
+<p>An interesting alternative to billboards are in certain cases strands,
+because you can animate the shape of the strands.
+Because this visualization type has so much options it is explained in greater detail below.</p>
+<p>You can limit the movement with these options. How the axis is prealigned at emission time.</p>
+<dl class="docutils">
+<dt>View</dt>
+<dd>No prealignement, normal orientation to the target.</dd>
+<dt>X / Y / Z</dt>
+<dd>Along the global X/Y/Z-axis respectively.</dd>
+<dt>Velocity</dt>
+<dd>Along the speed vector of the particle.</dd>
+<dt>Lock</dt>
+<dd>Locks the align axis, keeps this orientation, the billboard aligns only along one axis to it&#8217;s target</dd>
+<dt>Billboard Object</dt>
+<dd>The target object that the billboards are facing. By default, the active camera is used.</dd>
+<dt>Tilt Angle</dt>
+<dd>Rotation angle of the billboards planes. A tilt of 1 rotates by 180 degrees (turns the billboard upside down).</dd>
+<dt>Random</dt>
+<dd>Random variation of tilt.</dd>
+<dt>Offset X</dt>
+<dd>Offset the billboard horizontally in relation to the particle center, this does not move the texture.</dd>
+<dt>Offset Y</dt>
+<dd>Offset the billboard vertically in relation to the particle center.</dd>
+<dt>UV Channels</dt>
+<dd>Billboards are just square polygons.
+To texture them in different ways we have to have a way to set what textures we want for the
+billboards and how we want them to be mapped to the squares.
+These can then be set in the texture mapping buttons to set wanted textures for different coordinates.
+You may use three different UV layers and get three different sets of UV coordinates,
+which can then be applied to different (or the same) textures.</dd>
+<dt>Billboard Normal UV</dt>
+<dd>Coordinates are the same for every billboard, and just place the image straight on the square.</dd>
+<dt>Billboard Time-Index (X-Y)</dt>
+<dd>Coordinates actually define single points in the texture plane with the x-axis as time and y-axis as the particle
+index. For example using a horizontal blend texture mapped to color from white to black will give particles
+that start off as white and gradually change to black during their lifetime. On the other hand a vertical blend
+texture mapped to color from white to black will make the first particle to be white and the last particle to be
+black with the particles in between a shade of gray.</dd>
+</dl>
+<p>The animation of the UV textures is a bit tricky.
+The UV texture is split into rows and columns (N times N). The texture should be square.
+You have to use <em>UV Split</em> in the UV channel and fill in the name of the UV layer.
+This generated UV coordinates for this layer.</p>
+<dl class="docutils">
+<dt>Split UV&#8217;s</dt>
+<dd>The amount of rows/columns in the texture to be used.
+Coordinates are a single part of the <em>UV Split</em> grid, which is a n?n grid over the whole texture. What
+the part is used for each particle and at what time is determined by the <em>Offset</em> and
+<em>Animate</em> controls. These can be used to make each billboard unique or to use an &#8220;animated&#8221; texture for
+them by having each frame of the animation in a grid in a big image.</dd>
+<dt>Billboard Split UV</dt>
+<dd>Set the name of the <em>UV layer</em> to use with billboards
+(you can use a different one for each <em>UV Channel</em>). By default, it is the active UV layer
+(check the <em>Object Data</em> tab in the Properties editor).</dd>
+<dt>Animate</dt>
+<dd><p class="first">Dropdown menu, indicating how the split UVs could be animated (changing from particle to particle with time):</p>
+<dl class="last docutils">
+<dt>None</dt>
+<dd>No animation occurs on the particle itself, the billboard uses one section of the texture in it&#8217;s lifetime.</dd>
+<dt>Age</dt>
+<dd>The sections of the texture are gone through sequentially in particles&#8217; lifetimes.</dd>
+<dt>Angle</dt>
+<dd>Change the section based on the angle of rotation around the <em>Align to</em> axis,
+if <em>View</em> is used the change is based on the amount of tilt.</dd>
+<dt>Frame</dt>
+<dd>The section is changes according to the frame.</dd>
+</dl>
+</dd>
+<dt>Offset</dt>
+<dd><p class="first">Specifies how to choose the first part
+(of all the parts in the n×n grid in the texture defined by the <em>UV Split</em> number) for all particles.</p>
+<dl class="last docutils">
+<dt>None</dt>
+<dd>All particles start from the first part.</dd>
+<dt>Linear</dt>
+<dd>First particle will start from the first part and the last particle will start from the last part,
+the particles in between will get a part assigned linearly from the first to the last part.</dd>
+<dt>Random</dt>
+<dd>Give a random starting part for every particle.</dd>
+</dl>
+</dd>
+<dt>Trail Count</dt>
+<dd>See the description in <a class="reference internal" href="#halo">Halo</a>.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cache_and_bake.html" class="btn btn-neutral float-right" title="Cache" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="physics/fluid.html" class="btn btn-neutral" title="Fluid 物理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

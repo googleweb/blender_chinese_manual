@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shrinkwrap Constraint &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Constraints" href="../index.html"/>
+        <link rel="next" title="Armatures" href="../../armatures/index.html"/>
+        <link rel="prev" title="Rigid Body Joint Constraint" href="rigid_body_joint.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Constraints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">Motion Tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">Tracking</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">Relationship</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="action.html">Action Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="follow_path.html">Follow Path Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigid_body_joint.html">Rigid Body Joint Constraint</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Shrinkwrap Constraint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Constraints</a> &raquo;</li>
+      
+    <li>Shrinkwrap Constraint</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/constraints/relationship/shrinkwrap.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shrinkwrap-constraint">
+<h1>Shrinkwrap Constraint<a class="headerlink" href="#shrinkwrap-constraint" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Shrinkwrap</em> constraint is the &#8220;object counterpart&#8221; of the
+<a class="reference internal" href="../../../modeling/modifiers/deform/shrinkwrap.html"><span class="doc">Shrinkwrap modifier</span></a>.
+It moves the owner origin and therefore the owner object&#8217;s location to the surface of its target.</p>
+<p>This implies that the target <em>must</em> have a surface. In fact,
+the constraint is even more selective, as it can only use meshes as targets. Hence,
+the <em>Shrinkwrap</em> option is only shown in the <em>Add Constraint to Active Object</em> menu,
+<code class="kbd docutils literal"><span class="pre">Ctrl-Alt-C</span></code>, (or its bone&#8217;s equivalent),
+when the selected inactive object is a mesh.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/constraints-relationship-shrinkwrap.jpg"><img alt="../../../_images/constraints-relationship-shrinkwrap.jpg" src="../../../_images/constraints-relationship-shrinkwrap.jpg" style="width: 304px;" /></a>
+<p class="caption"><span class="caption-text">Shrinkwrap panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Target</dt>
+<dd>This constraint uses one target, which <em>must</em> be a mesh object,
+and is not functional (red state) when it has none.</dd>
+<dt>Distance</dt>
+<dd>This numeric field controls the offset of the owner from the shrunk computed position on the target&#8217;s surface.
+Positive values place the owner &#8220;outside&#8221; of the target, and negative ones, &#8220;inside&#8221; the target.
+This offset is applied along the straight line defined by the original (i.e.
+before constraint) position of the owner, and the computed one on the target&#8217;s surface.</dd>
+<dt>Shrinkwrap Type</dt>
+<dd><p class="first">This drop-down list allows you to select which method to use to compute the point on the
+target&#8217;s surface to which to translate the owner&#8217;s center. You have three options:</p>
+<dl class="last docutils">
+<dt>Nearest Surface Point</dt>
+<dd>The chosen target&#8217;s surface&#8217;s point will be the nearest one to the original owner&#8217;s location.
+This is the default and most commonly useful option.</dd>
+<dt>Projection</dt>
+<dd>The target&#8217;s surface&#8217;s point is determined by projecting the owner&#8217;s center along a given axis.
+This axis is controlled by the three <em>X</em>, <em>Y</em> and <em>Z</em> toggle buttons that show up when you select this type.
+This mean the projection axis can only be aligned with one of the global axes,
+median to both of them (XY, XZ or YZ), or to the three ones (XYZ).
+When the projection of the owner&#8217;s center along the selected direction does not hit the target&#8217;s surface,
+the owner&#8217;s location is left unchanged.</dd>
+<dt>Nearest Vertex</dt>
+<dd>This method is very similar to the <em>Nearest Surface Point</em> one,
+except that the owner&#8217;s possible shrink locations are limited to the target&#8217;s vertices.</dd>
+</dl>
+</dd>
+</dl>
+<iframe src="https://player.vimeo.com/video/171554427" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../armatures/index.html" class="btn btn-neutral float-right" title="Armatures" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rigid_body_joint.html" class="btn btn-neutral" title="Rigid Body Joint Constraint" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

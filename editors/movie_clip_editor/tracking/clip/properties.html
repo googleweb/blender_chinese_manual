@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Movie Clip Properties &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Clip View" href="index.html"/>
+        <link rel="next" title="Movie Clip Tools" href="tools.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Movie Clip Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">Intruduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../properties/index.html">Movie Clip Properties</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Motion Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masking.html">Masking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Movie Clip Editor</a> &raquo;</li>
+      
+          <li><a href="../index.html">Motion Tracking</a> &raquo;</li>
+      
+          <li><a href="index.html">Clip View</a> &raquo;</li>
+      
+    <li>Movie Clip Properties</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/movie_clip_editor/tracking/clip/properties.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="movie-clip-properties">
+<h1>Movie Clip Properties<a class="headerlink" href="#movie-clip-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objects-panel">
+<h2>Objects Panel<a class="headerlink" href="#objects-panel" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_objects_panel.jpg"><img alt="../../../../_images/editors_movie-clip_objects_panel.jpg" src="../../../../_images/editors_movie-clip_objects_panel.jpg" style="width: 130px;" /></a>
+<p class="caption"><span class="caption-text">Objects Panel.</span></p>
+</div>
+<p>This panel contains a list of all objects which can be used for tracking,
+camera or object solving.
+By default there is only one object in this list which is used for camera solving.
+It cannot be deleted and other objects cannot be used for camera solving;
+all added objects are used for object tracking and solving only.
+These objects can be referenced from Follow Track and Object Solver constraints.
+Follow Track uses the camera object by default.</p>
+<p>New objects can be added using <code class="kbd docutils literal"><span class="pre">Plus</span></code> and the active object can be deleted with the
+<code class="kbd docutils literal"><span class="pre">Minus</span></code> button. Text entry at the bottom of this panel is used to rename the active object.</p>
+<p>If some tracks were added and tracked to the wrong object, they can be copied to another
+object using <span class="menuselection">Track ‣ Copy Tracks</span> and <span class="menuselection">Track ‣ Paste Tracks</span>.</p>
+<p>The usage for all kind of objects (used for camera and object tracking) is the same:
+track features, set camera data, solve motion. 相机 data is sharing between all objects and
+refining of camera intrinsics happens when solving camera motion only.</p>
+</div>
+<div class="section" id="track-panel">
+<h2>Track Panel<a class="headerlink" href="#track-panel" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_track_panel.jpg"><img alt="../../../../_images/editors_movie-clip_track_panel.jpg" src="../../../../_images/editors_movie-clip_track_panel.jpg" style="width: 130px;" /></a>
+<p class="caption"><span class="caption-text">Track Panel.</span></p>
+</div>
+<p>First of all, track name can be changed in this panel.
+Track names are used for linking tracking data to other areas, like a Follow Track constraint.</p>
+<p>The next thing which can be controlled here is the marker&#8217;s enabled flag
+(using the button with the eye icon). If a marker is disabled,
+its position is not used either by solver nor by constraints.</p>
+<p>The button with the lock icon to the right of the button with the eye controls whether the
+track is locked. Locked tracks cannot be edited at all.
+This helps to prevent accidental changes to tracks which are &#8220;finished&#8221;
+(tracked accurate along the whole footage).</p>
+<p>The next widget in this panel is called &#8220;Track Preview&#8221; and it displays the content of the
+pattern area. This helps to check how accurately the feature is being tracked
+(controlling that there is no sliding off original position)
+and also helps to move the track back to the correct position.
+The track can be moved directly using this widget by mouse dragging.</p>
+<p>If an anchor is used (the position in the image which is tracking is different from the
+position which is used for parenting),
+a preview widget will display the area around the anchor position. This configuration helps in
+masking some things when there is no good feature at position where the mask corner should be
+placed. Details of this technique will be written later.</p>
+<p>There is small area below the preview widget which can be used to enlarge the vertical size of
+preview widget (the area is highlighted with two horizontal lines).</p>
+<p>The next setting is channels control. Tracking happens in gray-scale space,
+so a high contrast between the feature and its background yields more accurate tracking.
+In such cases disabling some color channels can help.</p>
+<p>The last thing is custom color, and the preset for it.
+This setting overrides the default marker color used in the clip editor and 3D视图,
+and it helps to distinguish different type of features (for example,
+features in the background vs. foreground and so on). Color also can be used for &#8220;grouping&#8221;
+tracks so a whole group of tracks can be selected by color using the Select Grouped operator.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">To select good points for tracking, use points in the middle of the footage timeline
+and track backwards and forwards from there.
+This will provide a greater chance of the marker and point staying in the camera shot.</p>
+</div>
+</div>
+<div class="section" id="plane-track-panel">
+<h2>Plane Track Panel<a class="headerlink" href="#plane-track-panel" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_plane_track_panel.png"><img alt="../../../../_images/editors_movie-clip_plane_track_panel.png" src="../../../../_images/editors_movie-clip_plane_track_panel.png" style="width: 130px;" /></a>
+<p class="caption"><span class="caption-text">Plane Track Panel.</span></p>
+</div>
+<p>Its properties are shown only when a plane track is selected.
+Firstly, the name of the selected plane track is shown. It can also be changed from here.</p>
+<dl class="docutils">
+<dt>Auto Keyframe</dt>
+<dd>Toggles the auto-keyframing for corners of the plane track.
+With this enabled, keyframes will automatically get inserted when any corner is moved.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Corners can be moved using <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>Used to select an image which will be inside the plane track.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This image is for viewing purposes in movie clip editor only. To include it in your final render,
+see <a class="reference internal" href="../../../../compositing/types/distort/plane_track_deform.html"><span class="doc">Plane Track Deform node</span></a>.</p>
+</div>
+<dl class="docutils">
+<dt>Opacity</dt>
+<dd>Used to set the opacity of this image. Again,
+this is for display purposes only, and will not affect your final render.</dd>
+</dl>
+</div>
+<div class="section" id="camera-data-panel">
+<h2>相机 Data Panel<a class="headerlink" href="#camera-data-panel" title="Permalink to this headline">¶</a></h2>
+<p>This panel contains all settings of the camera used for filming the movie which is currently
+being edited in the clip editor.</p>
+<p>First of all, predefined settings can be used here.
+New presets can be added or unused presets can be deleted. But such settings as distortion
+coefficients and principal point are not included into presets and should be filled in even if
+camera presets are used.</p>
+<dl class="docutils">
+<dt>Focal Length</dt>
+<dd>is self-explanatory; it is the focal length with which the movie was shot.
+It can be set in millimeters or pixels. In most cases focal length is given in millimeters,
+but sometimes (for example in some tutorials on the Internet) it is given in pixels.
+In such cases it is possible to set it directly in the known unit.</dd>
+<dt>Sensor Width</dt>
+<dd>is the width of the CCD sensor in the camera. This value can be found in camera specifications.</dd>
+<dt>Pixel Aspect Ratio</dt>
+<dd>is the pixel aspect of the CCD sensor. This value can be found in camera specifications,
+but can also be guessed. For example, you know that the footage should be 1920×1080,
+but the images themselves are 1280×1080. In this case, the pixel aspect is: 1920 / 1280 = 1.5 .</dd>
+<dt>Optical Center</dt>
+<dd>is the optical center of the lens used in the camera. In most cases it is equal to the image center,
+but it can be different in some special cases. Check camera/lens specifications in such cases.
+To set the optical center to the center of image, there is a <code class="kbd docutils literal"><span class="pre">Return</span></code> button below the sliders.</dd>
+<dt>Undistortion K1, K2 and K3</dt>
+<dd>are coefficients used to compensate for lens distortion when the movie was shot. Currently these values can be
+tweaked by hand only (there are no calibration tools yet)
+using tools available in Distortion mode. Basically, just
+tweak K1 until solving is most accurate for the known focal length (but also take grid and grease pencil into
+account to prevent &#8220;impossible&#8221; distortion).</dd>
+</dl>
+</div>
+<div class="section" id="display-panel">
+<h2>Display Panel<a class="headerlink" href="#display-panel" title="Permalink to this headline">¶</a></h2>
+<p>This panel contains all settings which control things displayed in the clip editor.</p>
+<dl class="docutils">
+<dt>R, G, B</dt>
+<dd>and <em>B/W</em> buttons at the top of this panel are used to control color channels used for frame preview and to
+make the whole frame gray scale. It is needed because the tracking algorithm works with gray-scale images and it is
+not always obvious to see which channels disabled will increase contrast of feature points and reduce noise.</dd>
+<dt>Pattern</dt>
+<dd>can be used to disable displaying of rectangles which correspond to pattern areas of tracks.
+In some cases it helps
+to make the clip view cleaner to check how good tracking is.</dd>
+<dt>Search</dt>
+<dd>can be used to disable displaying of rectangles which correspond to search areas of tracks.
+In some cases it helps to make the clip view cleaner to check how good tracking is.
+Only search areas for selected tracks will be displayed.</dd>
+<dt>Pyramid</dt>
+<dd>makes the highest pyramid level be visible. Pyramids are defined later in the Tracking 设置 panel section, but
+basically it helps to determine how much a track is allowed to move from one frame to another.</dd>
+<dt>Track Path</dt>
+<dd>and <em>Length</em> control displaying of the paths of tracks. The ways tracks are moving can be visible looking
+at only one frame. It helps to determine if a track jumps from its position or not.</dd>
+<dt>Disabled Tracks</dt>
+<dd>makes it possible to hide all tracks which are disabled on the current frame. This helps to make view more clear,
+to see if tracking is happening accurately enough.</dd>
+<dt>Bundles</dt>
+<dd>makes sense after solving the movie clip,
+and it works in the following way: the solved position of each track gets
+projected back to the movie clip and displayed as a small point. The color of the point depends on the distance
+between the projected coordinate and the original coordinate: if they are close enough, the point is green,
+otherwise it will be red. This helps to find tracks which were not solved nicely and need to be tweaked.</dd>
+<dt>Track Names and Status</dt>
+<dd>displays information such as track name and status of the track
+(if it is keyframed, disabled, tracked or estimated).
+Names and status for selected tracks are displayed.</dd>
+<dt>Compact Markers</dt>
+<dd>The way in which markers are displayed (black outline and yellow foreground color)
+makes tracks visible on all kind
+of footage (both dark and light). But sometimes it can be annoying and this option will make the marker display
+more compactly - the outline is replaced by dashed black lines drawn on top of the foreground,
+so that marker areas
+are only 1px thick.</dd>
+<dt>Grease pencil</dt>
+<dd>controls if grease pencil strokes are allowed to be displayed and made.</dd>
+<dt>Mute</dt>
+<dd>changes displaying on movie frame itself with black square, It helps to find tracks which are tracked inaccurately
+or which were not tracked at all.</dd>
+<dt>Grid</dt>
+<dd>(available in distortion mode only) displays a grid which is originally orthographic, but os affected by the
+distortion model. This grid can be used for manual calibration - distorted lines of grids are equal to straight
+lines in the footage.</dd>
+<dt>Manual Calibration</dt>
+<dd>(available in distortion mode only) applies the distortion model for grease pencil strokes. This option also helps
+to perform manual calibration. A more detailed description of this process will be added later.</dd>
+<dt>Stable</dt>
+<dd>(available in reconstruction mode only). This option makes the displayed frame be affected by the 2D stabilization
+settings. It is only a preview option, which does not actually change the footage itself.</dd>
+<dt>Lock to Selection</dt>
+<dd>makes the editor display selected tracks at the same screen position along the whole footage during playback or
+tracking. This option helps to control the tracking process and stop it when the track is starting to slide off or
+when it jumped.</dd>
+<dt>Display Aspect Ratio</dt>
+<dd>changes the aspect ratio for displaying only. It does not affect the tracking or solving process.</dd>
+</dl>
+</div>
+<div class="section" id="marker-panel">
+<h2>Marker Panel<a class="headerlink" href="#marker-panel" title="Permalink to this headline">¶</a></h2>
+<p>This panel contains numerical settings for marker position,
+pattern and search area dimensions, and offset of anchor point from pattern center.
+All sliders are self-explanatory.</p>
+</div>
+<div class="section" id="d-stabilization-panel">
+<span id="d-stabilization"></span><h2>2D Stabilization Panel<a class="headerlink" href="#d-stabilization-panel" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_2d_stabilization_panel.png"><img alt="../../../../_images/editors_movie-clip_2d_stabilization_panel.png" src="../../../../_images/editors_movie-clip_2d_stabilization_panel.png" style="width: 130px;" /></a>
+<p class="caption"><span class="caption-text">2D Stabilization Panel.</span></p>
+</div>
+<p>Theres one extra panel which is available in reconstruction mode - 2D Stabilization Panel.</p>
+<p>This panel is used to define data used for 2D stabilization of the shot.
+Several options are available in this panel.</p>
+<p>First of all is the list of tracks to be used to compensate for camera jumps, or location.
+It works in the following way: it gets tracks from the list of tracks used for location
+stabilization and finds the median point of all these tracks on the first frame.
+On each frame, the algorithm makes this point have the same position in screen coordinates by
+moving the whole frame. In some cases it is not necessary to fully compensate camera jumps and
+<em>Location Influence</em> can be used in such cases.</p>
+<p>The camera can also have rotated a bit, adding some tilt to the footage.
+There is the <em>Stabilize Rotation</em> option to compensate for this tilt.
+A single extra track needs to be set for this, and it works in the following way.
+On first frame of the movie, this track is connected with the median point of the tracks from
+list above and angle between horizon and this segment is kept constant through the whole footage.
+The amount of rotation applied to the footage can be controlled by <em>Rotation Influence</em>.</p>
+<p>If the camera jumps a lot, there will be noticeable black areas near image boundaries.
+To get rid of these black holes, there is the <em>Autoscale</em> option,
+which finds smallest scale factor which, when applied to the footage,
+would eliminate all the black holes near the image boundaries.
+There is an option to control the maximal scale factor <em>Maximal Scale</em>,
+and the amount of scale applied to the footage <em>Scale Influence</em>.</p>
+</div>
+<div class="section" id="grease-pencil-panel">
+<h2>Grease Pencil Panel<a class="headerlink" href="#grease-pencil-panel" title="Permalink to this headline">¶</a></h2>
+<p>It is a standard grease pencil panel where new grease pencil layers and frames can be controlled.
+There is one difference in the behavior of the grease pencil from other areas -
+when a new layer is created &#8220;on-demand&#8221; (when making a stroke without adding a layer before this)
+the default color for the layer is set to pink. This makes the stroke easy to notice on all kinds of movies.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tools.html" class="btn btn-neutral float-right" title="Movie Clip Tools" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

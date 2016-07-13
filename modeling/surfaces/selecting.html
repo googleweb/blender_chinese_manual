@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Selecting &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Surfaces" href="index.html"/>
+        <link rel="next" title="Editing" href="editing.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Surfaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Selecting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-menu">Select Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">Surfaces</a> &raquo;</li>
+      
+    <li>Selecting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/surfaces/selecting.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="selecting">
+<h1>Selecting<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
+<p>Surface selection in <em>编辑模式</em> is very similar to
+<a class="reference internal" href="../curves/editing/introduction.html"><span class="doc">NURBS curve selection</span></a>.
+The basic tools are the same as with <a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">meshes</span></a>,
+so you can select a simple control point with a <code class="kbd docutils literal"><span class="pre">LMB</span></code> -click,
+add to current selection with <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> -clicks, <code class="kbd docutils literal"><span class="pre">B</span></code> order-select, and so on.</p>
+<p><code class="kbd docutils literal"><span class="pre">L</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code> will add to the selection the mouse cursor&#8217;s nearest control point,
+and all the linked ones, i.e. all points belonging to the same surface.</p>
+<div class="section" id="select-menu">
+<h2>Select Menu<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Select</em> menu (3D视图 headers) is even simpler than for curves...</p>
+<blockquote>
+<div>All these options have the same meaning and behavior as in <a class="reference internal" href="../../editors/3dview/selecting.html"><span class="doc">物体模式</span></a>
+(and the specificities of <em>Border Select</em> in <em>编辑模式</em> have already been discussed
+<a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">here</span></a>).</div></blockquote>
+<div class="figure" id="id1">
+<img alt="../../_images/nurbsselectmenu.jpg" src="../../_images/nurbsselectmenu.jpg" />
+<p class="caption"><span class="caption-text">frame[left].</span></p>
+</div>
+<div class="section" id="control-point-row">
+<h3>Control Point Row<a class="headerlink" href="#control-point-row" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Control Point Row</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-R</span></code></div>
+</div>
+</div>
+<p>This option works a bit like
+<a class="reference internal" href="../meshes/selecting/edges.html#modeling-meshes-selecting-edge-loops"><span class="std std-ref">edge loop selection</span></a> for meshes,
+inasmuch it selects a whole <a class="reference internal" href="introduction.html#modeling-surfaces-rows-grids"><span class="std std-ref">row</span></a> of control points,
+based on the active (the last selected) one. The first time you press <code class="kbd docutils literal"><span class="pre">Shift-R</span></code>,
+the V-row passing through (containing) the active point will be added to the <em>current</em> selection.
+If you use again this shortcut, you will toggle between the U- and V-row of this point,
+removing <em>everything else</em> from the selection.</p>
+</div>
+<div class="section" id="more-and-less">
+<h3>More and Less<a class="headerlink" href="#more-and-less" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ More/Less</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code> / <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></div>
+</div>
+</div>
+<p>These two options are complementary and very similar to
+<a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">those for meshes</span></a>.
+Their purpose, based on current selected control points, is to reduce or enlarge this selection.</p>
+<p>The algorithm is the same as with meshes:</p>
+<dl class="docutils">
+<dt>More</dt>
+<dd>for each selected control point, select <strong>all</strong> its linked points (i.e. two, three or four).</dd>
+<dt>Less</dt>
+<dd>for each selected control point, if <strong>all</strong> points linked to this point are selected, keep it selected.
+For all other selected control points, de-select them.</dd>
+</dl>
+<p>This implies two points:</p>
+<ul class="simple">
+<li>First, when <strong>all</strong> control points of a surface are selected, nothing will happen
+(as for <em>Less</em>, all linked points are always selected, and of course, <em>More</em> cannot add any).
+Conversely, the same goes when no control point is selected.</li>
+<li>Second, these tools will never &#8220;go outside&#8221; of a surface
+(they will never &#8220;jump&#8221; to another surface in the same object).</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

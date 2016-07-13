@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>相机 Lens &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="相机" href="index.html"/>
+        <link rel="next" title="Safe Areas" href="safe_areas.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects Types</a> &raquo;</li>
+      
+          <li><a href="index.html">相机</a> &raquo;</li>
+      
+    <li>相机 Lens</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/object/types/camera/lens.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera-lens">
+<h1>相机 Lens<a class="headerlink" href="#camera-lens" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/camerapanel.png"><img alt="../../../../../_images/camerapanel.png" src="../../../../../_images/camerapanel.png" style="width: 270px;" /></a>
+<p class="caption"><span class="caption-text">相机 Lens panel.</span></p>
+</div>
+<p>The camera lens options control the way 3D objects are represented in a 2D image.</p>
+<div class="section" id="lens-types">
+<h2>Lens Types<a class="headerlink" href="#lens-types" title="Permalink to this headline">¶</a></h2>
+<p>There are three different lens types:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#perspective">Perspective</a></li>
+<li><a class="reference internal" href="#orthographic">Orthographic</a></li>
+<li><a class="reference internal" href="#panoramic">Panoramic</a></li>
+</ul>
+<div class="section" id="perspective">
+<h3>Perspective<a class="headerlink" href="#perspective" title="Permalink to this headline">¶</a></h3>
+<p>This matches how you view things in the real-world.
+Objects in the distance will appear smaller than objects in the foreground,
+and parallel lines (such as the rails on a railroad) will appear to converge as they get farther away.</p>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/perspective_perspective_traintracks.jpg" src="../../../../../_images/perspective_perspective_traintracks.jpg" />
+<p class="caption"><span class="caption-text">渲染 of a train track scene with a <em>Perspective</em> camera.</span></p>
+</div>
+<p>设置 which adjust this projection include:</p>
+<ul class="simple">
+<li>Focal length</li>
+<li><a class="reference internal" href="#shift">Shift</a></li>
+<li><a class="reference internal" href="introduction.html#render-camera-sensor-size"><span class="std std-ref">Sensor size</span></a></li>
+</ul>
+<dl class="docutils">
+<dt>Focal length</dt>
+<dd><p class="first">The <a class="reference internal" href="../../../../../glossary/index.html#term-focal-length"><span class="xref std std-term">focal length</span></a> setting controls the amount of zoom, i.e.
+the amount of the scene which is visible all at once.
+Longer focal lengths result in a smaller <abbr title="Field of View">FOV</abbr> (more zoom),
+while short focal lengths allow you to see more of the scene at once
+(larger <abbr title="Field of View">FOV</abbr>, less zoom).</p>
+<div class="last figure" id="id3">
+<img alt="../../../../../_images/perspective_perspective_traintracks_telephoto.jpg" src="../../../../../_images/perspective_perspective_traintracks_telephoto.jpg" />
+<p class="caption"><span class="caption-text">渲染 of the same scene as above, but with a focal length of 210mm instead of 35mm.</span></p>
+</div>
+</dd>
+<dt>Lens Unit</dt>
+<dd>The focal length can be set either in terms of millimeters or the actual <a class="reference internal" href="../../../../../glossary/index.html#term-field-of-view"><span class="xref std std-term">Field of View</span></a> as an angle.</dd>
+</dl>
+</div>
+<div class="section" id="orthographic">
+<h3>Orthographic<a class="headerlink" href="#orthographic" title="Permalink to this headline">¶</a></h3>
+<p>With <em>Orthographic</em> perspective objects always appear at their actual size, regardless of distance.
+This means that parallel lines appear parallel, and do not converge like they do with <em>Perspective</em>.</p>
+<div class="figure" id="id4">
+<img alt="../../../../../_images/perspective_orthographic_ortho_example.jpg" src="../../../../../_images/perspective_orthographic_ortho_example.jpg" />
+<p class="caption"><span class="caption-text">渲染 from the same camera angle as the previous examples, but with orthographic perspective.</span></p>
+</div>
+<dl class="docutils">
+<dt>Orthographic Scale</dt>
+<dd><p class="first">This controls the apparent size of objects in the camera.</p>
+<p class="last">Note that this is effectively the only setting which applies to orthographic perspective.
+Since parallel lines do not converge in orthographic mode (no vanishing points),
+the lens shift settings are equivalent to translating the camera in the 3D视图.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="panoramic">
+<h3>Panoramic<a class="headerlink" href="#panoramic" title="Permalink to this headline">¶</a></h3>
+<p>Panoramic cameras are only supported in the Cycles render engine.
+See <a class="reference internal" href="../../../../../render/cycles/camera.html#cycles-panoramic-camera"><span class="std std-ref">the Cycles documentation</span></a>.</p>
+</div>
+</div>
+<div class="section" id="shift">
+<h2>Shift<a class="headerlink" href="#shift" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Shift</em> setting allows for the adjustment of <em>vanishing points</em>.
+<em>Vanishing points</em> refer to the positions to which parallel lines converge.
+In this example, the most obvious vanishing point is at the end of the railroad.</p>
+<p>To see how this works, take the following examples:</p>
+<div class="figure" id="id5">
+<img alt="../../../../../_images/perspective_perspective_traintracks_lens_shift.jpg" src="../../../../../_images/perspective_perspective_traintracks_lens_shift.jpg" />
+<p class="caption"><span class="caption-text">渲染 of a train track scene with a horizontal lens shift of 0.330.</span></p>
+</div>
+<div class="figure" id="id6">
+<img alt="../../../../../_images/perspective_perspective_traintracks_camera_rotate.jpg" src="../../../../../_images/perspective_perspective_traintracks_camera_rotate.jpg" />
+<p class="caption"><span class="caption-text">渲染 of a train track scene with a rotation of the camera object instead of a lens shift.</span></p>
+</div>
+<p>Notice how the horizontal lines remain perfectly horizontal when using the lens shift,
+but do get skewed when rotating the camera object.</p>
+<p>Using lens shift is equivalent to rendering an image with a larger
+<abbr title="Field of View">FOV</abbr> and cropping it off-center.</p>
+</div>
+<div class="section" id="clipping">
+<span id="camera-clipping"></span><h2>Clipping<a class="headerlink" href="#clipping" title="Permalink to this headline">¶</a></h2>
+<p>Set the clipping limits with the <em>Start</em> and <em>End</em> values.</p>
+<p>Only objects within the limits are rendered.</p>
+<p>For OpenGL display, setting clipping distances to limited values
+is important to ensure sufficient rasterization precision.
+Ray tracing renders do not suffer from this issue so much,
+and as such more extreme values can safely be set.</p>
+<p>When <em>Limits</em> in the <em>Display</em> panel is enabled,
+the clip bounds will be visible as two yellow connected dots on the camera line of sight.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <em>3D视图</em> editor contains settings similar to the camera,
+see the <a class="reference internal" href="../../../display/panels.html"><span class="doc">3D视图 options page</span></a> for more details.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="safe_areas.html" class="btn btn-neutral float-right" title="Safe Areas" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Lighting" href="index.html"/>
+        <link rel="next" title="Lights" href="lights/index.html"/>
+        <link rel="prev" title="Lighting" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../textures/index.html">Textures</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lighting</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lights/index.html">Lights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shadows/index.html">Shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="volumetric_lights.html">Volumetric Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lamps/index.html">Lamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ambient_light.html">Environment Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ambient_occlusion.html">Ambient Occlusion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indirect_lighting.html">Indirect Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure and Range</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Lighting</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/blender_render/lighting/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Lighting is a very important topic in rendering, standing equal to modeling,
+materials and textures. The most accurately modeled and textured scene will yield poor results
+without a proper lighting scheme,
+while a simple model can become very realistic if skillfully lit.</p>
+<div class="section" id="viewing-restrictions">
+<h2>Viewing Restrictions<a class="headerlink" href="#viewing-restrictions" title="Permalink to this headline">¶</a></h2>
+<p>The color of an object and the lighting of your scene is affected by:</p>
+<ul class="simple">
+<li>Your ability to see different colors (partial color blindness is common).</li>
+<li>The medium in which you are viewing the image (e.g. an LCD panel versus printed glossy paper).</li>
+<li>The quality of the image (e.g. a <code class="docutils literal"><span class="pre">jpeg</span></code> at 0.4 compression versus 1.0).</li>
+<li>The environment in which you are viewing the image
+(e.g. a CRT monitor with glare versus in a dark room, or in a sunshiny blue room).</li>
+<li>Your brain&#8217;s perception of the color and intensity
+relative to those objects around it and the world background color,
+which can be changed using color manipulation techniques using Blender
+<a class="reference internal" href="../../../compositing/introduction.html"><span class="doc">Composite 节点</span></a>.</li>
+</ul>
+</div>
+<div class="section" id="global-influences">
+<h2>Global Influences<a class="headerlink" href="#global-influences" title="Permalink to this headline">¶</a></h2>
+<p>In Blender, the elements under your control which affect lighting are:</p>
+<ul class="simple">
+<li>The color of the world <a class="reference internal" href="ambient_light.html"><span class="doc">ambient light</span></a>.</li>
+<li>The use of <a class="reference internal" href="ambient_occlusion.html"><span class="doc">Ambient Occlusion</span></a>
+as a way to cast that ambient light onto the object.</li>
+<li>The degree to which the ambient light colors the
+<a class="reference internal" href="../materials/index.html"><span class="doc">material</span></a> of the object.</li>
+<li>The use of <a class="reference internal" href="indirect_lighting.html"><span class="doc">Indirect lighting</span></a>,
+where the color of one object radiates onto another.</li>
+<li>The <a class="reference internal" href="lamps/introduction.html"><span class="doc">lamps</span></a> in your scene.</li>
+</ul>
+<p>The physics of light bouncing around in the real world is simulated by Ambient Occlusion (a world setting),
+buffer shadows (which approximate shadows being cast by objects), ray tracing
+(which traces the path of photons from a light source). Also,
+within Blender you can use <a class="reference internal" href="indirect_lighting.html"><span class="doc">Indirect lighting</span></a>.
+Ray tracing, ambient occlusion, and indirect lighting are computer-intensive processes.
+Blender can perform much faster rendering with its internal scan line renderer,
+which is a very good scan line renderer indeed.
+This kind of rendering engine is much faster since it does not try to simulate the real behavior of light,
+assuming many simplifying hypotheses.</p>
+</div>
+<div class="section" id="lighting-settings">
+<h2>Lighting 设置<a class="headerlink" href="#lighting-settings" title="Permalink to this headline">¶</a></h2>
+<p>Only after the above global influences have been considered,
+do you start adding light from lamps in your scene.
+The main things under your control are the:</p>
+<ul class="simple">
+<li>Type of light used (<em>Sun</em>, <em>Spot</em>, <em>Lamp</em>, <em>Hemi</em>, etc.).</li>
+<li>Color of the light.</li>
+<li>Position of the light and its direction.</li>
+<li>设置 for the light, including energy and falloff.</li>
+</ul>
+<p>Then you are back to how that material&#8217;s
+<a class="reference internal" href="../materials/properties/diffuse_shaders.html"><span class="doc">shader</span></a> reacts to the light.</p>
+<p>This chapter attempts to address the above,
+including how lights can work together in rigs to light your scene.
+In this chapter we will analyze the different type of lights in Blender and their behavior;
+we will discuss their strong and weak points. We also describe many lighting rigs,
+including the ever-popular three-point light method.</p>
+</div>
+<div class="section" id="lighting-in-the-workflow">
+<h2>Lighting in the Workflow<a class="headerlink" href="#lighting-in-the-workflow" title="Permalink to this headline">¶</a></h2>
+<p>In this user manual we have placed Lighting before Materials;
+you should set up your lighting before assigning materials to your meshes.
+Since the material shaders react to light, without proper lighting,
+the material shaders will not look right, and you will end up fighting the shader,
+when it is really the bad lighting that is causing you grief.
+All of the example images in this section do not use any material setting at all on the ball,
+cube or background.</p>
+</div>
+<div class="section" id="overriding-materials-to-reset-lighting">
+<h2>Overriding Materials to Reset Lighting<a class="headerlink" href="#overriding-materials-to-reset-lighting" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/lighting-mat_field.jpg"><img alt="../../../_images/lighting-mat_field.jpg" src="../../../_images/lighting-mat_field.jpg" style="width: 310px;" /></a>
+<p class="caption"><span class="caption-text">Material field in the 渲染 Layers panel.</span></p>
+</div>
+<p>If you have started down the road of assigning materials,
+and are now fiddling with the lighting, we suggest that you create a default,
+generic gray material &#8211; no <em>Vertex Color</em>, no <em>Face Texture</em>,
+no <em>Shadeless</em>, just plain old middle gray with RGB(0.8, 0.8, 0.8).
+Name this &#8220;Gray&#8221;.</p>
+<p>下一页 go to the <em>渲染 Layer</em> tab. In the <em>Layer</em> panel,
+select your new &#8220;Gray&#8221; material in the <em>Material</em> field.
+This will override any materials you may have set, and render everything with this color.
+Using this material, you can now go about adjusting the lighting.
+Just empty this field to get back to your original materials.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lights/index.html" class="btn btn-neutral float-right" title="Lights" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Lighting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

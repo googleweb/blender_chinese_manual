@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Managing UV Maps &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="UV Editing" href="index.html"/>
+        <link rel="next" title="Editing UVs" href="layout_editing.html"/>
+        <link rel="prev" title="UV Mapping a Mesh" href="unwrapping.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../painting.html">Painting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masking.html">Masking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">UV Editing</a> &raquo;</li>
+      
+    <li>Managing UV Maps</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/uv_image/uv_editing/layout_management.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="managing-uv-maps">
+<h1>Managing UV Maps<a class="headerlink" href="#managing-uv-maps" title="Permalink to this headline">¶</a></h1>
+<p>After you finish editing a UV map, you may need to create additional maps on the same object,
+or transfer a UV map to another mesh.</p>
+<div class="section" id="transferring-uv-maps">
+<h2>Transferring UV Maps<a class="headerlink" href="#transferring-uv-maps" title="Permalink to this headline">¶</a></h2>
+<p>You can copy a UV Map from one mesh to another Mesh provided both meshes have the same
+geometry/vertex order. This is useful for example when you want to recreate a UV map from an
+earlier version of your model with intact UVs.</p>
+<div class="section" id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">RMB</span></code> Select the target mesh (to which you want to copy the UV Map)</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift</span></code> select the source mesh (that contains the intact UV map)</li>
+<li><span class="menuselection">Object menu ‣ Make Links... ‣ Transfer UV Layouts</span> (Shortcut: <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code> ...)</li>
+</ul>
+<p>The target Mesh will now have a UV map that matches the original mesh.</p>
+</div>
+</div>
+<div class="section" id="multiple-uv-maps">
+<h2>Multiple UV Maps<a class="headerlink" href="#multiple-uv-maps" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/uv-fashion.jpg"><img alt="../../../_images/uv-fashion.jpg" src="../../../_images/uv-fashion.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Mesh with Multiple UV Textures.</span></p>
+</div>
+<p>You are not limited to one UV Map per mesh.
+You can have multiple UV maps for parts of the mesh by creating new UV Textures.
+The first UV Texture is created for you when you select a face in UV Face Select mode. You can
+manually create more UV Textures by clicking the <em>New</em> button next to &#8220;UV map&#8221; list
+in <em>Object Data</em> tab in the Properties Editor)
+and unwrapping a different part of the mesh. Those faces will then go with that UV Texture,
+while the previously unwrapped faces will still go with the previous UV Texture.
+Note that if you unwrap the same face twice or more times
+(each time to a different UV Texture),
+the coloring for that face will be the alpha combination of the layers of those UV Textures.</p>
+<p>In the example to the right, we have a mesh for a blouse.
+The mesh has been seamed as a normal blouse would, shown in the middle in UV Face Select mode.
+Wishing to make a cut pattern, the front of the blouse was unwrapped and basic rotation and
+scaling was done to center it in the UV/图像编辑器.
+It was then moved off to the side, while the left and right sleeves were unwrapped,
+each rotated and scaled. Then, select a sample face from each cloth piece,
+in the 3D视图 <span class="menuselection">Select ‣ Linked Faces</span>, and the UV/图像编辑器 will show all those pieces
+(as shown to the right). You can then work with all pieces for that UV Map.
+The example shows all three pieces moved onto the image area for painting. As you can see,
+the pattern nicely fits a square yard of cloth.</p>
+<p>Another UV Map was created by clicking the New button in the Mesh panel,
+and the process was repeated for the backs of the sleeves and the back of the blouse.
+Two images, one for the front and one for the back, are used to color the fabric.
+In this case, some faces map to the first texture,
+while other faces map to the second texture.</p>
+</div>
+<div class="section" id="uv-textures-list">
+<h2>UV Textures List<a class="headerlink" href="#uv-textures-list" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/uv-editing-mesh-panel.jpg" src="../../../_images/uv-editing-mesh-panel.jpg" />
+</div>
+<p>The Mesh panel lists the UV Texture maps created for this mesh,
+and allows you to create New ones as placeholders for future unwrapping operations.</p>
+<p>Click the <em>+</em> button to add a new UV texture, and the <em>-</em> to delete an existing one.
+Deleting a UV Map for the mesh destroys all work done in all unwrapping associated the mesh.</p>
+<p>Each map has a selector button. Click the camera icon to enable that UV texture for rendering.
+You can change the name by selecting one and changing the text in the <em>Name</em> box.
+The selected map is displayed in the UV/图像编辑器.
+The example shows a few UV maps created for a character, and the map for Clothes is selected.</p>
+<p>Note that each texture can be mapped to a specific UV texture.
+See the <a class="reference internal" href="../../../render/blender_render/textures/mapping/introduction.html"><span class="doc">Mapping</span></a> section of the texture panel.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layout_editing.html" class="btn btn-neutral float-right" title="Editing UVs" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unwrapping.html" class="btn btn-neutral" title="UV Mapping a Mesh" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

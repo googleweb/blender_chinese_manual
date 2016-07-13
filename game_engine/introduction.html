@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>游戏引擎简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="游戏引擎" href="index.html"/>
+        <link rel="next" title="游戏逻辑屏幕布局" href="screen_layout.html"/>
+        <link rel="prev" title="游戏引擎" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">游戏引擎简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-cases-and-sample-games">use cases and sample games</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">游戏材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic/index.html">逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camera/index.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics/index.html">物理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">游戏引擎</a> &raquo;</li>
+      
+    <li>游戏引擎简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/game_engine/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-game-engine">
+<h1>游戏引擎简介<a class="headerlink" href="#introduction-to-game-engine" title="Permalink to this headline">¶</a></h1>
+<p>The Blender 游戏引擎 (BGE) is Blender&#8217;s tool for real time projects,
+from architectural visualizations and simulations to games.</p>
+<p>A word of warning,
+before you start any big or serious project with the Blender 游戏引擎,
+you should note that it is currently not very supported and that there are plans
+for its retargeting and refactoring that, in the very least, will break compatibility.
+For further information, you should get in touch with the developers via mailing list or IRC and read the
+<a class="reference external" href="https://code.blender.org/2013/06/blender-roadmap-2-7-2-8-and-beyond/">development roadmap</a>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>data-conversion --&gt; input | animation, physics and logic | rendering
+</pre></div>
+</div>
+<p>different renderer, logic is done via logic bricks or python
+press &#8216;P&#8217; to play in preview mode in the embedded player</p>
+<div class="section" id="use-cases-and-sample-games">
+<h2>use cases and sample games<a class="headerlink" href="#use-cases-and-sample-games" title="Permalink to this headline">¶</a></h2>
+<p>Blender has its own built in 游戏引擎 that allows you to create interactive 3D applications
+or simulations. The major difference between 游戏引擎 and the conventional Blender system
+is in the rendering process. In the normal Blender engine,
+images and animations are built off-line - once rendered they cannot be modified.
+Conversely, the Blender 游戏引擎 renders scenes continuously in real-time,
+and incorporates facilities for user interaction during the rendering process.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/bge_introduction_screenshot.jpg"><img alt="../_images/bge_introduction_screenshot.jpg" src="../_images/bge_introduction_screenshot.jpg" style="width: 512px;" /></a>
+<p class="caption"><span class="caption-text">Screenshot from &#8220;Yo Frankie&#8221;, produced with Blender 游戏引擎.</span></p>
+</div>
+<p>The Blender 游戏引擎 oversees a game loop, which processes logic, sound,
+physics and rendering simulations in sequential order. The engine is written in C++.</p>
+<p>By default, the user has access to a powerful, high level, Event Driven
+<a class="reference internal" href="../editors/logic_editor.html"><span class="doc">逻辑编辑器</span></a>
+which is comprised of a series of specialized components called &#8220;逻辑 Bricks&#8221;.
+The <a class="reference internal" href="../editors/logic_editor.html"><span class="doc">逻辑编辑器</span></a> provides deep interaction with the simulation,
+and its functionality can be extended through Python scripting.
+It is designed to abstract the complex engine features into a simple user interface,
+which does not require experience with Programming.
+An overview of the <a class="reference internal" href="../editors/logic_editor.html"><span class="doc">逻辑编辑器</span></a>
+can be found in the <a class="reference internal" href="screen_layout.html"><span class="doc">游戏逻辑屏幕布局</span></a></p>
+<p>The 游戏引擎 is closely integrated with the existing code base of Blender, which permits
+quick transitions between the traditional modeling feature set and game-specific functionality
+provided by the program. In this sense,
+the 游戏引擎 can be efficiently used in all areas of game design,
+from prototyping to final release.</p>
+<p>The 游戏引擎 can simulate content within Blender,
+however, it also includes the ability to export a binary run-time to Linux, MacOSX and MS-Windows.</p>
+<p>There are a number of powerful libraries the Game-Engine takes advantage of:</p>
+<ul class="simple">
+<li>Audaspace - a sound library for control of audio. Uses OpenAL or SDL</li>
+<li>Bullet - a physics engine featuring 3D collision detection, soft body dynamics, and rigid body dynamics</li>
+<li>Detour - a path-finding and spatial reasoning toolkit.</li>
+<li>Recast - a state of the art navigation mesh construction tool set for games.</li>
+</ul>
+<p>When creating a game or simulation in the BGE, there are four essential steps:</p>
+<ul class="simple">
+<li>Create visual elements that can be rendered. This could be 3D models or images.</li>
+<li>Enable interaction within the scene using logic bricks to script custom behavior and determine how it is invoked
+(using the appropriate &#8220;sensors&#8221; such as keyboards or joysticks).</li>
+<li>Create one (or more) camera to give a frustrum from which to render the scene,
+and modify the parameters to support the environment in which the game will be displayed, such as Stereo rendering.</li>
+<li>Launch the game, using the internal player or exporting a runtime to the appropriate platform.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="screen_layout.html" class="btn btn-neutral float-right" title="游戏逻辑屏幕布局" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="游戏引擎" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

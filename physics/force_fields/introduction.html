@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Force Fields" href="index.html"/>
+        <link rel="next" title="Types" href="types/index.html"/>
+        <link rel="prev" title="Force Fields" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Force Fields</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-force-field">Creating a Force Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-field-settings">Common Field 设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/index.html">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Force Fields</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/force_fields/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Force Fields offer a way to add extra movement to dynamic systems.
+<a class="reference internal" href="../particles/index.html"><span class="doc">Particles</span></a>, <a class="reference internal" href="../soft_body/index.html"><span class="doc">Soft Bodies</span></a>,
+<a class="reference external" href="https://wiki.blender.org/index.php/User:Sergof/GSoC2012/Documentation">Rigid Bodies</a> and
+<a class="reference internal" href="../cloth/index.html"><span class="doc">Cloth objects</span></a> can all be affected by forces fields.
+Force Fields automatically affect everything.
+To remove a simulation or particle system from their influence,
+simply turn down the influence of that type of Force Field in its Field Weights panel.</p>
+<ul class="simple">
+<li>All types of objects and particles can generate fields,
+but only curve object can bear <em>Curve Guides</em> fields.</li>
+<li>Force Fields can also be generated from particles.
+See <a class="reference internal" href="../particles/physics/index.html"><span class="doc">Particle 物理</span></a></li>
+<li>The objects need to share at least one common layer to have effect.</li>
+</ul>
+<p>You may limit the effect on particles to a group of objects
+(see the <a class="reference internal" href="../particles/physics/index.html"><span class="doc">Particle 物理</span></a> page).</p>
+<div class="figure" id="id1">
+<img alt="../../_images/force_field_types.jpg" src="../../_images/force_field_types.jpg" />
+<p class="caption"><span class="caption-text">Force field types from left to right:
+Force, Wind, Vortex, Magnetic, Harmonic, Charge, Lennard Jones,
+Texture, Curve Guide, Boid, Turbulence, Drag, and Smoke Flow.</span></p>
+</div>
+<div class="section" id="creating-a-force-field">
+<h2>Creating a Force Field<a class="headerlink" href="#creating-a-force-field" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Panel:    <span class="menuselection">物理 ‣ Fields</span></div>
+</div>
+</div>
+<p>To create a single Force Field,
+you can select <span class="menuselection">Add ‣ Force Field</span> and select the desired force field.
+This method creates an Empty with the force field attached.</p>
+<p>To create a field from an existing object you have to select the object and change to the
+<em>物理</em> tab. Select the field type in the <em>Fields</em> menu.</p>
+<p>The fields have many options in common,
+these common options are explained for the <em>Spherical</em> field.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>After changing the fields <em>Fields</em> panel or deflection
+<em>Collision</em> panel settings, you have to recalculate the particle,
+softbody or cloth system by <em>Free Cache</em>, this is not done automatically. You can
+clear the cache for all selected objects with <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> <span class="menuselection">‣ Free cache selected</span>.</p>
+<p class="last">Particles react to all kind of <em>Force Fields</em>,
+Soft Bodies only to <em>Spherical</em>, <em>Wind</em>, <em>Vortex</em>
+(they react on <em>Harmonic</em> fields but not in a useful way).</p>
+</div>
+</div>
+<div class="section" id="common-field-settings">
+<h2>Common Field 设置<a class="headerlink" href="#common-field-settings" title="Permalink to this headline">¶</a></h2>
+<p>Most Fields have the same settings, even though they act very differently.
+设置 unique to a field type are described below.
+Curve Guide and Texture Fields have very different options.</p>
+<dl class="docutils">
+<dt>Shape</dt>
+<dd>The field is either a <em>Point</em>, with omni-directional influence, or a <em>Plane</em>,
+constant in the XY-plane, changes only in Z direction.</dd>
+<dt>Strength</dt>
+<dd>The strength of the field effect.
+This can be positive or negative to change the direction that the force operates in.
+A force field&#8217;s strength is scaled with the force object&#8217;s scale,
+allowing you to scale up and down scene, keeping the same effects.</dd>
+<dt>Flow</dt>
+<dd>Convert effector force into air flow velocity.</dd>
+<dt>Noise</dt>
+<dd>Adds noise to the strength of the force.</dd>
+<dt>Seed</dt>
+<dd>Changes the seed of the random noise.</dd>
+<dt>Effect Point</dt>
+<dd>You can toggle the field&#8217;s effect on particle <em>Location</em> and <em>Rotation</em></dd>
+<dt>Collision Absorption</dt>
+<dd>Force gets absorbed by collision objects.</dd>
+</dl>
+<div class="section" id="falloff">
+<h3>Falloff<a class="headerlink" href="#falloff" title="Permalink to this headline">¶</a></h3>
+<p>Here you can specify the shape of the force field
+(if the <em>Fall-off</em> Power is greater than 0).</p>
+<dl class="docutils">
+<dt>Sphere</dt>
+<dd>Falloff is uniform in all directions, as in a sphere.</dd>
+<dt>Tube</dt>
+<dd>Fall off results in a tube shaped force field.
+The Field&#8217;s <em>Radial falloff</em> can be adjusted,
+as well as the <em>Minimum</em> and <em>Maximum</em> distances of the field.</dd>
+<dt>Cone</dt>
+<dd>Fall off results in a cone shaped force field. Additional options are the same as those of <em>Tube</em> options.</dd>
+<dt>Z Direction</dt>
+<dd><em>Fall-off</em> can be set to apply only in the direction of the positive Z Axis, negative Z Axis, or both.</dd>
+<dt>Power (Power)</dt>
+<dd>How the power of the force field changes with the distance from the force field.
+If <em>r</em> is the distance from the center of the object, the force changes with 1/ <em>r</em><sup>power</sup>.
+A <em>Fall-off</em> of 2 changes the force field with 1/ <em>r</em><sup>2</sup>,
+which is the falloff of gravitational pull.</dd>
+<dt>Max Distance</dt>
+<dd>Makes the force field only take effect within a specified maximum radius
+(shown by an additional circle around the object).</dd>
+<dt>Min Distance</dt>
+<dd>The distance from the object center, up to where the force field is effective with full strength.
+If you have a <em>Fall-off</em> of 0 this parameter does nothing,
+because the field is effective with full strength up to <em>Max Dist</em> (or the infinity).
+Shown by an additional circle around the object.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="types/index.html" class="btn btn-neutral float-right" title="Types" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Force Fields" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

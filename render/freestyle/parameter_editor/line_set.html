@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Line Set &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Parameter Editor" href="index.html"/>
+        <link rel="next" title="Line Style &amp; 修改器" href="line_style/index.html"/>
+        <link rel="prev" title="简介 to Parameter Editor" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html">Core Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../viewmap.html">Viewmaps</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Parameter Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介 to Parameter Editor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Line Set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="line_style/index.html">Line Style &amp; 修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python.html">Python Scripting Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export_svg.html">Freestyle SVG Exporter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Freestyle</a> &raquo;</li>
+      
+          <li><a href="index.html">Parameter Editor</a> &raquo;</li>
+      
+    <li>Line Set</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/freestyle/parameter_editor/line_set.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="line-set">
+<h1>Line Set<a class="headerlink" href="#line-set" title="Permalink to this headline">¶</a></h1>
+<p>A line set selects, among the lines (edges) detected by Freestyle,
+which ones will be rendered using its attached <a class="reference internal" href="line_style/introduction.html"><span class="doc">line style</span></a>,
+through various methods.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/render-freestyle-basicedgetypeselectionex.jpg"><img alt="../../../_images/render-freestyle-basicedgetypeselectionex.jpg" src="../../../_images/render-freestyle-basicedgetypeselectionex.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">例子s of some basic edge types by LightBWK
+(<a class="reference external" href="https://wiki.blender.org/index.php/File:EdgeType.zip">File:EdgeType.zip</a>)</span></p>
+</div>
+<div class="section" id="selection-by">
+<h2>Selection By<a class="headerlink" href="#selection-by" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="visibility">
+<h3>Visibility<a class="headerlink" href="#visibility" title="Permalink to this headline">¶</a></h3>
+<p>There are three choices for selecting edges by visibility.</p>
+<dl class="docutils">
+<dt>Visible</dt>
+<dd>Only lines occluded by no surfaces are rendered.</dd>
+<dt>Hidden</dt>
+<dd>Lines occluded by at least one surface are rendered.</dd>
+</dl>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/render-freestyle-hidden_edges.jpg"><img alt="../../../_images/render-freestyle-hidden_edges.jpg" src="../../../_images/render-freestyle-hidden_edges.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Proof of concept of visible and hidden edges by LightBWK
+(<a class="reference external" href="https://wiki.blender.org/index.php/File:HiddenCreaseEdgeMark.zip">Sample blend-file</a>)</span></p>
+</div>
+<dl class="docutils">
+<dt>QI Range</dt>
+<dd><p class="first">QI stands for <em>Quantitative Invisibility</em>. Lines occluded by a number of surfaces in the given range are rendered.</p>
+<dl class="docutils">
+<dt>Start and End</dt>
+<dd>Min/max number of occluding surfaces for a line to be rendered.</dd>
+</dl>
+<div class="last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/render-freestyle-qi_range.jpg"><img alt="../../../_images/render-freestyle-qi_range.jpg" src="../../../_images/render-freestyle-qi_range.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">QI Range proof of concept demo, Start: 3, End: 7, by LightBWK
+(<a class="reference external" href="https://wiki.blender.org/index.php/File:QI-Range.zip">Sample blend-file</a>)</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="edge-types">
+<h3>Edge Types<a class="headerlink" href="#edge-types" title="Permalink to this headline">¶</a></h3>
+<p>Edge types are basic algorithms for the selection of lines from geometry. When using the
+parameter editor you have to choose at least one edge type in order to get a render output,
+but several edge types can be combined in one line set.
+Edge types can also be excluded from calculation by pressing the <em>X</em> next to them.</p>
+<dl class="docutils">
+<dt>Silhouette</dt>
+<dd>Draws silhouettes around your closed objects; it is often good for organic objects (like Suzanne &amp; Sphere),
+and bad for sharp edges, like a box. It cannot render open mesh objects like open cylinders and flat planes.
+The output is affected by the <em>Kr Derivative Epsilon</em> viewmap setting.</dd>
+<dt>Crease</dt>
+<dd><p class="first">Shows only edges whose adjacent faces form an angle greater than the defined viewmap&#8217;s <em>Crease Angle</em>.</p>
+<div class="last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/render-freestyle-creaseconcept.jpg"><img alt="../../../_images/render-freestyle-creaseconcept.jpg" src="../../../_images/render-freestyle-creaseconcept.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Crease Angle proof of concept for 121º by LightBWK
+( <a class="reference external" href="https://wiki.blender.org/index.php/File:CreaseAngle.zip">the blend-file</a>)</span></p>
+</div>
+</dd>
+<dt>Border</dt>
+<dd>Border is for open/unclosed edge meshes; an open cylinder has an open edge at the top and bottom,
+and a plane is open all around. Suzanne&#8217;s eye socket is an open edge. All open edges will have lines rendered.
+This depends on the mesh structure.</dd>
+<dt>Edge Marks</dt>
+<dd>渲染s marked edges. See
+<a class="reference internal" href="#edge-marks">Edge Marks</a> for details.</dd>
+<dt>Contour</dt>
+<dd>Draws the outer edges and inner open border.</dd>
+<dt>External Contour</dt>
+<dd>Draws the contour lines, but only on the outer edges.</dd>
+</dl>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/render-freestyle-contourvsexternalcontour.jpg"><img alt="../../../_images/render-freestyle-contourvsexternalcontour.jpg" src="../../../_images/render-freestyle-contourvsexternalcontour.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Left pair: Contour; Right pair: External Contour.</span></p>
+</div>
+<dl class="docutils">
+<dt>Suggestive Contour</dt>
+<dd>Draws some lines which would form the contour of the mesh if the viewport was shifted.
+Depends on your viewmap settings for <em>Kr Derivative Epsilon</em> and <em>Sphere Radius</em>
+(further information: <a class="reference external" href="https://wiki.blender.org/index.php/File:Manual-2.6-渲染-Freestyle-PrincetownLinestyle.pdf">File:Manual-2.6-渲染-Freestyle-PrincetownLinestyle.pdf</a>).</dd>
+<dt>Material Boundary</dt>
+<dd>Draws lines where two materials meet on the same object. Must be activated in the viewmap settings.</dd>
+<dt>Ridge &amp; Valley</dt>
+<dd>Draws ridges and valleys. Depends on your <em>Sphere Radius</em> viewmap settings.</dd>
+</dl>
+<div class="section" id="edge-marks">
+<h4>Edge Marks<a class="headerlink" href="#edge-marks" title="Permalink to this headline">¶</a></h4>
+<div class="figure" id="id6">
+<img alt="../../../_images/freestyle-mark-freestyle-edge.jpg" src="../../../_images/freestyle-mark-freestyle-edge.jpg" />
+<p class="caption"><span class="caption-text">Select and mark Freestyle edges.</span></p>
+</div>
+<div class="figure" id="id7">
+<img alt="../../../_images/freestyle-edge-mark.jpg" src="../../../_images/freestyle-edge-mark.jpg" />
+<p class="caption"><span class="caption-text">Edge Mark setting in the Line Sets tab.</span></p>
+</div>
+<p>In edit mode you can mark &#8220;Freestyle Edges&#8221; in the same manner you can mark &#8220;Seams&#8221; for UV
+unwrapping or &#8220;Sharp&#8221; for edge split.
+These marked edges are available to render when you select <em>Edge Mark</em>.</p>
+<p>This is done as follows:</p>
+<ul class="simple">
+<li>Select your mesh and tab into <em>编辑模式</em>.</li>
+<li>Select the edges you want to be marked.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code> and select <em>Mark Freestyle Edge</em>.</li>
+</ul>
+<p>Edge marks are useful when you want to draw lines along particular mesh edges.
+The examples below explain the use of edge marks.</p>
+<div class="figure" id="id8">
+<img alt="../../../_images/freestyle-edge-marks-viewport.jpg" src="../../../_images/freestyle-edge-marks-viewport.jpg" />
+<p class="caption"><span class="caption-text">Marking Freestyle Edges in edit mode. The edge marks are highlighted in green.</span></p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
+<img alt="../../../_images/freestyle-edge-marks-disabled.jpg" src="../../../_images/freestyle-edge-marks-disabled.jpg" />
+<p class="caption"><span class="caption-text">渲染 without Edge Marks.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<img alt="../../../_images/freestyle-edge-marks-enabled.jpg" src="../../../_images/freestyle-edge-marks-enabled.jpg" />
+<p class="caption"><span class="caption-text">渲染 with Edge Marks enabled.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>With edge marks enabled, the previously-marked lines are always rendered.
+You can see the black contour lines and the blue lines that are made with edge marks.</p>
+<p>What are edge marks good for?</p>
+<ul class="simple">
+<li>When you need to render marks on an almost-flat plane, when other edge types cannot detect any line.</li>
+<li>When you want full control of edge rendering. Often used for edges of squarish shapes.</li>
+<li>Mark the whole base mesh to be rendered for base mesh preview.</li>
+</ul>
+<p>What are edge marks not good for?</p>
+<ul class="simple">
+<li>Round outer edges (use instead <em>Contour</em>/<em>External Contour</em>/<em>Silhouette</em>).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="face-marks">
+<h3>Face Marks<a class="headerlink" href="#face-marks" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id11">
+<img alt="../../../_images/freestyle-mark-freestyle-face.jpg" src="../../../_images/freestyle-mark-freestyle-face.jpg" />
+<p class="caption"><span class="caption-text">Mark Freestyle Faces.</span></p>
+</div>
+<p>To set a face mark:</p>
+<ul class="simple">
+<li>Select a mesh and tab into <em>编辑模式</em>.</li>
+<li>Select the faces you want to be marked.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code> and select <em>Mark Freestyle Face</em>.</li>
+</ul>
+<p>Face marks are useful for removing lines from certain areas of a mesh.</p>
+<p>In this example, two faces of the default cube are marked like the image on the left.
+On the right is a render without face marks activated.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id12">
+<img alt="../../../_images/freestyle-face-marks-viewport.jpg" src="../../../_images/freestyle-face-marks-viewport.jpg" />
+<p class="caption"><span class="caption-text">Marked Faces.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<img alt="../../../_images/freestyle-face-marks-disabled.jpg" src="../../../_images/freestyle-face-marks-disabled.jpg" />
+<p class="caption"><span class="caption-text">渲染 Output.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" id="id14">
+<img alt="../../../_images/freestyle-face-mark.jpg" src="../../../_images/freestyle-face-mark.jpg" />
+<p class="caption"><span class="caption-text">Face mark options.</span></p>
+</div>
+<p>The line selection can be controlled via inclusion and faces options:</p>
+<dl class="docutils">
+<dt>Inclusive/Exclusive</dt>
+<dd>Whether to include or exclude edges matching defined face mark conditions from the line set.</dd>
+<dt>One Face</dt>
+<dd>(De)select all edges which have one or both neighbor faces marked.</dd>
+<dt>Both Faces</dt>
+<dd>(De)select all edges which have both of their neighbor faces marked.</dd>
+</dl>
+<p>The image below shows the resulting combinations.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
+<img alt="../../../_images/freestyle-face-mark-inclusive-one.jpg" src="../../../_images/freestyle-face-mark-inclusive-one.jpg" />
+<p class="caption"><span class="caption-text">Inclusive, One Face.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id16">
+<img alt="../../../_images/freestyle-face-mark-inclusive-both.jpg" src="../../../_images/freestyle-face-mark-inclusive-both.jpg" />
+<p class="caption"><span class="caption-text">Inclusive, Both Faces.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id17">
+<img alt="../../../_images/freestyle-face-mark-exclusive-one.jpg" src="../../../_images/freestyle-face-mark-exclusive-one.jpg" />
+<p class="caption"><span class="caption-text">Exclusive, One Face.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id18">
+<img alt="../../../_images/freestyle-face-mark-exclusive-both.jpg" src="../../../_images/freestyle-face-mark-exclusive-both.jpg" />
+<p class="caption"><span class="caption-text">Exclusive, Both Faces.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="group">
+<h3>Group<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h3>
+<p>You can include or exclude objects for line calculation, based on their belonging to a group.</p>
+<dl class="docutils">
+<dt>Group</dt>
+<dd>The name of the object group to use.</dd>
+<dt>Inclusive/Exclusive</dt>
+<dd>Whether to include or exclude lines from those objects in this line set.</dd>
+</dl>
+</div>
+<div class="section" id="image-border">
+<h3>图像 Border<a class="headerlink" href="#image-border" title="Permalink to this headline">¶</a></h3>
+<p>If enabled,
+Freestyle only takes geometry within the image border into consideration for line calculation.
+This reduces render times but increases continuity problems when geometry is moved out of and
+into camera view.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="line_style/index.html" class="btn btn-neutral float-right" title="Line Style &amp; 修改器" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介 to Parameter Editor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>修改器 Panel &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Strip Properties" href="index.html"/>
+        <link rel="next" title="Types" href="../types/index.html"/>
+        <link rel="prev" title="Proxy / Timecode Panel" href="proxy_timecode.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../usage.html">Editing and Manipulating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Strips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display_modes.html">Sequence Display Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">视频序列编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">Strips</a> &raquo;</li>
+      
+          <li><a href="index.html">Strip Properties</a> &raquo;</li>
+      
+    <li>修改器 Panel</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/sequencer/strips/properties/modifiers.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="modifiers-panel">
+<h1>修改器 Panel<a class="headerlink" href="#modifiers-panel" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right">
+<img alt="../../../../_images/editors_sequencer_properties_modifiers.png" src="../../../../_images/editors_sequencer_properties_modifiers.png" />
+</div>
+<p>修改器 are used to make adjustments on the image, like contrast,
+brightness, saturation, color balance and applying masks.</p>
+<p>You can add these modifiers directly to the selected strip,
+or you can use it within an &#8220;Adjustment Layer&#8221; effect strip,
+which allows you to apply these modifiers onto several strips the same time.</p>
+<dl class="docutils">
+<dt>Use Linear 修改器</dt>
+<dd>Calculate modifiers in linear space instead of sequencer space.</dd>
+<dt>Copy to Selected Strips</dt>
+<dd>Allows you to copy the modifiers to selected strips.
+This works two ways, you can either replace the old modifiers or append/add to the previous modifiers.</dd>
+</dl>
+<p>Each modifiers have several buttons at their top:</p>
+<ul class="simple">
+<li>The &#8220;eye&#8221; is to disable the modifier. Very useful to compare the image, with / without modifications.</li>
+<li>The next two buttons (up and down arrows) are used to change the modifier&#8217;s position in the stack.</li>
+<li>The cross is to delete the modifier from the stack.</li>
+</ul>
+<dl class="docutils">
+<dt>Strip</dt>
+<dd>Use this to apply the modification on the whole image, or to use another strip&#8217;s image (with alpha channel)
+for masking the modifier (and only this modifier), by choosing it in the &#8220;Mask&#8221; drop-down list.</dd>
+<dt>Mask</dt>
+<dd>This allows you to choose a Mask created in the Mask editor
+which will limit the modification to the masked image&#8217;s zones.</dd>
+</dl>
+<p>Currently, the following modifiers are supported:</p>
+<dl class="docutils">
+<dt>Color Balance</dt>
+<dd><p class="first">Color balance adjustments, through Lift, Gamma, and Gain.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This modifier works the same as the <a class="reference internal" href="../../../../compositing/types/color/color_balance.html"><span class="doc">Color Balance Node</span></a></p>
+</div>
+</dd>
+<dt>Curves</dt>
+<dd><p class="first">C/RGB curves.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This modifier works the same as the <a class="reference internal" href="../../../../compositing/types/color/rgb_curves.html"><span class="doc">Curves Node</span></a></p>
+</div>
+</dd>
+<dt>Hue Correct</dt>
+<dd><p class="first">HSV multi points curves.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This modifier works the same as the <a class="reference internal" href="../../../../compositing/types/color/hue_correct.html"><span class="doc">Curves Node</span></a></p>
+</div>
+</dd>
+<dt>Bright/Contrast</dt>
+<dd>Adjusts the brightness and contrast of the modifier input.</dd>
+<dt>Mask</dt>
+<dd><p class="first">Use it for masking the other modifiers in the stack which are below.</p>
+<p class="last">For example, to correct the brightness only on a certain zone of the image,
+you can filter the Bright/Contrast modifier by placing a Mask modifier,
+just before it in the stack. You can choose to use a Mask created in the Mask editor,
+or to use another strip as a mask (the image of this strip must have an alpha channel).
+This mask will be applied on all the others modifiers below it in the stack.</p>
+</dd>
+<dt>White Balance</dt>
+<dd>Use it to adjust the white balance by choosing the color that should be white.</dd>
+<dt>Tone Map</dt>
+<dd><p class="first">Used to map one set of colors to another in order to approximate the appearance
+of high dynamic range images in a medium that has a more limited dynamic range.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This modifier works the same as the <a class="reference internal" href="../../../../compositing/types/color/tone_map.html"><span class="doc">Tone Map Node</span></a></p>
+</div>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../types/index.html" class="btn btn-neutral float-right" title="Types" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="proxy_timecode.html" class="btn btn-neutral" title="Proxy / Timecode Panel" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

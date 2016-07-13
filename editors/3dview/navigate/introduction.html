@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Navigating" href="index.html"/>
+        <link rel="next" title="3D视图" href="3d_view.html"/>
+        <link rel="prev" title="Navigating" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="index.html">Navigating</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/3dview/navigate/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The <em>3D视图</em> is where you perform most of the object modeling and scene creation.
+Blender has a wide array of tools and options to support you in efficiently working with your
+mouse, keyboard and numpad.</p>
+<div class="section" id="menus">
+<h2>Menus<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h2>
+<p>The <em>3D视图</em> editor is comprised of a workspace and a header.
+The header is shown at the bottom or top of the workspace, and can be hidden if desired.
+The header shows you a menu and the current mode, as explained below.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_header.jpg"><img alt="../../../_images/editors_3dview_header.jpg" src="../../../_images/editors_3dview_header.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">3D视图 header.</span></p>
+</div>
+<div class="section" id="view-menu">
+<h3>View Menu<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview-view-menu.jpg"><img alt="../../../_images/editors_3dview-view-menu.jpg" src="../../../_images/editors_3dview-view-menu.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The View menu.</span></p>
+</div>
+<dl class="docutils">
+<dt>Properties Panel</dt>
+<dd><p class="first">Toggles the <em>Properties</em> side panel, which allows you to tweak many 3D视图 settings:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../transform/introduction.html"><span class="doc">变换</span></a></li>
+<li><a class="reference internal" href="../../../interface/grease_pencil/introduction.html"><span class="doc">Grease Pencil</span></a></li>
+<li><a class="reference internal" href="../display/panels.html"><span class="doc">Display &amp; View Panels</span></a></li>
+<li><a class="reference internal" href="../display/background_images.html"><span class="doc">Background 图像s</span></a></li>
+<li><a class="reference internal" href="../transform/transform_control/transform_orientations.html"><span class="doc">变换 Orientations</span></a></li>
+</ul>
+</dd>
+<dt>Tool Shelf</dt>
+<dd>Toggles the <em>Tool Shelf</em> <code class="kbd docutils literal"><span class="pre">T</span></code>, which appears on the left side of the 3D视图,
+and allows you to perform various operations, depending on the type of object selected, and the mode you are in.</dd>
+<dt><a class="reference internal" href="camera_view.html"><span class="doc">相机</span></a></dt>
+<dd>Switches the view to the current camera view.</dd>
+<dt><a class="reference internal" href="3d_view.html"><span class="doc">Viewing angles</span></a>:</dt>
+<dd><p class="first">These commands change the view to the default Top/Bottom, Front/Back, or Left/Right views.</p>
+<ul class="last simple">
+<li>Top <code class="kbd docutils literal"><span class="pre">Numpad7</span></code></li>
+<li>Bottom <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad7</span></code></li>
+<li>Front <code class="kbd docutils literal"><span class="pre">Numpad1</span></code></li>
+<li>Back <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad1</span></code></li>
+<li>Right <code class="kbd docutils literal"><span class="pre">Numpad3</span></code></li>
+<li>Left <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad3</span></code></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="camera_view.html"><span class="doc">相机s Menu</span></a>:</dt>
+<dd><em>Set Active object as camera</em>
+<em>Active camera</em></dd>
+<dt><a class="reference internal" href="3d_view.html#dview-projections"><span class="std std-ref">Perspective/Orthographic View</span></a></dt>
+<dd>These commands change the projection of the 3D视图</dd>
+<dt><a class="reference internal" href="3d_view.html"><span class="doc">Navigation Menu</span></a></dt>
+<dd>This sub-menu contains commands for rotating and panning the view.
+Using these commands through the menu is not that efficient. However, like all Blender menus,
+the much more convenient keyboard shortcuts are listed next to the commands.</dd>
+<dt><a class="reference internal" href="3d_view.html"><span class="doc">Align View</span></a></dt>
+<dd><p class="first">This submenu allows you to align the 3D视图 in certain ways.</p>
+<ul class="last simple">
+<li><em>Align to selected</em></li>
+<li><em>Center cursor and view all</em></li>
+<li><em>Align active camera to view</em></li>
+<li><em>View Selected</em></li>
+<li><em>Center View to cursor</em></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="3d_view.html#dview-clip-border"><span class="std std-ref">Clipping Border</span></a></dt>
+<dd>Allows you to define a clipping border to limit the 3D视图 display to a portion of 3D space.</dd>
+<dt><a class="reference internal" href="3d_view.html"><span class="doc">Zoom Border</span></a></dt>
+<dd>Allows you to define the area you want to zoom into.</dd>
+<dt><a class="reference internal" href="../layers.html"><span class="doc">Show all Layers</span></a></dt>
+<dd>Makes all of the display layers visible.</dd>
+<dt><a class="reference internal" href="3d_view.html#dview-local-view"><span class="std std-ref">Global View/Local View</span></a></dt>
+<dd>Global view shows all of the 3D objects in the scene. Local view only displays the selected objects.
+This helps if there are many objects in the scene, that may be in the way.
+Accidentally pressing <code class="kbd docutils literal"><span class="pre">NumpadSlash</span></code> can happen rather often if you are new to Blender,
+so if a bunch of the objects in your scene seem to have mysteriously vanished, try turning off local view.</dd>
+<dt><a class="reference internal" href="3d_view.html"><span class="doc">View Selected</span></a></dt>
+<dd>Zooms the 3D视图 to encompass all the <em>selected</em> objects.</dd>
+<dt><a class="reference internal" href="3d_view.html#dview-view-all"><span class="std std-ref">View All</span></a></dt>
+<dd>Zooms the 3D视图 to encompass <em>all</em> the objects in the current scene.</dd>
+<dt><a class="reference internal" href="../../../animation/index.html"><span class="doc">Play Back 动画</span></a></dt>
+<dd>Plays back the animation from the current frame.</dd>
+<dt><a class="reference internal" href="../../../interface/editors/arranging_areas.html"><span class="doc">Duplicate area in new window</span></a></dt>
+<dd>Clones the current 3D视图 in a new window.</dd>
+<dt><a class="reference internal" href="../../../interface/editors/arranging_areas.html"><span class="doc">Quad View</span></a></dt>
+<dd>Toggles a four window 3D视图, each showing a different angle of the scene.</dd>
+<dt><a class="reference internal" href="../../../interface/editors/arranging_areas.html"><span class="doc">Toggle Full Screen</span></a></dt>
+<dd>Maximizes the <em>3D视图</em> editor to fill the full screen area.</dd>
+</dl>
+</div>
+<div class="section" id="select-menu">
+<h3>Select Menu<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h3>
+<p>This menu contains tools for selecting objects.</p>
+<p><a class="reference internal" href="../selecting.html"><span class="doc">Read more about Selecting</span></a></p>
+</div>
+<div class="section" id="add-menu">
+<h3>Add Menu<a class="headerlink" href="#add-menu" title="Permalink to this headline">¶</a></h3>
+<p>This menu gives a list of different objects that can be added to a scene.
+See <a class="reference internal" href="../object/types/index.html"><span class="doc">here</span></a> for a information on all the object types.</p>
+</div>
+<div class="section" id="object-menu">
+<h3>Object Menu<a class="headerlink" href="#object-menu" title="Permalink to this headline">¶</a></h3>
+<p>This menu appears when in 物体模式. In edit mode,
+it will change to the appropriate menu with editing tools.</p>
+<p><a class="reference internal" href="../transform/introduction.html"><span class="doc">Read more about Objects</span></a></p>
+<p class="rubric">General Options</p>
+<dl class="docutils">
+<dt>Mode List</dt>
+<dd>The Viewport has several modes of operation,
+for a full list modes see <a class="reference internal" href="../object/modes.html"><span class="doc">here</span></a></dd>
+<dt>Viewport Shading</dt>
+<dd><p class="first">Allows you to change the way 3D objects are displayed in the viewport.</p>
+<p class="last"><a class="reference internal" href="../display/shading.html"><span class="doc">Read more about the different shading modes</span></a></p>
+</dd>
+<dt>轴心点 Selector</dt>
+<dd><p class="first">Used to change the reference point (or <a class="reference internal" href="../../../glossary/index.html#term-pivot-point"><span class="xref std std-term">轴心点</span></a>) used by many mesh manipulation tools.</p>
+<p class="last"><a class="reference internal" href="../transform/transform_control/pivot_point/index.html"><span class="doc">Read more about 轴心点s</span></a></p>
+</dd>
+<dt>Manipulator Selector</dt>
+<dd><p class="first">These handy selectors allow you to rotate or move objects by grabbing
+(clicking with your mouse) their controls and moving your mouse in the axis.</p>
+<p class="last"><a class="reference internal" href="../transform/transform_control/manipulators.html"><span class="doc">Read more about 变换 Manipulators</span></a></p>
+</dd>
+<dt>Layer Selector</dt>
+<dd>Layers are well documented in the <a class="reference internal" href="../layers.html"><span class="doc">Layers page</span></a>.</dd>
+<dt>Lock to Scene</dt>
+<dd><p class="first">By default, the &#8220;lock&#8221; button to the right of the layer buttons is enabled.
+This means that in this view, the active layers and camera are those of the whole scene
+(and those used at render time). Hence, all 3D视图s locked this way will share the same
+active layers and camera - when you change them in one view,
+all locked others will immediately reflect these changes.</p>
+<p>But if you disable this &#8220;lock&#8221; button, you then can specify different active layers and camera,
+specific to this view. This might be useful if you do not want to have your working areas (views)
+cluttered with the whole scene, and still have an ancillary complete view
+(which is unlocked with e.g. all layers shown).
+Or to have several views with different active cameras. Remember that you can use
+<code class="kbd docutils literal"><span class="pre">Ctrl-Numpad0</span></code> to make the active object the active camera.</p>
+<p class="last"><a class="reference internal" href="../../../data_system/scenes.html"><span class="doc">Read more about Scenes</span></a></p>
+</dd>
+<dt>Snap to Mesh</dt>
+<dd><p class="first">Controls the snapping tools that help with transforming and modeling objects.</p>
+<p class="last"><a class="reference internal" href="../transform/transform_control/precision/snap.html"><span class="doc">Read more about Snapping</span></a></p>
+</dd>
+<dt>渲染 Buttons</dt>
+<dd>The 渲染 Buttons render an OpenGL version of the 3D视图.
+See the <a class="reference internal" href="../../../render/opengl.html"><span class="doc">OpenGL 渲染ing</span></a> page for more information.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3d_view.html" class="btn btn-neutral float-right" title="3D视图" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Navigating" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Armatures" href="index.html"/>
+        <link rel="next" title="Bones" href="bones/index.html"/>
+        <link rel="prev" title="Armatures" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Armatures</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#your-first-armature">Your first armature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-armature-object">The armature object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#armature-chapter-overview">Armature chapter overview</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bones/index.html">Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">Armature Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization.html">Armature visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="index.html">Armatures</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/rigging/armatures/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>An &#8220;armature&#8221; is a type of object used for <a class="reference internal" href="../index.html"><span class="doc">rigging</span></a>.
+Armature object borrows many ideas from real life skeletons.</p>
+<div class="section" id="your-first-armature">
+<h2>Your first armature<a class="headerlink" href="#your-first-armature" title="Permalink to this headline">¶</a></h2>
+<p>In order to see what we&#8217;re talking about, let us try to add the default armature in Blender.</p>
+<p>(Note that armature editing details are explained in the
+<a class="reference internal" href="editing/index.html"><span class="doc">armatures editing section</span></a>).</p>
+<p>Open a default scene, then:</p>
+<ul class="simple">
+<li>delete all objects in the scene</li>
+<li>make sure the cursor is in the world origin with <code class="kbd docutils literal"><span class="pre">Shift-C</span></code></li>
+<li>press <code class="kbd docutils literal"><span class="pre">Numpad1</span></code> to see the world in Front view</li>
+<li>then, either:
+- in the Main Menu, go to <span class="menuselection">Add ‣ Armature ‣ Single Bone</span>
+- -or- in the 3D视图, add an armature with <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> <span class="menuselection">pop-up ‣ Armature ‣ Single Bone</span></li>
+<li>press <code class="kbd docutils literal"><span class="pre">NumpadDelete</span></code> to see the armature at maximum zoom</li>
+</ul>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/riggingdefaultarmature.jpg"><img alt="../../_images/riggingdefaultarmature.jpg" src="../../_images/riggingdefaultarmature.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">The default armature
+<a class="reference external" href="https://wiki.blender.org/index.php/File:Man骨骼装配AddArmature2.5">Toolbox: &#8211;&gt; Add Armature &#8211;&gt; Single Bone</a></span></p>
+</div>
+</div>
+<div class="section" id="the-armature-object">
+<h2>The armature object<a class="headerlink" href="#the-armature-object" title="Permalink to this headline">¶</a></h2>
+<p>As you can see, an armature is like any other object type in Blender:</p>
+<ul class="simple">
+<li>It has a center, a position, a rotation and a scale factor.</li>
+<li>It has an ObData data-block, that can be edited in <em>编辑模式</em>.</li>
+<li>It can be linked to other scenes, and the same armature data can be reused on multiple objects.</li>
+<li>All animation you do in <em>物体模式</em> is only working on the whole object,
+not the armature&#8217;s bones (use the <em>姿态模式</em> to do this).</li>
+</ul>
+<p>As armatures are designed to be posed, either for a static or animated scene,
+they have a specific state, called &#8220;rest position&#8221;. This is the armature&#8217;s default &#8220;shape&#8221;,
+the default position/rotation/scale of its bones, as set in <em>编辑模式</em>.</p>
+<p>In <em>编辑模式</em>, you will always see your armature in rest position,
+whereas in <em>物体模式</em> and <em>姿态模式</em>,
+you usually get the current &#8220;pose&#8221; of the armature
+(unless you enable the <em>Rest Position</em> button of the <em>Armature</em> panel).</p>
+</div>
+<div class="section" id="armature-chapter-overview">
+<h2>Armature chapter overview<a class="headerlink" href="#armature-chapter-overview" title="Permalink to this headline">¶</a></h2>
+<p>In the &#8220;Armatures&#8221; section, we will only talk about armatures themselves,
+and specifically we will talk about:</p>
+<ul class="simple">
+<li>the basics of <a class="reference internal" href="bones/index.html"><span class="doc">bones</span></a></li>
+<li>the different <a class="reference internal" href="visualization.html"><span class="doc">armature visualizations</span></a></li>
+<li>the armature <a class="reference internal" href="structure.html"><span class="doc">structure types</span></a></li>
+<li>how to <a class="reference internal" href="bones/selecting.html"><span class="doc">Select Bones</span></a>,</li>
+<li>how to <a class="reference internal" href="editing/index.html"><span class="doc">Edit Armatures</span></a></li>
+<li>how to <a class="reference internal" href="editing/bones.html"><span class="doc">Edit Bones</span></a></li>
+<li>how to <a class="reference internal" href="editing/properties.html"><span class="doc">edit bones properties</span></a></li>
+<li>how to sketch armatures with the <a class="reference internal" href="editing/sketching.html"><span class="doc">Etch-a-Ton tool</span></a></li>
+<li>how to use <a class="reference internal" href="editing/templating.html"><span class="doc">templates</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bones/index.html" class="btn btn-neutral float-right" title="Bones" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Armatures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

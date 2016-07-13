@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>视频 Output &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="渲染 Output" href="index.html"/>
+        <link rel="next" title="Metadata" href="metadata.html"/>
+        <link rel="prev" title="Output Options" href="output.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">渲染 Output</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="display.html">Displaying and Saving 图像s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="output.html">Output Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">视频 Output</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#preparing-your-work-for-video">Preparing your work for video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-saturation">Color Saturation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#encoding-panel">Encoding Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="metadata.html">Metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">渲染 Output</a> &raquo;</li>
+      
+    <li>视频 Output</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/output/video.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="video-output">
+<h1>视频 Output<a class="headerlink" href="#video-output" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preparing-your-work-for-video">
+<h2>Preparing your work for video<a class="headerlink" href="#preparing-your-work-for-video" title="Permalink to this headline">¶</a></h2>
+<p>Once you have mastered the trick of animation you will surely start to produce wonderful
+animations, encoded with your favorite codecs,
+and possibly you will share them on the Internet with the rest of the community.</p>
+<p>Sooner or later you will be struck with the desire to build an animation for television,
+or maybe burn your own DVDs. To spare you some disappointment,
+here are some tips specifically targeted at 视频 preparation.
+The first and principal one is to remember the double-dashed white lines in the camera view!</p>
+<p>If you render for PC then the whole rendered image which lies within the <em>outer</em> dashed
+rectangle will be shown. For television, some lines and some part of the lines will be lost
+due to the mechanics of the electron beam scanning in your TV&#8217;s cathode ray tube. You are
+guaranteed that what is within the <em>inner</em> dashed rectangle in camera view will be visible
+on the screen. Everything within the two rectangles may or may not be visible,
+depending on the given TV set that your audience watches the video on.</p>
+</div>
+<div class="section" id="color-saturation">
+<h2>Color Saturation<a class="headerlink" href="#color-saturation" title="Permalink to this headline">¶</a></h2>
+<p>Most video tapes and video signals are not based on the RGB model but on the YCrCb model:
+more precisely, the YUV in Europe (PAL), and the YIQ in the USA (NTSC),
+the latter being quite similar to the former. Hence some knowledge of this is necessary too.</p>
+<p>The YCrCb model sends information as &#8216;Luminance&#8217;, or intensity (Y)
+and two &#8216;Crominance&#8217; signals, red and blue (Cr and Cb).
+Actually a Black and White TV set shows only luminance,
+while color TV sets reconstruct color from Crominances (and from luminance).
+Construction of the YCrCb values from the RGB ones takes two steps
+(the constants <em>in italics</em> depend on the system: PAL or NTSC):</p>
+<p>First, the Gamma correction (<em>g</em> varies: 2.2 for NTSC, 2.8 for PAL):</p>
+<ul class="simple">
+<li>R&#8217; = R<sup>1/g</sup></li>
+<li>G&#8217; = G<sup>1/g</sup></li>
+<li>B&#8217; = B<sup>1/g</sup></li>
+</ul>
+<p>Then, the conversion itself:</p>
+<ul class="simple">
+<li>Y = 0.299R&#8217; + 0.587G&#8217; + 0.114B&#8217;</li>
+<li>Cr = <em>a</em><sub>1</sub>(R&#8217; - Y) + <em>b</em><sub>1</sub>(B&#8217; - Y)</li>
+<li>Cb = <em>a</em><sub>2</sub>(R&#8217; - Y) + <em>b</em><sub>2</sub>(B&#8217; - Y)</li>
+</ul>
+<p>Whereas a standard 24 bit RGB picture has 8 bits for each channel, to keep bandwidth down,
+and considering that the human eye is more sensitive to luminance than to chrominance,
+the luminance signal is sent with more bits than the two chrominance signals.
+This bit expansion results in a smaller dynamic of colors in video,
+than what you are used to on monitors.
+You hence have to keep in mind that not all colors can be correctly displayed.</p>
+<p>A rule of thumb is to keep the colors as &#8216;grayish&#8217; or &#8216;unsaturated&#8217; as possible;
+this roughly means keeping the dynamics of your colors within 80% of one another.
+In other words,
+the difference between the highest RGB value and the lowest RGB value should not exceed 0.8
+([0-1] range) or 200 ([0-255] range).</p>
+<p>This is not strict - something more than 0.8 is acceptable - but an RGB display with color
+contrast that ranges from 0.0 to 1.0 will appear to be very ugly (over-saturated) on video,
+while appearing bright and dynamic on a computer monitor.</p>
+</div>
+<div class="section" id="encoding-panel">
+<h2>Encoding Panel<a class="headerlink" href="#encoding-panel" title="Permalink to this headline">¶</a></h2>
+<p>Here you choose which video codec you want to use, and compression settings.
+With all of these compression choices, there is a tradeoff between file size,
+compatibility across platforms, and playback quality.</p>
+<p>When you view the <a class="reference internal" href="../../advanced/command_line/introduction.html"><span class="doc">System Console</span></a>,
+you can see some of the output of the encoding process.
+You will see even more output if you execute Blender as <code class="docutils literal"><span class="pre">blender</span> <span class="pre">-d</span></code>.</p>
+<p>You can use the presets, DV, SVCD, DVD, etc.
+which choose optimum settings for you for that type of output,
+or you can manually select the format (MPEG-1, MPEG-2, MPEG-4, AVI, Quicktime (if installed),
+DV, H.264, or Xvid (if installed). You must have the proper codec installed on your computer
+for Blender to be able to call it and use it to compress the video stream.</p>
+<dl class="docutils">
+<dt>Format</dt>
+<dd><p class="first">视频 container or file type. For a list of all available options see
+<a class="reference internal" href="../../data_system/files/media/video_formats.html"><span class="doc">video formats</span></a>.</p>
+<dl class="last docutils">
+<dt>Codec</dt>
+<dd>Chooses the method of compression and encoding.
+For a list of all available options see <a class="reference internal" href="../../data_system/files/media/video_formats.html"><span class="doc">video formats</span></a>.</dd>
+<dt>Lossless Output</dt>
+<dd>Allows the ability to perfectly reconstruct compressed data from compressed data.</dd>
+</dl>
+</dd>
+<dt>Bitrate</dt>
+<dd>Set the average <a class="reference external" href="https://en.wikipedia.org/wiki/Bit_rate">bitrate</a> (quality),
+which is the count of binary digits per frame.
+See also: <a class="reference external" href="https://ffmpeg.org/ffmpeg.html#Description">FFmpeg -b:v</a></dd>
+<dt>GOP Size</dt>
+<dd>The number of pictures per <a class="reference external" href="https://en.wikipedia.org/wiki/Group_of_pictures">Group of Pictures</a>.
+Set to 0 for &#8220;intra_only&#8221;, which disables <a class="reference external" href="https://en.wikipedia.org/wiki/Inter-frame">inter-frame</a> video.
+From FFmpeg docs: &#8220;For streaming at very low bitrate application, use a low frame rate and a small GOP size.
+This is especially true for Real视频 where the Linux player does not seem to be very fast,
+so it can miss frames&#8221;</dd>
+<dt>Autosplit Output</dt>
+<dd>If your video is HUGE and exceeds 2Gig, enable Autosplit Output.
+The main control over output filesize is the GOP or keyframe interlace.
+A higher number generally leads to a smaller file but needs a higher-powered device to replay it.</dd>
+<dt>Mux</dt>
+<dd><p class="first"><a class="reference external" href="http://www.afterdawn.com/glossary/term.cfm/multiplexing">Multiplexing</a> settings.</p>
+<dl class="last docutils">
+<dt>Rate</dt>
+<dd>Maximum bit rate of the multiplexed stream.</dd>
+<dt>Packet Size</dt>
+<dd>Reduces data fragmentation or muxer overhead depending on the source.</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Standards</p>
+<p class="last">Codecs cannot encode off-the-wall video sizes, so stick to the XY sizes used in the presets for standard TV sizes.</p>
+</div>
+<dl class="docutils">
+<dt>Rate</dt>
+<dd><p class="first">The bitrate control also includes a <em>Minimum</em> and a <em>Maximum</em>.</p>
+<dl class="last docutils">
+<dt>Buffer</dt>
+<dd>The <a class="reference external" href="https://en.wikipedia.org/wiki/视频_buffering_verifier">decoder bitstream buffer</a> size.</dd>
+</dl>
+</dd>
+<dt>Audio Codec</dt>
+<dd>Audio conainer used, For a list of all available options see
+<a class="reference internal" href="../../data_system/files/media/video_formats.html"><span class="doc">video formats</span></a>.</dd>
+<dt>Bitrate</dt>
+<dd>For each codec, you can control the bitrate (quality) of the sound in the movie.
+This example shows MP3 encoding at 128kbps. Higher bitrates are bigger files that stream worse but sound better.
+Stick to powers of 2 for compatibility.</dd>
+<dt>Volume</dt>
+<dd>Sets the output volume of the audio.</dd>
+</dl>
+<div class="section" id="tips">
+<h3>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h3>
+<p>Choosing which format to use depends on what you are going to do with the image.</p>
+<p>If you are animating a movie and are not going to do any 后期处理 or special effects on
+it, use either <code class="docutils literal"><span class="pre">AVI-JPEG</span></code> or <code class="docutils literal"><span class="pre">AVI</span> <span class="pre">Codec</span></code> and choose the XviD open codec.
+If you want to output your movie with sound that you have loaded into the VSE,
+use <code class="docutils literal"><span class="pre">FFMPEG</span></code>.</p>
+<p>If you are going to do 后期处理 on your movie, it is best to use a frameset rendered as <code class="docutils literal"><span class="pre">OpenEXR</span></code> images;
+if you only want one file, then choose <em>AVI Raw</em>. While AVI Raw is huge,
+it preserves the exact quality of output for 后期处理.
+After 后期处理 (compositing and/or sequencing), you can compress it down.
+You do not want to post-process a compressed file because the compression artifacts might
+throw off what you are trying to accomplish with the 后期处理.</p>
+<p>Note that you might not want to render directly to a video format.
+If a problem occurs while rendering, you have to re-render all frames from the beginning.
+If you first render out a set of static images (such as the default PNG, or the higher-quality OpenEXR),
+you can stitch them together with an 图像 Strip in the <a class="reference internal" href="../../editors/sequencer/usage.html"><span class="doc">视频序列编辑器</span></a>.
+This way, you can easily:</p>
+<ul class="simple">
+<li>Restart the rendering from the place (the frame) where the problem occurred.</li>
+<li>Try out different video options in seconds, rather than minutes or hours.</li>
+<li>Enjoy the rest of the features of the VSE,
+such as adding 图像 Strips from previous renders, audio, video clips, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metadata.html" class="btn btn-neutral float-right" title="Metadata" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="output.html" class="btn btn-neutral" title="Output Options" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

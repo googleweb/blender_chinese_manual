@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Node Groups &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Types of 节点" href="index.html"/>
+        <link rel="next" title="Layout 节点" href="layout/index.html"/>
+        <link rel="prev" title="Translate Node" href="distort/translate.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Types of 节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="input/index.html">Input 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="output/index.html">Output 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color/index.html">Color 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="converter/index.html">Converter 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filter/index.html">Filter 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/index.html">Vector 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matte/index.html">Matte 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distort/index.html">Distort 节点</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Node Groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grouping-nodes">Grouping 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-node-groups">Editing Node Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ungrouping-nodes">Ungrouping 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appending-node-groups">Appending Node Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="layout/index.html">Layout 节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">合成</a> &raquo;</li>
+      
+          <li><a href="index.html">Types of 节点</a> &raquo;</li>
+      
+    <li>Node Groups</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/compositing/types/groups.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-groups">
+<h1>Node Groups<a class="headerlink" href="#node-groups" title="Permalink to this headline">¶</a></h1>
+<p>Both material and composite nodes can be grouped. Grouping nodes can simplify the node network layout in the node
+editor, making your material or composite node setup easier to work with. Grouping nodes also creates
+what are called NodeGroups (inside a blend-file) or NodeTrees (when appending).</p>
+<p>Conceptually, &#8220;grouping&#8221; allows you to specify a <em>set</em> of nodes that you can treat as though it were &#8220;just one node&#8221;.
+You can then re-use it one or more times in this or some other blend-file(s).</p>
+<p>As an example:  If you have created a material using nodes that you would like to use in another blend-file, you
+could simply append the material from one blend-file to another. However, what if you would like to create a
+new material, and use a branch from an existing material node network? You could re-create the branch. Or you could
+append the material to the new blend-file, then cut and paste the branch that you want into the new material. Both
+of these options work, but are not very efficient when working across different blend-files. A better method of
+re-use, for either material node branches or composite node networks, would be to create groups of nodes.</p>
+<p>Once a group has been defined, it becomes an opaque object; a reusable software component. You can (if you choose)
+ignore exactly how it is &#8220;defined&#8221;, and simply use it as many times as you like.</p>
+<div class="section" id="grouping-nodes">
+<h2>Grouping 节点<a class="headerlink" href="#grouping-nodes" title="Permalink to this headline">¶</a></h2>
+<p>To create a node group, in the node editor, select the nodes you want to include, then
+press <code class="kbd docutils literal"><span class="pre">Ctrl-G</span></code>, <span class="menuselection">Group ‣ Make Group</span>, <code class="kbd docutils literal"><span class="pre">Shift-A</span></code>.
+A node group will have a green title bar. All of the selected nodes will now be contained within the group node.
+Default naming for the node group is &#8220;NodeGroup&#8221;, &#8220;NodeGroup.001&#8221; etc.
+There is a name field in the node group you can click into to change the name of the group.
+Change the name of the node group to something meaningful.
+When appending node groups from one blend file to another,
+Blender does not make a distinction between material node groups or composite node groups,
+so it is recommended some naming convention, that will allow you to easily distinguish between the two types.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>What <strong>not</strong> to include in your groups (all types of Node editors)</p>
+<p>Remember that the essential idea is that a group should be an easily-reusable,
+self-contained software component. Material node groups should <strong>not</strong> include:</p>
+<dl class="last docutils">
+<dt>Input nodes</dt>
+<dd>if you include a source node in your group,
+you will end up having the source node appearing <em>twice</em>: once inside the group,
+and once outside the group in the new material node-network.</dd>
+<dt>Output node</dt>
+<dd>if you include an output node in the group, there will not be an output socket available <em>from</em> the group!</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="editing-node-groups">
+<h2>Editing Node Groups<a class="headerlink" href="#editing-node-groups" title="Permalink to this headline">¶</a></h2>
+<p>With a group node selected, <code class="kbd docutils literal"><span class="pre">Tab</span></code> expands the node to a window frame, and the individual nodes within
+it are shown. You can move them around, play with their individual controls, re-thread them internally, etc.
+just like you can if they were a normal part of your editor window. You will not be able, though, to thread them to a
+node outside the group; you have to use the external sockets on the side of the group node. To add or
+remove nodes from the group, you need to ungroup them.</p>
+</div>
+<div class="section" id="ungrouping-nodes">
+<h2>Ungrouping 节点<a class="headerlink" href="#ungrouping-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="kbd docutils literal"><span class="pre">Alt-G</span></code> command removes the group and places the individual nodes into your editor workspace. No internal
+connections are lost, and now you can thread internal nodes to other nodes in your workspace.</p>
+</div>
+<div class="section" id="appending-node-groups">
+<h2>Appending Node Groups<a class="headerlink" href="#appending-node-groups" title="Permalink to this headline">¶</a></h2>
+<p>Once you have appended a NodeTree to your blend-file, you can make use of it in the node editor by
+pressing <code class="kbd docutils literal"><span class="pre">Shift-A</span></code>, <span class="menuselection">Add ‣ Group</span>, then select the appended group.
+The &#8220;control panel&#8221; of the Group is the individual controls for the grouped nodes.
+You can change them by working with the Group node like any other node.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layout/index.html" class="btn btn-neutral float-right" title="Layout 节点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="distort/translate.html" class="btn btn-neutral" title="Translate Node" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

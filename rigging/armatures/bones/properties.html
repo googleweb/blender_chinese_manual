@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bones &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Bones" href="index.html"/>
+        <link rel="next" title="Properties" href="../properties.html"/>
+        <link rel="prev" title="Selecting" href="selecting.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Bones</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Bones</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="index.html">Bones</a> &raquo;</li>
+      
+    <li>Bones</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/armatures/bones/properties.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bones">
+<h1>Bones<a class="headerlink" href="#bones" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式, 编辑模式 and 姿态模式</div>
+<div class="line">Panel:    All in Properties editor, <em>Bone</em> property</div>
+</div>
+</div>
+<p>Let us first have a general grasp of the various panels gathering the bone settings,
+in Properties editor, <em>Bone</em> tab:</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/riggingboneprincipalsbonepropertieseditor.jpg" src="../../../_images/riggingboneprincipalsbonepropertieseditor.jpg" />
+<p class="caption"><span class="caption-text">The Bone tab.</span></p>
+</div>
+<div class="section" id="relations">
+<h2>Relations<a class="headerlink" href="#relations" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../_images/riggingeditingbonecxtrelationspanel.jpg" src="../../../_images/riggingeditingbonecxtrelationspanel.jpg" />
+<p class="caption"><span class="caption-text">The Relations panel.</span></p>
+</div>
+<p>In this panel you can arrange sets of bones in different layers for easier manipulation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode is only available in 编辑模式.</p>
+</div>
+</div>
+<div class="section" id="display">
+<h2>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../../../_images/riggingeditingbonecxtdisplaypanel.jpg" src="../../../_images/riggingeditingbonecxtdisplaypanel.jpg" />
+<p class="caption"><span class="caption-text">The Display panel.</span></p>
+</div>
+<p>Display panel lets you customize the look of your bones taking the shape of a another existing object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode is only available in 物体模式.</p>
+</div>
+</div>
+<div class="section" id="deform">
+<h2>Deform<a class="headerlink" href="#deform" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id4">
+<img alt="../../../_images/riggingeditingbonecxtdeformpanel.jpg" src="../../../_images/riggingeditingbonecxtdeformpanel.jpg" />
+<p class="caption"><span class="caption-text">The Deform panel.</span></p>
+</div>
+<p>In this panel you can set basic properties of the bones.</p>
+<p>Turning the Deform option on and off,
+includes the active bone in the Automatic Weight Calculation when the Mesh is
+Parented to the Armature using the Armature Deform with the &#8220;With Automatic Weights&#8221; option.</p>
+<p>Also it&#8217;s worth noting that by turning off a bone&#8217;s deform option, makes it not influence the mesh at all,
+overriding any weights that it might have been assigned before; It mutes its influence.</p>
+</div>
+<div class="section" id="transform">
+<h2>变换<a class="headerlink" href="#transform" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id5">
+<img alt="../../../_images/riggingeditingbonecxttransformpanel.jpg" src="../../../_images/riggingeditingbonecxttransformpanel.jpg" />
+<p class="caption"><span class="caption-text">The 变换 panel(edit mode).</span></p>
+</div>
+<p>When in edit mode you can use this panel to control position and roll of individual bones.</p>
+<p>When in pose mode you can only set location for the main bone, and you can now set rotation and scale.</p>
+<div class="figure" id="id6">
+<img alt="../../../_images/riggingeditingbonecxttransformppanel.jpg" src="../../../_images/riggingeditingbonecxttransformppanel.jpg" />
+<p class="caption"><span class="caption-text">The 变换 panel(pose mode).</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode is only available in Edit 姿态模式s.</p>
+</div>
+</div>
+<div class="section" id="transform-locks">
+<h2>变换 Locks<a class="headerlink" href="#transform-locks" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id7">
+<img alt="../../../_images/riggingeditingbonecxttranformlockspanel.jpg" src="../../../_images/riggingeditingbonecxttranformlockspanel.jpg" />
+<p class="caption"><span class="caption-text">The 变换 Locks panel.</span></p>
+</div>
+<p>This panel appears only in pose mode and allows you to restrict position,
+rotation and scale by axis on each bone in the armature.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode is only available in 姿态模式.</p>
+</div>
+</div>
+<div class="section" id="inverse-kinematics">
+<h2>Inverse Kinematics<a class="headerlink" href="#inverse-kinematics" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id8">
+<img alt="../../../_images/riggingeditingbonecxtinversekinematicspanel.jpg" src="../../../_images/riggingeditingbonecxtinversekinematicspanel.jpg" />
+<p class="caption"><span class="caption-text">The Inverse Kinematics panel.</span></p>
+</div>
+<p>This panel controls the way a bone or set of bones behave when linked in an inverse kinematic chain.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This mode is only available in 姿态模式.</p>
+</div>
+</div>
+<div class="section" id="custom-properties">
+<h2>Custom Properties<a class="headerlink" href="#custom-properties" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference internal" href="../../../data_system/custom_properties.html"><span class="doc">Custom Properties</span></a> page for more information.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../properties.html" class="btn btn-neutral float-right" title="Properties" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral" title="Selecting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

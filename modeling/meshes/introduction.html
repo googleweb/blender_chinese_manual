@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="网格" href="index.html"/>
+        <link rel="next" title="Vertices, Edges and Faces" href="mesh_structures.html"/>
+        <link rel="prev" title="网格" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-mode">编辑模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualization">Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-shelf">Tool Shelf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-shelf">Properties Shelf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">网格</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/meshes/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="edit-mode">
+<h2>编辑模式<a class="headerlink" href="#edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>你可以在两种模式下操作几何物体.</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../../editors/3dview/transform/introduction.html"><span class="doc">物体模式</span></a></dt>
+<dd>在<em>物体模式</em>下操作将会影响整个物体.
+<em>物体模式</em> 在3D视图下的标题栏如下:</dd>
+</dl>
+<div class="figure" id="id1">
+<img alt="../../_images/modeling_meshes_modes_object.png" src="../../_images/modeling_meshes_modes_object.png" />
+<p class="caption"><span class="caption-text">物体模式标题栏.</span></p>
+</div>
+<dl class="docutils">
+<dt>编辑模式</dt>
+<dd>操作 in <em>编辑模式</em> affect only the geometry of an object,
+but not global properties such as location or rotation.
+<em>编辑模式</em> has the following header in the 3D视图:</dd>
+</dl>
+<div class="figure" id="id2">
+<img alt="../../_images/modeling_meshes_modes_edit.png" src="../../_images/modeling_meshes_modes_edit.png" />
+<p class="caption"><span class="caption-text">编辑模式标题栏.</span></p>
+</div>
+<p>Tools and modes in the 3D视图 header are (left to right):</p>
+<ul class="simple">
+<li>View, Select, and Mesh menus</li>
+<li>Blender Mode</li>
+<li>Display method for 3D视图</li>
+<li>Pivot center</li>
+<li>3D manipulator widget</li>
+<li>Selection mode</li>
+<li>Depth buffer clipping (hide)</li>
+<li>Proportional editing</li>
+<li>Snap</li>
+<li>OpenGL render</li>
+</ul>
+<p>You can switch between the Object and 编辑模式s with <code class="kbd docutils literal"><span class="pre">Tab</span></code>.
+You can change to any mode by selecting the desired <em>Mode</em> in the menu in the 3D视图 header.</p>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/editmode-cubeselect-1.jpg"><img alt="../../_images/editmode-cubeselect-1.jpg" src="../../_images/editmode-cubeselect-1.jpg" style="width: 315px;" /></a>
+<p class="caption"><span class="caption-text">One cube selected.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/editmode-cubeselect-2.jpg"><img alt="../../_images/editmode-cubeselect-2.jpg" src="../../_images/editmode-cubeselect-2.jpg" style="width: 315px;" /></a>
+<p class="caption"><span class="caption-text">Two cubes selected before entering 编辑模式.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>By default, Blender highlights selected geometry in orange in both <em>物体模式</em> and <em>编辑模式</em>.</p>
+<p>In <em>物体模式</em> with <em>Wireframe</em> shading enabled <code class="kbd docutils literal"><span class="pre">Z</span></code>,
+objects are displayed in black when unselected and in orange when selected.
+If more than one object is selected, all selected object except the active object,
+typically the object last selected, is displayed in a darker orange color. Similarly,
+in <em>编辑模式</em>, unselected geometry is drawn in black while selected faces, edges,
+or vertices are drawn in orange. The active face is highlighted in white.</p>
+<p>In <em>编辑模式</em>, only one mesh can be edited at the time. However, several objects can be joined into a single mesh
+(<code class="kbd docutils literal"><span class="pre">Ctrl-J</span></code> in <em>物体模式</em>) and then separated again (<code class="kbd docutils literal"><span class="pre">P</span></code> in <em>编辑模式</em>).
+If multiple objects are selected before entering <em>编辑模式</em>,
+all the selected objects remain highlighted in orange indicating that they are part of the active selection set.</p>
+<p>If two vertices joined by an edge are selected in <em>Vertex selection mode</em>,
+the edge between them is highlighted too. Similarly,
+if enough vertices or edges are selected to define a face, that face is also highlighted.</p>
+</div>
+<div class="section" id="tool-shelf">
+<h2>Tool Shelf<a class="headerlink" href="#tool-shelf" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id5">
+<img alt="../../_images/editmode-meshtools-split.jpg" src="../../_images/editmode-meshtools-split.jpg" />
+<p class="caption"><span class="caption-text">The Tool Shelf panel in edit mode (panel split in two parts for layout reasons).</span></p>
+</div>
+<p>Open/close the <em>Mesh Tools</em> panel using <code class="kbd docutils literal"><span class="pre">T</span></code>.
+When entering <em>编辑模式</em>, several mesh tools become available.</p>
+<p>Most of these tools are also available as shortcuts
+(displayed in the <em>Tooltips</em> for each tool) and/or in the <em>Specials</em> menu
+<code class="kbd docutils literal"><span class="pre">W</span></code>, the <em>Edge</em> menu <code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code> ,and <em>Face</em> menu
+<code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code>.
+For each tool a context-sensitive menu is opened at the bottom of the <em>Tool Shelf</em>.</p>
+<p>Even more mesh editing tools can be enabled in the <em>用户首选项</em> &#8216;
+<em>Add-ons</em> section.</p>
+<p>For further information see <a class="reference internal" href="../../interface/editors/panels.html"><span class="doc">Panels</span></a>.</p>
+</div>
+<div class="section" id="properties-shelf">
+<h2>Properties Shelf<a class="headerlink" href="#properties-shelf" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id6">
+<img alt="../../_images/editmode-properties-split.jpg" src="../../_images/editmode-properties-split.jpg" />
+<p class="caption"><span class="caption-text">The Properties Shelf panel in edit mode (panel split in two parts for layout reasons).</span></p>
+</div>
+<p>Open/close the <em>Properties Shelf</em> using <code class="kbd docutils literal"><span class="pre">N</span></code>.</p>
+<p>In the <em>Properties Shelf</em>,
+panels directly related to mesh editing are the <em>变换</em> panel,
+where numeric values can be entered, and the <em>Mesh Display</em> panel,
+where for example normals and numeric values for distances, angles,
+and areas can be turned on.</p>
+<p>其他 useful tools are found in the <em>Properties Editor</em> under the
+<em>Object</em> and <em>Object Data</em> tabs,
+including display options and <em>Vertex groups</em>.</p>
+<div class="section" id="mesh-display">
+<h3>Mesh Display<a class="headerlink" href="#mesh-display" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id7">
+<img alt="../../_images/modeling_meshes_display.png" src="../../_images/modeling_meshes_display.png" />
+<p class="caption"><span class="caption-text">Mesh Display Panel.</span></p>
+</div>
+<p>This panel is available only in edit mode, when the object being edited is a mesh.</p>
+<p>The Overlays section provides controls for highlighting parts of the mesh.</p>
+<dl class="docutils">
+<dt>Edges</dt>
+<dd>Toggles the option to see the selected edges highlighted.
+If enabled the edges that have both vertices selected will be highlighted
+This only affects in vertex selection mode and when
+<a class="reference internal" href="../../editors/uv_image/uv_editing/unwrapping.html"><span class="doc">UV Unwrapping</span></a>.</dd>
+<dt>Faces</dt>
+<dd>Defines if the selected faces will be highlighted in the
+<a class="reference internal" href="../../editors/3dview/display/index.html"><span class="doc">3D视图</span></a>.
+This affects all selection modes.</dd>
+<dt>Creases and Bevel Weight</dt>
+<dd>Highlights edges marked with a crease weight for the
+<a class="reference internal" href="../modifiers/generate/subsurf.html"><span class="doc">Subdivision Surface Modifier</span></a>
+and/or a bevel weight for the <a class="reference internal" href="../modifiers/generate/bevel.html"><span class="doc">Bevel Modifier</span></a>,
+respectively. In both cases, the higher the weight, the brighter the highlight.</dd>
+<dt>Seams and Sharp</dt>
+<dd>Highlights edges marked as an UV seam for unwrapping and/or sharp edges for the
+<a class="reference internal" href="../modifiers/generate/edge_split.html"><span class="doc">Edge Split Modifier</span></a></dd>
+</dl>
+<p>Normals Section:</p>
+<p>We can choose to show or not the normals of faces and/or vertices using the Face and Vertex tick boxes,
+under the Normals section. In addition, we can define the size of these with Normal Size.</p>
+<p>The <em>Numerics</em> section allows users to see some numerical measures of the selected elements on screen:</p>
+<dl class="docutils">
+<dt>Edge Length</dt>
+<dd>shows the lenghts, in Blender units, of the selected edges.</dd>
+<dt>Face Angles and Face Area</dt>
+<dd>show the angles (in degrees) and area (in square Blender units) of the selected faces.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mesh_structures.html" class="btn btn-neutral float-right" title="Vertices, Edges and Faces" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="网格" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

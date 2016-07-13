@@ -1,0 +1,819 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing Bone Properties &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Skeleton Sketching" href="sketching.html"/>
+        <link rel="prev" title="Editing Bones" href="bones.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bones/index.html">Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bones.html">Editing Bones</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Editing Bone Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="templating.html">Armature Templating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Editing Bone Properties</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/armatures/editing/properties.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-bone-properties">
+<h1>Editing Bone Properties<a class="headerlink" href="#editing-bone-properties" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">In this page, you will learn how to edit and control most of the properties for Blender bones -
+For editing bones in an armature,
+you should read the <a class="reference internal" href="bones.html"><span class="doc">previous page</span></a> first.
+We will see how to manage the bones&#8217; relationships (<a class="reference internal" href="#chain-editing">Chain Editing</a>), rename them (<a class="reference internal" href="#naming-bones">Naming Bones</a>), etc.</p>
+</div>
+<div class="section" id="transforming-bones">
+<h2>变换ing Bones<a class="headerlink" href="#transforming-bones" title="Permalink to this headline">¶</a></h2>
+<p>We won&#8217;t detail here the various transformations of bones, nor things like axis locking, 轴心点s, and so on,
+as they are common to most object editing, and already described
+<a class="reference internal" href="../../../editors/3dview/transform/transform_control/index.html"><span class="doc">here</span></a>
+(note however, that some options, like snapping, do not seem to work, even though they are available...).
+The same goes for mirroring,
+as it&#8217;s nearly the same as with <a class="reference internal" href="../../../modeling/meshes/editing/deforming/mirror.html"><span class="doc">mesh editing</span></a>.
+Just keep in mind that bones&#8217; roots and tips behave more or less like meshes&#8217; vertices,
+and bones themselves act like edges in a mesh.</p>
+<p>As you know, bones can have two types of relationships: They can be parented,
+and in addition connected. Parented bones behave in <em>编辑模式</em> exactly as if they
+had no relations - you can grab, rotate, scale, etc.
+a parent bone without affecting its descendants. However,
+connected bones must always have parent&#8217;s tips connected to child&#8217;s roots,
+so by transforming a bone, you will affect all its connected parent/children/siblings.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/riggingtransformpropertiespaneleditmode.jpg"><img alt="../../../_images/riggingtransformpropertiespaneleditmode.jpg" src="../../../_images/riggingtransformpropertiespaneleditmode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">The 变换 Properties panel for armatures in 编辑模式.</span></p>
+</div>
+<p>Finally, you can edit in the <em>变换 Properties</em> panel <code class="kbd docutils literal"><span class="pre">N</span></code>
+the positions and radius of both ends of the active selected bone,
+as well as its <a class="reference internal" href="#armature-bone-roll"><span class="std std-ref">roll rotation</span></a>.</p>
+<div class="section" id="radius-and-scaling-in-envelope-visualization">
+<h3>Radius and Scaling in Envelope Visualization<a class="headerlink" href="#radius-and-scaling-in-envelope-visualization" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式, Envelope visualization</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ 变换 ‣ Scale</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">S</span></code></div>
+</div>
+</div>
+<p>When bones are displayed using <em>Octahedron</em>, <em>Stick</em> or <em>B-Bone</em> visualizations,
+scaling will behave as expected, similar to scaling mesh objects.
+When bones are displayed using <em>Envelope</em> visualization, scaling will have a different effect:
+it will scale the radius of the selected bones&#8217;s ends. (see: <a class="reference internal" href="../../skinning/index.html"><span class="doc">skinning part</span></a>).
+As you control only one value (the radius), there is no axis locking here. And as usual, with connected bones,
+you scale at the same time the radius of the parent&#8217;s tip and of the children&#8217;s roots.</p>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Scaling of a bone in <em>Octahedron</em> and <em>Envelope</em> visualizations.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodewholebone.jpg"><img alt="../../../_images/riggingboneselectexeditmodewholebone.jpg" src="../../../_images/riggingboneselectexeditmodewholebone.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A single selected bone...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/riggingbonescalingexeditmodeoctahedron.jpg"><img alt="../../../_images/riggingbonescalingexeditmodeoctahedron.jpg" src="../../../_images/riggingbonescalingexeditmodeoctahedron.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">...Scaled in Octahedron visualization.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg"><img alt="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg" src="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A single selected bone...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/riggingbonescalingexeditmodeenvelope2.jpg"><img alt="../../../_images/riggingbonescalingexeditmodeenvelope2.jpg" src="../../../_images/riggingbonescalingexeditmodeenvelope2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">...Scaled in Envelope visualization - its length remains the same, but its ends&#8217; radius are bigger.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that when you resize a bone (either by directly scaling it,
+or by moving one of its ends), Blender automatically adjusts the end-radii of its envelope
+proportionally to the size of the modification. Therefore,
+it is advisable to place all the bones first, and only then edit these properties.</p>
+</div>
+<div class="section" id="scaleb-and-envelope">
+<h3>ScaleB and Envelope<a class="headerlink" href="#scaleb-and-envelope" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-S</span></code></div>
+</div>
+</div>
+<p><code class="kbd docutils literal"><span class="pre">Ctrl-Alt-S</span></code> activates a transform tool that is specific to armatures.
+It has different behavior depending on the active visualization, as explained below:</p>
+<p>In <em>Envelope</em> visualization, it allows you to edit the influence of the selected bones
+(their <em>Dist</em> property, see the <a class="reference internal" href="../../skinning/index.html"><span class="doc">skinning part</span></a>) -
+as with the &#8220;standard&#8221; scaling with this visualization (see the previous section),
+this is a one-value property, so there is no axis locking and such.</p>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Envelope scaling example</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg"><img alt="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg" src="../../../_images/riggingbonescalingexeditmodeenvelope1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A single bone selected in Envelope visualization.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/riggingbonealtscalingexeditmodeenvelope.jpg"><img alt="../../../_images/riggingbonealtscalingexeditmodeenvelope.jpg" src="../../../_images/riggingbonealtscalingexeditmodeenvelope.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Its envelope scaled with <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-S</span></code>.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In the other visualizations, it allows you to edit the &#8220;bone size&#8221;.
+This seems to only have a visible effect in <em>B-Bone</em> visualization, but is available
+also with <em>Octahedron</em> and <em>Stick</em> ... This tool in this situation has
+another specific behavior: While with other transform tools,
+the &#8220;local axes&#8221; means the object&#8217;s axes, here they are the bone&#8217;s own axes
+(when you lock to a local axis, by pressing the relevant key twice,
+the constraint is applied along the selected bone&#8217;s local axis,
+not the armature object&#8217;s axis).</p>
+<table border="1" class="docutils" id="id10">
+<caption><span class="caption-text">&#8220;Bone size&#8221; scaling example</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../_images/riggingbonealtscalingexeditmodebbone1.jpg"><img alt="../../../_images/riggingbonealtscalingexeditmodebbone1.jpg" src="../../../_images/riggingbonealtscalingexeditmodebbone1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">A single &#8220;default size&#8221; bone selected in B-Bone visualization.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../_images/riggingbonealtscalingexeditmodebbone2.jpg"><img alt="../../../_images/riggingbonealtscalingexeditmodebbone2.jpg" src="../../../_images/riggingbonealtscalingexeditmodebbone2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Its size scaled with <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-S</span></code>.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../_images/riggingbonealtscalingexobjectmodebbone.jpg"><img alt="../../../_images/riggingbonealtscalingexobjectmodebbone.jpg" src="../../../_images/riggingbonealtscalingexobjectmodebbone.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">The same armature in 物体模式 and B-Bone visualization, with Bone.004&#8217;s size scaled up.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="bone-direction">
+<h2>Bone Direction<a class="headerlink" href="#bone-direction" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Specials ‣ Switch Direction</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W-3</span></code></div>
+</div>
+</div>
+<p>This tool is not available from the <em>Armature</em> menu,
+but only from the <em>Specials</em> pop-up menu <code class="kbd docutils literal"><span class="pre">W</span></code>.
+It allows you to switch the direction of the selected bones (i.e.
+their root will become their tip, and vice versa).</p>
+<p>Switching the direction of a bone will generally break the chain(s) it belongs to.
+However, if you switch a whole (part of a) chain, the switched bones will still be parented/connected,
+but in &#8220;reversed order&#8221;. See the Fig. <a class="reference internal" href="#fig-rig-properties-switch"><span class="std std-ref">Switching example.</span></a>.</p>
+<table border="1" class="docutils" id="id14">
+<span id="fig-rig-properties-switch"></span><caption><span class="caption-text">Switching example.</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
+<a class="reference internal image-reference" href="../../../_images/riggingboneswitchexeditmode1.jpg"><img alt="../../../_images/riggingboneswitchexeditmode1.jpg" src="../../../_images/riggingboneswitchexeditmode1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">An armature with one selected bone, and one selected chain of three bones, just before switching.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id16">
+<a class="reference internal image-reference" href="../../../_images/riggingboneswitchexeditmode2.jpg"><img alt="../../../_images/riggingboneswitchexeditmode2.jpg" src="../../../_images/riggingboneswitchexeditmode2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The selected bones have been switched. Bone.005 is no more connected nor parented to anything.
+The chain of switched bones still exists, but reversed (Now Bone.002 is its root, and Bone is its tip).
+Bone.003 is now a free bone.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bone-roll">
+<span id="armature-bone-roll"></span><h2>Bone Roll<a class="headerlink" href="#bone-roll" title="Permalink to this headline">¶</a></h2>
+<p>In <em>编辑模式</em>, you can control of the bones roll
+(i.e. the rotation around the Y axis of the bone).</p>
+<p>However, after editing the armature, or when using <a class="reference internal" href="../../../glossary/index.html#term-euler-rotation"><span class="xref std std-term">euler rotation</span></a>,
+you may want to set the bone roll.</p>
+<div class="section" id="set-bone-roll">
+<h3>Set Bone Roll<a class="headerlink" href="#set-bone-roll" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Bone Roll ‣ Set</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-R</span></code></div>
+</div>
+</div>
+<p>This is a transform mode where you can edit the roll of all selected bones.</p>
+</div>
+<div class="section" id="recalculate-bone-roll">
+<h3>Recalculate Bone Roll<a class="headerlink" href="#recalculate-bone-roll" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Bone Roll ‣ Recalculate</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-N</span></code></div>
+</div>
+</div>
+<dl class="docutils">
+<dt>Axis Orientation</dt>
+<dd><dl class="first last docutils">
+<dt>Local (X,Z) Tangent</dt>
+<dd>Align roll relative to the axis defined by the bone and it&#8217;s parent.</dd>
+<dt>Global (X,Y,Z) Axis</dt>
+<dd>Align roll to global X,Y,Z axis.</dd>
+<dt>Active Bone</dt>
+<dd>Follow the rotation of the active bone.</dd>
+<dt>View Axis</dt>
+<dd>Set the roll to align with the view-port.</dd>
+<dt>Cursor</dt>
+<dd>Set the roll towards the 3D cursor.</dd>
+</dl>
+</dd>
+<dt>Flip Axis</dt>
+<dd>Reverse the axis direction.</dd>
+<dt>Shortest Rotation</dt>
+<dd>Avoids rolling the bone over 90 degrees from its current value.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="properties">
+<span id="armature-bone-properties"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Armature</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Bone 设置 ‣ ...</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-W</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-W</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-W</span></code></div>
+</div>
+</div>
+<div class="figure" id="id17">
+<a class="reference internal image-reference" href="../../../_images/riggingeditingcxtarmaturebonespaneleditmode.jpg"><img alt="../../../_images/riggingeditingcxtarmaturebonespaneleditmode.jpg" src="../../../_images/riggingeditingcxtarmaturebonespaneleditmode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">The Armature Bones panel in 编辑模式.</span></p>
+</div>
+<p>Most bones&#8217; properties (excepted the transform ones) are regrouped in each bone&#8217;s sub-panel,
+in the <em>Armature Bones</em> panel in <em>编辑模式</em>. Let us detail them.</p>
+<p>Note that some of them are also available in the 3D视图s,
+through the three pop-up menus within the same entry:</p>
+<ul class="simple">
+<li><em>Toggle Setting</em>: <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> or <span class="menuselection">Armature ‣ Bone 设置 ‣ Toggle a Setting</span></li>
+<li><em>Enable Setting</em>: <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-W</span></code> or <span class="menuselection">Armature ‣ Bone 设置 ‣ Enable a Setting</span></li>
+<li><em>Disable Setting</em>: <code class="kbd docutils literal"><span class="pre">Alt-W</span></code> or <span class="menuselection">Armature ‣ Bone 设置 ‣ Disable a Setting</span></li>
+</ul>
+<dl class="docutils">
+<dt>BO</dt>
+<dd>The bone name field, see <a class="reference internal" href="#naming-bones">Naming Bones</a>.</dd>
+<dt>child of</dt>
+<dd>These two settings control the bone relationship, as detailed in
+<a class="reference internal" href="#chain-editing">Chain Editing</a>.</dd>
+<dt>Segm</dt>
+<dd>This setting controls the number of segments that a bone has; see
+<a class="reference internal" href="#bone-rigidity">Bone Rigidity</a>.</dd>
+<dt>Dist, Weight, Deform</dt>
+<dd><p class="first">(also <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> <span class="menuselection">‣ (Deform, ...)</span>), Mult
+(also <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> <span class="menuselection">‣ (Mult VG, ...)</span>)</p>
+<p class="last">These settings control how the bone influences its geometry - along with the bones&#8217; ends radius.
+This will be detailed in the <a class="reference internal" href="../../skinning/index.html"><span class="doc">skinning part</span></a>.</p>
+</dd>
+<dt>Hinge</dt>
+<dd><p class="first">(also <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> <span class="menuselection">‣ (Hinge, ...)</span>), S
+(also <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> <span class="menuselection">‣ (No Scale, ...)</span>)</p>
+<p class="last">These settings affect the behavior of children bones while transforming their parent in <em>姿态模式</em>,
+so this will be detailed in the <a class="reference internal" href="../../posing/index.html"><span class="doc">posing part</span></a> !</p>
+</dd>
+<dt>Hide</dt>
+<dd>This will hide the bone (same as pressing <code class="kbd docutils literal"><span class="pre">H</span></code> in the 3D视图s;
+see <a class="reference internal" href="../visualization.html#armature-bone-hide"><span class="std std-ref">this page</span></a>).</dd>
+<dt>Lock</dt>
+<dd>(also <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> <span class="menuselection">‣ (Locked, ...)</span>)
+This will prevent all editing of the bone in <em>编辑模式</em>;
+see <a class="reference internal" href="bones.html"><span class="doc">previous page</span></a>.</dd>
+<dt>Layers button</dt>
+<dd>These small buttons allow you to control to which bone layer this bone belongs;
+see <a class="reference internal" href="../visualization.html#armature-layers"><span class="std std-ref">this page</span></a>.</dd>
+</dl>
+</div>
+<div class="section" id="bone-rigidity">
+<span id="armature-bone-rigid"></span><h2>Bone Rigidity<a class="headerlink" href="#bone-rigidity" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Edit and 姿态模式</div>
+<div class="line">Panel:    Armature</div>
+</div>
+</div>
+<div class="figure" id="id18">
+<a class="reference internal image-reference" href="../../../_images/riggingeditingcxtarmaturebonespanelposemode.jpg"><img alt="../../../_images/riggingeditingcxtarmaturebonespanelposemode.jpg" src="../../../_images/riggingeditingcxtarmaturebonespanelposemode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">The Armature Bones panel in 姿态模式.</span></p>
+</div>
+<p>Even though you have the <em>Segm</em> setting available in <em>编辑模式</em>
+(bones sub-panel, in the <em>Armature Bones</em> panel),
+you should switch to the <em>姿态模式</em> <code class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></code> to edit these &#8220;smooth&#8221;
+bones&#8217; properties - one explanation to this strange need is that in <em>编辑模式</em>,
+even in <em>B-Bone</em> visualization, bones are drawn as sticks,
+so you cannot visualize the effects of these settings.</p>
+<div class="figure" id="id19">
+<a class="reference internal image-reference" href="../../../_images/riggingbbonesegmentexposemode.jpg"><img alt="../../../_images/riggingbbonesegmentexposemode.jpg" src="../../../_images/riggingbbonesegmentexposemode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">An armature in 姿态模式, B-Bone visualization: Bone.003 has one segment,
+Bone.004 has four, and Bone.005 has sixteen.</span></p>
+</div>
+<p>We saw in <a class="reference internal" href="../bones/index.html"><span class="doc">this page</span></a> that bones are made
+of small rigid segments mapped to a &#8220;virtual&#8221; Bézier curve.
+The <em>Segm</em> numeric field allows you to set the number of segments inside a given bone - by default,
+it is set to 1, which gives a standard rigid bone. The higher this setting (max is 32), the smoother the bone,
+but the heavier the pose calculations...</p>
+<p>Each bone&#8217;s ends are mapped to its &#8220;virtual&#8221; Bézier curve&#8217;s
+<a class="reference internal" href="../../../modeling/curves/introduction.html#curve-handle-type-auto"><span class="std std-ref">&#8220;auto&#8221;</span></a>
+handle. Therefore, you cannot control their direction,
+but you can change their &#8220;length&#8221; using the <em>In</em> and <em>Out</em> numeric fields,
+to control the &#8220;root handle&#8221; and &#8220;tip handle&#8221; of the bone, respectively.
+These values are proportional to the default length, which of course automatically varies depending on bone length,
+angle with previous/next bones in the chain, and so on.</p>
+<table border="1" class="docutils" id="id20">
+<caption><span class="caption-text">Bone In/Out settings example, with a materialized Bézier curve.</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id21">
+<a class="reference internal image-reference" href="../../../_images/riggingbboneinoutex1.jpg"><img alt="../../../_images/riggingbboneinoutex1.jpg" src="../../../_images/riggingbboneinoutex1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Look at Bone.004: it has the default In and Out values (1.0).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id22">
+<a class="reference internal image-reference" href="../../../_images/riggingbboneinoutex2.jpg"><img alt="../../../_images/riggingbboneinoutex2.jpg" src="../../../_images/riggingbboneinoutex2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bone.004 with In at 2.0, and Out at 0.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="chain-editing">
+<span id="armature-bone-chain-edit"></span><h2>Chain Editing<a class="headerlink" href="#chain-editing" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Armature</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Parent ‣ ...</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-P</span></code></div>
+</div>
+</div>
+<p>You can edit the relationships between bones (and hence create/modify the chains of bones)
+both from the 3D视图s and the Properties editor. Whatever method you prefer,
+it&#8217;s always a matter of deciding, for each bone, if it has to be parented to another one,
+and if so, if it should be connected to it.</p>
+<p>To parent and/or connect bones, you can:</p>
+<ul>
+<li><p class="first">In a 3D视图, select the bone and <em>then</em> its future parent, and press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>
+(or <span class="menuselection">Armature ‣ Parent ‣ Make Parent...</span>).
+In the small <em>Make Parent</em> menu that pops up, choose <em>Connected</em>
+if you want the child to be connected to its parent, else click on <em>Keep Offset</em>.
+If you have selected more than two bones, they will all be parented to the last selected one.
+If you only select one already-parented bone, or all selected bones are already parented to the last selected one,
+your only choice is to connect them, if not already done.
+If you select only one non-parented bone, you will get the <em>Need selected bone(s)</em> error message...</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With this method, the newly-children bones won&#8217;t be scaled nor rotated -
+they will just be translated if you chose to connect them to their parent&#8217;s tip.</p>
+</div>
+</li>
+<li><p class="first">In the Properties editor, <em>Armature Bones</em> panel, for each selected bone,
+you can select its parent in the <em>Parent</em> drop-down list to the upper right corner of its sub-panel.
+If you want them to be connected, just enable the little <em>Con</em> button to the right of the list.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With this method, the tip of the child bone will never be translated -
+so if <em>Con</em> is enabled, the child bone will be completely transformed by the operation.</p>
+</div>
+</li>
+</ul>
+<table border="1" class="docutils" id="id23">
+<caption><span class="caption-text">Parenting example.</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id24">
+<a class="reference internal image-reference" href="../../../_images/riggingbonerelationshipexeditmode1.jpg"><img alt="../../../_images/riggingbonerelationshipexeditmode1.jpg" src="../../../_images/riggingbonerelationshipexeditmode1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The starting armature, with Bone.005 parented and connected to Bone.004.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id25">
+<a class="reference internal image-reference" href="../../../_images/riggingbonerelationshipexeditmode4.jpg"><img alt="../../../_images/riggingbonerelationshipexeditmode4.jpg" src="../../../_images/riggingbonerelationshipexeditmode4.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bone.005 re-parented to Bone.002, but not connected to it
+(same result, using either <code class="kbd docutils literal"><span class="pre">Ctrl-P-2</span></code> in 3D视图, or the Armature Bones panel settings).</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id26">
+<a class="reference internal image-reference" href="../../../_images/riggingbonerelationshipexeditmode2.jpg"><img alt="../../../_images/riggingbonerelationshipexeditmode2.jpg" src="../../../_images/riggingbonerelationshipexeditmode2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bone.005 parented and connected to Bone.002, using <code class="kbd docutils literal"><span class="pre">Ctrl-P-1</span></code> in 3D视图.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id27">
+<a class="reference internal image-reference" href="../../../_images/riggingbonerelationshipexeditmode3.jpg"><img alt="../../../_images/riggingbonerelationshipexeditmode3.jpg" src="../../../_images/riggingbonerelationshipexeditmode3.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bone.005 parented and connected to Bone.002, using the Parent drop-down list of Bone.005 sub-panel.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>To disconnect and/or free bones, you can:</p>
+<ul class="simple">
+<li>In a 3D视图, select the desired bones, and press <code class="kbd docutils literal"><span class="pre">Alt-P</span></code>
+(or <span class="menuselection">Armature ‣ Parent ‣ Clear Parent...</span>).
+In the small <em>Clear Parent</em> menu that pops up, choose <em>Clear Parent</em> to completely free all selected bones,
+or <em>Disconnect Bone</em> if you just want to break their connections.</li>
+<li>In the Properties editor, <em>Armature Bones</em> panel, for each selected bone, you can select no parent in the
+<em>Parent</em> drop-down list of its sub-panel, to free it completely.
+If you just want to disconnect it from its parent, disable the <em>Con</em> button.</li>
+</ul>
+<p>Note that relationships with non-selected children are never modified.</p>
+</div>
+<div class="section" id="naming-bones">
+<span id="armature-editing-naming-bones"></span><h2>Naming Bones<a class="headerlink" href="#naming-bones" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Armature, 变换 Properties (3D视图, <code class="kbd docutils literal"><span class="pre">N</span></code>)</div>
+</div>
+</div>
+<p>You can rename your bones, either using the <em>Bone</em> field of the <em>变换 Properties</em>
+panel in the 3D视图s, for the active bone <code class="kbd docutils literal"><span class="pre">N</span></code>,
+or using the <em>BO</em> field in each bone sub-panel of the <em>Armature Bones</em> panel
+in <em>编辑模式</em>.</p>
+<p>Blender also provides you some tools that take advantage of bones named in a left/right
+symmetry fashion, and others that automatically name the bones of an armature.
+Let us look at this in detail.</p>
+<div class="section" id="naming-conventions">
+<span id="armature-editing-naming-conventions"></span><h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id28">
+<a class="reference internal image-reference" href="../../../_images/ie_bonesname.jpg"><img alt="../../../_images/ie_bonesname.jpg" src="../../../_images/ie_bonesname.jpg" style="width: 440px;" /></a>
+<p class="caption"><span class="caption-text">An example of left/right bone naming in a simple rig.</span></p>
+</div>
+<p>Naming conventions in Blender are not only useful for you in finding the right bone,
+but also to tell Blender when any two of them are counterparts.</p>
+<p>In case your armature can be mirrored in half (i.e. it&#8217;s bilaterally symmetrical),
+it&#8217;s worthwhile to stick to a left/right naming convention.
+This will enable you to use some tools that will probably save you time and effort
+(like the <em>X-Axis Mirror</em> editing tool we saw above...).</p>
+<ul>
+<li><p class="first">First you should give your bones meaningful base-names, like &#8220;leg&#8221;, &#8220;arm&#8221;, &#8220;finger&#8221;, &#8220;back&#8221;, &#8220;foot&#8221;, etc.</p>
+</li>
+<li><p class="first">If you have a bone that has a copy on the other side (a pair), like an arm,
+give it one of the following separators:</p>
+<ul class="simple">
+<li>Left/right separators can be either the second position
+&#8220;L<strong>_</strong>calfbone&#8221; or last-but-one &#8220;calfbone<strong>.</strong>R&#8221;</li>
+<li>If there is a lower or upper case &#8220;L&#8221;, &#8220;R&#8221;, &#8220;left&#8221; or &#8220;right&#8221;, Blender handles the counterpart correctly.
+See below for a list of valid separators.
+Pick one and stick to it as close as possible when rigging; it will pay off.</li>
+</ul>
+<blockquote>
+<div><p>例子s of valid saparators:</p>
+<blockquote>
+<div><ul class="simple">
+<li>(nothing): handLeft &#8211;&gt; handRight</li>
+<li><code class="docutils literal"><span class="pre">_</span></code> (underscore): hand<strong>_</strong>L &#8211;&gt; hand<strong>_</strong>R</li>
+<li><code class="docutils literal"><span class="pre">.</span></code> (dot): hand<strong>.</strong>l &#8211;&gt; hand<strong>.</strong>r</li>
+<li><code class="docutils literal"><span class="pre">-</span></code> (dash): hand<strong>-</strong>l &#8211;&gt; hand<strong>-</strong>r</li>
+<li>`` `` (space): hand LEFT &#8211;&gt; hand RIGHT</li>
+</ul>
+<p>Note that all examples above are also valid with the left/right part placed before the name.
+You can only use the short &#8220;L&#8221;/ &#8220;R&#8221; code if you use a separator (i.e. &#8220;handL&#8221;/ &#8220;handR&#8221; won&#8217;t work!).</p>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first">Before Blender handles an armature for mirroring or flipping,
+it first removes the number extension, e.g. &#8221;.001&#8221;.</p>
+</li>
+<li><p class="first">You can copy a bone named &#8220;bla.L&#8221; and flip it over using <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ Flip Left-Right Names</span>.
+Blender will name the copy &#8220;bla.L.001&#8221; and flipping the name will give you &#8220;bla.R&#8221;.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="bone-name-flipping">
+<h3>Bone name flipping<a class="headerlink" href="#bone-name-flipping" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Flip Left &amp; Right Names</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W-4</span></code></div>
+</div>
+</div>
+<p>You can flip left/right markers (see above) in selected bone names,
+using either <span class="menuselection">Armature ‣ Flip Left &amp; Right Names</span>,
+or <span class="menuselection">Specials ‣ Flip Left-Right Names</span>, <code class="kbd docutils literal"><span class="pre">W-4</span></code>.
+This can be useful if you have constructed half of a symmetrical rig
+(marked for a left or right side) and duplicated and mirrored it,
+and want to update the names for the new side.
+Blender will swap text in bone names according to the above naming conventions,
+and remove number extensions if possible.</p>
+</div>
+<div class="section" id="auto-bone-naming">
+<h3>Auto bone naming<a class="headerlink" href="#auto-bone-naming" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ AutoName Left-Right</span>,
+<span class="menuselection">Armature ‣ AutoName Front-Back</span>, <span class="menuselection">Armature ‣ AutoName Top-Bottom</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W-5</span></code>, <code class="kbd docutils literal"><span class="pre">W-6</span></code>, <code class="kbd docutils literal"><span class="pre">W-7</span></code></div>
+</div>
+</div>
+<p>The three <em>AutoName</em> entries of the <em>Armature</em> and <em>Specials</em>
+<code class="kbd docutils literal"><span class="pre">W</span></code> menus allows you to automatically add a suffix to all selected bones, based
+on the position of their root relative to the armature center and its local coordinates :</p>
+<dl class="docutils">
+<dt>AutoName Left-Right</dt>
+<dd>will add the &#8221;.L&#8221; suffix to all bones with a <em>positive</em> X-coordinate root,
+and the &#8221;.R&#8221; suffix to all bones with a <em>negative</em> X-coordinate root.
+If the root is exactly at 0.0 on the X-axis, the X-coordinate of the tip is used.
+If both ends are at 0.0 on the X-axis, the bone will just get a period suffix, with no &#8220;L&#8221;/ &#8220;R&#8221;
+(as Blender cannot decide whether it is a left or right bone...).</dd>
+<dt>AutoName Front-Back</dt>
+<dd>will add the &#8221;.Bk&#8221; suffix to all bones with a <em>positive</em> Y-coordinate root,
+and the &#8221;.Fr&#8221; suffix to all bones with a <em>negative</em> Y-coordinate root.
+The same as with <em>AutoName Left-Right</em> goes for 0.0 Y-coordinate bones...</dd>
+<dt>AutoName Top-Bottom</dt>
+<dd>will add the &#8221;.Top&#8221; suffix to all bones with a <em>positive</em> Z-coordinate root,
+and the &#8221;.Bot&#8221; suffix to all bones with a <em>negative</em> Z-coordinate root.
+The same as with <em>AutoName Left-Right</em> goes for 0.0 Z-coordinate bones...</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sketching.html" class="btn btn-neutral float-right" title="Skeleton Sketching" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bones.html" class="btn btn-neutral" title="Editing Bones" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

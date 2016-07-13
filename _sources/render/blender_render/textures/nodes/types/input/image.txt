@@ -1,0 +1,31 @@
+
+**********
+图像 Node
+**********
+
+.. figure:: /images/texture-nodes-image.jpg
+   :align: right
+
+   图像 node.
+
+
+The image node can be used to load an external image.
+
+Inputs
+======
+
+This node has no inputs.
+
+
+Properties
+==========
+
+图像
+   See :ref:`ui-data_block`.
+
+
+Outputs
+=======
+
+Color
+   Standard color output.

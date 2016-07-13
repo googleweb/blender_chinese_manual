@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Materials" href="index.html"/>
+        <link rel="next" title="Assigning a Material" href="assigning_a_material.html"/>
+        <link rel="prev" title="Materials" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Materials</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assigning_a_material.html">Assigning a Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiple_materials.html">Multiple Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">Material Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">Material 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="special_effects/index.html">Special Material Effects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Materials</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/blender_render/materials/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>A material defines the artistic qualities of the substance that an object is made of.
+In its simplest form, you can use materials to show the substance an object is made of,
+or to &#8220;paint&#8221; the object with different colors. Usually,
+the substance is represented by its surface qualities (color, shininess, reflectance, etc.)
+but it can also exhibit more complicated effects such as transparency,
+diffraction and sub-surface scattering. Typical materials might be brass, skin, glass, or linen.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/materials_demo.jpg"><img alt="../../../_images/materials_demo.jpg" src="../../../_images/materials_demo.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Various basic materials (single, multiple material, transparency, vertex paint).</span></p>
+</div>
+<p>The basic (un-textured) Blender material is uniform across each face of an object
+(although the various pixels of each face of the object may appear differently because of lighting effects).
+However, different faces of the object may use different materials
+(see <a class="reference internal" href="multiple_materials.html"><span class="doc">Multiple Materials</span></a>).</p>
+<p>In Blender, materials can (optionally) have associated textures.
+Textures <em>describe</em> the substance: e.g. <em>polished</em> brass,
+<em>dirty</em> glass or <em>embroidered</em> linen. The <a class="reference internal" href="../textures/index.html"><span class="doc">Textures</span></a>
+chapter describes how to add textures to materials.</p>
+<div class="section" id="how-materials-work">
+<h2>How Materials Work<a class="headerlink" href="#how-materials-work" title="Permalink to this headline">¶</a></h2>
+<p>Before you can understand how to design effectively with materials, you must understand how
+simulated light and surfaces interact in Blender&#8217;s rendering engine and how material settings
+control those interactions.
+A deep understanding of the engine will help you to get the most from it.</p>
+<p>The rendered image you create with Blender is a projection of the scene onto an imaginary
+surface called the <em>viewing plane</em>.
+The viewing plane is analogous to the film in a traditional camera,
+or the rods and cones in the human eye, except that it receives simulated light,
+not real light.</p>
+<p>To render an image of a scene we must first determine what light from the scene is arriving at
+each point on the viewing plane.
+The best way to answer this question is to follow a straight line (the simulated light ray)
+backwards through that point on the viewing plane and the focal point
+(the location of the camera) until it hits a renderable surface in the scene,
+at which point we can determine what light would strike that point.</p>
+<p>The surface properties and incident light angle tells how much of that light would be
+reflected back along the incident viewing angle <em>(渲染ing engine basic principle)</em>.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/matgen01.jpg" src="../../../_images/matgen01.jpg" />
+<p class="caption"><span class="caption-text">渲染ing engine basic principle.</span></p>
+</div>
+<p>Two basic types of phenomena take place at any point on a surface when a light ray strikes it:
+diffusion and specular reflection. Diffusion and specular reflection are distinguished from
+each other mainly by the relationship between the incident light angle and the reflected light
+angle.</p>
+<p>The shading (or coloring) of the object during render will then take into account the base color
+(as modified by the diffusion and specular reflection phenomenon) and the light intensity.</p>
+<p>Using the internal ray tracer, other (more advanced) phenomena could occur.
+In ray-traced reflections, the point of a surface struck by a light ray will return the color
+of its surrounding environment, according to the rate of reflection of the material
+(mixing the base color and the surrounding environment&#8217;s) and the viewing angle.</p>
+<p>On the other hand, in ray-traced refractions, the point of a surface struck by a light ray
+will return the color of its background environment, according to the rate of transparency
+(mixing the base color and the background environment&#8217;s along with its optional filtering
+value) of the material and the optional index of refraction of the material,
+which will distort the viewing angle.</p>
+<p>Of course, shading of the object hit by a light ray will be about mixing all these phenomena
+at the same time during the rendering. The appearance of the object, when rendered,
+depends on many inter-related settings:</p>
+<ul class="simple">
+<li>World (Ambient color, Radiosity, Ambient Occlusion)</li>
+<li>Lights</li>
+<li>Material settings (including ambient, emission, and every other setting on every panel in that tab)</li>
+<li>Texture(s) and how they are mixed</li>
+<li>Material 节点</li>
+<li>相机</li>
+<li>Viewing angle</li>
+<li>Obstructions and transparent occlusions</li>
+<li>Shadows from other opaque/transparent objects</li>
+<li>渲染 settings</li>
+<li>Object dimensions (SS settings are relevant to dimensions)</li>
+<li>Object shape (refractions, Fresnel effects)</li>
+</ul>
+</div>
+<div class="section" id="using-materials">
+<h2>Using Materials<a class="headerlink" href="#using-materials" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Check your 渲染</p>
+<p class="last">When designing materials (and textures and lighting), frequently check the rendered appearance of your scene,
+using your chosen render engine/shader settings.
+The appearance might be quite different from that shown in the texture display in the 3D panel.</p>
+</div>
+<p>As stated above, the material settings usually determine the surface properties of the object.
+There are several ways in which materials can be set up in Blender. Generally speaking, these
+are not compatible - you must choose which method you are going to use for each particular
+object in your scene.</p>
+<ol class="arabic simple">
+<li>First, you can set the <a class="reference internal" href="properties/introduction.html"><span class="doc">Properties</span></a>
+in the various Material panels.</li>
+<li>Second, you can use <a class="reference internal" href="nodes/index.html"><span class="doc">节点</span></a>;
+a graphical nodes editor is available.</li>
+<li>Last, you can directly set the color of object surfaces using various special effects. Strictly speaking,
+these are not materials at all, but they are included here because they affect the appearance of your objects.
+These include <a class="reference internal" href="../../../painting_sculpting/painting/vertex_paint/index.html#painting-vertex-index"><span class="std std-ref">Vertex Painting</span></a>,
+<a class="reference internal" href="special_effects/wire.html"><span class="doc">Wire 渲染ing</span></a>,
+<a class="reference internal" href="special_effects/volume.html"><span class="doc">Volume 渲染ing</span></a>,
+and <a class="reference internal" href="special_effects/halo.html"><span class="doc">Halo 渲染ing</span></a>.</li>
+</ol>
+<p>The exact effect of Material settings can be affected by a number of system settings.
+First and foremost is the 渲染 Engine used - Cycles and the Blender 渲染 Engine
+(aka Blender Internal or BI)
+require quite different illumination levels to achieve similar results,
+and even then the appearance of objects can be quite different. Also,
+the material properties settings can be affected by the texture method used (Single Texture,
+Multitexture or GLSL). So it is recommended to always select the appropriate system settings
+before starting the design of materials.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assigning_a_material.html" class="btn btn-neutral float-right" title="Assigning a Material" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Materials" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

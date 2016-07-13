@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Basics" href="basics/index.html"/>
+        <link rel="prev" title="Editing" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/index.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normals.html">Normals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertices.html">Vertex Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edges.html">Edge Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">Face Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deforming/index.html">Deforming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">Duplicating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">Subdividing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cleanup.html">Mesh Clean-up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misc.html">Miscellaneous Editing Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/meshes/editing/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Blender provides a variety of tools for editing meshes.
+These are available through the <em>Mesh Tools</em> palette,
+the Mesh menu in the 3D视图 header, and context menus in the 3D视图,
+as well as individual shortcut keys.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All the &#8220;transform precision/snap&#8221; keys <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> and/ or <code class="kbd docutils literal"><span class="pre">Shift</span></code>
+work also for all these advanced operations... However, most of them do not have
+<a class="reference internal" href="../../../editors/3dview/transform/transform_control/precision/axis_locking.html"><span class="doc">axis locking</span></a> possibilities,
+and some of them do not take into account
+<a class="reference internal" href="../../../editors/3dview/transform/transform_control/pivot_point/index.html"><span class="doc">轴心点</span></a> and/or
+<a class="reference internal" href="../../../editors/3dview/transform/transform_control/transform_orientations.html"><span class="doc">transform orientation</span></a>
+either.</p>
+</div>
+<p>These transform tools are available in the <em>变换</em> section of the
+<em>Mesh</em> menu in the menu bar.
+Note that some of these can also be used on other editable objects, like curves, surfaces,
+and lattices.</p>
+<div class="section" id="types-of-tools">
+<h2>Types of Tools<a class="headerlink" href="#types-of-tools" title="Permalink to this headline">¶</a></h2>
+<p>The mesh tools are found in various places, and available through shortcuts as well.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="basics/index.html"><span class="doc">变换 and Deform tools</span></a>:</p>
+<ul class="simple">
+<li>Translate</li>
+<li>Rotate</li>
+<li>Scale</li>
+<li>Mirror</li>
+<li>Shrink/Flatten/Along Normal</li>
+<li>Push/Pull</li>
+<li>To Sphere</li>
+<li>Shear</li>
+<li>Warp</li>
+<li>Edge Slide</li>
+<li>Vertex Slide</li>
+<li>Noise</li>
+<li>Smooth Vertex</li>
+<li>Rotate Edge</li>
+</ul>
+<p><a class="reference internal" href="basics/deleting.html"><span class="doc">Merge and Remove tools</span></a>:</p>
+<ul class="last simple">
+<li>Delete</li>
+<li>Dissolve</li>
+<li>Merge</li>
+<li>Auto-Merge</li>
+<li>Remove Doubles</li>
+<li>Tris to Quads</li>
+<li>Unsubdivide</li>
+</ul>
+</td>
+<td><p class="first"><a class="reference internal" href="duplicating/introduction.html"><span class="doc">Add and Divide tools</span></a>:</p>
+<ul class="simple">
+<li>Make Edge/Face</li>
+<li>Fill</li>
+<li>Beauty Fill</li>
+<li>Solidify</li>
+<li>Quads to Tris</li>
+<li>Extrude Region</li>
+<li>Extrude Individual</li>
+<li>Subdivide</li>
+<li>Loop Cut/Slide</li>
+<li>Knife tool</li>
+<li>Vertex connect</li>
+<li>Duplicate</li>
+<li>Spin</li>
+<li>Screw</li>
+<li>Symmetrize</li>
+<li>Inset</li>
+<li>Bevel</li>
+<li>Wireframe</li>
+</ul>
+<p><a class="reference internal" href="subdividing/introduction.html"><span class="doc">Separate tools</span></a>:</p>
+<ul class="last simple">
+<li>Rip</li>
+<li>Rip fill</li>
+<li>Split</li>
+<li>Separate</li>
+<li>Edge Split</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="accessing-mesh-tools">
+<h2>Accessing Mesh Tools<a class="headerlink" href="#accessing-mesh-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mesh-tools-palette">
+<h3>Mesh Tools Palette<a class="headerlink" href="#mesh-tools-palette" title="Permalink to this headline">¶</a></h3>
+<p>When you select a mesh and <code class="kbd docutils literal"><span class="pre">Tab</span></code> into edit mode,
+the <em>Tool Shelf</em> changes from <em>Object Tools</em> to <em>Mesh Tools</em>.
+These are only some of the mesh editing tools.</p>
+</div>
+<div class="section" id="menus">
+<h3>Menus<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Mesh</em> is located in the Header bar.
+Some of the menus can be accessed with shortcuts:
+<code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code> brings up the Face tool menu
+<code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code> brings up the Edge tool menu
+<code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code> brings up the Vertex tool menu</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basics/index.html" class="btn btn-neutral float-right" title="Basics" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

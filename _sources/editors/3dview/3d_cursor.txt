@@ -1,0 +1,77 @@
+
+*********
+3D游标
+*********
+
+The 3D游标 is simply a point in 3D space which can be used for a number of purposes
+
+
+Placement
+=========
+
+There are a few methods to position the 3D cursor.
+
+
+Direct Placement with the Mouse
+-------------------------------
+
+.. figure:: /images/editors_3dview_transform-control_pivot-point_3d-cursor_two-view-positioning.jpg
+   :align: center
+
+   Positioning the 3D cursor with two orthogonal views.
+
+
+Using :kbd:`LMB` in the 3D area will place the 3D cursor directly under your mouse pointer.
+
+For accuracy you should use two perpendicular orthogonal 3D视图s, i.e.
+any combination of top :kbd:`Numpad7`, front :kbd:`Numpad1` and side :kbd:`Numpad3`.
+That way you can control the positioning along two axes in one view and determine depth in the second view.
+
+To place the 3D游标 on the surface of geometry,
+enable *Cursor Depth* in the :doc:`用户首选项 </preferences/interface>`
+
+
+Using the Snap Menu
+-------------------
+
+The *Snap* menu :menuselection:`Object/Mesh --> Snap`, :kbd:`Shift-S`
+will allow you to snap the cursor in the following ways:
+
+
+Cursor to Selected
+   Snaps the cursor to the center of the current selection.
+Cursor to Center
+   Snaps the cursor to the origin of the scene (location 0,0,0).
+Cursor to Grid
+   Snaps the cursor to the nearest *visible* grid lines.
+Cursor to Active
+   Snaps the cursor to the *active* (last selected) object, edge, face or vertex.
+
+The *Cursor to Selected* option is also affected by the current :ref:`pivot-point`. For example:
+
+ - With the *边界盒中心* 轴心点 active,
+   the *Cursor to Selected* option will snap the 3D cursor to the
+   center of the bounding box surrounding the objects' centers.
+ - When the *质心点* 轴心点 is selected,
+   *Cursor to Selected* will snap the 3D cursor to the
+   `median <https://en.wikipedia.org/wiki/Median>`__ of the object centers.
+
+
+Numeric Input
+-------------
+
+.. figure:: /images/editors_3dview_transform-control_pivot-point_3d-cursor_view-properties.jpg
+
+   The 3D游标 panel of the Properties shelf.
+
+
+The 3D cursor can also be positioned by entering Numeric location values into the *3D cursor*
+panel of the *Properties* shelf :kbd:`N`.
+
+
+用法
+=====
+
+Todo.
+
+.. TODO: uses (placement of objects, moving objects, modeling tools...)

@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Display and View Panels &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Display Options" href="index.html"/>
+        <link rel="next" title="Shading" href="shading.html"/>
+        <link rel="prev" title="Display Options" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变换</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="index.html">Display Options</a> &raquo;</li>
+      
+    <li>Display and View Panels</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/3dview/display/panels.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="display-and-view-panels">
+<h1>Display and View Panels<a class="headerlink" href="#display-and-view-panels" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="display-panel">
+<h2>Display Panel<a class="headerlink" href="#display-panel" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Only 渲染</dt>
+<dd><p class="first">Displays only items that will be rendered.</p>
+<p>This can be is useful to preview how animations look without being distracted by
+rigs, empties, lights &amp; cameras.</p>
+<p>Useful to enable for <a class="reference internal" href="../../../render/opengl.html"><span class="doc">OpenGL 渲染</span></a>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>While the option displays the regular view-port without distracting elements,
+the objects displayed are <strong>not</strong> matching the final render output.</p>
+<p class="last">Options such as restrict-render, modifiers render option,
+dupli-parents and render layers are not taken into account.</p>
+</div>
+</dd>
+<dt>Outline Selected</dt>
+<dd>If disabled, the pink outline around your selected objects in
+<em>Solid</em>, <em>Shaded</em>, <em>Textured</em> draw types will no longer be displayed.</dd>
+<dt>All Object Origins</dt>
+<dd>If enabled, the center dot of objects will always be visible, even for non-selected ones
+(by default, unselected centers might be hidden by geometry in solid/shaded/textured shadings).</dd>
+<dt>Relationship Lines</dt>
+<dd>Controls whether the dashed parenting, constraining, hooking, etc., lines are drawn.</dd>
+<dt>Grid Floor</dt>
+<dd><p class="first">If disabled, you have no grid in other views than the orthographic top/front/side ones.</p>
+<dl class="last docutils">
+<dt>X Axis, Y Axis, Z Axis</dt>
+<dd>Control which axes are shown in other views than the orthographic top/front/side ones.</dd>
+<dt>Lines</dt>
+<dd>Controls the number of lines that make the grid in non-top/front/side orthographic views, in both directions.</dd>
+<dt>Scale</dt>
+<dd>Control the scale of the grid floor</dd>
+<dt>Subdivisions</dt>
+<dd>Controls the number of sub-lines that appear in each cell of the grid when you zoom in,
+so it is a setting specific to top/front/side orthographic views.</dd>
+</dl>
+</dd>
+<dt>Toggle Quad View</dt>
+<dd>Toggles the four window 3D视图.
+<a class="reference internal" href="../../../interface/editors/arranging_areas.html"><span class="doc">Read more about arranging areas</span></a></dd>
+</dl>
+</div>
+<div class="section" id="view-panel">
+<h2>View Panel<a class="headerlink" href="#view-panel" title="Permalink to this headline">¶</a></h2>
+<p>The <em>View Properties</em> panel lets you set other settings regarding the 3D视图.
+You can show it with the <span class="menuselection">View ‣ View Properties...</span> menu entry.</p>
+<dl class="docutils">
+<dt>Lens</dt>
+<dd>Control the focal length of the 3D视图 camera in millimeters,
+unlike a <a class="reference internal" href="../object/types/camera/index.html"><span class="doc">rendering camera</span></a></dd>
+<dt>Lock to Object</dt>
+<dd>By entering the name of an object in the <em>Object</em> field, you lock your view to this object, i.e.
+it will always be at the center of the view (the only exception is the active camera view, <code class="kbd docutils literal"><span class="pre">Numpad0</span></code>).
+If the locked object is an armature,
+you can further center the view on one of its bones by entering its name in the <em>Bone</em> field.</dd>
+<dt>Lock to Cursor</dt>
+<dd>Lock the center of the view to the position of the 3D cursor</dd>
+</dl>
+<dl class="docutils" id="dview-lock-camera-to-view">
+<dt>Lock 相机 to View</dt>
+<dd>When in camera view, use this option to move the camera in 3D space, while continuing to remain in camera view.</dd>
+</dl>
+<dl class="docutils" id="dview-view-clip">
+<dt>Clip Start and Clip End</dt>
+<dd><p class="first">Adjust the minimum and maximum distances to be visible for the view-port.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>A large clipping range will allow you to see both near and far objects,
+but reduces the depth precision resulting in artifacts.</p>
+<p class="last">See <a class="reference internal" href="../../../troubleshooting/3d_view.html#troubleshooting-depth"><span class="std std-ref">问题排查 Depth Buffer Glitches</span></a> for more information.</p>
+</div>
+</dd>
+<dt>Local 相机</dt>
+<dd>Active camera used in this view</dd>
+<dt>渲染 Border</dt>
+<dd>Use a 渲染 Border when not looking through a camera.
+Using <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> to draw a border region will automatically enable this option.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shading.html" class="btn btn-neutral float-right" title="Shading" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Display Options" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Selecting &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Bones" href="index.html"/>
+        <link rel="next" title="Bones" href="properties.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Bones</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html">Bones</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="index.html">Bones</a> &raquo;</li>
+      
+    <li>Selecting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/armatures/bones/selecting.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="selecting">
+<h1>Selecting<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    <span class="menuselection">Bone</span> panel</div>
+</div>
+</div>
+<p>You can select and edit bones of armatures in <em>编辑模式</em> and in <em>姿态模式</em>.
+Here, we will see how to select bones in <em>编辑模式</em>.
+Selecting bones in <em>姿态模式</em> is similar to selecting in <em>编辑模式</em>
+with a few specific differences that will be detailed in the <a class="reference internal" href="../../posing/editing.html"><span class="doc">posing part</span></a>.</p>
+<p>Similar to <a class="reference internal" href="../../../modeling/meshes/selecting/introduction.html"><span class="doc">vertices/edges selection</span></a> in meshes,
+there are two ways to select whole bones in <em>编辑模式</em>:</p>
+<ul class="simple">
+<li>directly, by selecting the bone&#8217;s body</li>
+<li>selecting both of its end points (root and tip)</li>
+</ul>
+<p>This is an important point to understand,
+because selecting bones&#8217; ends only might lead to non-obvious behavior,
+with respect to which bone you actually select, see the.</p>
+<p>Note that unlike the mesh draw type the armature draw type has no effect on selection
+behavior. In other words,
+you can select a bone&#8217;s end or body the same way regardless of the bone visualization chosen.</p>
+<div class="section" id="selecting-bones-ends">
+<h2>Selecting bones&#8217; ends<a class="headerlink" href="#selecting-bones-ends" title="Permalink to this headline">¶</a></h2>
+<p>To select bones&#8217; ends you have the standard selection methods.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">action</th>
+<th class="head">shortcut</th>
+<th class="head">menu</th>
+<th class="head">mouse</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Select a bone&#8217;s end</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><code class="kbd docutils literal"><span class="pre">RMB</span></code> -click on it</td>
+</tr>
+<tr class="row-odd"><td>Add or Remove from the current selection</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code></td>
+</tr>
+<tr class="row-even"><td>(De)select the ends of all bones</td>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code></td>
+<td><span class="menuselection">Select ‣ Select/Deselect All</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Invert the current selection</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></td>
+<td><span class="menuselection">Select ‣ Inverse</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Box selection tool activated</td>
+<td><code class="kbd docutils literal"><span class="pre">B</span></code></td>
+<td><span class="menuselection">Select ‣ Border Select</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Box selection</td>
+<td><div class="first last line-block">
+<div class="line">Click and drag <code class="kbd docutils literal"><span class="pre">LMB</span></code> the box around the ends you want to add to the current selection</div>
+<div class="line">Click and drag <code class="kbd docutils literal"><span class="pre">LMB</span></code> to remove from the current selection</div>
+<div class="line">release <code class="kbd docutils literal"><span class="pre">LMB</span></code> to validate</div>
+<div class="line">press <code class="kbd docutils literal"><span class="pre">Esc</span></code> or click <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel</div>
+</div>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Box selection tool deactivated</td>
+<td><code class="kbd docutils literal"><span class="pre">B</span></code> or <code class="kbd docutils literal"><span class="pre">Esc</span></code></td>
+<td>&nbsp;</td>
+<td><code class="kbd docutils literal"><span class="pre">RMB</span></code></td>
+</tr>
+<tr class="row-odd"><td>Lasso selection</td>
+<td><div class="first last line-block">
+<div class="line">Click and drag <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> the lasso around the ends you want to add to the current selection</div>
+<div class="line">Click and drag <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-LMB</span></code> to remove from the current selection</div>
+<div class="line">Release <code class="kbd docutils literal"><span class="pre">LMB</span></code> to validate</div>
+<div class="line">Hit <code class="kbd docutils literal"><span class="pre">Esc</span></code> or click <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel</div>
+</div>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="inverse-selection">
+<h3>Inverse selection<a class="headerlink" href="#inverse-selection" title="Permalink to this headline">¶</a></h3>
+<p>As stated above, you have to remember that these selection tools are for bones&#8217; ends only,
+not the bones&#8217; bodies.</p>
+<p>For example, the <em>Inverse</em> selection option <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code>
+inverts the selection of bones&#8217; ends, not of bones (see <em>Inverse selection</em>).</p>
+<p>Remember that a bone is selected only if both its ends are selected. So,
+when the selection status of bones&#8217; ends is inverted, a new set of bones is selected.</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Inverse selection</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodetwobones.jpg"><img alt="../../../_images/riggingboneselectexeditmodetwobones.jpg" src="../../../_images/riggingboneselectexeditmodetwobones.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Two bones selected.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodethreeboneends.jpg"><img alt="../../../_images/riggingboneselectexeditmodethreeboneends.jpg" src="../../../_images/riggingboneselectexeditmodethreeboneends.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The result of the inverse selection <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code> the bones ends selection has been inverted,
+and not the bones selection.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="selecting-connected-bones-ends">
+<h3>Selecting connected bones&#8217; ends<a class="headerlink" href="#selecting-connected-bones-ends" title="Permalink to this headline">¶</a></h3>
+<p>Another example is: when you select the root of a bone connected to its parent,
+you also implicitly select the tip of its parent (and vice versa).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that when selecting bones&#8217; ends,
+the tip of the parent bone is the &#8220;same thing&#8221; as the root of its children bones.</p>
+</div>
+</div>
+</div>
+<div class="section" id="selecting-bones">
+<h2>Selecting Bones<a class="headerlink" href="#selecting-bones" title="Permalink to this headline">¶</a></h2>
+<p>By <code class="kbd docutils literal"><span class="pre">RMB</span></code> -clicking on a bone&#8217;s body, you will select it
+(and hence you will implicitly select its root and tip).</p>
+<p>To each selected bone corresponds a in the <em>Armature</em> tab.
+These sub-panels contain settings for some of the bones&#8217; properties (regarding e.g.
+relationships between bones, bones&#8217; influence on deformed geometry, etc.),
+as we will see later.</p>
+<p>Using <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>, you can add to/remove from the selection.</p>
+<p>You also have some <em>advanced selection</em> options, based on their relations.</p>
+<p>You can select at once all the bones in the chain which the active (last selected)
+bone belongs to by using the <em>linked selection</em> tool, <code class="kbd docutils literal"><span class="pre">L</span></code>.</p>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">Linked bones selection</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodewholebone.jpg"><img alt="../../../_images/riggingboneselectexeditmodewholebone.jpg" src="../../../_images/riggingboneselectexeditmodewholebone.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A single selected bone.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodewholechain.jpg"><img alt="../../../_images/riggingboneselectexeditmodewholechain.jpg" src="../../../_images/riggingboneselectexeditmodewholechain.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Its whole chain selected with <code class="kbd docutils literal"><span class="pre">L</span></code>.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can deselect the active bone and select its immediate parent or
+one of its children using respectively
+<span class="menuselection">Select ‣ Select Parent</span>, <code class="kbd docutils literal"><span class="pre">[</span></code> or
+<span class="menuselection">Select ‣ Select Child</span>, <code class="kbd docutils literal"><span class="pre">]</span></code>.
+If you prefer to keep the active bone in the selection,
+use <span class="menuselection">Select ‣ Extend Select Parent</span>, <code class="kbd docutils literal"><span class="pre">Ctrl-[</span></code> or
+<span class="menuselection">Select ‣ Extend Select Child</span>, <code class="kbd docutils literal"><span class="pre">Ctrl-]</span></code>.</p>
+<div class="section" id="deselecting-connected-bones">
+<h3>Deselecting connected bones<a class="headerlink" href="#deselecting-connected-bones" title="Permalink to this headline">¶</a></h3>
+<p>There is a subtlety regarding connected bones.</p>
+<p>When you have several connected bones selected, if you deselect one bone,
+its tip will be deselected, but not its root, if it is also the tip of another selected bone.</p>
+<p>To understand this, look at Fig. :ref`fig-rig-bone-select-deselect`.</p>
+<table border="1" class="docutils" id="id7">
+<span id="fig-rig-bone-select-deselect"></span><caption><span class="caption-text">Bone deselection in a selected chain</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodewholechain.jpg"><img alt="../../../_images/riggingboneselectexeditmodewholechain.jpg" src="../../../_images/riggingboneselectexeditmodewholechain.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A selected chain.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/riggingboneselectexeditmodetwobones.jpg"><img alt="../../../_images/riggingboneselectexeditmodetwobones.jpg" src="../../../_images/riggingboneselectexeditmodetwobones.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Two selected bones.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>After <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> -clicking &#8220;Bone.003&#8221;:</p>
+<ul class="simple">
+<li>&#8220;Bone.003&#8221; &#8216;s tip (which is same as &#8220;Bone.004&#8221; &#8216;s root) is deselected</li>
+<li>&#8220;Bone&#8221; is &#8220;Bone.003&#8221; &#8216;s parent. Therefore &#8220;Bone.003&#8221; &#8216;s root is same as the tip of &#8220;Bone&#8221;.
+Since &#8220;Bone&#8221; is still selected, its tip is selected. Thus the root of &#8220;Bone.003&#8221; remains selected.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties.html" class="btn btn-neutral float-right" title="Bones" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

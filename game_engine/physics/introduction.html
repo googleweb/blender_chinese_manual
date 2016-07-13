@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Blender Game 物理 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="物理" href="index.html"/>
+        <link rel="next" title="World 物理" href="world.html"/>
+        <link rel="prev" title="物理" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">游戏引擎简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials.html">游戏材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logic/index.html">逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Blender Game 物理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-options">Global Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-physics">Object 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#physics-type">物理 Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#material-physics">Material 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constraints">Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualizing-physics">Visualizing 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mesh-deformations">Mesh Deformations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digging-deeper">Digging Deeper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recording-to-keyframes">Recording to Keyframes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting">Exporting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">World 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="using_ge.html">Converting 游戏引擎 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/index.html">物理 Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">游戏引擎</a> &raquo;</li>
+      
+          <li><a href="index.html">物理</a> &raquo;</li>
+      
+    <li>Blender Game 物理</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/game_engine/physics/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="blender-game-physics">
+<h1>Blender Game 物理<a class="headerlink" href="#blender-game-physics" title="Permalink to this headline">¶</a></h1>
+<p>Blender includes advanced physics simulation in the form of the Bullet 物理 Engine
+(<a class="reference external" href="http://bulletphysics.org">Bullet 物理</a>).
+Most of your work will involve setting the right properties on the objects in your scene,
+then you can sit back and let
+the engine take over. The physics simulation can be used for Games, but also for 动画.</p>
+<p>The Blender 游戏引擎 (BGE) is based on Rigid-Body 物理,
+which differs significantly from the complementary set of
+tools available in the form of Soft Body 物理 Simulations. Though the BGE does have a Soft Body type, it is not
+nearly as nuanced as the non-BGE Soft Body.
+The inverse is even more true: it is difficult to get the non-BGE physics to
+resemble anything like a stiff shape.
+Rigid Body 物理 does not have, as an effect or a cause, any mesh deformations.
+For a discussion on how to partially overcome this, see:
+<a class="reference internal" href="#mesh-deformations">Mesh Deformations</a>.</p>
+<div class="section" id="global-options">
+<h2>Global Options<a class="headerlink" href="#global-options" title="Permalink to this headline">¶</a></h2>
+<p>The global 物理 Engine settings can be found in the <a class="reference internal" href="world.html"><span class="doc">World Properties</span></a>,
+which include the Gravity constant and some important engine performance tweaks.</p>
+</div>
+<div class="section" id="object-physics">
+<h2>Object 物理<a class="headerlink" href="#object-physics" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/bge-physics-propertiestabs.jpg" src="../../_images/bge-physics-propertiestabs.jpg" />
+</div>
+</div>
+<div class="section" id="physics-type">
+<span id="game-engine-physics-types"></span><h2>物理 Type<a class="headerlink" href="#physics-type" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="types/no_collision.html"><span class="doc">No Collision</span></a></dt>
+<dd>Is not affected by the simulation nor affects other objects.</dd>
+<dt><a class="reference internal" href="types/static.html"><span class="doc">Static</span></a></dt>
+<dd>Participates in the simulation, affecting other objects, but is not affected by it.</dd>
+<dt><a class="reference internal" href="types/dynamic.html"><span class="doc">Dynamic</span></a></dt>
+<dd>Object that can move besides colliding and being collided with.</dd>
+<dt><a class="reference internal" href="types/rigid_body.html"><span class="doc">Rigid Body</span></a></dt>
+<dd>Has rigid body dynamics.</dd>
+<dt><a class="reference internal" href="types/soft_body.html"><span class="doc">Soft Body</span></a></dt>
+<dd>Soft body dynamics.</dd>
+<dt><a class="reference internal" href="types/character.html"><span class="doc">Character Controller</span></a></dt>
+<dd>Character controller.</dd>
+<dt><a class="reference internal" href="types/vehicle.html"><span class="doc">Vehicle Controller</span></a></dt>
+<dd>Vehicle controller.</dd>
+<dt><a class="reference internal" href="types/occluder.html"><span class="doc">Occluder</span></a></dt>
+<dd>Prevents calculation of rendered objects (not their physics, though!).</dd>
+<dt><a class="reference internal" href="types/sensor.html"><span class="doc">Sensor</span></a></dt>
+<dd>Detects presence without restituting collisions.</dd>
+<dt><a class="reference internal" href="types/navigation_mesh.html"><span class="doc">Navigation Mesh</span></a></dt>
+<dd>To make pathfinding paths. Useful for Artificial Intelligence.</dd>
+</dl>
+</div>
+<div class="section" id="material-physics">
+<h2>Material 物理<a class="headerlink" href="#material-physics" title="Permalink to this headline">¶</a></h2>
+<p>物理 can be associated with a material on the material properties tab.
+These are settings that one would normally associate with a material,
+such has it&#8217;s friction and they are meant to be used in conjunction with the object physics
+settings, not replace it.</p>
+</div>
+<div class="section" id="constraints">
+<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h2>
+<p>It is imperative to understand that the Blender Constraints generally do not work inside the BGE.
+This means interesting effects such as <em>Copy Rotation</em> are unavailable directly.</p>
+<p>Your options include:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../editors/3dview/object/relationships/parents.html"><span class="doc">Parenting</span></a> - But not Vertex Parenting.</li>
+<li><a class="reference internal" href="../../rigging/constraints/relationship/rigid_body_joint.html"><span class="doc">Rigid Body Joint</span></a> -
+This is the one Constraint that you can set up through the UI that works in the BGE.
+It has several options, and can be very powerful - see ITS page for a detailed description and demo blend-file.
+Do not forget that you can loop through objects using <code class="docutils literal"><span class="pre">bpy</span></code> instead of clicking thousands of
+times to set up chains of these Constraints.</li>
+<li>Rigid Body Joints on the Fly -
+You can add/remove them after the BGE starts by using <code class="docutils literal"><span class="pre">bge.constraints.createConstraint()</span></code>.
+This can be good either to simply automate their setup, or to truly make them dynamic.
+A simple demo can be viewed in: <a class="reference external" href="https://wiki.blender.org/index.php/Media:BGE-物理-DynamicallyCreateConstraint.blend">BGE-物理-DynamicallyCreateConstraint.blend</a></li>
+<li><a class="reference external" href="/game_engine/logic/controllers/python">Python Controllers</a> - As always, in the BGE,
+you can get the most power when you drop into Python and start toying with the settings directly.
+For instance, the <em>Copy Rotation</em> mentioned above is not hard &#8211;
+All you have to do is something to the effect of <code class="docutils literal"><span class="pre">own.worldOrientation</span> <span class="pre">=</span>
+<span class="pre">bge.logic.getCurrentScene().objects['TheTargetObject'].worldOrientation</span></code></li>
+</ul>
+</div>
+<div class="section" id="visualizing-physics">
+<h2>Visualizing 物理<a class="headerlink" href="#visualizing-physics" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/bge-physics-visualization.jpg" src="../../_images/bge-physics-visualization.jpg" />
+</div>
+<p>Go to <span class="menuselection">Game ‣ Show 物理 Visualization</span> to show lines representing various attributes
+of the Bullet representation of your objects.
+Note that these might be easier to see when you turn on Wireframe Mode <code class="kbd docutils literal"><span class="pre">Z</span></code>
+before you press <code class="kbd docutils literal"><span class="pre">P</span></code>.
+Also note that you can see how the Bullet triangulation is working
+(it busts all your Quads to Tris at run-time, but the BGE meshes are still quads at run-time).</p>
+<ul class="simple">
+<li><em>RGB/XYZ Widget</em> - Representing the object&#8217;s Local Orientation and Origin.</li>
+<li><em>Green</em> - &#8220;sleeping meshes&#8221; that are not moving, saving calculations until an external event &#8220;wakes&#8221; it.</li>
+<li><em>White</em> - White lines represent active bounding meshes at are undergoing physics calculations,
+untill such calculations are so small that the object is put to rest.
+This is how you can see the effects of the <em>Collision Bounds</em>.
+- <em>Thick</em>, or <em>Many White Lines</em> - A compound collision mesh/meshes.</li>
+<li><em>Violet</em> - Bounding meshes for Soft bodies.</li>
+<li><em>Red</em> - The Bounding Box, the outer boundary of object.
+It is always aligned with global X Y and Z, and is used to optimize calculations.
+Also represents meshes that have been forced into &#8220;no sleep&#8221; status.</li>
+<li><em>Yellow</em> - Normals.</li>
+<li><em>Black</em> - When in wireframe, this is your mesh&#8217;s visual appearance.</li>
+</ul>
+<p>If you want finer-grained control over the display options,
+you can add this as a Python Controller and uncomment whichever pieces you want to see:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bge</span>
+<span class="n">debugs</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">bge</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">DBG_DRAWAABB</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">debugs</span><span class="p">:</span>
+   <span class="n">bge</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">setDebugMode</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For all debug modes, API docs for <code class="docutils literal"><span class="pre">bge.constraints</span></code>.</p>
+<div class="section" id="show-framerate-and-profile">
+<h3>Show Framerate and Profile<a class="headerlink" href="#show-framerate-and-profile" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id1">
+<img alt="../../_images/bge-physics_profilestats.jpg" src="../../_images/bge-physics_profilestats.jpg" />
+<p class="caption"><span class="caption-text">A shot of <a class="reference external" href="https://wiki.blender.org/index.php/Media:Manual-BGE-物理-DancingSticks.blend">Manual-BGE-物理-DancingSticks.blend</a> with
+[Game &#8211;&gt; Show Framerate and Profile] enabled</span></p>
+</div>
+<p>If you enable <span class="menuselection">Game ‣ Show Framerate and Profile</span>,
+it will put some statistics in the upper-left area of the game window.</p>
+<p>These can be very informative, but also a bit cryptic.
+Moguri has elaborated on their meanings, for us:
+<a class="reference external" href="https://mogurijin.wordpress.com/2012/01/03/bge-profile-stats-and-what-they-mean/">https://mogurijin.wordpress.com/2012/01/03/bge-profile-stats-and-what-they-mean/</a></p>
+</div>
+</div>
+<div class="section" id="mesh-deformations">
+<h2>Mesh Deformations<a class="headerlink" href="#mesh-deformations" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, Rigid Body physics do not affect mesh deformations,
+nor do they account for them in the physics model. This leaves you with a few options:</p>
+<div class="section" id="soft-bodies">
+<h3>Soft Bodies<a class="headerlink" href="#soft-bodies" title="Permalink to this headline">¶</a></h3>
+<p>You can try using a <a class="reference internal" href="types/soft_body.html"><span class="doc">Soft Body</span></a>,
+but these are fairly hard to configure well.</p>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>To use an <a class="reference internal" href="../logic/actuators/types/action.html"><span class="doc">Action Actuator</span></a>
+to do the deformation, you have to make a choice. If you use Shapekeys in the Action,
+you will be fine as far as the overall collisions (but see below for the note on <code class="docutils literal"><span class="pre">reinstance物理Mesh()</span></code>).
+The mesh itself is both a display and a physics mesh, so there is not much to configure.</p>
+<p>To use an Armature as the deformer will require a bit of extra thought and effort.
+Basically the Armature will only deform a mesh if the Armature is the parent of that mesh.
+But at that point, your mesh will lose its physics responsivenes, and only hang in the air
+(it&#8217;s copying the location/rotation of the Armature).
+To somewhat fix this you can then parent the Armature to a collision mesh
+(perhaps a simple box or otherwise very-low-poly mesh).
+This &#8220;Deformation Mesh&#8221; will be the physics representative, being type: Dynamic or Rigid Body,
+but it will be set to Invisible. Then &#8220;Display Mesh&#8221; will be the opposite set to <em>No Collision</em>,
+but visible. This still leaves the problem mentioned in the previous paragraph.</p>
+<p>When you deform a display mesh, it does not update the corresponding physics mesh.
+You can view this evidently when you
+enable physics visualization (<a class="reference internal" href="#visualizing-physics">Visualizing 物理</a>) - the collision bounds will remain exactly as when they began.
+To fix this, you must call <code class="docutils literal"><span class="pre">own.reinstance物理Mesh()</span></code> in some form.
+Currently this only works on <em>Triangle Mesh</em> bounds, not <em>Convex Hull</em>.
+We have prepared a demonstration file in
+<a class="reference external" href="https://wiki.blender.org/index.php/Media:Manual-BGE-物理-DancingSticks.blend">Manual-BGE-物理-DancingSticks.blend</a>.
+Note that we had to increase the
+<span class="menuselection">World ‣ 物理 ‣ 物理 Steps ‣ Substeps</span> to make the collisions work well.
+The more basic case is the case the Shapekeyed Action, which you can see in the back area of the scene.
+Since it is the only object involved, you can call <code class="docutils literal"><span class="pre">reinstance物理Mesh()</span></code> unadorned,
+and it will do the right thing.</p>
+<p>The more complicated case is the <span class="menuselection">Collision Mesh ‣ Armature ‣ Display Mesh</span> cluster,
+which you can see in the front of the scene.
+What it does in the blend-file is call <code class="docutils literal"><span class="pre">reinstance物理Mesh(viz)</span></code>,
+that is, passing in a reference to the visual mesh.
+If we tried to establish this relationship without the use of Python,
+we would find that Blender&#8217;s dependency check system would reject it as a cyclic setup.
+This is an example of where Blender&#8217;s checking is too coarsely-grained,
+as this circle is perfectly valid: the grandparent object (the Collision Mesh)
+controls the location/rotation, while the middle object (the Armature)
+receives the animated Action, where the child (the Display Mesh) receives the deformation,
+and passes that on up to the top, harmlessly. Something to note is that the Collision Mesh is
+merely a plane &#8211; that is all it requires for this,
+since it will be getting the mesh data from <code class="docutils literal"><span class="pre">viz</span></code>.</p>
+</div>
+<div class="section" id="ragdolls">
+<h3>Ragdolls<a class="headerlink" href="#ragdolls" title="Permalink to this headline">¶</a></h3>
+<p>A third option is to create your items out of many sub-objects, connected together with Rigid Body Joints or similar.
+This can be quite a bit more work, but the results can be much more like a realistic response to collisions.
+For an Add-on that can help you out in the process, check out the
+<a class="reference external" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Game_Engine/BRIK_ragdolls">Blender Ragdoll Implementation Kit</a>.</p>
+</div>
+</div>
+<div class="section" id="digging-deeper">
+<span id="game-engine-physics-bake-keyframes"></span><h2>Digging Deeper<a class="headerlink" href="#digging-deeper" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you will want to look at:</p>
+<ul class="simple">
+<li>The main Bullet 物理 page - <a class="reference external" href="http://bulletphysics.org/wordpress/">http://bulletphysics.org/wordpress/</a></li>
+<li>The Bullet Wiki - <a class="reference external" href="http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation">http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation</a></li>
+<li>The Bullet API Docs - <a class="reference external" href="http://www.continuousphysics.com/Bullet/BulletFull/index.html">http://www.continuousphysics.com/Bullet/BulletFull/index.html</a></li>
+<li>The Bullet Forums - <a class="reference external" href="http://www.bulletphysics.org/Bullet/phpBB3/">http://www.bulletphysics.org/Bullet/phpBB3/</a></li>
+</ul>
+</div>
+<div class="section" id="recording-to-keyframes">
+<h2>Recording to Keyframes<a class="headerlink" href="#recording-to-keyframes" title="Permalink to this headline">¶</a></h2>
+<p>Beyond gaming, sometimes you wish to render a complex scene that involves collisions,
+multiple forces, friction between multiple bodies,
+and air drag or even a simple setup that is just easier to achieve using the realtime physics.</p>
+<p>Blender provides a way to &#8216;&#8217;bake&#8217;&#8217; or &#8216;&#8217;record&#8217;&#8217; a physics simulation into keyframes
+allowing it then to be played as an action either for animation or games.
+Keep in mind that the result of this method is a recording, no longer a simulation.
+This means that the result is completely deterministic
+(the same everytime it is run) and unable to interact with
+new objects that are added to the physics simulation after it was recorded.
+This may, or not, be desired according to the situation.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/bge-physics-recordanimation.jpg" src="../../_images/bge-physics-recordanimation.jpg" />
+<p class="caption"><span class="caption-text">Menu to record Keyframes to the Dopesheet.</span></p>
+</div>
+<p>All you have to do to achieve this effect is go to the 信息编辑器
+(the bar at the top of the window) <span class="menuselection">Game ‣ Record 动画</span>,
+and it will lock away your keyframes for use in <em>Blender 渲染</em> mode.
+You can go back to the 3D视图 and press <code class="kbd docutils literal"><span class="pre">Alt-A</span></code> to play it back,
+or <code class="kbd docutils literal"><span class="pre">Ctrl-F12</span></code> to render it out as an animation.</p>
+<p>Note that you can also use Game 逻辑 Bricks and scripting. Everything will be recorded.</p>
+<div class="section" id="keyframe-clean-up">
+<h3>Keyframe Clean-up<a class="headerlink" href="#keyframe-clean-up" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<img alt="../../_images/bge-physics-dopesheetfull.jpg" src="../../_images/bge-physics-dopesheetfull.jpg" />
+<p class="caption"><span class="caption-text">Resulting recorded animation.</span></p>
+</div>
+<p><em>Record 动画</em> keys redundant data (data that was did not change relative to the last frame).
+Pressing <code class="kbd docutils literal"><span class="pre">O</span></code> while in the <em>DopeSheet</em> will remove all superfluous keyframes.
+Unwanted channels can also be removed.</p>
+<div class="figure" id="id4">
+<img alt="../../_images/bge-physics-dopesheetcleaned.jpg" src="../../_images/bge-physics-dopesheetcleaned.jpg" />
+<p class="caption"><span class="caption-text">Cleaned up recording.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="exporting">
+<h2>Exporting<a class="headerlink" href="#exporting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bullet-bullet-compatible-engines">
+<h3>.bullet / Bullet compatible engines<a class="headerlink" href="#bullet-bullet-compatible-engines" title="Permalink to this headline">¶</a></h3>
+<p>You can snapshot the physics world at any time with the following code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bge</span>
+<span class="n">bge</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">exportBulletFile</span><span class="p">(</span><span class="s2">&quot;test.bullet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will allow importing into other Bullet-based projects. See the
+<a class="reference external" href="http://bulletphysics.org/mediawiki-1.5.8/index.php/Bullet_binary_serialization">Bullet Wiki on
+Serialization</a> for more.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="world.html" class="btn btn-neutral float-right" title="World 物理" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="物理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

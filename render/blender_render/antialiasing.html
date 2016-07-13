@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Anti-Aliasing &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Blender 渲染 Engine" href="index.html"/>
+        <link rel="next" title="Post Processing" href="post_processing/index.html"/>
+        <link rel="prev" title="Motion Blur" href="motion_blur.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Anti-Aliasing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-size">Filter Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+    <li>Anti-Aliasing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/blender_render/antialiasing.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="anti-aliasing">
+<h1>Anti-Aliasing<a class="headerlink" href="#anti-aliasing" title="Permalink to this headline">¶</a></h1>
+<p>A computer generated image is made up of pixels;
+each pixel can of course only be a single color. In the rendering process the rendering engine
+must therefore assign a single color to each pixel on the basis of what object is shown in
+that pixel. This often leads to poor results, especially at sharp boundaries,
+or where thin lines are present, and it is particularly evident for oblique lines.</p>
+<p>To overcome this problem, which is known as <em>Aliasing</em>,
+it is possible to resort to an Anti-Aliasing technique. Basically,
+each pixel is &#8216;oversampled&#8217;, by rendering it as if it were five pixels or more,
+and assigning an &#8216;average&#8217; color to the rendered pixel.</p>
+<p>The buttons to control Anti-Aliasing, or OverSampling (OSA),
+are below the rendering button in the <em>渲染</em> Panel (<em>渲染 Panel.</em>).</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Anti-Aliasing (check box)</dt>
+<dd>Enables oversampling</dd>
+<dt>5, 8, 11, 16</dt>
+<dd>The number of samples to use. The values 5, 8, 11, 16 are preset numbers in specific sample patterns;
+a higher value produces better edges, but slows down the rendering.</dd>
+</dl>
+<p>By default, we use in Blender a fixed &#8220;Distributed Jitter&#8221; table. The samples within a pixel
+are distributed and jittered in a way that guarantees two characteristics:</p>
+<ul class="simple">
+<li>Each sample has equal distances to its neighbor samples</li>
+<li>The samples cover all sub-pixel positions equally, both horizontally and vertically</li>
+</ul>
+<p>The images below show Blender sample patterns for 5, 8, 11 and 16 samples.
+To show that the distribution is equalized over multiple pixels, the neighbor pixel patterns were drawn as well.
+Note that each pixel has an identical pattern.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<img alt="../../_images/oversampling-pattern-5.jpg" src="../../_images/oversampling-pattern-5.jpg" />
+<p class="caption"><span class="caption-text">5 samples.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<img alt="../../_images/oversampling-pattern-8.jpg" src="../../_images/oversampling-pattern-8.jpg" />
+<p class="caption"><span class="caption-text">8 samples.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<img alt="../../_images/oversampling-pattern-11.jpg" src="../../_images/oversampling-pattern-11.jpg" />
+<p class="caption"><span class="caption-text">11 samples.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<img alt="../../_images/oversampling-pattern-16.jpg" src="../../_images/oversampling-pattern-16.jpg" />
+<p class="caption"><span class="caption-text">16 samples.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Full Sample</dt>
+<dd>For every anti-aliasing sample, save the entire 渲染 Layer results.
+This solves anti-aliasing issues with compositing.</dd>
+</dl>
+</div>
+<div class="section" id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<p>When the samples have been rendered,
+we&#8217;ve got color and alpha information available per sample.
+It then is important to define how much each sample contributes to a pixel.</p>
+<p>The simplest method is to average all samples and make that the pixel color.
+This is called using a &#8220;Box Filter&#8221;. The disadvantage of this method is that it doesn&#8217;t take
+into account that some samples are very close to the edge of a pixel,
+and therefore could influence the color of the neighbor pixel(s) as well.</p>
+<p>Filter menu: Set The filter type to use to &#8216;average&#8217; the samples:</p>
+<dl class="docutils">
+<dt>Box</dt>
+<dd><p class="first">A low-quality box-shaped curve</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This filter is relatively low quality.
+you can see that only the samples within the pixel itself are added to the pixel&#8217;s color.
+For the other filters,
+the formula ensures that a certain amount of the sample color gets distributed over the other pixels as well.</p>
+</div>
+</dd>
+<dt>Tent</dt>
+<dd>A simplistic filter that gives sharp results</dd>
+<dt>Quadratic</dt>
+<dd>A Quadratic curve</dd>
+<dt>Cubic</dt>
+<dd>A Cubic curve</dd>
+<dt>Gauss</dt>
+<dd>Gaussian distribution, the most blurry</dd>
+<dt>Catmull-Rom</dt>
+<dd>Catmull-Rom filter, gives the most sharpening</dd>
+<dt>Mitchell-Netravali</dt>
+<dd>a good all-around filter that gives reasonable sharpness</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<img alt="../../_images/oversampling-graph-box.jpg" src="../../_images/oversampling-graph-box.jpg" />
+<p class="caption"><span class="caption-text">Box.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<img alt="../../_images/oversampling-graph-tent.jpg" src="../../_images/oversampling-graph-tent.jpg" />
+<p class="caption"><span class="caption-text">Tent.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<img alt="../../_images/oversampling-graph-quadratic.jpg" src="../../_images/oversampling-graph-quadratic.jpg" />
+<p class="caption"><span class="caption-text">Quadratic.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<img alt="../../_images/oversampling-graph-cubic.jpg" src="../../_images/oversampling-graph-cubic.jpg" />
+<p class="caption"><span class="caption-text">Cubic.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id9">
+<img alt="../../_images/oversampling-graph-gaussian.jpg" src="../../_images/oversampling-graph-gaussian.jpg" />
+<p class="caption"><span class="caption-text">Gaussian.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<img alt="../../_images/oversampling-graph-catmullrom.jpg" src="../../_images/oversampling-graph-catmullrom.jpg" />
+<p class="caption"><span class="caption-text">Catmull-Rom.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id11">
+<img alt="../../_images/oversampling-graph-mitchell-netravali.jpg" src="../../_images/oversampling-graph-mitchell-netravali.jpg" />
+<p class="caption"><span class="caption-text">Mitchell-Netravali.</span></p>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filter-size">
+<h2>Filter Size<a class="headerlink" href="#filter-size" title="Permalink to this headline">¶</a></h2>
+<p>Making the filter size value smaller will squeeze the samples more into the center,
+and blur the image more. A larger filter size makes the result sharper.
+Notice that the last two filters also have a negative part;
+this will give an extra sharpening result.</p>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/bi_aa02.jpg"><img alt="../../_images/bi_aa02.jpg" src="../../_images/bi_aa02.jpg" style="width: 630px;" /></a>
+</div>
+<div class="figure" id="id12">
+<a class="reference internal image-reference" href="../../_images/osa8_box.jpg"><img alt="../../_images/osa8_box.jpg" src="../../_images/osa8_box.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Box filter.</span></p>
+</div>
+<div class="figure" id="id13">
+<a class="reference internal image-reference" href="../../_images/osa8_tent.jpg"><img alt="../../_images/osa8_tent.jpg" src="../../_images/osa8_tent.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Tent filter.</span></p>
+</div>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../../_images/osa8_quad.jpg"><img alt="../../_images/osa8_quad.jpg" src="../../_images/osa8_quad.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Quadratic filter.</span></p>
+</div>
+<div class="figure" id="id15">
+<a class="reference internal image-reference" href="../../_images/osa8_cubic.jpg"><img alt="../../_images/osa8_cubic.jpg" src="../../_images/osa8_cubic.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Cubic filter.</span></p>
+</div>
+<div class="figure" id="id16">
+<a class="reference internal image-reference" href="../../_images/osa8_gauss.jpg"><img alt="../../_images/osa8_gauss.jpg" src="../../_images/osa8_gauss.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Gaussian filter.</span></p>
+</div>
+<div class="figure" id="id17">
+<a class="reference internal image-reference" href="../../_images/osa8_catrom.jpg"><img alt="../../_images/osa8_catrom.jpg" src="../../_images/osa8_catrom.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Catmull-Rom filter.</span></p>
+</div>
+<div class="figure" id="id18">
+<a class="reference internal image-reference" href="../../_images/osa8_mitch.jpg"><img alt="../../_images/osa8_mitch.jpg" src="../../_images/osa8_mitch.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">AA 8, Mitchell-Netravali filter.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="post_processing/index.html" class="btn btn-neutral float-right" title="Post Processing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="motion_blur.html" class="btn btn-neutral" title="Motion Blur" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

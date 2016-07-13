@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>变换 Orientations &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="变换控制" href="index.html"/>
+        <link rel="next" title="轴心点" href="pivot_point/index.html"/>
+        <link rel="prev" title="Proportional Edit" href="proportional_edit.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../index.html">变换</a> &raquo;</li>
+      
+          <li><a href="index.html">变换控制</a> &raquo;</li>
+      
+    <li>变换 Orientations</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/3dview/transform/transform_control/transform_orientations.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="transform-orientations">
+<h1>变换 Orientations<a class="headerlink" href="#transform-orientations" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object and 编辑模式s</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-Spacebar</span></code></div>
+</div>
+</div>
+<div class="figure align-right" id="id1">
+<img alt="../../../../_images/editors_3dview_orientations_menu.png" src="../../../../_images/editors_3dview_orientations_menu.png" />
+<p class="caption"><span class="caption-text">变换 Orientations Menu.</span></p>
+</div>
+<p>Orientations affect the behavior of 变换ations: Location, Rotation, and Scale.
+You will see an effect on the 3D Manipulator (the widget in the center of the selection),
+as well as on transformation constraints
+(like <a class="reference internal" href="precision/axis_locking.html"><span class="doc">axis locking</span></a>).
+This means that, when you press <code class="kbd docutils literal"><span class="pre">G-X</span></code>, it will constrain to the <em>global</em> X-axis,
+but if you press <code class="kbd docutils literal"><span class="pre">G-X-X</span></code> it will constrain to your <em>变换 Orientation</em> s X-axis.</p>
+<p>The Orientations options can be set on the 3D视图&#8217;s header (or &#8220;footer&#8221;,
+since it is at the bottom of the view by default),
+or with <code class="kbd docutils literal"><span class="pre">Alt-Spacebar</span></code> or through the <em>Orientation</em> menu in a 3D视图 header.</p>
+<p>In addition to the four built-in options,
+you can define your own custom orientation (see <a class="reference internal" href="#custom-orientations">Custom Orientations</a> below).</p>
+<div class="section" id="our-demo-cube">
+<h2>Our Demo Cube<a class="headerlink" href="#our-demo-cube" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../../_images/orientations-basicsetup.jpg" src="../../../../_images/orientations-basicsetup.jpg" />
+<p class="caption"><span class="caption-text">To demonstrate the various behaviors, we add some colors to the default cube,
+rotate it -15° along its local Z- and X Axes, and we scale its &#8220;y&#8221; face down.</span></p>
+</div>
+<p>Please note two things:</p>
+<ul class="simple">
+<li>The &#8220;Mini-axis&#8221; in the lower-left corner, which represents the Global X, Y, Z orientation.</li>
+<li>The <a class="reference internal" href="manipulators.html"><span class="doc">&#8220;Object Manipulator&#8221;</span></a>
+widget emanating from the selection, which represents the current 变换 Orientation.<ul>
+<li>If you click on one of the axes of the Manipulator with <code class="kbd docutils literal"><span class="pre">LMB</span></code>,
+it will allow you to constrain movement to only this direction.
+An example of a keyboard equivalent is <code class="kbd docutils literal"><span class="pre">G,</span> <span class="pre">Z,</span> <span class="pre">Z</span></code>.</li>
+<li>If you <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> click,
+it will lock the axis you clicked on and allow you to move in the plane of the two remaining axes.
+The keyboard analogue is <code class="kbd docutils literal"><span class="pre">G,</span> <span class="pre">Shift-Z,</span> <span class="pre">Shift-Z</span></code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="orientations">
+<h2>Orientations<a class="headerlink" href="#orientations" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Global</dt>
+<dd><div class="first figure align-right" id="id3">
+<img alt="../../../../_images/editors_3dview_transform_control-transform_orientations-01-global.jpg" src="../../../../_images/editors_3dview_transform_control-transform_orientations-01-global.jpg" />
+<p class="caption"><span class="caption-text">Global.</span></p>
+</div>
+<p>The manipulator matches the global axis.</p>
+<p class="last">When using the Global orientation, the orientation&#8217;s XYZ matches world&#8217;s XYZ axis.
+When this mode is selected,
+the local coordinates of the object are subjected to the Global coordinates.
+This is good to place objects in the scene. To constrain an axis,
+press <code class="kbd docutils literal"><span class="pre">G</span></code> and the desired axis. To constrain to a local axis,
+press the desired axis two times. The difference between Global and Local, is more noticeable
+when you have an object in which the origin is not located at the exact center of the object,
+and does not match the Global coordinates.</p>
+</dd>
+<dt>Local</dt>
+<dd><div class="first figure align-right" id="id4">
+<img alt="../../../../_images/editors_3dview_transform_control-transform_orientations-02-local.jpg" src="../../../../_images/editors_3dview_transform_control-transform_orientations-02-local.jpg" />
+<p class="caption"><span class="caption-text">Local.</span></p>
+</div>
+<p>The manipulator matches the object axis.</p>
+<p class="last">Notice that, here, the Manipulator is at a slight tilt
+(it is most visible on the object&#8217;s Y-axis, the green arrow).
+This is due to our 15° rotation of the object.
+This demonstrates the difference between local coordinates and global coordinates.
+If we had rotated the object 90° along its X-axis, we would see that the object&#8217;s &#8220;Up&#8221; is the
+world&#8217;s &#8220;Forward&#8221; &#8211; or the object&#8217;s Z-axis would now be the world&#8217;s Y-axis.
+This orientation has an effect on many parts of the interface,
+so it is important to understand the distinction.</p>
+</dd>
+</dl>
+<div class="lead container">
+</div>
+<dl class="docutils">
+<dt>Normal</dt>
+<dd><div class="first figure align-right" id="id5">
+<img alt="../../../../_images/editors_3dview_transform_control-transform_orientations-03-normal.jpg" src="../../../../_images/editors_3dview_transform_control-transform_orientations-03-normal.jpg" />
+<p class="caption"><span class="caption-text">Normal.</span></p>
+</div>
+<p>The Z-axis of the manipulator will match the normal vector of the selection.</p>
+<p>In 物体模式, this is equivalent to Local Orientation, in 编辑模式,
+it becomes more interesting.</p>
+<p>As you see, the light blue lines indicate the faces&#8217; normals,
+and the darker blue lines indicate the vertex normals (these were turned on in the
+<code class="kbd docutils literal"><span class="pre">N</span></code> Properties Panel under <span class="menuselection">Mesh Display ‣ Normals ‣ Face</span> and
+<em>Vertex</em>).
+Selecting any given face will cause our Manipulator&#8217;s Z-axis to align with that normal.
+The same goes for Vertex Select Mode.
+Edge Select is different &#8211; A selected Edge has the Z-axis aligned with it
+(so you will have to look at the Manipulator widget to determine the direction of X and Y).
+If you select several elements, it will orient towards the average of those normals.</p>
+<p class="last">A great example of how this is useful is in Vertex Select Mode: Pick a vertex and then do
+<code class="kbd docutils literal"><span class="pre">G,</span> <span class="pre">Z,</span> <span class="pre">Z</span></code> to tug it away from the mesh and shove it into the mesh.
+To make this even more useful, select a nearby vertex and press <code class="kbd docutils literal"><span class="pre">Shift-R</span></code> to repeat
+the same movement &#8211; except along that second vertex&#8217;s normal instead.</p>
+</dd>
+<dt>Gimbal</dt>
+<dd><div class="first figure align-right" id="id6">
+<img alt="../../../../_images/editors_3dview_transform_control-transform_orientations-04-gimbal.jpg" src="../../../../_images/editors_3dview_transform_control-transform_orientations-04-gimbal.jpg" />
+<p class="caption"><span class="caption-text">Gimbal.</span></p>
+</div>
+<p>Gimbal&#8217;s behavior highly depends on the current <a class="reference internal" href="../basics/rotate.html"><span class="doc">Rotation Mode</span></a>
+(accessible in the <code class="kbd docutils literal"><span class="pre">N</span></code> Properties Panel in the <em>3D视图</em>, in top section, <em>变换</em>).</p>
+<dl class="last docutils">
+<dt>XYZ Euler</dt>
+<dd>The manipulator handles are aligned to the euler axis,
+allowing you to see the discreet XYZ axis underlying the euler rotation,
+as well as possible <a class="reference internal" href="../../../../glossary/index.html#term-gimbal-lock"><span class="xref std std-term">gimbal lock</span></a>.</dd>
+<dt>Axis Angle</dt>
+<dd>The X, Y, and Z coordinates define a point relative to the object origin
+through which an imaginary &#8220;skewer&#8221; passes.
+The <em>w</em> value is the rotation of this skewer. Here, the Manipulator&#8217;s Z-axis stays aligned with this skewer.</dd>
+<dt>Quaternion</dt>
+<dd>Though Quaternion rotation is very different from the Euler and Axis Angle rotation modes,
+the Manipulator behaves the same as in <em>Local</em> mode.</dd>
+</dl>
+</dd>
+<dt>View</dt>
+<dd><div class="first figure align-right" id="id7">
+<img alt="../../../../_images/editors_3dview_transform_control-transform_orientations-05-view.jpg" src="../../../../_images/editors_3dview_transform_control-transform_orientations-05-view.jpg" />
+<p class="caption"><span class="caption-text">View.</span></p>
+</div>
+<p>The manipulator will match the 3D视图:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Y:</th><td class="field-body">Up/Down</td>
+</tr>
+<tr class="field-even field"><th class="field-name">X:</th><td class="field-body">Left/Right,</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Z:</th><td class="field-body">Towards/Away from you.</td>
+</tr>
+</tbody>
+</table>
+<p class="last">This way you can constrain movement to one View axis with <code class="kbd docutils literal"><span class="pre">G-X-X</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="custom-orientations">
+<h2>Custom Orientations<a class="headerlink" href="#custom-orientations" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object and 编辑模式s</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Spacebar</span></code></div>
+</div>
+</div>
+<div class="figure" id="id8">
+<img alt="../../../../_images/transformorientationpanel-custom.jpg" src="../../../../_images/transformorientationpanel-custom.jpg" />
+<p class="caption"><span class="caption-text">Custom orientation.</span></p>
+</div>
+<p>You can define custom transform orientations, using object or mesh elements. Custom transform
+orientations defined from objects use the local orientation of the object whereas those
+defined from selected mesh elements (vertices, edges, faces)
+use the normal orientation of the selection.</p>
+<p>The <em>变换 Orientations</em> panel, found in the Properties Panel,
+can be used to manage transform orientations: selecting the active orientation,
+adding and deleting custom orientations.</p>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../../../../_images/orientations-custom-name.jpg"><img alt="../../../../_images/orientations-custom-name.jpg" src="../../../../_images/orientations-custom-name.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Renaming a Custom Orientation.</span></p>
+</div>
+<p>The default name for these orientations comes from whatever you have selected. If an edge,
+it will be titled, &#8220;Edge,&#8221; if an object, it will take that object&#8217;s name, etc. The Toolshelf
+(<code class="kbd docutils literal"><span class="pre">T</span></code> in the 3D视图)
+allows you to rename the custom orientation after you press <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Spacebar</span></code>.</p>
+<div class="figure" id="id10">
+<span id="fig-view3d-transform-orientation-extrusion"></span><img alt="../../../../_images/orientations-custom-extrusion.jpg" src="../../../../_images/orientations-custom-extrusion.jpg" />
+<p class="caption"><span class="caption-text">Custom Extrusion.</span></p>
+</div>
+<p>The technique of creating custom orientations can become important in creating precise meshes.
+In Fig. <a class="reference internal" href="#fig-view3d-transform-orientation-extrusion"><span class="std std-ref">Custom Extrusion.</span></a>, to achieve this effect:</p>
+<ol class="arabic simple">
+<li>Select the object&#8217;s sloping top edge</li>
+<li>Create a Custom Orientation with <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Spacebar</span></code> and rename it &#8220;Top Edge&#8221;.</li>
+<li>Select the objects&#8217;s bottom, right edge.</li>
+<li>Extrude with <code class="kbd docutils literal"><span class="pre">E</span></code>.</li>
+<li>Cancel the extrusion&#8217;s default movement by pressing <code class="kbd docutils literal"><span class="pre">RMB</span></code> or <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</li>
+<li>Hit <code class="kbd docutils literal"><span class="pre">G</span></code> to reinitiate movement.</li>
+<li>Hit <code class="kbd docutils literal"><span class="pre">Z-Z</span></code> to constrain to the &#8220;Top Edge&#8221; orientation.</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pivot_point/index.html" class="btn btn-neutral float-right" title="轴心点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="proportional_edit.html" class="btn btn-neutral" title="Proportional Edit" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

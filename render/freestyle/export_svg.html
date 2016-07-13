@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Freestyle SVG Exporter &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Freestyle" href="index.html"/>
+        <link rel="next" title="Workflows" href="../workflows/index.html"/>
+        <link rel="prev" title="Python Scripting Mode" href="python.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html">Core Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewmap.html">Viewmaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python Scripting Mode</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Freestyle SVG Exporter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exportable-properties">Exportable Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animations">动画s</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Freestyle</a> &raquo;</li>
+      
+    <li>Freestyle SVG Exporter</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/freestyle/export_svg.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="freestyle-svg-exporter">
+<h1>Freestyle SVG Exporter<a class="headerlink" href="#freestyle-svg-exporter" title="Permalink to this headline">¶</a></h1>
+<p>SVG exporting for Freestyle is available through an add-on.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/render-freestyle_svg_car.png"><img alt="../../_images/render-freestyle_svg_car.png" src="../../_images/render-freestyle_svg_car.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">An example of a .svg result produced by the Freestyle SVG Exporter.
+Model by <a class="reference external" href="http://www.blendswap.com/blends/view/76715">Blendergoodies</a></span></p>
+</div>
+<p>This add-on can be enabled via <span class="menuselection">用户首选项 ‣ Add-ons ‣ 渲染 ‣ Freestyle SVG Exporter</span>.
+The GUI for the exporter should now be visible in the render tab of the Properties editor.
+The exported .svg file is written to the default output path <span class="menuselection">Properties editor ‣ 渲染 ‣ Output</span>.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/render-freestyle_ui_svg_exporter.png"><img alt="../../_images/render-freestyle_ui_svg_exporter.png" src="../../_images/render-freestyle_ui_svg_exporter.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Mode</dt>
+<dd>Option between Frame and 动画. Frame will render a single frame,
+动画 will bundle all rendered frames into a single .svg file.</dd>
+<dt>Split at Invisible</dt>
+<dd>By default the exporter won&#8217;t take invisible vertices into account and export them like they are visible.
+Some stroke modifiers, like Blueprint, mark vertices as invisible to achieve a certain effect. Enabling this
+option will make the paths split when encountering an invisible vertex, which leads to a better result.</dd>
+<dt>Fill Contours</dt>
+<dd>The contour of objects is filled with their material color. Note that this features is somewhat unstable -
+especially with animations.</dd>
+<dt>Stroke Cap Style</dt>
+<dd>Defines the style the stroke caps will have in the SVG output.</dd>
+</dl>
+</div>
+<div class="section" id="exportable-properties">
+<h2>Exportable Properties<a class="headerlink" href="#exportable-properties" title="Permalink to this headline">¶</a></h2>
+<p>Because the representation of Freestyle strokes and SVG path objects is fundamentally different, a one on one
+translation between Freestyle and SVG is not possible. The main shortcoming of SVG compared to Freestyle is that
+Freestyle defines style per-point, where SVG defines it per-path. This means that Freestyle can produce much more
+complex results that are impossible to achieve in SVG.</p>
+<p>The properties that can be exported are:</p>
+<ul class="simple">
+<li>Base color</li>
+<li>Base alpha</li>
+<li>Base thickness</li>
+<li>Dashes</li>
+</ul>
+</div>
+<div class="section" id="animations">
+<h2>动画s<a class="headerlink" href="#animations" title="Permalink to this headline">¶</a></h2>
+<p>The exporter supports the creation of SVG animations. When the Mode is set to 动画, all frames from a render -
+one when rendering a frame (f12) or all when rendering an animation (shift f12) - into a single file.
+Most modern browsers support the rendering of SVG animations.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/render-freestyle_svg_rotating_cube.svg"><img src="../../_images/render-freestyle_svg_rotating_cube.svg" width="600px" /></a>
+<p class="caption"><span class="caption-text">An SVG animation rendered with the exporter.</span></p>
+</div>
+<div class="section" id="exporting-fills">
+<h3>Exporting Fills<a class="headerlink" href="#exporting-fills" title="Permalink to this headline">¶</a></h3>
+<p>Fills are colored areas extracted from a Freestyle render result. Specifically, they are defined by a combination of
+the Contour and External Contour edge type, combined with some predicates. The fill result can be unexpected,
+when the SVG renderer cannot correctly draw the path that the exporter has generated.
+This problem is extra apparent in animations.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/render-freestyle_svg_pallet.svg"><img src="../../_images/render-freestyle_svg_pallet.svg" width="600px" /></a>
+<p class="caption"><span class="caption-text">An example of a .svg result produced by the Freestyle SVG Exporter.
+Model by <a class="reference external" href="https://github.com/xuv">Julien Deswaef</a></span></p>
+</div>
+<p>Fills support holes and layering. When using layers, the exporter tries to render objects with the same material as
+the patch. The exporting of fills and especially the order in which they are layered is by no means perfect.
+In most cases, these problems can be easily solved in Inkscape or a text editor.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../workflows/index.html" class="btn btn-neutral float-right" title="Workflows" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python.html" class="btn btn-neutral" title="Python Scripting Mode" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

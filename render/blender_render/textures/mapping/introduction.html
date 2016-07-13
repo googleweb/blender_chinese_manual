@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Texture Mapping &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Texture Mapping" href="index.html"/>
+        <link rel="next" title="Environment Maps" href="environment.html"/>
+        <link rel="prev" title="Texture Mapping" href="index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Textures</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assigning_a_texture.html">Assigning a Texture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options.html">Textures common options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../types/index.html">Texture Types</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Texture Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../influence/index.html">Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">Texture 节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Textures</a> &raquo;</li>
+      
+          <li><a href="index.html">Texture Mapping</a> &raquo;</li>
+      
+    <li>Texture Mapping</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/render/blender_render/textures/mapping/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="texture-mapping">
+<h1>Texture Mapping<a class="headerlink" href="#texture-mapping" title="Permalink to this headline">¶</a></h1>
+<p>Textures need mapping coordinates, to determine how they are applied to the object.
+The mapping specifies how the texture will ultimately wrap itself to the object.</p>
+<p>For example,
+a 2D image texture could be configured to wrap itself around a cylindrical shaped object.</p>
+<div class="section" id="coordinates">
+<h2>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/texture-mapping-coord.jpg"><img alt="../../../../_images/texture-mapping-coord.jpg" src="../../../../_images/texture-mapping-coord.jpg" style="width: 207px;" /></a>
+<p class="caption"><span class="caption-text">Mapping Coordinate menu.</span></p>
+</div>
+<dl class="docutils">
+<dt>Coordinates</dt>
+<dd>Mapping works by using a set of coordinates to guide the mapping process.
+These coordinates can come from anywhere, usually the object to which the texture is being applied to.</dd>
+<dt>Global</dt>
+<dd>The scene&#8217;s global 3D coordinates. This is also useful for animations;
+if you move the object, the texture moves across it.
+It can be useful for letting objects appear or disappear at a certain position in space.</dd>
+<dt>Object</dt>
+<dd><blockquote class="first">
+<div>Uses an object as source for coordinates. Often used with an <em>Empty</em>,
+this is an easy way to place a small image at a given point on the object.
+This object can also be animated, to move a texture around or through a surface.</div></blockquote>
+<dl class="last docutils">
+<dt>Object</dt>
+<dd>Select the name of an object.</dd>
+</dl>
+</dd>
+<dt>Generated</dt>
+<dd>The original undeformed coordinates of the object. This is the default option for mapping textures.</dd>
+<dt>UV</dt>
+<dd><blockquote class="first">
+<div>UV mapping is a very precise way of mapping a 2D texture to a 3D surface.
+Each vertex of a mesh has its own UV co-ordinates which can be unwrapped and laid flat like a skin.
+You can almost think of UV coordinates as a mapping that works on a 2D plane with its own local coordinate system
+to the plane on which it is operating on.
+This mapping is especially useful when using 2D images as textures,
+as seen in <a class="reference internal" href="../../../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UV Mapping</span></a>.
+You can use multiple textures with one set of UV coordinates.</div></blockquote>
+<dl class="last docutils">
+<dt>Layer</dt>
+<dd>Select your UV layer to use it for mapping.</dd>
+</dl>
+</dd>
+<dt>Strand/Particle</dt>
+<dd>Uses normalized 1D strand texture coordinate or particle age(X) and trail position (Y).
+Use when texture is applied to hair strands or particles.</dd>
+<dt>Window</dt>
+<dd>The rendered image window coordinates. This is well suited to blending two objects.</dd>
+<dt>Normal</dt>
+<dd>Uses the direction of the surface&#8217;s normal vector as coordinates.
+This is very useful when creating certain special effects that depend on viewing angle.</dd>
+<dt>Reflection</dt>
+<dd>Uses the direction of the reflection vector as coordinates.
+This is useful for adding reflection maps - you will need this input when Environment Mapping.</dd>
+<dt>Stress</dt>
+<dd>Uses the difference of edge length compared to original coordinates of the mesh.
+This is useful, for example, when a mesh is deformed by modifiers.</dd>
+<dt>Tangent</dt>
+<dd>Uses the optional tangent vector as texture coordinates.</dd>
+</dl>
+</div>
+<div class="section" id="projection">
+<h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Flat</dt>
+<dd>Flat mapping gives the best results on single planar faces.
+It does produce interesting effects on the sphere, but compared to a sphere-mapped sphere the result looks flat.
+On faces that are not in the mapping plane the last pixel of the texture is extended,
+which produces stripes on the cube and cylinder.</dd>
+<dt>Cube</dt>
+<dd>Cube mapping often gives the most useful results when the objects are not too curvy and organic
+(notice the seams on the sphere).</dd>
+<dt>Tube</dt>
+<dd>Tube mapping maps the texture around an object like a label on a bottle.
+The texture is therefore more stretched on the cylinder.
+This mapping is of course very good for making the label on a bottle or assigning stickers to rounded objects.
+However, this is not a cylindrical mapping so the ends of the cylinder are undefined.</dd>
+<dt>Sphere</dt>
+<dd>Sphere mapping is the best type for mapping a sphere, and it is perfect for making planets and similar objects.
+It is often very useful for creating organic objects. It also produces interesting effects on a cylinder.</dd>
+</dl>
+</div>
+<div class="section" id="inheriting-coordinates-from-the-parent-object">
+<h2>Inheriting coordinates from the parent object<a class="headerlink" href="#inheriting-coordinates-from-the-parent-object" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>From Dupli</dt>
+<dd>Duplis instanced from vertices, faces, or particles, inherit texture coordinates from their parent.</dd>
+</dl>
+<p><strong>Todo: explaination</strong></p>
+</div>
+<div class="section" id="coordinate-offset-scaling-and-transformation">
+<h2>Coordinate Offset, Scaling and 变换ation<a class="headerlink" href="#coordinate-offset-scaling-and-transformation" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../../_images/texture-mapping-offset.jpg" src="../../../../_images/texture-mapping-offset.jpg" />
+<p class="caption"><span class="caption-text">Offset panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Offset</dt>
+<dd>The texture co-ordinates can be translated by an offset.
+Enlarging of the Ofs moves the texture towards the top left.</dd>
+</dl>
+<div class="figure" id="id3">
+<img alt="../../../../_images/texture-mapping-size.jpg" src="../../../../_images/texture-mapping-size.jpg" />
+<p class="caption"><span class="caption-text">Size panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Size</dt>
+<dd><p class="first">These buttons allow you to change the mapping of axes between the texture&#8217;s own coordinate system,
+and the mapping system you choose (Generated, UV, etcetera.)
+More precisely, to each axis of the texture corresponds one of four choices,
+that allow you to select to which axis in the mapping system it maps! This implies several points:</p>
+<ul class="last simple">
+<li>For 2D textures (such as images), only the first two rows are relevant, as they have no Z data.</li>
+<li>You can rotate a 2D picture a quarter turn by setting the first row (i.e. X texture axis) to Y,
+and the second row (Y texture axis) to X.</li>
+<li>When you map no texture axis (i.e. the three &#8220;void&#8221; buttons are set),
+you will get a solid uniform texture, as you use zero dimension (i.e. a dot, or pixel) of it
+(and then Blender extends or repeats this point&#8217;s color along all axes.)</li>
+<li>When you only map one texture axis (i.e. two &#8220;void&#8221; buttons are enabled)
+you will get a &#8220;striped&#8221; texture, as you only use one dimension (i.e. a line of pixel) of it,
+(and then Blender stretches this line along the two other axes).</li>
+<li>The same goes, for 3D textures (i.e. procedural ones), when one axis is mapped to nothing,
+Blender extends the plan (&#8220;slice&#8221;) along the relevant third axis.</li>
+</ul>
+</dd>
+</dl>
+<p>So, all this is a bit hard to understand and master. Fortunately,
+you do not have to change these settings often, except for some special effects... Anyway,
+the only way to get used to them is to practice!</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="environment.html" class="btn btn-neutral float-right" title="Environment Maps" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Texture Mapping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Constraints Actuator &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Actuator Types" href="index.html"/>
+        <link rel="next" title="Edit Object Actuator" href="edit_object.html"/>
+        <link rel="prev" title="相机 Actuator" href="camera.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">游戏引擎简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../materials.html">游戏材质</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">逻辑</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sensors/index.html">Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../controllers/index.html">Controllers</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Actuators</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editing.html">Actuator Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../common_options.html">Actuator Common Options</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Actuator Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../states.html">States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">相机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">游戏引擎</a> &raquo;</li>
+      
+          <li><a href="../../index.html">逻辑</a> &raquo;</li>
+      
+          <li><a href="../index.html">Actuators</a> &raquo;</li>
+      
+          <li><a href="index.html">Actuator Types</a> &raquo;</li>
+      
+    <li>Constraints Actuator</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/game_engine/logic/actuators/types/constraint.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="constraints-actuator">
+<h1>Constraints Actuator<a class="headerlink" href="#constraints-actuator" title="Permalink to this headline">¶</a></h1>
+<p>Adds a constraint to the location, orientation</p>
+<p>See <a class="reference internal" href="../common_options.html"><span class="doc">Actuator Common Options</span></a> for common options.</p>
+<p>Special Options:</p>
+<div class="section" id="constraint-mode">
+<h2>Constraint Mode<a class="headerlink" href="#constraint-mode" title="Permalink to this headline">¶</a></h2>
+<p>Menu specifying type of constraint required.</p>
+<ul class="simple">
+<li>Force Field Constraint</li>
+<li>Orientation Constraint</li>
+<li>Distance Constraint</li>
+<li>Location Constraint</li>
+</ul>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/bge_actuator_constraint_forcefield.jpg"><img alt="../../../../_images/bge_actuator_constraint_forcefield.jpg" src="../../../../_images/bge_actuator_constraint_forcefield.jpg" style="width: 271px;" /></a>
+<p class="caption"><span class="caption-text">Constraint actuator - Force Field.</span></p>
+</div>
+<dl class="docutils">
+<dt>Force Field Constraint</dt>
+<dd><p class="first">Create a force field buffer zone along one axis of the object.</p>
+<dl class="last docutils">
+<dt>Damping</dt>
+<dd>Damping factor of the Fh spring force (Range 0.0 - 1.0)</dd>
+<dt>Distance</dt>
+<dd>Height of Fh area</dd>
+<dt>Rot Fh</dt>
+<dd>Make game object axis parallel to the normal of trigger object.</dd>
+<dt>Direction</dt>
+<dd>Axis in which to create force field (can be + or -, or None)</dd>
+<dt>Force</dt>
+<dd>Force value to be used.</dd>
+<dt>N</dt>
+<dd>When on, use a horizontal spring force on slopes</dd>
+<dt>M/P</dt>
+<dd>Trigger on another Object will be either Material (M) or Property (P)</dd>
+<dt>Property</dt>
+<dd>Property/Material that triggers the Force Field constraint (blank for <strong>all</strong> Properties/Materials)</dd>
+<dt>Per</dt>
+<dd>Persistence button
+When on, force field constraint always looks at Property/Material;
+when off, turns itself off if it cannot find the Property/Material.</dd>
+<dt>Time</dt>
+<dd>Number of frames for which constraint remains active</dd>
+<dt>RotDamp</dt>
+<dd>Damping factor for rotation</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/bge_actuator_constraint_orientation.jpg"><img alt="../../../../_images/bge_actuator_constraint_orientation.jpg" src="../../../../_images/bge_actuator_constraint_orientation.jpg" style="width: 271px;" /></a>
+<p class="caption"><span class="caption-text">Constraint Actuator - Orientation.</span></p>
+</div>
+<p class="rubric">Orientation Constraint</p>
+<p>Constrain the specified axis in the Game to a specified direction in the World axis.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Direction</dt>
+<dd>Game axis to be modified (X, Y, Z or none)</dd>
+<dt>Damping</dt>
+<dd>Delay (frames) of the constraint response (0 - 100)</dd>
+<dt>Time</dt>
+<dd>Time (frames) for the constraint to remain active (0 - 100)</dd>
+<dt>参考Dir</dt>
+<dd>参考 direction (global coordinates) for the specified game axis.</dd>
+<dt>MinAngle</dt>
+<dd>Minimum angle for the axis modification;</dd>
+<dt>MaxAngle</dt>
+<dd>Maximum angle for the axis modification;</dd>
+</dl>
+</div></blockquote>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/bge_actuator_constraint_distance.jpg"><img alt="../../../../_images/bge_actuator_constraint_distance.jpg" src="../../../../_images/bge_actuator_constraint_distance.jpg" style="width: 271px;" /></a>
+<p class="caption"><span class="caption-text">Constraint actuator - Distance.</span></p>
+</div>
+</div>
+<div class="section" id="distance-constraint">
+<h2>Distance Constraint<a class="headerlink" href="#distance-constraint" title="Permalink to this headline">¶</a></h2>
+<p>Maintain the distance the Game Object has to be from a surface</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Direction</dt>
+<dd>Axis Direction (X, Y, Z, -X, -Y, -Z, or None)</dd>
+<dt>L</dt>
+<dd>If on, use local axis (otherwise use World axis)</dd>
+<dt>N</dt>
+<dd>If on, orient the Game Object axis with the mesh normal.</dd>
+<dt>Range</dt>
+<dd>Maximum length of ray used to check for Material/Property on another game object (0 - 2000 Blender Units)</dd>
+<dt>Force Distance</dt>
+<dd>Distance to be maintained between object and the Material/Property that triggers the
+Distance Constraint(-2000 to +2000 Blender Units).</dd>
+<dt>Damping</dt>
+<dd>Delay (frames) of the constraint response (0 - 100)</dd>
+<dt>M/P</dt>
+<dd>Trigger on another Object will be either Material (M) or Property (P)</dd>
+<dt>Property</dt>
+<dd>Property/Material that triggers the Force Field constraint (blank for <strong>all</strong> Properties/Materials)</dd>
+<dt>Per</dt>
+<dd>Persistence button: When on, force field constraint always looks at Property/Material;
+when off, turns itself off if it cannot find the Property/Material.</dd>
+<dt>Time</dt>
+<dd>Number of frames for which constraint remains active</dd>
+<dt>RotDamp</dt>
+<dd>Damping factor for rotation</dd>
+</dl>
+</div></blockquote>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/bge_actuator_constraint_location.jpg"><img alt="../../../../_images/bge_actuator_constraint_location.jpg" src="../../../../_images/bge_actuator_constraint_location.jpg" style="width: 271px;" /></a>
+<p class="caption"><span class="caption-text">Constraint actuator - Location.</span></p>
+</div>
+</div>
+<div class="section" id="location-constraint">
+<h2>Location Constraint<a class="headerlink" href="#location-constraint" title="Permalink to this headline">¶</a></h2>
+<p>Limit the position of the Game Object within one World Axis direction.
+To limit movement within an area or volume, use two or three constraints.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Limit</dt>
+<dd>Axis in which to apply limits (LocX, LocY, LocZ or none)</dd>
+<dt>Min</dt>
+<dd>Minimum limit in specified axis (Blender Units)</dd>
+<dt>Max</dt>
+<dd>Maximum limit in specified axis (Blender Units)</dd>
+<dt>Damping</dt>
+<dd>Delay (frames) of the constraint response (0 - 100)</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="edit_object.html" class="btn btn-neutral float-right" title="Edit Object Actuator" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="camera.html" class="btn btn-neutral" title="相机 Actuator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

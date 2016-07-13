@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Append and Link &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="数据系统" href="index.html"/>
+        <link rel="next" title="建模" href="../modeling/index.html"/>
+        <link rel="prev" title="Supported 视频 Formats" href="files/media/video_formats.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_blocks.html">Data-Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_properties.html">Custom Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files/index.html">Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Append and Link</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proxy-objects">Proxy Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#known-limitations">Known Limitations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#circular-dependencies">Circular Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-rigid-body-constraints">Object Rigid-Body Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">数据系统</a> &raquo;</li>
+      
+    <li>Append and Link</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/data_system/linked_libraries.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="append-and-link">
+<h1>Append and Link<a class="headerlink" href="#append-and-link" title="Permalink to this headline">¶</a></h1>
+<p>These functions help you reuse materials, objects and other <a class="reference internal" href="data_blocks.html"><span class="doc">data-blocks</span></a>
+loaded from an external source blend-file.
+You can build libraries of common content and share them across multiple referencing files.</p>
+<p><em>Link</em> creates a reference to the data in the source file such that
+changes made there will be reflected in the referencing file the next time it is reloaded.</p>
+<p>Whereas <em>Append</em> makes a full copy of the data into your blend.
+You can make further edits to your local copy of the data,
+but changes in the external source file will not be reflected in the referencing file.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All Modes</div>
+<div class="line">Menu:     <span class="menuselection">File ‣ Append or Link</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-F1</span></code>  or  <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-O</span></code></div>
+</div>
+</div>
+<p>In the <a class="reference internal" href="../editors/file_browser/introduction.html"><span class="doc">文件浏览器</span></a>
+navigate to the external source blend-file and select the data-block you want to reuse.</p>
+<p>Options:</p>
+<dl class="docutils">
+<dt>Relative Path</dt>
+<dd>Available only when linking, see <a class="reference internal" href="files/relative_paths.html"><span class="doc">relative paths</span></a>.</dd>
+<dt>Select</dt>
+<dd>Makes the object <em>Active</em> after it is loaded.</dd>
+<dt>Active Layer</dt>
+<dd>Enabled by default, the object is assigned to the visible layers in your scene.
+其他wise, it is assigned to the same layers it resides on in the source file.</dd>
+<dt>Instance Groups</dt>
+<dd>This option links the Group to an object, adding it to the active scene.</dd>
+</dl>
+<p>When you select an Object type, it will be placed in your scene at the cursor.
+Many other data types - cameras, curves, and materials for example -
+must be linked to an object before they become visible.</p>
+<p>Newly added Group types are available in <span class="menuselection">Add ‣ Group Instances</span> in 3D视图,
+or for NodeTree groups, the same menu in the 节点编辑器.</p>
+<p>Look in the Outliner, with display mode set to <em>Blender File</em>, to see all your linked and appended data-blocks.
+<code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> on a file name allows you to redirect a link to another file.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>You cannot move a linked object. Its position is defined in its source file.</p>
+<p>If you want to modify the object locally you can either:</p>
+<dl class="last docutils">
+<dt>Use <a class="reference internal" href="../editors/3dview/transform/duplication/dupligroup.html"><span class="doc">Dupli-Groups</span></a></dt>
+<dd><p class="first">Instead of linking to <em>Objects</em> directly, it is often more useful to link in <em>Groups</em>,
+which can be assigned to empties and moved, while maintaining the link to the original file.</p>
+<p class="last">It is also useful to be able to add/remove objects from the group
+without having to manage linking in multiple objects.</p>
+</dd>
+<dt>Make Objects Local</dt>
+<dd><p class="first">Use <span class="menuselection">Object ‣ Make Local ‣ Selected Objects</span> to make the position editable.</p>
+<p class="last">This means that object data (animation, constraints, modifiers...) will be local to your blend-file.
+But the object-data will still be linked and remain immutable.</p>
+</dd>
+</dl>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Appending data you already have linked will add objects/groups to the scene,
+but will keep them linked (and un-editable).</p>
+<p class="last">This is done so existing relationships with linked data remain intact.</p>
+</div>
+<div class="section" id="proxy-objects">
+<span id="object-proxy"></span><h2>Proxy Objects<a class="headerlink" href="#proxy-objects" title="Permalink to this headline">¶</a></h2>
+<p>Used with rigged models, proxy objects, allow specified bone layers to be linked back to the source file
+while the remainder of the object and its skeleton are edited locally.</p>
+<p><code class="kbd docutils literal"><span class="pre">Ctrl-Alt-P</span></code> makes the active linked object into a local proxy, appending &#8220;_proxy&#8221; to its name.</p>
+<p>Set the <em>Protected Layers</em> in the source file using the Skeleton panel of the Armatures tab.
+See <a class="reference internal" href="../rigging/armatures/visualization.html#armature-layers"><span class="std std-ref">Armature Layers</span></a>.
+The bones in protected layers will have their position restored from the source file
+when the referencing file is reloaded.</p>
+</div>
+<div class="section" id="known-limitations">
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<p>For the most part linking data will work as expected, however, there are some corner-cases which are not supported.</p>
+<div class="section" id="circular-dependencies">
+<h3>Circular Dependencies<a class="headerlink" href="#circular-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>In general, dependencies should not go in both directions.</p>
+<p>Attempting to link or append data which links back to the current file will likely result in missing links.</p>
+</div>
+<div class="section" id="object-rigid-body-constraints">
+<h3>Object Rigid-Body Constraints<a class="headerlink" href="#object-rigid-body-constraints" title="Permalink to this headline">¶</a></h3>
+<p>When linking objects <em>directly</em> into a blend-file,
+the <em>Rigid Body</em> settings <strong>will not</strong> be linked in
+since they are associated with their scenes world.</p>
+<p>As an alternative, you could link in the entire scene and set it as a <a class="reference internal" href="scenes.html#scene-background-set"><span class="std std-ref">Background Set Scene</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modeling/index.html" class="btn btn-neutral float-right" title="建模" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="files/media/video_formats.html" class="btn btn-neutral" title="Supported 视频 Formats" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

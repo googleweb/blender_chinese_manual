@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Smoothing &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="网格" href="index.html"/>
+        <link rel="next" title="Curves" href="../curves/index.html"/>
+        <link rel="prev" title="Weight Editing" href="vertex_groups/weight_edit.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Smoothing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mesh-shading">Mesh Shading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#smooth-shading">Smooth Shading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-smooth">Auto Smooth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edge-split-modifier">Edge Split Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#smoothing-the-mesh-geometry">Smoothing the mesh geometry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">网格</a> &raquo;</li>
+      
+    <li>Smoothing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/meshes/smoothing.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="smoothing">
+<h1>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mesh-shading">
+<h2>Mesh Shading<a class="headerlink" href="#mesh-shading" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">例子 mesh rendered flat, smoothed using edge split, and using Subdivision Surface.
+Note how edges are rendered differently.
+<a class="reference external" href="https://wiki.blender.org/index.php/:File:25-manual-meshsmooth-example.blend">Sample blend-file</a></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-2rrflat.jpg"><img alt="../../_images/meshsmooth-example-2rrflat.jpg" src="../../_images/meshsmooth-example-2rrflat.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-05edgesplit.jpg"><img alt="../../_images/meshsmooth-example-05edgesplit.jpg" src="../../_images/meshsmooth-example-05edgesplit.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-10edgeloops.jpg"><img alt="../../_images/meshsmooth-example-10edgeloops.jpg" src="../../_images/meshsmooth-example-10edgeloops.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As seen in the previous sections, polygons are central to Blender.
+Most objects are represented by polygons and truly curved objects
+are often approximated by polygon meshes. When rendering images,
+you may notice that these polygons appear as a series of small, flat faces.</p>
+<p>Sometimes this is a desirable effect, but usually we want our objects to look nice and smooth.
+This section shows you how to visually smooth an object, and how to apply the <em>Auto Smooth</em>
+filter to quickly and easily combine smooth and faceted polygons in the same object.</p>
+<p>The last section on this page shows possibilities for smoothing a mesh&#8217;s geometry,
+not only its appearance.</p>
+</div>
+<div class="section" id="smooth-shading">
+<h2>Smooth Shading<a class="headerlink" href="#smooth-shading" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Edit and 物体模式</div>
+<div class="line">Panel:    Mesh Tools</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Faces ‣ Shade Smooth / Shade Flat</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code> <span class="menuselection">‣ Shade Smooth / Shade Flat</span></div>
+</div>
+</div>
+<table border="1" class="docutils" id="id3">
+<caption><span class="caption-text">Same mesh smooth shaded</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-shading.jpg"><img alt="../../_images/meshsmooth-shading.jpg" src="../../_images/meshsmooth-shading.jpg" style="width: 80px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-03rrsmooth.jpg"><img alt="../../_images/meshsmooth-example-03rrsmooth.jpg" src="../../_images/meshsmooth-example-03rrsmooth.jpg" style="width: 220px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The easiest way is to set an entire object as smooth or faceted by selecting a mesh object,
+and in <em>物体模式</em>, click <em>Smooth</em> in the <em>Tool Shelf</em>.
+This button does not stay pressed;
+it forces the assignment of the &#8220;smoothing&#8221; attribute to each face in the mesh,
+including when you add or delete geometry.</p>
+<p>Notice that the outline of the object is still strongly faceted.
+Activating the smoothing features doesn&#8217;t actually modify the object&#8217;s geometry;
+it changes the way the shading is calculated across the surfaces,
+giving the illusion of a smooth surface. Click the <em>Flat</em> button in the
+<em>Tool Shelf</em> &#8216;s <em>Shading panel</em> to revert the shading back to that shown in
+the first image above.</p>
+<div class="section" id="smoothing-parts-of-a-mesh">
+<h3>Smoothing parts of a mesh<a class="headerlink" href="#smoothing-parts-of-a-mesh" title="Permalink to this headline">¶</a></h3>
+<p>Alternatively, you can choose which edges to smooth by entering <em>编辑模式</em>,
+then selecting some faces and clicking the <em>Smooth</em> button.
+The selected edges are marked in yellow.</p>
+<p>When the mesh is in <em>编辑模式</em>,
+only the selected edges will receive the &#8220;smoothing&#8221; attribute. You can set edges as flat
+(removing the &#8220;smoothing&#8221; attribute)
+in the same way by selecting edges and clicking the <em>Flat</em> button.</p>
+</div>
+</div>
+<div class="section" id="auto-smooth">
+<span id="id1"></span><h2>Auto Smooth<a class="headerlink" href="#auto-smooth" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Panel:    <span class="menuselection">Properties editor ‣ Object Data</span></div>
+</div>
+</div>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">例子 mesh with <em>Auto Smooth</em> enabled</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-04rrautosmooth.jpg"><img alt="../../_images/meshsmooth-example-04rrautosmooth.jpg" src="../../_images/meshsmooth-example-04rrautosmooth.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-autosmooth.jpg"><img alt="../../_images/meshsmooth-autosmooth.jpg" src="../../_images/meshsmooth-autosmooth.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It can be difficult to create certain combinations of smooth and solid faces using the above
+techniques alone. Though there are workarounds
+(such as splitting off sets of faces by selecting them and pressing <code class="kbd docutils literal"><span class="pre">Y</span></code>),
+there is an easier way to combine smooth and solid faces, by using <em>Auto Smooth</em>.</p>
+<p>Auto smoothing can be enabled in the mesh&#8217;s panel in the Properties Editor. Angles
+on the model that are smaller than the angle specified in the <em>Angle</em> button will be
+smoothed during rendering (i.e. not in the 3D视图)
+when that part of the mesh is set to smooth. Higher values will produce smoother faces,
+while the lowest setting will look identical to a mesh that has been set completely solid.</p>
+<p>Note that a mesh, or any faces that have been set as <em>Flat</em>,
+will not change their shading when <em>Auto Smooth</em> is activated: this allows you extra
+control over which faces will be smoothed and which ones won&#8217;t by overriding the decisions
+made by the <em>Auto Smooth</em> algorithm.</p>
+</div>
+<div class="section" id="edge-split-modifier">
+<h2>Edge Split Modifier<a class="headerlink" href="#edge-split-modifier" title="Permalink to this headline">¶</a></h2>
+<p>With the <a class="reference internal" href="../modifiers/generate/edge_split.html"><span class="doc">Edge Split Modifier</span></a> we get a result
+similar to <em>Auto Smooth</em> with the ability to choose which edges should be split,
+based on angle - those marked as sharp.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-05edgesplit.jpg"><img alt="../../_images/meshsmooth-example-05edgesplit.jpg" src="../../_images/meshsmooth-example-05edgesplit.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Edge Split modifier enabled, based on angle.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-07marksharp.jpg"><img alt="../../_images/meshsmooth-example-07marksharp.jpg" src="../../_images/meshsmooth-example-07marksharp.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Edges marked as sharp.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-06marksharp.jpg"><img alt="../../_images/meshsmooth-example-06marksharp.jpg" src="../../_images/meshsmooth-example-06marksharp.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Resulting render with sharp edge weighting.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smoothing-the-mesh-geometry">
+<h2>Smoothing the mesh geometry<a class="headerlink" href="#smoothing-the-mesh-geometry" title="Permalink to this headline">¶</a></h2>
+<p>The above techniques do not alter the mesh itself, only the way it is displayed and rendered.
+Instead of just making the mesh look like a smooth surface,
+you can also physically smooth the geometry of the mesh with these tools:</p>
+<div class="section" id="mesh-editing-tools">
+<h3>Mesh editing tools<a class="headerlink" href="#mesh-editing-tools" title="Permalink to this headline">¶</a></h3>
+<p>You can apply one of the following in <em>编辑模式</em>:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="editing/deforming/smooth.html"><span class="doc">Smooth</span></a></dt>
+<dd>This relaxes selected components, resulting in a smoother mesh.</dd>
+<dt><a class="reference internal" href="editing/deforming/smooth.html"><span class="doc">Laplacian Smooth</span></a></dt>
+<dd>Smooths geometry by offers controls for better preserving larger details.</dd>
+<dt><a class="reference internal" href="editing/subdividing/subdivide.html"><span class="doc">Subdivide Smooth</span></a></dt>
+<dd>Adjusting the <em>smooth</em> parameter after using the <em>subdivide</em>
+tool results in a more organic shape. This is similar to using the subdivide modifier.</dd>
+<dt><a class="reference internal" href="editing/introduction.html"><span class="doc">Bevel</span></a></dt>
+<dd>This Bevels selected edged, causing sharp edges to be flattened.</dd>
+</dl>
+</div>
+<div class="section" id="modifiers">
+<h3>修改器<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h3>
+<p>Alternatively,
+you can smooth the mesh non-destructively with one or several of the following modifiers:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../modifiers/deform/smooth.html"><span class="doc">Smooth Modifier</span></a></dt>
+<dd>Works like the <em>Smooth</em> tool in <em>编辑模式</em>;
+can be applied to specific parts of the mesh using vertex groups.</dd>
+<dt><a class="reference internal" href="../modifiers/deform/laplacian_smooth.html"><span class="doc">Laplactian Smooth Modifier</span></a></dt>
+<dd>Works like the <em>Laplacian Smooth</em> tool in <em>编辑模式</em>;
+can be applied to specific parts of the mesh using vertex groups.</dd>
+<dt><a class="reference internal" href="../modifiers/generate/bevel.html"><span class="doc">Bevel Modifier</span></a></dt>
+<dd>Works like the <em>Bevel</em> tool in <em>编辑模式</em>;
+Bevel can be set to work on an angle threshold, or on edge weight values.</dd>
+<dt><a class="reference internal" href="../modifiers/generate/subsurf.html"><span class="doc">Subdivision Surface Modifier</span></a></dt>
+<dd>Catmull-Clark subdivision produces smooth results. Sharp edges can be defined with
+<a class="reference internal" href="../modifiers/generate/subsurf.html#modifiers-generate-subsurf-creases"><span class="std std-ref">subdivision creases</span></a>
+or by setting certain edges to &#8220;sharp&#8221; and adding an <a class="reference internal" href="../modifiers/generate/edge_split.html"><span class="doc">EdgeSplit modifier</span></a> (set to <em>From Marked As Sharp</em>) before the <em>Subsurf</em> modifier.</dd>
+</dl>
+<table border="1" class="docutils" id="id8">
+<caption><span class="caption-text">例子 mesh with <em>Auto Smooth</em> enabled</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-08subsurf.jpg"><img alt="../../_images/meshsmooth-example-08subsurf.jpg" src="../../_images/meshsmooth-example-08subsurf.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Subsurf.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-09edgecrease.jpg"><img alt="../../_images/meshsmooth-example-09edgecrease.jpg" src="../../_images/meshsmooth-example-09edgecrease.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Using creased edges, and resulting subsurf artifacts.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-10edgeloops.jpg"><img alt="../../_images/meshsmooth-example-10edgeloops.jpg" src="../../_images/meshsmooth-example-10edgeloops.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Extra edge loops added.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../_images/meshsmooth-example-11edgeloops.jpg"><img alt="../../_images/meshsmooth-example-11edgeloops.jpg" src="../../_images/meshsmooth-example-11edgeloops.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">3D视图 showing creased edges (pink) and added edges loops (yellow).</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../curves/index.html" class="btn btn-neutral float-right" title="Curves" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertex_groups/weight_edit.html" class="btn btn-neutral" title="Weight Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

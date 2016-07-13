@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scenes &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="数据系统" href="index.html"/>
+        <link rel="next" title="Files" href="files/index.html"/>
+        <link rel="prev" title="Custom Properties" href="custom_properties.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_blocks.html">Data-Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_properties.html">Custom Properties</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Scenes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-scene">Adding a Scene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-a-scene">Removing a Scene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#background-set-scene">Background Set Scene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linking-to-a-scene">Linking to a Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">数据系统</a> &raquo;</li>
+      
+    <li>Scenes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/data_system/scenes.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scenes">
+<h1>Scenes<a class="headerlink" href="#scenes" title="Permalink to this headline">¶</a></h1>
+<p>Scenes are a way to organize your work.
+Each blend-file can contain multiple scenes which share other data such as objects and materials</p>
+<p>Scene management and library appending/linking are based on Blender&#8217;s
+<a class="reference internal" href="index.html"><span class="doc">Library and 数据系统</span></a>,
+so it is a good idea to read that manual page first if you are not familiar with the basics of that system.</p>
+<p>You can select and create scenes with the <em>Scene selector</em> in the <em>Info</em> editor header
+(the bar at the top of most Blender layouts, see <em>Screen and Scene selectors</em>).</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/interface_screen-scene-selector.jpg" src="../_images/interface_screen-scene-selector.jpg" />
+<p class="caption"><span class="caption-text">Screen and Scene selectors.</span></p>
+</div>
+<div class="section" id="adding-a-scene">
+<h2>Adding a Scene<a class="headerlink" href="#adding-a-scene" title="Permalink to this headline">¶</a></h2>
+<p>To add a scene, click on the scene list button, and select <em>Add New</em>.
+While you are adding a new scene, you have these options:</p>
+<div class="figure align-right" id="id2">
+<img alt="../_images/interface-scene-addbutton-dialog25.jpg" src="../_images/interface-scene-addbutton-dialog25.jpg" />
+<p class="caption"><span class="caption-text">Add scene pop-up menu.</span></p>
+</div>
+<dl class="docutils">
+<dt>New</dt>
+<dd>Creates an empty scene with default values.</dd>
+<dt>Copy 设置</dt>
+<dd>Creates an empty scene but also copies
+the settings from the active scene into the new one.</dd>
+<dt>Link Objects</dt>
+<dd>This option creates a new scene with the same settings and contents as the active scene.
+However, instead of copying the objects,
+the new scene contains links to the objects in the old scene.
+Therefore, changes to objects in the new scene will result in the same
+changes to the original scene, because the objects used are literally the same.
+The reverse is also true.</dd>
+<dt>Link Object Data</dt>
+<dd><p class="first">Creates new, duplicate copies of all of the objects in the currently selected scene,
+but each one of those duplicate objects will have links to the object-data (meshes, materials and so on)
+of the corresponding objects in the original scene.</p>
+<p class="last">This means that you can change the position,
+orientation and size of the objects in the new scene without affecting other scenes,
+but any modifications to the object-data (meshes, materials, etc.) will also affect other scenes.
+This is because a single instance of the &#8220;object-data&#8221; is now being shared by all of the objects
+in all of the scenes, that link to it.
+This has the effect of making a new independent copy of the object-data.</p>
+</dd>
+<dt>Full Copy</dt>
+<dd>Using this option, nothing is shared.
+This option creates a fully independent scene with copies of the active scenes contents.
+Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>To choose between these options,
+it is useful to understand the difference between <em>Objects</em> and <em>Object Data</em>.
+See <a class="reference internal" href="../editors/3dview/transform/duplication/introduction.html"><span class="doc">Duplication</span></a>.</p>
+<p class="last">The choices for adding a scene, therefore, determine just how much of this information will be
+<em>copied from</em> the active scene to the new one, and how much will be <em>shared</em> (linked).</p>
+</div>
+</div>
+<div class="section" id="removing-a-scene">
+<h2>Removing a Scene<a class="headerlink" href="#removing-a-scene" title="Permalink to this headline">¶</a></h2>
+<p>You can delete the current scene by clicking the <em>X</em> next to the name in the 信息编辑器.</p>
+</div>
+<div class="section" id="background-set-scene">
+<span id="scene-background-set"></span><h2>Background Set Scene<a class="headerlink" href="#background-set-scene" title="Permalink to this headline">¶</a></h2>
+<p>You can use a scene as a background,
+this is typically useful when you want to focus on animating the foreground for example,
+without background elements getting in the way.</p>
+<p>You can assign a <em>Background</em> to your current scene from the <em>Properties Editor</em> <em>Scene</em> panel.</p>
+<p>This scene can have its own animation, physics-simulations etc,
+but you will have to select it from the <em>Scene</em> browser if you want to edit any of its contents.</p>
+<p>This can also be used in combination with <a class="reference internal" href="#linking-to-a-scene">Linking to a Scene</a>,
+where one blend-file contains the environment, which can be re-used in many places.</p>
+</div>
+<div class="section" id="linking-to-a-scene">
+<h2>Linking to a Scene<a class="headerlink" href="#linking-to-a-scene" title="Permalink to this headline">¶</a></h2>
+<p>You can link any object from one scene to another.
+Just open the scene where these objects are,
+from the 3D视图 header access <span class="menuselection">Object ‣ Make Links...</span>
+and choose the scene where you want your objects to appear.
+The selected objects will be added to that scene but remain linked to the original objects.</p>
+<p>To make them single user (independent and unlinked) in a given scene go to that scene,
+select them, then from the 3D视图 header access <span class="menuselection">Object ‣ Make Single User</span>.
+You will be presented with a few options that allow you to free up the data-blocks (Object,
+Material, Texture...) that you want.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="files/index.html" class="btn btn-neutral float-right" title="Files" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="custom_properties.html" class="btn btn-neutral" title="Custom Properties" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

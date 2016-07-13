@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Soft Body" href="index.html"/>
+        <link rel="next" title="设置" href="settings.html"/>
+        <link rel="prev" title="Soft Body" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Soft Body</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#typical-scenarios-for-using-soft-bodies">Typical scenarios for using Soft Bodies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-soft-body">Creating a Soft Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simulation-quality">Simulation Quality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cache-and-bake">Cache and Bake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interaction-in-real-time">Interaction in real time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips">Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forces/index.html">Forces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html">Simple 例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Soft Body</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/soft_body/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<span id="fig-softbody-intro-cloth"></span><a class="reference internal image-reference" href="../../_images/hiddentextsoftbody.jpg"><img alt="../../_images/hiddentextsoftbody.jpg" src="../../_images/hiddentextsoftbody.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">A softbody cloth uncovering a text.</span></p>
+<div class="legend">
+<a class="reference external" href="https://vimeo.com/1865528">动画</a> -
+<a class="reference external" href="https://wiki.blender.org/index.php/Media:HiddenText例子.blend">Blend file</a></div>
+</div>
+<p>A Soft Body in general, is a simulation of a soft or rigid deformable object.
+In Blender, this system is best for simple cloth objects and closed meshes.
+There is dedicated <a class="reference internal" href="../cloth/index.html"><span class="doc">Cloth Simulation</span></a> physics that use a different solver,
+and is better for cloth.</p>
+<p>This simulation is done by applying forces to the vertices or controlpoints of the object.
+There are exterior forces like gravity or forcefields and interior forces that hold the
+vertices together.
+This way you can simulate the shapes that an object would take on in reality if it had volume,
+was filled with something, and was acted on by real forces.</p>
+<p>Soft Bodies can interact with other objects trough <em>Collision</em>. They can interact with themselves
+trough <em>Self Collision</em>.</p>
+<p>The result of the Soft Body simulation can be converted to a static object.
+You can also <em>bake edit</em> the simulation, i.e.
+edit intermediate results and run the simulation from there.</p>
+<div class="section" id="typical-scenarios-for-using-soft-bodies">
+<h2>Typical scenarios for using Soft Bodies<a class="headerlink" href="#typical-scenarios-for-using-soft-bodies" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<span id="fig-softbody-intro-cone"></span><a class="reference internal image-reference" href="../../_images/windconesoftbody.jpg"><img alt="../../_images/windconesoftbody.jpg" src="../../_images/windconesoftbody.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">A wind cone. The cone is a Soft Body, as the suspension.</span></p>
+<div class="legend">
+<a class="reference external" href="https://vimeo.com/1865817">动画</a> - <a class="reference external" href="https://wiki.blender.org/index.php/Media:WindCone例子.blend">Blend file</a></div>
+</div>
+<p>Soft Bodies are well suited for:</p>
+<ul class="simple">
+<li>Elastic objects with or without collision.</li>
+<li>Flags, fabric reacting to forces.</li>
+<li>Certain modeling tasks, like a cushion or a table cloth over an object.</li>
+<li>Blender has another simulation system for clothing (see <a class="reference internal" href="../cloth/index.html"><span class="doc">Clothes</span></a>).
+But you can sometimes use Soft Bodies for certain parts of clothing, like wide sleeves.</li>
+<li>Hair (as long as you minimize collision).</li>
+<li>动画 of swinging ropes, chains and the like.</li>
+</ul>
+<p>The following videos may give you some more ideas:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.youtube.com/watch?v=qdusMZlBbQ4">https://www.youtube.com/watch?v=qdusMZlBbQ4</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=3du8ksOm9Fo&amp;hl">https://www.youtube.com/watch?v=3du8ksOm9Fo&amp;hl</a></li>
+</ul>
+</div>
+<div class="section" id="creating-a-soft-body">
+<h2>Creating a Soft Body<a class="headerlink" href="#creating-a-soft-body" title="Permalink to this headline">¶</a></h2>
+<p>Soft Body simulation works for all objects that have vertices or control points:</p>
+<ul class="simple">
+<li>网格.</li>
+<li>Curves.</li>
+<li>Surfaces.</li>
+<li>Lattices.</li>
+</ul>
+<p>To activate the Soft Body simulation for an object:</p>
+<ul class="simple">
+<li>In the Properties editor, go to the <em>物理</em> tab
+(it is all the way on the right, and looks like a bouncing ball).</li>
+<li>Activate the <em>Soft Body</em> button.</li>
+</ul>
+<p>A lot of options appear.
+For a reference of all the settings see <a class="reference internal" href="settings.html"><span class="doc">this page</span></a>.</p>
+<ul class="simple">
+<li>You start a Soft Body simulation with <code class="kbd docutils literal"><span class="pre">Alt-A</span></code>.</li>
+<li>You pause the simulation with <code class="kbd docutils literal"><span class="pre">Spacebar</span></code>, continue with <code class="kbd docutils literal"><span class="pre">Alt-A</span></code>.</li>
+<li>You stop the simulation with <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="simulation-quality">
+<h2>Simulation Quality<a class="headerlink" href="#simulation-quality" title="Permalink to this headline">¶</a></h2>
+<p>The settings in the <em>Soft Body Solver</em> panel determine the accuracy of the
+simulation.</p>
+<dl class="docutils">
+<dt>Min Step</dt>
+<dd>Minimum simulation steps per frame. Increase this value, if the Soft Body misses fast moving collision objects.</dd>
+<dt>Max Step</dt>
+<dd>Maximum simulation steps per frame.
+Normally the number of simulation steps is set dynamically
+(with the <em>Error Limit</em>) but you have probably a good reason to change it.</dd>
+<dt>Auto-Step</dt>
+<dd>Use Velocities for automatic step sizes.</dd>
+<dt>Error Limit</dt>
+<dd>Rules the overall quality of the solution delivered. Default 0.1.
+The most critical setting that says how precise the solver should check for collisions.
+Start with a value that is 1/2 the average edge length. If there are visible errors, jitter,
+or over-exaggerated responses, decrease the value. The solver keeps track of how &#8220;bad&#8221; it is doing and the
+<em>Error Limit</em> causes the solver to do some &#8220;adaptive step sizing&#8221;.</dd>
+<dt>Fuzzy</dt>
+<dd>Simulation is faster, but less accurate.</dd>
+<dt>Choke</dt>
+<dd>Calms down (reduces the exit velocity of) a vertex or edge once it penetrates a collision mesh.</dd>
+</dl>
+<div class="section" id="diagnostics">
+<h3>Diagnostics<a class="headerlink" href="#diagnostics" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Print Performance to Console</dt>
+<dd>Prints on the console how the solver is doing.</dd>
+<dt>Estimate Matrix</dt>
+<dd>Estimate matrix. Split to <code class="docutils literal"><span class="pre">COM</span></code>, <code class="docutils literal"><span class="pre">ROT</span></code>, <code class="docutils literal"><span class="pre">SCALE</span></code></dd>
+</dl>
+</div>
+</div>
+<div class="section" id="cache-and-bake">
+<h2>Cache and Bake<a class="headerlink" href="#cache-and-bake" title="Permalink to this headline">¶</a></h2>
+<p>Soft Bodies and other physic simulations use a unified system for caching and baking.
+See <a class="reference internal" href="../particles/cache_and_bake.html"><span class="doc">Particle Cache</span></a> for reference.</p>
+<p>The results of the simulation are automatically cached to disk when the animation is played,
+so that the next time it runs,
+it can play again quickly by reading in the results from the disk. If you <em>Bake</em> the
+simulation the cache is protected and you will be asked when you&#8217;re trying to change a setting
+that will make a recalculating necessary.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Beware of the <em>Start</em> and <em>End</em> settings</p>
+<p class="last">The simulation is only calculated for the frames in-between the <em>Start</em> and <em>End</em> frames
+(<em>Bake</em> panel), even if you do not actually bake the simulation!
+So if you want a simulation longer than the default setting of 250 frames you have the change the <em>End</em> frame.</p>
+</div>
+<ul class="simple">
+<li>Caching:<ul>
+<li>As animation is played, each physics system writes each frame to disk,
+between the simulation start and end frames.
+These files are stored in folders with prefix <code class="docutils literal"><span class="pre">blendcache</span></code>, next to the blend-file.</li>
+<li>The cache is cleared automatically on changes - but not on all changes,
+so it may be necessary to free it manually, e.g. if you change a force field.
+Note that for the cache to fill up, one has to start playback before or on the frame that the simulation starts.</li>
+<li>If you are not allowed to write to the required sub-directory caching will not take place.</li>
+<li>The cache can be freed per physics system with a button in the panels,
+or with the <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> shortcut key to free it for all selected objects.</li>
+<li>You may run into trouble if your blend-file path is very long and your operating system
+has a limit on the path length that is supported.</li>
+</ul>
+</li>
+<li>Baking:<ul>
+<li>The system is protected against changes after baking.</li>
+<li>The <em>Bake</em> result is cleared also with
+<code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> for all selected objects or click on <em>Free Bake</em> for the current Soft Body system.</li>
+<li>If the mesh changes the simulation is not calculated anew.</li>
+</ul>
+</li>
+</ul>
+<p>For renderfarms, it is best to bake all the physics systems,
+and then copy the blendcache to the renderfarm as well.</p>
+</div>
+<div class="section" id="interaction-in-real-time">
+<h2>Interaction in real time<a class="headerlink" href="#interaction-in-real-time" title="Permalink to this headline">¶</a></h2>
+<p>To work with a Soft Body simulation you will find it handy to use the Timeline editor.
+You can change between frames and the simulation will always be shown in the actual state.
+The option <em>Continue 物理</em> in the <em>Playback</em> menu
+of the <em>Timeline</em> editor lets you interact in real time with the simulation,
+e.g. by moving collision objects or shake a Soft Body object.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p><em>Continue 物理</em> does not work while playing the animation with <code class="kbd docutils literal"><span class="pre">Alt-A</span></code></p>
+<p class="last">Right. This works only if you start the animation with the <em>Play</em> button of the Timeline editor.</p>
+</div>
+<p>You can than select the Soft Body object while running the simulation and <em>Apply</em>
+the modifier in the <em>修改器</em> tab of the Properties editor.
+This makes the deformation permanent.</p>
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Soft Bodies work especially well if the objects have an even vertex distribution.
+You need enough vertices for good collisions. You change the deformation
+(the stiffness) if you add more vertices in a certain region (see the animation of Fig. <a class="reference internal" href="#fig-softbody-intro-cone"><span class="std std-ref">A wind cone. The cone is a Soft Body, as the suspension.</span></a>).</li>
+<li>The calculation of collisions may take a long time. If something is not visible, why calculate it?</li>
+<li>To speed up the collision calculation it is often useful to collide with an additional,
+simpler, invisible, somewhat larger object (see the example to Fig. <a class="reference internal" href="#fig-softbody-intro-cloth"><span class="std std-ref">A softbody cloth uncovering a text.</span></a>).</li>
+<li>Use Soft Bodies only where it makes sense.
+If you try to cover a body mesh with a tight piece of cloth and animate solely with Soft Body,
+you will have no success. Self collision of Soft Body hair may be activated,
+but that is a path that you have to wander alone. We will deal with
+<a class="reference internal" href="collisions.html"><span class="doc">Collisions</span></a> in detail later.</li>
+<li>Try and use a <em>Lattice</em> or a <em>Curve Guide</em> Soft Body instead of the object itself. This may be magnitudes faster.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings.html" class="btn btn-neutral float-right" title="设置" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Soft Body" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.. _pivot-point:
+
+##############
+  轴心点
+##############
+
+.. admonition:: 参考
+   :class: refbox
+
+   | Mode:     物体模式 and 编辑模式
+   | Menu:     下拉菜单 in the header of the 3D视图
+
+.. _fig-view3d-pivot-point:
+
+.. figure:: /images/pivotselection.jpg
+   :align: right
+
+   轴心点 modes.
+
+
+When rotating or scaling an object or group of vertices/edges/faces,
+you may want to shift the :term:`轴心点` to make it easier to manipulate an object.
+Using this selector, you can change the 轴心点 to the location of the:
+
+- 活动元素
+- 质心点 (the average center spot of the selected items)
+- 各自的原心
+- 3D游标
+- 边界盒中心
+
+Each of these can be chosen from the drop-down list in the header of any 3D area,
+as seen here in Fig. :ref:`fig-view3d-pivot-point`.
+The pages linked below describe each *轴心点* mode in more detail.
+
+.. toctree::
+   :maxdepth: 2
+
+   active_element.rst
+   median_point.rst
+   individual_origins.rst
+   3d_cursor.rst
+   bounding_box_center.rst

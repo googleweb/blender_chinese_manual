@@ -1,0 +1,664 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Drivers &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="动画" href="index.html"/>
+        <link rel="next" title="Markers" href="markers.html"/>
+        <link rel="prev" title="Actions" href="actions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">Keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">Actions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drivers-panel">Drivers Panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#driver-settings">Driver 设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#driver-variables">Driver Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ui">UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#expression">Expression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-paste">Copy Paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transform-driver">变换 Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">例子s</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#driver-expression">Driver Expression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#drivers-and-multiple-relative-shape-keys">Drivers And Multiple Relative Shape Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">问题排查</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scripted-expression">Scripted Expression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rotational-properties-are-radians">Rotational Properties are Radians</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intra-armature-bone-drivers-can-misbehave">Intra-armature Bone Drivers Can Misbehave</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation-techniques">动画 Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">动画</a> &raquo;</li>
+      
+    <li>Drivers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/animation/drivers.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drivers">
+<h1>Drivers<a class="headerlink" href="#drivers" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../_images/animation_driver_fcurve.jpg" src="../_images/animation_driver_fcurve.jpg" />
+<p class="caption"><span class="caption-text">Graph Editor: Driver example.</span></p>
+</div>
+<p>Drivers can use properties, numbers, transformations, and scripts,
+to control the values of properties.</p>
+<p>Using a F-Curve, the driver reads the value of the Driver Value and sets the value of the
+selected property it was added to.</p>
+<p>So from this example, if the Driver Value is 2.0 the property will be 0.5.</p>
+<p>The Driver Value is determined by Driver Variables or a Scripted Expression.</p>
+<p>Most the settings for the drivers <a class="reference internal" href="../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-Curves</span></a> are found in
+the <a class="reference internal" href="../editors/graph_editor/introduction.html"><span class="doc">Graph Editor</span></a>.</p>
+<div class="section" id="drivers-panel">
+<span id="animation-drivers-panel"></span><h2>Drivers Panel<a class="headerlink" href="#drivers-panel" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../_images/animation_panel_drivers.jpg" src="../_images/animation_panel_drivers.jpg" />
+<p class="caption"><span class="caption-text">Drivers Panel.</span></p>
+</div>
+<p>This panel is located in the <a class="reference internal" href="../editors/graph_editor/introduction.html"><span class="doc">Graph Editor</span></a> with the mode set to Drivers.</p>
+<p>The drivers panel is for setting up <em>Driver Variables</em> or a <em>Scripted Expression</em> which
+will determine the value of the <em>Driver Value</em>.</p>
+<div class="section" id="driver-settings">
+<h3>Driver 设置<a class="headerlink" href="#driver-settings" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Update Dependencies</dt>
+<dd>This will force an update for the Driver Value dependencies.</dd>
+<dt>Remove Driver</dt>
+<dd>Removes the driver from the object.</dd>
+<dt>Type</dt>
+<dd><p class="first">The type of calculation to use on the set of Driver Variables.
+(If you only have one driver variable there is no real difference between average, sum, minimum and maximum)</p>
+<dl class="last docutils">
+<dt>Average Value</dt>
+<dd>Uses the average value of the referenced Driver Variables.</dd>
+<dt>Sum Values</dt>
+<dd>Uses the sum of the referenced Driver Variables.</dd>
+<dt>Scripted Expression</dt>
+<dd>Uses a Scripted Expression. See Expr.
+You must write a python expression which performs your own calculations on the Driver Variables.</dd>
+<dt>Minimum Value</dt>
+<dd>Uses the lowest value from the referenced Driver Variables.</dd>
+<dt>Maximum Value</dt>
+<dd>Uses the highest value from the referenced Driver Variables.</dd>
+</dl>
+</dd>
+<dt>Expr</dt>
+<dd>Scripted Expression.
+Here you can add real numbers, math operators, math functions, python properties, driver functions.
+See Driver Expression below for some examples.</dd>
+<dt>Show Debug Info</dt>
+<dd>Shows the Driver Value.
+The current value of the variables or scripted expression.</dd>
+<dt>Add Variable</dt>
+<dd>Adds a new Driver Variable.</dd>
+</dl>
+<div class="figure" id="id3">
+<img alt="../_images/animation_driver_single_property.jpg" src="../_images/animation_driver_single_property.jpg" />
+<p class="caption"><span class="caption-text">Setup of a Single Property.</span></p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<img alt="../_images/animation_driver_transform_channel2.jpg" src="../_images/animation_driver_transform_channel2.jpg" />
+<p class="caption"><span class="caption-text">变换 Channel Setup.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<img alt="../_images/animation_driver_distance.jpg" src="../_images/animation_driver_distance.jpg" />
+<p class="caption"><span class="caption-text">Distance Setup.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="driver-variables">
+<h3>Driver Variables<a class="headerlink" href="#driver-variables" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Name</dt>
+<dd>Name to use for scripted expressions/functions.
+No spaces or dots are allowed and must start with a letter.</dd>
+<dt>Variable Type</dt>
+<dd><p class="first">The type of variable to use.</p>
+<dl class="last docutils">
+<dt>Single Property</dt>
+<dd><p class="first">Use the value from some RNA property.
+For example, the Ambient shading color from a material.
+First select the type of ID-block, then the ID of the ID-block, then copy and paste an RNA property (Ctrl+V).</p>
+<dl class="last docutils">
+<dt>ID-Type</dt>
+<dd>The ID-Block type, example, Key, 图像, Object, Material.</dd>
+<dt>ID</dt>
+<dd>The ID of the ID-Block type, example, &#8220;Material.001&#8221;.</dd>
+<dt>RNA Path</dt>
+<dd>The RNA id name of the property, example, &#8216;ambient&#8217; from material shading.</dd>
+</dl>
+</dd>
+<dt>变换 Channel</dt>
+<dd><p class="first">Use one of the 变换 channels from an object or bone.</p>
+<dl class="last docutils">
+<dt>ID</dt>
+<dd>ID of the object, example, Cube, Armature, 相机.</dd>
+<dt>Bone</dt>
+<dd>ID of the Armature bone, example, &#8220;Bone&#8221;, &#8220;Bone.002&#8221;, &#8220;Arm.r&#8221;.
+This option is for armatures.</dd>
+<dt>Type</dt>
+<dd>例子, X Location, X Rotation, X Scale.</dd>
+<dt>Space</dt>
+<dd>World Space, 变换 Space, Local Space.</dd>
+</dl>
+</dd>
+<dt>Rotational Difference</dt>
+<dd>Use the rotational difference between two objects or bones.</dd>
+<dt>Distance</dt>
+<dd>Use the distance between two objects or bones.</dd>
+</dl>
+</dd>
+<dt>Value</dt>
+<dd>Shows the value of the variable.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>There are some different ways to add drivers in Blender. These are some driver examples and workflow.
+After adding drivers they are usually modified in the <em>Graph Editor</em> with the mode set the <em>Drivers</em>.</p>
+<div class="section" id="ui">
+<h3>UI<a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h3>
+<p>The common way to add a driver to a property is to right click a property, then add a driver via the context menu.</p>
+<dl class="docutils">
+<dt>Add Drivers</dt>
+<dd>This will add drivers to the set of properties related to the selected one.
+For example, it will add drivers to X, Y, and Z for Rotation.</dd>
+<dt>Add Single Driver</dt>
+<dd>This will add a single driver to the selected property.</dd>
+</dl>
+<div class="figure">
+<img alt="../_images/add_driver2.jpg" src="../_images/add_driver2.jpg" />
+</div>
+<p>Drivers can also be added by pressing <code class="kbd docutils literal"><span class="pre">D</span></code> with the mouse over the property set.</p>
+</div>
+<div class="section" id="expression">
+<h3>Expression<a class="headerlink" href="#expression" title="Permalink to this headline">¶</a></h3>
+<p>This is a quick way to add drivers with a scripted expression.
+First click the property you want to add a driver to, then add a hash <code class="docutils literal"><span class="pre">#</span></code> and a scripted expression.</p>
+<p>Some examples.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">#frame</span></code></li>
+<li><code class="docutils literal"><span class="pre">#frame</span> <span class="pre">/</span> <span class="pre">20.0</span></code></li>
+<li><code class="docutils literal"><span class="pre">#sin(frame)</span></code></li>
+<li><code class="docutils literal"><span class="pre">#cos(frame)</span></code></li>
+</ul>
+</div>
+<div class="section" id="copy-paste">
+<h3>Copy Paste<a class="headerlink" href="#copy-paste" title="Permalink to this headline">¶</a></h3>
+<p>Drivers can be copied and pasted in the UI, via the context menu.
+When adding drivers with the same settings, this can save time modifying settings.</p>
+</div>
+<div class="section" id="transform-driver">
+<h3>变换 Driver<a class="headerlink" href="#transform-driver" title="Permalink to this headline">¶</a></h3>
+<p>This example shows you how setup a transform driver.
+First make sure you are in the Front Ortho view. <code class="kbd docutils literal"><span class="pre">Numpad5</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad1</span></code>.</p>
+<ol class="arabic simple">
+<li>In object mode, select then duplicate the default <code class="docutils literal"><span class="pre">Cube</span></code>. <code class="kbd docutils literal"><span class="pre">Shift-D</span></code>. Move <code class="docutils literal"><span class="pre">Cube.001</span></code> to a new location.</li>
+<li>With <code class="docutils literal"><span class="pre">Cube.001</span></code> selected, add a single driver to the <em>Rotation Y</em> property.</li>
+<li>Open the <em>Graph Editor</em>, set the <em>Mode</em> to <em>Drivers</em>.</li>
+<li><em>Show Only Selected</em> is useful disabled for drivers, marked green in the picture.</li>
+<li>In the channels region, select the <em>Y Euler Rotation</em> property.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">N</span></code> to open the properties region, scroll down to <em>Drivers</em> panel.</li>
+<li>Change the <em>Type</em> to <em>Averaged Value</em>, this will return the averaged value of the driver variables.</li>
+<li>Modify the driver variable settings.</li>
+</ol>
+<ul class="simple">
+<li><em>Type</em> - <em>变换 Channel</em></li>
+<li><em>Ob/Bone</em> - <em>Cube</em></li>
+<li><em>变换 Type</em> - <em>X Location</em></li>
+<li><em>变换 Space</em> - <em>World Space</em></li>
+</ul>
+<div class="figure">
+<img alt="../_images/animation_drivers_transform.jpg" src="../_images/animation_drivers_transform.jpg" />
+</div>
+<p>When finished, <code class="docutils literal"><span class="pre">Cube.001</span></code> should rotate on the Y axis when moving <code class="docutils literal"><span class="pre">Cube</span></code> left of right.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Some Driver 例子s.</p>
+<div class="section" id="driver-expression">
+<h3>Driver Expression<a class="headerlink" href="#driver-expression" title="Permalink to this headline">¶</a></h3>
+<p>Here are some examples using the scripted expression Expr to set the Driver Value.</p>
+<div class="figure" id="id6">
+<img alt="../_images/animation_driver_object_rotation.jpg" src="../_images/animation_driver_object_rotation.jpg" />
+<p class="caption"><span class="caption-text">Object Rotation.</span></p>
+</div>
+<div class="section" id="orbit-a-point">
+<h4>Orbit a point<a class="headerlink" href="#orbit-a-point" title="Permalink to this headline">¶</a></h4>
+<p>Here two drivers have been added to the Cube, X Location and Y Location.</p>
+<p>The scripted expressions are being used to set the object location.</p>
+<dl class="docutils">
+<dt>X Location Expr</dt>
+<dd><dl class="first last docutils">
+<dt><code class="docutils literal"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(sin(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">(frame/8)</span></code> : is the current frame of the animation, divided by 8 to slow the orbit down.
+<code class="docutils literal"><span class="pre">(sin(</span> <span class="pre">)*4)</span></code> : This returns the sine of (frame/8), then multiplies by 4 for a bigger circle.
+<code class="docutils literal"><span class="pre">0</span> <span class="pre">+</span></code> : is used to control the X Location offset of the orbit.</dd>
+</dl>
+</dd>
+<dt>Y Location Expr</dt>
+<dd><dl class="first last docutils">
+<dt><code class="docutils literal"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">(cos(frame</span> <span class="pre">/</span> <span class="pre">8)</span> <span class="pre">*</span> <span class="pre">4)</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">(frame</span> <span class="pre">/</span> <span class="pre">8)</span></code> : is the current frame of the animation, divided by 8 to slow the orbit down.
+<code class="docutils literal"><span class="pre">(cos(</span> <span class="pre">)</span> <span class="pre">*</span> <span class="pre">4)</span></code> : This returns the cosine of (frame/8), then multiplies by 4 for a bigger circle.
+<code class="docutils literal"><span class="pre">0</span> <span class="pre">+</span></code> : is used to control the Y Location offset of the orbit.</dd>
+</dl>
+</dd>
+</dl>
+<p><code class="docutils literal"><span class="pre">frame</span></code> is the same as bpy.context.scene.frame_current.</p>
+</div>
+<div class="section" id="driver-namespace">
+<h4>Driver Namespace<a class="headerlink" href="#driver-namespace" title="Permalink to this headline">¶</a></h4>
+<p>There is a list of built-in driver functions and properties.
+These can be displayed via the python console.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39;</span>
+<span class="go">                              __builtins__&#39;]</span>
+<span class="go">                              __doc__&#39;]</span>
+<span class="go">                              __loader__&#39;]</span>
+<span class="go">                              __name__&#39;]</span>
+<span class="go">                              __package__&#39;]</span>
+<span class="go">                              acos&#39;]</span>
+<span class="go">                              acosh&#39;]</span>
+<span class="go">                              asin&#39;]</span>
+<span class="go">                              asinh&#39;]</span>
+<span class="go">                              atan&#39;]</span>
+<span class="go">                              atan2&#39;]</span>
+<span class="go">                              atanh&#39;]</span>
+<span class="go">                              bpy&#39;]</span>
+<span class="go">                              ceil&#39;]</span>
+<span class="go">                              copysign&#39;]</span>
+<span class="go">                              cos&#39;]</span>
+<span class="go">                              cosh&#39;]</span>
+<span class="go">                              ..</span>
+</pre></div>
+</div>
+<p>This script will add a function to the driver namespace,
+which can then be used in the expression <code class="docutils literal"><span class="pre">driver_func(frame)</span></code></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
+
+<span class="k">def</span> <span class="nf">driver_func</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">val</span> <span class="o">*</span> <span class="n">val</span>    <span class="c1"># return val squared</span>
+
+<span class="c1"># add function to driver_namespace</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">driver_namespace</span><span class="p">[</span><span class="s1">&#39;driver_func&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">driver_func</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shape-key-driver">
+<h4>Shape Key Driver<a class="headerlink" href="#shape-key-driver" title="Permalink to this headline">¶</a></h4>
+<p>This example is a Shape Key Driver. The driver was added to the shape key Value.</p>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/animation_driver_shape_key.jpg"><img alt="../_images/animation_driver_shape_key.jpg" src="../_images/animation_driver_shape_key.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Shape Key Driver. Click to enlarge.</span></p>
+</div>
+<p>This example uses the Armature Bone &#8216;b&#8217; Z Rotation to control the Value of a Shape Key.
+The bone rotation mode is set to XYZ Euler.</p>
+<dl class="docutils">
+<dt>The Driver F-Curve is mapped like so</dt>
+<dd>Bone Z Rotation 0.0(0.0): Shape Key value 0.0
+Bone Z Rotation -2.09(-120.0): Shape Key value 1.0</dd>
+</dl>
+<p>This kind of driver can also be setup with the Variable Type Rotational Difference.</p>
+<p>See <a class="reference internal" href="shape_keys.html"><span class="doc">Shape Keys</span></a> for more info.</p>
+</div>
+</div>
+</div>
+<div class="section" id="drivers-and-multiple-relative-shape-keys">
+<h2>Drivers And Multiple Relative Shape Keys<a class="headerlink" href="#drivers-and-multiple-relative-shape-keys" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshots illustrate combining shape keys, bones, and
+drivers to make multiple chained relative shape keys sharing a single
+root. While it lacks the convenience of the single Evaluation Time of
+an absolute shape key, it allows you to have more complex
+relationships between your shape keys.</p>
+<div class="figure" id="id8">
+<img alt="../_images/driver_for_multiple_shape_keys_key1.jpg" src="../_images/driver_for_multiple_shape_keys_key1.jpg" />
+<p class="caption"><span class="caption-text">Key1 must handle conflicting values from the two bones.</span></p>
+</div>
+<div class="figure" id="id9">
+<img alt="../_images/driver_for_multiple_shape_keys_key2a.jpg" src="../_images/driver_for_multiple_shape_keys_key2a.jpg" />
+<p class="caption"><span class="caption-text">Key2A has different generator coefficients so it is activated in a different range of the bone&#8217;s position.</span></p>
+</div>
+<div class="figure" id="id10">
+<img alt="../_images/driver_for_multiple_shape_keys_key2b.jpg" src="../_images/driver_for_multiple_shape_keys_key2b.jpg" />
+<p class="caption"><span class="caption-text">Key2B is the same as Key2A, but is controlled by the second bone.</span></p>
+</div>
+<div class="figure" id="id11">
+<img alt="../_images/driver_for_multiple_shape_keys_retracted.jpg" src="../_images/driver_for_multiple_shape_keys_retracted.jpg" />
+<p class="caption"><span class="caption-text">when both bones are low, Key2B and Key2A are deactivated and Key1 is at low influence.</span></p>
+</div>
+<div class="figure">
+<img alt="../_images/driver_for_multiple_shape_keys_extended.jpg" src="../_images/driver_for_multiple_shape_keys_extended.jpg" />
+</div>
+<p>The Basis shape key has the stacks fully retracted. Key1 has the base
+fully extended. Key2A has the left stack fully extended. Key2B has
+the right stack fully extended. Key2A and Key2B are both relative to
+Key1 (as you can see in the field in the bottom right of the Shape Keys
+panel.</p>
+<p>The value of Key1 is bound to the position of bones by a driver with
+two variables. Each variable uses the world Z coordinate of a bone
+and uses the maximum value to determine how much the base should be
+extended. The generator polynomial is crafted such that the top of
+the dominant stack should line up with the bone for that stack.</p>
+<p>The value of Key2A is bound to the position of <code class="docutils literal"><span class="pre">Bone.L</span></code>. Its generator
+parameters are crafted such that when Key1&#8217;s value reaches 1, the
+value of Key2A starts increasing beyond zero. In this way, the top of
+the left stack will move with bone.L (mostly).</p>
+<p>The value of Key2B is bound to the position of <code class="docutils literal"><span class="pre">Bone.R</span></code>. Its generator
+parameters are similar to Key2A so that the top of the right stack
+will move with bone.R (mostly).</p>
+<p>Since it is quite easy for bone.L and bone.R to be in positions that
+indicate conflicting values for Key1 there will be times when the
+bones do not line up with the tops of their respective stacks. If the
+driver for Key1 was to use Average or Minimum instead of Maximum to
+determine the value of the shape key then &#8220;conflicts&#8221; between bone.L
+and bone.R would be resolved differently. You will choose according to
+the needs of your animation.</p>
+<iframe src="https://player.vimeo.com/video/173408647" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+<div class="section" id="troubleshooting">
+<h2>问题排查<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Some common problems people may run into when using drivers.</p>
+<div class="section" id="scripted-expression">
+<h3>Scripted Expression<a class="headerlink" href="#scripted-expression" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id12">
+<img alt="../_images/drivers_auto_run_b.jpg" src="../_images/drivers_auto_run_b.jpg" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Graph Editor ‣ Properties ‣ Drivers</span></span></p>
+</div>
+<div class="figure" id="id13">
+<img alt="../_images/drivers_auto_run_a.jpg" src="../_images/drivers_auto_run_a.jpg" />
+<p class="caption"><span class="caption-text">Info Header.</span></p>
+</div>
+<p>By default Blender will not autorun python scripts.</p>
+<p>If using a <em>Scripted Expression</em> Driver Type,
+you will have to open the file as <em>Trusted Source</em>,
+or set <em>Auto Run Python Scripts</em> in <span class="menuselection">用户首选项 ‣ File ‣ Auto Execution</span>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id14">
+<img alt="../_images/drivers_auto_run_c.jpg" src="../_images/drivers_auto_run_c.jpg" />
+<p class="caption"><span class="caption-text">文件浏览器.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id15">
+<img alt="../_images/drivers_auto_run_d.jpg" src="../_images/drivers_auto_run_d.jpg" />
+<p class="caption"><span class="caption-text"><span class="menuselection">User Preference ‣ File ‣ Auto Execution</span></span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rotational-properties-are-radians">
+<h3>Rotational Properties are Radians<a class="headerlink" href="#rotational-properties-are-radians" title="Permalink to this headline">¶</a></h3>
+<p>Parts of the 用户界面 may use different units of measurements for angles, rotation.
+In the Graph Editor, while working with Drivers, all angles are Radians.</p>
+</div>
+<div class="section" id="intra-armature-bone-drivers-can-misbehave">
+<h3>Intra-armature Bone Drivers Can Misbehave<a class="headerlink" href="#intra-armature-bone-drivers-can-misbehave" title="Permalink to this headline">¶</a></h3>
+<p>There is a <a class="reference external" href="https://developer.blender.org/T40301">well-known limitation</a>
+with drivers on bones that refer to another bone in the same armature. Their values can be
+incorrectly calculated based on the position of the other bone as it was <em>before</em> you adjust
+the current_frame. This can lead to obvious shape glitches when the rendering of frames has
+a jump in the frame number (either because the blend-file is currently on a different frame
+number or because you are skipping already rendered frames).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="index.html"><span class="doc">动画</span></a></li>
+<li><a class="reference internal" href="../editors/graph_editor/introduction.html"><span class="doc">Graph Editor</span></a></li>
+<li><a class="reference internal" href="../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-Curves</span></a></li>
+<li><a class="reference internal" href="../advanced/scripting/index.html#scripting-index"><span class="std std-ref">Extending Blender with Python</span></a>.</li>
+<li><a class="reference external" href="https://www.python.org">Python</a> and its <a class="reference external" href="https://www.python.org/doc">documentation</a>.</li>
+<li><a class="reference external" href="http://functions.wolfram.com/">functions.wolfram.com</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="markers.html" class="btn btn-neutral float-right" title="Markers" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="actions.html" class="btn btn-neutral" title="Actions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

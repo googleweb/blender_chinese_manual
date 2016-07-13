@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Converting Sketches to Objects &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Grease Pencil" href="index.html"/>
+        <link rel="next" title="编辑器" href="../../editors/index.html"/>
+        <link rel="prev" title="Layers" href="layers_and_animation.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#editor-controls">Editor Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#interface-controls">界面 Controls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tools">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../undo_and_redo.html">Undo and Redo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ruler_and_protractor.html">Ruler and Protractor</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Grease Pencil</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stroke_edit.html">Stroke Edit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="layers_and_animation.html">Layers</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Converting Sketches to Objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">界面</a> &raquo;</li>
+      
+          <li><a href="index.html">Grease Pencil</a> &raquo;</li>
+      
+    <li>Converting Sketches to Objects</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/interface/grease_pencil/converting_to_geometry.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="converting-sketches-to-objects">
+<h1>Converting Sketches to Objects<a class="headerlink" href="#converting-sketches-to-objects" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/interface_gp_convert.png" src="../../_images/interface_gp_convert.png" />
+<p class="caption"><span class="caption-text">The Convert to Curve options.</span></p>
+</div>
+<p>In the 3D视图, sketches on the active layer can be converted to geometry,
+based on the current view settings, by transforming the points recorded when drawing
+(which make up the strokes) into 3D-space. Currently, all points will be used,
+so it may be necessary to simplify or subdivide parts of the created geometry for standard use.</p>
+<p>Sketches can currently be converted into curves,
+as proposed by the <em>Convert Grease Pencil</em> menu popped-up by the <em>Convert</em> button in the grease pencil properties</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Type</dt>
+<dd><p class="first">The type of object to convert to.</p>
+<dl class="docutils">
+<dt>Path</dt>
+<dd>Create NURBS 3D curves of order 2 (i.e. behaving like polylines).</dd>
+<dt>Bézier Curve</dt>
+<dd>Create Bézier curves, with free &#8220;aligned&#8221; handles (i.e. also behaving like polylines).</dd>
+<dt>Polygon Curve</dt>
+<dd>Bézier Curve with strait line segments (auto handles)</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>Converting to Mesh</p>
+<p class="last">If you want to convert your sketch to a mesh,
+simply choose first <em>NURBS</em>, and then convert the created curve to a mesh.</p>
+</div>
+</dd>
+<dt>Normalize Weight</dt>
+<dd><p class="first">Will scale weights value so that they tightly fit into the (0.0 to 1.0) range. (enabled by default)</p>
+<p class="last">All this means that with a pressure tablet,
+you can directly control the radius and weight of the created curve, which can affect e.g.
+the width of an extrusion, or the size of an object through a <em>Follow Path</em>
+constraint or <em>Curve</em> modifier!</p>
+</dd>
+<dt>Link Strokes</dt>
+<dd>Will create a single spline, i.e. curve element. (enabled by default)
+from all strokes in active grease pencil layer. This especially useful if you want to use the curve as a path.
+All the strokes are linked in the curve by &#8220;zero weights/radii&#8221; sections.</dd>
+</dl>
+<div class="section" id="timing">
+<h3>Timing<a class="headerlink" href="#timing" title="Permalink to this headline">¶</a></h3>
+<p>Grease pencil stores &#8220;dynamic&#8221; data, i.e. how fast strokes are drawn.
+When converting to curve,
+this data can be used to create an <em>Evaluate Time</em> F-Curve (in other words,
+a path animation), that can be used e.g. to control another object&#8217;s position along that curve
+(<em>Follow Path</em> constraint, or, trough a driver, <em>Curve</em> modifier).
+So this allows you to reproduce your drawing movements.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">All those &#8220;timing&#8221; options need <em>Link Stroke</em> to be enabled - else
+they would not make much sense!</p>
+</div>
+<dl class="docutils">
+<dt>Timing Mode</dt>
+<dd><p class="first">This control let you choose how timing data are used.</p>
+<dl class="last docutils">
+<dt>No Timing</dt>
+<dd>Just create the curve, without any animation data (hence all following options will be hidden).</dd>
+<dt>Linear</dt>
+<dd>The path animation will be a linear one.</dd>
+<dt>Original</dt>
+<dd>The path animation will reflect to original timing, including for the &#8220;gaps&#8221;
+(i.e. time between strokes drawing).</dd>
+<dt>Custom Gaps</dt>
+<dd>The path animation will reflect to original timing, but the &#8220;gaps&#8221; will get custom values.
+This is especially useful if you have very large pauses between some of your strokes,
+and would rather like to have &#8220;reasonable&#8221; ones!</dd>
+</dl>
+</dd>
+<dt>Frame Range</dt>
+<dd>The &#8220;length&#8221; of the created path animation, in frames. In other words, the highest value of <em>Evaluation Time</em>.</dd>
+<dt>Start Frame</dt>
+<dd>The starting frame of the path animation.</dd>
+<dt>Realtime</dt>
+<dd>When enabled, the path animation will last exactly the same duration it took you do draw the strokes.</dd>
+<dt>End Frame</dt>
+<dd>When <em>Realtime</em> is disabled, this defines the end frame of the path animation.
+This means that the drawing timing will be scaled up or down to fit into the specified range.</dd>
+<dt>Gap Duration</dt>
+<dd><em>Custom Gaps</em> only. The average duration (in frames) of each gap between actual strokes.
+Please note that the value entered here will only be exact if <em>Realtime</em> is enabled,
+else it will be scaled, exactly as the actual strokes&#8217; timing is!</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple &#8220;hand writing&#8221; video created with curves converted from sketch data:</p>
+<iframe src="https://www.youtube.com/embed/VwWEXrnQAFI" style="border: 0; height: 345px; width: 560px">
+</iframe><p>The blend-file from the above example can be found
+<a class="reference external" href="https://wiki.blender.org/index.php/file:ManGreasePencilConvertToCurveDynamic例子.blend">here</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../editors/index.html" class="btn btn-neutral float-right" title="编辑器" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers_and_animation.html" class="btn btn-neutral" title="Layers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

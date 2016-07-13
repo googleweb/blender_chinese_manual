@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Action Constraint &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Constraints" href="../index.html"/>
+        <link rel="next" title="Child Of Constraint" href="child_of.html"/>
+        <link rel="prev" title="Track To Constraint" href="../tracking/track_to.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Constraints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">Motion Tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">Tracking</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">Relationship</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Action Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="follow_path.html">Follow Path Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigid_body_joint.html">Rigid Body Joint Constraint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">Shrinkwrap Constraint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Constraints</a> &raquo;</li>
+      
+    <li>Action Constraint</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/constraints/relationship/action.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="action-constraint">
+<h1>Action Constraint<a class="headerlink" href="#action-constraint" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Action</em> constraint is powerful.
+It allows you control an
+<a class="reference internal" href="../../../editors/dope_sheet/action.html"><span class="doc">Action</span></a> using the transformations of another object.</p>
+<p>The underlying idea of the <em>Action</em> constraint is very similar to the one behind the
+<a class="reference internal" href="../../../animation/drivers.html"><span class="doc">Drivers</span></a>, except that the former uses a whole action (i.e.
+a bunch a F-Curves of the same type), while the latter controls a single Fcurve of their &#8220;owner&#8221;...</p>
+<p>Note that even if the constraint accepts the <em>Mesh</em> action type,
+only the <em>Object</em>,
+<em>Pose</em> and <em>Constraint</em> types are really working,
+as constraints can only affect objects&#8217; or bones&#8217; transform properties,
+and not meshes&#8217; shapes.
+Also note that only the object transformation (location, rotation, scale) is affected by the action,
+if the action contains keyframes for other properties they are ignored, as constraints do not influence those.</p>
+<p>As an example, let us assume you have defined an <em>Object</em> action
+(it can be assigned to any object, or even no object at all),
+and have mapped it on your owner through an <em>Action</em> constraint,
+so that moving the target in the (0.0 to 2.0)
+range along its X-Axis maps the action content on the owner in the (0 to 100)
+frame range. This will mean that when the target&#8217;s <em>X</em> property is 0.0
+the owner will be as if in frame 0 of the linked action;
+with the target&#8217;s <em>X</em> property at 1.0
+the owner will be as if in frame 50 of the linked action, etc.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/constraints-relationship-action.jpg"><img alt="../../../_images/constraints-relationship-action.jpg" src="../../../_images/constraints-relationship-action.jpg" style="width: 293px;" /></a>
+<p class="caption"><span class="caption-text">Action panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Target</dt>
+<dd>This constraint uses one target, and is not functional (red state) when it has none.</dd>
+<dt>Bone:</dt>
+<dd>When target is an armature object, use this field to select the target bone.</dd>
+<dt>变换 Channel</dt>
+<dd>This drop-down list controls which transform property (location,
+rotation or scale along/around one of its axes) from the target to use as &#8220;action driver&#8221;.</dd>
+<dt>Target Space</dt>
+<dd>This constraint allows you to choose in which space to evaluate its target&#8217;s transform properties.</dd>
+<dt>To Action</dt>
+<dd><p class="first">Select the name of the action you want to use.</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Even though it might not be in red state (UI refresh problems...),
+this constraint is obviously not functional when this field does not contain a valid action.</p>
+</div>
+</dd>
+<dt>Object Action</dt>
+<dd>Bones <strong>only</strong>, when enabled,
+this option will make the constrained bone use the &#8220;object&#8221; part of the linked action,
+instead of the &#8220;same-named pose&#8221; part. This allows you to apply the action of an object to a bone.</dd>
+<dt>Target Range Min/Max</dt>
+<dd><p class="first">The lower and upper bounds of the driving transform property value.</p>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Unfortunately, here again we find the constraints limitations:</p>
+<ul class="last simple">
+<li>When using a rotation property as &#8220;driver&#8221;,
+these values are &#8220;mapped back&#8221; to the (-180.0 to 180.0) range.</li>
+<li>When using a scale property as &#8220;driver&#8221;, these values are limited to null or positive values.</li>
+</ul>
+</div>
+</dd>
+<dt>Action Range Start/End</dt>
+<dd><p class="first">The starting and ending frames of the action to be mapped.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>These values must be strictly positive.</li>
+<li>By default, both values are set to 0 which disables the mapping (i.e.
+the owner just gets the properties defined at frame 0 of the linked action...).</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>When the linked action affects some location properties,
+the owner&#8217;s existing location is added to the result of evaluating this constraint
+(exactly as when the <em>Offset</em> button of the <a class="reference internal" href="../transform/copy_location.html"><span class="doc">Copy Location constraint</span></a> is enabled...).</li>
+<li>When the linked action affects some scale properties,
+the owner&#8217;s existing scale is multiplied with the result of evaluating this constraint.</li>
+<li>When the linked action affects some rotation properties,
+the owner&#8217;s existing rotation is overridden by the result of evaluating this constraint.</li>
+<li>Unlike usual, you can have a <em>Start</em> value higher than the <em>End</em> one,
+or a <em>Min</em> one higher than a <em>Max</em> one: this will reverse the mapping of the action
+(i.e. it will be &#8220;played&#8221; reversed...), unless you have both sets reversed, obviously!</li>
+<li>When using a <em>Constraint</em> action,
+it is the constraint <em>channel&#8217;s names</em> that are used to determine to which constraints of the
+owner apply the action. E.g.
+if you have a constraint channel named &#8220;trackto_empt1&#8221;, its keyed <em>Influence</em> and/or <em>Head/Tail</em> values
+(the only ones you can key) will be mapped to the ones of the owner&#8217;s constraint named &#8220;trackto_empt1&#8221;.</li>
+<li>Similarly, when using a <em>Pose</em> action
+(which is obviously only meaningful and working when constraining a bone!),
+it is the bone&#8217;s name that is used to determine which bone <em>channel&#8217;s names</em> from the action to use (e.g.
+if the constrained bone is named &#8220;arm&#8221;, it will use and only use the action&#8217;s bone channel named &#8220;arm&#8221;...).
+Unfortunately, using a <em>Pose</em> action on a whole armature object
+(to affect all the keyed bones in the action at once) won&#8217;t work...</li>
+<li>Note also that you can use the <a class="reference internal" href="../../posing/pose_library.html"><span class="doc">pose library feature</span></a> to
+create/edit a <em>Pose</em> action data-block... just remember that in this situation, there&#8217;s one pose per frame!</li>
+</ul>
+<iframe src="https://player.vimeo.com/video/171554048" style="border: 0; height: 345px; width: 560px">
+</iframe></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="child_of.html" class="btn btn-neutral float-right" title="Child Of Constraint" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tracking/track_to.html" class="btn btn-neutral" title="Track To Constraint" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

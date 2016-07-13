@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exterior &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Forces" href="index.html"/>
+        <link rel="next" title="Interior" href="interior.html"/>
+        <link rel="prev" title="Forces" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Soft Body</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings.html">设置</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Forces</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Exterior</a></li>
+<li class="toctree-l4"><a class="reference internal" href="interior.html">Interior</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../collisions.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples.html">Simple 例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="../index.html">Soft Body</a> &raquo;</li>
+      
+          <li><a href="index.html">Forces</a> &raquo;</li>
+      
+    <li>Exterior</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/physics/soft_body/forces/exterior.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exterior">
+<h1>Exterior<a class="headerlink" href="#exterior" title="Permalink to this headline">¶</a></h1>
+<p>Exterior forces are applied to the vertices (and nearly exclusively to the vertices)
+of Soft Body objects. This is done using Newtons Laws of 物理:</p>
+<ul class="simple">
+<li>If there is no force on a vertex, it stays either unmoved or moves with constant speed in a straight line.</li>
+<li>The acceleration of a vertex depends on its mass and the force.
+The heavier the mass of a vertex the slower the acceleration. The larger the force the greater the acceleration.</li>
+<li>For every action there is an equal and opposite reaction.</li>
+</ul>
+<p>Well, this is done only in the range of computing accurateness,
+there is always a little damping to avoid overshoot of the calculation.</p>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>We will begin with a very simple example - the default cube.</p>
+<ul class="simple">
+<li>To judge the effect of the external forces you should at first turn off the <em>Goal</em>,
+so that the vertices are not retracted to their original position.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Alt-A</span></code>.</li>
+</ul>
+<p>What happens? The cube moves in negative Z-direction.
+Each of it&#8217;s eight vertices is affected by a global, constant force - the gravitation.
+Gravitation without friction is independent from the weight of an object,
+so each object you would use as a Soft Body here would fall with the same acceleration.
+The object does not deform,
+because every vertex moves with the same speed in the same direction.</p>
+</div>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="soft-body-panel">
+<h3>Soft Body Panel<a class="headerlink" href="#soft-body-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Friction</dt>
+<dd>The friction of the surrounding medium.
+The larger the friction, the more viscous is the medium.
+Friction always appears when a vertex moves relative to it&#8217;s surround medium.</dd>
+<dt>Mass</dt>
+<dd>Mass value for vertices.
+Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass.
+Larger mass means larger inertia, so also braking a Soft Body is more difficult.</dd>
+<dt>Mass Vertex Group</dt>
+<dd>You can paint weight values for an mesh&#8217;s mass, and select that vertex group here.</dd>
+<dt>Speed</dt>
+<dd>You can control the internal timing of the Softbody system with this value.
+It sets the correlation between frame rate and tempo of the simulation.
+A free falling body should cover a distance of about five meters after one second.
+You can adjust the scale of your scene and your simulation with this correlation. If you
+render with 25 frames per second and 1 meter shall be 1 BU, you have to set <em>Speed</em> to 1.3.</dd>
+</dl>
+</div>
+<div class="section" id="force-fields">
+<h3>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this headline">¶</a></h3>
+<p>To create other forces you have to use another object,
+often <em>Empty</em> objects are used for that.
+You can use some of the forces on Soft Body vertices as on <em>Particles</em>.
+Soft Bodies react only to:</p>
+<ul class="simple">
+<li>Spherical</li>
+<li>Wind</li>
+<li>Vortex</li>
+</ul>
+<p>Soft bodies do react on <em>Harmonic</em> fields, but not in a useful way.
+So if you use a <em>Harmonic</em> field for particles move the Soft body to another layer.</p>
+<p>See the section <a class="reference internal" href="../../force_fields/index.html"><span class="doc">Force Fields</span></a> for details.
+The force fields are quite strong,
+a <em>Spherical</em> field with a strength of -1.0 has the same effect that gravity has -
+approximately - a force of 10 Newton.</p>
+</div>
+<div class="section" id="aerodynamics">
+<h3>Aerodynamics<a class="headerlink" href="#aerodynamics" title="Permalink to this headline">¶</a></h3>
+<p>This special exterior force is not applied to the vertices but to the connecting edges.
+Technically, a force perpendicular to the edge is applied.
+The force scales with the projection of the relative speed on the edge (dot product). Note
+that the force is the same if wind is blowing or if you drag the edge through the air with the
+same speed. That means that an edge moving in its own direction feels no force,
+and an edge moving perpendicular to its own direction feels maximum force.</p>
+<dl class="docutils">
+<dt>Simple</dt>
+<dd>Edges receive a drag force from surrounding media</dd>
+<dt>Lift Force</dt>
+<dd>Edges receive a lift force when passing through surrounding media.</dd>
+<dt>Factor</dt>
+<dd>How much aerodynamic force to use. Try a value of 30 at first.</dd>
+</dl>
+</div>
+<div class="section" id="using-a-goal">
+<h3>Using a Goal<a class="headerlink" href="#using-a-goal" title="Permalink to this headline">¶</a></h3>
+<p>A goal is a shape that a soft body object tries to conform to.</p>
+<p>You have to confine the movement of vertices in certain parts of the mesh, e.g.
+to attach a Soft Body object at other objects. This is done with the <em>Vertex Group</em>
+(target). The target position is the original position of the vertex, like it would result
+from the &#8220;normal&#8221; animation of an object including <em>Shape Keys</em>,
+<em>Hooks</em> and <em>Armatures</em>.
+The vertex tries to reach it&#8217;s target position with a certain, adjustable intensity.</p>
+<div class="figure" id="id1">
+<span id="fig-softbody-force-exterior-shock"></span><a class="reference internal image-reference" href="../../../_images/shockabs.gif"><img alt="../../../_images/shockabs.gif" src="../../../_images/shockabs.gif" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Shock absorber description.</span></p>
+</div>
+<p>Imagine the vertex is connected with it&#8217;s target through a spring Fig. <a class="reference internal" href="#fig-softbody-force-exterior-shock"><span class="std std-ref">Shock absorber description.</span></a>.</p>
+<dl class="docutils">
+<dt>Default</dt>
+<dd><p class="first">This parameter defines how strong the influence of this spring is. A strength of 1 means,
+that the vertex will not move as Soft Body at all, instead keep its original position. 0 <em>Goal</em>
+(or no <em>Goal</em>) means, that the vertex moves only according to Soft Body simulation.
+If no vertex group is used/assigned, this numeric field is the default goal weight for all vertices.
+If a vertex group is present and assigned,
+this button instead shows an pop-up selector button that allows you to choose the name of the goal vertex group.
+If you use a vertex group the weight of a vertex defines its goal.</p>
+<p class="last">Often <a class="reference internal" href="../../../painting_sculpting/painting/weight_paint/index.html#painting-weight-index"><span class="std std-ref">Weight Paint</span></a> is used to adjust the weight comfortably.
+For non-mesh objects the <em>Weight</em> parameter of their vertices/controlpoints is used instead
+(<code class="kbd docutils literal"><span class="pre">W</span></code> in <em>编辑模式</em>) or use the <em>变换 Properties</em> panel.
+The weight of <em>Hair</em> particles can also be painted in <a class="reference internal" href="../../particles/mode.html"><span class="doc">粒子模式</span></a>.</p>
+</dd>
+<dt>Minimum / Maximum</dt>
+<dd>When you paint the values in vertex-groups (using <em>WeightPaint Mode</em>),
+you can use the <em>G Min</em> and <em>G Max</em> to fine-tune (clamp) the weight values.
+The lowest vertex-weight (blue) will become <em>G Min</em>, the highest value
+(red) becomes <em>G Max</em> (please note that the blue-red color scale may be altered by 用户首选项).</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>For now all is applied to single vertices</p>
+<p class="last">For now we have discussed vertex movement independent of each other, similar to particles.
+Every object without <em>Goal</em> would collapse completely if a non uniform force is applied.
+Now we will move to the next step,
+the forces that keep the structure of the object and make the Soft Body to a real Body.</p>
+</div>
+<dl class="docutils">
+<dt>Stiffness</dt>
+<dd>The spring stiffness for Goal. A low value creates very weak springs
+(more flexible &#8220;attachment&#8221; to the goal), a high value creates a strong spring
+(a stiffer &#8220;attachment&#8221; to the goal).</dd>
+<dt>Dampimg</dt>
+<dd>The friction of the spring. With a high value the movement will soon come to an end (little jiggle).</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interior.html" class="btn btn-neutral float-right" title="Interior" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Forces" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

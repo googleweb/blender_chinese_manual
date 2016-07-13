@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Text" href="index.html"/>
+        <link rel="next" title="Text Editing" href="editing.html"/>
+        <link rel="prev" title="Text" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#editing-text">Editing Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#formatting-text">Formatting Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shape">Shape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometry">Geometry</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">Text Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">Text</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/texts/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Curve and Surface, Font and Char</div>
+<div class="line">Menu:     <span class="menuselection">Add ‣ Text</span></div>
+</div>
+</div>
+<div class="figure" id="id1">
+<span id="fig-texts-intro-example"></span><a class="reference internal image-reference" href="../../_images/textsamples.jpg"><img alt="../../_images/textsamples.jpg" src="../../_images/textsamples.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Text 例子s.</span></p>
+</div>
+<p><em>Text</em> objects are exactly what they sound like: they contain some text.
+They share the same object type as curves and surfaces,
+as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally Béziers).</p>
+<p>Blender uses a &#8220;Font System&#8221; to manage mapping &#8220;letter codes &#8211;&gt; objects representing them in 3D
+views&#8221;. This implies that not only does the font system have its own <em>built-in</em> font,
+but it can use external fonts too, including <em>PostScript Type 1</em>,
+<em>OpenType</em> and <em>TrueType</em> fonts. And last but not least,
+it can use any objects existing in the current blend-file as letters...</p>
+<p>Texts in Bender allow you to create/render 2D or 3D text, shaded as you want,
+with various advanced layout options (like justifying and frames), as we will see below.
+By default, letters are just flat filled surfaces, exactly like any closed 2D curve.
+But you can of course extrude them... And texts can follow other curves.</p>
+<p>Of course, once you are happy with the shape of your text, you can convert it
+(with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, in <em>物体模式</em>), either to a curve,
+or directly to a mesh,
+allowing you to use all the powerful features of these types of objects on it...</p>
+<p>Fig. <a class="reference internal" href="#fig-texts-intro-example"><span class="std std-ref">Text 例子s.</span></a> shows some examples of various fonts in action,
+including the &#8220;blue&#8221; font that has been applied to a curve path.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A maximum of 50000 characters is allowed per text object; however,
+be forewarned that the more characters a single text object has,
+the slower the object will respond interactively.</p>
+<p>As you can see when you switch between <em>物体模式</em> and <em>编辑模式</em>,
+the <em>Font</em> panel remains the same. This means that its settings can be applied
+equally in both modes ... and this implies that you cannot apply them to just a part of the
+mesh. So font, size, and so on, are common to all letters in a <em>Text</em> object.
+There is just one exception:
+the <em>Bold</em> or <em>Italic</em> buttons control properties specific to each letter
+(this is a way to use up to four different fonts in a text).</p>
+<p class="last">For optimum resource usage, only characters that are being used consume memory
+(rather than the entire character set).</p>
+</div>
+<div class="section" id="editing-text">
+<h2>Editing Text<a class="headerlink" href="#editing-text" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Hotkey:   see below</div>
+</div>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/modelling-text-create-ex.jpg"><img alt="../../_images/modelling-text-create-ex.jpg" src="../../_images/modelling-text-create-ex.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Text in 编辑模式.</span></p>
+</div>
+<p>Editing text is quite different from other object types in Blender, and happens mainly in two areas.
+First, the 3D视图, of course, where you type your text, and have a few shortcuts, e.g. for applying
+styles (see <a class="reference internal" href="#character">Character</a>) - note however, that most Blender hotkeys you know in <em>编辑模式</em>
+do not exist for texts! The second place is the Properties Editor, especially the <em>Font</em> tab.</p>
+<p>The menu of the 3D视图 header has nearly no use,
+and there is no <em>Specials</em> menu... You have no transform nor mirror tools, and so on.
+However, you can apply to texts the same modifiers as for curves.</p>
+<p>Editing <em>Text</em> is similar to using a standard text editor but is not as
+full-featured and has some differences:</p>
+<dl class="docutils">
+<dt>Exit <em>编辑模式</em></dt>
+<dd><code class="kbd docutils literal"><span class="pre">Tab</span></code> doesn&#8217;t insert a tab character in the text,
+but rather enters and exits <em>编辑模式</em>, as with other object types.</dd>
+<dt>Copy</dt>
+<dd>To copy text to the buffer, use <code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code> or the <em>Copy</em> button in the tool shelf.</dd>
+<dt>Cut and Copy</dt>
+<dd>To cut and copy text to the buffer, use <code class="kbd docutils literal"><span class="pre">Ctrl-X</span></code> or the <em>Cut</em> button in the tool shelf.</dd>
+<dt>Paste</dt>
+<dd>To paste text from the buffer, use <code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code> or the <em>Paste</em> button in the tool shelf.</dd>
+<dt>Delete all text</dt>
+<dd>To completely erase or delete all text, use <code class="kbd docutils literal"><span class="pre">Ctrl-Backspace</span></code>.</dd>
+<dt>Home/End</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Home</span></code> and <code class="kbd docutils literal"><span class="pre">End</span></code> move the cursor to the beginning and end of a line respectively.</dd>
+<dt>下一页/上一页 word</dt>
+<dd>To move the cursor on a word&#8217;s boundary, use <code class="kbd docutils literal"><span class="pre">Ctrl-Left</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-Right</span></code>.</dd>
+</dl>
+<p>The text buffer is in sync with the desktop clipboard.
+But if it is used within Blender the text formatting will be copied as well.
+For other ways of inserting a text, see <a class="reference internal" href="#inserting-text">Inserting Text</a> below.</p>
+<div class="section" id="inserting-text">
+<h3>Inserting Text<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
+<p>You can insert text in two ways: from the internal text buffer
+(<a class="reference internal" href="#editing-text">Editing Text</a>), or from a text file.</p>
+<p>To load text from a text file, use the <span class="menuselection">Text ‣ Paste File</span> tool.
+This will bring up a <em>文件浏览器</em> editor for navigating to a valid UTF-8 file.
+As usual, be careful that the file doesn&#8217;t have too many characters,
+as interactive response will slow down.</p>
+<div class="section" id="special-characters">
+<h4>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Text ‣ Special Characters</span></div>
+</div>
+</div>
+<p>If you need special characters (such as accented chars, which are not on your keyboard)
+you can produce many of them using a combination of two other characters. To do so,
+type the main char, press <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>,
+and then press the desired &#8220;modifier&#8221; to produce the special character.
+Some examples are given below:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>ã</td>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">~</span></code></td>
+</tr>
+<tr class="row-even"><td>á</td>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">'</span></code></td>
+</tr>
+<tr class="row-odd"><td>à</td>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">\</span></code></td>
+</tr>
+<tr class="row-even"><td>å</td>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">O</span></code></td>
+</tr>
+<tr class="row-odd"><td>ë</td>
+<td><code class="kbd docutils literal"><span class="pre">E</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">&quot;</span></code></td>
+</tr>
+<tr class="row-even"><td>ø</td>
+<td><code class="kbd docutils literal"><span class="pre">O</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">/</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="convert-text-to-text-object">
+<h4>Convert Text to Text Object<a class="headerlink" href="#convert-text-to-text-object" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/converttexttotextobject.jpg"><img alt="../../_images/converttexttotextobject.jpg" src="../../_images/converttexttotextobject.jpg" style="width: 250px;" /></a>
+</div>
+<p>Using an existing text-block, you can convert it to an object from the text editor&#8217;s header,
+select <span class="menuselection">Edit ‣ Text to 3D Object</span>,
+<em>One Object</em> or <em>One Object per Line</em> depending on your needs.</p>
+<p>It is also possible to paste from the clipboard or a file from the <em>Edit</em> menu, while editing 3D Text.</p>
+</div>
+<div class="section" id="d-mesh">
+<h4>3D Mesh<a class="headerlink" href="#d-mesh" title="Permalink to this headline">¶</a></h4>
+<p>It is possible to convert a Text Object to a 3D Mesh object.
+This can be useful so that you may edit the vertices in <em>编辑模式</em>,
+but you will lose the ability to edit the text itself.
+To do this, go to <em>物体模式</em> and select your Text Object.
+Press <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and select <em>Mesh From Curve/Meta/Surf/Text</em>.
+Now you can return to <em>编辑模式</em> and manually edit the vertices.
+They are usually a bit messy, so it may be useful to use a <em>Limited Dissolve</em> deletion or <em>Remesh</em> Object
+<a class="reference internal" href="../modifiers/index.html"><span class="doc">Modifier</span></a> at a low threshold to clean up your mesh.</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/textobjectfromtext.jpg"><img alt="../../_images/textobjectfromtext.jpg" src="../../_images/textobjectfromtext.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">left normal text, right the made text object.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="text-selection">
+<h3>Text Selection<a class="headerlink" href="#text-selection" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/modelling-text-create-ex.jpg"><img alt="../../_images/modelling-text-create-ex.jpg" src="../../_images/modelling-text-create-ex.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Text in 编辑模式.</span></p>
+</div>
+<p>In <em>编辑模式</em>, your text has a white cursor, and as in any text editor,
+it determines where new chars will be inserted! You move this cursor with the arrow keys or
+<code class="kbd docutils literal"><span class="pre">PageUp</span></code> / <code class="kbd docutils literal"><span class="pre">PageDown</span></code> and <code class="kbd docutils literal"><span class="pre">Home</span></code> / <code class="kbd docutils literal"><span class="pre">End</span></code>.</p>
+<p>Hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> while using the arrow keys to select a part of the text.
+You can use it to specify different materials, the normal/bold/italic state,
+and not much more...</p>
+</div>
+</div>
+<div class="section" id="formatting-text">
+<h2>Formatting Text<a class="headerlink" href="#formatting-text" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fonts">
+<h3>Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Font</div>
+</div>
+</div>
+<p>The <em>Font</em> panel has several options for changing the look of characters.</p>
+<div class="section" id="loading-and-changing-fonts">
+<h4>Loading and Changing Fonts<a class="headerlink" href="#loading-and-changing-fonts" title="Permalink to this headline">¶</a></h4>
+<div class="figure" id="id5">
+<img alt="../../_images/text-load-ex.jpg" src="../../_images/text-load-ex.jpg" />
+<p class="caption"><span class="caption-text">Loading a Type 1 font file.</span></p>
+</div>
+<p>Blender comes with a <em>built-in</em> font by default and is displayed in each of the four font
+style choosers.
+The <em>built-in</em> font is always present and shows in this list as &#8220;Bfont&#8221;.
+The first icon contains a drop-down list displaying currently loaded fonts.
+Select one for each font style.</p>
+<p>To load a different <em>Font</em>, click one of the <em>Load</em> buttons in the
+<em>Font</em> panel and navigate to a <em>valid</em> font.
+The <em>文件浏览器</em> editor will give all valid fonts a capital F icon,
+as seen in <em>Loading a Type 1 font file.</em></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Unix note</p>
+<p class="last">Fonts are typically located under <code class="docutils literal"><span class="pre">/usr/lib/fonts</span></code>, or some variant like <code class="docutils literal"><span class="pre">/usr/lib/X11/fonts</span></code>, but not always.
+They may be in other locations as well,
+such as <code class="docutils literal"><span class="pre">/usr/share/local</span></code> or <code class="docutils literal"><span class="pre">/usr/local/share</span></code>, and possibly related sub-trees.</p>
+</div>
+<p>If you select a font that Blender cannot understand,
+you will get the error <code class="docutils literal"><span class="pre">Not</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">font</span></code>.</p>
+<p>Remember the same font will be applied to all chars with same style in a text,
+but that a separate font is required for each style. For example,
+you will need to load an <em>Italics</em> font in order to make characters or words italic. Once
+the font is loaded you can apply that font &#8220;Style&#8221; to the selected characters or the whole
+object. In all,
+you would need to load a minimum of four different types of fonts to represent each style
+(Normal, Italics, Bold, Bold-Italics).</p>
+<p>It is important to understand that Blender does not care what font you load for &#8220;normal&#8221;,
+&#8220;bold&#8221;, etc., styles. This is how you can have up to four different fonts in use in the same
+text - but you have to choose between different styles of a same font, or different fonts.
+Blender has a number of typographic controls for changing the style and layout of text,
+found in the <em>Font</em> panel.</p>
+</div>
+<div class="section" id="size-and-shear">
+<h4>Size and Shear<a class="headerlink" href="#size-and-shear" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Size</dt>
+<dd>Controls the size of the whole text (no way to control each char size independently).
+Note however, that chars with different fonts (different styles, see below) might have different visible sizes.</dd>
+</dl>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/textshear.jpg"><img alt="../../_images/textshear.jpg" src="../../_images/textshear.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">shear: &#8216;blender&#8217; has a shear value of 1,
+&#8216;2.59&#8217; a shear value of 0</span></p>
+</div>
+<dl class="docutils">
+<dt>Shear</dt>
+<dd>Controls the inclination of the whole text.
+Different to as it may seems, this is not similar to italics style.</dd>
+</dl>
+</div>
+<div class="section" id="objects-as-fonts">
+<h4>Objects as Fonts<a class="headerlink" href="#objects-as-fonts" title="Permalink to this headline">¶</a></h4>
+<p>You can also &#8220;create&#8221; your own &#8220;font&#8221; inside Blender! This is quite a complex process,
+so let us detail it:</p>
+<ul class="simple">
+<li>First, you must create your chars. Each char, of any type,  is an object (mesh, curve, meta...).
+They all must have a name following the schema:
+<em>common prefix</em> followed by the <em>char name</em> (e.g. &#8220;ft.a&#8221;, &#8220;ft.b&#8221;, etc.).</li>
+<li>Then, for the <em>Text</em> object, you must enable the <em>Dupli Verts</em> button
+(<span class="menuselection">Object  ‣  动画 设置</span> panel).</li>
+<li>Back in the <em>Font</em> tap,
+fill the <em>Ob Family</em> field with the <em>common prefix</em> of your &#8220;font&#8221; objects.</li>
+</ul>
+<p>Now, each time a char in your text matches the <em>suffix part</em> of a &#8220;font&#8221; object&#8217;s name,
+this object is duplicated on this char. The original chars remain visible. The objects are
+duplicated so that their center is positioned at the <em>lower right corner</em> of the
+corresponding chars.</p>
+</div>
+<div class="section" id="text-on-curve">
+<h4>Text on Curve<a class="headerlink" href="#text-on-curve" title="Permalink to this headline">¶</a></h4>
+<p>With the <a class="reference internal" href="../modifiers/deform/curve.html"><span class="doc">curve modifier</span></a> you can let text follow a curve.</p>
+<div class="figure" id="id7">
+<span id="fig-texts-intro-on-curve"></span><a class="reference internal image-reference" href="../../_images/text-curved-lowres-ex.jpg"><img alt="../../_images/text-curved-lowres-ex.jpg" src="../../_images/text-curved-lowres-ex.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Text on curve.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-texts-intro-on-curve"><span class="std std-ref">Text on curve.</span></a> you can see a text deformed by a curve (a 2D Bézier circle).</p>
+<p>To apply the curve modifier, the text object first has to be converted to a mesh,
+using <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and click mesh.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a Text on Curve feature,
+but the curve modifier offers more options.</p>
+</div>
+</div>
+<div class="section" id="underline">
+<h4>Underline<a class="headerlink" href="#underline" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Underline</dt>
+<dd><p class="first">Toggled with the <em>Underline</em> button before typing.
+Text can also be set to Underlined by selecting it then using the <em>Underline</em> button in the Tool Shelf.</p>
+<dl class="last docutils">
+<dt>Position</dt>
+<dd>This allows you to shift vertically the position of the underline.</dd>
+<dt>Thickness</dt>
+<dd>This controls the thickness of the underline.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id8">
+<a class="reference internal image-reference" href="../../_images/textfontsettings.jpg"><img alt="../../_images/textfontsettings.jpg" src="../../_images/textfontsettings.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">check a character option to, for example, type bold text.</span></p>
+</div>
+</div>
+<div class="section" id="character">
+<h4>Character<a class="headerlink" href="#character" title="Permalink to this headline">¶</a></h4>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/text-bold-ex.jpg"><img alt="../../_images/text-bold-ex.jpg" src="../../_images/text-bold-ex.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bold text.</span></p>
+</div>
+<dl class="docutils">
+<dt>Bold</dt>
+<dd>Toggled with the <em>Bold</em> button before typing.
+Text can also be set to Bold by selecting it then using the <em>Bold</em> button in the Tool Shelf.</dd>
+<dt>Italics</dt>
+<dd>Toggled with the <em>Italic</em> button before typing.
+Text can also be set to Italic by selecting it then using the <em>Italic</em> button in the Tool Shelf.</dd>
+<dt>Underline</dt>
+<dd>Enables underlining, as controlled by the Underline settings above.</dd>
+<dt>Small Caps</dt>
+<dd>type small capital text.</dd>
+</dl>
+<p>Blender&#8217;s <em>Bold</em> and <em>Italic</em> buttons do not work the same way as other applications,
+as they also serve as placeholders for you to load up other fonts manually,
+which get applied when you define the corresponding style; see <a class="reference internal" href="#fonts">Fonts</a>.</p>
+<p>To apply the Bold/Italics/Underline attribute to a set of characters, you either turn on
+<em>Bold</em> / <em>Italics</em> / <em>Underline</em> prior to typing characters,
+or highlight (select) first and then toggle Bold/Italics/Underline.</p>
+</div>
+<div class="section" id="setting-case">
+<h4>Setting Case<a class="headerlink" href="#setting-case" title="Permalink to this headline">¶</a></h4>
+<p>You can change the text case by selecting it then clicking the <em>To Upper</em> or
+<em>To Lower</em> in the tool shelf.</p>
+<p>Enable the <em>Small Caps</em> option to type characters as small caps.</p>
+<p>The size of the <em>Small Caps</em> can be changed with the <em>Small Caps Scale</em>
+setting. Note that the <em>Small Caps Scale</em> is applied the same to all <em>Small Caps</em> formatted characters.</p>
+</div>
+</div>
+<div class="section" id="paragraph">
+<h3>Paragraph<a class="headerlink" href="#paragraph" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Paragraph</em> Panel has settings for the alignment and spacing of text.</p>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/textparagraphsettings.png"><img alt="../../_images/textparagraphsettings.png" src="../../_images/textparagraphsettings.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The paragraph tab.</span></p>
+</div>
+<div class="section" id="horizontal-alignment">
+<h4>Horizontal Alignment<a class="headerlink" href="#horizontal-alignment" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Left</dt>
+<dd>Aligns text to left of frames when using them,
+else uses the center point of the <em>Text</em> object as the starting point of the text (which grows to the right).</dd>
+<dt>Center</dt>
+<dd>Centers text in the frames when using them,
+else uses the center point of the <em>Text</em> object as the mid-point of the text
+(which grows equally to the left and right).</dd>
+<dt>Right</dt>
+<dd>Aligns text to right of frames when using them,
+else uses the center point of the <em>Text</em> object as the ending point of the text (which grows to the left).</dd>
+<dt>Justify</dt>
+<dd>Only flushes a line when it is terminated by a wordwrap (<strong>not</strong> by <code class="kbd docutils literal"><span class="pre">Return</span></code>),
+it uses <em>whitespace</em> instead of <em>character spacing</em> (kerning) to fill lines.</dd>
+<dt>Flush</dt>
+<dd>Always flushes the line, even when it&#8217;s still being entered;
+it uses character spacing (kerning) to fill lines.</dd>
+</dl>
+<p>Both <em>Justify</em> and <em>Flush</em> only work within frames.</p>
+</div>
+<div class="section" id="vertical-alignment">
+<h4>Vertical Alignment<a class="headerlink" href="#vertical-alignment" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Top Base-Line</dt>
+<dd>Aligns the text base-line to top of frames when using them,
+else uses the center point of the <em>Text</em> object as the starting point of the text (which grows to the bottom).</dd>
+<dt>Top</dt>
+<dd>Aligns top of text to the center point of the <em>Text</em> object (which grows to the bottom).
+It behaves as <em>Top Base-Line</em> when using frames.</dd>
+<dt>Center</dt>
+<dd>Centers text in the frames when using them,
+else uses the center point of the <em>Text</em> object as the mid-point of the text
+(which grows equally to the top and bottom).</dd>
+<dt>Bottom</dt>
+<dd>Aligns text to bottom of frames when using them,
+else uses the center point of the <em>Text</em> object as the ending point of the text (which grows to the top).</dd>
+</dl>
+<p><em>Top</em> only works without frames.</p>
+</div>
+<div class="section" id="spacing">
+<h4>Spacing<a class="headerlink" href="#spacing" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Character</dt>
+<dd>A factor by which space between each character is scaled in width</dd>
+<dt>Word</dt>
+<dd>A factor by which whitespace between words is scaled in width.
+You can also control it by pressing <code class="kbd docutils literal"><span class="pre">Alt-Left</span></code> or <code class="kbd docutils literal"><span class="pre">Alt-Right</span></code>
+to decrease/increase spacing by steps of 0.1 .</dd>
+<dt>Line</dt>
+<dd>A factor by which the vertical space between lines is scaled.</dd>
+</dl>
+</div>
+<div class="section" id="offset">
+<h4>Offset<a class="headerlink" href="#offset" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>X offset and Y offset</dt>
+<dd>Well, these settings control the X and Y offset of the text, regarding its &#8220;normal&#8221; positioning. Note that with
+frames (see <a class="reference internal" href="editing.html"><span class="doc">Text Boxes</span></a>), it applies to all frames&#8217; content...</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="shape">
+<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object or 编辑模式</div>
+<div class="line">Panel:    Curve and Surface</div>
+</div>
+</div>
+<p>As you can see in the <em>Curve and Surface</em> panel,
+texts have most of the same options as curves.</p>
+<div class="section" id="resolution">
+<h3>Resolution<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h3>
+<p>Preview, 渲染 resolution. See <a class="reference internal" href="../curves/introduction.html#curve-resolution"><span class="std std-ref">curve resolution</span></a>.</p>
+<div class="figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/textshapesettings.jpg"><img alt="../../_images/textshapesettings.jpg" src="../../_images/textshapesettings.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">the shape settings.</span></p>
+</div>
+<dl class="docutils">
+<dt>Fast Editing</dt>
+<dd>disables curve filling while in edit mode.</dd>
+</dl>
+</div>
+<div class="section" id="fill">
+<h3>Fill<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h3>
+<p>The fill options control how the text curves are filled in when text is <em>Extruded</em>
+or <em>Beveled</em> in the <em>Geometry</em> Panel.</p>
+<dl class="docutils">
+<dt>Front</dt>
+<dd>Fills in the front side of the surface.</dd>
+<dt>Back</dt>
+<dd>Fills in the back side of the surface.</dd>
+<dt>Fill Deformed</dt>
+<dd>Fills the curves after applying shape keys and modifiers.</dd>
+</dl>
+</div>
+<div class="section" id="textures">
+<h3>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id12">
+<img alt="../../_images/texttexturesettings.jpg" src="../../_images/texttexturesettings.jpg" />
+<p class="caption"><span class="caption-text">Texture 设置.</span></p>
+</div>
+<dl class="docutils">
+<dt>Use UV for Mapping</dt>
+<dd>Use UV values as generated texture coordinates.</dd>
+<dt>Auto Texture Space</dt>
+<dd>Adjusts the active object&#8217;s texture space automatically when transforming object.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<p>Text objects have all the <a class="reference internal" href="../curves/editing/extrude.html"><span class="doc">curves extrusion features</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Text Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Text" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

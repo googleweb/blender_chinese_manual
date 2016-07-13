@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Extended Controls &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="界面" href="../index.html"/>
+        <link rel="next" title="Common Shortcuts" href="../common_shortcuts.html"/>
+        <link rel="prev" title="Buttons and Controls" href="buttons_and_controls.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#editor-controls">Editor Controls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#interface-controls">界面 Controls</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="buttons_and_controls.html">Buttons and Controls</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Extended Controls</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operator-search-menu">Operator Search Menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-picker">Color Picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eyedropper">Eyedropper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-ramp-widget">Color Ramp Widget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-widget">Curve Widget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-view">List View</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../common_shortcuts.html">Common Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">界面</a> &raquo;</li>
+      
+    <li>Extended Controls</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/interface/controls/extended_controls.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="extended-controls">
+<h1>Extended Controls<a class="headerlink" href="#extended-controls" title="Permalink to this headline">¶</a></h1>
+<p>This page documents some of the more involved interface controls.</p>
+<div class="section" id="operator-search-menu">
+<h2>Operator Search Menu<a class="headerlink" href="#operator-search-menu" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/ui-controls-operator_search.png" src="../../_images/ui-controls-operator_search.png" />
+<p class="caption"><span class="caption-text">The operator search pop-up.</span></p>
+</div>
+<p>A menu with access to all <em>Blender</em> commands is available by pressing
+<code class="kbd docutils literal"><span class="pre">Spacebar</span></code>. Simply start typing the name of the command you want to refine the list.
+When the list is sufficiently narrowed, <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the desired command or navigate
+with <code class="kbd docutils literal"><span class="pre">Down</span></code> and <code class="kbd docutils literal"><span class="pre">Up</span></code>, activate it by pressing <code class="kbd docutils literal"><span class="pre">Return</span></code>.</p>
+</div>
+<div class="section" id="color-picker">
+<span id="ui-color-picker"></span><h2>Color Picker<a class="headerlink" href="#color-picker" title="Permalink to this headline">¶</a></h2>
+<p>All of the color picker types have the common RGB, HSV and Hex options to show values.</p>
+<p>Blender uses (0 to 1.0) values to express colors for RGB and HSV values.</p>
+<p>Some colors also define an alpha value A, below the color sliders.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Blender corrects Gamma by default</p>
+<p class="last">for more information about how to disable Gamma correction in Blender,
+see: <a class="reference internal" href="../../render/post_process/cm_and_exposure.html"><span class="doc">Color Management and Exposure</span></a> page.</p>
+</div>
+<ul class="simple">
+<li>Use <code class="kbd docutils literal"><span class="pre">Wheel</span></code> to change overall brightness.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Backspace</span></code> to reset to the original color.</li>
+</ul>
+<div class="section" id="color-picker-types">
+<h3>Color Picker Types<a class="headerlink" href="#color-picker-types" title="Permalink to this headline">¶</a></h3>
+<p>The default color picker type can be selected in the user preferences,
+see: <a class="reference internal" href="../../preferences/system.html"><span class="doc">System</span></a>.</p>
+<p>For operations that are capable of using Alpha, another slider is added at the bottom of the color picker.</p>
+<table class="hlist"><tr><td><ul>
+<li><div class="first figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/interface_controls_sv-h.png"><img alt="../../_images/interface_controls_sv-h.png" src="../../_images/interface_controls_sv-h.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Square (SV + H), Saturation, Value plus Hue.
+Colors are adjusted using the range of brightness of the
+base color; chosen at the color bar in the middle of the picker.</span></p>
+</div>
+</li>
+<li><div class="first figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/interface_controls_hsv.png"><img alt="../../_images/interface_controls_hsv.png" src="../../_images/interface_controls_hsv.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Circle HSV (Default), is a full gamut of colors ranging from center
+to the borders is always shown; the center is a mix of the colors.</span></p>
+</div>
+</li>
+</ul>
+</td><td><ul>
+<li><div class="first figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/interface_controls_hs-v.png"><img alt="../../_images/interface_controls_hs-v.png" src="../../_images/interface_controls_hs-v.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Square (HS + V), Hue, Saturation plus Value. Brightness is subtracted from the
+base color chosen on the square of the color picker moving the slider to the left.</span></p>
+</div>
+</li>
+<li><div class="first figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/interface_controls_hsl.png"><img alt="../../_images/interface_controls_hsl.png" src="../../_images/interface_controls_hsl.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Circle HSL, a variation of the regular circle select that uses HSL for mixing.</span></p>
+</div>
+</li>
+</ul>
+</td><td><ul>
+<li><div class="first figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/interface_controls_hv-s.png"><img alt="../../_images/interface_controls_hv-s.png" src="../../_images/interface_controls_hv-s.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Square (HV + S), Hue, Value and Saturation. Brightness is added to the base color
+chosen by the square of the color picker moving the slider to the left.</span></p>
+</div>
+</li>
+</ul>
+</td></tr></table>
+</div>
+<div class="section" id="hexadecimal-colors">
+<h3>Hexadecimal Colors<a class="headerlink" href="#hexadecimal-colors" title="Permalink to this headline">¶</a></h3>
+<p>You can optionally use hexadecimal (Hex) values,
+expressed as (RRGGBB), a common way to represent colors for HTML
+and useful to quickly copy/paste colors between applications.</p>
+<p>Shorthand hex colors are also supported RGB,
+so dark-yellow FFCC00, can be written as FC0.</p>
+</div>
+</div>
+<div class="section" id="eyedropper">
+<span id="ui-eye-dropper"></span><h2>Eyedropper<a class="headerlink" href="#eyedropper" title="Permalink to this headline">¶</a></h2>
+<p>The eyedropper allows you to sample from anywhere in the Blender window.</p>
+<p>The eyedropper can be used to select different kinds of data.</p>
+<dl class="docutils">
+<dt>Color</dt>
+<dd>This is the most common usage.</dd>
+<dt>Objects / Object-Data</dt>
+<dd>This is used with object buttons such as parent, constraints or modifiers to
+select an object from the 3D视图.</dd>
+<dt>相机 Depth</dt>
+<dd>Number buttons effecting distance can also use the eye-dropper,
+this is most useful for camera depth of field.</dd>
+</dl>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">E</span></code> will activate the eye-dropper while hovering over a button.</li>
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> dragging will mix the colors you drag over which can help when sampling noisy imagery.</li>
+<li><code class="kbd docutils literal"><span class="pre">Spacebar</span></code> resets and starts mixing the colors again.</li>
+</ul>
+</div>
+<div class="section" id="color-ramp-widget">
+<span id="ui-color-ramp-widget"></span><h2>Color Ramp Widget<a class="headerlink" href="#color-ramp-widget" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id7">
+<img alt="../../_images/ui-color_ramp.png" src="../../_images/ui-color_ramp.png" />
+<p class="caption"><span class="caption-text">Color-Ramp.</span></p>
+</div>
+<p><em>Color Ramps</em> enables the user to specify a range of colors based on color-stops.
+Color-stops are similar to a mark indicating where exactly the chosen color should be.
+The interval from each of the color-stops added to the ramp is a result of the color interpolation and
+chosen interpolation method. The available options for Color Ramps are:</p>
+<dl class="docutils">
+<dt>Add (<code class="docutils literal"><span class="pre">+</span></code> Button)</dt>
+<dd>Clicking on this button will add a stop to your custom weight paint map.
+The stops are added from the last selected stop to the next one, from left to right and
+they will be placed in the middle of both stops.</dd>
+<dt>Delete (<code class="docutils literal"><span class="pre">-</span></code> Button)</dt>
+<dd>Deletes the selected color-stop from the list.</dd>
+<dt>Flip (<code class="docutils literal"><span class="pre">&lt;-&gt;</span></code> Button)</dt>
+<dd>Flips the color band, inverting the values of the custom weight paint range.</dd>
+<dt>Color Mode</dt>
+<dd><p class="first">Selection of the <a class="reference internal" href="../../glossary/index.html#term-color-space"><span class="xref std std-term">color space</span></a> used for interpolation.</p>
+<dl class="last docutils">
+<dt>RGB</dt>
+<dd>Blends color by mixing each color channel and combining.</dd>
+<dt>HSV/HSL</dt>
+<dd>Blends colors by first converting to HSV or HSL, mixing, then combining again.
+This has the advantage of maintaining saturation between different hues,
+where RGB would de-saturate, this allows for a richer gradient.</dd>
+</dl>
+</dd>
+<dt>Interpolation Options</dt>
+<dd><p class="first">Enables the user to choose the types of calculations for the color interpolation for each color stop.</p>
+<dl class="last docutils">
+<dt>B-Spline</dt>
+<dd>Uses a <em>B-Spline</em> Interpolation for the color stops.</dd>
+<dt>Cardinal</dt>
+<dd>Uses a <em>Cardinal</em> Interpolation for the color stops.</dd>
+<dt>Linear</dt>
+<dd>Uses a <em>Linear</em> Interpolation for the color stops.</dd>
+<dt>Ease</dt>
+<dd>Uses a <em>Ease</em> Interpolation for the color stops.</dd>
+<dt>Constant</dt>
+<dd>Uses a <em>Constant</em> Interpolation for the color stops.</dd>
+</dl>
+</dd>
+<dt>Numeric Field</dt>
+<dd><p class="first">Index of the active color-stop (shown as a dashed line).</p>
+<p class="last">Allows you to change the active color when colors may be too close to easily select with the cursor.</p>
+</dd>
+<dt>Position</dt>
+<dd>This slider controls the positioning of the selected color stop in the range.</dd>
+<dt>Color Bar</dt>
+<dd>Opens a color picker for the user to specify color and Alpha for the selected color stop.
+When a color is using Alpha, the Color Bar is then divided in two, with the left side
+showing the base color and the right side showing the color with the alpha value.</dd>
+</dl>
+<div class="section" id="shortcuts">
+<h3>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> (drag) moves colors.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> (click) adds a new control point.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="curve-widget">
+<span id="ui-curve-widget"></span><h2>Curve Widget<a class="headerlink" href="#curve-widget" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id8">
+<img alt="../../_images/widget_curve.png" src="../../_images/widget_curve.png" />
+<p class="caption"><span class="caption-text">Curve Widget.</span></p>
+</div>
+<p>The <em>Curve Widget</em> is found in several places throughout Blender, such as:</p>
+<ul class="simple">
+<li>RGB Curves node</li>
+<li>Vector Curves node</li>
+<li>Paint/Sculpt brush falloff</li>
+<li>Color Management curves</li>
+</ul>
+<p>The purpose of the <em>Curve Widget</em> is to allow the user to modify an input
+(such as an image) in an intuitive manner by
+smoothly adjusting the values up and down using the curve.</p>
+<p>The input values are mapped to the X-axis of the graph, and the Y-axis is mapped to the output values.</p>
+<div class="section" id="control-points">
+<h3>Control Points<a class="headerlink" href="#control-points" title="Permalink to this headline">¶</a></h3>
+<p>Like all curves in Blender, the curve of the <em>Curve Widget</em> is controlled using <em>control points</em>.</p>
+<p>By default, there are two control points: one at (0.0, 0.0) and one at (1.0, 1.0),
+meaning the input is mapped directly to the output (unchanged).</p>
+<dl class="docutils">
+<dt>To move a control point</dt>
+<dd>Simply click and drag it around.</dd>
+<dt>To add a new control point</dt>
+<dd>Click anywhere on the curve where there is not already a control point.</dd>
+<dt>To remove a control point</dt>
+<dd>select it and click the <code class="docutils literal"><span class="pre">X</span></code> button at the top right.</dd>
+</dl>
+</div>
+<div class="section" id="controls">
+<h3>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h3>
+<p>Above the curve graph is a row of controls. These are:</p>
+<dl class="docutils">
+<dt>Zoom In</dt>
+<dd>Zoom into the center of the graph to show more details and provide more accurate control.
+To navigate around the curve while zoomed in, click and drag in an empty part of the graph.</dd>
+<dt>Zoom Out</dt>
+<dd>Zoom out of the graph to show fewer details and view the graph as a whole.
+You cannot zoom out further than the clipping borders (see <em>Clipping</em> below).</dd>
+<dt>Tools</dt>
+<dd><div class="first figure align-right" id="id9">
+<img alt="../../_images/interface_controls_curve_tools.png" src="../../_images/interface_controls_curve_tools.png" />
+<p class="caption"><span class="caption-text">Tools for Curves.</span></p>
+</div>
+<dl class="last docutils">
+<dt>Reset View</dt>
+<dd>Resets the view of the curve.</dd>
+<dt>Vector Handle</dt>
+<dd>Vector type of curve point&#8217;s handle.
+Breaks the tangent at the curve handle, making it an angle.</dd>
+<dt>Auto Handle</dt>
+<dd>Automatic type of curve point&#8217;s handle.</dd>
+<dt>Extend Horizontal</dt>
+<dd><p class="first">Causes the curve to stay horizontal before the first point and after the last point.</p>
+<div class="last figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/ui-curve-extendhorizontal.jpg"><img alt="../../_images/ui-curve-extendhorizontal.jpg" src="../../_images/ui-curve-extendhorizontal.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Extend Horizontal.</span></p>
+</div>
+</dd>
+<dt>Extend Extrapolated</dt>
+<dd><p class="first">Causes the curve to extrapolate before the first point and after the last point,
+based on the shape of the curve.</p>
+<div class="last figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/ui-curve-extendextrapolate.jpg"><img alt="../../_images/ui-curve-extendextrapolate.jpg" src="../../_images/ui-curve-extendextrapolate.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Extend Extrapolate.</span></p>
+</div>
+</dd>
+<dt>Reset Curve</dt>
+<dd>Resets the curve in default (removes all points added to the curve).</dd>
+</dl>
+</dd>
+<dt>Clipping</dt>
+<dd><dl class="first last docutils">
+<dt>Use Clipping</dt>
+<dd>Forces curve points to stay between specified values.</dd>
+<dt>Min X/Y and Max X/Y</dt>
+<dd>Set the minimum and maximum bounds of the curve points.</dd>
+</dl>
+</dd>
+<dt>Delete</dt>
+<dd>Remove the selected control point. The first and last points cannot be deleted.</dd>
+<dt>X, Y</dt>
+<dd>The coordinates of the selected control point.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="list-view">
+<h2>List View<a class="headerlink" href="#list-view" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/extended_controls_list_view_filter.png" src="../../_images/extended_controls_list_view_filter.png" />
+</div>
+<p>At the bottom of a list view (like the ones found in the object data properties)
+there are controls for filtering and sorting and resizing.</p>
+<dl class="docutils">
+<dt>Rename</dt>
+<dd>By pressing <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> over an item&#8217;s name, you can edit the text field.
+This can also be achieved by double clicking.</dd>
+<dt>Resize</dt>
+<dd>The list view can be resized to show more or fewer items.
+Hover the mouse over the handle then click and drag the handle to expand or shrink the list.</dd>
+<dt>Filter</dt>
+<dd><p class="first">Click the <em>Show filtering options</em> button to toggle filter option buttons.</p>
+<p>Type part of a list item&#8217;s name in the filter text box to filter items by part of their name.</p>
+<dl class="last docutils">
+<dt>Filter Include</dt>
+<dd>When the magnifying glass icon has a <code class="docutils literal"><span class="pre">+</span></code> sign then only items that match the text will be displayed.</dd>
+<dt>Filter Exclude</dt>
+<dd>When the magnifying glass icon has a <code class="docutils literal"><span class="pre">-</span></code> sign then only items that do not match text will be displayed.</dd>
+</dl>
+</dd>
+<dt>Sort</dt>
+<dd><p class="first">Sort list items.</p>
+<dl class="last docutils">
+<dt>Alphabetical</dt>
+<dd>This button switches between alphabetical and non-alphabetical ordering.</dd>
+<dt>Inverse</dt>
+<dd>Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../common_shortcuts.html" class="btn btn-neutral float-right" title="Common Shortcuts" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="buttons_and_controls.html" class="btn btn-neutral" title="Buttons and Controls" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

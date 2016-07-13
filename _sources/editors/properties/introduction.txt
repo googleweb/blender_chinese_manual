@@ -1,0 +1,105 @@
+
+************
+简介
+************
+
+The *Properties Editor* is used to edit data and properties for the *Active Scene* and the *Active Object*.
+
+.. figure:: /images/editors_properties.png
+
+   The Properties Editor with the Mesh tab selected.
+
+
+Tabs
+====
+
+The Properties editor shows several tabs,
+which can be chosen via the icon row in the header.
+
+
+Scene/渲染
+------------
+
+These tabs are used to add features, and to change properties for the Active Scene.
+
+.. figure:: /images/properties_render.png
+   :align: right
+
+   Scene/渲染 tabs.
+
+.. _properties-render-tab:
+
+渲染
+   Everything related to render output (dimensions, anti-aliasing, performance etc).
+渲染 Layers
+   渲染 Layers and Passes.
+Scene
+   Gravity, Units to use, Keying Sets, Color Management, Audio settings, 物理, and scene simplification options.
+World
+   Environmental lighting, sky, mist and Ambient Occlusion.
+
+
+Object Data
+-----------
+
+These tabs are used to add features, and to change properties for the Active Object
+(and other active elements, material, curve... etc).
+
+.. figure:: /images/properties_object.png
+   :align: right
+
+   Object Data tabs.
+
+The Object Data tabs shown depend on what type of object was selected last (The Active Object).
+
+Features unique to the object type are usually added to the Data and Bone tabs, highlighted in yellow.
+
+Object
+   变换ations, display options, visibility settings (via layers)
+   duplication settings and animation information (regarding Object position).
+Constraints
+   Used to control an Object’s transform (position, rotation, scale),
+   tracking and relationship properties.
+修改器
+   Array, Mirror, Subdivision Surface, Armature, Cast.
+Object Data
+   设置 for the objects data,
+   depending on the Object Type.
+Bone
+   Armature Bone settings.
+Bone Constraints
+   Armature Bone constraints.
+Materials
+   Properties of the surface (color, specularity, transparency, etc).
+Textures
+   Used by materials, world and brushes to provide additional details.
+Particles
+   Hair and Emitter particles.
+物理
+   Properties relating to Cloth, Force Fields, Collision, Fluid and Smoke Simulation.
+
+
+Documentation
+=============
+
+渲染ing is mainly documented in its own section,
+there is also information on materials and textures.
+
+- :doc:`渲染 </render/introduction>`
+
+Scene features are mainly documented in the data-system,
+though some tools are added to different sections.
+
+- :doc:`Scenes </data_system/scenes>`
+- :doc:`Keying Sets </animation/keyframes/keying_sets>`
+
+The Object features are usually documented in the *Objects* part of the 3D视图 Section.
+
+- :doc:`建模 </editors/3dview/transform/introduction>`
+
+The other features each have their own section in the manual.
+
+- :doc:`Constraints </rigging/constraints/introduction>`
+- :doc:`修改器 </modeling/modifiers/introduction>`
+- :doc:`Particles </physics/particles/introduction>`
+- :doc:`物理 </physics/introduction>`

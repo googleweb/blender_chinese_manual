@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Freestyle" href="index.html"/>
+        <link rel="next" title="Core Options" href="core.html"/>
+        <link rel="prev" title="Freestyle" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-freestyle">What is FreeStyle?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-big-picture">The Big Picture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#known-limitations">Known Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core.html">Core Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewmap.html">Viewmaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameter_editor/index.html">Parameter Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">Python Scripting Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export_svg.html">Freestyle SVG Exporter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Freestyle</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/freestyle/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-freestyle">
+<h2>What is FreeStyle?<a class="headerlink" href="#what-is-freestyle" title="Permalink to this headline">¶</a></h2>
+<p>Freestyle is an edge- and line-based non-photorealistic (NPR) rendering engine.
+It relies on mesh data and z-depth information to draw lines on selected edge types.
+Various line styles can be added to produce artistic (&#8220;hand drawn&#8221;, &#8220;painted&#8221;, etc.)
+or technical (hard line) looks.</p>
+<p>The two operating modes - <a class="reference internal" href="python.html"><span class="doc">Python Scripting</span></a> and
+<a class="reference internal" href="parameter_editor/index.html"><span class="doc">Parameter Editor</span></a> -
+allow a powerful diversity of line styles and results. Line styles such as Japanese big brush, cartoon, blueprint,
+thickness-with-depth are already pre-scripted in Python. The Parameter Editor mode allows intuitive editing of
+features such as dotted lines and easy setup of multiple line types and edge definitions. On top of all of that,
+with the introduction of line style modifiers, the sky is the limit!</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/render-freestyle-demo-ohacartoon.jpg"><img alt="../../_images/render-freestyle-demo-ohacartoon.jpg" src="../../_images/render-freestyle-demo-ohacartoon.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">A cartoon scene from <a class="reference external" href="http://oha-studios.com/">OHA Studio</a>
+(<a class="reference external" href="https://download.blender.org/demo/test/freestyle_demo_file.blend.zip">the blend-file</a>).
+© Mechanimotion Entertainment.</span></p>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/render-freestyle-demo-blueprint.jpg"><img alt="../../_images/render-freestyle-demo-blueprint.jpg" src="../../_images/render-freestyle-demo-blueprint.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Blueprint render of Martin M-130 from 1935 by LightBWK. CC0. Warning:
+heavy file! designed for stress test Blender to the limits and may crash Blender.
+(<a class="reference external" href="https://wiki.blender.org/index.php/File:M-130Blueprint.zip">File:M-130Blueprint.zip</a>)</span></p>
+</div>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/render-freestyle-demo-hvacpreviz.jpg"><img alt="../../_images/render-freestyle-demo-hvacpreviz.jpg" src="../../_images/render-freestyle-demo-hvacpreviz.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">HVAC Pre-Viz by Lee Posey. CC0 (<a class="reference external" href="https://wiki.blender.org/index.php/File:HVACPreViz.zip">File:HVACPreViz.zip</a>).</span></p>
+</div>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/render-freestyle-demo-kitchenset.jpg"><img alt="../../_images/render-freestyle-demo-kitchenset.jpg" src="../../_images/render-freestyle-demo-kitchenset.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Kitchen by Vicente Carro. © Anigo动画.</span></p>
+</div>
+<p>More artwork can be found at
+<a class="reference external" href="https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.67/FreeStyle#Freestyle_Artwork_Showcase">https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.67/FreeStyle#Freestyle_Artwork_Showcase</a></p>
+</div>
+<div class="section" id="the-big-picture">
+<h2>The Big Picture<a class="headerlink" href="#the-big-picture" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Activate FreeStyle by <span class="menuselection">Properties Editor ‣ 渲染 tab ‣ FreeStyle</span> panel,
+tick check box. Please note that FreeStyle is only available for the Blender Internal renderer.</li>
+<li>Freestyle settings are located in the new <em>渲染 Layers</em> tab.</li>
+<li>One render layer can only have one viewmap. A viewmap holds the edge detection settings (Crease Angle,
+Culling toggle, Face Smoothness toggle, Material Boundaries toggle,
+Sphere Radius and Kr Derivative Epsilon advanced options).</li>
+<li>A viewmap can have multiple line sets.</li>
+<li>A line set controls which line types and selections will be rendered, from lines based on your scene.</li>
+<li>Each line set uses one line style (which can be shared between multiple line sets).</li>
+<li>A line style tells Freestyle how to render the linked line sets in terms of color, alpha,
+thickness and other aspects.</li>
+</ul>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/freestyle_diagram.jpg"><img alt="../../_images/freestyle_diagram.jpg" src="../../_images/freestyle_diagram.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">block diagram of Freestyle view map and processes.</span></p>
+</div>
+</div>
+<div class="section" id="known-limitations">
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Highly memory demanding: All mesh objects in a render layer are loaded at once.</li>
+<li>Only faced mesh objects are supported. The following kinds of meshes are ignored:<ul>
+<li>Mesh faces with wire materials.</li>
+<li>Mesh faces with completely transparent materials.</li>
+<li>Mesh faces with the <em>Cast Only</em> material option enabled.</li>
+</ul>
+</li>
+<li>Transparent faces are treated as opaque faces.</li>
+<li>No edges at face intersections are detected yet.</li>
+<li>Layer masks do not work with Freestyle.</li>
+<li>Freestyle rendering results do not have any Z depth information.</li>
+<li>Panoramic cameras are not supported.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="core.html" class="btn btn-neutral float-right" title="Core Options" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Freestyle" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

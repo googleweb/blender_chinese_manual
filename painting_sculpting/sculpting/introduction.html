@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Sculpting" href="index.html"/>
+        <link rel="next" title="Options" href="options.html"/>
+        <link rel="prev" title="Sculpting" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">绘制与雕刻</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../painting/index.html">Painting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Sculpting</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sculpt-mode">雕刻模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sculpt-menus">Sculpt Menus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hiding-and-masking-mesh">Hiding and Masking Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adaptive.html">Adaptive Sculpting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">绘制与雕刻</a> &raquo;</li>
+      
+          <li><a href="index.html">Sculpting</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/painting_sculpting/sculpting/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><em>雕刻模式</em> is similar to <em>编辑模式</em> in that it is used to alter the shape of a model,
+but 雕刻模式 uses a very different workflow:
+instead of dealing with individual elements (vertices, edges, and faces),
+an area of the model is altered using a brush.
+In other words, instead of selecting a group of vertices,
+雕刻模式 automatically selects vertices based on where the brush is, and modifies them accordingly.</p>
+</div>
+<div class="section" id="sculpt-mode">
+<h2>雕刻模式<a class="headerlink" href="#sculpt-mode" title="Permalink to this headline">¶</a></h2>
+<p>Sculpt mode is selected from the mode menu of the <em>3D视图</em> header.
+Once sculpt mode is activated the Tool Shelf of the <em>3D视图</em> will change
+to sculpt mode specific panels. The panels will be <em>Brush</em>,
+<em>Texture</em>, <em>Tool</em>, <em>Symmetry</em>, <em>Stroke</em>, <em>Curve</em>, <em>Appearance</em>, and <em>Options</em>.
+Also a red circle will appear that follows the location of the cursor in the 3D视图.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To have a predictable brush behavior, apply the scale of your mesh.</p>
+</div>
+<div class="figure" id="id1">
+<img alt="../../_images/sculpt_mode_drop_down.jpg" src="../../_images/sculpt_mode_drop_down.jpg" />
+<p class="caption"><span class="caption-text">雕刻模式 Dropdown.</span></p>
+</div>
+<div class="figure" id="id2">
+<img alt="../../_images/sculpt_brush_circle.jpg" src="../../_images/sculpt_brush_circle.jpg" />
+<p class="caption"><span class="caption-text">The cursor in 雕刻模式.</span></p>
+</div>
+</div>
+<div class="section" id="sculpt-menus">
+<h2>Sculpt Menus<a class="headerlink" href="#sculpt-menus" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tool-menu">
+<h3>Tool Menu<a class="headerlink" href="#tool-menu" title="Permalink to this headline">¶</a></h3>
+<p>Here you can select the type of brush preset to use.
+<em>Reset Brush</em> will return the settings of a brush to its defaults.
+You can also set Blender to use the current brush for <em>顶点绘制模式</em>,
+<em>权重绘制模式</em>, and <em>纹理绘制模式</em> using the toggle buttons.</p>
+</div>
+</div>
+<div class="section" id="hiding-and-masking-mesh">
+<h2>Hiding and Masking Mesh<a class="headerlink" href="#hiding-and-masking-mesh" title="Permalink to this headline">¶</a></h2>
+<p>It is sometimes useful to isolate parts of a mesh to sculpt on. To hide a part of a mesh,
+press <code class="kbd docutils literal"><span class="pre">H</span></code> then click &amp; drag around the part you want to hide.
+To reveal a hidden part of a mesh,
+press <code class="kbd docutils literal"><span class="pre">Shift-H</span></code> then click &amp; drag around the part you want to reveal.
+To reveal all hidden parts, just press <code class="kbd docutils literal"><span class="pre">Alt-H</span></code>.
+With the mask brush we can paint a part of the mesh and hide it.</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/sculpt_hide_mask.png"><img alt="../../_images/sculpt_hide_mask.png" src="../../_images/sculpt_hide_mask.png" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">Black part is masked, down in the picture mask/hide menu.</span></p>
+</div>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>These shortcuts may be customized under
+<span class="menuselection">File ‣ 用户首选项 ‣ Input ‣ 3D视图 ‣ 雕刻模式</span>.</p>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">Brush Selection Shortcuts</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>Draw</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">X</span></code></td>
+</tr>
+<tr class="row-even"><td><em>Smooth</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">S</span></code></td>
+</tr>
+<tr class="row-odd"><td><em>Pinch/Magnify</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">P</span></code></td>
+</tr>
+<tr class="row-even"><td><em>Inflate/Deflate</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">I</span></code></td>
+</tr>
+<tr class="row-odd"><td><em>Grab</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">G</span></code></td>
+</tr>
+<tr class="row-even"><td><em>Layer</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">L</span></code></td>
+</tr>
+<tr class="row-odd"><td><em>Flatten/Contrast</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-T</span></code></td>
+</tr>
+<tr class="row-even"><td><em>Clay</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">C</span></code></td>
+</tr>
+<tr class="row-odd"><td><em>Crease</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-C</span></code></td>
+</tr>
+<tr class="row-even"><td><em>Snake Hook</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">K</span></code></td>
+</tr>
+<tr class="row-odd"><td><em>Mask</em> brush</td>
+<td><code class="kbd docutils literal"><span class="pre">M</span></code></td>
+</tr>
+<tr class="row-even"><td>Set brush by number</td>
+<td><code class="kbd docutils literal"><span class="pre">0</span></code> - <code class="kbd docutils literal"><span class="pre">9</span></code> and <code class="kbd docutils literal"><span class="pre">Shift-0</span></code> to <code class="kbd docutils literal"><span class="pre">Shift-9</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Brush Option Shortcuts</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Interactively set brush size</td>
+<td><code class="kbd docutils literal"><span class="pre">F</span></code></td>
+</tr>
+<tr class="row-even"><td>Increase/decrease brush size</td>
+<td><code class="kbd docutils literal"><span class="pre">[</span></code> and <code class="kbd docutils literal"><span class="pre">]</span></code></td>
+</tr>
+<tr class="row-odd"><td>Interactively set brush strength</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-F</span></code></td>
+</tr>
+<tr class="row-even"><td>Interactively rotate brush texture</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code></td>
+</tr>
+<tr class="row-odd"><td>Brush direction toggle (<em>Add</em> / <em>Sub</em>)</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl</span></code> pressed while sculpting</td>
+</tr>
+<tr class="row-even"><td>Brush normal weight toggle</td>
+<td><p class="first"><code class="kbd docutils literal"><span class="pre">Ctrl</span></code> toggle <em>Normal Weight</em>.</p>
+<p class="last">(for <em>Grab</em> and <em>Snake Hook</em> brushes).</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Set stroke method (airbrush, anchored, ..)</td>
+<td><code class="kbd docutils literal"><span class="pre">E</span></code></td>
+</tr>
+<tr class="row-even"><td>Toggle Smooth Stroke</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-S</span></code></td>
+</tr>
+<tr class="row-odd"><td>Smooth stroke toggle</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift</span></code></td>
+</tr>
+<tr class="row-even"><td>Set texture angle type</td>
+<td><code class="kbd docutils literal"><span class="pre">R</span></code></td>
+</tr>
+<tr class="row-odd"><td>Translate/scale/rotate stencil texture</td>
+<td><code class="kbd docutils literal"><span class="pre">RMB</span></code>, <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></code></td>
+</tr>
+<tr class="row-even"><td>Translate/scale/rotate stencil mask</td>
+<td><code class="kbd docutils literal"><span class="pre">Alt-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Shift-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-Ctrl-RMB</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">其他 Shortcuts</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Hide mesh inside selection</td>
+<td><code class="kbd docutils literal"><span class="pre">H</span></code> then click &amp; drag</td>
+</tr>
+<tr class="row-even"><td>Reveal mesh inside selection</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-H</span></code> then click &amp; drag</td>
+</tr>
+<tr class="row-odd"><td>Show entire mesh</td>
+<td><code class="kbd docutils literal"><span class="pre">Alt-H</span></code></td>
+</tr>
+<tr class="row-even"><td>Mask clear</td>
+<td><code class="kbd docutils literal"><span class="pre">Alt-M</span></code></td>
+</tr>
+<tr class="row-odd"><td>Mask invert</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></td>
+</tr>
+<tr class="row-even"><td>Step up one multires level</td>
+<td><code class="kbd docutils literal"><span class="pre">PageUp</span></code></td>
+</tr>
+<tr class="row-odd"><td>Step down one multires level</td>
+<td><code class="kbd docutils literal"><span class="pre">PageDown</span></code></td>
+</tr>
+<tr class="row-even"><td>Set multires level</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-0</span></code> to <code class="kbd docutils literal"><span class="pre">Ctrl-5</span></code></td>
+</tr>
+<tr class="row-odd"><td>Dynamic Topology toggle</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-D</span></code></td>
+</tr>
+<tr class="row-even"><td>Dynamic Topology detail</td>
+<td><code class="kbd docutils literal"><span class="pre">Shift-D</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="options.html" class="btn btn-neutral float-right" title="Options" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Sculpting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

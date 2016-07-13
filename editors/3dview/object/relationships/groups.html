@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grouping objects &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Object Relationships" href="index.html"/>
+        <link rel="next" title="Parenting Objects" href="parents.html"/>
+        <link rel="prev" title="Object Relationships" href="index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="index.html">Object Relationships</a> &raquo;</li>
+      
+    <li>Grouping objects</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/3dview/object/relationships/groups.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="grouping-objects">
+<span id="id1"></span><h1>Grouping objects<a class="headerlink" href="#grouping-objects" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id2">
+<span id="fig-view3d-grouped-objects"></span><img alt="../../../../_images/modeling-objects-parenting-exampel-groupedobj.jpg" src="../../../../_images/modeling-objects-parenting-exampel-groupedobj.jpg" />
+<p class="caption"><span class="caption-text">Grouped objects.</span></p>
+</div>
+<p>There can be many objects in a scene: A typical stage scene consists of furniture, props,
+lights, and backdrops.
+Blender helps you keep everything organized by allowing you to group like objects together.</p>
+<p>Group objects together without any kind of transformation relationship.
+Use groups to just logically organize your scene,
+or to facilitate one-step appending or linking between files or across scenes.
+Objects that are part of a group always shows as light green when selected.
+See Fig. <a class="reference internal" href="#fig-view3d-grouped-objects"><span class="std std-ref">Grouped objects.</span></a>.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Creating a Group</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Ctrl-G</span></code> creates a new group and adds the selected object(s) to it.</dd>
+<dt>Naming a Group</dt>
+<dd><p class="first">All groups that an object has been assigned to are listed in the
+<span class="menuselection">Object Properties Panel ‣ Relations panel</span>.
+To rename a group, simply click in the groups name field. To name groups in the <em>Outliner</em> editor,
+select <em>Groups</em> as the outliner display from the header combo box, and <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> click on the group name.
+The name will change to an editable field; make your changes and press <code class="kbd docutils literal"><span class="pre">Return</span></code>.</p>
+<div class="last figure" id="id3">
+<img alt="../../../../_images/modeling-objects-grouping-objprop.jpg" src="../../../../_images/modeling-objects-grouping-objprop.jpg" />
+<p class="caption"><span class="caption-text">Naming a Group.</span></p>
+</div>
+</dd>
+<dt>Restricting Group Contents via Layers</dt>
+<dd>The cluster of layer buttons attached to each group determines from
+which layers the group objects will be included when duplicated.
+If your group contains objects on layers 10, 11 and 12, but you disable the layer 12 button in the group controls,
+duplicates of that group (using the <a class="reference internal" href="../../transform/duplication/dupligroup.html"><span class="doc">Dupligroup</span></a> feature)
+will only show the portions of the group that reside in layers 10 and 11.</dd>
+<dt>Appending or Linking Groups</dt>
+<dd>To append a group from another blend-file,
+consult <a class="reference internal" href="../../../../data_system/linked_libraries.html"><span class="doc">this page</span></a>.
+In summary, <span class="menuselection">File ‣ Link/Append Link</span> Select a blend-file and, and then the group.</dd>
+<dt>Removing Groups</dt>
+<dd>To remove a object from a group, in  the Properties editor <em>Object</em> tab, open the &#8220;Groups&#8221; panel.
+Find the name of the group from which you wish to remove the object,
+and click the x to the right of the group name.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Selecting Groups</p>
+<p class="last">Groups can be selected, see <a class="reference internal" href="../../selecting.html#select-grouped"><span class="std std-ref">Select Grouped</span></a> for more information.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parents.html" class="btn btn-neutral float-right" title="Parenting Objects" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Object Relationships" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

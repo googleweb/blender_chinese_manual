@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>各自的原心 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="轴心点" href="index.html"/>
+        <link rel="next" title="3D游标作质轴心点" href="3d_cursor.html"/>
+        <link rel="prev" title="质心点" href="median_point.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">变换</a> &raquo;</li>
+      
+          <li><a href="../index.html">变换控制</a> &raquo;</li>
+      
+          <li><a href="index.html">轴心点</a> &raquo;</li>
+      
+    <li>各自的原心</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/transform/transform_control/pivot_point/individual_origins.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="individual-origins">
+<h1>各自的原心<a class="headerlink" href="#individual-origins" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式:     物体模式和编辑模式</div>
+<div class="line">菜单:     在3D视图标题栏<img alt="pivot-icon" src="../../../../../_images/editors_3dview_header-pivot-point.jpg" /> 图标选择.</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-.</span></code></div>
+</div>
+</div>
+<div class="section" id="in-object-mode">
+<h2>在物体模式<a class="headerlink" href="#in-object-mode" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-around-center.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-around-center.jpg" src="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-around-center.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Rotation around individual origins.</span></p>
+</div>
+<p>The Origin of an object is shown in the 3D视图 by a small orange circle.
+This is highlighted in the image to the right by the red arrow.
+The origin tells Blender the relative position of that object in 3D space. What you see in the 3D视图
+(vertices, edges etc) is what makes up the object.</p>
+<p>While the Origin is equivalent to the center of the object,
+it does not have to be located in the center of the <em>Mesh</em>. This means that an object can
+have its center located on one end of the mesh or even completely outside the mesh.
+For example,
+the orange rectangle in the image has its Origin located on the far left of the mesh.</p>
+<p>Now let us examine: Rotation around the individual origins.</p>
+<ul class="simple">
+<li>The blue rectangle has its Origin located in the center of the mesh,
+while the orange rectangle has its Origin located on the left hand side.</li>
+<li>When the 轴心点 is set to <em>各自的原心</em>,
+the center of each object (indicated by the red arrow)
+remains in place while the object rotates around it in the path shown by the black arrow.</li>
+</ul>
+</div>
+<div class="section" id="in-edit-mode">
+<h2>在编辑模式<a class="headerlink" href="#in-edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>在编辑模式, setting the 轴心点 to 各自的原心 produces different results when
+the selection mode is set to Vertex, Edge or Face. For example, Vertex mode produces results
+similar to setting the 轴心点 to median and Edge mode often produces distorted results.
+Using 各自的原心 in Face mode produces the most predictable results.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform_control_individual.jpg"><img alt="../../../../../_images/editors_3dview_transform_control_individual.jpg" src="../../../../../_images/editors_3dview_transform_control_individual.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Rotation of individual faces with the 轴心点 indicated by the image text.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-grouped-faces.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-grouped-faces.jpg" src="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-rotation-grouped-faces.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Rotation of grouped faces with the 轴心点 indicated by the image text.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As can be seen in the images above, faces that touch each other will deform when rotated when
+the 轴心点 is set to 各自的原心.
+Faces that do not touch will rotate around their 各自的原心 (their center).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-individual-faces.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-individual-faces.jpg" src="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-individual-faces.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Scaling with non-touching faces.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-group-fgon-faces.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-group-fgon-faces.jpg" src="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-scale-group-fgon-faces.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Scaling with touching faces.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Groups of faces and Fgons can be scaled without their outside perimeter being deformed.
+However, the individual faces inside will not be scaled uniformly.</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-anemone-example.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-anemone-example.jpg" src="../../../../../_images/editors_3dview_transform-control_pivot-point_individual-origins-anemone-example.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">建模 with faces and individual origins as the 轴心点.</span></p>
+</div>
+<p>Once you are aware of its limitations and pitfalls,
+this tool can save a lot of time and lead to unique shapes. This &#8220;anemone&#8221; was modeled from a
+12 sided cylinder in about 10 minutes by repeatedly using this workflow:
+extrusions of individual faces, scaling with <em>median as a 轴心点</em>,
+and scaling and rotations of those faces with <em>各自的原心 as 轴心点s</em>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3d_cursor.html" class="btn btn-neutral float-right" title="3D游标作质轴心点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="median_point.html" class="btn btn-neutral" title="质心点" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

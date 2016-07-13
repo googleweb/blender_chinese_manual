@@ -1,0 +1,32 @@
+
+****************
+相机 Data Node
+****************
+
+.. figure:: /images/camera-data-node.jpg
+
+   相机 Data node.
+
+
+Inputs
+======
+
+This node has no inputs.
+
+
+Properties
+==========
+
+This node has no properties.
+
+
+Outputs
+=======
+
+View Vector
+   A 相机 space vector from the camera to the shading point.
+View Z Depth
+   How far away each pixel is from the camera
+View Distance
+   Distance from the camera to the shading point.
+

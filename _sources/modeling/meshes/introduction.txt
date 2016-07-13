@@ -1,0 +1,170 @@
+..    TODO/Review: {{review||text=splitted mesh analysis}}.
+
+************
+简介
+************
+
+编辑模式
+=========
+
+You can work with geometric objects in two modes.
+
+:doc:`物体模式 </editors/3dview/transform/introduction>`
+   操作 in *物体模式* affect the whole object.
+   *物体模式* has the following header in the 3D视图:
+
+
+.. figure:: /images/modeling_meshes_modes_object.png
+
+   物体模式 Header.
+
+
+编辑模式
+   操作 in *编辑模式* affect only the geometry of an object,
+   but not global properties such as location or rotation.
+   *编辑模式* has the following header in the 3D视图:
+
+
+.. figure:: /images/modeling_meshes_modes_edit.png
+
+   编辑模式 Header.
+
+
+Tools and modes in the 3D视图 header are (left to right):
+
+- View, Select, and Mesh menus
+- Blender Mode
+- Display method for 3D视图
+- Pivot center
+- 3D manipulator widget
+- Selection mode
+- Depth buffer clipping (hide)
+- Proportional editing
+- Snap
+- OpenGL render
+
+You can switch between the Object and 编辑模式s with :kbd:`Tab`.
+You can change to any mode by selecting the desired *Mode* in the menu in the 3D视图 header.
+
+
+Visualization
+=============
+
+.. list-table::
+
+   * - .. figure:: /images/editmode-cubeselect-1.jpg
+          :width: 315px
+
+          One cube selected.
+
+     - .. figure:: /images/editmode-cubeselect-2.jpg
+          :width: 315px
+
+          Two cubes selected before entering 编辑模式.
+
+
+By default, Blender highlights selected geometry in orange in both *物体模式* and *编辑模式*.
+
+In *物体模式* with *Wireframe* shading enabled :kbd:`Z`,
+objects are displayed in black when unselected and in orange when selected.
+If more than one object is selected, all selected object except the active object,
+typically the object last selected, is displayed in a darker orange color. Similarly,
+in *编辑模式*, unselected geometry is drawn in black while selected faces, edges,
+or vertices are drawn in orange. The active face is highlighted in white.
+
+In *编辑模式*, only one mesh can be edited at the time. However, several objects can be joined into a single mesh
+(:kbd:`Ctrl-J` in *物体模式*) and then separated again (:kbd:`P` in *编辑模式*).
+If multiple objects are selected before entering *编辑模式*,
+all the selected objects remain highlighted in orange indicating that they are part of the active selection set.
+
+If two vertices joined by an edge are selected in *Vertex selection mode*,
+the edge between them is highlighted too. Similarly,
+if enough vertices or edges are selected to define a face, that face is also highlighted.
+
+
+Tool Shelf
+==========
+
+.. figure:: /images/editmode-meshtools-split.jpg
+
+   The Tool Shelf panel in edit mode (panel split in two parts for layout reasons).
+
+
+Open/close the *Mesh Tools* panel using :kbd:`T`.
+When entering *编辑模式*, several mesh tools become available.
+
+Most of these tools are also available as shortcuts
+(displayed in the *Tooltips* for each tool) and/or in the *Specials* menu
+:kbd:`W`, the *Edge* menu :kbd:`Ctrl-E` ,and *Face* menu
+:kbd:`Ctrl-F`.
+For each tool a context-sensitive menu is opened at the bottom of the *Tool Shelf*.
+
+Even more mesh editing tools can be enabled in the *用户首选项* '
+*Add-ons* section.
+
+For further information see :doc:`Panels </interface/editors/panels>`.
+
+
+Properties Shelf
+================
+
+.. figure:: /images/editmode-properties-split.jpg
+
+   The Properties Shelf panel in edit mode (panel split in two parts for layout reasons).
+
+
+Open/close the *Properties Shelf* using :kbd:`N`.
+
+In the *Properties Shelf*,
+panels directly related to mesh editing are the *变换* panel,
+where numeric values can be entered, and the *Mesh Display* panel,
+where for example normals and numeric values for distances, angles,
+and areas can be turned on.
+
+其他 useful tools are found in the *Properties Editor* under the
+*Object* and *Object Data* tabs,
+including display options and *Vertex groups*.
+
+
+Mesh Display
+------------
+
+.. figure:: /images/modeling_meshes_display.png
+   :align: right
+
+   Mesh Display Panel.
+
+
+This panel is available only in edit mode, when the object being edited is a mesh.
+
+The Overlays section provides controls for highlighting parts of the mesh.
+
+Edges
+   Toggles the option to see the selected edges highlighted.
+   If enabled the edges that have both vertices selected will be highlighted
+   This only affects in vertex selection mode and when
+   :doc:`UV Unwrapping </editors/uv_image/uv_editing/unwrapping>`.
+Faces
+   Defines if the selected faces will be highlighted in the
+   :doc:`3D视图 </editors/3dview/display/index>`.
+   This affects all selection modes.
+Creases and Bevel Weight
+   Highlights edges marked with a crease weight for the
+   :doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subsurf>`
+   and/or a bevel weight for the :doc:`Bevel Modifier </modeling/modifiers/generate/bevel>`,
+   respectively. In both cases, the higher the weight, the brighter the highlight.
+Seams and Sharp
+   Highlights edges marked as an UV seam for unwrapping and/or sharp edges for the
+   :doc:`Edge Split Modifier </modeling/modifiers/generate/edge_split>`
+
+Normals Section:
+
+We can choose to show or not the normals of faces and/or vertices using the Face and Vertex tick boxes,
+under the Normals section. In addition, we can define the size of these with Normal Size.
+
+The *Numerics* section allows users to see some numerical measures of the selected elements on screen:
+
+Edge Length
+   shows the lenghts, in Blender units, of the selected edges.
+Face Angles and Face Area
+   show the angles (in degrees) and area (in square Blender units) of the selected faces.

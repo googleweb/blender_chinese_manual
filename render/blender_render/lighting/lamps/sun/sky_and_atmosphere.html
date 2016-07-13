@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sun: Sky &amp; Atmosphere &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="Sun" href="index.html"/>
+        <link rel="next" title="Lighting Rigs" href="../lighting_rigs.html"/>
+        <link rel="prev" title="Raytraced Shadows" href="raytraced_shadows.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../textures/index.html">Textures</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Lighting</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../lights/index.html">Lights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../shadows/index.html">Shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../volumetric_lights.html">Volumetric Lighting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Lamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ambient_light.html">Environment Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ambient_occlusion.html">Ambient Occlusion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../indirect_lighting.html">Indirect Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposure.html">Exposure and Range</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Lighting</a> &raquo;</li>
+      
+          <li><a href="../index.html">Lamps</a> &raquo;</li>
+      
+          <li><a href="index.html">Sun</a> &raquo;</li>
+      
+    <li>Sun: Sky &amp; Atmosphere</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/render/blender_render/lighting/lamps/sun/sky_and_atmosphere.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sun-sky-atmosphere">
+<h1>Sun: Sky &amp; Atmosphere<a class="headerlink" href="#sun-sky-atmosphere" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere_panel.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere_panel.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere_panel.jpg" style="width: 304px;" /></a>
+<p class="caption"><span class="caption-text">Sky &amp; Atmosphere panel.</span></p>
+</div>
+<p>This panel allows you to enable an effect that simulates various properties of real sky and
+atmosphere: the scattering of sunlight as it crosses the kilometers of air overhead.
+For example, when the Sun is high, the sky is blue (and the horizon, somewhat whitish).
+When the Sun is near the horizon, the sky is dark blue/purple, and the horizon turns orange.
+The dispersion of the atmosphere is also more visible when it is a bit foggy:
+the farther away an object is, the more &#8220;faded&#8221; in light gray it is...
+Go out into the countryside on a nice hot day, and you will see.</p>
+<p>To enable this effect, you have to use a <em>Sun</em> light source. If, as usual,
+the <em>position</em> of the lamp has no importance, its <em>rotation</em> is crucial:
+it determines which hour it is. As a starting point,
+you should reset rotation of your <em>Sun</em> (with <code class="kbd docutils literal"><span class="pre">Alt-R</span></code>, or typing <code class="kbd docutils literal"><span class="pre">0</span></code>
+in each of the three <em>Rotation</em> fields X, Y, Z in
+the <em>变换 Properties</em> panel - <code class="kbd docutils literal"><span class="pre">N</span></code>). This way,
+you will have a nice mid-day sun (in the tropics).</p>
+<p>Now, there are two important angles for the <em>Sky/Atmosphere</em> effect:
+the &#8220;incidence&#8221; angle (between the light direction and the X-Y plane),
+which determines the &#8220;hour&#8221; of the day (as you might expect,
+the default rotation - straight down - is &#8220;mid-day&#8221;,
+a light pointing straight up is &#8220;midnight&#8221;, and so on...).
+And the rotation around the Z axis determines the position of the sun around the camera.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-position_for_sky_atmosphere.jpg"><img alt="../../../../../_images/lighting-lamps-sun-position_for_sky_atmosphere.jpg" src="../../../../../_images/lighting-lamps-sun-position_for_sky_atmosphere.jpg" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">The dashed &#8220;light line&#8221; of the Sun lamp crossing the camera focal point.</span></p>
+</div>
+<p>In fact, to have a good idea of where the sun is in your world,
+relative to the camera in your 3D视图, you should always try to have the dashed &#8220;light line&#8221;
+of the lamp crossing the center of the camera (its &#8220;focal&#8221; point), as shown in
+(The dashed &#8220;light line&#8221; of the <em>Sun lamp</em> crossing the camera focal point).
+This way, in camera view (<code class="kbd docutils literal"><span class="pre">Numpad0</span></code>, center window in the example picture),
+you will see where the &#8220;virtual&#8221; sun created by this effect will be.</p>
+<p>It is important to understand that the <em>position</em> of the sun has no importance for the
+effect: only its <em>orientation</em> is relevant.
+The position just might help you in your scene design.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Sun &amp; Sky Presets</p>
+<ul class="simple">
+<li>Classic</li>
+<li>Desert</li>
+<li>Mountain</li>
+</ul>
+<div class="section" id="sky">
+<h3>Sky<a class="headerlink" href="#sky" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Sky</dt>
+<dd>This button enables the sky settings: it will create a &#8220;sky&#8221;, with a &#8220;sun&#8221; if visible,
+and mix it with the background as defined in <em>World</em> settings.</dd>
+<dt>Turbidity</dt>
+<dd>This is a general parameter that affects sun view, sky and atmosphere;
+it&#8217;s an atmosphere parameter where low values describe clear sky, and high values shows more foggy sky.
+In general, low values give a clear, deep blue sky, with &#8220;little&#8221; sun; high values give a more reddish sky,
+with a big halo around the sun.
+Note that this parameter is one which can really modify the &#8220;intensity&#8221; of the sun lighting. See examples below.</dd>
+</dl>
+<p>Here are its specific controls:</p>
+<p>Blending</p>
+<blockquote>
+<div><p>The first drop-down list shows you a menu of various mix methods.
+The one selected will be used to blend the sky and sun with the background defined in the <em>World</em> settings.
+The mixing methods are the same as described e.g.
+in the <a class="reference internal" href="../../../../../compositing/types/color/mix.html"><span class="doc">Mix 合成 Node</span></a> page.</p>
+<dl class="docutils">
+<dt>Factor</dt>
+<dd>Controls how much the sky and sun effect is applied to the World background.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Color space</dt>
+<dd><p class="first">These buttons allows you to select which color space the effect uses, with the following choices:</p>
+<ul class="simple">
+<li>CIE</li>
+<li>REC709</li>
+<li>SMPTE</li>
+<li>Exposure</li>
+</ul>
+<p class="last">This numeric field allows you to modify the exposure of the rendered Sky and Sun (0.0 for no correction).</p>
+</dd>
+<dt>Horizon</dt>
+<dd><dl class="first last docutils">
+<dt>Brightness</dt>
+<dd>Controls brightness of colors at the horizon. Its value should be in the range (0.0 to 10.0);
+values near zero means no horizontal brightness,
+and large values for this parameter increase horizon brightness.
+See examples below.</dd>
+<dt>Spread</dt>
+<dd>Controls spread of light at the horizon. Its value should be in the range (0.0 to 10.0);
+values low in the range result in less spread of light at horizon,
+and values high in the range result in horizon light spread in through all the sky.</dd>
+</dl>
+</dd>
+<dt>Sun</dt>
+<dd><dl class="first last docutils">
+<dt>Brightness</dt>
+<dd>Controls the sun brightness. Its value should be in the range (0.0 to 10.0);
+with low values the sky has no sun and with high values the sky only has sun.</dd>
+<dt>Size</dt>
+<dd>Controls the size of sun. Its values should be in the range (0.0 to 10.0),
+but note that low values result in large sun size, and high values result in small sun size.
+Note that the overall brightness of the sun remains constant (set by <em>Brightness</em>),
+so the larger the sun (the smaller <em>Size</em>), the more it &#8220;vanishes&#8221; in the sky, and <em>vice versa</em>.</dd>
+<dt>Back Light</dt>
+<dd>For &#8220;Back Scatter Light&#8221;, result on sun&#8217;s color, high values result in more light around the sun.
+Its values range is (-1.0 to 1.0). Negative values result in less light around sun.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="atmosphere">
+<h3>Atmosphere<a class="headerlink" href="#atmosphere" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Atmosphere</dt>
+<dd>This button enables the atmosphere settings.
+It will not modify the background, but it tries to simulate the effects of an atmosphere:
+scattering of the sunlight in the atmosphere, its attenuation, ...</dd>
+<dt>Intensity</dt>
+<dd><dl class="first last docutils">
+<dt>Sun</dt>
+<dd>Sets sun intensity. Its values are in range (0.0 to 10.0).
+High values result in bluer light on far objects.</dd>
+<dt>Distance</dt>
+<dd>This factor is used to convert Blender units into an understandable unit for atmosphere effect,
+it starts from 0 and high values result in more yellow light in the scene.</dd>
+</dl>
+</dd>
+<dt>Scattering</dt>
+<dd><dl class="first last docutils">
+<dt>Inscattering</dt>
+<dd>This factor can be used to decrease the effect of light inscattered
+into atmosphere between the camera and objects in the scene.
+This value should be 1.0 but can be changed to create some nice, but not realistic, images.</dd>
+<dt>Extinction</dt>
+<dd>This factor can be use to decrease the effect of extinction light from objects in the scene.
+Like <em>Inscattering</em> factor, this parameter should be 1.0 but you can change it;
+low values result in less light extinction. Its value is in the range (0.0 to 1.0).</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>First, let us see what happens when we modify the orientation of the sun:</p>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Variations in Sun orientation, Sun Size to 5.0, all other settings to default.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midday.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midday.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midday.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">With sun right overhead (mid-day).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midnight.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midnight.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-midnight.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">With sun deep &#8220;under the Earth&#8221; (midnight).</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-early_twilight.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-early_twilight.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-early_twilight.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun slightly above the horizon (start of twilight).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-latetwilight.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-latetwilight.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-latetwilight.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun slightly below the horizon (end of twilight).</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/Media:Manual-Lighting-Lamps-Sun-SkyAtmosphere-例子s-SunOrientation.blend">The 2.4 blend-file of these examples</a>.</p>
+<p>And now, the effects of various settings (examples created with
+<a class="reference external" href="https://wiki.blender.org/index.php/Media:Manual-Lighting-Lamps-Sun-SkyAtmosphere-例子s-设置.blend">this 2.4 blend-file</a>):</p>
+<table border="1" class="docutils" id="id10">
+<caption><span class="caption-text">Variations in Turbidity parameter, all other settings to default.</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Turbidity: 2.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity2_3.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity2_3.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity2_3.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Turbidity: 2.3.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity5_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity5_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity5_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Turbidity: 5.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id14">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity10_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity10_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-turbidity10_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Turbidity: 10.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>Sky<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils" id="id15">
+<caption><span class="caption-text">Variations in Horizon Brightness parameter, all other settings to default.</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id16">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Brightness: 0.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id17">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_85.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_85.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright0_85.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Brightness: 0.85.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id18">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_04.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_04.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_04.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Brightness: 1.04.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id19">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_13.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_13.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_bright1_13.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Brightness: 1.13.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id20">
+<caption><span class="caption-text">Variations in Horizon Spread parameter, all other settings to default.</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id21">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread0_7.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread0_7.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread0_7.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Spread: 0.7.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id22">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread1_2.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread1_2.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread1_2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Spread: 1.2.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id23">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread2_2.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread2_2.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread2_2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Spread: 2.2.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id24">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread5_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread5_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-hor_spread5_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Horizon Spread: 5.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id25">
+<caption><span class="caption-text">Variations in Sun Brightness parameter, all other settings to default.</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id26">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_2.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_2.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Brightness: 0.2.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id27">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_5.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_5.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_5.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Brightness: 0.5.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id28">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_75.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_75.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_bright0_75.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Brightness: 0.75.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id29">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Brightness: 1.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id30">
+<caption><span class="caption-text">Variations in Sun Size parameter, all other settings to default.</span><a class="headerlink" href="#id30" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id31">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size2_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size2_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size2_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Size: 2.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id32">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size4_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size4_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size4_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Size: 4.0.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id33">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size7_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size7_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size7_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Size: 7.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id34">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size10_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size10_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_size10_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Size: 10.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id35">
+<caption><span class="caption-text">Variations in Back Light parameter, Sun Bright to 2.5, all other settings to default.</span><a class="headerlink" href="#id35" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id36">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Back Light: -1.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id37">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-0_33.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-0_33.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight-0_33.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Back Light: -0.33.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id38">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight0_33.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight0_33.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight0_33.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Back Light: 0.33.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id39">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Back Light: 1.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h3>Atmosphere<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>For all renders below, <em>Hor.Bright</em> is set to 0.2, and <em>Sun Bright</em> to 2.0.</p>
+<table border="1" class="docutils" id="id40">
+<caption><span class="caption-text">Variations in Sun Intensity parameter, all other settings to default.</span><a class="headerlink" href="#id40" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id41">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Intensity: 1.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id42">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity3_33.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity3_33.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity3_33.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Intensity: 3.33.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id43">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity6_66.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity6_66.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-sun_intensity6_66.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Intensity: 6.66.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id44">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sun Intensity: 10.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id45">
+<caption><span class="caption-text">Variations in Inscattering parameter, all other settings to default.</span><a class="headerlink" href="#id45" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id46">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Inscattering: 0.1.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id47">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_33.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_33.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_33.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Inscattering: 0.33.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id48">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_66.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_66.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-inscattering0_66.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Inscattering: 0.66.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id49">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Inscattering: 1.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id50">
+<caption><span class="caption-text">Variations in Extinction parameter, all other settings to default.</span><a class="headerlink" href="#id50" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id51">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Extinction: 0.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id52">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_33.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_33.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_33.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Extinction: 0.33.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id53">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_66.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_66.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-extinction0_66.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Extinction: 0.66.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id54">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-backlight1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Extinction: 1.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id55">
+<caption><span class="caption-text">Variations in Distance parameter, all other settings to default.</span><a class="headerlink" href="#id55" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id56">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance1_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance1_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance1_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Distance: 1.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id57">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance2_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance2_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance2_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Distance: 2.0.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id58">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance3_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance3_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance3_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Distance: 3.0.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id59">
+<a class="reference internal image-reference" href="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance4_0.jpg"><img alt="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance4_0.jpg" src="../../../../../_images/lighting-lamps-sun-sky_atmosphere-sky-distance4_0.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Distance: 4.0.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="hints-and-limitations">
+<h2>Hints and limitations<a class="headerlink" href="#hints-and-limitations" title="Permalink to this headline">¶</a></h2>
+<p>To always have the <em>Sun</em> pointing at the camera center,
+you can use a <a class="reference internal" href="../../../../../rigging/constraints/tracking/track_to.html"><span class="doc">TrackTo constraint</span></a> on the sun object,
+with the camera as target, and -Z as the &#8220;To&#8221; axis (use either X or Y as &#8220;Up&#8221; axis).
+This way, to modify height/position of the sun in the rendered picture,
+you just have to move it; orientation is automatically handled by the constraint.
+Of course, if your camera itself is moving, you should also add e.g.
+a <a class="reference internal" href="../../../../../rigging/constraints/transform/copy_location.html"><span class="doc">Copy Location constraint</span></a>
+to your <em>Sun</em> lamp, with the camera as target - and the <em>Offset</em> option activated...
+This way, the sun light won&#8217;t change as the camera moves around.</p>
+<p>If you use the default <em>Add</em> mixing type,
+you should use a very dark-blue world color, to get correct &#8220;nights&#8221;...</p>
+<p>This effect works quite well with a <em>Hemi</em> lamp,
+or some ambient occlusion, to fill in the <em>Sun</em> shadows.</p>
+<p>Atmosphere shading currently works incorrectly in reflections and refractions and is only
+supported for solid shaded surfaces. This will be addressed in a later release.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lighting_rigs.html" class="btn btn-neutral float-right" title="Lighting Rigs" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="raytraced_shadows.html" class="btn btn-neutral" title="Raytraced Shadows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

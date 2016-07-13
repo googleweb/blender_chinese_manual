@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Buttons and Controls &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="用户界面" href="../index.html"/>
+        <link rel="next" title="Extended Controls" href="extended_controls.html"/>
+        <link rel="prev" title="Arranging Areas" href="../editors/arranging_areas.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#editor-controls">Editor Controls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#interface-controls">界面 Controls</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Buttons and Controls</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operation-buttons">Operation Buttons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-buttons">Toggle Buttons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#radio-buttons">Radio Buttons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#number-buttons">Number Buttons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#menu-buttons">Menu Buttons</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="extended_controls.html">Extended Controls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_shortcuts.html">Common Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">用户界面</a> &raquo;</li>
+      
+    <li>Buttons and Controls</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/interface/controls/buttons_and_controls.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="buttons-and-controls">
+<h1>Buttons and Controls<a class="headerlink" href="#buttons-and-controls" title="Permalink to this headline">¶</a></h1>
+<p>Buttons and other controls can be found in every Editor of the Blender interface.
+The different types of controls are described below.</p>
+<div class="section" id="operation-buttons">
+<span id="ui-operation-buttons"></span><h2>Operation Buttons<a class="headerlink" href="#operation-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../../_images/interface_button.jpg" src="../../_images/interface_button.jpg" />
+<p class="caption"><span class="caption-text">Operation button.</span></p>
+</div>
+<p>These are buttons that perform an operation when clicked with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+They can be identified by their gray color in the default color scheme.</p>
+</div>
+<div class="section" id="toggle-buttons">
+<h2>Toggle Buttons<a class="headerlink" href="#toggle-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../_images/interface_checkbox.jpg" src="../../_images/interface_checkbox.jpg" />
+<p class="caption"><span class="caption-text">Toggle Buttons.</span></p>
+</div>
+<p>Toggle buttons are typically displayed as check boxes.
+Clicking this type of button will toggle a state but will not perform any operation.</p>
+<div class="section" id="toggle-drag">
+<h3>Toggle Drag<a class="headerlink" href="#toggle-drag" title="Permalink to this headline">¶</a></h3>
+<p>To change many toggle buttons at once, you can <code class="kbd docutils literal"><span class="pre">LMB</span></code> drag over multiple buttons,
+This works for checkboxes, toggles in the Outliner and layer buttons.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For layer buttons (a type of toggle button) it is often useful to hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> at the same time,
+to set or clear many layers at once.</p>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="radio-buttons">
+<h2>Radio Buttons<a class="headerlink" href="#radio-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id3">
+<img alt="../../_images/interface_radiobutton.jpg" src="../../_images/interface_radiobutton.jpg" />
+<p class="caption"><span class="caption-text">Radio Buttons.</span></p>
+</div>
+<p>Radio buttons are used to choose from a small selection of &#8220;mutually exclusive&#8221; options.</p>
+</div>
+<div class="section" id="number-buttons">
+<h2>Number Buttons<a class="headerlink" href="#number-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4">
+<img alt="../../_images/interface_numberbutton.jpg" src="../../_images/interface_numberbutton.jpg" />
+<p class="caption"><span class="caption-text">Number buttons.</span></p>
+</div>
+<p>Number buttons can be identified by their labels,
+which in most cases contains the name and a colon followed by a number.
+Number buttons can be edited in several ways:</p>
+<dl class="docutils">
+<dt>Incremental Steps</dt>
+<dd>To change the value in steps, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the small triangles on the sides of the button.</dd>
+<dt>Dragging</dt>
+<dd>To change the value in a wider range, hold down <code class="kbd docutils literal"><span class="pre">LMB</span></code> and drag the mouse to the left or right.</dd>
+<dt>Text Input</dt>
+<dd><p class="first">Press <code class="kbd docutils literal"><span class="pre">LMB</span></code> or <code class="kbd docutils literal"><span class="pre">Return</span></code> to edit the value as a text field.</p>
+<p>When entering values by hand, this button works like any other text button.</p>
+<ul class="last simple">
+<li>Press <code class="kbd docutils literal"><span class="pre">Return</span></code> to apply the change.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Esc</span></code> will cancel the value.</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="multi-value-editing">
+<h3>Multi-Value Editing<a class="headerlink" href="#multi-value-editing" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id5">
+<img alt="../../_images/ui_multi_value_edit.png" src="../../_images/ui_multi_value_edit.png" />
+<p class="caption"><span class="caption-text">Multi-value-editing.</span></p>
+</div>
+<p>It&#8217;s often useful to edit multiple values at once (object scale or render resolution for example).</p>
+<p>This can be done by clicking on the button and dragging vertically to include buttons above/below.</p>
+<p>After the vertical motion you can drag from side to side, or release the <code class="kbd docutils literal"><span class="pre">LMB</span></code> to type in a value.</p>
+</div>
+<div class="section" id="expressions">
+<h3>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h3>
+<p>You can also enter expressions such as <code class="docutils literal"><span class="pre">3*2</span></code> instead of <code class="docutils literal"><span class="pre">6</span></code>. or <code class="docutils literal"><span class="pre">5/10+3</span></code>.
+Even constants like <code class="docutils literal"><span class="pre">pi</span></code> (3.142) or functions like <code class="docutils literal"><span class="pre">sqrt(2)</span></code> (square root of 2)
+may be used.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">These expressions are evaluated by Python; for all available math expressions see:
+<a class="reference external" href="https://docs.python.org/3/library/math.html">math module reference</a></p>
+</div>
+<div class="section" id="expressions-as-drivers">
+<h4>Expressions as Drivers<a class="headerlink" href="#expressions-as-drivers" title="Permalink to this headline">¶</a></h4>
+<p>You may want your expression to be re-evaluated after it&#8217;s entered.
+Blender supports this using <a class="reference internal" href="../../animation/drivers.html"><span class="doc">Drivers</span></a> (a feature of the animation system).</p>
+<p>Expression beginning with <code class="docutils literal"><span class="pre">#</span></code>, have a special use.
+Instead of evaluating the value and discarding the expression,
+a driver is added to the property with the expression entered.</p>
+<p>The expression <code class="docutils literal"><span class="pre">#frame</span></code> is a quick way to access map a value to the current frame,
+but more complex expressions are also supported <code class="docutils literal"><span class="pre">#fmod(frame,</span> <span class="pre">24)</span> <span class="pre">/</span> <span class="pre">24</span></code> for example.</p>
+<p>This is simply a convenient shortcut to add drivers which can also be added via the <code class="kbd docutils literal"><span class="pre">RMB</span></code> menu.</p>
+</div>
+</div>
+<div class="section" id="units">
+<h3>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
+<p>As well as expressions, you can mix units with numbers; for this to work,
+units need to be set in the scene settings (Metric or Imperial).</p>
+<p>例子s of valid units include:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><code class="docutils literal"><span class="pre">1cm</span></code></li>
+<li><code class="docutils literal"><span class="pre">1m</span> <span class="pre">3mm</span></code></li>
+<li><code class="docutils literal"><span class="pre">1m,</span> <span class="pre">3mm</span></code></li>
+</ul>
+</td><td><ul class="simple">
+<li><code class="docutils literal"><span class="pre">2ft</span></code></li>
+<li><code class="docutils literal"><span class="pre">3ft/0.5km</span></code></li>
+<li><code class="docutils literal"><span class="pre">2.2mm</span> <span class="pre">+</span> <span class="pre">5'</span> <span class="pre">/</span> <span class="pre">3&quot;</span> <span class="pre">-</span> <span class="pre">2yards</span></code></li>
+</ul>
+</td></tr></table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">That the commas are optional.
+Notice how you can mix between metric and imperial even though
+the display can only show one at a time.</p>
+</div>
+<div class="section" id="unit-names">
+<h4>Unit Names<a class="headerlink" href="#unit-names" title="Permalink to this headline">¶</a></h4>
+<p>Unit names have can be used with both long and short forms,
+here are listed recognized unit names you can use.</p>
+<p>Plurals of the names are recognized too, so <code class="docutils literal"><span class="pre">meter</span></code> and <code class="docutils literal"><span class="pre">meters</span></code> can both be used.</p>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">Imperial Units</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Full Name</th>
+<th class="head">Short Name(s)</th>
+<th class="head">Scale of a Meter</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">thou</th>
+<td><code class="docutils literal"><span class="pre">mil</span></code></td>
+<td>0.0000254</td>
+</tr>
+<tr class="row-odd"><th class="stub">inch</th>
+<td><code class="docutils literal"><span class="pre">&quot;</span></code>, <code class="docutils literal"><span class="pre">in</span></code></td>
+<td>0.0254</td>
+</tr>
+<tr class="row-even"><th class="stub">foot, feet</th>
+<td><code class="docutils literal"><span class="pre">'</span></code>, <code class="docutils literal"><span class="pre">ft</span></code></td>
+<td>0.3048</td>
+</tr>
+<tr class="row-odd"><th class="stub">yard</th>
+<td><code class="docutils literal"><span class="pre">yd</span></code></td>
+<td>0.9144</td>
+</tr>
+<tr class="row-even"><th class="stub">chain</th>
+<td><code class="docutils literal"><span class="pre">ch</span></code></td>
+<td>20.1168</td>
+</tr>
+<tr class="row-odd"><th class="stub">furlong</th>
+<td><code class="docutils literal"><span class="pre">fur</span></code></td>
+<td>201.168</td>
+</tr>
+<tr class="row-even"><th class="stub">mile</th>
+<td><code class="docutils literal"><span class="pre">mi</span></code>, <code class="docutils literal"><span class="pre">m</span></code></td>
+<td>1609.344</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Metric Units</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Full Name</th>
+<th class="head">Short Name(s)</th>
+<th class="head">Scale of a Meter</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">micrometer</th>
+<td><code class="docutils literal"><span class="pre">um</span></code></td>
+<td>0.000001</td>
+</tr>
+<tr class="row-odd"><th class="stub">millimeter</th>
+<td><code class="docutils literal"><span class="pre">mm</span></code></td>
+<td>0.001</td>
+</tr>
+<tr class="row-even"><th class="stub">centimeter</th>
+<td><code class="docutils literal"><span class="pre">cm</span></code></td>
+<td>0.01</td>
+</tr>
+<tr class="row-odd"><th class="stub">decimeter</th>
+<td><code class="docutils literal"><span class="pre">dm</span></code></td>
+<td>0.1</td>
+</tr>
+<tr class="row-even"><th class="stub">meter</th>
+<td><code class="docutils literal"><span class="pre">m</span></code></td>
+<td>1.0</td>
+</tr>
+<tr class="row-odd"><th class="stub">dekameter</th>
+<td><code class="docutils literal"><span class="pre">dam</span></code></td>
+<td>10.0</td>
+</tr>
+<tr class="row-even"><th class="stub">hectometer</th>
+<td><code class="docutils literal"><span class="pre">hm</span></code></td>
+<td>100.0</td>
+</tr>
+<tr class="row-odd"><th class="stub">kilometer</th>
+<td><code class="docutils literal"><span class="pre">km</span></code></td>
+<td>1000.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="menu-buttons">
+<h2>Menu Buttons<a class="headerlink" href="#menu-buttons" title="Permalink to this headline">¶</a></h2>
+<p>Blender uses a variety of different menus for accessing options, tools and selecting Data-Blocks.</p>
+<div class="section" id="menu-shortcuts">
+<h3>Menu Shortcuts<a class="headerlink" href="#menu-shortcuts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Arrow keys can be used to navigate.</li>
+<li>Each menu item has an underlined character which can be pressed to activate it.</li>
+<li>Number keys or num-pad can be used to access menu items.
+(Where <code class="kbd docutils literal"><span class="pre">1</span></code> is the first menu item, <code class="kbd docutils literal"><span class="pre">2</span></code> the second... etc.
+For larger menus <code class="kbd docutils literal"><span class="pre">Alt-1</span></code> the 11th... up to <code class="kbd docutils literal"><span class="pre">Alt-0</span></code> the 20th)</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Return</span></code> to activate the selected menu item.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Esc</span></code> to cancel the menu.</li>
+</ul>
+</div>
+<div class="section" id="header-menus">
+<h3>Header Menus<a class="headerlink" href="#header-menus" title="Permalink to this headline">¶</a></h3>
+<p>Header menus are used to configure the editor and access tools.</p>
+<p>See <a class="reference internal" href="../editors/headers.html"><span class="doc">标题栏</span></a> for header options.</p>
+</div>
+<div class="section" id="pop-up-menus">
+<h3>Pop-Up Menus<a class="headerlink" href="#pop-up-menus" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id8">
+<img alt="../../_images/interface_popup-menu.jpg" src="../../_images/interface_popup-menu.jpg" />
+<p class="caption"><span class="caption-text">The Viewport Shading pop-up menu.</span></p>
+</div>
+<p>Pop-up menus are overlay menus used to display options.
+They are spawned by menu buttons and buttons showing up and down triangles on the right or
+after a key input at the mouse position.</p>
+<p>For example, the <em>Viewport Shading</em> button will produce a pop-up menu
+with the available shading options.</p>
+<div class="lead container">
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can use the <code class="kbd docutils literal"><span class="pre">Numpad</span></code> to input an item in the list to select.
+For example, <code class="kbd docutils literal"><span class="pre">Numpad-1</span></code> will select the first item and so on.</p>
+</div>
+</div>
+<div class="section" id="data-block-menus">
+<span id="ui-data-block"></span><h3>Data-Block Menus<a class="headerlink" href="#data-block-menus" title="Permalink to this headline">¶</a></h3>
+<p>Menu buttons are used to link Data-Blocks to each other.
+Data-blocks are items like meshes, objects, materials, textures, and so on.</p>
+<div class="figure align-right" id="id9">
+<span id="fig-ui-data-block"></span><img alt="../../_images/interface_data-block.jpg" src="../../_images/interface_data-block.jpg" />
+<p class="caption"><span class="caption-text">The Data-Block link menu with a search input.</span></p>
+</div>
+<dl class="docutils">
+<dt>Data-Block type</dt>
+<dd><p class="first">Shows a icon. Opens up the following pop-up menu.</p>
+<dl class="last docutils">
+<dt>List</dt>
+<dd>A list of data-block available in the current blend-file or link in to select an item from.
+The menu may show a preview besides the items and
+a search box to search the items in the list by name.</dd>
+</dl>
+</dd>
+<dt>Data-block name</dt>
+<dd>Displays the name of the linked Data-Block, which can be edited as a regular text field.</dd>
+<dt>User count</dt>
+<dd>Displays the number of users of the data. Clicking on it to make it a single-user copy.</dd>
+<dt>Fake User &#8220;F&#8221;</dt>
+<dd>Saves this data-block data-block, even if it has no users.</dd>
+<dt>New &#8220;+&#8221;</dt>
+<dd>Creates a new data-block or duplicates the current data-block and applies it.</dd>
+<dt>Open file</dt>
+<dd>Opens the <a class="reference internal" href="../../editors/file_browser/introduction.html"><span class="doc">file-browser</span></a>.</dd>
+<dt>Unlink data-block &#8220;X&#8221;</dt>
+<dd>Clears the link.</dd>
+</dl>
+<p>Sometimes there is a list of applied data-blocks
+(such as a list of materials used on the object). See Fig. <a class="reference internal" href="#fig-ui-data-block"><span class="std std-ref">The Data-Block link menu with a search input.</span></a> above.</p>
+<div class="figure align-right" id="id10">
+<img alt="../../_images/interface_list-controls.jpg" src="../../_images/interface_list-controls.jpg" />
+<p class="caption"><span class="caption-text">Data-block link buttons.</span></p>
+<div class="legend">
+<ul class="simple">
+<li>To select a Data-Block, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on it.</li>
+<li>To add a new section (e.g. material, or particle system),
+click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the &#8220;+&#8221; button to the right of the list.</li>
+<li>To remove a section, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the &#8220;-&#8221; to the right of the list.</li>
+</ul>
+</div>
+</div>
+<p>For details on the behavior of linking data see <a class="reference internal" href="../../data_system/data_blocks.html"><span class="doc">data-block</span></a>.</p>
+</div>
+<div class="section" id="pie-menus">
+<h3>Pie Menus<a class="headerlink" href="#pie-menus" title="Permalink to this headline">¶</a></h3>
+<p>A pie menu is a menu, whose items are spread radially around the mouse.
+Pie menus has to be activated in the 用户首选项 through <span class="menuselection">Add-ons ‣ UI ‣ Pie Menus Official</span>.</p>
+<div class="figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/interface_pie-menu.jpg"><img alt="../../_images/interface_pie-menu.jpg" src="../../_images/interface_pie-menu.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">The shade pie menu.</span></p>
+</div>
+<div class="section" id="interaction">
+<h4>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h4>
+<p>The pie menu is spawned by a key press.</p>
+<p class="rubric">3D视图</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">Tab</span></code> Interaction Mode</li>
+<li><code class="kbd docutils literal"><span class="pre">Z</span></code> Shade and solid or smooth shading</li>
+<li><code class="kbd docutils literal"><span class="pre">Q</span></code> View directions and perspective or ortho. and camera</li>
+<li><code class="kbd docutils literal"><span class="pre">Tab-Shift-Ctrl</span></code> Snapping</li>
+<li><code class="kbd docutils literal"><span class="pre">.</span></code> Pivot</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-Space</span></code> Manipulator</li>
+</ul>
+<p class="rubric">Movie Clip Editor</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">W</span></code> Clip Setup</li>
+<li><code class="kbd docutils literal"><span class="pre">Q</span></code> Marker Setup</li>
+<li><code class="kbd docutils literal"><span class="pre">E</span></code> Tracking</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift-S</span></code> Solving</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift-W</span></code> Scene Reconstruction</li>
+<li><code class="kbd docutils literal"><span class="pre">OS-A</span></code> Playback Operators</li>
+</ul>
+<p class="rubric">Grease Pencil</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">D-Q</span></code> Main tools menu (context sensitive)</li>
+<li><code class="kbd docutils literal"><span class="pre">D-W</span></code> Quick 设置</li>
+</ul>
+<p>Releasing the key without moving the mouse will keep the menu open and
+the user can then move the mouse pointer towards the direction of a pie menu item and select it by clicking.
+Releasing the key after moving the mouse towards a pie menu item will cause the menu to close and
+the selected menu item to activate.</p>
+<p>An open disc widget at the center of the pie menu shows the
+current direction of the pie menu. The selected item is also highlighted.
+A pie menu will only have a valid direction for item selection,
+if the mouse is touching or extending beyond the disc widget at the center of the menu.</p>
+<p>Pie menu items support key accelerators, which are the letters underlined on each menu item.
+Also number keys can be used to select the items.</p>
+<p>If there are sub-pies available, it is indicated by a plus icon.</p>
+<p>See <a class="reference internal" href="../../preferences/interface.html#prefs-pie-menu"><span class="std std-ref">Pie menu settings</span></a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="extended_controls.html" class="btn btn-neutral float-right" title="Extended Controls" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../editors/arranging_areas.html" class="btn btn-neutral" title="Arranging Areas" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>帮助系统 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="入门指南" href="index.html"/>
+        <link rel="next" title="界面" href="../interface/index.html"/>
+        <link rel="prev" title="Configuring Directories" href="installing/configuration/directories.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">入门指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about/index.html">关于Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing/index.html">安装Blender</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">帮助系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tooltips">Tooltips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-sensitive-manual-access">Context Sensitive Manual Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#help-menu">Help Menu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scripting-reference">Scripting 参考</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-system-info">Save System Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#info-editor-log">信息编辑器 Log</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">入门指南</a> &raquo;</li>
+      
+    <li>帮助系统</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/getting_started/help.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="help-system">
+<h1>帮助系统<a class="headerlink" href="#help-system" title="Permalink to this headline">¶</a></h1>
+<p>Blender has a range of built-in and web-based help options.</p>
+<div class="section" id="tooltips">
+<h2>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../_images/ui_tooltip_example.png" src="../_images/ui_tooltip_example.png" />
+<p class="caption"><span class="caption-text">The Mouse pointer was Stopped for a while over the 渲染 Engines List in the 信息编辑器.</span></p>
+</div>
+<p>When hovering your cursor over a button or setting,
+it will show you the <em>Tooltip</em>, and related details depending on the button type,
+such as the key-shortcut for a tool.</p>
+<p>The <em>Python:</em> text included last may be of interest to you if you&#8217;re an animator
+or automating tasks, see <a class="reference internal" href="../advanced/scripting/index.html#scripting-index"><span class="std std-ref">Scripting &amp; Extending Blender</span></a>.</p>
+</div>
+<div class="section" id="context-sensitive-manual-access">
+<h2>Context Sensitive Manual Access<a class="headerlink" href="#context-sensitive-manual-access" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <code class="kbd docutils literal"><span class="pre">RMB</span></code>, <span class="menuselection">Online Manual</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-F1</span></code></div>
+</div>
+</div>
+<p>You may want to access help for a tool or area from within Blender.</p>
+<p>Use the key-shortcut, or right-click menu to visit pages from this reference manual within Blender.
+This opens a webpage relating to the button under the cursor, supporting both tool and value buttons.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>We do not currently have 100% coverage,
+you may see an alert in the info header if some tools do not have a link to the manual.</p>
+<p class="last">其他 times buttons may link to more general sections of the documentation.</p>
+</div>
+</div>
+<div class="section" id="help-menu">
+<span id="id1"></span><h2>Help Menu<a class="headerlink" href="#help-menu" title="Permalink to this headline">¶</a></h2>
+<p>In the 信息编辑器 headers <em>Help</em> menu is a group of web links.
+The same links can also be found in the <a class="reference internal" href="../interface/introduction.html#splash"><span class="std std-ref">Slash Screen</span></a>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Browser and Internet Connection</p>
+<p class="last">Some forms of Help start up your web browser and access the Blender Foundation&#8217;s web servers.
+In order to do this, you must have configured a default web browser for your Operating System,
+and have a connection to the Internet.</p>
+</div>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../_images/getting_started-help_menu.png"><img alt="../_images/getting_started-help_menu.png" src="../_images/getting_started-help_menu.png" style="width: 165px;" /></a>
+<p class="caption"><span class="caption-text">Help Menu.</span></p>
+</div>
+<ul>
+<li><p class="first"><a class="reference internal" href="../contents.html"><span class="doc">This is a link for the Official Blender手册</span></a> -
+which you are now reading.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/">Release Log</a> -
+The release notes on the Web for the current Blender version.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://www.blender.org/">Blender Website</a> -
+The <em>blender.org</em> home page.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://store.blender.org/">Blender Store</a> -
+The Blender Store, where you can buy Training DVD&#8217;s, books, t-shirts and other products.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://www.blender.org/get-involved/">Developer Community</a> -
+The <em>blender.org</em> &#8220;加入我们&#8221; page. This is the launch page for Blender software development,
+bug tracking, patches and scripts, education and training, documentation development and functionality research.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://www.blender.org/support/user-community/">User Community</a> -
+Lists of many different support venues.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://developer.blender.org/maniphest/task/create/?project=2&amp;type=Bug">Report a Bug</a>
+The Blender Bug Tracker.</p>
+<p>Note: in order to Report a Bug, you must register at the website.</p>
+</li>
+</ul>
+<div class="section" id="scripting-reference">
+<h3>Scripting 参考<a class="headerlink" href="#scripting-reference" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.blender.org/api/blender_python_api_current/">Python API 参考</a> -
+Python application programming interface (API).</li>
+<li><em>Operator Cheat Sheet</em> - Creates the <code class="docutils literal"><span class="pre">OperatorList.txt</span></code> text-block, which you can access in the <em>文本编辑器</em>.
+You can also use Blender Search to generate the file. The lists the available Python operators.</li>
+</ul>
+</div>
+<div class="section" id="save-system-info">
+<span id="help-system-info"></span><h3>Save System Info<a class="headerlink" href="#save-system-info" title="Permalink to this headline">¶</a></h3>
+<p>Access <span class="menuselection">Help ‣ Save System Info</span></p>
+<p>This extracts system information which can be useful to include in bug reports,
+inspecting the configuration or diagnosing problems.</p>
+<p>You will be prompted to save a text file <code class="docutils literal"><span class="pre">system-info.txt</span></code>.</p>
+<p>The text file contains sections:</p>
+<dl class="docutils">
+<dt>Blender</dt>
+<dd>This section shows you the Blender version, details about the build configuration,
+and the path in which Blender is running.</dd>
+<dt>Python</dt>
+<dd>The Python version you are using, showing the paths of the Python programming language paths.</dd>
+<dt>Directories</dt>
+<dd><p class="first">Paths used for scripts, data-files, presets and temporary files.</p>
+<p class="last">Those directories are configured using the <a class="reference internal" href="../preferences/file.html"><span class="doc">用户首选项</span></a> Editor.</p>
+</dd>
+<dt>OpenGL</dt>
+<dd>This section shows the OpenGL version, the name of the manufacturer,
+and lists the capabilities of your hardware &amp; driver.</dd>
+</dl>
+</div>
+<div class="section" id="info-editor-log">
+<h3>信息编辑器 Log<a class="headerlink" href="#info-editor-log" title="Permalink to this headline">¶</a></h3>
+<p>This is not exactly a Help menu, but it is related.
+If you mouse-over the line between the 信息编辑器 and the 3D then click and drag the 信息编辑器 down a bit,
+you can see the stream of Python calls that the UI is making when you work.
+This can be useful for creating scripts.</p>
+<div class="figure" id="id4">
+<img alt="../_images/getting_started_help_python.png" src="../_images/getting_started_help_python.png" />
+<p class="caption"><span class="caption-text">The 信息编辑器 Log after adding a Cube.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../interface/index.html" class="btn btn-neutral float-right" title="界面" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installing/configuration/directories.html" class="btn btn-neutral" title="Configuring Directories" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>活动元素 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="轴心点" href="index.html"/>
+        <link rel="next" title="质心点" href="median_point.html"/>
+        <link rel="prev" title="轴心点" href="index.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">变换</a> &raquo;</li>
+      
+          <li><a href="../index.html">变换控制</a> &raquo;</li>
+      
+          <li><a href="index.html">轴心点</a> &raquo;</li>
+      
+    <li>活动元素</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/transform/transform_control/pivot_point/active_element.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="active-element">
+<h1>活动元素<a class="headerlink" href="#active-element" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式:     物体模式和编辑模式</div>
+<div class="line">菜单:     在3D视图标题栏<img alt="pivot-icon" src="../../../../../_images/editors_3dview_header-pivot-point.jpg" /> 图标选择.</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Alt-.</span></code></div>
+</div>
+</div>
+<p><em>活动</em> 元素可以是一个物体, 顶点, 边或者是一个面. 活动元素是最后选中的元素, 在<em>物体模式</em>将会以浅橘色显示,在 <em>编辑模式</em>以白色显示. 用 <em>活动元素作轴心点</em> 设置为活动元素,
+所有产生的变换都将相对于活动元素.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-selected-active-element.jpg"><img alt="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-selected-active-element.jpg" src="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-selected-active-element.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">物体模式活动元素显示在左边的图片中, 活动元素(立方体)为浅橘色.
+在编辑模式中的顶点, 边和面活动元素显示在右边的图片中,  为白色.</span></p>
+</div>
+<div class="section" id="in-object-mode">
+<h2>在物体模式<a class="headerlink" href="#in-object-mode" title="Permalink to this headline">¶</a></h2>
+<p>在<em>物体模式</em>中,旋转和缩放围绕活动物体的中心.下面图片演示的是活动元素(立方体)会保持相同的位置(注意它相对3D游标的位置)当其他物体相对活动元素进行旋转和缩放时.</p>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-active-object-rotation.jpg"><img alt="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-active-object-rotation.jpg" src="../../../../../_images/editors_3dview_transform_control-pivot_point-active_element-active-object-rotation.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">以立方体为活动元素进行旋转和缩放.</span></p>
+</div>
+</div>
+<div class="section" id="in-edit-mode">
+<h2>在编辑模式<a class="headerlink" href="#in-edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>在<em>编辑模式</em>中使用活动元素作为轴心点似乎有点复杂但是所有可能的变换都遵循一些规则:</p>
+<ul class="simple">
+<li>轴心点总是在活动元素的中心.</li>
+<li>选中元素<em>顶点变换可引发其他变换</em>.如果一个未选中元素与一个选中元素共享一个或者多个顶点未选中元素也将跟随发生一定程度的变换.</li>
+</ul>
+<p>让我们检查以下例子: 我们会理解在不用情况下两种规则的应用.</p>
+<div class="section" id="single-selection">
+<h3>单选<a class="headerlink" href="#single-selection" title="Permalink to this headline">¶</a></h3>
+<p>当单一元素被选中时它就会自动变为活动元素. 在下图中,你会看到当活动元素移动变换它的顶点时, 结果与活动元素毗连
+的共享一个或多个顶点的元素也将会发生变换.</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform_control-pivot_point-active_single-element-selection.jpg"><img alt="../../../../../_images/editors_3dview_transform_control-pivot_point-active_single-element-selection.jpg" src="../../../../../_images/editors_3dview_transform_control-pivot_point-active_single-element-selection.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">编辑模式且仅有一个元素被选中.</span></p>
+</div>
+<p>让我们回顾以下每种情况:</p>
+<ul class="simple">
+<li><em>面</em> 拥有它们的轴心点在它们选择的圆点出现的位置, 也就是它们顶点的中心.</li>
+<li><em>边</em> 拥有它们的轴心点在它们的中心,因为边的中心一直就是.</li>
+<li>一个单独的<em>顶点</em> 没有任何维度因此它不能演示任何变换(除了移动, 不受轴心点影响).</li>
+</ul>
+</div>
+<div class="section" id="multiple-selection">
+<h3>多选<a class="headerlink" href="#multiple-selection" title="Permalink to this headline">¶</a></h3>
+<p>When multiple elements are selected they all transform.
+The 轴心点s stay in the same place as what we have seen above,
+with only one exception for Fgons. In the image below,
+the selected elements have been rotated.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform_control-pivot_point-active_multiple-element-selection.jpg"><img alt="../../../../../_images/editors_3dview_transform_control-pivot_point-active_multiple-element-selection.jpg" src="../../../../../_images/editors_3dview_transform_control-pivot_point-active_multiple-element-selection.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">编辑模式且多选.</span></p>
+</div>
+<ul class="simple">
+<li>For <em>Faces</em> the transformation occurs around the selection dot of the active face.</li>
+<li><em>Edges</em> also keep the same behavior with their 轴心点 at their median.</li>
+<li><em>Fgons</em> behave exactly like faces.</li>
+<li>There is a case for <em>Vertices</em> this time: the active Vertex is where the 轴心点 resides.
+All other vertices are transformed relative to it.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="median_point.html" class="btn btn-neutral float-right" title="质心点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="轴心点" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

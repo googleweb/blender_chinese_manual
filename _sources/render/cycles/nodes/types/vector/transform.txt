@@ -1,0 +1,36 @@
+
+****************
+Vector 变换
+****************
+
+Allows converting a Vector,
+Point or Normal between World <=> 相机 <=> Object coordinate space.
+
+
+Inputs
+======
+
+Vector Input
+   Standard vector input.
+
+Properties
+==========
+
+Type
+   Specifies the input/output type: Vector, Point or Normal.
+Convert From
+   Coordinate Space to convert from: World, Object or 相机.
+Convert To
+   Coordinate Space to convert to: World, Object or 相机.
+
+
+Outputs
+=======
+
+Vector Output
+   The transformed output vector.
+
+例子s
+========
+
+Todo.

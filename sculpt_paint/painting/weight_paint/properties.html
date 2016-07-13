@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Properties &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+    <li>Properties</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/sculpt_paint/painting/weight_paint/properties.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="properties">
+<h1>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="brush">
+<h3>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id2">
+<img alt="../../../_images/painting_weight_brush.png" src="../../../_images/painting_weight_brush.png" />
+<p class="caption"><span class="caption-text">Brush Panel.</span></p>
+</div>
+<p>Painting needs paint brushes and Blender provides a Brush Panel within the Tool Shelf when it
+operates in <em>权重绘制模式</em>. You find predefined Brush Presets when you click on
+the large Brush Icon at the top of the brush Panel.
+And you can make your own presets as needed.
+See below for the available brush presets and to create custom presets.</p>
+<p>The most important and frequently modified properties are:</p>
+<dl class="docutils">
+<dt>Weight</dt>
+<dd>The weight (color) to be used by the brush.
+However, the weight value is applied to the Vertex Group
+in different ways depending on the selected Brush Blending mode (see below).</dd>
+<dt>Strength</dt>
+<dd>This is the amount of paint to be applied per brush stroke.
+What that means exactly also depends on the Brush Blending mode.</dd>
+<dt>Radius</dt>
+<dd><p class="first">The radius defines the area of influence of the brush.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also change the Brush radius with a keyboard shortcut while painting.
+Just press <code class="kbd docutils literal"><span class="pre">F</span></code> at any time, then drag the mouse to increase/reduce the brush radius.
+Finally click <code class="kbd docutils literal"><span class="pre">LMB</span></code> to use the new setting.
+Or press <code class="kbd docutils literal"><span class="pre">Esc</span></code> at any time to return to the current settings.</p>
+</div>
+</dd>
+<dt>Blend mode</dt>
+<dd><p class="first">The brush Blending mode defines in which way the weight value is applied to the Vertex Group while painting.</p>
+<dl class="last docutils">
+<dt>Mix</dt>
+<dd>In this Blend mode the Weight value defines the <em>target weight</em> that will eventually
+be reached when you paint long enough on the same location of the mesh.
+And the strength determines how many strokes you need to arrive at the target weight.
+Note that for strength = 1.0 the target weight is painted immediately,
+and for Weight = 0.0 the brush just does nothing.</dd>
+<dt>Add</dt>
+<dd>In this blend mode the specified weight value is <em>added</em> to the vertex weights.
+The strength determines which fraction of the weight gets added per stroke.
+However, the brush will not paint weight values above 1.0.</dd>
+<dt>Subtract</dt>
+<dd>In this blend mode the specified weight is <em>subtracted</em> from the vertex weights.
+The strength determines which fraction of the weight gets removed per stroke.
+However, the brush will not paint weight values below 0.0.</dd>
+<dt>Lighten</dt>
+<dd>In this blend mode the specified weight value is interpreted
+as the target weight very similar to the Mix Blend mode.
+But only weights below the target weight are affected.
+Weights above the target weight remain unchanged.</dd>
+<dt>Darken</dt>
+<dd>This Blend mode is very similar to the Lighten Blend mode.
+But only weights above the target weight are affected.
+Weights below the target weight remain unchanged.</dd>
+<dt>Multiply</dt>
+<dd>Multiplies the vertex weights with the specified weight value.
+This is somewhat like subtract, but the amount of removed weight is now dependent on the Weight value itself.</dd>
+<dt>Blur</dt>
+<dd><p class="first">Smooths out the weighting of adjacent vertices.
+In this mode the Weight Value is ignored.
+The strength defines how much the smoothing is applied.</p>
+<dl class="last docutils">
+<dt>Accumulate</dt>
+<dd><p class="first">This option keeps applying smoothing on top of the previous result.</p>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<ul class="last simple">
+<li>Disable when painting individual vertices on lower poly modules.</li>
+<li>Enable for more dense geometry, or when you want to increase the blur effect.</li>
+</ul>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Auto Normalize</dt>
+<dd><p class="first">Ensures that all deforming vertex groups add up to one while painting. When this option is turned off,
+then all weights of a vertex can have any value between 0.0 and 1.0. However, when Vertex Groups are used as
+Deform Groups for character animation then Blender always interprets the weight values relative to each other.
+That is, Blender always does a normalization over all deform bones. Hence in practice it is not necessary to
+maintain a strict normalization and further normalizing weights should not affect animation at all.</p>
+<p class="last">This option works most intuitively when used to maintain normalization while painting on top of weights
+that are already normalized with some other tool.</p>
+</dd>
+<dt>Multi-Paint</dt>
+<dd><p class="first">Paint on all selected Vertex Groups simultaneously, in a way that preserves their relative influence.
+This can be useful when tweaking weights in an area that is affected by more than three bones at once,
+e.g. certain areas on a character&#8217;s face.</p>
+<p>This option is only useful in the Armature tab, where you can select multiple Vertex Groups
+by selecting multiple Pose bones. Once at least two Vertex Groups are selected, viewport colors and
+paint logic switch to Multi-Paint Mode, using the sum of the selected groups&#8217; weights if Auto Normalize
+is enabled, and the average otherwise. Any paint operations aimed at this collective weight are applied
+to individual Vertex Group weights in such way that their ratio stays the same.</p>
+<p>Since the ratio is undefined if all weights are zero, Multi-Paint cannot operate on vertices that do not
+have any weight assigned to the relevant Vertex Groups. For this reason it also doesn&#8217;t allow reducing
+the weight all the way to zero. When used with X-Mirror, it only guarantees completely symmetrical
+result if weights are initially symmetrical.</p>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>While Multi-Paint cannot directly paint on zero-weight vertices,
+it is possible to use the <em>Smooth Weight</em> tool to copy a reasonable non-zero weight
+distribution from adjacent vertices without leaving Multi-Paint Mode or changing bone selection.</p>
+<p class="last">To do that, enable vertex selection, select target vertices,
+and apply one iteration of the tool using vertex groups from <em>Selected Pose Bones</em> with low Factor.
+After that simply paint on top to set the desired collective weight.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="stroke">
+<h3>Stroke<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id3">
+<img alt="../../../_images/painting_weight_stroke.png" src="../../../_images/painting_weight_stroke.png" />
+<p class="caption"><span class="caption-text">Stroke Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Stroke Method</dt>
+<dd><dl class="first last docutils">
+<dt>Airbrush</dt>
+<dd>Keep applying paint effect while holding mouse down (spray)</dd>
+<dt>Space</dt>
+<dd>Limit brush application to the distance specified by spacing (see below)</dd>
+<dt>Dots</dt>
+<dd>Apply paint on each mouse move step</dd>
+</dl>
+</dd>
+<dt>Rate (only for Airbrush)</dt>
+<dd>Interval between paints for airbrush</dd>
+<dt>Spacing (only for Space)</dt>
+<dd>Limit brush application to the distance specified by spacing</dd>
+<dt>Jitter</dt>
+<dd>Jitter the position of the brush while painting</dd>
+<dt>Smooth Stroke</dt>
+<dd>Brush lags behind mouse and follows a smoother path</dd>
+<dt>Radius</dt>
+<dd>Minimum distance from last point before stroke continues</dd>
+<dt>Factor</dt>
+<dd>Higher values give a smoother stroke</dd>
+</dl>
+</div>
+<div class="section" id="curve">
+<h3>Curve<a class="headerlink" href="#curve" title="Permalink to this headline">¶</a></h3>
+<p>This <a class="reference internal" href="../../../interface/controls/extended_controls.html#ui-curve-widget"><span class="std std-ref">Curve widget</span></a> is used to control the brush falloff.
+Changing the curve allows you to specify the characteristics of your brushes to a large extent.</p>
+</div>
+<div class="section" id="weight-paint-tools">
+<h3>Weight Paint Tools<a class="headerlink" href="#weight-paint-tools" title="Permalink to this headline">¶</a></h3>
+<p>Blender provides a set of helper tools for Weight Painting.
+The tools are located in the weight tools panel.</p>
+<p>The weight paint tools are full described in the
+<a class="reference internal" href="tools.html"><span class="doc">Weight Paint Tools</span></a> page</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4">
+<img alt="../../../_images/painting_weight_options-1.png" src="../../../_images/painting_weight_options-1.png" />
+<p class="caption"><span class="caption-text">Paint Options.</span></p>
+</div>
+<div class="section" id="overlay">
+<h3>Overlay<a class="headerlink" href="#overlay" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to customize the display of curve and texture that applied to the brush.</p>
+</div>
+<div class="section" id="appearance">
+<h3>Appearance<a class="headerlink" href="#appearance" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Show Brush</dt>
+<dd>Makes the brush visible as a circle (on by default)</dd>
+<dt>Custom Icon</dt>
+<dd>Allows definition of a custom brush icon</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h3>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id5">
+<img alt="../../../_images/painting_weight_options-2.png" src="../../../_images/painting_weight_options-2.png" />
+<p class="caption"><span class="caption-text">Brush appearance.</span></p>
+</div>
+<p>The Weight Paint Options modify the overall brush behavior:</p>
+<dl class="docutils">
+<dt>Normals</dt>
+<dd>The vertex normal (helps) determine the extent of painting. This causes an effect as if painting with light.</dd>
+<dt>Spray</dt>
+<dd>Constantly draw (opposed to drawing one stroke per mouse click).</dd>
+<dt>Restrict</dt>
+<dd>This option limits the influence of painting to vertices belonging
+(even with weight 0) to the selected vertex group.</dd>
+<dt>X-mirror</dt>
+<dd>Use the X-mirror option for mirrored painting on groups that have symmetrical names,
+like with extension &#8221;.R&#8221;/ &#8221;.L&#8221; or &#8220;_R&#8221; / &#8220;_L&#8221;.
+If a group has no mirrored counterpart, it will paint symmetrically on the active group itself.
+You can read more about the naming convention in
+<a class="reference internal" href="../../../rigging/armatures/editing/properties.html"><span class="doc">Editing Armatures: Naming conventions</span></a>.
+The convention for armatures/bones apply here as well.</dd>
+<dt>Topology Mirror</dt>
+<dd>Use topology-based mirroring, for when both side of a mesh have matching mirrored topology.</dd>
+<dt>Show Zero Weights</dt>
+<dd><p class="first">To display unreferenced and zero weighted areas in black (by default).</p>
+<ul class="last simple">
+<li>None</li>
+<li>Active</li>
+<li>All</li>
+</ul>
+</dd>
+<dt>Unified 设置</dt>
+<dd>The <em>Size</em>, <em>Strength</em> and <em>Weight</em> of the brush can be set to
+be shared across different brushes, as opposed to per-brush.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

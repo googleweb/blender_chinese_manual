@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Collisions &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="物理" href="index.html"/>
+        <link rel="next" title="Cloth Simulations" href="cloth/index.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Collisions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soft-body-and-cloth-interaction">Soft Body and Cloth Interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#force-field-interaction">Force Field Interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">例子s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">物理</a> &raquo;</li>
+      
+    <li>Collisions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/physics/collision.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collisions">
+<h1>Collisions<a class="headerlink" href="#collisions" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="particles/index.html"><span class="doc">Particles</span></a>, <a class="reference internal" href="soft_body/index.html"><span class="doc">Soft Bodies</span></a>
+and <a class="reference internal" href="cloth/index.html"><span class="doc">Cloth objects</span></a> may collide with mesh objects.
+<a class="reference internal" href="particles/physics/boids.html"><span class="doc">Boids</span></a> try to avoid <em>Collision</em> objects.</p>
+<ul class="simple">
+<li>The objects need to share at least one common layer to have effect.</li>
+<li>You may limit the effect on particles to a group of objects
+(in the <a class="reference internal" href="particles/physics/index.html"><span class="doc">Field Weights panel</span></a>).</li>
+<li><em>Deflection</em> for softbody objects is difficult, they often penetrate the colliding objects.</li>
+<li>Hair particles ignore deflecting objects
+(but you can animate them as softbodies which take deflection into account).</li>
+</ul>
+<p>If you change the deflection settings for an object you have to recalculate the particle,
+softbody or cloth system by <em>Free Cache</em>, this is not done automatically. You can
+clear the cache for all selected objects with <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> <span class="menuselection">‣ Free cache selected</span>.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Panel:    <span class="menuselection">物理 ‣ Collision</span></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../_images/physics_collision.png" src="../_images/physics_collision.png" />
+<p class="caption"><span class="caption-text">Collision Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Permeability</dt>
+<dd>Fraction of particles passing through the mesh.</dd>
+<dt>Stickiness</dt>
+<dd>How much particles stick to the object.</dd>
+<dt>Kill Particles</dt>
+<dd>Deletes Particles upon impact.</dd>
+<dt>Damping Factor</dt>
+<dd>Damping during a collision (independent of the velocity of the particles).</dd>
+<dt>Random damping</dt>
+<dd>Random variation of damping.</dd>
+<dt>Friction Factor</dt>
+<dd>Friction during movements along the surface.</dd>
+<dt>Random friction</dt>
+<dd>Random variation of friction.</dd>
+</dl>
+<div class="figure" id="id2">
+<span id="fig-collision-soft-plane"></span><img alt="../_images/physics_vertexplanecollision.gif" src="../_images/physics_vertexplanecollision.gif" />
+<p class="caption"><span class="caption-text">A softbody vertex colliding with a plane.</span></p>
+</div>
+</div>
+<div class="section" id="soft-body-and-cloth-interaction">
+<h2>Soft Body and Cloth Interaction<a class="headerlink" href="#soft-body-and-cloth-interaction" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Outer</dt>
+<dd>Size of the outer collision zone.</dd>
+<dt>Inner</dt>
+<dd>Size of the inner collision zone (padding distance).</dd>
+</dl>
+<p>Outside and inside is defined by the face normal, depicted as blue arrow in Fig. <a class="reference internal" href="#fig-collision-soft-plane"><span class="std std-ref">A softbody vertex colliding with a plane.</span></a>.</p>
+<dl class="docutils">
+<dt>Damping Factor</dt>
+<dd>Damping during a collision.</dd>
+</dl>
+<p><em>Softbody</em> collisions are difficult to get perfect. If one of the objects move too fast,
+the soft body will penetrate the mesh. See also the section about <a class="reference internal" href="soft_body/index.html"><span class="doc">Soft Bodies</span></a>.</p>
+</div>
+<div class="section" id="force-field-interaction">
+<h2>Force Field Interaction<a class="headerlink" href="#force-field-interaction" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Absorption</dt>
+<dd>A deflector can also deflect effectors. You can specify some collision/deflector objects which deflect a specific
+portion of the effector force using the <em>Absorption</em> value. 100% absorption results in no force getting
+through the collision/deflector object at all. If you have three collision object behind each other with e.g.
+10%, 43% and 3%, the absorption ends up at around 50% (<code class="docutils literal"><span class="pre">100</span> <span class="pre">×</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">0.1)</span> <span class="pre">×</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">0.43)</span> <span class="pre">×</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">0.03)</span></code>).</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../_images/um_part_xiii_kst_pi10.jpg" src="../_images/um_part_xiii_kst_pi10.jpg" />
+<p class="caption"><span class="caption-text">Deflected Particles.</span></p>
+</div>
+<p>Here is a <em>Meta</em> object, dupliverted to a particle system emitting downwards, and deflected by a mesh cube:</p>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Make sure that the normals of the mesh surface are facing towards the particles/points for correct deflection.</li>
+<li>Hair particles react directly to force fields,
+so if you use a force field with a short range you do not need necessarily collision.</li>
+<li>Hair particles avoid their emitting mesh if you edit them in <em>Particle mode</em>.
+So you can at least model the hair with collision.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cloth/index.html" class="btn btn-neutral float-right" title="Cloth Simulations" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

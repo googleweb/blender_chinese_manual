@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>相机 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Cycles 渲染 Engine" href="index.html"/>
+        <link rel="next" title="Reducing Noise" href="reducing_noise.html"/>
+        <link rel="prev" title="Lamps" href="lamps.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings/index.html">渲染 设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lamps.html">Lamps</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">相机</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#perspective">Perspective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orthographic">Orthographic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#panoramic">Panoramic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-of-field">Depth of Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clipping">Clipping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="reducing_noise.html">Reducing Noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu_rendering.html">GPU 渲染ing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osl.html">Open Shading Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="baking.html">渲染 Baking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Cycles 渲染 Engine</a> &raquo;</li>
+      
+    <li>相机</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/cycles/camera.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera">
+<h1>相机<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="perspective">
+<h2>Perspective<a class="headerlink" href="#perspective" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Lens Size and Angle</dt>
+<dd>Control the field of view angle.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/cycles_camera_persp.png"><img alt="../../_images/cycles_camera_persp.png" src="../../_images/cycles_camera_persp.png" style="width: 300px;" /></a>
+</div>
+</div>
+<div class="section" id="orthographic">
+<h2>Orthographic<a class="headerlink" href="#orthographic" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Scale</dt>
+<dd>Controls the size of objects projected on the image.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/cycles_camera_ortho.png"><img alt="../../_images/cycles_camera_ortho.png" src="../../_images/cycles_camera_ortho.png" style="width: 300px;" /></a>
+</div>
+</div>
+<div class="section" id="panoramic">
+<span id="cycles-panoramic-camera"></span><h2>Panoramic<a class="headerlink" href="#panoramic" title="Permalink to this headline">¶</a></h2>
+<p>Cycles supports Equirectangular and Fisheye panoramic cameras.
+Note that these cannot be displayed with OpenGL rendering in the view-port;
+they will only work for rendering.</p>
+<div class="section" id="equirectangular">
+<h3>Equirectangular<a class="headerlink" href="#equirectangular" title="Permalink to this headline">¶</a></h3>
+<p>渲染 a panoramic view of the scenes from the camera location and use an equirectangular projection,
+always rendering the full 360° over the X-axis and 180° over the Y-axis.</p>
+<p>This projection is compatible with the environment texture as used for world shaders,
+so it can be used to render an environment map. To match the default mapping,
+set the camera object rotation to (90, 0, -90) or pointing along the positive X-axis. This
+corresponds to looking at the center of the image using the default environment texture
+mapping.</p>
+</div>
+<div class="section" id="fisheye">
+<h3>Fisheye<a class="headerlink" href="#fisheye" title="Permalink to this headline">¶</a></h3>
+<p>Fisheye lenses are typically wide angle lenses with strong distortion,
+useful for creating panoramic images for e.g. dome projection, or as an artistic effect.
+The <em>Fisheye Equisolid</em> lens will best match real cameras.
+It provides a lens focal length and field of view angle,
+and will also take the sensor dimensions into account.</p>
+<p>The <em>Fisheye Equidistant</em> lens does not correspond to any real lens model; it will
+give a circular fish-eye that doesn&#8217;t take any sensor information into account but rather uses
+the whole sensor. This is a good lens for full dome projection.</p>
+<dl class="docutils">
+<dt>Lens</dt>
+<dd>Lens focal length in millimeter.</dd>
+<dt>Field of View</dt>
+<dd>Field of view angle, going to 360 and more to capture the whole environment.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="depth-of-field">
+<h2>Depth of Field<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/cycles_camera_dof_panel.jpg" src="../../_images/cycles_camera_dof_panel.jpg" />
+</div>
+<dl class="docutils">
+<dt>Focus</dt>
+<dd>Set an object to be used as a focal point by the camera, causing the camera
+to focus on the selected object.</dd>
+<dt>Distance</dt>
+<dd>When an object is not used, the camera can be set to focus on an area in 3D
+space set by the distance from the camera.
+Using the <em>Limit</em> Display option, you are able to view the distance in the 3D space.</dd>
+<dt>High Quality</dt>
+<dd>Enables the High Quality <em>view-port</em> depth of field, giving a more accurate
+representation of <em>depth of field</em>. This allows the view-port depth of field
+to be closely represented to that of the render and render preview depth of field.</dd>
+<dt>F-Stop</dt>
+<dd>Viewport depth of field aperture measured in F-Stops. Smaller numbers will
+cause more blur in the view-port, OpenGL renders, and sequencer.</dd>
+<dt>Blades</dt>
+<dd>The number of polygonal sides to give blurred objects in the view-port.
+The minimum number of blades needed to enable the bokeh effect is 3 (triangle).
+(Only available with High Quality).</dd>
+<dt>Aperture</dt>
+<dd>Use F-Stop or Radius to set the aperture for the render, and render preview.
+F-Stop is the focal ratio, where Radius is the the raidus of the focal point.</dd>
+<dt>Size/Number</dt>
+<dd>Aperture radius <em>size</em>, or F-Stop <em>number</em> used for the render, and render preview.
+Using the F-Stop with a low number, or Radius with a large size will result in a strong blur,
+also allowing the use of the <em>bokeh effect</em>.</dd>
+<dt>Blades</dt>
+<dd>Total number of polygonal blades used to alter the shape of the blurred objects
+in the render, and render preview. As with the view-port, the minimum amount of
+blades to enable the bokeh effect is 3, resulting in a triangle shaped blur.</dd>
+<dt>Rotation</dt>
+<dd>Rotate the polygonal blades along the facing axis, and will rotate in a clockwise,
+and counter-clockwise fashion.</dd>
+<dt>Ratio</dt>
+<dd>Change the amount of distortion to simulate the anamorphic bokeh effect.
+A setting of 1.0 shows no distortion, where a number below 1.0 will cause a horizontal distortion,
+and a higher number will cause a vertical distortion.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/cycles_camera_dof_bokeh.jpg" src="../../_images/cycles_camera_dof_bokeh.jpg" />
+</div>
+</div>
+<div class="section" id="clipping">
+<h2>Clipping<a class="headerlink" href="#clipping" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Clip Start and End</dt>
+<dd><p class="first">The interval in which objects are directly visible,
+Any objects outside this range still influence the image indirectly,
+as further light bounces are not clipped.</p>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../../editors/3dview/object/types/camera/lens.html#camera-clipping"><span class="std std-ref">相机 Clipping</span></a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reducing_noise.html" class="btn btn-neutral float-right" title="Reducing Noise" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lamps.html" class="btn btn-neutral" title="Lamps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

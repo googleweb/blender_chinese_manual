@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parenting Objects &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Object Relationships" href="index.html"/>
+        <link rel="next" title="Selecting" href="../../selecting.html"/>
+        <link rel="prev" title="Grouping objects" href="groups.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="index.html">Object Relationships</a> &raquo;</li>
+      
+    <li>Parenting Objects</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/3dview/object/relationships/parents.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parenting-objects">
+<h1>Parenting Objects<a class="headerlink" href="#parenting-objects" title="Permalink to this headline">¶</a></h1>
+<p>When modeling a complex object, such as a watch,
+you may choose to model the different parts as separate objects. However,
+all of the parts may be attached to each other. In these cases,
+you want to designate one object as the parent of all the children. Movement,
+rotation or scaling of the parent also affects the children.</p>
+<p>To parent objects, select at least two objects (select the <em>Child Objects</em> first,
+and select the <em>Parent Object</em> last), and press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>. The <em>Set Parent To</em>
+menu will pop up allowing you to select from one of several possible different
+parenting types. Selecting one of the entries in <em>Set Parent To</em> confirms,
+and the child/children to parent relationship is created.</p>
+<p>The last object selected will be the <em>Active Object</em> (outlined in light orange),
+and will also be the <em>Parent Object</em>.
+If you selected multiple objects before selecting the parent,
+they will all be children of the parent and will be at the same level of the hierarchy
+(they are &#8220;siblings&#8221;).</p>
+<p>The <em>Set Parent To</em> pop-up menu is context sensitive, which means the number of entries it
+displays can change depending on what objects are selected when the <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>
+shortcut is used.</p>
+<p>For non-inverse-mode, press <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-P</span></code> instead. This creates an alternative
+parent-child-relationship where child-objects exist entirely in the parent&#8217;s coordinate
+system. This is the better choice for CAD purposes, for example.</p>
+<p>Moving, rotating or scaling the parent will also usually move/rotate/scale the child/children.
+However, moving/rotating/scaling the child/children of the parent will not result in the parent
+moving/rotating/scaling. In other words,
+the direction of influence is from parent to child and not child to parent.</p>
+<p>In general when using <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> or <span class="menuselection">3D视图 Header ‣ Object ‣ Parent</span>
+to parent objects, the <em>Child Objects</em> can only have one <em>Parent Object</em>.
+If a <em>Child Object</em> already has a <em>Parent Object</em> and you give it another parent then
+Blender will automatically remove the previous parent relationship.</p>
+<p>Blender supports many different types of parenting, listed below:</p>
+<ul class="simple">
+<li>Object</li>
+<li>Armature Deform</li>
+<li>Bone</li>
+<li>Curve Deform</li>
+<li>Path Constraint</li>
+<li>Lattice Deform</li>
+<li>Vertex</li>
+<li>Vertex (Triangle)</li>
+</ul>
+<div class="section" id="object-parent">
+<span id="object-parenting"></span><h2>Object Parent<a class="headerlink" href="#object-parent" title="Permalink to this headline">¶</a></h2>
+<p><em>Object Parent</em> is the most general form of parenting that Blender supports.
+If will take selected objects and make the last selected object the <em>Parent Object</em>,
+while all other selected objects will be <em>Child Objects</em>.</p>
+<div class="section" id="object-keep-transform-parent">
+<h3>Object (Keep 变换) Parent<a class="headerlink" href="#object-keep-transform-parent" title="Permalink to this headline">¶</a></h3>
+<p><em>Object (Keep 变换) Parent</em> works in a very similar way to <em>Object Parent</em> the major difference is in whether
+the <em>Child Objects</em> will remember any previous transformations applied to them from the previous <em>Parent Object</em>.</p>
+<p>Since explaining this in an easy to understand technical way is hard,
+lets instead use an example to demonstrate.</p>
+<p>Assume that we have a scene consisting of three objects,
+those being two Empty Objects named &#8220;EmptyA&#8221; and &#8220;EmptyB&#8221;, and a Monkey object.
+Fig. <a class="reference internal" href="#fig-view3d-parent-scene-no"><span class="std std-ref">Scene with no parenting.</span></a> shows the three objects with no parenting relationships active on them.</p>
+<div class="figure" id="id1">
+<span id="fig-view3d-parent-scene-no"></span><img alt="../../../../_images/parent-object_keep_transform-a.jpg" src="../../../../_images/parent-object_keep_transform-a.jpg" />
+<p class="caption"><span class="caption-text">Scene with no parenting.</span></p>
+</div>
+<p>If you select the Monkey object by <code class="kbd docutils literal"><span class="pre">RMB</span></code> click and then <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>
+click &#8220;EmptyA&#8221; object and press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and then select <em>Object</em> from the <em>Set
+Parent To</em> pop-up menu.
+This will result in &#8220;EmptyA&#8221; object being the <em>Parent Object</em> of the Monkey object. With
+only &#8220;EmptyA&#8221; selected rotating/scaling/moving it will result in the Monkey object being
+altered respectively.</p>
+<p>Scale the &#8220;EmptyA&#8221; object, so that the Monkey becomes smaller and moves to the left a little.</p>
+<div class="figure" id="id2">
+<img alt="../../../../_images/parent-object_keep_transform-b.jpg" src="../../../../_images/parent-object_keep_transform-b.jpg" />
+<p class="caption"><span class="caption-text">The monkey is the child object of &#8220;EmptyA&#8221;.</span></p>
+</div>
+<p>If you select only the Monkey object by <code class="kbd docutils literal"><span class="pre">RMB</span></code> click and then <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>
+click &#8220;EmptyB&#8221; object and press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and select <em>Object</em> from the <em>Set
+Parent To</em> pop-up menu.
+This will result in &#8220;EmptyB&#8221; object being the <em>Parent Object</em> of the Monkey object.
+Notice that when you change the parent of the Monkey the scale of the Monkey changed.</p>
+<div class="figure" id="id3">
+<img alt="../../../../_images/parent-object_keep_transform-c.jpg" src="../../../../_images/parent-object_keep_transform-c.jpg" />
+<p class="caption"><span class="caption-text">The monkey is the child object of &#8220;EmptyB&#8221;.</span></p>
+</div>
+<p>This happens because the Monkey object never had its scale altered directly,
+the change came about because it was the child of &#8220;EmptyA&#8221; which had its scale altered.
+Changing the Monkey&#8217;s parent to &#8220;EmptyB&#8221; resulted in those indirect changes in scale being
+removed, because &#8220;EmptyB&#8221; has not had its scale altered.</p>
+<p>This is often the required behavior, but it is also sometimes useful that if you change your
+<em>Parent Object</em> that the <em>Child Object</em> keep any previous transformations it got from the
+old <em>Parent Object</em>; If instead when changing the <em>Parent Object</em> of the Monkey from
+&#8220;EmptyA&#8221; to &#8220;EmptyB&#8221; we had chosen parenting type <em>Object (Keep 变换)</em>, the Monkey
+would keep its scale information it obtained from the old parent &#8220;EmptyA&#8221; when it is assigned
+to the new parent &#8220;EmptyB&#8221;;</p>
+<div class="figure" id="id4">
+<img alt="../../../../_images/parent-object_keep_transform-d.jpg" src="../../../../_images/parent-object_keep_transform-d.jpg" />
+<p class="caption"><span class="caption-text">The Object (Keep 变换) parent method.</span></p>
+</div>
+<p>If you want to follow along with the above description here is the blend-file used to describe
+<em>Object (Keep 变换)</em> parenting method:</p>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/File:Parent_-_Object_(Keep_变换)_(Demo_File).blend">File:Parent_-_Object_(Keep_变换)_(Demo_File).blend</a></p>
+</div>
+</div>
+<div class="section" id="armature-deform-parent">
+<h2>Armature Deform Parent<a class="headerlink" href="#armature-deform-parent" title="Permalink to this headline">¶</a></h2>
+<p>An Armature in Blender can be thought of as similar to the armature of a real skeleton,
+and just like a real skeleton an Armature can consist of many bones. These bones can be moved
+around and anything that they are attached to or associated with will move and deform in a
+similar way.</p>
+<p>In Blender Armature Object Types are usually used to associate certain bones of an Armature to
+certain parts of a Mesh Object Types Mesh Geometry.
+You are then able to move the Armature Bones and the Mesh Object will deform.</p>
+<div class="figure" id="id5">
+<img alt="../../../../_images/sq-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" src="../../../../_images/sq-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" />
+<p class="caption"><span class="caption-text">Bone associated with Mesh Object.</span></p>
+</div>
+<p>Armature Deform Parenting is one of the most flexible ways of associating Bones in an Armature
+to another Object,
+it gives a lot of freedom but that comes at the price of a little complexity, as there are
+multiple steps involved in setting up Armature Deform Parenting such that deformations are
+actually carried out.</p>
+<p>Blender has several different ways of Parenting an Armature to an object,
+most of them can automate several of the steps involved,
+but all of them ultimately do all the steps we describe for Armature Deform Parenting.</p>
+<p>Using the Armature Deform Parenting operator is the first step in setting up the relationship
+between an Armature Object and its Child Objects.</p>
+<p>To use Armature Deform Parenting you must first select all the Child Objects that will be
+influenced by the Armature and then lastly, select the Armature Object itself. Once all the
+Child Objects and the Armature Object are selected press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and select
+Armature Deform in the Set Parent To pop-up menu.</p>
+<div class="figure" id="id6">
+<img alt="../../../../_images/sr-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" src="../../../../_images/sr-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" />
+<p class="caption"><span class="caption-text">Set Parent To menu with Armature Deform Parenting option highlighted.</span></p>
+</div>
+<p>Once this is done the Armature Object will be the Parent Object of all the other Child
+Objects, also we have informed Blender that the Bones of the Armature Object can be associated
+with specific parts of the Child Objects so that they can be directly manipulated by the
+Bones.</p>
+<p>At this point however, all Blender knows is that the Bones of the Armature could be used to
+alter the Child Objects,
+we have not yet told Blender which Bones can alter which Child Objects or by how much.</p>
+<p>To do that we must individually select each Child Object individually and toggle into Edit
+Mode on that Child Object. Once in 编辑模式 we can then select the vertices we want to be
+influenced by the Bones in the Armature. Then with the vertices still selected navigate to
+<span class="menuselection">Properties Editor ‣ Object Data ‣ Vertex Groups</span> and create a new Vertex Group
+with the same name as the Bone that you want the selected vertices to be influenced by.</p>
+<p>Once the Vertex Group has been created we then assign the selected vertices to the Vertex
+Group by clicking the Assign Button. By default when selected vertices are assigned to a
+Vertex Group they will have an Influence Weight of 1.0
+This means that they are fully influenced when a Bone they are associated with is moved,
+if the Influence Weight had been 0.5 then when the bone moves the vertices would only move half as much.</p>
+<div class="figure" id="id7">
+<img alt="../../../../_images/ss-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" src="../../../../_images/ss-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" />
+<p class="caption"><span class="caption-text">Vertex groups panel with Assign Button and influence Weight Slider highlighted.</span></p>
+</div>
+<p>Once all these steps have been carried out, the Bones of the Armature Object should be
+associated with the Vertex Groups with the same names as the Bones. You can then select the
+Armature Object and switch to 姿态模式 in the <span class="menuselection">3D视图 Editor Header ‣ Mode Select</span> menu.</p>
+<div class="figure" id="id8">
+<img alt="../../../../_images/st-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" src="../../../../_images/st-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" />
+<p class="caption"><span class="caption-text">Armature Bone in 姿态模式 affecting the Mesh Object.</span></p>
+<div class="legend">
+The bone is highlighted in Cyan.</div>
+</div>
+<p>Once in 姿态模式 transforming one of the Bones of the Armature that has been associated with
+vertices of an object will result in those vertices also being transformed.</p>
+<div class="section" id="armature-deform-parent-with-empty-groups">
+<h3>Armature Deform Parent With Empty Groups<a class="headerlink" href="#armature-deform-parent-with-empty-groups" title="Permalink to this headline">¶</a></h3>
+<p>The Armature Deform With Empty Groups parenting method works in almost the same way as
+Armature Deform parenting with one difference. That difference is that when you parent a
+Child Object to an Armature Object the names of the bones in the armature are copied to the
+Child Objects in the form of newly created Vertex Groups,
+one for each different deforming armature bone name. The newly created Vertex Groups will be
+empty this means they will not have any vertices assigned to those Vertex Groups. You still
+must manually select the vertices and assign them to a particular Vertex Group of your
+choosing to have bones in the armature influence them.</p>
+<p>For example, if you have an Armature Object which consists of three bones named &#8220;BoneA&#8221;,
+&#8220;BoneB&#8221; and &#8220;BoneC&#8221; and Cube Mesh Object type called &#8220;Cube&#8221;. If you parent the Cube Child Object to
+the Armature Parent Object the Cube will get three new Vertex Groups created on it called &#8220;BoneA&#8221;,
+&#8220;BoneB&#8221; and &#8220;BoneC&#8221;. Notice that each Vertex Group is empty.</p>
+<div class="figure" id="id9">
+<img alt="../../../../_images/editors_3dview_header-objectmenu-parent-armature_deform_with_empty_groups-blend.jpg" src="../../../../_images/editors_3dview_header-objectmenu-parent-armature_deform_with_empty_groups-blend.jpg" />
+<p class="caption"><span class="caption-text">Cube in 编辑模式 using Armature Deform with empty groups.</span></p>
+</div>
+<p>Bones in an Armature can be generally classified into two different types:</p>
+<ul class="simple">
+<li>Deforming Bones</li>
+<li>Control Bones</li>
+</ul>
+<p>Deforming Bones - Are bones which when transformed will result in vertices associated with
+them also transforming in a similar way. Deforming Bones are directly involved in altering
+the positions of vertices associated with their bones.</p>
+<p>Control Bones - Are Bones which act in a similar way to switches,
+in that, they control how other bones or objects react when they are transformed.
+A Control Bone could for example act as a sliding switch control when the bone is in one
+position to the left it could indicate to other bones that they react in a particular way when
+transformed, when the Control Bone is positioned to the right,
+transforming other bones or objects could do something completely different.
+Control Bones are not directly used to alter the positions of vertices,
+in fact, Control Bones often have no vertices directly associated with themselves.</p>
+<p>When using the Armature Deform With Empty Groups parenting method Vertex Groups on the Child
+Object will only be created for Armature Bones which are setup as Deforming Bone types.
+If a Bone is a Control Bone no Vertex Group will be created on the Child Object for that bone.</p>
+<p>To check whether a particular bone in an armature is a Deforming Bone simply switch to Pose or 编辑模式
+on the armature and select the bone you are interested in by <code class="kbd docutils literal"><span class="pre">RMB</span></code> it.
+Once the bone of interest is selected navigate to
+<span class="menuselection">Properties Editor ‣ Bone ‣ Deform Panel</span>
+and check if the Deform tickable option is ticked or not. If it is the selected bone is a Deforming Bone,
+otherwise, it is a Control Bone.</p>
+<div class="figure" id="id10">
+<img alt="../../../../_images/editors_3dview_parenting_bone-check.png" src="../../../../_images/editors_3dview_parenting_bone-check.png" />
+<p class="caption"><span class="caption-text">Three Bone Armature in <em>Pose</em> Mode with 1st bone selected.</span></p>
+</div>
+</div>
+<div class="section" id="armature-deform-with-automatic-weights">
+<h3>Armature Deform With Automatic Weights<a class="headerlink" href="#armature-deform-with-automatic-weights" title="Permalink to this headline">¶</a></h3>
+<p>Armature Deform With Automatic Weights parenting feature does everything Armature Deform With Empty Groups does with
+one extra thing. That extra thing is that unlike Armature Deform With Empty Groups which leaves the automatically
+created Vertex Groups empty with no vertices assigned to them; Armature Deform With Automatic Weight will try to
+calculate how much Influence Weight a particular Armature Bone would have on a certain collection of vertices based
+on the distance from those vertices to a particular Armature Bone.</p>
+<p>Once Blender has calculated the Influence Weight vertices should have it will assign that Influence Weight to the
+Vertex Groups that were previously created automatically by Blender on the Child Object when Armature Deform With
+Automatic Weights parenting command was carried out.</p>
+<p>If all went well it should be possible to select the Armature Object switch it into 姿态模式 and transform the bones
+of the Armature and the Child Object should deform in response.
+Unlike Armature Deform parenting you will not have to create Vertex Groups on the Child Object,
+neither will you have to assign Influences Weights to those Vertex Groups, Blender will try to do it for you.</p>
+<p>To activate Armature Deform With Automatic Weights you must be in 物体模式 or 姿态模式,
+then select all the Child Objects (usually Mesh Object Types) and lastly select the Armature Object;
+Once done press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and select the Armature Deform With Automatic Weights from the
+Set Parent To pop-up menu.</p>
+<p>This method of parenting is certainly easier setup but it can often lead to Armatures which do not deform Child
+Objects in ways you would want as Blender can get a little confused when it comes to determining which Bones should
+influence certain vertices when calculating Influence Weights for more complex armatures and Child Objects. Symptoms
+of this confusion are that when transforming the Armature Object in 姿态模式 parts of the Child Objects do not deform
+as you expect; If Blender does not give you the results you require you will have to manually alter the Influence
+Weights of vertices in relation to the Vertex Groups they belong to and have influence in.</p>
+</div>
+<div class="section" id="armature-deform-with-envelope-weights">
+<h3>Armature Deform With Envelope Weights<a class="headerlink" href="#armature-deform-with-envelope-weights" title="Permalink to this headline">¶</a></h3>
+<p>Works in a similar way to Armature Deform With Automatic Weights in that it will create Vertex
+Groups on the Child Objects that have names matching those of the Parent Object Armature Bones.
+The created Vertex Groups will then be assigned Influence Weights.
+The major difference is in the way those Influence Weights are calculated.</p>
+<p>Influence Weights that are calculated when using Armature Deform With Envelope Weights
+parenting are calculated entirely visually using Bone Envelopes.</p>
+<div class="figure" id="id11">
+<span id="fig-view3d-parent-envelope"></span><img alt="../../../../_images/tn-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/tn-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Single Armature Bone in 编辑模式 with Envelope Weight display enabled.</span></p>
+<div class="legend">
+The gray volume around the bone is the Bone Envelope.</div>
+</div>
+<p>Fig. <a class="reference internal" href="#fig-view3d-parent-envelope"><span class="std std-ref">Single Armature Bone in 编辑模式 with Envelope Weight display enabled.</span></a> shows a single Armature Bone in 编辑模式 with Envelope Weight activated.
+The gray semi-transparent volume around the bone is the Bone Envelope.</p>
+<p>Any Child Object that has vertices inside the volume of the Bone Envelope will be influenced by
+the Parent Object Armature when the Armature Deform With Envelope Weights operator is used.
+Any vertices outside the Bone Envelope volume will not be influenced.
+When the bones are transformed in 姿态模式 the results are very different.</p>
+<div class="figure" id="id12">
+<img alt="../../../../_images/to-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/to-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Two sets of Armatures each with three bones.</span></p>
+</div>
+<p>The default size of the Bone Envelope volume does not extend very far from the surface of a bone;
+You can alter the size of the Bone Envelope volume by clicking on the body of the bone you want to alter,
+switch to 编辑模式 or 姿态模式 and then pressing
+<code class="kbd docutils literal"><span class="pre">Ctrl-Alt-S</span></code> then drag your mouse left or right and the Bone Envelope volume will alter accordingly.</p>
+<div class="figure" id="id13">
+<img alt="../../../../_images/tp-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/tp-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Single Armature Bone with various different Bone Envelope sizes.</span></p>
+</div>
+<p>You can also alter the Bone Envelope volume by selecting the Bone you wish to alter and
+switching to 编辑模式 or 姿态模式,
+then navigate to <span class="menuselection">Properties Editor ‣ Bone ‣ Deform ‣ Envelope ‣ Distance</span>
+then enter a new value into it.</p>
+<div class="figure" id="id14">
+<img alt="../../../../_images/tq-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/tq-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Envelope distance.</span></p>
+</div>
+<p>Altering the Bone Envelope volume does not alter the size of the Armature Bone just the range
+within which it can influence vertices of Child Objects.</p>
+<p>You can alter the radius that a bone has by selecting the head, body or tail parts of a bone while in 编辑模式,
+and then press <code class="kbd docutils literal"><span class="pre">Alt-S</span></code> and move the mouse left or right.
+This will make the selected bone fatter or thinner without altering the thickness of the Bone Envelope volume.</p>
+<div class="figure" id="id15">
+<img alt="../../../../_images/tr-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/tr-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Four Armature Bones all using Envelope Weight.</span></p>
+<div class="legend">
+The 1st with a default radius value, the three others with differing Tail, Head, and Body radius values.</div>
+</div>
+<p>You can also alter the bone radius by selecting the tail or head of the bone you wish to alter and switching to Edit
+Mode, then navigate to <span class="menuselection">Properties Editor ‣ Bone ‣ Deform ‣ Radius Section</span>
+and entering new values for the <em>Tail</em> and <em>Head</em> fields.</p>
+<div class="figure" id="id16">
+<img alt="../../../../_images/ts-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" src="../../../../_images/ts-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg" />
+<p class="caption"><span class="caption-text">Deform Radius Section</span></p>
+<div class="legend">
+Head and tail fields highlighted.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you alter the Bone Envelope volume of a bone so that you can have it include/exclude
+certain vertices after you have already used Armature Deform With Envelope Weights,
+by default, the newly included/excluded vertices will not be affected by the change. When using
+Armature Deform With Envelope Weights it only calculates which vertices will be affected by
+the Bone Envelope volume at the time of parenting, at which point it creates the required
+named Vertex Groups and assigns vertices to them as required. If you want any vertices to
+take account of the new Bone Envelope volume size you will have to carry out the Armature Deform
+With Envelope Weights parenting again; In fact, all parenting used in the Set Parent To pop-up
+menu which tries to automatically assign vertices to Vertex Groups works like this.</p>
+</div>
+</div>
+</div>
+<div class="section" id="bone-parent">
+<h2>Bone Parent<a class="headerlink" href="#bone-parent" title="Permalink to this headline">¶</a></h2>
+<p>Bone parenting allows you to make a certain bone in an armature the Parent Object of another object.
+This means that when transforming an armature the Child Object will only move
+if the specific bone it is the Child Object of moves.</p>
+<div class="figure" id="id17">
+<span id="fig-view3d-parent-bone-parent"></span><img alt="../../../../_images/tu-3dvieweditorheader-objectmenu-parent-boneparenting.jpg" src="../../../../_images/tu-3dvieweditorheader-objectmenu-parent-boneparenting.jpg" />
+<p class="caption"><span class="caption-text">Three pictures of Armatures with four Bones.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-view3d-parent-bone-parent"><span class="std std-ref">Three pictures of Armatures with four Bones.</span></a> with the 2nd bone being the Bone Parent of the Child Object Cube.
+The Cube is only transformed if the 1st or 2nd bones are.
+Notice altering the 3rd and 4th bones has no effect on the Cone.</p>
+<p>To use Bone Parenting, you must first select all the Child Objects you wish to parent to a specific Armature Bone,
+then <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> select the Armature Object and switch it into 姿态模式 and then select the
+specific bone you wish to be the Parent Bone by <code class="kbd docutils literal"><span class="pre">RMB</span></code> selecting it.
+Once done press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and select Bone from the Set Parent To pop-up menu.</p>
+<p>Now transforming that bone in 姿态模式 will result in the Child Objects also transforming.</p>
+<div class="section" id="relative-parenting">
+<h3>Relative Parenting<a class="headerlink" href="#relative-parenting" title="Permalink to this headline">¶</a></h3>
+<p>Bone Relative parenting is an option you can toggle for each bone.
+This works in the same way as Bone parenting with one difference.</p>
+<p>With Bone parenting if you have parented a bone to some Child Objects and
+you select that bone and switch it into 编辑模式 and then translate that bone;
+When you switch back into 姿态模式 on that bone,
+the Child Object which is parented to that bone will snap back to the location of the bone in 姿态模式.</p>
+<div class="figure" id="id18">
+<span id="fig-view3d-parent-bone-parent-child"></span><img alt="../../../../_images/tx-3dvieweditorheader-objectmenu-parent-boneparenting.jpg" src="../../../../_images/tx-3dvieweditorheader-objectmenu-parent-boneparenting.jpg" />
+<p class="caption"><span class="caption-text">Single Armature Bone which has a Child Object cube parented to it using Bone parenting.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-view3d-parent-bone-parent-child"><span class="std std-ref">Single Armature Bone which has a Child Object cube parented to it using Bone parenting.</span></a> the 1st picture shows the position of the cube and
+armature before the bone is moved in 编辑模式.
+2nd picture shows the position of the cube and armature after the bone was selected in 编辑模式,
+moved and switched back into 姿态模式. Notice that the Child Object moves to the new location of the Pose Bone.</p>
+<p>Bone Relative parenting works differently;
+If you move a Parent Bone in 编辑模式, when you switch back to 姿态模式,
+the Child Objects will not move to the new location of the Pose Bone.</p>
+<div class="figure" id="id19">
+<span id="fig-view3d-parent-bone-parent-relative"></span><img alt="../../../../_images/ty-3dvieweditorheader-objectmenu-parent-bonerelativeparenting.jpg" src="../../../../_images/ty-3dvieweditorheader-objectmenu-parent-bonerelativeparenting.jpg" />
+<p class="caption"><span class="caption-text">Single Bone with Bone Relative parent to a cube.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-view3d-parent-bone-parent-relative"><span class="std std-ref">Single Bone with Bone Relative parent to a cube.</span></a> the 1st picture shows the position of the cube and armature before the bone is moved in 编辑模式.
+2nd picture shows the position of the cube and armature after the bone was selected in 编辑模式,
+moved and switched back into 姿态模式.
+Notice that the Child Object does not move to the new location of the Pose Bone.</p>
+</div>
+</div>
+<div class="section" id="vertex-parent">
+<h2>Vertex Parent<a class="headerlink" href="#vertex-parent" title="Permalink to this headline">¶</a></h2>
+<p>You can parent an object to a single vertex or a group of three vertices as well;
+that way the child/children will move when the parent mesh is deformed,
+like a mosquito on a pulsing artery.</p>
+<div class="section" id="vertex-parent-from-edit-mode">
+<h3>Vertex Parent from 编辑模式<a class="headerlink" href="#vertex-parent-from-edit-mode" title="Permalink to this headline">¶</a></h3>
+<p>In <em>物体模式</em>, select the child/children and then the parent object.
+<code class="kbd docutils literal"><span class="pre">Tab</span></code> into <em>编辑模式</em> and on the parent object select either one vertex
+that defines a single point, or select three vertices that define an area
+(the three vertices do not have to form a complete face;
+they can be any three vertices of the parent object),
+and then press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and confirm.</p>
+<p>At this point, if a single vertex was selected,
+a relationship/parenting line will be drawn from the vertex to the child/children. If three
+vertices were selected then a relationship/parenting line is drawn from the averaged center of
+the three points (of the parent object) to the child/children. Now,
+as the parent mesh deforms and the chosen parent vertex/vertices move,
+the child/children will move as well.</p>
+</div>
+<div class="section" id="vertex-parent-from-object-mode">
+<h3>Vertex Parent from 物体模式<a class="headerlink" href="#vertex-parent-from-object-mode" title="Permalink to this headline">¶</a></h3>
+<p>Vertex parenting can be performed from object mode,
+This is done like regular object parenting,
+Press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> in object mode and select <em>Vertex</em> or <em>Vertex (Triangle)</em>.</p>
+<p>The nearest vertices will be used from each object which is typically what you would want.</p>
+<div class="figure" id="id20">
+<img alt="../../../../_images/parent_vertex_object_mode_example.jpg" src="../../../../_images/parent_vertex_object_mode_example.jpg" />
+<p class="caption"><span class="caption-text">Vertex Parent example.</span></p>
+<div class="legend">
+<ol class="upperalpha simple">
+<li>The small cubes can each be automatically parented to a triad of nearby vertices on the icosphere using the
+&#8220;Vertex (Triangle)&#8221; in the set parent context menu.</li>
+<li>Reshaping the object in edit mode then means each of the cubes follows their vertex parent separately.</li>
+<li>Re-scaling the parent icosphere in object mode means the child cubes are also rescaled as expected.</li>
+</ol>
+</div>
+</div>
+<p>The parent context menu item means users can rapidly set up a large number of vertex parent
+relationships,
+and avoid the tedious effort of establishing each parent-child vertex relationship separately.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is in fact a sort of &#8220;reversed&#8221; <a class="reference internal" href="../../../../modeling/modifiers/deform/hooks.html"><span class="doc">hook</span></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="move-child">
+<h3>Move child<a class="headerlink" href="#move-child" title="Permalink to this headline">¶</a></h3>
+<p>You can <em>move</em> a child object to its parent by clearing its origin.
+The relationship between the parent and child is not affected.
+Select the child object and press <code class="kbd docutils literal"><span class="pre">Alt-O</span></code>.
+By confirming the child object will snap to the parent&#8217;s location.
+Use the <em>Outliner</em> view to verify that the child object is still parented.</p>
+</div>
+<div class="section" id="remove-relationship-clear-parent">
+<h3>Remove relationship/Clear Parent<a class="headerlink" href="#remove-relationship-clear-parent" title="Permalink to this headline">¶</a></h3>
+<p>You can <em>remove</em> a parent-child relationship via <code class="kbd docutils literal"><span class="pre">Alt-P</span></code></p>
+<p>The menu contains:</p>
+<dl class="docutils">
+<dt>Clear Parent</dt>
+<dd>If the parent in the group is selected nothing is done.
+If a child or children are selected they are disassociated from the parent,
+or freed, and they return to their <em>original</em> location, rotation, and size.</dd>
+<dt>Clear and Keep 变换ation</dt>
+<dd>Frees the children from the parent, and <em>keeps</em> the location, rotation, and size given to them by the parent.</dd>
+<dt>Clear Parent Inverse</dt>
+<dd>Places the children with respect to the parent as if they were placed in the Global reference.
+This effectively clears the parent&#8217;s transformation from the children. For example,
+if the parent is moved 10 units along the X axis and <em>Clear Parent Inverse</em> is invoked,
+any selected children are freed and moved -10 units back along the X axis.
+The &#8220;Inverse&#8221; only uses the last transformation; if the parent moved twice,
+10 units each time for a total of 20 units, then the &#8220;Inverse&#8221; will only move the child back 10 units, not 20.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id21">
+<span id="fig-view3d-parent-outliner"></span><img alt="../../../../_images/modeling-objects-parenting-exampel2-outliner.jpg" src="../../../../_images/modeling-objects-parenting-exampel2-outliner.jpg" />
+<p class="caption"><span class="caption-text">Outliner view.</span></p>
+</div>
+<p>There is another way to see the parent-child relationship in groups and that is to use the <em>Outliner</em> view
+of the <a class="reference internal" href="../../../outliner.html"><span class="doc">Outliner editor</span></a>. Fig. <a class="reference internal" href="#fig-view3d-parent-outliner"><span class="std std-ref">Outliner view.</span></a>
+is an example of what the <em>Outliner</em> view looks like for the figurers in the <a class="reference internal" href="#object-parenting"><span class="std std-ref">Object Parent</span></a> example.
+Cube A&#8217;s object name is &#8220;Cube_Parent&#8221; and cube B is &#8220;Cube_Child&#8221;.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../selecting.html" class="btn btn-neutral float-right" title="Selecting" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="groups.html" class="btn btn-neutral" title="Grouping objects" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

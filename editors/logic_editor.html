@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>逻辑编辑器 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="编辑器" href="index.html"/>
+        <link rel="next" title="Properties Editor" href="properties/index.html"/>
+        <link rel="prev" title="Node Groups" href="node_editor/nodes/groups.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#nodes-logic">节点/逻辑</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="node_editor/index.html">节点编辑器</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">逻辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+      
+    <li>逻辑编辑器</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/editors/logic_editor.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="logic-editor">
+<span id="editors-logic"></span><h1>逻辑编辑器<a class="headerlink" href="#logic-editor" title="Permalink to this headline">¶</a></h1>
+<p>The 逻辑编辑器 provides the main method of setting up and editing the game logic for the
+various actors (i.e. objects) that make up the game. The logic for the objects which are
+currently selected in the associated 3D panel are displayed as logic bricks,
+which are shown as a table with three columns, showing sensors, controllers, and actuators,
+respectively. The links joining the logic bricks conduct the pulses between sensor-controller
+and controller-actuator.</p>
+<p>To give you a better understanding of the 逻辑编辑器 panel, the image below shows a typical
+panel content in which the major components have been labeled.
+We will look at each one individually.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/logic_panel_expanded_menus.jpg"><img alt="../_images/logic_panel_expanded_menus.jpg" src="../_images/logic_panel_expanded_menus.jpg" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">The different parts of the 逻辑 Panel.</span></p>
+</div>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Game Property Area</dt>
+<dd><p class="first last">Game properties are like variables in other programming languages.
+They are used to save and access data associated with an object.
+Several types of properties are available.
+Properties are declared by clicking the Add Game Property button in this area.
+For a more in-depth look at the content,
+layout and available operations in this area, see <a class="reference internal" href="../game_engine/logic/properties.html"><span class="doc">Properties</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Object Name</dt>
+<dd><p class="first last">This box shows the name of the object which owns the logic bricks below.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Links</dt>
+<dd><p class="first">Links (3A) indicate the direction of logical flow between objects.
+Link lines are drawn by <code class="kbd docutils literal"><span class="pre">LMB</span></code> dragging from one Link node (3B) to another.
+Links can only be drawn from Sensors to Controllers, or from Controllers to Actuators.
+You cannot directly link Sensors to Actuators; likewise,
+Actuators cannot be linked back to Sensors
+(however, special actuator and sensor types are available to provide these connections).</p>
+<p>Sending nodes (the black circles found on the right-hand side of Sensors and Controllers)
+can send to multiple Reception nodes
+(the white circles found on the left-hand side of Controllers and Actuators).
+Reception nodes can likewise receive multiple links.</p>
+<p>Links can be created between logic bricks belonging to different objects.</p>
+<p class="last">To delete a link between two nodes, <code class="kbd docutils literal"><span class="pre">LMB</span></code> drag between the two nodes.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sensor Area</dt>
+<dd><p class="first last">This column contains a list of all sensors owned by the active object (and any other selected objects).
+New sensors for the active object are created using the &#8220;Add Sensor&#8221; button.
+For a more in-depth look at the content, layout and available operations in this area,
+see <a class="reference internal" href="../game_engine/logic/sensors/introduction.html"><span class="doc">Sensors</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Controller Area</dt>
+<dd><p class="first last">This column contains a list of all controllers owned by the active object (and any other selected objects).
+New controllers for the active object are created using the &#8220;Add Controller&#8221; button,
+together with the creation of states for the active object.
+For a more in-depth look at the content, layout, and available operations in this area,
+see <a class="reference internal" href="../game_engine/logic/controllers/introduction.html"><span class="doc">Controllers</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Actuator Area</dt>
+<dd><p class="first last">This column contains a list of all actuators owned by the active object (and any other selected objects).
+New actuators for the active object are created using the &#8220;Add Actuator&#8221; button.
+For a more in-depth look at the content, layout, and available operations in this area,
+see <a class="reference internal" href="../game_engine/logic/actuators/introduction.html"><span class="doc">Actuators</span></a>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties/index.html" class="btn btn-neutral float-right" title="Properties Editor" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="node_editor/nodes/groups.html" class="btn btn-neutral" title="Node Groups" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

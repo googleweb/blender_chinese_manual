@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Motion Blur &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Blender 渲染 Engine" href="index.html"/>
+        <link rel="next" title="Anti-Aliasing" href="antialiasing.html"/>
+        <link rel="prev" title="渲染 Passes" href="passes.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passes.html">渲染 Passes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Motion Blur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sampled-motion-blur">Sampled Motion Blur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vector-blur">Vector Blur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">例子s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+    <li>Motion Blur</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/blender_render/motion_blur.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="motion-blur">
+<h1>Motion Blur<a class="headerlink" href="#motion-blur" title="Permalink to this headline">¶</a></h1>
+<p>Blender&#8217;s animations are by default rendered as a sequence of <em>perfectly still</em> images.
+While great for stop-motion and time-lapses, this is unrealistic, since fast-moving
+objects do appear to be blurred in the direction of motion,
+both in a movie frame and in a photograph from a real-world camera.</p>
+<p>Blender has two ways to achieve motion blur:</p>
+<div class="section" id="sampled-motion-blur">
+<h2>Sampled Motion Blur<a class="headerlink" href="#sampled-motion-blur" title="Permalink to this headline">¶</a></h2>
+<p>Blender can be made to render the current frame and some more &#8216;virtual&#8217; frames in between it and the next frame,
+then merge them all together to obtain an image where moving objects are &#8216;blurred&#8217;.</p>
+<p>This method is slow, but produces good results.
+It can be activated in the <em>Sampled Motion Blur</em> panel of the render settings.
+This kind of motion blur is done during the render.</p>
+<dl class="docutils">
+<dt>Motion Samples</dt>
+<dd>Set the number of samples to take for each frame.
+The higher the samples, the smoother the blur effect,
+but the longer the render, as each virtual intermediate frame has to be rendered.</dd>
+<dt>Shutter</dt>
+<dd>Time (in frames) the shutter is open.
+If you are rendering at 24 fps, and the Shutter is set to 0.5,
+the time in between frames is 41.67 ms, so the
+shutter is open for half that, 20.83 ms.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Samples are taken only from the <em>next</em> frame, not the previous one.
+Therefore the blurred object will appear to be slightly ahead of how it would look without motion blur.</p>
+</div>
+</div>
+<div class="section" id="vector-blur">
+<h2>Vector Blur<a class="headerlink" href="#vector-blur" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../compositing/types/filter/vector_blur.html"><span class="doc">Vector Blur</span></a>
+is faster but sometimes has unwanted side-effects which are sometimes difficult to avoid.</p>
+<p>Vector blur is a process done in compositing (post-render time), by rendering the
+scene without any blur, plus a pass that has movement information for each pixel.
+This information is a vector map which describes a 2D or 3D direction and magnitude.
+The compositor uses that data to blur each pixel in the given direction.</p>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>To better grasp the concept, let us assume that we have a cube 2 units wide,
+uniformly moving 1 unit to the right at each frame.
+The scale beneath the cube helps in appreciating the movement of 1 Blender unit.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/render-mblur02.jpg"><img alt="../../_images/render-mblur02.jpg" src="../../_images/render-mblur02.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Frame 1 of the moving cube without Motion Blur.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/render-mblur03.jpg"><img alt="../../_images/render-mblur03.jpg" src="../../_images/render-mblur03.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Frame 2 of the moving cube without Motion Blur.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/render-mblur04.jpg"><img alt="../../_images/render-mblur04.jpg" src="../../_images/render-mblur04.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Frame 1 when Sampled Motion Blur is enabled and eight &#8216;intermediate&#8217; frames are computed.
+Shutter is set to 0.5 - thus the image eight samples are rendered between frame 1 and halfway to frame 2.</span></p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/render-mblur05.jpg"><img alt="../../_images/render-mblur05.jpg" src="../../_images/render-mblur05.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">The effect of a increased shutter value.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/render-mblur06.jpg"><img alt="../../_images/render-mblur06.jpg" src="../../_images/render-mblur06.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Even further increased shutter value.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Values greater than 1 are physically impossible in a real-world camera, but can be used to exaggerate the effect.
+Better results than those shown can be obtained by using higher samples than 8,
+but, of course, since as many <em>separate</em> renders as samples are needed,
+a Motion Blur render takes that many times more time than a non-Motion Blur one.</p>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>Sampled Motion Blur can be used as an additional form of <a class="reference internal" href="antialiasing.html"><span class="doc">Anti-Aliasing</span></a>,
+since aliasing artifacts are computed differently for each sample and averaged together at the end.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="antialiasing.html" class="btn btn-neutral float-right" title="Anti-Aliasing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="passes.html" class="btn btn-neutral" title="渲染 Passes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

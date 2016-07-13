@@ -1,0 +1,25 @@
+.. _composite_nodes_filter-index:
+
+###############
+  Filter 节点
+###############
+
+Filters process the pixels of an image to highlight additional details or perform some sort of
+后期处理 effect on the image.
+
+.. toctree::
+   :maxdepth: 1
+
+   bilateral_blur.rst
+   blur_node.rst
+   bokeh_blur.rst
+   defocus.rst
+   despeckle.rst
+   dilate_erode.rst
+   directional_blur.rst
+   filter_node.rst
+   glare.rst
+   inpaint.rst
+   pixelate.rst
+   sun_beams.rst
+   vector_blur.rst

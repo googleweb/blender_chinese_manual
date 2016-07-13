@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>渲染ing 动画s &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Workflows" href="index.html"/>
+        <link rel="next" title="Command Line" href="command_line.html"/>
+        <link rel="prev" title="Workflows" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workflows</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">渲染ing 动画s</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frame-sequence-workflow">Frame Sequence Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="command_line.html">Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bake.html">渲染 Baking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiview/index.html">Multiview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Workflows</a> &raquo;</li>
+      
+    <li>渲染ing 动画s</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/workflows/animations.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rendering-animations">
+<h1>渲染ing 动画s<a class="headerlink" href="#rendering-animations" title="Permalink to this headline">¶</a></h1>
+<p>While rendering stills will allow you to view and save the image from the render buffer when
+it&#8217;s complete, animations are a series of images, or frames,
+and are automatically saved directly out to disk after being rendered.</p>
+<p>After rendering the frames, you may need to edit the clips,
+or first use the Compositor to do green-screen masking, matting, color correction, DOF,
+and so on to the images. That result is then fed to the Sequencer where the strips are cut and
+mixed and a final overlay is done.</p>
+<p>Finally you can render out from the Sequencer and compress the frames into a playable movie clip.</p>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>Generally, you do a lot of intermediate renders of different frames in your animation to check
+for timing, lighting, placement, materials, and so on. At some point,
+you are ready to make a final render of the complete animation for publication.</p>
+<p>There are two approaches you can use when making a movie, or animation, with or without sound.
+The approach you should use depends on the amount of CPU time you will need to render the movie.
+You can render a &#8220;typical&#8221; frame at the desired resolution,
+and then multiply by the number of frames that will ultimately go into the movie, to arrive at an total render time.</p>
+<p>If the total render time is an hour or more, you want to use the &#8220;Frame Sequence&#8221; approach.
+For example, if you are rendering a one-minute video clip for film, there will be
+(60 seconds per minute) X (24 frames per second) or 1440 frames per minute.
+If each frame takes 30 seconds to render,
+then you will be able to render two frames per minute, or need 720 minutes (12 hours)
+of render time.</p>
+<p>渲染ing takes all available CPU time; you should render overnight,
+when the computer is not needed, or set Blender to a low priority while rendering,
+and work on other things (be careful with the RAM space!).</p>
+<p class="rubric">Direct Approach</p>
+<p>The Direct Approach - highly <strong>not</strong> recommended and not a standard practice - is where
+you set your output format to an AVI or MOV format,
+and click ANIM to render your scene directly out to a movie file.
+Blender creates one file that holds all the frames of your animation. You can then use
+Blender&#8217;s VSE to add an audio track to the animation and render out to an MPEG format to
+complete your movie.</p>
+<p class="rubric">Frame Sequence</p>
+<p>The Frame Sequence is a much more stable approach,
+where you set your output format to a still format (such as JPG, PNG or MultiLayer),
+and click ANIM to render your scene out to a set of images,
+where each image is the frame in the sequence.</p>
+<p>Blender creates a file for each frame of the animation.
+You can then use Blender&#8217;s compositor to perform any frame manipulation (post processing).
+You can then use Blender&#8217;s VSE to load that final image sequence,
+add an audio track to the animation, and render out to an MPEG format to complete your movie.
+The Frame Sequence approach is a little more complicated and takes more disk space,
+but gives you more flexibility.</p>
+<p>Here are some guidelines to help you choose an approach.</p>
+<p>Direct Approach</p>
+<ul class="simple">
+<li>short segments with total render time &lt; 1 hour</li>
+<li>stable power supply</li>
+<li>computer not needed for other uses</li>
+</ul>
+<p>Frame Sequence Approach</p>
+<ul>
+<li><p class="first">total render time &gt; 1 hour</p>
+</li>
+<li><dl class="first docutils">
+<dt>post-production work needed</dt>
+<dd><ul class="first last simple">
+<li>Color/lighting adjustment</li>
+<li>Green screen/matte replacement</li>
+<li>Layering/compositing</li>
+<li>Multiple formats and sizes of ultimate product</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">intermediate frames/adjustments needed for compression/codec</p>
+</li>
+<li><p class="first">precise timing (e.g. lip-sync to audio track) needed in parts</p>
+</li>
+<li><p class="first">may need to interrupt rendering to use the computer, and want to be able to resume rendering where you left off.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="frame-sequence-workflow">
+<h2>Frame Sequence Workflow<a class="headerlink" href="#frame-sequence-workflow" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>First prepare your animation.</li>
+<li>In the <em>Dimensions</em> panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
+as well as the frame rate, which should already be set.</li>
+<li>In the Output panel set up your animation to be rendered out as images,
+generally using a format that does not compromise any quality.</li>
+<li>Choose the output path and file type in the Output panel as well, for example <code class="docutils literal"><span class="pre">//render/my-anim-</span></code>.</li>
+<li>Confirm the range of your animation frame Start and End.</li>
+<li>Save your blend-file.</li>
+<li>Press the big <em>动画</em> button.
+Do a long task [like sleeping, playing a video game, or cleaning your driveway]
+while you wait for your computer to finish rendering the frames.</li>
+<li>Once the animation is finished,
+use your OS file explorer to navigate into the output folder (&#8220;<code class="docutils literal"><span class="pre">render</span></code> in this example).
+You will see lots of images (.png or .exr, etc... depending on the format you chose to render)
+that have a sequence number attached to them ranging from 0000 to a max of 9999. These are your single frames.</li>
+<li>In Blender, now go into the <a class="reference internal" href="../../editors/sequencer/index.html"><span class="doc">video sequence editor</span></a>.</li>
+<li>Choose <em>Add 图像</em> from the add menu. Select all the frames from your output folder that you want to include
+in your animation (Press A to Select All easily). They will be added as a strip to the sequence editor.</li>
+<li>Now you can edit the strip and add effects or simply leave it like it is.
+You can add other strips, like an audio strip.</li>
+<li>Scrub through the animation, checking that you have included all the frames.</li>
+<li>In the Scene 渲染 buttons, in the Post Processing panel, activate <em>Sequencer</em>.</li>
+<li>In the Format panel, choose the container and codec you want (e.g.  <code class="docutils literal"><span class="pre">MPEG</span> <span class="pre">H.264</span></code>) and configure it.
+The video codecs are described on the previous page: <a class="reference internal" href="../output/output.html"><span class="doc">Output Options</span></a>.</li>
+<li>Click the <em>动画</em> render button and Blender will render out the sequence editor output into your movie.</li>
+</ol>
+<p>Why go through all this hassle? Well, first of all, if you render out single frames you can
+stop the render at any time by pressing <code class="kbd docutils literal"><span class="pre">Esc</span></code> in the render window or UV/image editor.
+You will not lose the frames you have already rendered,
+since they have been written out to individual files.
+You can always adjust the range you want to continue from where you left off.</p>
+<p>You can edit the frames afterwards and post-process them.
+You can add neat effects in the sequence editor.
+You can render the same sequence into different resolutions (640×480, 320×240, etc)
+and use different codecs (to get different file sizes and quality)
+with almost no effort whatsoever.</p>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Post Processing Panel</dt>
+<dd><dl class="first last docutils">
+<dt>Sequencer</dt>
+<dd>渲染s the output of the sequence editor, instead of the view from the 3D scene&#8217;s active camera.
+If the sequence contains scene strips, these will also be rendered as part of the pipeline.
+If Do Composite is also enabled, the Scene strip will be the output of the Compositor.</dd>
+<dt>合成</dt>
+<dd>渲染s the output from the compositing node setup, and then pumps all images through the Composite node map,
+displaying the image fed to the Composite Output node.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>You accidentally turned off you&#8217;re PC right in the middle of rendering my movie!</dt>
+<dd><p class="first">Unless your animation renders in a few minutes,
+it&#8217;s best to render the animation as separate image files.
+Instead of rendering directly to a compressed movie file, use a loss-less format (i.e. <code class="docutils literal"><span class="pre">PNG</span></code>).</p>
+<p>This allows you an easy recovery if there is a problem and you have to re-start the rendering,
+since the frames you have already rendered will still be in the output directory.</p>
+<p>Just disable the <em>Overwrite</em> option to start rendering where you left off.</p>
+<p class="last">You can then make a movie out of the separate frames with Blender&#8217;s sequence editor
+or using 3rd party encoding software.</p>
+</dd>
+<dt>动画 Preview</dt>
+<dd><p class="first">It can be useful to render a subset of the animated sequence,
+since only part of an animation may have an error.</p>
+<p class="last">Using an image format for output,
+you can use the <em>Frame Step</em> option to render every <em>N&#8217;th</em> frame.
+Then disable <em>Overwrite</em> and re-render with <em>Frame Step</em> set to 1.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="command_line.html" class="btn btn-neutral float-right" title="Command Line" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Workflows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

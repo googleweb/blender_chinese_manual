@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Speed Control &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="Effect Strips" href="index.html"/>
+        <link rel="next" title="Subtract Effect" href="subtract.html"/>
+        <link rel="prev" title="Multiply" href="multiply.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../usage.html">Editing and Manipulating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">Strips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display_modes.html">Sequence Display Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">视频序列编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Strips</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types</a> &raquo;</li>
+      
+          <li><a href="index.html">Effect Strips</a> &raquo;</li>
+      
+    <li>Speed Control</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/sequencer/strips/types/effects/speed_control.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="speed-control">
+<h1>Speed Control<a class="headerlink" href="#speed-control" title="Permalink to this headline">¶</a></h1>
+<p>Speed Control time-warps the strip, making it play faster or slower than it normally would.
+A <em>Global Speed</em> less than 1.0 makes the strip play slower; greater than 1.
+0 makes it play faster. Playing faster means that some frames are skipped,
+and the strip will run out of frames before the end frame.
+When the strip runs out of frames to display, it will just keep repeating the last one;
+action will appear to freeze. To avoid this,
+position the next strip under the original at a point where you want motion to continue.</p>
+<div class="section" id="creating-a-slow-motion-effect">
+<h2>Creating a Slow-Motion Effect<a class="headerlink" href="#creating-a-slow-motion-effect" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../../_images/editors_sequencer_strips_speed-control.jpg"><img alt="../../../../../_images/editors_sequencer_strips_speed-control.jpg" src="../../../../../_images/editors_sequencer_strips_speed-control.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">50% Slow motion using Speed Control.</span></p>
+</div>
+<p>Suppose you want to slow your strip down.
+You need to affect the speed of the video clip without affecting the overall frame rate.
+Select the clip and <span class="menuselection">Add ‣ Effect ‣ Speed Control</span> effect strip.
+Click to drop it and press <code class="kbd docutils literal"><span class="pre">N</span></code> to get the Properties.
+Uncheck the <em>Stretch to input strip length</em> option in the Effect Strip section.
+Set the Speed factor to be the factor by which you want to adjust the speed.
+To cut the displayed speed by 50%, enter 0.5 .
+Now, a 275-frame clip will play at half speed, and thus display only the first 137 frames.</p>
+<p>If you want the remaining frames to show in slo-mo after the first set is displayed,
+double the Length of the source strip
+(since effects strip bounds are controlled by their source strips).
+If you are using a speed factor other than 0.5 then use the formula</p>
+<p><code class="docutils literal"><span class="pre">new_length</span> <span class="pre">=</span> <span class="pre">real_length</span> <span class="pre">/</span> <span class="pre">speed_factor</span></code></p>
+<p>That is it, set your render to animate (in this example) all 550 frames.</p>
+</div>
+<div class="section" id="keyframing-the-speed-control">
+<h2>Keyframing the Speed Control<a class="headerlink" href="#keyframing-the-speed-control" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/speed-control-keyframe-frame-number.jpg" src="../../../../../_images/speed-control-keyframe-frame-number.jpg" />
+<p class="caption"><span class="caption-text">keyframing the Frame number.</span></p>
+</div>
+<p>To get even finer control over your clip timing, you can use curves!
+While it is possible to keyframe the Speed factor,
+usually you want to keyframe the Frame number directly.</p>
+<p>Uncheck <em>Stretch to input strip length</em> and uncheck <em>Use as speed</em>.
+You now have a Frame number field which you can keyframe.
+If you want the strip to animate <strong>at all</strong> you will have to insert some keyframes,
+otherwise it will look like a still. In most cases you will want to use the Graph editor view
+to set the curve interpolation to Linear since the default Bézier will rarely be what you
+want.</p>
+<p>If you do choose to keyframe the Speed factor instead, remember to click the Refresh Sequencer
+button in the header of the 视频序列编辑器&#8217;s strip view or your changes will not take
+effect.</p>
+</div>
+<div class="section" id="changing-video-frame-rates">
+<h2>Changing 视频 Frame Rates<a class="headerlink" href="#changing-video-frame-rates" title="Permalink to this headline">¶</a></h2>
+<p>You can use the speed control to change the frames per second (fps), or framerate, of a video.
+If you are rendering your video to a sequence set,
+you can effectively increase or decrease the number of individual image files created,
+by using a Global Speed value less than or greater than one, respectively. For example,
+if you captured a five-minute video at 30 fps and wanted to transfer that to film,
+which runs at 24 fps, you would enter a Global Speed of 30/24, or 1.25
+(and Enable Frame Blending to give that film blur feel).
+Instead of producing <code class="docutils literal"><span class="pre">5</span> <span class="pre">×</span> <span class="pre">60</span> <span class="pre">×</span> <span class="pre">30</span> <span class="pre">=</span> <span class="pre">9000</span></code> frames,
+Blender would produce <code class="docutils literal"><span class="pre">9000/</span> <span class="pre">1.25</span> <span class="pre">=</span> <span class="pre">7200</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">×</span> <span class="pre">60</span> <span class="pre">×</span> <span class="pre">24</span></code> frames.
+In this case, you set a <em>start</em> = 1 and <em>end</em> = 7200, set your Format output to <code class="docutils literal"><span class="pre">jpeg</span></code> 30fps,
+and image files <code class="docutils literal"><span class="pre">0001.jpg</span></code> through <code class="docutils literal"><span class="pre">7200.jpg</span></code> would be rendered out,
+but those images cover the entire 9000 frames. The image file <code class="docutils literal"><span class="pre">7200.jpg</span></code> is the same a frame 9000.
+When you read those images back into your film blend-file at 24 fps, the strip will last exactly 5 minutes.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="subtract.html" class="btn btn-neutral float-right" title="Subtract Effect" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="multiply.html" class="btn btn-neutral" title="Multiply" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

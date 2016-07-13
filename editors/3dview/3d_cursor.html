@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3D游标 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="3D视图" href="index.html"/>
+        <link rel="next" title="Timeline Editor" href="../timeline.html"/>
+        <link rel="prev" title="Layers" href="layers.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">3D视图</a> &raquo;</li>
+      
+    <li>3D游标</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/3dview/3d_cursor.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="d-cursor">
+<h1>3D游标<a class="headerlink" href="#d-cursor" title="Permalink to this headline">¶</a></h1>
+<p>The 3D游标 is simply a point in 3D space which can be used for a number of purposes</p>
+<div class="section" id="placement">
+<h2>Placement<a class="headerlink" href="#placement" title="Permalink to this headline">¶</a></h2>
+<p>There are a few methods to position the 3D cursor.</p>
+<div class="section" id="direct-placement-with-the-mouse">
+<h3>Direct Placement with the Mouse<a class="headerlink" href="#direct-placement-with-the-mouse" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/editors_3dview_transform-control_pivot-point_3d-cursor_two-view-positioning.jpg" src="../../_images/editors_3dview_transform-control_pivot-point_3d-cursor_two-view-positioning.jpg" />
+<p class="caption"><span class="caption-text">Positioning the 3D cursor with two orthogonal views.</span></p>
+</div>
+<p>Using <code class="kbd docutils literal"><span class="pre">LMB</span></code> in the 3D area will place the 3D cursor directly under your mouse pointer.</p>
+<p>For accuracy you should use two perpendicular orthogonal 3D视图s, i.e.
+any combination of top <code class="kbd docutils literal"><span class="pre">Numpad7</span></code>, front <code class="kbd docutils literal"><span class="pre">Numpad1</span></code> and side <code class="kbd docutils literal"><span class="pre">Numpad3</span></code>.
+That way you can control the positioning along two axes in one view and determine depth in the second view.</p>
+<p>To place the 3D游标 on the surface of geometry,
+enable <em>Cursor Depth</em> in the <a class="reference internal" href="../../preferences/interface.html"><span class="doc">用户首选项</span></a></p>
+</div>
+<div class="section" id="using-the-snap-menu">
+<h3>Using the Snap Menu<a class="headerlink" href="#using-the-snap-menu" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Snap</em> menu <span class="menuselection">Object/Mesh ‣ Snap</span>, <code class="kbd docutils literal"><span class="pre">Shift-S</span></code>
+will allow you to snap the cursor in the following ways:</p>
+<dl class="docutils">
+<dt>Cursor to Selected</dt>
+<dd>Snaps the cursor to the center of the current selection.</dd>
+<dt>Cursor to Center</dt>
+<dd>Snaps the cursor to the origin of the scene (location 0,0,0).</dd>
+<dt>Cursor to Grid</dt>
+<dd>Snaps the cursor to the nearest <em>visible</em> grid lines.</dd>
+<dt>Cursor to Active</dt>
+<dd>Snaps the cursor to the <em>active</em> (last selected) object, edge, face or vertex.</dd>
+</dl>
+<p>The <em>Cursor to Selected</em> option is also affected by the current <a class="reference internal" href="transform/transform_control/pivot_point/index.html#pivot-point"><span class="std std-ref">轴心点</span></a>. For example:</p>
+<blockquote>
+<div><ul class="simple">
+<li>With the <em>边界盒中心</em> 轴心点 active,
+the <em>Cursor to Selected</em> option will snap the 3D cursor to the
+center of the bounding box surrounding the objects&#8217; centers.</li>
+<li>When the <em>质心点</em> 轴心点 is selected,
+<em>Cursor to Selected</em> will snap the 3D cursor to the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Median">median</a> of the object centers.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="numeric-input">
+<h3>Numeric Input<a class="headerlink" href="#numeric-input" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<img alt="../../_images/editors_3dview_transform-control_pivot-point_3d-cursor_view-properties.jpg" src="../../_images/editors_3dview_transform-control_pivot-point_3d-cursor_view-properties.jpg" />
+<p class="caption"><span class="caption-text">The 3D游标 panel of the Properties shelf.</span></p>
+</div>
+<p>The 3D cursor can also be positioned by entering Numeric location values into the <em>3D cursor</em>
+panel of the <em>Properties</em> shelf <code class="kbd docutils literal"><span class="pre">N</span></code>.</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Todo.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../timeline.html" class="btn btn-neutral float-right" title="Timeline Editor" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers.html" class="btn btn-neutral" title="Layers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

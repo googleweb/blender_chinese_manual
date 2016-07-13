@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>F-Curves &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Graph Editor" href="index.html"/>
+        <link rel="next" title="F-Curve 修改器" href="fmodifiers.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Graph Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">F-Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fmodifiers.html">F-Curve 修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dope_sheet/index.html">Dope Sheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nla.html">NLA Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Graph Editor</a> &raquo;</li>
+      
+    <li>F-Curves</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/graph_editor/fcurves.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="f-curves">
+<h1>F-Curves<a class="headerlink" href="#f-curves" title="Permalink to this headline">¶</a></h1>
+<p>After animating some property in Blender using keyframes you can edit their corresponding curves.
+When something is &#8220;animated,&#8221; it changes over time. This curve in shown as something called an F-Curve.
+Basically what an F-Curve does is it a interpolates between two animated properties. In Blender,
+animating an object means changing one of its properties, such as an objects location, or its scale.</p>
+<p>As mentioned, Blender&#8217;s fundamental unit of time is the &#8220;frame&#8221;,
+which usually lasts just a fraction of a second, depending on the <em>frame rate</em> of the scene.
+As animation is composed of incremental changes spanning multiple frames,
+usually these properties are <strong>not</strong> manually modified <em>frame by frame</em>, because:</p>
+<ul class="simple">
+<li>it would take ages!</li>
+<li>it would be very difficult to get smooth variations of the property
+(unless you compute mathematical functions and type a precise value for each frame, which would be crazy).</li>
+</ul>
+<p>This is why nearly all direct animation is done using <em>interpolation</em>.</p>
+<p>The idea is simple: you define a few Key Frames, which are multiple frames apart.
+Between these keyframes, the properties&#8217; values are computed (interpolated)
+by Blender and filled in. Thus, the animators&#8217; workload is significantly reduced.</p>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../_images/animation-f-curves-concept.jpg"><img alt="../../_images/animation-f-curves-concept.jpg" src="../../_images/animation-f-curves-concept.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">例子 of interpolation.</span></p>
+</div>
+<p>For example, if you have:</p>
+<ul class="simple">
+<li>a control point of value 0 at frame 0,</li>
+<li>another one of value 10 at frame 25,</li>
+<li>and you use linear interpolation,</li>
+</ul>
+<p>then, at frame 5 we get a value of 2.</p>
+<p>The same goes for all intermediate frames: with just two points,
+you get a smooth growth from (0 to 10) along the 25 frames.
+Obviously, if you would like the frame 15 to have a value of 9,
+you would have to add another control point (or keyframe)...</p>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>F-curves have three additional properties, which control the interpolation between points,
+extension behavior, and the type of handles.</p>
+<div class="section" id="interpolation-mode">
+<h3>Interpolation Mode<a class="headerlink" href="#interpolation-mode" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Curve ‣ Interpolation Mode</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">T</span></code></div>
+</div>
+</div>
+<p>You have three choices:</p>
+<dl class="docutils">
+<dt>Constant</dt>
+<dd><p class="first">There is no interpolation at all. The curve holds the value of its last keyframe,
+giving a discrete (stairway) &#8220;curve&#8221;.
+Usually only used during the initial &#8220;blocking&#8221; stage in pose-to-pose animation workflows.</p>
+<div class="last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/fcurve-constant.jpg"><img alt="../../_images/fcurve-constant.jpg" src="../../_images/fcurve-constant.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Constant.</span></p>
+</div>
+</dd>
+<dt>Linear</dt>
+<dd><p class="first">This simple interpolation creates a straight segment between each neighbor keyframes, giving a broken line.
+It can be useful when using only two keyframes and the <em>Extrapolation</em> extend mode,
+to easily get an infinite straight line (i.e. a linear curve).</p>
+<div class="last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/fcurve-linear.jpg"><img alt="../../_images/fcurve-linear.jpg" src="../../_images/fcurve-linear.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Linear.</span></p>
+</div>
+</dd>
+<dt>Bézier</dt>
+<dd><p class="first">The more powerful and useful interpolation, and the default one.
+It gives nicely smoothed curves, i.e. smooth animations!</p>
+<div class="last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/fcurve-clean1.jpg"><img alt="../../_images/fcurve-clean1.jpg" src="../../_images/fcurve-clean1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bézier.</span></p>
+</div>
+</dd>
+</dl>
+<p>Remember that some FCurves can only take discrete values,
+in which case they are always shown as if constant interpolated, whatever option you chose.</p>
+</div>
+<div class="section" id="extrapolation">
+<h3>Extrapolation<a class="headerlink" href="#extrapolation" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Channel ‣ Extrapolation Mode</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-E</span></code></div>
+</div>
+</div>
+<p>Extrapolation defines the behavior of a curve before the first and after the last keyframes.</p>
+<p>There are two basic extrapolation modes:</p>
+<dl class="docutils">
+<dt>Constant</dt>
+<dd><p class="first">The default one, curves before their first keyframe and after their last one have a constant value
+(the one of these first and last keyframes).</p>
+<div class="last figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/fcurve-extrapolate1.jpg"><img alt="../../_images/fcurve-extrapolate1.jpg" src="../../_images/fcurve-extrapolate1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Constant extrapolation.</span></p>
+</div>
+</dd>
+<dt>Linear</dt>
+<dd><p class="first">Curves ends are straight lines (linear), as defined by their first two keyframes
+(respectively their last two keyframes).</p>
+<div class="last figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/fcurve-extrapolate2.jpg"><img alt="../../_images/fcurve-extrapolate2.jpg" src="../../_images/fcurve-extrapolate2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Linear extrapolation.</span></p>
+</div>
+</dd>
+</dl>
+<p>Additional extrapolation tools (e.g. the &#8220;Cycles&#8221; F-Modifier)
+are located in the <a class="reference internal" href="fmodifiers.html"><span class="doc">F-Curve 修改器</span></a></p>
+</div>
+<div class="section" id="handle-types">
+<h3>Handle Types<a class="headerlink" href="#handle-types" title="Permalink to this headline">¶</a></h3>
+<p>There is another curve option quite useful for Bézier-interpolated curves.
+You can set the type of handle to use for the curve points <code class="kbd docutils literal"><span class="pre">V</span></code></p>
+<dl class="docutils">
+<dt>Automatic</dt>
+<dd><p class="first">Keyframes are automatically interpolated</p>
+<div class="last figure" id="id7">
+<a class="reference internal image-reference" href="../../_images/fcurve-auto.jpg"><img alt="../../_images/fcurve-auto.jpg" src="../../_images/fcurve-auto.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Auto handles.</span></p>
+</div>
+</dd>
+<dt>Vector</dt>
+<dd><p class="first">Creates linear interpolation between keyframes.
+The linear segments remain if keyframe centers are moved. If handles are moved, the handle becomes Free.</p>
+<div class="last figure" id="id8">
+<a class="reference internal image-reference" href="../../_images/fcurve-vector.jpg"><img alt="../../_images/fcurve-vector.jpg" src="../../_images/fcurve-vector.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Vector handles.</span></p>
+</div>
+</dd>
+<dt>Aligned</dt>
+<dd><p class="first">Handle maintain rotation when moved, and curve tangent is maintained</p>
+<div class="last figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/fcurve-aligned.jpg"><img alt="../../_images/fcurve-aligned.jpg" src="../../_images/fcurve-aligned.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Aligned handles.</span></p>
+</div>
+</dd>
+<dt>Free</dt>
+<dd><p class="first">Breaks handles tangents</p>
+<div class="last figure" id="id10">
+<a class="reference internal image-reference" href="../../_images/fcurve-free.jpg"><img alt="../../_images/fcurve-free.jpg" src="../../_images/fcurve-free.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Free handles.</span></p>
+</div>
+</dd>
+<dt>Auto Clamped</dt>
+<dd><p class="first">Auto handles clamped to not overshoot</p>
+<div class="last figure" id="id11">
+<a class="reference internal image-reference" href="../../_images/fcurve-autoclamped.jpg"><img alt="../../_images/fcurve-autoclamped.jpg" src="../../_images/fcurve-autoclamped.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Auto clamped handles.</span></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="direction-of-time">
+<h2>Direction of time<a class="headerlink" href="#direction-of-time" title="Permalink to this headline">¶</a></h2>
+<p>Although F-curves are very similar to <a class="reference internal" href="../../modeling/curves/introduction.html#curves-bezier"><span class="std std-ref">Bézier Curves</span></a>,
+there are some important differences.</p>
+<p>For obvious reasons, a property represented by a Curve
+cannot have more than <strong>one</strong> value at a given time, hence:</p>
+<ul class="simple">
+<li>when you move a control point ahead of a control point that was previously ahead of the point that you are moving,
+the two control points switch their order in the edited curve, to avoid that the curve goes back in time</li>
+<li>for the above reason, it is impossible to have a closed F-Curve</li>
+</ul>
+<table border="1" class="docutils" id="id12">
+<caption><span class="caption-text">Two control points switching: the curve cannot go back in time!</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id13">
+<img alt="../../_images/animation-f-curves-moving-1.jpg" src="../../_images/animation-f-curves-moving-1.jpg" />
+<p class="caption"><span class="caption-text">Before moving the second keyframe.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id14">
+<img alt="../../_images/animation-f-curves-moving-2.jpg" src="../../_images/animation-f-curves-moving-2.jpg" />
+<p class="caption"><span class="caption-text">After moving the second keyframe.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="editing-tools">
+<h2>Editing Tools<a class="headerlink" href="#editing-tools" title="Permalink to this headline">¶</a></h2>
+<p>By default, when new channels are added, the <em>Graph Editor</em> sets them to <em>编辑模式</em>.
+Selected channels can be locked by pressing <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</p>
+<p>Many of the hotkeys are the same as the viewport ones, for example:</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">G</span></code> to grab</li>
+<li><code class="kbd docutils literal"><span class="pre">R</span></code> to rotate</li>
+<li><code class="kbd docutils literal"><span class="pre">S</span></code> to scale</li>
+<li><code class="kbd docutils literal"><span class="pre">B</span></code> for border select/deselect</li>
+</ul>
+<p>And of course you can lock the transformation along the X (time frame) or Y
+(value) axises by pressing <code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Y</span></code> during transformation.</p>
+<p>For precise control of the keyframe position and value,
+you can set values in the <em>Active Keyframe</em> of the Properties Region.</p>
+<div class="section" id="transform-snapping">
+<h3>变换 Snapping<a class="headerlink" href="#transform-snapping" title="Permalink to this headline">¶</a></h3>
+<p>When transforming keyframes with <code class="kbd docutils literal"><span class="pre">G</span></code>, <code class="kbd docutils literal"><span class="pre">R</span></code>, <code class="kbd docutils literal"><span class="pre">S</span></code>,
+the transformation can be snapped to increments.</p>
+<p>Snap 变换ation to 1.0 <code class="kbd docutils literal"><span class="pre">Ctrl</span></code></p>
+<p>Divide 变换ation by 10.0 <code class="kbd docutils literal"><span class="pre">Shift</span></code></p>
+<p>Keyframes can be snapped to different properties by using the <em>Snap Keys</em> tool.</p>
+<dl class="docutils">
+<dt>Snap Keys <code class="kbd docutils literal"><span class="pre">Shift-S</span></code></dt>
+<dd><dl class="first last docutils">
+<dt>Current Frame</dt>
+<dd>Snap the selected keyframes to the <em>Time Cursor</em>.</dd>
+<dt>Cursor Value</dt>
+<dd>Snap the selected keyframes to the <em>Cursor</em>.</dd>
+<dt>Nearest Frame</dt>
+<dd>Snap the selected keyframes to their nearest frame individually.</dd>
+<dt>Nearest Second</dt>
+<dd>Snap the selected keyframes to their nearest second individually, based on the <em>FPS</em> of the scene.</dd>
+<dt>Nearest Marker</dt>
+<dd>Snap the selected keyframes to their nearest marker individually.</dd>
+<dt>Flatten Handles</dt>
+<dd><p class="first">Flatten the <em>Bézier</em> handles for the selected keyframes.</p>
+<table border="1" class="last docutils" id="id15">
+<caption><span class="caption-text">Flatten Handles snapping example.</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id16">
+<a class="reference internal image-reference" href="../../_images/animation-f-curves-flatten-handles-1.jpg"><img alt="../../_images/animation-f-curves-flatten-handles-1.jpg" src="../../_images/animation-f-curves-flatten-handles-1.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before Flatten Handles.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id17">
+<a class="reference internal image-reference" href="../../_images/animation-f-curves-flatten-handles-2.jpg"><img alt="../../_images/animation-f-curves-flatten-handles-2.jpg" src="../../_images/animation-f-curves-flatten-handles-2.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After Flatten Handles.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="mirror">
+<h3>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h3>
+<p>Selected keyframes can be mirrored over different properties using the <em>Mirror Keys</em>
+tool.</p>
+<dl class="docutils">
+<dt>Mirror Keys <code class="kbd docutils literal"><span class="pre">Shift-M</span></code></dt>
+<dd><dl class="first last docutils">
+<dt>By Times Over Current Frame</dt>
+<dd>Mirror horizontally over the <em>Time Cursor</em>.</dd>
+<dt>By Values over Cursor Value</dt>
+<dd>Mirror vertically over the <em>Cursor</em>.</dd>
+<dt>By Times over Time 0</dt>
+<dd>Mirror horizontally over frame 0.</dd>
+<dt>By Values over Value 0</dt>
+<dd>Mirror vertically over value 0.</dd>
+<dt>By Times over First Selected Marker</dt>
+<dd>Mirror horizontally the over the first selected <em>Marker</em>.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="clean-keyframes">
+<h3>Clean Keyframes<a class="headerlink" href="#clean-keyframes" title="Permalink to this headline">¶</a></h3>
+<p><em>Clean Keyframes</em> resets the keyframe tangents to their auto-clamped shape,
+if they have been modified. <em>Clean Keyframes</em> <code class="kbd docutils literal"><span class="pre">O</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id18">
+<a class="reference internal image-reference" href="../../_images/fcurve-clean1.jpg"><img alt="../../_images/fcurve-clean1.jpg" src="../../_images/fcurve-clean1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve before cleaning.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id19">
+<a class="reference internal image-reference" href="../../_images/fcurve-clean2.jpg"><img alt="../../_images/fcurve-clean2.jpg" src="../../_images/fcurve-clean2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve after cleaning.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smoothing">
+<h3>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Key ‣ Smooth Keys</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-O</span></code></div>
+</div>
+</div>
+<p>There is also an option to smooth the selected curves , but beware: its algorithm seems to be
+to divide by two the distance between each keyframe and the average linear value of the curve,
+without any setting, which gives quite a strong smoothing! Note that the first and last keys
+seem to be never modified by this tool.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id20">
+<a class="reference internal image-reference" href="../../_images/fcurve-clean1.jpg"><img alt="../../_images/fcurve-clean1.jpg" src="../../_images/fcurve-clean1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve before smoothing.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id21">
+<a class="reference internal image-reference" href="../../_images/fcurve-smooth.jpg"><img alt="../../_images/fcurve-smooth.jpg" src="../../_images/fcurve-smooth.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve after smoothing.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sampling-and-baking-keyframes">
+<h3>Sampling and Baking Keyframes<a class="headerlink" href="#sampling-and-baking-keyframes" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Sample Keyframes <code class="kbd docutils literal"><span class="pre">Shift-O</span></code></dt>
+<dd><p class="first">Sampling a set a keyframes replaces interpolated values with a new keyframe for each frame.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id22">
+<a class="reference internal image-reference" href="../../_images/fcurve-sample.jpg"><img alt="../../_images/fcurve-sample.jpg" src="../../_images/fcurve-sample.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve before sampling.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id23">
+<a class="reference internal image-reference" href="../../_images/fcurve-sample2.jpg"><img alt="../../_images/fcurve-sample2.jpg" src="../../_images/fcurve-sample2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">FCurve after sampling.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Bake Curves <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></dt>
+<dd>Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fmodifiers.html" class="btn btn-neutral float-right" title="F-Curve 修改器" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

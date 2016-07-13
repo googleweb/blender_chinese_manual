@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vertex Groups &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Vertex Groups" href="index.html"/>
+        <link rel="next" title="Weight Editing" href="weight_edit.html"/>
+        <link rel="prev" title="Vertex Groups" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_structures.html">Mesh Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">Editing</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Vertex Groups</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Vertex Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weight_edit.html">Weight Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="index.html">Vertex Groups</a> &raquo;</li>
+      
+    <li>Vertex Groups</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/meshes/vertex_groups/vertex_groups.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vertex-groups">
+<h1>Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/modeling_meshes_vgroups_01.jpg" src="../../../_images/modeling_meshes_vgroups_01.jpg" />
+<p class="caption"><span class="caption-text">The Vertex Group Panel.</span></p>
+</div>
+<p>Vertex Groups are mainly used to tag the vertices belonging
+to parts of a Mesh Object or <a class="reference internal" href="../../../glossary/index.html#term-lattice"><span class="xref std std-term">Lattice</span></a>. Think of the legs of a chair or
+the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character.
+In addition you can assign different <em>weight values</em>
+(in the range [ 0.0, 1.0 ] ) to the vertices within a Vertex Group.
+Hence Vertex Groups are sometimes also named <em>Weight Groups</em>.</p>
+<p>Vertex Groups are most commonly used for Armatures
+(See also <a class="reference internal" href="../../../rigging/skinning/obdata.html"><span class="doc">Skinning Mesh Objects</span></a>).
+But they are also used in many other areas of Blender, like for example:</p>
+<ul class="simple">
+<li>Shape keys</li>
+<li>修改器</li>
+<li>Particle Generators</li>
+<li>物理 Simulations</li>
+</ul>
+<p>Many more usage scenarios are possible.
+Actually you can use Vertex Groups for whatever makes sense to you.
+In some contexts Vertex Groups can also be automatically generated
+(i.e. for rigged objects). However, in this section we will focus
+on manually created (user-defined) Vertex Groups.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Vertex groups only apply to Mesh and Lattice Objects</p>
+<p class="last">Any other Object type has no vertices, hence it cannot have Vertex Groups.</p>
+</div>
+<div class="section" id="typical-usage-scenarios-for-vertex-groups">
+<h2>Typical usage scenarios for Vertex groups<a class="headerlink" href="#typical-usage-scenarios-for-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Skinning an armature</dt>
+<dd>If you want to animate your mesh and make it move, you will
+define an armature which consists of a bunch of bones.
+Vertex Groups are used to associate parts of the Mesh
+to Bones of the Armature, where you can specify an influence
+<em>weight</em> in the range (0.0 - 1.0) for each vertex
+in the Vertex Group.</dd>
+<dt>Working with 修改器</dt>
+<dd>Many modifiers contain the ability to control the modifier
+influence on each vertex separately.
+This is also done via Vertex Groups and the weight values
+associated to the vertices.</dd>
+<dt>Quickly select/edit/hide parts of a mesh</dt>
+<dd>By defining mesh regions with Vertex Groups you can easily
+select entire parts of your mesh with three clicks and work
+on them in isolation without having to create separate objects.
+With the hide function you can even remove a vertex
+group from the view (for later unhide).</dd>
+<dt>Cull out and duplicate parts of a mesh</dt>
+<dd>Consider modeling a Lego block. The most simple brick consists
+of a base and a stud (the bump to connect the bricks together).
+To create a four-stud block, you would want to be able to
+easily select the stud vertices, and, still in
+<em>编辑模式</em>, duplicate them and position them
+where you want them.</dd>
+</dl>
+</div>
+<div class="section" id="creating-vertex-groups">
+<h2>Creating Vertex Groups<a class="headerlink" href="#creating-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-empty.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-empty.jpg" />
+<p class="caption"><span class="caption-text">Empty Vertex Group Panel.</span></p>
+</div>
+<p>Vertex Groups are maintained within the <em>Object Data</em> Properties Editor (1),
+and there in the <em>Vertex Groups</em> panel.
+As long as no Vertex groups are defined (the default for new Mesh Objects),
+the Panel is empty (2).</p>
+<p>You create a vertex group by <code class="kbd docutils literal"><span class="pre">LMB</span></code> <em>+</em> on the right Panel
+border (3). Initially the group is named <em>Group</em>
+(or <em>Group.nnn</em> when the name already exists) and gets displayed in the Panel (2)
+(see next image).</p>
+<div class="section" id="vertex-groups-panel-controls">
+<h3>Vertex Groups Panel Controls<a class="headerlink" href="#vertex-groups-panel-controls" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id3">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" />
+<p class="caption"><span class="caption-text">One Vertex Group.</span></p>
+</div>
+<p>Once a new Vertex Group has been added, the new Group appears in the
+vertex Groups panel. There you find three clickable elements:</p>
+<dl class="docutils">
+<dt>Group Name</dt>
+<dd>The Groupname can be changed by double clicking <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the name itself.
+Then you can edit the name as you like.</dd>
+<dt>Plus Icon</dt>
+<dd>When the little icon in the left lower corner can be clicked, a new
+row opens up where you can enter a search term. This becomes handy when
+the number of vertex groups gets big.</dd>
+<dt>Drag Handle</dt>
+<dd>If you have a large number of vertex groups and you want to see more
+then a few Groups, you can <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the small drag handle to tear
+the vertex groups list larger or smaller.</dd>
+<dt>Active Group</dt>
+<dd>When a Vertex Group is created,
+then it is also automatically marked as the <em>Active Group</em>.
+This is indicated by setting the background of the panel entry
+to a light blue color. If you have two or more groups in the list,
+then you can change the active group by <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the
+corresponding entry in the Vertex Group panel.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="deleting-vertex-groups">
+<h2>Deleting vertex Groups<a class="headerlink" href="#deleting-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-dg.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-dg.jpg" />
+<p class="caption"><span class="caption-text">Delete a Vertex Group.</span></p>
+</div>
+<p>You delete a Vertex Group by first making it the active group
+(select it in the panel) and then <code class="kbd docutils literal"><span class="pre">LMB</span></code>
+the <em>-</em> button at the right Panel border.</p>
+<p>Deleting a Vertex Group only deletes the vertex assignments to the Group.
+The vertices themselves are not deleted.</p>
+</div>
+<div class="section" id="locking-vertex-groups">
+<h2>Locking Vertex Groups<a class="headerlink" href="#locking-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id5">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-lg.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-lg.jpg" />
+<p class="caption"><span class="caption-text">Lock a Vertex Group.</span></p>
+</div>
+<p>Right after creation of a Vertex Group,
+an open lock icon shows up on the right side of the Vertex Group List entry.
+This icon indicates that the Vertex Group can be edited.
+You can add vertex assignments to the group or remove assignments from the group.
+And you can change it with the weight paint brushes, etc.</p>
+<p>When you click on the icon,
+it changes to a closed lock icon and all vertex group modifications get disabled.
+You can only rename or delete the group, and unlock it again.
+No other operations are allowed on locked Vertex Groups,
+thus all corresponding function buttons become disabled for locked Vertex Groups.</p>
+</div>
+<div class="section" id="working-with-content-of-vertex-groups">
+<h2>Working with Content of Vertex Groups<a class="headerlink" href="#working-with-content-of-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id6">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" />
+<p class="caption"><span class="caption-text">Vertex Group Panel in 编辑模式.</span></p>
+</div>
+<p>When you switch either to <em>编辑模式</em> or to <em>权重绘制模式</em> Vertex
+Selection Mode, then the Vertex Group panel expands and displays two more rows:</p>
+<p>The first row contains four buttons for maintaining the Assign- and
+Select- status of vertices of the active Vertex Group:</p>
+<dl class="docutils">
+<dt>Assign</dt>
+<dd>To assign the Selected vertices to the Group with the weight as defined in the &#8220;Weight:&#8221; input field (see below)</dd>
+<dt>Remove</dt>
+<dd>To Remove the selected vertices from the Group (and thus also delete their weight values)</dd>
+<dt>Select</dt>
+<dd>To Select all vertices contained in the Group</dd>
+<dt>Deselect</dt>
+<dd>To deselect all verts contained in the group</dd>
+</dl>
+<p>Below this row of buttons you see a numeric &#8220;Weight:&#8221; input field where you specify the weight
+value that gets assigned to the selected verts when you press the Assign Button.</p>
+<div class="section" id="assigning-verts-to-a-group">
+<h3>Assigning verts to a Group<a class="headerlink" href="#assigning-verts-to-a-group" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id7">
+<img alt="../../../_images/modeling-meshes-vertex-group-panel-assign.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-assign.jpg" />
+<p class="caption"><span class="caption-text">Assign weights to active group.</span></p>
+</div>
+<p>You add vertices to a group as follows:</p>
+<ul class="simple">
+<li>Select the group from the group list, thus make it the Active Group (1).</li>
+<li>From the 3D视图 select <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> all vertices that you want to add to the group.</li>
+<li>Set the weight value that shall be assigned to all selected verts (2).</li>
+<li><code class="kbd docutils literal"><span class="pre">LMB</span></code> the <em>Assign</em> button to assign the selected verts to the active group using the given weight (3).</li>
+</ul>
+<p>Note that weight Assignment is not available for locked Vertex Groups.
+The Assign button is grayed out in that case.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Assign is additive</p>
+<p>The <em>Assign</em> button only adds the currently
+selected vertices to the active group. Vertices already
+assigned to the group are not removed from the group.</p>
+<p class="last">Also keep in mind that a vertex can be assigned to multiple groups.</p>
+</div>
+</div>
+<div class="section" id="checking-assignments">
+<h3>Checking Assignments<a class="headerlink" href="#checking-assignments" title="Permalink to this headline">¶</a></h3>
+<p>To be sure the selected verts are in the desired Vertex Group,
+you can try press the deselect button.
+If the vertices remain selected then they&#8217;re not yet in the current Vertex Group.</p>
+<p>At this point you may assign then, but take care since all selected vertices
+will have their weight set to the value in the <em>Weight:</em> field.</p>
+</div>
+<div class="section" id="removing-assignments-from-a-group">
+<h3>Removing assignments from a Group<a class="headerlink" href="#removing-assignments-from-a-group" title="Permalink to this headline">¶</a></h3>
+<p>You remove vertices from a group as follows:</p>
+<ul class="simple">
+<li>Select the group from the group list (make it the active group).</li>
+<li>Select all vertices that you want to remove from the group.</li>
+<li>Press the <em>Remove</em> button.</li>
+</ul>
+<p>Note that Removing weight Assignments is not available for locked Vertex Groups.
+The Remove button is grayed out in that case.</p>
+</div>
+<div class="section" id="using-groups-for-selecting-deselecting">
+<h3>Using groups for Selecting/Deselecting<a class="headerlink" href="#using-groups-for-selecting-deselecting" title="Permalink to this headline">¶</a></h3>
+<p>You can quickly select all assigned vertices of a group:</p>
+<ul class="simple">
+<li>(optionally) press <code class="kbd docutils literal"><span class="pre">A</span></code> once or twice to unselect all vertices.</li>
+<li>Select the group from the group list (make it the active group).</li>
+<li>When you now <code class="kbd docutils literal"><span class="pre">LMB</span></code> click the <em>Select</em> button,
+then the vertices assigned to the active group will be selected and highlighted in the 3D视图.</li>
+<li>When you <code class="kbd docutils literal"><span class="pre">LMB</span></code> click the <em>Deselect</em> button instead,
+then the vertices assigned to the active group will be deselected in the 3D视图.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Selecting/Deselecting is additive</p>
+<p class="last">If you already have verts selected in the 3D视图,
+then selecting the verts of a group will add the verts
+but also keep the already-selected verts selected.
+Vice versa, deselecting the verts of a vertex group
+will only deselect the verts assigned to the group
+and keep all other verts selected.</p>
+</div>
+</div>
+<div class="section" id="finding-ungrouped-verts">
+<h3>Finding ungrouped verts<a class="headerlink" href="#finding-ungrouped-verts" title="Permalink to this headline">¶</a></h3>
+<p>You can find ungrouped vertices as follows:</p>
+<ul class="simple">
+<li>Press <code class="kbd docutils literal"><span class="pre">A</span></code> once or twice to unselect all vertices.</li>
+<li>In the footer of the 3D视图: <span class="menuselection">Navigate to Select ‣ Ungrouped verts</span></li>
+</ul>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h3>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id8">
+<img alt="../../../_images/modeling-meshes-vertex-group-pop-up.png" src="../../../_images/modeling-meshes-vertex-group-pop-up.png" />
+<p class="caption"><span class="caption-text">Vertex Groups pop-up menu.</span></p>
+</div>
+<p>In 编辑模式 you can press <code class="kbd docutils literal"><span class="pre">Ctrl-G</span></code> to a shortcut Menu for adding/removing verts to/from groups.
+The pop-up menu provides the following functions with obvious functionality:
+(also available via <span class="menuselection">Mesh ‣ Vertices ‣ Vertex Groups</span>)</p>
+<ul class="simple">
+<li>Assign to New Group</li>
+<li>Assign to Active Group</li>
+<li>Remove from Active Group</li>
+<li>Remove from All</li>
+</ul>
+</div>
+</div>
+<div class="section" id="vertex-group-management">
+<h2>Vertex Group Management<a class="headerlink" href="#vertex-group-management" title="Permalink to this headline">¶</a></h2>
+<div class="lead container">
+</div>
+<div class="figure align-right" id="id9">
+<img alt="../../../_images/modeling-meshes-vertex-group-list-popup.jpg" src="../../../_images/modeling-meshes-vertex-group-list-popup.jpg" />
+<p class="caption"><span class="caption-text">Vertex groups panel&#8217;s pop-up menu.</span></p>
+</div>
+<p>Vertex Groups provide a more complex set of functions
+inside a pop-up menu. This menu is accessible
+from the Vertex Group Panel by clicking on the
+dark gray <em>arrow down</em> icon on the right panel border.</p>
+<p>The following functions of the pop-up menu operate on the assigned vertices:</p>
+<dl class="docutils">
+<dt>Sort Vertex Groups:</dt>
+<dd>Sorts Vertex Groups Alphabetically</dd>
+<dt>Copy Vertex Group:</dt>
+<dd>Add a Copy of the active Vertex Group as a new Group.
+The new group will be named like the original group with &#8220;_copy&#8221; appended at the end of its name.
+And it will contain associations to exactly the same verts
+with the exact same weights as in the source vertex group.</dd>
+<dt>Copy Vertex Groups to Linked:</dt>
+<dd>Copy Vertex Groups of this Mesh to all linked Objects which use the same mesh data (all users of the data).</dd>
+<dt>Copy Vertex Group to Selected:</dt>
+<dd>Copy all Vertex Groups to other Selected Objects provided they have matching indices
+(typically this is true for copies of the mesh which are only deformed and not otherwise edited).</dd>
+<dt>Mirror Vertex Group:</dt>
+<dd>Mirror all Vertex Groups, flip weights and/or names, editing only selected vertices,
+flipping when both sides are selected; otherwise copy from unselected.
+Note this function will be reworked (and fully documented) in a future release.</dd>
+<dt>Remove from All Groups:</dt>
+<dd>(not available for locked groups) Unassigns the selected Vertices from all groups.
+After this operation has been performed, the verts will no longer be contained in any vertex group.</dd>
+<dt>Clear Active group (not available for locked groups):</dt>
+<dd>Remove all assigned vertices from the active Group. The group is made empty.
+Note that the vertices may still be assigned to other Vertex Groups of the Object.</dd>
+<dt>Delete All Groups:</dt>
+<dd>Remove all Vertex Groups from the Object.</dd>
+</dl>
+<p>The following functions operate only on the lock state settings:</p>
+<dl class="docutils">
+<dt>Lock All</dt>
+<dd>Lock all groups</dd>
+<dt>Unlock All</dt>
+<dd>Unlock all groups</dd>
+<dt>Lock_Invert All</dt>
+<dd>Invert Group Locks</dd>
+</dl>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Multiple objects sharing the same mesh data have the
+peculiar property that the group names are stored on the object,
+but the weights in the mesh. This allows you to name groups
+differently on each object, but take care because removing a
+vertex group will remove the group from all objects sharing this mesh.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="weight_edit.html" class="btn btn-neutral float-right" title="Weight Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Vertex Groups" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

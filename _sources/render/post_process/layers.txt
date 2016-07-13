@@ -1,0 +1,80 @@
+
+*************
+渲染 Layers
+*************
+
+.. admonition:: 参考
+   :class: refbox
+
+   | Editor:    Properties
+
+
+渲染 layers allow you to render your scene in separate layers,
+usually with the intension of compositing them back together afterwards.
+
+This can be useful for several purposes, such as color correcting certain elements differently,
+blurring the foreground as a fast manual method of creating DoF,
+or reducing the render quality for unimportant objects.
+
+Using 渲染 Layers can also save you from having to re-render your entire image each time you change something,
+allowing you to instead re-render only the layer(s) that you need.
+
+
+Layer List
+==========
+
+This is a list of all the 渲染 Layers in the current scene.
+
+Only layers which are enabled (checkbox on right is ticked) will be rendered.
+If the *Pin* icon at the bottom right of the list is enabled, only the active (highlighted) layer will be rendered.
+
+渲染 Layers can be added and removed using the ``+`` and ``-`` buttons on the right,
+and existing layers can be renamed by double clicking on their name.
+
+
+Layer Panel
+===========
+
+The Layer Panel shows the settings of the active 渲染 Layer from the list above.
+
+You can select multiple layers using :kbd:`Shift-LMB`.
+
+Scene
+   The Scene Layers, showing which are currently visible and will be rendered.
+Layer
+   The Scene Layers which are associated with the active 渲染 Layer.
+   Objects in those Scene Layers will be rendered in that 渲染 Layer.
+   When an object is in the Scene Layers but not the 渲染 Layer,
+   it will still cast shadows and be visible in reflections, so it is still indirectly visible.
+Mask Layer
+   Objects on these will mask out other objects appearing behind them.
+Material Override
+   Overrides all material settings to use the Material chosen here.
+
+   例子s of where this might be used:
+
+   - To check lighting by using a plain diffuse material on all objects
+   - 渲染 a wireframe of the scene
+   - Create a custom render pass such as an anti-aliased matte or global coordinates.
+
+.. seealso::
+
+   Additional options shown in this panel are different for each render engine. See these options for:
+
+   - :doc:`Blender 渲染 </render/blender_render/layers>`
+   - :doc:`Cycles </render/cycles/settings/passes>`
+
+
+Using 渲染 Layers
+===================
+
+Each 渲染 Layer has an associated set of :doc:`Scene Layers </editors/3dview/layers>`.
+Objects which are on one of the associated Scene Layers are shown in that 渲染 Layer,
+as long as that Scene Layer is also visible.
+
+
+.. warning::
+
+   Only the objects in visible Scene Layers will be rendered.
+   So, if only Scene Layer 1 is visible and your 渲染 Layer set specifies to render only Layers 2 and 3,
+   nothing will be rendered.

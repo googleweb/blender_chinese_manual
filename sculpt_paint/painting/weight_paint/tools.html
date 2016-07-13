@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Weight Tools &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+    <li>Weight Tools</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/sculpt_paint/painting/weight_paint/tools.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="weight-tools">
+<h1>Weight Tools<a class="headerlink" href="#weight-tools" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id9">
+<img alt="../../../_images/painting_weight_weight-tools.png" src="../../../_images/painting_weight_weight-tools.png" />
+<p class="caption"><span class="caption-text">Weight Paint Tools.</span></p>
+</div>
+<p>Blender provides a set of helper tools for Weight Painting.
+The tools are accessible from the Tool Shelf in 权重绘制模式.
+And they are located in the weight tools panel.</p>
+<div class="section" id="the-subset-option">
+<h2>The Subset Option<a class="headerlink" href="#the-subset-option" title="Permalink to this headline">¶</a></h2>
+<p>Some of the tools also provide a Subset parameter (in the Operator panel,
+displayed after the tool is called) with following options:</p>
+<ul class="simple">
+<li>Active Group</li>
+<li>Selected Pose Bones</li>
+<li>Deform pose Bones</li>
+<li>All Groups</li>
+</ul>
+<p>All tools also work with Vertex Selection Masking and Face Selection masking.
+In these modes the tools operate only on selected verts or faces.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>About the Blend tool</p>
+<p class="last">The Blend tool only works when &#8220;Vertex selection masking for painting&#8221; is enabled.
+其他wise the tool button is grayed out.</p>
+</div>
+</div>
+<div class="section" id="normalize-all">
+<h2>Normalize All<a class="headerlink" href="#normalize-all" title="Permalink to this headline">¶</a></h2>
+<p>For each vertex,
+this tool makes sure that the sum of the weights across all Vertex Groups is equal to 1.
+This tool normalizes all of the vertex groups, except for locked groups,
+which keep their weight values untouched.</p>
+<div class="section" id="operator-parameters">
+<h3>Operator Parameters<a class="headerlink" href="#operator-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id10">
+<img alt="../../../_images/modeling-meshes-wp-tools-normalize-all.jpg" src="../../../_images/modeling-meshes-wp-tools-normalize-all.jpg" />
+<p class="caption"><span class="caption-text">Normalize All Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Lock Active</dt>
+<dd>Keep the values of the active group while normalizing all the others.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently this tool normalizes <strong>all</strong> vertex groups except the locked vertex groups.</p>
+</div>
+</div>
+</div>
+<div class="section" id="normalize">
+<h2>Normalize<a class="headerlink" href="#normalize" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id11">
+<img alt="../../../_images/modeling-meshes-wp-tools-normalize.jpg" src="../../../_images/modeling-meshes-wp-tools-normalize.jpg" />
+<p class="caption"><span class="caption-text">Normalize All Options.</span></p>
+</div>
+<p>This tool only works on the active Vertex Group.
+All vertices keep their relative weights,
+but the entire set of weights is scaled up such that the highest weight value is 1.0</p>
+</div>
+<div class="section" id="mirror">
+<h2>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id12">
+<img alt="../../../_images/modeling-meshes-wp-tools-mirror.jpg" src="../../../_images/modeling-meshes-wp-tools-mirror.jpg" />
+<p class="caption"><span class="caption-text">Normalize All Options.</span></p>
+</div>
+<p>This tool mirrors the weights from one side of the mesh to the opposite side
+(only mirroring along x-axis is supported). But note,
+the weights are not transferred to the corresponding opposite bone weight group.
+The mirror only takes place within the selected Vertex Group.</p>
+<div class="section" id="id1">
+<h3>Operator Parameters<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id13">
+<img alt="../../../_images/modeling-meshes-wp-tools-mirror-options.jpg" src="../../../_images/modeling-meshes-wp-tools-mirror-options.jpg" />
+<p class="caption"><span class="caption-text">Mirror Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Mirror Weights</dt>
+<dd>Mirrors the weights of the active group to the other side. Note, this only affects the active weight group.</dd>
+<dt>Flip Group Names</dt>
+<dd>Exchange the names of left and right side. This option only renames the groups.</dd>
+<dt>All Groups</dt>
+<dd>Operate on all selected bones.</dd>
+<dt>Topology Mirror</dt>
+<dd>Mirror for meshes which are not 100% symmetric (approximate mirror).</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Mirror to opposite bone</p>
+<p>If you want to create a mirrored weight group for the opposite bone (of a symmetric character),
+then you can do this:</p>
+<ul class="last simple">
+<li>Delete the target Vertex Group (where the mirrored weights will be placed)</li>
+<li>Create a copy of the source bone Vertex Group (the group containing the weights which you want to copy)</li>
+<li>Rename the new Vertex Group to the name of the target Vertex Group (the group you deleted above)</li>
+<li>Select the Target Vertex Group and call the Mirror tool
+(use only the Mirror weights option and optionally Topology Mirror if your mesh is not symmetric)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="invert">
+<h2>Invert<a class="headerlink" href="#invert" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id14">
+<img alt="../../../_images/modeling-meshes-wp-tools-invert.jpg" src="../../../_images/modeling-meshes-wp-tools-invert.jpg" />
+<p class="caption"><span class="caption-text">Invert.</span></p>
+</div>
+<p>Replaces each Weight of the selected weight group by × -1.0 weight.</p>
+<p>例子s:</p>
+<ul class="simple">
+<li>original 1.0 converts to 0.0</li>
+<li>original 0.5 remains 0.5</li>
+<li>original 0.0 converts to 1.0</li>
+</ul>
+<div class="section" id="id2">
+<h3>Operator Parameters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id15">
+<span id="fig-paint-weight-tools-mirror"></span><img alt="../../../_images/modeling-meshes-wp-tools-invert-operator.jpg" src="../../../_images/modeling-meshes-wp-tools-invert-operator.jpg" />
+<p class="caption"><span class="caption-text">Invert Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Subset</dt>
+<dd>Restrict the tool to a subset. See above <a class="reference internal" href="#the-subset-option">The Subset Option</a> about how subsets are defined.</dd>
+<dt>Add Weights</dt>
+<dd>Add verts that have no weight before inverting (these weights will all be set to 1.0)</dd>
+<dt>Remove Weights</dt>
+<dd>Remove verts from the Vertex Group if they are 0.0 after inverting.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Locked vertex Groups are not affected.</p>
+</div>
+</div>
+</div>
+<div class="section" id="clean">
+<h2>Clean<a class="headerlink" href="#clean" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id16">
+<img alt="../../../_images/modeling-meshes-wp-tools-clean.jpg" src="../../../_images/modeling-meshes-wp-tools-clean.jpg" />
+<p class="caption"><span class="caption-text">Invert.</span></p>
+</div>
+<p>Removes weights below a given threshold.
+This tool is useful for clearing your weight groups of very low (or zero-) weights.</p>
+<p>In the example shown, a cutoff value of 0.139 is used (see operator options below)
+so all blue parts (left side) are cleaned out (right side).</p>
+<p>Note, the images use the <em>Show Zero weights</em> =Active option so that unreferenced
+Weights are shown in Black.</p>
+<div class="section" id="id3">
+<h3>Operator Parameters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id17">
+<img alt="../../../_images/modeling-meshes-wp-tools-clean-operator.jpg" src="../../../_images/modeling-meshes-wp-tools-clean-operator.jpg" />
+<p class="caption"><span class="caption-text">Clean Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Subset</dt>
+<dd>Restrict the tool to a subset. See above <a class="reference internal" href="#the-subset-option">The Subset Option</a> for how subsets are defined.</dd>
+<dt>Limit</dt>
+<dd>This is the minimum weight value that will be kept in the Group.
+Weights below this value will be removed from the group.</dd>
+<dt>Keep Single</dt>
+<dd>Ensure that the Clean tool will not create completely unreferenced verts
+(verts which are not assigned to any Vertex Group),
+so each vertex will keep at least one weight, even if it is below the limit value!</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="levels">
+<h2>Levels<a class="headerlink" href="#levels" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id18">
+<img alt="../../../_images/modeling-meshes-wp-tools-levels.jpg" src="../../../_images/modeling-meshes-wp-tools-levels.jpg" />
+<p class="caption"><span class="caption-text">Invert.</span></p>
+</div>
+<p>Adds an offset and a scale to all weights of the selected Weight Groups.
+with this tool you can raise or lower the overall &#8220;heat&#8221; of the weight group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">No weight will ever be set to values above 1.0 or below 0.0 regardless of the settings.</p>
+</div>
+<div class="section" id="id4">
+<h3>Operator Parameters<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id19">
+<img alt="../../../_images/modeling-meshes-wp-tools-levels-operator.jpg" src="../../../_images/modeling-meshes-wp-tools-levels-operator.jpg" />
+<p class="caption"><span class="caption-text">Levels Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Subset</dt>
+<dd>Restrict the tool to a subset. See above <a class="reference internal" href="#the-subset-option">The Subset Option</a> for how subsets are defined.</dd>
+<dt>Offset</dt>
+<dd>A value from the range (-1.0 - 1.0) to be added to all weights in the Vertex Group.</dd>
+<dt>Gain</dt>
+<dd>All weights in the Subset are multiplied with the gain.
+The drag sliders of this value allow only a range of (-10.0 - 10.0).
+However, you can enter any factor you like here by typing from the keyboard.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Whichever Gain and Offset you choose,
+in all cases the final value of each weight will be clamped to the range (0.0 - 1.0).
+So you will never get negative weights or overheated areas (weight &gt; 1.0) with this tool.</p>
+</div>
+</div>
+</div>
+<div class="section" id="blend">
+<h2>Blend<a class="headerlink" href="#blend" title="Permalink to this headline">¶</a></h2>
+<p>Blends the weights of selected vertices with adjacent unselected vertices.
+This tool only works in vertex select mode.</p>
+<div class="figure" id="id20">
+<img alt="../../../_images/modeling-meshes-wp-tools-blend1.jpg" src="../../../_images/modeling-meshes-wp-tools-blend1.jpg" />
+<p class="caption"><span class="caption-text">Blending.</span></p>
+</div>
+<p>To understand what the tool really does, let us take a look at a simple example.
+The selected vertex is connected to four adjacent vertices
+(marked with a gray circle in the image). All adjacent vertices are unselected.
+Now the tool calculates the average weight of all connected <strong>and</strong> unselected verts.
+In the example this is:</p>
+<p><code class="docutils literal"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">0)</span> <span class="pre">/</span> <span class="pre">4</span> <span class="pre">=</span> <span class="pre">0.25</span></code></p>
+<p>This value is multiplied by the factor given in the Operator parameters (see below).</p>
+<ul class="simple">
+<li>If the factor is 0.0 then actually nothing happens at all and the vertex just keeps its value.</li>
+<li>If the factor is 1.0 then the calculated average weight is taken (0.25 here).</li>
+<li>Dragging the factor from 0 to 1 gradually changes from the old value to the calculated average.</li>
+</ul>
+<div class="figure" id="id21">
+<img alt="../../../_images/modeling-meshes-wp-tools-blend2.jpg" src="../../../_images/modeling-meshes-wp-tools-blend2.jpg" />
+<p class="caption"><span class="caption-text">Blending.</span></p>
+</div>
+<p>Now let us see what happens when we select all but one of the neighbors of the selected vert as
+well. Again all connected and unselected verts are marked with a gray circle.
+When we call the Blend tool now and set the Factor to 1.0,
+then we see different results for each of the selected verts:</p>
+<ul>
+<li><p class="first">The topmost and bottommost selected verts:</p>
+<p>are surrounded by three unselected verts, with an average weight of <code class="docutils literal"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">0)</span> <span class="pre">/</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">0.333</span></code>
+So their color has changed to light green.</p>
+</li>
+<li><p class="first">The middle vertex:</p>
+<p>is connected to one unselected vert with <code class="docutils literal"><span class="pre">weight</span> <span class="pre">=</span> <span class="pre">1</span></code>.
+So the average weight is 1.0 in this case, thus the selected vert color has changed to red.</p>
+</li>
+<li><p class="first">The right vert:</p>
+<p>is surrounded by three unselected verts with average weight = <code class="docutils literal"><span class="pre">(0</span> <span class="pre">+</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">0)</span> <span class="pre">/</span> <span class="pre">3</span> <span class="pre">=</span> <span class="pre">0.0</span></code>
+So the average weight is 0, thus the selected vert color has not changed at all
+(it was already blue before blend was applied).</p>
+</li>
+</ul>
+<div class="figure" id="id22">
+<img alt="../../../_images/modeling-meshes-wp-tools-blend3.jpg" src="../../../_images/modeling-meshes-wp-tools-blend3.jpg" />
+<p class="caption"><span class="caption-text">Blending.</span></p>
+</div>
+<p>Finally let us look at a practical example (and explain why this tool is named Blend).
+In this example, the middle edge loop has been selected
+and it will be used for blending the left side to the right side of the area.</p>
+<ul class="simple">
+<li>All selected vertices have two unselected adjacent verts.</li>
+<li>The average weight of the unselected verts is (1 + 0) / 2 = 0.5</li>
+<li>Thus when the Blend Factor is set to 1.0 then the edge loop turns to
+green and finally does blend the cold side (right) to the hot side (left).</li>
+</ul>
+<div class="section" id="id5">
+<h3>Operator Parameters<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id23">
+<img alt="../../../_images/modeling-meshes-wp-tools-blend-operator.jpg" src="../../../_images/modeling-meshes-wp-tools-blend-operator.jpg" />
+<p class="caption"><span class="caption-text">Blend Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Factor</dt>
+<dd>The effective amount of blending (range [0.0 - 1.0]).
+When Factor is set to 0.0 then the Blend tool does not do anything.
+For Factor &gt; 0 the weights of the affected vertices gradually shift from their original value
+towards the average weight of all connected <strong>and</strong> unselected verts (see examples above).</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="transfer-weights">
+<h2>Transfer Weights<a class="headerlink" href="#transfer-weights" title="Permalink to this headline">¶</a></h2>
+<p>Copy weights from other objects to the vertex groups of the active Object.
+By default this tool copies all vertex groups contained in the selected objects to the target
+object. However, you can change the tool&#8217;s behavior in the operator redo panel (see below).</p>
+<div class="section" id="prepare-the-copy">
+<h3>Prepare the Copy<a class="headerlink" href="#prepare-the-copy" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id24">
+<img alt="../../../_images/modeling-meshes-wp-tools-transfer-wrong.jpg" src="../../../_images/modeling-meshes-wp-tools-transfer-wrong.jpg" />
+<p class="caption"><span class="caption-text">Blending.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id25">
+<img alt="../../../_images/modeling-meshes-wp-tools-transfer-ok.jpg" src="../../../_images/modeling-meshes-wp-tools-transfer-ok.jpg" />
+<p class="caption"><span class="caption-text">Blending.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You first select all source objects, and finally the target object
+(the target object must be the active object).</p>
+<p>It is important that the source objects and the target object are at the same location.
+If they are placed side by side, then the weight transfer won&#8217;t work.
+You can place the objects on different layers,
+but you have to ensure that all objects are visible when you call the tool.</p>
+<p>Now ensure that the Target Object is in 权重绘制模式.</p>
+</div>
+<div class="section" id="call-the-tool">
+<h3>Call the Tool<a class="headerlink" href="#call-the-tool" title="Permalink to this headline">¶</a></h3>
+<p>Open the Tool Shelf and locate the Weight Tools panel.
+From there call the &#8220;Transfer weights&#8221; tool.
+The tool will initially copy all vertex groups from the source objects.
+However, the tool also has an operator redo panel
+(which appears at the bottom of the tool shelf).
+From the redo panel you can change the parameters to meet your needs.
+(The available Operator parameters are documented below.)</p>
+<div class="section" id="redo-panel-confusion">
+<h4>Redo Panel Confusion<a class="headerlink" href="#redo-panel-confusion" title="Permalink to this headline">¶</a></h4>
+<p>You may notice that the Operator Redo Panel (see below)
+stays available after the weight transfer is done.
+The panel only disappears when you call another Operator that has its own redo Panel. This can
+lead to confusion when you use Transfer weights repeatedly after you changed your vertex
+groups. If you then use the still-visible redo panel, then Blender will reset your work to its
+state right before you initially called the Transfer Weights tool.</p>
+</div>
+<div class="section" id="workaround">
+<h4>Workaround<a class="headerlink" href="#workaround" title="Permalink to this headline">¶</a></h4>
+<p>When you want to call the Transfer Weights tool again after you made some changes to your
+vertex groups, then always use the &#8220;Transfer Weights&#8221; Button,
+even if the operator panel is still available.
+Unless you really want to reset your changes to the initial call of the tool.</p>
+</div>
+<div class="section" id="id6">
+<h4>Operator Parameters<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This tool now uses the generic &#8216;data transfer&#8217; one. Please refer to the
+<a class="reference internal" href="../../../modeling/modifiers/modify/data_transfer.html"><span class="doc">Data Transfer</span></a> docs for options details and explanations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="limit-total">
+<h2>Limit Total<a class="headerlink" href="#limit-total" title="Permalink to this headline">¶</a></h2>
+<p>Reduce the number of weight groups per vertex to the specified Limit.
+The tool removes lowest weights first until the limit is reached.</p>
+<p>Hint: The tool can only work reasonably when more than one weight group is selected.</p>
+<div class="section" id="id7">
+<h3>Operator Parameters<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Subset</dt>
+<dd>Restrict the tool to a subset. See above <a class="reference internal" href="#the-subset-option">The Subset Option</a> for how subsets are defined.</dd>
+<dt>Limit</dt>
+<dd>Maximum number of weights allowed on each vertex.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="weight-gradient">
+<h2>Weight Gradient<a class="headerlink" href="#weight-gradient" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id26">
+<a class="reference internal image-reference" href="../../../_images/weightgradient.jpg"><img alt="../../../_images/weightgradient.jpg" src="../../../_images/weightgradient.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">例子 of the gradient tool being used with selected vertices.</span></p>
+</div>
+<p>This is an interactive tool for applying a linear/radial weight gradient;
+this is useful at times when painting gradual changes in weight becomes difficult.</p>
+<p>The gradient tool can be accessed from the Tool Shelf or as a key shortcut:</p>
+<ul class="simple">
+<li>Linear: <code class="kbd docutils literal"><span class="pre">Alt-LMB</span></code> and drag</li>
+<li>Radial: <code class="kbd docutils literal"><span class="pre">Alt-Ctrl-LMB</span></code> and drag</li>
+</ul>
+<p>The following weight paint options are used to control the gradient:</p>
+<ul class="simple">
+<li>Weight - The gradient starts at the current selected weight value, blending out to nothing.</li>
+<li>Strength - Lower values can be used so the gradient mixes in with the existing weights (just like with the brush).</li>
+<li>Curve - The brush falloff curve applies to the gradient too, so you can use this to adjust the blending.</li>
+</ul>
+<p>Blends the weights of selected vertices with unselected vertices.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">This tool only works in vertex select mode.</p>
+</div>
+<div class="section" id="id8">
+<h3>Operator Parameters<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Type:</p>
+<ul class="simple">
+<li>Linear</li>
+<li>Radial</li>
+</ul>
+<p>X Start:
+X End:
+Y Start:
+Y End:</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

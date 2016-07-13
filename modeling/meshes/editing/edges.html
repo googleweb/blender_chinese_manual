@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Edge Tools &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Face Tools" href="faces.html"/>
+        <link rel="prev" title="Vertex Tools" href="vertices.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/index.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="normals.html">Normals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertices.html">Vertex Tools</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Edge Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faces.html">Face Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deforming/index.html">Deforming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duplicating/index.html">Duplicating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdividing/index.html">Subdividing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cleanup.html">Mesh Clean-up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misc.html">Miscellaneous Editing Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Edge Tools</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/meshes/editing/edges.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="edge-tools">
+<h1>Edge Tools<a class="headerlink" href="#edge-tools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="make-edge-face">
+<h2>Make Edge/Face<a class="headerlink" href="#make-edge-face" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Make Edge/Face</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">F</span></code></div>
+</div>
+</div>
+<p>It will create an edge or some faces, depending on your selection.</p>
+<p>See also <a class="reference internal" href="basics/creating_faces_and_edges.html"><span class="doc">Creating Geometry</span></a>.</p>
+</div>
+<div class="section" id="set-edge-attributes">
+<h2>Set Edge Attributes<a class="headerlink" href="#set-edge-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Edges can have several different attributes that affect how certain other tools affect the mesh.</p>
+<div class="section" id="mark-seam-and-clear-seam">
+<h3>Mark Seam and Clear Seam<a class="headerlink" href="#mark-seam-and-clear-seam" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Mark Seam/Clear Seam</span> (or the same options in <em>Edge Specials</em> menu)</div>
+</div>
+</div>
+<p>Seams are a way to create separations, &#8220;islands&#8221;, in UV maps.
+See the <a class="reference internal" href="../../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UVTexturing section</span></a> for more details.
+These commands set or unset this flag for selected edges.</p>
+</div>
+<div class="section" id="mark-sharp-and-clear-sharp">
+<h3>Mark Sharp and Clear Sharp<a class="headerlink" href="#mark-sharp-and-clear-sharp" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Mark Seam/Clear Seam</span> (or the same options in <em>Edge Specials</em> menu)</div>
+</div>
+</div>
+<p>The <em>Sharp</em> flag is used by the <a class="reference internal" href="../../modifiers/generate/edge_split.html"><span class="doc">EdgeSplit modifier</span></a>,
+which is part of the smoothing technics.
+As seams, it is a property of edges, and these commands set or unset it for selected ones.</p>
+</div>
+<div class="section" id="adjust-bevel-weight">
+<h3>Adjust Bevel Weight<a class="headerlink" href="#adjust-bevel-weight" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Edge Bevel Weight</span></div>
+</div>
+</div>
+<p>This edge property, a value between (0.0 to 1.0),
+is used by the <a class="reference internal" href="../../modifiers/generate/bevel.html"><span class="doc">Bevel modifier</span></a> to control the bevel intensity of the edges.
+This command enters an interactive mode (a bit like transform tools),
+where by moving the mouse (or typing a value with the keyboard)
+you can set the (average) bevel weight of selected edges.</p>
+</div>
+<div class="section" id="crease-subsurf">
+<h3>Crease SubSurf<a class="headerlink" href="#crease-subsurf" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Crease SubSurf</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-E</span></code></div>
+</div>
+</div>
+<p>This edge property, a value between (0.0 to 1.0), is used by the
+<a class="reference internal" href="../../modifiers/generate/subsurf.html"><span class="doc">Subsurf modifier</span></a>
+to control the sharpness of the edges in the subdivided mesh.
+This command enters an interactive mode (a bit like transform tools),
+where by moving the mouse (or typing a value with the keyboard) you can set the (average)
+crease value of selected edges.
+To clear the crease edge property, enter a value of -1.</p>
+</div>
+</div>
+<div class="section" id="edge-slide">
+<span id="modeling-meshes-editing-edge-slide"></span><h2>Edge Slide<a class="headerlink" href="#edge-slide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Slide Edge</span> (or the same option in <em>Edge Specials</em> menu)</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">G</span></code>, <code class="kbd docutils literal"><span class="pre">G</span></code></div>
+</div>
+</div>
+<p>Slides one or more edges across adjacent faces with a few restrictions involving the selection
+of edges <em>(i.e. the selection must define a valid loop, see below.)</em></p>
+<dl class="docutils">
+<dt><code class="kbd docutils literal"><span class="pre">Shift</span></code></dt>
+<dd>Higher precision control.</dd>
+<dt><code class="kbd docutils literal"><span class="pre">Ctrl</span></code></dt>
+<dd>Snap to value (useful to combine with auto merge)</dd>
+<dt><code class="kbd docutils literal"><span class="pre">LMB</span></code></dt>
+<dd>confirms the tool</dd>
+<dt><code class="kbd docutils literal"><span class="pre">RMB</span></code> or <code class="kbd docutils literal"><span class="pre">Esc</span></code></dt>
+<dd>Cancels.</dd>
+<dt>Even <code class="kbd docutils literal"><span class="pre">E</span></code></dt>
+<dd>Forces the edge loop to match the shape of the adjacent edge loop.
+You can flip to the opposite vertex using <code class="kbd docutils literal"><span class="pre">F</span></code>. Use <code class="kbd docutils literal"><span class="pre">Alt-Wheel</span></code> to change the control edge.</dd>
+<dt>Flip <code class="kbd docutils literal"><span class="pre">F</span></code></dt>
+<dd>When Even mode is active, this flips between the two adjacent edge loops the active edge loop will match</dd>
+<dt><code class="kbd docutils literal"><span class="pre">Alt</span></code> or <code class="kbd docutils literal"><span class="pre">C</span></code></dt>
+<dd>Toggle clamping the slide within the edge extents.</dd>
+</dl>
+<p>This tool has a factor, which is displayed in the 3D视图 footer and in the <em>Tool Shelf</em>
+(after confirmation). A numerical value between (-1 to 1) can be entered for precision.</p>
+<p>In <em>Proportional</em> mode, <code class="kbd docutils literal"><span class="pre">Wheel</span></code>, or <code class="kbd docutils literal"><span class="pre">Left</span></code> and <code class="kbd docutils literal"><span class="pre">Right</span></code>
+changes the selected edge for calculating a proportion.
+Unlike <em>Percentage</em> mode, <em>Proportional</em></p>
+<p>Holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> or <code class="kbd docutils literal"><span class="pre">Shift</span></code> control the precision of the sliding.
+<code class="kbd docutils literal"><span class="pre">Ctrl</span></code> snaps movement to 10% steps per move and <code class="kbd docutils literal"><span class="pre">Shift</span></code> snaps movement
+to 1% steps. The default is 5% steps per move.</p>
+<div class="section" id="usage">
+<h3>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>By default, the position of vertices on the edge loop move as a percentage of the distance
+between their original position and the adjacent edge loop, regardless of the edges&#8217; lengths.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/edgeslide1.jpg"><img alt="../../../_images/edgeslide1.jpg" src="../../../_images/edgeslide1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selected Edge Loop.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/edgeslide2.jpg"><img alt="../../../_images/edgeslide2.jpg" src="../../../_images/edgeslide2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Repositioned Edge Loop.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="even-mode">
+<h4>Even mode<a class="headerlink" href="#even-mode" title="Permalink to this headline">¶</a></h4>
+<p><em>Even</em> mode keeps the shape of the selected edge loop the same as one of the edge loops adjacent to it,
+rather than sliding a percentage along each perpendicular edge.</p>
+<p>In <em>Even</em> mode, the tool shows the position along the length of the currently selected edge
+which is marked in yellow, from the vertex that as an enlarged red marker.
+Movement of the sliding edge loop is restricted to this length. As you move the mouse the
+length indicator in the header changes showing where along the length of the edge you are.</p>
+<p>To change the control edge that determines the position of the edge loop,
+use the <code class="kbd docutils literal"><span class="pre">Alt-Wheel</span></code> to scroll to a different edge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/edgeslide3.jpg"><img alt="../../../_images/edgeslide3.jpg" src="../../../_images/edgeslide3.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Even Mode Enabled.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/edgeslide4.jpg"><img alt="../../../_images/edgeslide4.jpg" src="../../../_images/edgeslide4.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Even Mode with Flip Enabled.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Moving the mouse moves the selected edge loop towards or away from the start vertex,
+but the loop line will only move as far as the length of the currently selected edge,
+conforming to the shape of one of the bounding edge loops.</p>
+</div>
+<div class="section" id="limitations-workarounds">
+<h4>Limitations &amp; Workarounds<a class="headerlink" href="#limitations-workarounds" title="Permalink to this headline">¶</a></h4>
+<p>There are restrictions on the type of edge selections that can be operated upon.
+Invalid selections are:</p>
+<dl class="docutils">
+<dt>Loop crosses itself</dt>
+<dd>This means that the tool could not find any suitable faces that were adjacent to the selected edge(s).
+Fig. Loop crosses is an example that shows this by selecting two edges that share the same face.
+A face cannot be adjacent to itself.</dd>
+<dt>Multiple edge loops</dt>
+<dd>The selected edges are not in the same edge loop, which means they do not have a common edge.
+You can minimize this error by always selecting edges end to end or in a &#8220;Chain&#8221;.
+If you select multiple edges just make sure they are connected.
+This will decrease the possibility of getting looping errors.</dd>
+<dt>Border Edge</dt>
+<dd>When a single edge was selected in a single sided object.
+An edge loop cannot be found because there is only one face.
+Remember, edge loops are loops that span two or more faces.</dd>
+</dl>
+<p>A general rule of thumb is that if multiple edges are selected they should be connected end to
+end such that they form a continuous chain. This is <em>literally</em> a general rule because you
+can still select edges in a chain that are invalid because some of the edges in the chain are
+in different edge loops.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rotate-edge">
+<span id="modeling-meshes-editing-edges-rotate"></span><h2>Rotate Edge<a class="headerlink" href="#rotate-edge" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Rotate Edge CW / Rotate Edge CCW</span></div>
+</div>
+</div>
+<p>Rotating an edge clockwise or counter-clockwise spins an edge between two faces around their
+vertices. This is very useful for restructuring a mesh&#8217;s topology.
+The tool can operate on one explicitly selected edge,
+or on two selected vertices or two selected faces that implicitly share an edge between them.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/edgeflip1.jpg"><img alt="../../../_images/edgeflip1.jpg" src="../../../_images/edgeflip1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selected Edge.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/edgeflip2.jpg"><img alt="../../../_images/edgeflip2.jpg" src="../../../_images/edgeflip2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edge, rotated CW.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="using-face-selection">
+<h3>Using Face Selection<a class="headerlink" href="#using-face-selection" title="Permalink to this headline">¶</a></h3>
+<p>To rotate an edge based on faces you must select two faces, Fig. Adjacent selected faces,
+otherwise Blender notifies you with an error message,
+<code class="docutils literal"><span class="pre">&quot;ERROR:</span> <span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">any</span> <span class="pre">select</span> <span class="pre">edges</span> <span class="pre">that</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">rotated&quot;</span></code>. Using either <em>Rotate Edge CW</em>
+or <em>Rotate Edge CCW</em> will produce exactly the same results as if you had
+selected the common edge shown in Fig. Selected edge rotated CW and CCW.</p>
+</div>
+</div>
+<div class="section" id="delete-edge-loop">
+<h2>Delete Edge Loop<a class="headerlink" href="#delete-edge-loop" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式 (Vertex or Edge select modes)</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Delete ‣ Edge Loop</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Delete</span></code>, <span class="menuselection">Edge Loop</span></div>
+</div>
+</div>
+<p><em>Delete Edge Loop</em> allows you to delete a selected edge loop if it is between two other edge loops.
+This will create one face-loop where two previously existed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <em>Edge Loop</em> option is very different to the <em>Edges</em> option,
+even if you use it on edges that look like an edge loop.
+Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh.
+By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well.
+This will leave holes in the mesh where the faces once were.</p>
+</div>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The selected edge loop on the UV Sphere has been deleted and the faces have been merged with
+the surrounding edges. If the edges had been deleted by choosing <em>Edges</em> from the
+(<em>Erase</em> <em>Menu</em>)
+there would be an empty band of deleted faces all the way around the sphere instead.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../_images/deleteedgeloop1.jpg"><img alt="../../../_images/deleteedgeloop1.jpg" src="../../../_images/deleteedgeloop1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selected Edge Loop.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/deleteedgeloop2.jpg"><img alt="../../../_images/deleteedgeloop2.jpg" src="../../../_images/deleteedgeloop2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edge Loop Deleted.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="collapse">
+<h2>Collapse<a class="headerlink" href="#collapse" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Delete ‣ Edge Collapse</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-M</span></code>, <span class="menuselection">Collapse</span></div>
+</div>
+</div>
+<p>This takes a selection of edges and for each edge, merges its two vertices together.
+This is useful for taking a ring of edges and collapsing it,
+removing the face loop it ran through.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/collapse1.jpg"><img alt="../../../_images/collapse1.jpg" src="../../../_images/collapse1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selected Edge Ring.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../../_images/collapse2.jpg"><img alt="../../../_images/collapse2.jpg" src="../../../_images/collapse2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Edge Ring Collapsed.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="edge-split">
+<h2>Edge Split<a class="headerlink" href="#edge-split" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Edge Split</span></div>
+</div>
+</div>
+<p><em>Edge split</em> is similar to the rip tool. When two or more touching interior edges,
+or a border edge is selected when using <em>Edge split</em>,
+a hole will be created, and the selected edges are duplicated to form the border of the hole</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../_images/edgesplit1.jpg"><img alt="../../../_images/edgesplit1.jpg" src="../../../_images/edgesplit1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selected Edges.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../_images/edgesplit2.jpg"><img alt="../../../_images/edgesplit2.jpg" src="../../../_images/edgesplit2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Adjacent face moved to reveal hole left by split.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bridge-edge-loops">
+<span id="modeling-meshes-editing-bridge-edge-loops"></span><h2>Bridge Edge Loops<a class="headerlink" href="#bridge-edge-loops" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Bridge Edge Loops</span></div>
+</div>
+</div>
+<p><em>Bridge Edge Loops</em> connects multiple edge loops with faces.</p>
+<p>Simple example showing two closed edge loops.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_simple_before.jpg"><img alt="../../../_images/mesh_bridge_simple_before.jpg" src="../../../_images/mesh_bridge_simple_before.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Input.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id14">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_simple_after.jpg"><img alt="../../../_images/mesh_bridge_simple_after.jpg" src="../../../_images/mesh_bridge_simple_after.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bridge Result.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例子 of bridge tool between edge loops with different numbers of vertices.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_uneven_before.jpg"><img alt="../../../_images/mesh_bridge_uneven_before.jpg" src="../../../_images/mesh_bridge_uneven_before.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Input.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id16">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_uneven_after.jpg"><img alt="../../../_images/mesh_bridge_uneven_after.jpg" src="../../../_images/mesh_bridge_uneven_after.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bridge Result.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例子 using the bridge tool to punch holes in face selections and connect them.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id17">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_faces_before.jpg"><img alt="../../../_images/mesh_bridge_faces_before.jpg" src="../../../_images/mesh_bridge_faces_before.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Input.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id18">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_faces_after.jpg"><img alt="../../../_images/mesh_bridge_faces_after.jpg" src="../../../_images/mesh_bridge_faces_after.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bridge Result.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例子 showing how bridge tool can detect multiple loops and loft them in one step.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id19">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_multi_before.jpg"><img alt="../../../_images/mesh_bridge_multi_before.jpg" src="../../../_images/mesh_bridge_multi_before.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Input.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id20">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_multi_after.jpg"><img alt="../../../_images/mesh_bridge_multi_after.jpg" src="../../../_images/mesh_bridge_multi_after.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bridge Result.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>例子 of the subdivision option and surface blending with UV&#8217;s.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id21">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_advanced_before.jpg"><img alt="../../../_images/mesh_bridge_advanced_before.jpg" src="../../../_images/mesh_bridge_advanced_before.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Input.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id22">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_advanced_after.jpg"><img alt="../../../_images/mesh_bridge_advanced_after.jpg" src="../../../_images/mesh_bridge_advanced_after.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Bridge Result.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faces.html" class="btn btn-neutral float-right" title="Face Tools" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertices.html" class="btn btn-neutral" title="Vertex Tools" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

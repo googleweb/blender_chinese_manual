@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Invert Node &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Color 节点" href="index.html"/>
+        <link rel="next" title="Mix Node" href="mix.html"/>
+        <link rel="prev" title="Hue Saturation Node" href="hue_saturation.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Types of 节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">Input 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Output 节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Color 节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="alpha_over.html">Alpha Over Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bright_contrast.html">Bright/Contrast Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_balance.html">Color Balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_correction.html">Color Correction Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gamma.html">Gamma Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hue_correct.html">Hue Correct Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hue_saturation.html">Hue Saturation Node</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Invert Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mix.html">Mix Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rgb_curves.html">RGB Curves Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tone_map.html">Tone Map Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="z_combine.html">Z-Combine Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../converter/index.html">Converter 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">Filter 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">Vector 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matte/index.html">Matte 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">Distort 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">Node Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">Layout 节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types of 节点</a> &raquo;</li>
+      
+          <li><a href="index.html">Color 节点</a> &raquo;</li>
+      
+    <li>Invert Node</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/compositing/types/color/invert.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="invert-node">
+<h1>Invert Node<a class="headerlink" href="#invert-node" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/compositing_nodes_invert.png"><img alt="../../../_images/compositing_nodes_invert.png" src="../../../_images/compositing_nodes_invert.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Invert Node.</span></p>
+</div>
+<p>This node inverts the colors in the input image, producing a negative.</p>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Fac</dt>
+<dd>Controls the amount of influence the node exerts on the output image.</dd>
+<dt>Color</dt>
+<dd>Standard image input.</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>In the compositing context this node has the following properties.</p>
+<dl class="docutils">
+<dt>RGB</dt>
+<dd>De/activation of the color channel inversion.</dd>
+<dt>Alpha</dt>
+<dd>De/activation of the alpha channel inversion.</dd>
+</dl>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Color</dt>
+<dd>Standard image output.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mix.html" class="btn btn-neutral float-right" title="Mix Node" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hue_saturation.html" class="btn btn-neutral" title="Hue Saturation Node" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

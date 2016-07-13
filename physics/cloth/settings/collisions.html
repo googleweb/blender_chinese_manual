@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Collisions &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="设置" href="index.html"/>
+        <link rel="next" title="例子s" href="../examples.html"/>
+        <link rel="prev" title="设置" href="cloth_settings.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">Collisions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cloth Simulations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">设置</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cloth_settings.html">设置</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Collisions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples.html">例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="../index.html">Cloth Simulations</a> &raquo;</li>
+      
+          <li><a href="index.html">设置</a> &raquo;</li>
+      
+    <li>Collisions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/physics/cloth/settings/collisions.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collisions">
+<h1>Collisions<a class="headerlink" href="#collisions" title="Permalink to this headline">¶</a></h1>
+<p>In most cases, a piece of cloth does not just hang there in 3D space,
+it collides with other objects in the environment. To ensure proper simulation,
+there are several items that have to be set up and working together:</p>
+<ul class="simple">
+<li>The <em>Cloth</em> object must be told to participate in collisions.</li>
+<li>Optionally (but recommended) tell the cloth to collide with itself.</li>
+<li>其他 objects must be visible to the <em>Cloth</em> object <em>via</em> shared layers.</li>
+<li>The other objects must be mesh objects.</li>
+<li>The other objects may move or be themselves deformed by other objects (like an armature or shape key).</li>
+<li>The other mesh objects must be told to deflect the cloth object.</li>
+<li>The blend-file must be saved in a directory so that simulation results can be saved.</li>
+<li>You then <em>Bake</em> the simulation. The simulator computes the shape of the cloth for a frame range.</li>
+<li>You can then edit the simulation results, or make adjustments to the cloth mesh, at specific frames.</li>
+<li>You can make adjustments to the environment or deforming objects,
+and then re-run the cloth simulation from the current frame forward.</li>
+</ul>
+<div class="section" id="collision-settings">
+<h2>Collision 设置<a class="headerlink" href="#collision-settings" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/physics_cloth_collisionpanel.png"><img alt="../../../_images/physics_cloth_collisionpanel.png" src="../../../_images/physics_cloth_collisionpanel.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Cloth Collisions panel.</span></p>
+</div>
+<p>Now you must tell the <em>Cloth</em> object that you want it to participate in collisions.
+For the cloth object, locate the <em>Cloth Collision</em> panel, shown to the right:</p>
+<dl class="docutils">
+<dt>Quality</dt>
+<dd>A general setting for how fine and good a simulation you wish.
+Higher numbers take more time but ensure less tears and penetrations through the cloth.</dd>
+<dt>Distance</dt>
+<dd>As another object gets this close to it (in Blender Units),
+the simulation will start to push the cloth out of the way.</dd>
+<dt>Repel</dt>
+<dd>Repulsion force to apply when cloth is close to colliding.</dd>
+<dt>Repel Distance</dt>
+<dd>Maximum distance to apply repulsion force. Must be greater than minimum distance.</dd>
+<dt>Friction</dt>
+<dd>A coefficient for how slippery the cloth is when it collides with the mesh object.
+For example, silk has a lower coefficient of friction than cotton.</dd>
+</dl>
+<div class="section" id="self-collisions">
+<h3>Self-collisions<a class="headerlink" href="#self-collisions" title="Permalink to this headline">¶</a></h3>
+<p>Real cloth cannot permeate itself, so you normally want the cloth to self-collide.</p>
+<dl class="docutils">
+<dt>Enable Self Collisions</dt>
+<dd>Click this to tell the cloth object that it should not penetrate itself. This adds to simulation compute time,
+but provides more realistic results. A flag, viewed from a distance does not need this enabled,
+but a close-up of a cape or blouse on a character should have this enabled.</dd>
+<dt>Quality</dt>
+<dd>For higher self-collision quality just increase the
+<em>Quality</em> and more self collision layers can be solved.
+Just keep in mind that you need to have at least the same
+<em>Collision Quality</em> value as the <em>Quality</em> value.</dd>
+<dt>Distance</dt>
+<dd>If you encounter problems, you could also change the <em>Min Distance</em> value for the self-collisions.
+The best value is 0.75; for fast things you better take 1.0. The value 0.5 is quite risky
+(most likely many penetrations) but also gives some speedup.</dd>
+</dl>
+<p>Regression blend-file:
+<a class="reference external" href="https://wiki.blender.org/index.php/Media:Cloth-regression-selfcollisions.blend">Cloth selfcollisions</a>.</p>
+</div>
+</div>
+<div class="section" id="shared-layers">
+<h2>Shared Layers<a class="headerlink" href="#shared-layers" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you have two objects: a pair of Pants on layers 2 and 3,
+and your Character mesh on layers 1 and 2.
+You have enabled the Pants as cloth as described above.
+You must now make the Character &#8220;visible&#8221; to the Cloth object,
+so that as your character bends its leg, it will push the cloth.
+This principle is the same for all simulations;
+simulations only interact with objects on a shared layer. In this example,
+both objects share layer 2.</p>
+<p>To view/change an object&#8217;s layers,
+<code class="kbd docutils literal"><span class="pre">RMB</span></code> click to select the object in <em>物体模式</em> in the 3D视图.
+<code class="kbd docutils literal"><span class="pre">M</span></code> to bring up the &#8220;Move Layers&#8221; pop-up,
+which shows you all the layers that the object is on. To put the object on a single layer,
+<code class="kbd docutils literal"><span class="pre">LMB</span></code> click the layer button. To put the object on multiple layers,
+<code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> the layer buttons. To remove an object from a selected layer,
+simply <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> the layer button again to toggle it.</p>
+</div>
+<div class="section" id="mesh-objects-collide">
+<h2>Mesh Objects Collide<a class="headerlink" href="#mesh-objects-collide" title="Permalink to this headline">¶</a></h2>
+<p>If your colliding object is not a mesh object, such as a NURBS surface, or text object,
+you must convert it to a mesh object. To do so, select the object in object mode,
+and in the 3D视图 header, select <span class="menuselection">Object ‣ Convert Object Type</span>
+<code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, and select <span class="menuselection">Mesh</span> from the pop-up menu.</p>
+<div class="section" id="cloth-object-collisions">
+<h3>Cloth - Object collisions<a class="headerlink" href="#cloth-object-collisions" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/panel-collision.png"><img alt="../../../_images/panel-collision.png" src="../../../_images/panel-collision.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Collision settings.</span></p>
+</div>
+<p>The cloth object needs to be deflected by some other object. To deflect a cloth,
+the object must be enabled as an object that collides with the cloth object.
+To enable Cloth - Object collisions, you have to enable deflections on the collision object
+(not on the cloth object).</p>
+<p>In the Properties editor, <em>Object</em> tab and
+<em>物理</em> tab, locate the <em>Collision</em> panel shown to the right. It
+is also important to note that this collision panel is used to tell all simulations that this
+object is to participate in colliding/deflecting other objects on a shared layer (particles,
+soft bodies, and cloth).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">There are three different <em>Collision</em> panels, all found in the <em>物理</em> tab.
+The first (by default), a tab beside the <em>Fields</em> panel, is the one needed here. The second panel,
+a tab in the <em>Soft Body</em> group, concern softbodies (and so has nothing to do with cloth).
+And we have already seen the last one, by default a tab beside the <em>Cloth</em> panel.</p>
+</div>
+</div>
+</div>
+<div class="section" id="mesh-object-modifier-stack">
+<h2>Mesh Object Modifier Stack<a class="headerlink" href="#mesh-object-modifier-stack" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/simulation-cloth-colliderstack.jpg"><img alt="../../../_images/simulation-cloth-colliderstack.jpg" src="../../../_images/simulation-cloth-colliderstack.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Collision stack.</span></p>
+</div>
+<p>The object&#8217;s shape deforms the cloth,
+so the cloth simulation must know the &#8220;true&#8221; shape of that mesh object at that frame.
+This true shape is the basis shape as modified by shape keys or armatures. Therefore,
+the <em>Collision</em> modifier must be <strong>after</strong> any of those.
+The image to the right shows the <em>修改器</em> panel for the Character mesh object
+(not the cloth object).</p>
+</div>
+<div class="section" id="cloth-cache">
+<h2>Cloth Cache<a class="headerlink" href="#cloth-cache" title="Permalink to this headline">¶</a></h2>
+<p>Cache settings for cloth are the same as with other dynamic systems.
+See <a class="reference internal" href="../../particles/cache_and_bake.html"><span class="doc">Particle Cache</span></a> for details.</p>
+<div class="section" id="bake-collision">
+<h3>Bake Collision<a class="headerlink" href="#bake-collision" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/simulation-cloth-collisionbake.jpg"><img alt="../../../_images/simulation-cloth-collisionbake.jpg" src="../../../_images/simulation-cloth-collisionbake.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After Baking.</span></p>
+</div>
+<p>After you have set up the deflection mesh for the frame range you intend to run the simulation
+(including animating that mesh <em>via</em> armatures),
+you can now tell the cloth simulation to compute (and avoid) collisions.
+Select the cloth object and in the <em>Object</em> tab,
+<em>物理</em> tab, set the <em>Start</em> and <em>End</em> settings for
+the simulation frames you wish to compute, and click the <em>Bake</em> button.</p>
+<p>You cannot change <em>Start</em> or <em>End</em> without clearing the bake simulation.
+When the simulation has finished, you will notice you have the option to free the bake,
+edit the bake and re-bake:</p>
+<p>There&#8217;s a few things you will probably notice right away. First,
+it will bake significantly slower than before,
+and it will probably clip through the box pretty badly as in the picture on the right.</p>
+</div>
+<div class="section" id="editing-the-cached-simulation">
+<h3>Editing the cached simulation<a class="headerlink" href="#editing-the-cached-simulation" title="Permalink to this headline">¶</a></h3>
+<p>The cache contains the shape of the mesh at each frame. You can edit the cached simulation,
+after you&#8217;ve baked the simulation and pressed the <em>Bake Editing</em> button.
+Just go to the frame you want to fix and <code class="kbd docutils literal"><span class="pre">Tab</span></code> into <em>编辑模式</em>.
+There you can move your vertices using all of Blender&#8217;s mesh shaping tools. When you exit,
+the shape of the mesh will be recorded for that frame of the animation.
+If you want Blender to resume the simulation using the new shape going forward,
+<code class="kbd docutils literal"><span class="pre">LMB</span></code> click <em>Rebake from next Frame</em> and play the animation.
+Blender will then pick up with that shape and resume the simulation.</p>
+<p>Edit the mesh to correct minor tears and places where the colliding object has punctured the
+cloth.</p>
+<p>If you add, delete, extrude, or remove vertices in the mesh, Blender will take the new mesh as
+the starting shape of the mesh back to the <em>first frame</em> of the animation,
+replacing the original shape you started with,
+up to the frame you were on when you edited the mesh. Therefore,
+if you change the content of a mesh, when you <code class="kbd docutils literal"><span class="pre">Tab</span></code> out of <em>编辑模式</em>,
+you should unprotect and clear the cache so that Blender will make a consistent simulation.</p>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>问题排查<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you encounter some problems with collision detection, there are two ways to fix them:</p>
+<ul class="simple">
+<li>The fastest solution is to increase the <em>Min Distance</em> setting under the <em>Cloth Collision</em> panel.
+This will be the fastest way to fix the clipping; however, it will be less accurate and won&#8217;t look as good.
+Using this method tends to make it look like the cloth is resting on air, and gives it a very rounded look.</li>
+<li>A second method is to increase the <em>Quality</em> (in the first <em>Cloth</em> panel).
+This results in smaller steps for the simulator and
+therefore to a higher probability that fast-moving collisions get caught.
+You can also increase the <em>Collision Quality</em> to perform more iterations to get collisions solved.</li>
+<li>If none of the methods help, you can easily edit the cached/baked result in <em>编辑模式</em> afterwards.</li>
+<li>My Cloth is torn by the deforming mesh - he &#8220;Hulks Out&#8221;: Increase its structural stiffness
+(<em>StructStiff</em> setting, <em>Cloth</em> panel), very high, like 1000.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><em>Subsurf</em> Modifier</p>
+<p class="last">A bake/cache is done for every subsurf level so please use <strong>the equal</strong> subsurf level for render and preview.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../examples.html" class="btn btn-neutral float-right" title="例子s" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cloth_settings.html" class="btn btn-neutral" title="设置" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Safe Areas &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../../index.html"/>
+        <link rel="up" title="相机" href="index.html"/>
+        <link rel="next" title="物体模式s" href="../../modes.html"/>
+        <link rel="prev" title="相机 Lens" href="lens.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">Navigating</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="../index.html">Objects Types</a> &raquo;</li>
+      
+          <li><a href="index.html">相机</a> &raquo;</li>
+      
+    <li>Safe Areas</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/object/types/camera/safe_areas.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="safe-areas">
+<h1>Safe Areas<a class="headerlink" href="#safe-areas" title="Permalink to this headline">¶</a></h1>
+<p>Safe areas are guides used to position elements to ensure that the most important
+parts of the content can be seen across all screens.</p>
+<p>Different screens have varying amounts of <a class="reference internal" href="../../../../../glossary/index.html#term-overscan"><span class="xref std std-term">overscan</span></a>.
+(specially older TV sets).
+That means that not all content will be visible to all viewers,
+since parts of the image surrounding the edges are not shown.
+To work around this problem TV producers defined two areas where content is guaranteed to be shown:
+action safe and title safe.</p>
+<p>Modern LCD/plasma screens with purely digital signals have no <a class="reference internal" href="../../../../../glossary/index.html#term-overscan"><span class="xref std std-term">overscan</span></a>,
+yet safe areas are still considered best practice and may be legally required for broadcast.</p>
+<p>In Blender, safe areas can be set from the 相机 and Sequencer views.</p>
+<div class="figure" id="id1">
+<img alt="../../../../../_images/camera_safe_areas_ui.png" src="../../../../../_images/camera_safe_areas_ui.png" />
+<p class="caption"><span class="caption-text">The Safe areas panel found in the camera properties,
+and the view mode of the sequencer.</span></p>
+</div>
+<div class="section" id="main-safe-areas">
+<h2>Main Safe Areas<a class="headerlink" href="#main-safe-areas" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/camera_safe_areas.png" src="../../../../../_images/camera_safe_areas.png" />
+<p class="caption"><span class="caption-text">Red line: Action safe. Green line: Title safe.</span></p>
+</div>
+<dl class="docutils">
+<dt>Title Safe</dt>
+<dd>Also known as <em>Graphics Safe</em>.
+Place all important information (graphics or text) inside this area to
+ensure it can be seen by the majority of viewers.</dd>
+<dt>Action Safe</dt>
+<dd>Make sure any significant action or characters in the shot are inside this area.
+This zone also doubles as a sort of &#8220;margin&#8221; for the screen which can be used
+to keep elements from piling up against the edges.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Legal Standards</p>
+<p class="last">Each country sets a legal standard for broadcasting.
+These include, among other things, specific values for safe areas.
+Blender defaults for safe areas follow the EBU (European Union) standard.
+Make sure you are using the correct values when working for broadcast to avoid any trouble.</p>
+</div>
+</div>
+<div class="section" id="center-cuts">
+<h2>Center-Cuts<a class="headerlink" href="#center-cuts" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../../../../../_images/camera_safe_areas_centercuts.png" src="../../../../../_images/camera_safe_areas_centercuts.png" />
+<p class="caption"><span class="caption-text">Cyan line: action center safe. Blue line: title center safe.</span></p>
+</div>
+<p>Center-cuts are a second set of safe areas to ensure content
+is seen correctly on screens with a different aspect ratio.
+Old TV sets receiving <code class="docutils literal"><span class="pre">16:9</span></code> or <code class="docutils literal"><span class="pre">21:9</span></code> video will cut off the sides.
+Position content inside the center-cut areas to make sure the most important elements
+of your composition can still be visible in these screens.</p>
+<p>Blender defaults show a <code class="docutils literal"><span class="pre">4:3</span></code> (square) ratio inside <code class="docutils literal"><span class="pre">16:9</span></code> (wide-screen).</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../modes.html" class="btn btn-neutral float-right" title="物体模式s" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lens.html" class="btn btn-neutral" title="相机 Lens" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

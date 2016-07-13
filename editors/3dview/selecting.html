@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Selecting &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="3D视图" href="index.html"/>
+        <link rel="next" title="变换" href="transform/index.html"/>
+        <link rel="prev" title="Parenting Objects" href="object/relationships/parents.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigate/index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="object/index.html">Objects</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">3D视图</a> &raquo;</li>
+      
+    <li>Selecting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/3dview/selecting.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="selecting">
+<h1>Selecting<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
+<p>Selection determines which elements will be the target of our actions.
+Blender has advanced selection methods. Both in <em>物体模式</em> and in <em>编辑模式</em>.</p>
+<div class="section" id="selections-and-the-active-object">
+<span id="object-active"></span><h2>Selections and the Active Object<a class="headerlink" href="#selections-and-the-active-object" title="Permalink to this headline">¶</a></h2>
+<p>Blender distinguishes between two different states of selection:</p>
+<div class="figure" id="id5">
+<img alt="../../_images/editors_3dview_selecting_color.png" src="../../_images/editors_3dview_selecting_color.png" />
+<p class="caption"><span class="caption-text">Unselected object in black, selected object in orange, and active object in yellow.</span></p>
+</div>
+<ul>
+<li><p class="first">In <em>物体模式</em> the last (de)selected item is called the &#8220;Active Object&#8221;
+and is outlined in yellow (the others are orange).
+There is exactly one active object at any time (even when nothing is selected).</p>
+<p>Many actions in Blender use the active object as a reference (for example linking operations).
+If you already have a selection and need to make a different object the active one,
+simply re-select it with <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>.</p>
+</li>
+<li><p class="first">All other selected objects are just selected. You can select any number of objects.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="point-selection">
+<h2>Point Selection<a class="headerlink" href="#point-selection" title="Permalink to this headline">¶</a></h2>
+<p>The simplest form of object <em>selection</em> consists of using <code class="kbd docutils literal"><span class="pre">RMB</span></code> on it.</p>
+<p>To <em>add to the selection</em>, use <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> on more objects.</p>
+<p>If the <em>objects are overlapping</em> in the view,
+you can use <code class="kbd docutils literal"><span class="pre">Alt-RMB</span></code> to cycle through possible choices.</p>
+<p>If you want <em>to add to a selection</em> this way then the shortcut becomes
+<code class="kbd docutils literal"><span class="pre">Shift-Alt-RMB</span></code>.</p>
+<p>To <em>activate an object</em> that is already selected, click <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> on it.</p>
+<p>To <em>deselect</em> an active object,
+click <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> one time - and hence two clicks if the object is not active.
+Note that this only works if there are no other objects under the mouse.
+其他wise it just adds those to the selection. There appears to be no workaround for this bug.</p>
+</div>
+<div class="section" id="rectangular-or-border-select">
+<h2>Rectangular or Border Select<a class="headerlink" href="#rectangular-or-border-select" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式 and 编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Border Select</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">B</span></code></div>
+</div>
+</div>
+<p>With <em>Border Select</em> you draw a rectangle while holding down <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+Any object that lies even partially within this rectangle becomes selected.</p>
+<p>For deselecting objects,
+use <code class="kbd docutils literal"><span class="pre">MMB</span></code> or <em>Border Select</em> again with holding <code class="kbd docutils literal"><span class="pre">Shift</span></code>.</p>
+<p>To cancel the selection use <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</p>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/object-selection-border.jpg"><img alt="../../_images/object-selection-border.jpg" src="../../_images/object-selection-border.jpg" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">Border selecting in three steps.</span></p>
+</div>
+<p><em>Border Select</em> has been activated in the first image and is indicated by showing a dotted cross-hair cursor.
+In the second image, the <em>selection region</em> is being chosen by drawing a rectangle with the <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+The rectangle is only covering two cubes.
+Finally, in the third image, the selection is completed by releasing <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+<p>Notice in the third image, the bright color of left-most selected cube.
+This means it is the &#8220;active object&#8221;,
+the last selected object prior to using the <em>Border Select</em> tool.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last"><em>Border Select</em> adds to the previous selection, so in order to select only the contents of the rectangle,
+deselect all with <code class="kbd docutils literal"><span class="pre">A</span></code> first.</p>
+</div>
+</div>
+</div>
+<div class="section" id="lasso-select">
+<h2>Lasso Select<a class="headerlink" href="#lasso-select" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式 and 编辑模式</div>
+<div class="line">Menu:     no entry in the menu</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code></div>
+</div>
+</div>
+<p>Lasso select is used by drawing a dotted line around the 轴心点 of the objects,
+in <em>物体模式</em>.</p>
+<div class="section" id="usage">
+<h3>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>While holding <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> down, you simply have to draw around the 轴心点 of each
+object you want to select with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+<p>Lasso select adds to the previous selection. For deselection, use <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-LMB</span></code>.</p>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../../_images/object-selection-lasso.jpg"><img alt="../../_images/object-selection-lasso.jpg" src="../../_images/object-selection-lasso.jpg" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">Lasso selection example.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="circle-select">
+<h2>Circle Select<a class="headerlink" href="#circle-select" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式 and 编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Circle Select</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">C</span></code></div>
+</div>
+</div>
+<p><em>Circle Select</em> is used by moving with dotted circle through objects with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+You can select any object by touching of circle area.
+It is possible to dynamically change the diameter of circle by scrolling <code class="kbd docutils literal"><span class="pre">MMB</span></code> as
+seen in pictures below. Deselection is under the same principle - <code class="kbd docutils literal"><span class="pre">MMB</span></code>.
+To cancel the selection use <code class="kbd docutils literal"><span class="pre">RMB</span></code> or key <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../_images/object-selection-circle1.jpg"><img alt="../../_images/object-selection-circle1.jpg" src="../../_images/object-selection-circle1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Circle selection.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/object-selection-circle2.jpg"><img alt="../../_images/object-selection-circle2.jpg" src="../../_images/object-selection-circle2.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">...with huge circle.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="menu-selection">
+<h2>Menu Selection<a class="headerlink" href="#menu-selection" title="Permalink to this headline">¶</a></h2>
+<p>The selection methods described above are the most common.
+There are also many more options accessible through the <em>Select</em> menu of the 3D视图.</p>
+<p>Each is more adapted to certain operations.</p>
+<div class="section" id="select-grouped">
+<span id="id1"></span><h3>Select Grouped<a class="headerlink" href="#select-grouped" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Grouped</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-G</span></code></div>
+</div>
+</div>
+<div class="figure align-right" id="id10">
+<img alt="../../_images/editors_3dview_selecting_grouped.png" src="../../_images/editors_3dview_selecting_grouped.png" />
+<p class="caption"><span class="caption-text">Select Grouped menu.</span></p>
+</div>
+<p>There are two ways to organize the objects in relation to one another.
+The first one is <em>parenting</em>, and the second is simple <em>grouping</em>.
+These relationships to an artist&#8217;s advantage by selecting members of respective families or groups.
+<em>Select Grouped</em> uses the active object as a basis to select all others.</p>
+<div class="section" id="options">
+<h4>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Children</dt>
+<dd>Selects all children of the active object recursively.</dd>
+<dt>Immediate Children</dt>
+<dd>Selects all direct children of the active object.</dd>
+<dt>Parent</dt>
+<dd>Selects the parent of this object if it has one.</dd>
+<dt>Siblings</dt>
+<dd>Select objects that have the same parent as the active object.
+This can also be used to select all root level objects (objects with no parents).</dd>
+<dt>Type</dt>
+<dd>Select objects that are the same type as the active one.</dd>
+<dt>Layer</dt>
+<dd>Objects that have at least one shared layer.</dd>
+<dt>Group</dt>
+<dd>Objects that are part of a group (rendered green with the default theme)
+will be selected if they are in one of the groups that the active object is in.</dd>
+<dt>Object Hooks</dt>
+<dd>Every hook that belongs to the active object.</dd>
+<dt>Pass</dt>
+<dd>Select objects assigned to the same render pass.
+渲染 passes are set in <span class="menuselection">Properties ‣ Object ‣ Relations</span>
+and can be used in the <em>Node Compositor</em>
+<span class="menuselection">Add ‣ Convertor ‣ ID Mask</span>.</dd>
+<dt>Color</dt>
+<dd>Select objects with same <em>Object Color</em>.
+Object colors are set in <span class="menuselection">Properties ‣ Object ‣ Display ‣ Object Color</span>.</dd>
+<dt>Properties</dt>
+<dd>Select objects with same <em>游戏引擎</em> <em>Properties</em>.</dd>
+<dt>Keying Set</dt>
+<dd>Select objects included in active Keying Set.</dd>
+<dt>Lamp Type</dt>
+<dd>Select matching lamp types.</dd>
+<dt>Pass Index</dt>
+<dd>Select matching object pass index.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="select-linked">
+<h3>Select linked<a class="headerlink" href="#select-linked" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Linked</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-L</span></code></div>
+</div>
+</div>
+<p>Selects all objects which share a common data-block with the active object.
+<em>Select linked</em> uses the active object as a basis to select all others.</p>
+<div class="section" id="id2">
+<h4>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Object Data</dt>
+<dd>Selects every object that is linked to the same Object Data, i.e.
+the data-block that specifies the type (mesh, curve, etc.) and the build
+(constitutive elements like vertices, control vertices, and where they are in space) of the object.</dd>
+<dt>Material</dt>
+<dd>Selects every object that is linked to the same material data-block.</dd>
+<dt>Texture</dt>
+<dd>Selects every object that is linked to the same texture data-block.</dd>
+<dt>Dupligroup</dt>
+<dd>Selects all objects that use the same <em>Group</em> for duplication.</dd>
+<dt>Particle System</dt>
+<dd>Selects all objects that use the same <em>Particle System</em></dd>
+<dt>Library</dt>
+<dd>Selects all objects that are in the same <a class="reference internal" href="../../data_system/linked_libraries.html"><span class="doc">Library</span></a></dd>
+<dt>Library (Object Data)</dt>
+<dd>Selects all objects that are in the same <a class="reference internal" href="../../data_system/linked_libraries.html"><span class="doc">Library</span></a>
+and limited to <em>object data</em>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="select-all-by-type">
+<h3>Select All by Type<a class="headerlink" href="#select-all-by-type" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Select All by Type</span></div>
+<div class="line">Hotkey:   None</div>
+</div>
+</div>
+<p>With this tool it becomes possible to select every <strong>visible</strong>
+object of a certain type in one go.</p>
+<div class="section" id="id3">
+<h4>Options<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>The types are <em>Mesh</em>, <em>Curve</em>, <em>Surface</em>, <em>Meta</em>,
+<em>Font</em>, <em>Armature</em>, <em>Lattice</em>, <em>Empty</em>,
+<em>相机</em>, <em>Lamp</em>, <em>Speaker</em>.</p>
+</div>
+</div>
+<div class="section" id="select-all-by-layer">
+<h3>Select All by Layer<a class="headerlink" href="#select-all-by-layer" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Select All by Layer</span></div>
+<div class="line">Hotkey:   None</div>
+</div>
+</div>
+<div class="figure align-right" id="id11">
+<img alt="../../_images/editors_3dview_select_allbylayer.png" src="../../_images/editors_3dview_select_allbylayer.png" />
+<p class="caption"><span class="caption-text">All by Layer selection menu.</span></p>
+</div>
+<p>Layers are another means to regroup your objects to suit your purpose.</p>
+<p>This option allows the selection of every single object that belongs to a given layer,
+visible or not, in one single command.</p>
+<div class="section" id="id4">
+<h4>Options<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Match</dt>
+<dd>The match type for selection.</dd>
+<dt>Extend</dt>
+<dd>Enable to add objects to current selection rather than replacing the current selection.</dd>
+<dt>Layer</dt>
+<dd>The layer on which the objects are.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Selection of Objects</p>
+<p class="last">Rather than using the <span class="menuselection">Select All by Layer</span> option,
+it might be more efficient to make the needed layers visible and use <code class="kbd docutils literal"><span class="pre">A</span></code> on them.
+This method also allows objects to be deselected.</p>
+</div>
+</div>
+</div>
+<div class="section" id="other-menu-options">
+<h3>其他 Menu Options<a class="headerlink" href="#other-menu-options" title="Permalink to this headline">¶</a></h3>
+<p>Available options on the first level of the menu are:</p>
+<dl class="docutils">
+<dt>Select Pattern</dt>
+<dd>Selects all objects whose name matches a given pattern.
+Supported wildcards: * matches everything, ? matches any single character,
+[abc] matches characters in &#8220;abc&#8221;, and [!abc] match any character not in &#8220;abc&#8221;.
+The matching can be chosen to be case sensitive or not.
+As an example <em>house</em> matches any name that contains &#8220;house&#8221;, while floor* matches any name starting with &#8220;floor&#8221;.</dd>
+<dt>Select 相机</dt>
+<dd>Select the active camera.</dd>
+<dt>Mirror <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-M</span></code></dt>
+<dd>Select the Mirror objects of the selected object eg. <span class="menuselection">L.sword ‣ R.sword</span>.</dd>
+<dt>Random</dt>
+<dd>Randomly selects unselected objects based on percentage probability on currently active layers.
+On selecting the command a numerical selection box becomes available in the <em>Tool Shelf</em>.
+It is important to note that the percentage represents the likelihood of an unselected object being
+selected and not the percentage amount of objects that will be selected.</dd>
+<dt>Inverse <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></dt>
+<dd>Selects all objects that were not selected while deselecting all those which were.</dd>
+<dt>(De)select All <code class="kbd docutils literal"><span class="pre">A</span></code></dt>
+<dd>If anything was selected it is first deselected.
+其他wise it toggles between selecting and deselecting every visible object.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transform/index.html" class="btn btn-neutral float-right" title="变换" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="object/relationships/parents.html" class="btn btn-neutral" title="Parenting Objects" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

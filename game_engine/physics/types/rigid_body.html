@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rigid Body 物理 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="物理 Types" href="index.html"/>
+        <link rel="next" title="Soft Body 物理" href="soft_body.html"/>
+        <link rel="prev" title="Dynamic 物理" href="dynamic.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">游戏引擎简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials.html">游戏材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logic/index.html">逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../camera/index.html">相机</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">Blender Game 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">World 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using_ge.html">Converting 游戏引擎 物理</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">物理 Types</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="static.html">Static 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="no_collision.html">No Collision 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamic.html">Dynamic 物理</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Rigid Body 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="soft_body.html">Soft Body 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vehicle.html">Vehicle Controller 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="occluder.html">Occlude Object 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sensor.html">Sensor 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="character.html">Character 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigation_mesh.html">Navigation Mesh 物理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">游戏引擎</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">物理 Types</a> &raquo;</li>
+      
+    <li>Rigid Body 物理</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/game_engine/physics/types/rigid_body.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rigid-body-physics">
+<h1>Rigid Body 物理<a class="headerlink" href="#rigid-body-physics" title="Permalink to this headline">¶</a></h1>
+<p>Probably the most common type of object in the <a class="reference internal" href="../../index.html"><span class="doc">游戏引擎</span></a>.
+It will give/receive collisions and react with a change in its velocity and its rotation.
+A Rigid Body ball would begin rotating and roll down
+(where a <a class="reference internal" href="dynamic.html"><span class="doc">Dynamic</span></a> ball would only hit and slide down the ramp).</p>
+<p>The idea behind Rigid Body dynamics is that the mesh does not deform.
+If you need deformation you will need to either go to
+<a class="reference internal" href="soft_body.html"><span class="doc">Soft Body</span></a> or else fake it with animated Actions.</p>
+<p>For more documentation, see the <a class="reference internal" href="../index.html"><span class="doc">Top BGE 物理 page</span></a>.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>bpy Access</p>
+<p class="last">Note that most of these properties are accessible through the non-
+BGE scripting API via <code class="docutils literal"><span class="pre">bpy.data.objects[&quot;ObjectName&quot;].game</span></code>,
+which is of type <code class="docutils literal"><span class="pre">bpy.types.GameObjectSetting</span></code>. This is useful so you can,
+for example, set a range of objects to have gradated values via a for-loop.</p>
+</div>
+<dl class="docutils">
+<dt>Actor</dt>
+<dd>Enables detection by Near and Radar Sensors. Python property: <code class="docutils literal"><span class="pre">obj.game.use_actor</span></code></dd>
+<dt>Ghost</dt>
+<dd>Disables collisions completely, similar to <a class="reference internal" href="no_collision.html"><span class="doc">No collision</span></a>.</dd>
+<dt>Invisible</dt>
+<dd>Does not display, the same as setting the object to unrendered (such as unchecking the &#8220;相机&#8221;
+icon in the <a class="reference internal" href="../../../editors/outliner.html"><span class="doc">Outliner</span></a>. Python property: <code class="docutils literal"><span class="pre">obj.use_render</span></code></dd>
+<dt>Use Material Force Field</dt>
+<dd>Materials can have physics settings on them as well: Friction, Elasticity,
+Force Field (positive or negative force), and also Dampening to other materials.
+When you turn on this checkbox, you are enabling the Material to exhibit this spring force.
+Python property: <code class="docutils literal"><span class="pre">obj.game.use_material_physics_fh</span></code></dd>
+<dt>Rotate From Normal</dt>
+<dd>Todo Python property: <code class="docutils literal"><span class="pre">obj.game.use_rotate_from_normal</span></code></dd>
+<dt>No Sleeping</dt>
+<dd>Prevents simulation meshes from sleeping. When an object has a linear velocity or angular velocity,
+it is in motion. It will detect collisions, receive gravity, etc. Once these thresholds are close to zero,
+it will cease these calculations &#8211; until another object interacts with it wake it up.
+Python property: <code class="docutils literal"><span class="pre">obj.game.use_sleep</span></code></dd>
+<dt>Mass</dt>
+<dd>Affects the reaction due to collision between objects &#8211; more massive objects have more inertia.
+Will also affect material force fields.
+Will also change behaviors if you are using the suspension and steering portions of Bullet physics.
+Python property: <code class="docutils literal"><span class="pre">obj.game.mass</span></code></dd>
+<dt>Radius</dt>
+<dd>If you have the &#8220;Collision Bounds: Sphere&#8221;
+set explicitly (or implicitly through having the Collision Bounds subpanel unchecked),
+this will multiply with the Object&#8217;s (unapplied) Scale. Note that none of the other bounds types are affected.
+Also note that in the 3D视图 the display will show this for all types,
+even though it is only actually used with Sphere. Python property: <code class="docutils literal"><span class="pre">obj.game.radius</span></code></dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Basic</th>
+<th class="head">Radius= 1.5</th>
+<th class="head">Unapplied Scale</th>
+<th class="head">Applied Scale</th>
+<th class="head">Collision Bounds</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Rolls, radius of 1 BU</td>
+<td>Rolls, radius of 1.5 BU (after &#8220;popping&#8221; upward)</td>
+<td>Rolls, radius of 1.5 BU</td>
+<td>Rolls, radius of 1 BU (!)</td>
+<td>Default (which is Sphere)</td>
+</tr>
+<tr class="row-odd"><td>Slides, extent of 1 BU</td>
+<td>Slides, extent of 1 BU</td>
+<td>Slides, extent of 1 BU</td>
+<td>Slides, extent of 1 BU</td>
+<td>Box</td>
+</tr>
+<tr class="row-even"><td>&#8220;&#8221;</td>
+<td>&#8220;&#8221;</td>
+<td>&#8220;&#8221;</td>
+<td>&#8220;&#8221;</td>
+<td>Convex Hull</td>
+</tr>
+<tr class="row-odd"><td>Slides, extent of 1 BU (but with more friction than above)</td>
+<td>Slides, extent of 1 BU (but with more friction than above)</td>
+<td>Acts insane</td>
+<td>Slides extent of 1.5 BU</td>
+<td>Triangle Mesh</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Form Factor</dt>
+<dd>For affecting the Inertia Tensor. The higher the value, the greater the rotational inertia,
+and thus the more resistant to torque. You might think this is strange,
+considering Dynamic types do not have torque in response to collisions &#8211;
+but you can still see this value&#8217;s effects when you manually apply Torque.
+Python property: <code class="docutils literal"><span class="pre">obj.game.form_factor</span></code></dd>
+<dt>Anisotropic Friction</dt>
+<dd>Isotropic friction is identical at all angles. Anisotropic is directionally-dependant.
+Here you can vary the coefficients for the three axes individually, or disable friction entirely.
+Python properties: <code class="docutils literal"><span class="pre">obj.game.use_anisotropic_friction</span></code>
+(boolean) and <code class="docutils literal"><span class="pre">obj.game.friction_coefficients</span></code> (a 3-element array).</dd>
+<dt>Velocity- Limit the speed of an object 0 - 1000.</dt>
+<dd><dl class="first last docutils">
+<dt>Minimum</dt>
+<dd>The object is allowed to be at complete rest,
+but as soon as it accelerates it will immediately jump to the minimum speed.
+Python property: <code class="docutils literal"><span class="pre">obj.game.velocity_min</span></code></dd>
+<dt>Maximum</dt>
+<dd>Top speed of the object.  Python property: <code class="docutils literal"><span class="pre">obj.game.velocity_max</span></code></dd>
+</dl>
+</dd>
+<dt>Damping- Increase the &#8220;sluggishness&#8221; of the object.</dt>
+<dd><dl class="first last docutils">
+<dt>Translation</dt>
+<dd>Resist movement 0 - 1. At &#8220;1&#8221; the object is completely immobile. Python property: <code class="docutils literal"><span class="pre">obj.game.damping</span></code></dd>
+<dt>Rotation</dt>
+<dd>Resist rotation, but not the kind of rotation that comes from a collision. For example,
+if a Motion Controller applies Torque to an object, this damping will be a factor.
+Python property: <code class="docutils literal"><span class="pre">obj.game.rotation_damping</span></code></dd>
+</dl>
+</dd>
+<dt>Lock Translation</dt>
+<dd><p class="first">Seize the object in the world along one or more axes.
+Note that this is global coordinates, not local or otherwise.</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>X Python property: <code class="docutils literal"><span class="pre">obj.game.lock_location_x</span></code></li>
+<li>Y Python property: <code class="docutils literal"><span class="pre">obj.game.lock_location_y</span></code></li>
+<li>Z Python property: <code class="docutils literal"><span class="pre">obj.game.lock_location_z</span></code></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>Lock Rotation</dt>
+<dd><dl class="first last docutils">
+<dt>Same, but for rotation (also with respect to the global coordinates).</dt>
+<dd><ul class="first last simple">
+<li>X Python property: <code class="docutils literal"><span class="pre">obj.game.lock_rotation_x</span></code></li>
+<li>Y Python property: <code class="docutils literal"><span class="pre">obj.game.lock_rotation_y</span></code></li>
+<li>Z Python property: <code class="docutils literal"><span class="pre">obj.game.lock_rotation_z</span></code></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="collision-bounds">
+<h2>Collision Bounds<a class="headerlink" href="#collision-bounds" title="Permalink to this headline">¶</a></h2>
+<p>The first thing you must understand is the idea of the 3D Bounding Box.
+If you run through all the vertices of a mesh and record the lowest and highest x values,
+you have found the <em>x min/max</em> the complete boundary for all x values within the mesh.
+Do this again for y and z, then make a rectangular prism out of these values, and you have a <em>Bounding Box</em>.
+This box could be oriented relative globally to the world or locally to the object&#8217;s rotation.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/bge-physics-boundingbox.png" src="../../../_images/bge-physics-boundingbox.png" />
+<p class="caption"><span class="caption-text">Demonstration of a Local Bounding Box (left) and a Global Bounding Box (right).</span></p>
+</div>
+<p>The <em>x extent</em>, then, is half of the distance between the x min/max.</p>
+<p>Throughout all of this you must be cognizant of the Object Origin. For the Game engine,
+the default <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Shift-C</span></code>, <code class="kbd docutils literal"><span class="pre">3</span></code> or <span class="menuselection">Set Origin ‣ Origin to Geometry</span>
+is unlikely to get the desired placement of the Collision Bounds that you want.
+Instead, you should generally set the origin by looking at the <code class="kbd docutils literal"><span class="pre">T</span></code>-toolshelf after you do the <em>Set Origin</em>,
+and changing the <em>Center</em> from <em>Median Center</em> to <em>Bounds Center</em>.
+Blender will remember this change for future <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Shift-C</span></code> executions.</p>
+<p>All Collision Bounds are centered on this origin. All boxes are oriented locally, so object rotation matters.</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/bge-physics-origintoboxbounds.png" src="../../../_images/bge-physics-origintoboxbounds.png" />
+<p class="caption"><span class="caption-text">Setting the origin to Bounds Center instead of Median Center.</span></p>
+</div>
+<p>A final introductory comment: When you set the Collision Bounds on an object,
+Blender will attempt to display a visualization of the bounds in the form of a dotted outline.
+Currently, there is a bug: <em>The 3D视图</em>
+does not display this bounds preview where it actually will be during the game.
+To see it, go to <span class="menuselection">Game ‣ Show 物理 Visualization</span>
+and look for the white (or green, if sleeping) geometry.</p>
+<p>Now we can explain the various options for the <em>Collision Bounds</em> settings:</p>
+<dl class="docutils">
+<dt>Default</dt>
+<dd>For Dynamic and Static objects, it is a Triangle Mesh (see below).
+For everything else, it is a Sphere (see below).</dd>
+<dt>Capsule - A cylinder with hemispherical caps, like a pill.</dt>
+<dd>Radius of the hemispheres is the greater of the x or y extent.
+Height is the z bounds</dd>
+<dt>Box</dt>
+<dd>The x,y,z bounding box, as defined above.</dd>
+<dt>Sphere</dt>
+<dd>Radius is defined by the object&#8217;s scale (visible in the N properties panel) times the physics radius
+(can be found in 物理 » Attributes » Radius.
+Note: This is the only bounds that respects the Radius option.</dd>
+<dt>Cylinder</dt>
+<dd>Radius is the greater of the x or y extent.
+Height is the z bounds.</dd>
+<dt>Cone</dt>
+<dd>Base radius is the greater of the x or y extent.
+Height is the z bounds.</dd>
+<dt>Convex Hull</dt>
+<dd>Forms a shrink-wrapped, simplified geometry around the object.</dd>
+</dl>
+<div class="figure" id="id4">
+<img alt="../../../_images/bge-physics-convexhull.png" src="../../../_images/bge-physics-convexhull.png" />
+<p class="caption"><span class="caption-text">A convex hull sketch.</span></p>
+</div>
+<dl class="docutils">
+<dt>Triangle mesh</dt>
+<dd>Most expensive, but most precise. Collision will happen with all of triangulated polygons,
+instead of using a virtual mesh to approximate that collision.</dd>
+<dt>By Hand</dt>
+<dd>This is not an option in the 物理 tab&#8217;s Collision Bounds settings, but a different approach, entirely.
+You create a second mesh, which is invisible, to be the physics representation.
+This becomes the parent for your display object. Then,
+your display object is set to ghost so it doesn&#8217;t fight with the parent object.
+This method allows you to strike a balance between the accuracy of <em>Triangle Mesh</em>
+with the efficiency of some of the others. See the demo of this in the dune buggy to the right.</dd>
+</dl>
+<div class="figure" id="id5">
+<img alt="../../../_images/bge-physics-manualhull.png" src="../../../_images/bge-physics-manualhull.png" />
+<p class="caption"><span class="caption-text">Another way to create Collision Bounds &#8211; By hand.</span></p>
+</div>
+<div class="section" id="id1">
+<h3>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>There are only two options in the Collision Bounds subpanel.</p>
+<dl class="docutils">
+<dt>Margin</dt>
+<dd><p class="first">&#8220;Add extra margin around object for collision detection, small amount required for stability.&#8221;
+If you find your objects are getting stuck in places they shouldn&#8217;t, try increasing this to, say, 0.06.</p>
+<p class="last">Sometimes 0.06 is the default (such as on the Default Cube), but sometimes it is not.
+You have to keep an eye on the setting, or else learn the symptoms so you can respond when it gives you trouble.
+If you&#8217;re lazy/paranoid/unsure/diligent/bored,
+you can always run this on the Python控制台 to bump all 0.0 margins to 0.06: for
+<code class="docutils literal"><span class="pre">obj</span></code> in <code class="docutils literal"><span class="pre">bpy.data.objects</span></code>: <code class="docutils literal"><span class="pre">obj.game.collision_margin</span> <span class="pre">=</span> <span class="pre">obj.game.collision_margin</span></code> or 0.06</p>
+</dd>
+<dt>Compound</dt>
+<dd>&#8220;Add children to form compound collision object.&#8221; Basically,
+if you have a child object and do not have this enabled,
+the child&#8217;s collisions will not have an effect on that object &#8220;family&#8221;
+(though it will still push other objects around). If you do have it checked,
+the parent&#8217;s physics will respond to the child&#8217;s collision (thus updating the whole family).
+Python property: <code class="docutils literal"><span class="pre">obj.game.use_collision_compound</span></code></dd>
+</dl>
+</div>
+</div>
+<div class="section" id="create-obstacle">
+<h2>Create Obstacle<a class="headerlink" href="#create-obstacle" title="Permalink to this headline">¶</a></h2>
+<p>Todo</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="soft_body.html" class="btn btn-neutral float-right" title="Soft Body 物理" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dynamic.html" class="btn btn-neutral" title="Dynamic 物理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

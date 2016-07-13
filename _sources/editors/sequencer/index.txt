@@ -1,0 +1,13 @@
+.. _editors-sequencer-index:
+
+########################
+  视频序列编辑器
+########################
+
+.. toctree::
+   :maxdepth: 2
+   
+   introduction.rst
+   usage.rst
+   strips/index.rst
+   display_modes.rst

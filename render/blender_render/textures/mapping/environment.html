@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Environment Maps &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Texture Mapping" href="index.html"/>
+        <link rel="next" title="Influence" href="../influence/index.html"/>
+        <link rel="prev" title="Texture Mapping" href="introduction.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Textures</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assigning_a_texture.html">Assigning a Texture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options.html">Textures common options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../types/index.html">Texture Types</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Texture Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../influence/index.html">Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">Texture 节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Textures</a> &raquo;</li>
+      
+          <li><a href="index.html">Texture Mapping</a> &raquo;</li>
+      
+    <li>Environment Maps</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/render/blender_render/textures/mapping/environment.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="environment-maps">
+<h1>Environment Maps<a class="headerlink" href="#environment-maps" title="Permalink to this headline">¶</a></h1>
+<p>Environment maps take a render of the 3D scene and apply it to a texture,
+to use for faking reflections. If you want to achieve a very realistic result,
+raytraced reflections are a good solution.
+Environment Maps are another way to create reflective surfaces,
+but they are not so simple to set up.</p>
+<p>So why should one use Environment Maps?</p>
+<ul class="simple">
+<li>The main reason is probably that they can be much faster than raytracing reflections.
+In certain situations they need to be calculated only once, and may be reused like any ordinary texture.
+You may even modify the precalculated Environment Map in an image editor.</li>
+<li>Environment maps can also be blurred and render even faster because the resolution can then be lowered.
+Blurring a reflection with the raytracer always adds to the render time, sometimes quite a lot.</li>
+<li><a class="reference internal" href="../../materials/special_effects/halo.html"><span class="doc">Halos</span></a>
+(a visualization type for particles) are not visible to raytraced reflections,
+so you need to setup environment maps to reflect them.</li>
+<li><a class="reference internal" href="../../../../physics/particles/visualization.html"><span class="doc">Keypoint strands</span></a>
+(another visualization type for particles) are also not visible to raytraced reflections,
+so you need to setup environment maps to reflect them.</li>
+</ul>
+<p>Just as we render the light that reaches the viewing plane using the camera to define a
+viewpoint, we can render the light that reaches the
+surface of an object (and hence, the light that might ultimately be reflected to the camera).
+Blender&#8217;s environment mapping renders a
+cubic image map of the scene in the six cardinal directions from any point. When the six tiles
+of the image are mapped onto an object using the <em>Refl</em> input coordinates,
+they create the visual complexity that the eye expects to see from shiny reflections.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It&#8217;s useful to remember here that the true goal of this technique is <em>believability</em>,
+not <em>accuracy</em>. The eye doesn&#8217;t need a physically accurate simulation of the light&#8217;s travel;
+it just needs to be lulled into believing that the scene is real by seeing the complexity it
+expects. The most unbelievable thing about most rendered images is the sterility,
+not the inaccuracy.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">For correct results, the mapping of an environment map texture must be set to &#8216;Refl&#8217;
+(reflection co-ordinates) in the Map Input panel of the Material tab.</p>
+</div>
+<div class="figure" id="id1">
+<img alt="../../../../_images/texture-envmap-panel.jpg" src="../../../../_images/texture-envmap-panel.jpg" />
+<p class="caption"><span class="caption-text">Reflecting plane EnvMap settings.</span></p>
+</div>
+<p>Blender allows three types of environment maps,
+as you can see in <em>Reflecting plane EnvMap settings.</em> :</p>
+<dl class="docutils">
+<dt>Static</dt>
+<dd>The map is only calculated once during an animation or after loading a file.</dd>
+<dt>Animated</dt>
+<dd>The map is calculated each time a rendering takes place.
+This means moving Objects are displayed correctly in mirroring surfaces.</dd>
+<dt>图像 File</dt>
+<dd><p class="first">When saved as an image file, environment maps can be loaded from disk.
+This option allows the fastest rendering with environment maps,
+and also gives the ability to modify or use the environment map in an external application.</p>
+<p class="last">When using planar reflections, if the camera is the only moving object and you have a reflecting plane,
+the Empty must move too and you must use <em>Anim</em> environment map.
+If the reflecting object is small and the Empty is in its center, the environment map can be <em>Static</em>,
+even if the object itself rotates since the Empty does not move. If, on the other hand,
+the Object translates the Empty should follow it and the environment map be of <em>Anim</em> type.</p>
+</dd>
+</dl>
+<p>Options in dropdown menu:</p>
+<dl class="docutils">
+<dt>Clear Environment Map</dt>
+<dd>Clears the currently rendered environment map from memory.
+This is useful to refresh a <em>Static</em> environment maps and you have changed
+things in your scene since the last time the environment map was rendered.
+<em>Anim</em> environment maps do this automatically on every render.</dd>
+<dt>Save Environment Map</dt>
+<dd>Saves the currently stored static environment map to disk as an image file. This can be loaded again with <em>Load</em>.</dd>
+<dt>Clear All Environment Maps</dt>
+<dd>Does the same as <em>Free Data</em>, but with all environment maps in the scene.
+This is a useful shortcut when using recursive environment maps (when the <em>Depth</em> is greater than 0).</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">EnvMap calculation can be disabled at a global level by the EnvMap Tog Button in the 渲染
+Panel of the 渲染ing Buttons.</p>
+</div>
+<dl class="docutils">
+<dt>Viewpoint Object</dt>
+<dd><p class="first">Environment maps are created from the perspective of a specified object.
+The location of this object will determine how &#8216;correct&#8217; the reflection looks,
+though different locations are needed for different reflecting surfaces.
+Usually, an Empty is used as this object.</p>
+<ul class="last simple">
+<li>For planar reflections, the object should be in a location mirrored from the camera,
+on the other side of the plane of reflection (see 例子s).
+This is the most accurate usage of Environment maps.</li>
+<li>For spherical reflections, the object should be in the center of the sphere. Generally,
+if the reflecting sphere&#8217;s object center point is in the center of its vertices,
+you can just use the name of the actual sphere object as the <em>Ob:</em></li>
+<li>For irregular reflections, there&#8217;s no hard and fast rule,
+you will probably need to experiment and hope that the inaccuracy doesn&#8217;t matter.</li>
+</ul>
+</dd>
+<dt>Ignore Layers</dt>
+<dd><p class="first">The layers to exclude from the environment map creation.
+Since environment maps work by rendering the scene from the location of the <em>Ob:</em> object,
+you will need to exclude the actual reflecting surface from the environment map,
+otherwise it will occlude other objects that should be reflected on the surface itself.</p>
+<p class="last">Eg. If you are rendering an environment map from the center of a sphere,
+all the environment map will show by default is the inside of the sphere.
+You will need to move the sphere to a separate layer, then exclude that layer from the environment map render,
+so that the environment map will show (and hence reflect) all the objects outside the sphere.</p>
+</dd>
+<dt>Resolution</dt>
+<dd>The resolution of the cubic environment map render. Higher resolutions will give a sharper texture (reflection),
+but will be slower to render.</dd>
+<dt>Depth</dt>
+<dd>The number of recursive environment map renders.
+If there are multiple reflecting objects using environment maps in the scene, some may appear solid,
+as they won&#8217;t render each other&#8217;s reflections. In order to show reflections within reflections,
+the environment maps need to be made multiple times, recursively,
+so that the effects of one environment map can be seen in another environment map. See 例子s.</dd>
+<dt>Clipping Start/End</dt>
+<dd>The clipping boundaries of the virtual camera when rendering the environment map.
+Sets the minimum and maximum distance from the camera that will be visible in the map.</dd>
+</dl>
+<div class="section" id="environment-map-sampling">
+<h3>Environment Map Sampling<a class="headerlink" href="#environment-map-sampling" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Filter</dt>
+<dd><dl class="first last docutils">
+<dt>Box</dt>
+<dd>Box Filter</dd>
+<dt>EWA</dt>
+<dd><p class="first">Elliptical Weighted Average -
+one of the most efficient direct convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.
+For each texel, EWA samples, weights,
+and accumulates texels within an elliptical footprint and then divides the result by the sum of the weights.</p>
+<dl class="last docutils">
+<dt>Eccentricity</dt>
+<dd>Maximum eccentricity (higher gives less blur at distant/oblique angles, but is also slower)</dd>
+</dl>
+</dd>
+<dt>FELINE</dt>
+<dd><p class="first">FELINE (Fast Elliptical Lines),
+uses several isotropic probes at several points along a line in texture space
+to produce an anisotropic filter to reduce aliasing artifacts without considerably increasing rendering time.</p>
+<dl class="last docutils">
+<dt>Probes</dt>
+<dd>Maximum number of samples (higher gives less blur at distant/oblique angles, but is also slower)</dd>
+</dl>
+</dd>
+<dt>Area</dt>
+<dd><dl class="first last docutils">
+<dt>Eccentricity</dt>
+<dd>Maximum eccentricity (higher gives less blur at distant/oblique angles, but is also slower)</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Filter Size</dt>
+<dd>The amount of blurring applied to the texture.
+Higher values will blur the environment map to fake blurry reflections.</dd>
+<dt>Minimum Filter Size</dt>
+<dd>Use Filter Size as a minimal filter value in pixels</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>In this example,
+an empty is used as the <em>Ob:</em> of the reflecting plane&#8217;s environment map.
+It is located in the specular position of the camera with respect to the reflecting surface.
+(This is possible, strictly speaking, only for planar reflecting surfaces.) Ideally, the
+location of the empty would mirror the location of the camera across the plane of the polygon
+onto which it is being mapped.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/envmap01.jpg"><img alt="../../../../_images/envmap01.jpg" src="../../../../_images/envmap01.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Planar reflection example. 1: 相机, 2: Empty, 3: Reflecting Plane.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/envmap04.jpg"><img alt="../../../../_images/envmap04.jpg" src="../../../../_images/envmap04.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Sphere on a reflecting surface.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The following images show the effect of the <em>Depth</em>.
+The first render has depth set to 0. This means the environment map on the plane has rendered
+before the environment map of the sphere, so the sphere&#8217;s reflection is not shown.
+By raising the <em>Depth</em>, the environment map is rendered recursively,
+in order to get reflections of reflections.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/envmap05.jpg"><img alt="../../../../_images/envmap05.jpg" src="../../../../_images/envmap05.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Reflecting sphere on a reflecting surface.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/envmap06.jpg"><img alt="../../../../_images/envmap06.jpg" src="../../../../_images/envmap06.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Reflecting sphere on a reflecting surface with multiple
+reflections.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>Because environment maps are calculated from the exact location of the <em>Viewpoint Object&#8217;s</em> object center,
+and not from actual reflecting surface, they can often be inaccurate, especially with spheres.
+In the following image, the rectangular prism and the smaller spheres
+are touching the sides of the large reflecting sphere,
+but because the environment map is calculated from the center of the sphere,
+the surrounding objects look artificially far away.</p>
+<div class="figure" id="id6">
+<img alt="../../../../_images/envmap-offset.jpg" src="../../../../_images/envmap-offset.jpg" />
+<p class="caption"><span class="caption-text">Inaccurate spherical reflection, the colored objects are artificially offset.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../influence/index.html" class="btn btn-neutral float-right" title="Influence" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Texture Mapping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

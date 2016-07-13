@@ -1,0 +1,553 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Graph Editor" href="index.html"/>
+        <link rel="next" title="F-Curves" href="fcurves/index.html"/>
+        <link rel="prev" title="Graph Editor" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Graph Editor</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fcurves/index.html">F-Curves</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dope_sheet/index.html">Dope Sheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nla.html">NLA Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Graph Editor</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/graph_editor/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The graph editor is the main animation editor.
+It allows you to modify the animation for any properties using <a class="reference internal" href="fcurves/introduction.html"><span class="doc">F-Curves</span></a>.</p>
+<p>The graph editor has two modes, <em>F-Curve</em> for <a class="reference internal" href="../../animation/actions.html"><span class="doc">Actions</span></a>,
+and <em>Drivers</em> for <a class="reference internal" href="../../animation/drivers.html"><span class="doc">Drivers</span></a>. Both are very similar in function.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/editors_graph_example.jpg"><img alt="../../_images/editors_graph_example.jpg" src="../../_images/editors_graph_example.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">The Graph Editor.</span></p>
+</div>
+<div class="section" id="curve-editor-area">
+<h2>Curve Editor Area<a class="headerlink" href="#curve-editor-area" title="Permalink to this headline">¶</a></h2>
+<p>Here you can see and edit the curves and keyframes.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/graph_curve.jpg" src="../../_images/graph_curve.jpg" />
+<p class="caption"><span class="caption-text">A curve with different types of interpolation.</span></p>
+</div>
+<p>See <a class="reference internal" href="fcurves/introduction.html"><span class="doc">F-Curves</span></a> for more info.</p>
+<div class="section" id="navigation">
+<h3>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h3>
+<p>As with most editors, you can:</p>
+<dl class="docutils">
+<dt>Pan</dt>
+<dd>Pan the view vertically (values) or horizontally (time) with click and drag (<code class="kbd docutils literal"><span class="pre">MMB</span></code>).</dd>
+<dt>Zoom</dt>
+<dd>Zoom in and out with the mouse wheel (<code class="kbd docutils literal"><span class="pre">Wheel</span></code>).</dd>
+<dt>Scale View</dt>
+<dd>Scale the view vertically or horizontally (<code class="kbd docutils literal"><span class="pre">Ctrl-MMB</span></code>).</dd>
+</dl>
+<p>These are some other useful tools.</p>
+<dl class="docutils">
+<dt>View All</dt>
+<dd>Reset viewable area to show all keyframes (<code class="kbd docutils literal"><span class="pre">Home</span></code>).</dd>
+<dt>View Selected</dt>
+<dd>Reset viewable area to show selected keyframes (<code class="kbd docutils literal"><span class="pre">NumpadPeriod</span></code>).</dd>
+</dl>
+</div>
+<div class="section" id="d-cursor">
+<h3>2D Cursor<a class="headerlink" href="#d-cursor" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id3">
+<img alt="../../_images/graph_2dcursor.jpg" src="../../_images/graph_2dcursor.jpg" />
+<p class="caption"><span class="caption-text">Graph Editor 2D Cursor.</span></p>
+</div>
+<p>The current frame is represented by a green vertical line called the <em>Time Cursor</em>.</p>
+<p>As in the <a class="reference internal" href="../timeline.html"><span class="doc">Timeline</span></a>,
+you can change the current frame by pressing or holding <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+<p>The green horizontal line is called the <em>Cursor</em>.
+This can be disabled via the <em>View Menu</em> or the <em>View Properties</em> panel.</p>
+<p>The <em>Time Cursor</em> and the <em>Cursor</em> make the <em>2D Cursor</em>.
+The <em>2D Cursor</em> mostly used for editing tools.</p>
+</div>
+<div class="section" id="view-axes">
+<h3>View Axes<a class="headerlink" href="#view-axes" title="Permalink to this headline">¶</a></h3>
+<p>For <em>Actions</em> the X-axis represents time,
+the Y-axis represents the value to set the property.</p>
+<p>For <em>Drivers</em> the X-axis represents the <em>Driver Value</em>,
+the Y-axis represents the value to set the property.</p>
+<p>Depending on the selected curves, the values have different meaning:
+For example rotation properties are shown in degrees,
+location properties are shown in Blender Units.
+Note that <em>Drivers</em> use radians for rotation properties.</p>
+</div>
+<div class="section" id="markers">
+<h3>Markers<a class="headerlink" href="#markers" title="Permalink to this headline">¶</a></h3>
+<p>Like with most animation editors, markers are shown at the bottom of the editor.</p>
+<div class="figure" id="id4">
+<img alt="../../_images/graph_markers.jpg" src="../../_images/graph_markers.jpg" />
+<p class="caption"><span class="caption-text">Graph Editor Markers.</span></p>
+</div>
+<p><em>Markers</em> can be modified in the <em>Graph Editor</em> though its usually best to use the <em>Timeline</em>.</p>
+<p>See <a class="reference internal" href="../../animation/markers.html"><span class="doc">Markers</span></a> for more info.</p>
+</div>
+</div>
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<p>Here you will find:</p>
+<ul class="simple">
+<li>The menus.</li>
+<li>Graph Editor mode.</li>
+<li>View controls.</li>
+<li>Curve controls.</li>
+</ul>
+<div class="section" id="header-controls">
+<h3>Header Controls<a class="headerlink" href="#header-controls" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id5">
+<img alt="../../_images/graph_header_mode.jpg" src="../../_images/graph_header_mode.jpg" />
+<p class="caption"><span class="caption-text">Graph Mode.</span></p>
+</div>
+<dl class="docutils">
+<dt>Mode</dt>
+<dd>F-Curve for <a class="reference internal" href="../../animation/actions.html"><span class="doc">Actions</span></a>,
+and Drivers for <a class="reference internal" href="../../animation/drivers.html"><span class="doc">Drivers</span></a>.</dd>
+</dl>
+<div class="figure" id="id6">
+<img alt="../../_images/graph_header_view.jpg" src="../../_images/graph_header_view.jpg" />
+<p class="caption"><span class="caption-text">View Controls.</span></p>
+</div>
+<dl class="docutils">
+<dt>View controls</dt>
+<dd><dl class="first last docutils">
+<dt>Show Only Selected</dt>
+<dd>Only include curves related to the selected objects and data.</dd>
+<dt>Show Hidden</dt>
+<dd>Include curves from objects/bones that are not visible.</dd>
+<dt>Show Only Errors</dt>
+<dd>Only include curves that are disabled or have errors.</dd>
+<dt>Search Filter</dt>
+<dd>Only include curves with keywords contained in the search text.</dd>
+<dt>Type Filter</dt>
+<dd>Filter curves by property type.</dd>
+<dt>Normalize</dt>
+<dd>Normalize curves so the maximum or minimum point equals 1.0 or -1.0.</dd>
+<dt>Auto</dt>
+<dd>Automatically recalculate curve normalization on every curve edit.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id7">
+<img alt="../../_images/graph_header_edit.jpg" src="../../_images/graph_header_edit.jpg" />
+<p class="caption"><span class="caption-text">Curve Controls.</span></p>
+</div>
+<dl class="docutils">
+<dt>Curve controls</dt>
+<dd><dl class="first last docutils">
+<dt>Auto Snap</dt>
+<dd><p class="first">Auto snap the keyframes for transformations.</p>
+<ul class="last simple">
+<li><em>No Auto-Snap</em></li>
+<li><em>Time Step</em></li>
+<li><em>Nearest Frame</em></li>
+<li><em>Nearest Marker</em></li>
+</ul>
+</dd>
+<dt>轴心点</dt>
+<dd><p class="first">Pivot point for rotation.</p>
+<dl class="last docutils">
+<dt>边界盒中心</dt>
+<dd>Center of the select keyframes.</dd>
+<dt>2D Cursor</dt>
+<dd>Center of the <em>2D Cursor</em>. <em>Time Cursor</em> + <em>Cursor</em>.</dd>
+<dt>Individual Centers</dt>
+<dd>Rotate the selected keyframe <em>Bézier</em> handles.</dd>
+</dl>
+</dd>
+<dt>Copy Keyframes</dt>
+<dd>Copy the selected keyframes to memory (<code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code>).</dd>
+<dt>Paste Keyframes</dt>
+<dd>Paste keyframes from memory to the current frame for selected curves (<code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code>).</dd>
+<dt>Create Snapshot</dt>
+<dd>Creates a picture with the current shape of the curves.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="channels-region">
+<h2>Channels Region<a class="headerlink" href="#channels-region" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id8">
+<img alt="../../_images/graph_channels.jpg" src="../../_images/graph_channels.jpg" />
+<p class="caption"><span class="caption-text">Channels Region.</span></p>
+</div>
+<p>The channels region is used to select and manage the curves for the graph editor.</p>
+<dl class="docutils">
+<dt>Hide curve</dt>
+<dd>Represented by the eye icon.</dd>
+<dt>Deactivate/Mute curve</dt>
+<dd>Represented by the speaker icon.</dd>
+<dt>Lock curve from editing</dt>
+<dd>Represented by the padlock icon.</dd>
+</dl>
+<div class="section" id="channel-editing">
+<h3>Channel Editing<a class="headerlink" href="#channel-editing" title="Permalink to this headline">¶</a></h3>
+<p><em>Select channel</em> <code class="kbd docutils literal"><span class="pre">LMB</span></code></p>
+<p><em>Multi Select/Deselect</em> <code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code></p>
+<p><em>Toggle Select All</em> <code class="kbd docutils literal"><span class="pre">A</span></code></p>
+<p><em>Border Select</em> (<code class="kbd docutils literal"><span class="pre">LMB</span></code> drag) or <code class="kbd docutils literal"><span class="pre">B</span></code> (<code class="kbd docutils literal"><span class="pre">LMB</span></code> drag)</p>
+<p><em>Border Deselect</em> (<code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> drag) or <code class="kbd docutils literal"><span class="pre">B</span></code> (<code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> drag)</p>
+<p><em>Delete selected</em> <code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Delete</span></code></p>
+<p><em>Lock selected</em> <code class="kbd docutils literal"><span class="pre">Tab</span></code></p>
+<p><em>Make only selected visible</em> <code class="kbd docutils literal"><span class="pre">V</span></code></p>
+<p><em>Enable Mute Lock selected</em> <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-W</span></code></p>
+<p><em>Disable Mute Lock selected</em> <code class="kbd docutils literal"><span class="pre">Alt-W</span></code></p>
+<p><em>Toggle Mute Lock selected</em> <code class="kbd docutils literal"><span class="pre">Shift-W</span></code></p>
+</div>
+</div>
+<div class="section" id="properties-region">
+<h2>Properties Region<a class="headerlink" href="#properties-region" title="Permalink to this headline">¶</a></h2>
+<p>The panels in the <em>Properties Region</em>.</p>
+<div class="section" id="view-properties-panel">
+<h3>View Properties Panel<a class="headerlink" href="#view-properties-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id9">
+<img alt="../../_images/graph_view_properties_panel.jpg" src="../../_images/graph_view_properties_panel.jpg" />
+<p class="caption"><span class="caption-text">View Properties Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Show Cursor</dt>
+<dd>Show the vertical <em>Cursor</em>.</dd>
+<dt>Cursor from Selection</dt>
+<dd>Set the <em>2D cursor</em> to the center of the selected keyframes.</dd>
+<dt>Cursor X</dt>
+<dd><p class="first"><em>Time Cursor</em> X position.</p>
+<dl class="last docutils">
+<dt>To Keys</dt>
+<dd>Snap selected keyframes to the <em>Time Cursor</em>.</dd>
+</dl>
+</dd>
+<dt>Cursor Y</dt>
+<dd><p class="first">Vertical <em>Cursor</em> Y position.</p>
+<dl class="last docutils">
+<dt>To Keys</dt>
+<dd>Snap selected keyframes to the <em>Cursor</em>.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="active-f-curve-panel">
+<h3>Active F-Curve Panel<a class="headerlink" href="#active-f-curve-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id10">
+<img alt="../../_images/graph_active_fcurve_panel.jpg" src="../../_images/graph_active_fcurve_panel.jpg" />
+<p class="caption"><span class="caption-text">Active F-Curve Panel.</span></p>
+</div>
+<p>This panel displays properties for the active <em>F-Curve</em>.</p>
+<dl class="docutils">
+<dt>Channel Name</dt>
+<dd><em>ID Type</em> + Channel name (X Location).</dd>
+<dt>RNA Path</dt>
+<dd><em>RNA Path</em> to property + Array index.</dd>
+<dt>Color Mode</dt>
+<dd><p class="first"><em>Color Mode</em> for the active <em>F-Curve</em>.</p>
+<dl class="last docutils">
+<dt>Auto Rainbow</dt>
+<dd>Increment the <em>HUE</em> of the <em>F-Curve</em> color based on the channel index.</dd>
+<dt>Auto XYZ to RGB</dt>
+<dd>For property sets like location xyz, automatically set the set of colors to red, green, blue.</dd>
+<dt>User Defined</dt>
+<dd>Define a custom color for the active <em>F-Curve</em>.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="active-keyframe-panel">
+<h3>Active Keyframe Panel<a class="headerlink" href="#active-keyframe-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id11">
+<img alt="../../_images/graph_active_keyframe_panel.jpg" src="../../_images/graph_active_keyframe_panel.jpg" />
+<p class="caption"><span class="caption-text">Active Keyframe Panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Interpolation</dt>
+<dd><p class="first">Set the forward interpolation for the active keyframe.</p>
+<dl class="last docutils">
+<dt>Constant</dt>
+<dd>Keep the same value till the next keyframe.</dd>
+<dt>Linear</dt>
+<dd>The difference between the next keyframe.</dd>
+<dt>Bézier</dt>
+<dd>Bézier interpolation to the next keyframe.</dd>
+</dl>
+</dd>
+<dt>Key</dt>
+<dd><dl class="first last docutils">
+<dt>Frame</dt>
+<dd>Set the frame for the active keyframe.</dd>
+<dt>Value</dt>
+<dd>Set the value for the active keyframe.</dd>
+</dl>
+</dd>
+<dt>Left Handle</dt>
+<dd>Set the position of the left interpolation handle for the active keyframe.</dd>
+<dt>Right Handle</dt>
+<dd>Set the position of the right interpolation handle for the active keyframe.</dd>
+</dl>
+</div>
+<div class="section" id="drivers-panel">
+<h3>Drivers Panel<a class="headerlink" href="#drivers-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id12">
+<img alt="../../_images/graph_drivers_panel.jpg" src="../../_images/graph_drivers_panel.jpg" />
+<p class="caption"><span class="caption-text">Drivers Panel.</span></p>
+</div>
+<p>See <a class="reference internal" href="../../animation/drivers.html#animation-drivers-panel"><span class="std std-ref">Drivers Panel</span></a> for more info.</p>
+</div>
+<div class="section" id="modifiers-panel">
+<h3>修改器 Panel<a class="headerlink" href="#modifiers-panel" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id13">
+<img alt="../../_images/graph_modifiers_panel.jpg" src="../../_images/graph_modifiers_panel.jpg" />
+<p class="caption"><span class="caption-text">修改器 Panel.</span></p>
+</div>
+<p>See <a class="reference internal" href="fcurves/fmodifiers.html"><span class="doc">F-修改器</span></a> for more info.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="fcurves/introduction.html"><span class="doc">Graph Editor - F-Curves</span></a></li>
+<li><a class="reference internal" href="fcurves/fmodifiers.html"><span class="doc">Graph Editor - F-修改器</span></a></li>
+<li><a class="reference internal" href="../../animation/actions.html"><span class="doc">Actions</span></a></li>
+<li><a class="reference internal" href="../../animation/drivers.html"><span class="doc">Drivers</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fcurves/index.html" class="btn btn-neutral float-right" title="F-Curves" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Graph Editor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

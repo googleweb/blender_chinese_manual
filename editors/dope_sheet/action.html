@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Action Editor &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Dope Sheet" href="index.html"/>
+        <link rel="next" title="Shape Key" href="shapekey.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">Graph Editor</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Dope Sheet</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Action Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shapekey.html">Shape Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../nla.html">NLA Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Dope Sheet</a> &raquo;</li>
+      
+    <li>Action Editor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/dope_sheet/action.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="action-editor">
+<h1>Action Editor<a class="headerlink" href="#action-editor" title="Permalink to this headline">¶</a></h1>
+<p>In Blender <em>Actions</em> are a generic containers for F-Curves.
+Actions can contain any number of F-Curves, and can be attached to any data block.
+As long as the RNA data paths stored in the Action&#8217;s F-Curves can be found on that data block,
+the animation will work. For example, an action modifying <em>X location</em> and <em>Y location</em>
+properties can be shared across multiple objects,
+since both objects have <em>X location</em> and <em>Y location</em> properties beneath them.</p>
+<p>The <em>Action Editor</em> enables you to see and edit the F-Curve data-blocks you defined as actions in the
+<em>F-Curve Editor</em>. So it takes place somewhere in-between the low-level
+<a class="reference internal" href="../graph_editor/introduction.html"><span class="doc">F-Curves</span></a>, and the high-level <a class="reference internal" href="../nla.html"><span class="doc">NLA editor</span></a>.
+Hence, you do not have to use them for simple F-Curve animations - and they have not much interest in themselves,
+so you will mostly use this editor when you do <a class="reference internal" href="../nla.html"><span class="doc">NLA animation</span></a>
+(they do have a few specific usages on their own,
+though, like e.g. with the <a class="reference internal" href="../../rigging/constraints/relationship/action.html"><span class="doc">Action constraint</span></a>,
+or the <a class="reference internal" href="../../rigging/posing/pose_library.html"><span class="doc">pose libraries</span></a>).</p>
+<p>This is not a mandatory editor, as you do can edit the actions used by the NLA directly in the
+<em>Graph Editor</em> (or even the <em>NLA Editor</em> one).
+However, it gives you a slightly simplified view of your F-Curve data-blocks
+(somewhat similar to the &#8220;key&#8221; mode of the F-Curve,
+even though more powerful in some ways) - and, more interesting,
+it can show you all &#8220;action&#8221; F-Curve data-blocks of a same object at once.</p>
+<p>Additionally, it also allows you to affect timing of the different keys of the layers created with the
+<a class="reference internal" href="../../interface/grease_pencil/introduction.html"><span class="doc">grease pencil tool</span></a>.</p>
+<p>Each &#8220;action&#8221; F-Curve data-block forms a top-level channel (see below).
+Note that an object can have several <em>Constraint</em> (one per animated constraint)
+and <em>Pose</em> (for armatures, one per animated bone) F-Curve data-blocks,
+and hence an action can have several of these channels.</p>
+<div class="section" id="action-data-blocks">
+<h2>Action Data-Blocks<a class="headerlink" href="#action-data-blocks" title="Permalink to this headline">¶</a></h2>
+<p>As everything else in Blender, actions are data-blocks. Unlike F-Curve ones,
+there is only one type of action, which can regroup all F-Curve of a given object.
+You will find its usual data-block controls in the <em>Action Editor</em> header.</p>
+<p>However, there is one specificity with action data-blocks: they have by default a &#8220;fake user&#8221;,
+i.e. once created, they are always kept in Blender file, even if no object uses them.
+This is due to the fact that actions are designed to be used in the NLA,
+where you can affect several different actions to a same object! Yes,
+this is the only way to use different actions (and hence,
+different F-Curve data-blocks of the same kind) to animate a same object.
+But as you have to assign an action to an object to be able to edit it
+(and an object can only have one action data-block at a time), to have &#8220;fake users&#8221; guaranties
+you that you will not lose your precious previously-edited actions when you start working on a new one!</p>
+<p>This editor shows, by default, the action data-block linked to the current active object.
+However, as with FCurvs, you can pin an <em>Action Editor</em> to a given action with the
+small &#8220;pin&#8221; button to the left of the data-block controls, in the header.
+This will force the editor to always display this data-block,
+whatever the current selected object is.</p>
+</div>
+<div class="section" id="channel-menu">
+<h2>Channel Menu<a class="headerlink" href="#channel-menu" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Delete <code class="kbd docutils literal"><span class="pre">X</span></code></dt>
+<dd><blockquote class="first">
+<div>Deletes the whole channel from the current action
+(i.e. unlink the underlying F-Curve data-block from this action data-block).</div></blockquote>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <code class="kbd docutils literal"><span class="pre">X</span></code> shortcut is area-dependent: if you use it in the left list part,
+it will delete the selected channels, whereas if you use it in the main area,
+it will delete the selected keyframes.</p>
+</div>
+</dd>
+<dt><span class="menuselection">设置 ‣ Toogle/Enable/Disable a Setting</span>, <code class="kbd docutils literal"><span class="pre">Shift-W</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-W</span></code> or <code class="kbd docutils literal"><span class="pre">Alt-W</span></code></dt>
+<dd>Enable/disable a channel&#8217;s setting (selected in the menu that pops-up) - currently, &#8220;lock&#8221; and/or &#8220;mute&#8221; only.</dd>
+<dt>Toggle Channel Editability <code class="kbd docutils literal"><span class="pre">Tab</span></code></dt>
+<dd>Locks or unlocks a channel for editing</dd>
+<dt>Extrapolation Mode</dt>
+<dd>Change the extrapolation between selected keyframes. More options are available in the Graph Editor.</dd>
+<dt>Expand Channels, Collapse Channels <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code>, <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code></dt>
+<dd>Expands or collapses selected channels.</dd>
+<dt>Move...</dt>
+<dd>This allows you to move top-level channels up/down <code class="kbd docutils literal"><span class="pre">Shift-PageUp</span></code>, <code class="kbd docutils literal"><span class="pre">Shift-PageDown</span></code>,
+or directly to the top/bottom <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-PageUp</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-PageDown</span></code>.</dd>
+<dt>Revive Disabled F-Curves</dt>
+<dd>Clears &#8220;disabled&#8221; tag from all F-Curves to get broken F-Curves working again</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shapekey.html" class="btn btn-neutral float-right" title="Shape Key" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

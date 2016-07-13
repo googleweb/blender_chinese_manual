@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>File Preferences &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="用户首选项" href="index.html"/>
+        <link rel="next" title="System Preferences" href="system.html"/>
+        <link rel="prev" title="Themes" href="themes.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editors/index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editors/index.html#settings">设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editors/properties/index.html">Properties Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Preferences</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#sections">章节</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/info/index.html">信息编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户首选项</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#sections">章节</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">Add-ons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">Themes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">File Preferences</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-paths">File Paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-execution">Auto Execution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-load">Save &amp; Load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-save">Auto Save</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">System Preferences</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../editors/index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">用户首选项</a> &raquo;</li>
+      
+    <li>File Preferences</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/preferences/file.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="file-preferences">
+<h1>File Preferences<a class="headerlink" href="#file-preferences" title="Permalink to this headline">¶</a></h1>
+<p>The <em>File Preferences</em> tab allows you to configure auto-save preferences and set default file paths for
+blend-files, rendered images, and more.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/user_prefs-file_tab.png"><img alt="../_images/user_prefs-file_tab.png" src="../_images/user_prefs-file_tab.png" style="width: 650px;" /></a>
+</div>
+<div class="section" id="file-paths">
+<span id="prefs-file-paths"></span><h2>File Paths<a class="headerlink" href="#file-paths" title="Permalink to this headline">¶</a></h2>
+<p>Locations for various external files can be set for the following options:</p>
+<dl class="docutils">
+<dt>Fonts</dt>
+<dd>Default location when searching for font files.</dd>
+<dt>Textures</dt>
+<dd>Default location when searching for image textures.</dd>
+<dt>渲染 Output</dt>
+<dd>Where rendered images/videos are saved.</dd>
+<dt>Scripts</dt>
+<dd>An additional location to search for Python scripts. See <a class="reference internal" href="#scripts-path">Scripts Path</a> below.</dd>
+<dt>Sounds</dt>
+<dd>Default location when searching for sound files.</dd>
+<dt>Temp</dt>
+<dd>The location where temporary files are stored.</dd>
+<dt>渲染 Cache</dt>
+<dd>The location where cached render images are stored.</dd>
+<dt>I18n Branches</dt>
+<dd>The path to the <code class="docutils literal"><span class="pre">/branches</span></code> directory of your local svn-translation copy, to allow translating from the UI.</dd>
+<dt>图像编辑器</dt>
+<dd>The path to an external program to use for image editing.</dd>
+<dt>动画 Player</dt>
+<dd>The path to an external program to use for playback of rendered animations.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If these folders do not exist, they will <em>not</em> be created automatically.</p>
+</div>
+<div class="section" id="scripts-path">
+<h3>Scripts Path<a class="headerlink" href="#scripts-path" title="Permalink to this headline">¶</a></h3>
+<p>By default Blender looks in several directories (OS dependant) for scripts.
+By setting a user script path in the preferences an additional directory is looked in. This
+can be used to store certain scripts/templates/presets independently of the currently used
+Blender Version.</p>
+<p>Inside the specified folder specific folders have to be created to tell Blender what to look
+for where. This folder structure has to mirror the structure of the scripts folder found in
+the installation directory of Blender:</p>
+<ul class="simple">
+<li>scripts</li>
+<li>add-ons</li>
+<li>modules</li>
+<li>presets</li>
+<li>camera</li>
+<li>cloth</li>
+<li>interface_theme</li>
+<li>operator</li>
+<li>render</li>
+<li>...</li>
+<li>startup</li>
+<li>templates
+Not all of the folders have to be present.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="auto-execution">
+<h2>Auto Execution<a class="headerlink" href="#auto-execution" title="Permalink to this headline">¶</a></h2>
+<p>Python scripts (including driver expressions) are not executed by default for security reasons.</p>
+<dl class="docutils">
+<dt>Auto Run Python Scripts</dt>
+<dd>You may choose to ignore these security issues and allow scripts to be executed automatically.</dd>
+<dt>Excluded Paths</dt>
+<dd>Blend files in these folders will <em>not</em> automatically run Python scripts.
+This can be used to define where blend-files from untrusted sources are kept.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="../advanced/scripting/python/security.html"><span class="doc">Python Security</span></a></p>
+</div>
+</div>
+<div class="section" id="save-load">
+<span id="prefs-save-load"></span><h2>Save &amp; Load<a class="headerlink" href="#save-load" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Relative Paths</dt>
+<dd>By default, external files use a <a class="reference internal" href="../data_system/files/relative_paths.html"><span class="doc">relative path</span></a>.</dd>
+<dt>Compress File</dt>
+<dd><p class="first">Compress blend-file when saving.</p>
+<p>The option to Compress files will compact your files whenever Blender is saving them.
+Dense meshes, large packed textures or lots of elements in your scene
+will result in a large blend being created.</p>
+<p class="last">This option may slow down Blender when you quit,
+or under normal operation when Blender is saving your backup files.
+Using this option traces processor time for file-size.</p>
+</dd>
+<dt>Load UI</dt>
+<dd>Default setting is to load the Window layout
+(the <a class="reference internal" href="../interface/editors/screens.html"><span class="doc">Screens</span></a>) of the saved file.
+This can be changed individually when loading a file from the
+<em>Open Blender File</em> panel of the <em>文件浏览器</em>.</dd>
+</dl>
+<div class="figure" id="id1">
+<img alt="../_images/interface-configuration-file-filefilter-25.jpg" src="../_images/interface-configuration-file-filefilter-25.jpg" />
+<p class="caption"><span class="caption-text">File extension filter.</span></p>
+</div>
+<dl class="docutils">
+<dt>Filter File Extensions</dt>
+<dd>By activating this, the file dialog in the 文件浏览器 will only show appropriate files
+(i.e. blend-files when loading a complete <em>Blender</em> setting).
+The selection of file types may be changed in the file dialog.</dd>
+<dt>Hide Dot File/Data-blocks</dt>
+<dd>Hide file which start with <code class="docutils literal"><span class="pre">.</span></code> on file browsers (in Linux and Apple systems, <code class="docutils literal"><span class="pre">.</span></code> files are hidden).</dd>
+<dt>Hide Recent Locations</dt>
+<dd>Hides the <em>Recent</em> panel of the <em>文件浏览器</em> which displays recently accessed folders.</dd>
+<dt>Show Thumbnails</dt>
+<dd>Displays a thumbnail of images and movies when using the <em>文件浏览器</em>.</dd>
+</dl>
+</div>
+<div class="section" id="auto-save">
+<span id="prefs-auto-save"></span><h2>Auto Save<a class="headerlink" href="#auto-save" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Save Versions</dt>
+<dd><p class="first">Number of versions created for the same file (for backup).</p>
+<p class="last">This option tells Blender to keep the indicated number of saved versions of your file in your current working
+directory when you manually save a file.
+These files will have the extension: <code class="docutils literal"><span class="pre">.blend1</span></code>, <code class="docutils literal"><span class="pre">.blend2</span></code>, etc.,
+with the number increasing to the number of versions you specify. Older files will be named with a higher number.
+e.g. With the default setting of 2, you will have three versions of your file: <code class="docutils literal"><span class="pre">*.blend</span></code> (your last save),
+<code class="docutils literal"><span class="pre">*.blend1</span></code> (your second last save) and <code class="docutils literal"><span class="pre">*.blend2</span></code> (your third last save).</p>
+</dd>
+<dt>Recent Files</dt>
+<dd>Number of files displayed in <span class="menuselection">File ‣ Open Recent</span>.</dd>
+<dt>Save Preview 图像s</dt>
+<dd>Previews of images and materials in the <em>文件浏览器</em> are created on demand.
+To save these previews into your blend-file,
+enable this option (at the cost of increasing the size of your blend-file).</dd>
+<dt>Auto Save Temporary File</dt>
+<dd><p class="first">Enable Auto Save (create a temporary file).</p>
+<p>Checking this box tells Blender to <em>automatically</em> save a backup copy of your work-in-progress to the Temp
+directory (refer to the <em>File</em> tab in the <em>用户首选项</em> for its location).</p>
+<p class="last">The Auto Saved files are named using a random number and have a blend extension.</p>
+</dd>
+<dt>Timer</dt>
+<dd><p class="first">Time to wait between automatic saves.</p>
+<p class="last">This specifies the number of minutes between each Auto Save.
+The default value of the Blender installation is 5 (5 minutes).
+The minimum is 1, and the Maximum is 60 (Save at every one hour).</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="../troubleshooting/recover.html"><span class="doc">Read more about Auto Save options</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="system.html" class="btn btn-neutral float-right" title="System Preferences" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="themes.html" class="btn btn-neutral" title="Themes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Occlude Object 物理 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="物理 Types" href="index.html"/>
+        <link rel="next" title="Sensor 物理" href="sensor.html"/>
+        <link rel="prev" title="Vehicle Controller 物理" href="vehicle.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">游戏引擎</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">游戏引擎简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../screen_layout.html">游戏逻辑屏幕布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials.html">游戏材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logic/index.html">逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../camera/index.html">相机</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">Blender Game 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">World 物理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using_ge.html">Converting 游戏引擎 物理</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">物理 Types</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="static.html">Static 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="no_collision.html">No Collision 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamic.html">Dynamic 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigid_body.html">Rigid Body 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="soft_body.html">Soft Body 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vehicle.html">Vehicle Controller 物理</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Occlude Object 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sensor.html">Sensor 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="character.html">Character 物理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigation_mesh.html">Navigation Mesh 物理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">游戏引擎</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">物理 Types</a> &raquo;</li>
+      
+    <li>Occlude Object 物理</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/game_engine/physics/types/occluder.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="occlude-object-physics">
+<h1>Occlude Object 物理<a class="headerlink" href="#occlude-object-physics" title="Permalink to this headline">¶</a></h1>
+<p>If an Occlude type object is between the camera and another object,
+that other object will not be rasterized (calculated for rendering).
+It is culled because it is occluded.</p>
+<p>There is a demo blend-file to exemplify some concepts:
+<a class="reference external" href="https://wiki.blender.org/index.php/Media:BGE-物理-Objects-Occluder.blend">BGE-物理-Objects-Occluder.blend</a></p>
+<ul class="simple">
+<li>A messed-up, subdivided Cube named &#8220;Cube&#8221;.</li>
+<li>Another one behind a &#8220;物理 Type: Occlude&#8221; plane, named &#8220;Cube.BG&#8221;.</li>
+<li>Another one outside the view Frustum, named &#8220;Cube.Off相机&#8221;.</li>
+</ul>
+<p>Now observe what happens to the profiling stats for each of the following (in order):</p>
+<ul class="simple">
+<li>Hit <code class="kbd docutils literal"><span class="pre">P</span></code> as the scene is. It hums along at a fairly slow rate. On my system the Rasterizer step takes 130ms.
+The framerate will finally jump up once the &#8220;Cube&#8221; object has completely moved out of the view frustum.
+It&#8217;s as if the Occluder doesn&#8217;t do anything while the Cube is behind it.</li>
+<li>Delete the &#8220;Cube.Off相机&#8221; object above,
+and notice that there is no improvement in speed.
+This is the view frustum culling working for you - it does not matter if that object exists or not.</li>
+<li>Hit <code class="kbd docutils literal"><span class="pre">Z</span></code> to view wireframe. Notice that in the 3D视图 you can see &#8220;Cube.BG&#8221;,
+but once you press <code class="kbd docutils literal"><span class="pre">P</span></code>, it is not there.</li>
+<li>Make the &#8220;Occluder&#8221; object take up the whole camera&#8217;s view with <code class="kbd docutils literal"><span class="pre">S-X-5</span></code>.
+You will see a huge leap in framerate,
+since almost nothing is being Rasterized. On my system the Rasterizer step drops to 5ms.</li>
+<li>Try a run with <span class="menuselection">World properties ‣ 物理 ‣ Occlusion Culling</span> disabled. It will be slow again.</li>
+<li>Reenable <span class="menuselection">World properties ‣ 物理 ‣ Occlusion Culling</span>
+and run it one more time to prove to yourself that your speed is back.</li>
+<li>Change the Occluder to &#8220;物理 Type: Static&#8221;. Notice that it is back to the original slowness.</li>
+<li>Change it back to &#8220;物理 Type: Occlude&#8221;.</li>
+<li>Now make the &#8220;Occluder&#8221; invisible. The framerate is back down to its original, slow rate.</li>
+</ul>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<p>As far as 物理 is concerned, this type is equivalent to Rigid Object &#8220;No collision&#8221;. The
+reason why the Occluder mode is mutually exclusive with other physics mode is to emphasize
+the fact that occluders should be specifically designed for that purpose and not every mesh
+should be an occluder. However,
+you can enable the Occlusion capability on physics objects using Python and 逻辑 bricks - see
+(Link- TODO)</p>
+<p>When an occluder object enters the view frustrum,
+the BGE builds a ZDepth buffer from the faces of that object.
+Whether the faces are one-side or two-side is important:
+only the front faces and two-side faces are used to build the ZDepth buffer.
+If multiple occluders are in the view frustrum,
+the BGE combines them and keeps the most foreground faces.</p>
+<p>The resolution of the ZDepth buffer is controllable in the World settings with the &#8220;Occlu Res&#8221;
+button:</p>
+<p>By default the resolution is 128 pixels for the largest dimension of the viewport while the
+resolution of the other dimension is set proportionally.
+Although 128 is a very low resolution, it is sufficient for the purpose of culling.
+The resolution can be increased to maximum 1024 but at great CPU expense.</p>
+<p>The BGE traverses the DBVT (Dynamic Bounding Volume Tree)
+and for each node checks if it is entirely hidden by the occluders and if so, culls the node
+(and all the objects it contains).</p>
+<p>To further optimize the feature, the BGE builds and uses the ZDepth buffer only when at least
+one occluder is in the view frustrum. Until then,
+there is no performance decrease compared to regular view frustrum culling.</p>
+</div>
+<div class="section" id="recommendations">
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this headline">¶</a></h2>
+<p>Occlusion culling is most useful when the occluders are large objects (buildings, mountains...)
+that hide many complex objects in an unpredictable way. However,
+do not be too concerned about performance: even if you use it inappropriately,
+the performance decrease will be limited due to the structure of the algorithm.</p>
+<p>There are situations where occlusion culling will not bring any benefit:</p>
+<ul class="simple">
+<li>If the occluders are small and do not hide many objects.<ul>
+<li>In that case, occlusion culling is just dragging your CPU down).</li>
+</ul>
+</li>
+<li>If the occluders are large but hides simple objects.<ul>
+<li>In that case you&#8217;re better off sending the objects to the GPU).</li>
+</ul>
+</li>
+<li>If the occluders are large and hides many complex objects but in a very predictable way.<ul>
+<li>例子: a house full of complex objects. Although occlusion culling will perform well in this case,
+you will get better performance by implementing a specific logic that hides/unhides the objects;
+for instance making the objects visible only when the camera enters the house).</li>
+</ul>
+</li>
+<li>Occluders can be visible graphic objects but beware that too many faces will make the ZDepth buffer creation slow.<ul>
+<li>For example, a terrain is not a good candidate for occlusion: too many faces and too many overlap.
+Occluder can be invisible objects placed inside more complex objects
+(ex: &#8220;in the walls&#8221; of a building with complex architecture).
+Occluders can have &#8220;holes&#8221; through which you will see objects.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sensor.html" class="btn btn-neutral float-right" title="Sensor 物理" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vehicle.html" class="btn btn-neutral" title="Vehicle Controller 物理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

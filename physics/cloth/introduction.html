@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Cloth Simulations" href="index.html"/>
+        <link rel="next" title="设置" href="settings/index.html"/>
+        <link rel="prev" title="Cloth Simulations" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physic-types">Physic Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Cloth Simulations</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="settings/index.html">设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples.html">例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Cloth Simulations</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/cloth/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Cloth simulation is one of the hardest aspects of CG,
+because it is a deceptively simple real-world item that is taken for granted,
+yet actually has very complex internal and environmental interactions.
+After years of development,
+Blender has a very robust cloth simulator that is used to make clothing, flags, banners,
+and so on. Cloth interacts with and is affected by other moving objects,
+the wind and other forces, as well as a general aerodynamic model,
+all of which is under your control.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/physics_cloth-example1.jpg"><img alt="../../_images/physics_cloth-example1.jpg" src="../../_images/physics_cloth-example1.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Cloth 例子.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/physics_cloth-oncarvedwood.jpg"><img alt="../../_images/physics_cloth-oncarvedwood.jpg" src="../../_images/physics_cloth-oncarvedwood.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Cloth on carved wooden men (made by motorsep).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/physics_cloth-example2.jpg"><img alt="../../_images/physics_cloth-example2.jpg" src="../../_images/physics_cloth-example2.jpg" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Cloth 例子.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A piece of cloth is any mesh, open or enclosed, that has been designated as cloth.
+The <em>Cloth</em> panels are located in the <em>物理</em> tab and consist of three panels of options.
+Cloth is either an open or closed mesh and is mass-less, in that all cloth is assumed to have the same density,
+or mass per square unit.</p>
+<p>Cloth is commonly modeled as a mesh grid primitive, or a cube, but can also be, for example, a teddy bear.
+However, Blender&#8217;s <a class="reference internal" href="../soft_body/index.html"><span class="doc">Softbody system</span></a> provides better simulation of closed meshes;
+Cloth is a specialized simulation of fabrics.</p>
+<p>Once the object is designated as Cloth, a Cloth <a class="reference internal" href="../../modeling/modifiers/index.html"><span class="doc">modifier</span></a>
+will be added to the object&#8217;s modifier stack automatically. As a <a class="reference internal" href="../../modeling/modifiers/index.html"><span class="doc">modifier</span></a>
+then, it can interact with other modifiers, such as <em>Armature</em> and <em>Smooth</em>. In these cases,
+the ultimate shape of the mesh is computed in accordance with the order of the modifier stack.
+For example, you should smooth the cloth <em>after</em> the modifier computes the shape of the cloth.</p>
+<p>So you edit the Cloth settings in two places: use the 物理 buttons to edit the
+properties of the cloth and use the Modifier stack to edit the Modifier properties related to
+display and interaction with other modifiers.</p>
+<p>You can <em>Apply</em> the cloth modifier to freeze, or lock in,
+the shape of the mesh at that frame, which removes the modifier. For example,
+you can drape a flat cloth over a table, let the simulation run, and then apply the modifier.
+In this sense, you are using the simulator to save yourself a lot of modeling time.</p>
+<p>Results of the simulation are saved in a cache, so that the shape of the mesh,
+once calculated for a frame in an animation, does not have to be recomputed again.
+If changes to the simulation are made, you have full control over clearing the cache and re-running the simulation.
+Running the simulation for the first time is fully automatic and no baking or separate step interrupts the workflow.</p>
+<p>Computation of the shape of the cloth at every frame is automatic and done in the background;
+thus you can continue working while the simulation is computed. However, it is CPU-intensive
+and depending on the power of your PC and the complexity of the simulation,
+the amount of CPU needed to compute the mesh varies, as does the lag you might notice.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Do not jump ahead</p>
+<p class="last">If you set up a cloth simulation but Blender has not computed the shapes for the duration of the simulation,
+and if you jump ahead a lot of frames forward in your animation,
+the cloth simulator may not be able to compute or show you an accurate mesh shape for that frame,
+if it has not previously computed the shape for the previous frame(s).</p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>A general process for working with cloth is to:</p>
+<ul class="simple">
+<li>Model the cloth object as a general starting shape.</li>
+<li>Designate the object as a &#8220;cloth&#8221; in the <em>物理</em> tab of the Properties editor.</li>
+<li>Model other deflection objects that will interact with the cloth.
+Ensure the Deflection modifier is last on the modifier stack, after any other mesh deforming modifiers.</li>
+<li>Light the cloth and assign materials and textures, UV-unwrapping if desired.</li>
+<li>If desired, give the object particles, such as steam coming off the surface.</li>
+<li>Run the simulation and adjust Options to obtain satisfactory results.
+The Timeline editors VCR controls are great for this step.</li>
+<li>Optionally age the mesh to some point in the simulation to obtain a new default starting shape.</li>
+<li>Make minor edits to the mesh on a frame-by-frame basis to correct minor tears.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">To avoid unstable simulation, ensure that the cloth object doesn&#8217;t penetrate any of the deflection objects
+or an unstable simulation will result.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings/index.html" class="btn btn-neutral float-right" title="设置" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Cloth Simulations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

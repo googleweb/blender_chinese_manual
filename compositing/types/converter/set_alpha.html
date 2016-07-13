@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Set Alpha Node &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Converter 节点" href="index.html"/>
+        <link rel="next" title="Switch View Node" href="switch_view.html"/>
+        <link rel="prev" title="RGB to BW Node" href="rgb_to_bw.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Types of 节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">Input 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Output 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">Color 节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Converter 节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="alpha_convert.html">Alpha Convert Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_ramp.html">ColorRamp Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="combine_separate.html">Combine/Separate 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="id_mask.html">ID Mask Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="math.html">Math Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rgb_to_bw.html">RGB to BW Node</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Set Alpha Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switch_view.html">Switch View Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">Filter 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">Vector 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matte/index.html">Matte 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">Distort 节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">Node Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">Layout 节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types of 节点</a> &raquo;</li>
+      
+          <li><a href="index.html">Converter 节点</a> &raquo;</li>
+      
+    <li>Set Alpha Node</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/compositing/types/converter/set_alpha.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="set-alpha-node">
+<h1>Set Alpha Node<a class="headerlink" href="#set-alpha-node" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/compositing_nodes_setalpha.png"><img alt="../../../_images/compositing_nodes_setalpha.png" src="../../../_images/compositing_nodes_setalpha.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Set Alpha Node.</span></p>
+</div>
+<p>This node adds an alpha channel to an image.</p>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>Standard image input.</dd>
+<dt>Alpha</dt>
+<dd>The amount of Alpha can be set for the whole image by using the input field or
+per pixel by connecting to the socket.</dd>
+</dl>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>This node has no properties.</p>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>图像</dt>
+<dd>Standard image output.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not, and is not intended to be,
+a general-purpose solution to the problem of compositing an image that does not contain Alpha information.
+You might wish to use &#8220;Chroma Keying&#8221; or &#8220;Difference Keying&#8221; (as discussed elsewhere) if you can.
+This node is most often used (with a suitable input being provided by means of the socket)
+in those troublesome cases when you <em>cannot</em>, for some reason, use those techniques directly.</p>
+</div>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-setalpha-to-fade-to-black">
+<h3>Using SetAlpha to Fade to Black<a class="headerlink" href="#using-setalpha-to-fade-to-black" title="Permalink to this headline">¶</a></h3>
+<p>To transition the audience from one scene or shot to another,
+a common technique is to &#8220;fade to black&#8221;. As its name implies,
+the scene fades to a black screen. You can also &#8220;fade to white&#8221; or whatever color you wish,
+but black is a good neutral color that is easy on the eyes and intellectually &#8220;resets&#8221; the
+viewer&#8217;s mind. The node map below shows how to do this using the Set Alpha node.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/compositing-setalpha_fadetoblack.jpg" src="../../../_images/compositing-setalpha_fadetoblack.jpg" />
+<p class="caption"><span class="caption-text">Fade To Black.</span></p>
+</div>
+<p>In the example above, the alpha channel of the swirl image is ignored.
+Instead, a <a class="reference internal" href="../input/time.html"><span class="doc">time node</span></a>
+introduces a factor from 0.00 to 1.00 over 60 frames, or about 2 seconds,
+to the Set Alpha node. Note that the time curve is exponentially-shaped,
+so that the overall blackness will fade in slowly and then accelerate toward the end.
+The Set Alpha node does not need an input image; instead, the flat (shadeless) black color is used.
+The Set Alpha Node uses the input factor and color to create a black image that has an alpha
+set which goes from 0.00 to 1.00 over 60 frames, or completely transparent to completely opaque.
+Think of alpha as a multiplier for how vivid you can see that pixel.
+These two images are combined by our trusty AlphaOver node completely (a <em>Fac</em> tor of 1.00)
+to produce the composite image. The SetAlpha node will thus, depending on the frame being rendered,
+produce a black image that has some degree of transparency.
+Setup and Animate, and you have an image sequence that fades to black over a 2-second period.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>No Scene information used</p>
+<p class="last">This example node map does not use the 渲染Layer.
+To produce this 2-second animation, no Blender scene information was used.
+This is an example of using Blender&#8217;s powerful compositing abilities
+separate from its modeling and animation capabilities.
+(A 渲染 Layer could be substituted for the 图像 layer,
+and the &#8220;fade-network&#8221; effect will still produce the same effect)</p>
+</div>
+</div>
+<div class="section" id="using-setalpha-to-fade-in-a-title">
+<h3>Using SetAlpha to Fade In a Title<a class="headerlink" href="#using-setalpha-to-fade-in-a-title" title="Permalink to this headline">¶</a></h3>
+<p>To introduce your animation,
+you will want to present the title of your animation over a background.
+You can have the title fly in, or fade it in. To fade it in,
+use the SetAlpha node with the Time node as shown below.</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/compositing-setalpha_fadeintitle.jpg" src="../../../_images/compositing-setalpha_fadeintitle.jpg" />
+<p class="caption"><span class="caption-text">Using Set Alpha to Fade in a Title.</span></p>
+</div>
+<p>In the above example, a Time curve provides the Alpha value to the input socket.
+The current 渲染Layer, which has the title in view, provides the image. As before,
+the trusty AlphaOver node mixes (using the alpha values)
+the background swirl and the alpha title to produce the composite image.
+Notice the <em>ConvertPre</em> -Multiply button is <strong>not</strong> enabled; this produces a composite
+where the title lets the background image show through where even the background image is
+transparent, allowing you to layer images on top of one another.</p>
+</div>
+<div class="section" id="using-setalpha-to-colorize-a-bw-image">
+<h3>Using SetAlpha to Colorize a BW 图像<a class="headerlink" href="#using-setalpha-to-colorize-a-bw-image" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id4">
+<img alt="../../../_images/compositing-setalpha_colorize.jpg" src="../../../_images/compositing-setalpha_colorize.jpg" />
+<p class="caption"><span class="caption-text">Using Set Alpha to Colorize an 图像.</span></p>
+</div>
+<p>In the example above, notice how the blue tinge of the render input colors the swirl.
+You can use the Set Alpha node&#8217;s color swatch with this kind of node map to add a consistent color to a BW image.</p>
+<p>In the example map to the right,
+use the <em>Alpha</em> value of the SetAlpha node to give a desired degree of colorization.
+Thread the input image and the Set Alpha node into an AlphaOver node to colorize any black and
+white image in this manner. Note the <em>ConvertPre</em> -Multiply button is enabled,
+which tells the AlphaOver node not to multiply the alpha values of the two images together.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="switch_view.html" class="btn btn-neutral float-right" title="Switch View Node" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rgb_to_bw.html" class="btn btn-neutral" title="RGB to BW Node" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

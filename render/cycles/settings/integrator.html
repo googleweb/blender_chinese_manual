@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integrator &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="渲染 设置" href="index.html"/>
+        <link rel="next" title="Light Paths" href="light_paths.html"/>
+        <link rel="prev" title="渲染 设置" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender 渲染 Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">渲染 设置</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Integrator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="light_paths.html">Light Paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="passes.html">渲染 Layers and Passes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="motion_blur.html">Motion Blur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nodes/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lamps.html">Lamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reducing_noise.html">Reducing Noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gpu_rendering.html">GPU 渲染ing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../osl.html">Open Shading Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">渲染 Baking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Cycles 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">渲染 设置</a> &raquo;</li>
+      
+    <li>Integrator</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/cycles/settings/integrator.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integrator">
+<h1>Integrator<a class="headerlink" href="#integrator" title="Permalink to this headline">¶</a></h1>
+<p>The integrator is the rendering algorithm used to compute the lighting.
+Cycles currently supports a path tracing integrator with direct light sampling.
+It works well for various lighting setups,
+but is not as suitable for caustics and some other complex lighting situations.</p>
+<p>Rays are traced from the camera into the scene,
+bouncing around until they find a light source such as a lamp, an object emitting light,
+or the world background. To find lamps and surfaces emitting light,
+both indirect light sampling (letting the ray follow the surface BSDF)
+and direct light sampling (picking a light source and tracing a ray towards it) are used.</p>
+<div class="section" id="scene-settings">
+<h2>Scene 设置<a class="headerlink" href="#scene-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sampling">
+<h3>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h3>
+<p>There are two integrator modes that can be used: path tracing and branched path tracing.
+The <em>path tracing integrator</em> is a pure path tracer;
+at each hit it will bounce light in one direction and pick one light to receive lighting from.
+This makes each individual sample faster to compute,
+but will typically require more samples to clean up the noise.</p>
+<dl class="docutils">
+<dt>渲染 Samples</dt>
+<dd>Number of paths to trace for each pixel in the final render. As more samples are taken,
+the solution becomes less noisy and more accurate.</dd>
+<dt>Preview Samples</dt>
+<dd>Number of samples for viewport rendering.</dd>
+</dl>
+<p>The <em>branched path tracing integrator</em> is similar,
+but at the first hit it will split the path for different surface components and
+will take all lights into account for shading instead of just one.
+This makes each sample slower, but will reduce noise,
+especially in scenes dominated by direct or one-bounce lighting.
+To get the same number of diffuse samples as in the path tracing integrator, note that e.g.
+250 path tracing samples = 10 AA samples x 25 diffuse samples.
+The Sampling panel shows this total number of samples.</p>
+<dl class="docutils">
+<dt>AA 渲染 Samples</dt>
+<dd>Number of samples to take for each pixel in the final render. More samples will improve antialiasing.</dd>
+<dt>AA Preview Samples</dt>
+<dd>Number of samples for viewport rendering.</dd>
+<dt>Diffuse Samples</dt>
+<dd>Number of diffuse bounce samples to take for each AA sample.</dd>
+<dt>Glossy Samples</dt>
+<dd>Number of glossy bounce samples to take for each AA sample.</dd>
+<dt>Transmission Samples</dt>
+<dd>Number of transmission bounce samples to take for each AA sample.</dd>
+<dt>AO Samples</dt>
+<dd>Number of ambient occlusion samples to take for each AA sample.</dd>
+<dt>Mesh Light Samples</dt>
+<dd>Number of mesh light samples to take for each AA sample.</dd>
+<dt>Subsurface Samples</dt>
+<dd>Number of subsurface scattering samples to take for each AA sample.</dd>
+<dt>Volume Samples</dt>
+<dd>Number of volume scattering samples to take for each AA sample.</dd>
+</dl>
+<p>For both integrators the noise pattern can be controlled.</p>
+<dl class="docutils">
+<dt>Seed</dt>
+<dd>Random number generator seed; each different value gives a different noise pattern.</dd>
+</dl>
+</div>
+<div class="section" id="bounces">
+<span id="cycles-bounces"></span><h3>Bounces<a class="headerlink" href="#bounces" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Max Bounces</dt>
+<dd>Maximum number of light bounces. For best quality, this should be set to the maximum. However, in practice,
+it may be good to set it to lower values for faster rendering.
+Setting it to maximum 0 bounces results in direct lighting only.</dd>
+<dt>Min Bounces</dt>
+<dd>Minimum number of light bounces for each path,
+after which the integrator uses Russian Roulette to terminate paths that contribute less to the image.
+Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces,
+it&#8217;s strongly recommended to set this equal to the maximum number of bounces.</dd>
+<dt>Diffuse Bounces</dt>
+<dd>Maximum number of diffuse bounces.</dd>
+<dt>Glossy Bounces</dt>
+<dd>Maximum number of glossy bounces.</dd>
+<dt>Transmission Bounces</dt>
+<dd>Maximum number of transmission bounces.</dd>
+<dt>Volume Bounces</dt>
+<dd>Maximum number of volume scattering bounces.</dd>
+</dl>
+</div>
+<div class="section" id="transparency">
+<h3>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Transparency Max</dt>
+<dd>Maximum number of transparency bounces.</dd>
+<dt>Transparency Min</dt>
+<dd>Minimum number of transparency bounces, after which Russian Roulette termination is used.</dd>
+<dt>Transparent Shadows</dt>
+<dd>For direct light sampling,
+use transparency of surfaces in between to produce shadows affected by transparency of those surfaces.</dd>
+</dl>
+</div>
+<div class="section" id="tricks">
+<h3>Tricks<a class="headerlink" href="#tricks" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils" id="render-cycles-integrator-no-caustics">
+<dt>Reflective Caustics</dt>
+<dd>While in principle path tracing supports rendering of caustics with a sufficient number of samples,
+in practice it may be inefficient to the point that there is just too much noise.
+This option can be unchecked, to disable reflective caustics.</dd>
+<dt>Refractive Caustics</dt>
+<dd>The same as above, but for refractive caustics.</dd>
+</dl>
+<dl class="docutils" id="render-cycles-integrator-filter-glossy">
+<dt>Filter Glossy</dt>
+<dd><p class="first">When using a value higher than 0.0, this will blur glossy reflections after blurry bounces,
+to reduce noise at the cost of accuracy. 1.0 is a good starting value to tweak.</p>
+<p>Some light paths have a low probability of being found while contributing much light to the pixel.
+As a result these light paths will be found in some pixels and not in others, causing fireflies. An example of
+such a difficult path might be a small light that is causing a small specular highlight on a sharp glossy
+material, which we are seeing through a rough glossy material.
+In fact in such a case we practically have a caustic.</p>
+<p class="last">With path tracing it is difficult to find the specular highlight,
+but if we increase the roughness on the material, the highlight gets bigger and softer, and so easier to find.
+Often this blurring will hardly be noticeable, because we are seeing it through a blurry material anyway,
+but there are also cases where this will lead to a loss of detail in lighting.</p>
+</dd>
+</dl>
+<dl class="docutils" id="render-cycles-integrator-clamp-samples">
+<dt>Clamp Direct</dt>
+<dd><p class="first">This option limits the maximum intensity a sample from rays which have not yet bounced can contribute to a pixel.
+Setting this option to 0.0 disables clamping altogether.
+Lower have a greater affect (dimmer samples) on the resulting image than higher values.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>A common issue encountered with path-tracing is the occurrence of <em>&#8220;fireflies&#8221;</em>:
+improbable samples that contribute very high values to pixels.
+This option provides a way to limit that. However, note that as you clamp out such values,
+other bright lights/reflections will be dimmed as well.</p>
+<p class="last">Care must be taken when using this setting to find a balance between mitigating fireflies and losing
+intentionally bright parts. It&#8217;s often useful to clamp indirect bounces separately,
+as they tend to cause more fireflies than direct bounces. See the <em>Clamp Indirect</em> setting.</p>
+</div>
+</dd>
+<dt>Clamp Indirect</dt>
+<dd>The same as <em>Clamp Direct</em>, but for rays which have bounced multiple times.</dd>
+</dl>
+<p>See <a class="reference internal" href="../reducing_noise.html#render-cycles-reducing-noise-clamp-samples"><span class="std std-ref">Reducing Noise</span></a> for examples of the clamp settings in use.</p>
+</div>
+</div>
+<div class="section" id="material-settings">
+<span id="render-cycles-integrator-material-settings"></span><h2>Material 设置<a class="headerlink" href="#material-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd><p class="first">By default objects with emitting materials use both direct and indirect light sampling methods,
+but in some cases it may lead to less noise overall to disable direct light sampling for some materials.
+This can be done by disabling the <em>Multiple Importance Sample</em> option.
+This is especially useful on large objects that emit little light compared to other light sources.</p>
+<p class="last">This option will only have an influence if the material contains an emission node;
+it will be automatically disabled otherwise.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="world-settings">
+<span id="render-cycles-integrator-world-settings"></span><h2>World 设置<a class="headerlink" href="#world-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd>By default lighting from the world is computed solely with indirect light sampling.
+However, for more complex environment maps this can be too noisy,
+as sampling the BSDF may not easily find the highlights in the environment map image. By enabling this option,
+the world background will be sampled as a lamp, with lighter parts automatically given more samples.</dd>
+<dt>Map Resolution</dt>
+<dd>When Multiple Importance Sample is enabled, this specifies the size of the importance map
+(resolution x resolution). Before rendering starts,
+an importance map is generated by &#8220;baking&#8221; a grayscale image from the world shader. This will then be used to
+determine which parts of the background are light and so should receive more samples than darker parts.
+Higher resolutions will result in more accurate sampling but take more setup time and memory.</dd>
+</dl>
+</div>
+<div class="section" id="lamp-settings">
+<h2>Lamp 设置<a class="headerlink" href="#lamp-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd>By default lamps use only direct light sampling. For area lights and sharp glossy reflections, however,
+this can be noisy,
+and enabling this option will enable indirect light sampling to be used in addition to reduce noise.</dd>
+<dt>Samples</dt>
+<dd>For the branch path tracing integrator, this specifies the number of direct light samples per AA sample.
+Point lamps might need only one sample, while area lamps typically need more.</dd>
+<dt>Max Bounces</dt>
+<dd>The maximum amount of bounces this light will contribute to the scene.</dd>
+<dt>Portal</dt>
+<dd>Only available for Area lamps. This setting enables area lamps to function as a light portal,
+helping to sample the environment lamp and therefore improving convergence.
+Note that this will make the area lamp itself invisible.</dd>
+</dl>
+</div>
+<div class="section" id="volume-render-settings">
+<h2>Volume 渲染 设置<a class="headerlink" href="#volume-render-settings" title="Permalink to this headline">¶</a></h2>
+<p>The scene has these settings:</p>
+<dl class="docutils">
+<dt>Step Size</dt>
+<dd>Distance between volume shader samples when rendering the volume.
+Lower values give more accurate and detailed results but also increased render time.</dd>
+<dt>Max Steps</dt>
+<dd>Maximum number of steps through the volume before giving up,
+to protect from extremely long render times with big objects or small step sizes.</dd>
+</dl>
+<p>The world and materials have the following setting:</p>
+<dl class="docutils">
+<dt>Homogeneous Volume</dt>
+<dd>Assume volume has the same density everywhere (not using any textures), for faster rendering.
+For example absorption in a glass object would typically not have any textures,
+and by knowing this we can avoid taking small steps to sample the volume shader.</dd>
+<dt>Sampling Method</dt>
+<dd>Options are &#8220;Multiple Importance&#8221;, &#8220;Distance&#8221; or &#8220;Equiangular&#8221;.
+If you&#8217;ve got a pretty dense volume that is lit from far away then distance sampling is usually more efficient.
+If you&#8217;ve got a light inside or near the volume then equiangular sampling is better.
+If you have a combination of both, then the multiple importance sampling will be better.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="light_paths.html" class="btn btn-neutral float-right" title="Light Paths" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="渲染 设置" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

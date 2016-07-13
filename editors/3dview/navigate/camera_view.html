@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>相机 View &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Navigating" href="index.html"/>
+        <link rel="next" title="Objects" href="../object/index.html"/>
+        <link rel="prev" title="3D视图" href="3d_view.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../transform/index.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display/index.html">Display Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../layers.html">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="index.html">Navigating</a> &raquo;</li>
+      
+    <li>相机 View</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/3dview/navigate/camera_view.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera-view">
+<h1>相机 View<a class="headerlink" href="#camera-view" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">View ‣ 相机 ‣ Active 相机</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Numpad0</span></code></div>
+</div>
+</div>
+<p>相机s View can be used to virtually compose shots and preview how the scene will look when rendered.
+Pressing <code class="kbd docutils literal"><span class="pre">Numpad0</span></code> will show the scene as viewed from the currently active camera.
+In this view you can also set the <em>渲染 Border</em> which defines the portion of the camera view to be rendered.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigating_camera-view-perspective-camera-render.jpg"><img alt="../../../_images/editors_3dview_navigating_camera-view-perspective-camera-render.jpg" src="../../../_images/editors_3dview_navigating_camera-view-perspective-camera-render.jpg" style="width: 640px;" /></a>
+<p class="caption"><span class="caption-text">相机 view provides a preview for the final rendered image.</span></p>
+</div>
+<p>There are several different ways to navigate and position the camera in your scene, some of them are explained below.</p>
+<div class="section" id="camera-navigation">
+<h2>相机 Navigation<a class="headerlink" href="#camera-navigation" title="Permalink to this headline">¶</a></h2>
+<p>There are several different ways to navigate and position the camera in your scene, some of them are explained below.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember that the active &#8220;camera&#8221; might be any kind of object.
+So these actions can be used, for example, to position and aim a lamp.</p>
+</div>
+<div class="section" id="move-active-camera-to-view">
+<h3>Move Active 相机 to View<a class="headerlink" href="#move-active-camera-to-view" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     物体模式</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Numpad0</span></code></div>
+</div>
+</div>
+<p>This feature allows you to position and orient the active camera to match your current viewport.</p>
+<p>Select a camera and then move around in the 3D视图 to a desired position and direction for
+your camera (so that you are seeing what you want the camera to see). Now press
+<code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Numpad0</span></code> and your selected camera positions itself to match the view,
+and switches to camera view.</p>
+</div>
+<div class="section" id="camera-view-positioning">
+<h3>相机 View Positioning<a class="headerlink" href="#camera-view-positioning" title="Permalink to this headline">¶</a></h3>
+<p>By enabling <a class="reference internal" href="../display/panels.html#dview-lock-camera-to-view"><span class="std std-ref">Lock 相机 to View</span></a> in the View menu of the View Properties panel,
+while in camera view, you can navigate the 3D视图 as usual,
+while remaining in camera view. Controls are exactly the same as when normally moving in 3D.</p>
+</div>
+<div class="section" id="roll-pan-dolly-and-track">
+<h3>Roll, Pan, Dolly, and Track<a class="headerlink" href="#roll-pan-dolly-and-track" title="Permalink to this headline">¶</a></h3>
+<p>To perform these camera moves, the camera must first be <em>selected</em>,
+so that it becomes the active object (while viewing through it,
+you can <code class="kbd docutils literal"><span class="pre">RMB</span></code> -click on the solid rectangular edges to select it).
+The following actions also assume that you are in camera view
+<code class="kbd docutils literal"><span class="pre">Numpad0</span></code>! Having done so, you can now manipulate the camera using the same commands
+that are used to manipulate any object:</p>
+<dl class="docutils">
+<dt>Roll</dt>
+<dd>Press <code class="kbd docutils literal"><span class="pre">R</span></code> to enter object rotation mode. The default will be to rotate the camera in its local Z-axis
+(the axis orthogonal to the camera view), which is the definition of a camera &#8220;roll&#8221;.</dd>
+<dt>Vertical Pan or Pitch</dt>
+<dd>This is just a rotation along the local X-axis. Press <code class="kbd docutils literal"><span class="pre">R</span></code> to enter object rotation mode, then <code class="kbd docutils literal"><span class="pre">X</span></code> twice
+(the first press selects the <em>global</em> axis - pressing the same letter a second time selects the <em>local</em> axis -
+this works with any axis;
+see the <a class="reference internal" href="../transform/transform_control/precision/axis_locking.html"><span class="doc">axis locking page</span></a>).</dd>
+<dt>Horizontal Pan or Yaw</dt>
+<dd>This corresponds to a rotation around the camera&#8217;s local Y axis... Yes, that is it,
+press <code class="kbd docutils literal"><span class="pre">R</span></code>, and then <code class="kbd docutils literal"><span class="pre">Y</span></code> twice!</dd>
+<dt>Dolly</dt>
+<dd>To dolly the camera, press <code class="kbd docutils literal"><span class="pre">G</span></code> then <code class="kbd docutils literal"><span class="pre">MMB</span></code> (or <code class="kbd docutils literal"><span class="pre">Z</span></code> twice).</dd>
+<dt>Sideways Tracking</dt>
+<dd>Press <code class="kbd docutils literal"><span class="pre">G</span></code> and move the mouse (you can use <code class="kbd docutils literal"><span class="pre">X</span></code> twice or <code class="kbd docutils literal"><span class="pre">Y</span></code>
+to get pure-horizontal or pure-vertical sideways tracking).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="3d_view.html#dview-walk-fly"><span class="std std-ref">Fly/Walk Mode</span></a></dt>
+<dd>When you are in walk/fly mode, navigation actually moves your camera:</dd>
+<dt><a class="reference internal" href="../display/panels.html#dview-lock-camera-to-view"><span class="std std-ref">Lock 相机 to View</span></a> When enabled,</dt>
+<dd>performing typical view manipulation operations will move the camera object.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../object/index.html" class="btn btn-neutral float-right" title="Objects" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3d_view.html" class="btn btn-neutral" title="3D视图" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

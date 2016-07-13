@@ -1,0 +1,74 @@
+.. |lock-button| image:: /images/icons_lock.png
+   :width: 1.1em
+.. |unlock-button| image:: /images/icons_unlock.png
+   :width: 1.1em
+
+********************
+变换 Properties
+********************
+
+Each object stores its position, orientation, and scale values.
+These may need to be manipulated numerically, reset, or applied.
+
+
+变换 Properties Panel
+==========================
+
+.. admonition:: 参考
+   :class: refbox
+
+   | Mode:     Edit and 物体模式s
+   | Menu:     :menuselection:`Object --> 变换 Properties`
+   | Hotkey:   :kbd:`N`
+
+
+The *变换 Properties* section in the *View Properties* panel allows you to view and
+manually/numerically control the position, rotation, and other properties of an object, in *物体模式*.
+In *编辑模式*, it mainly allows you to enter precise coordinates for a vertex,
+or median position for a group of vertices (including an edge/face). As each type of object has a different set of
+options in its *变换 Properties* panel in *编辑模式*,
+see their respective descriptions in the :doc:`建模 chapter </modeling/index>`.
+
+
+Options in 物体模式
+----------------------
+
+.. figure:: /images/transform-properties-panel.jpg
+   :align: right
+
+   变换 Properties panel in 物体模式.
+
+
+Location
+   The object's center location in global coordinates.
+Rotation
+   The object's orientation, relative to the global axes and its own center.
+Scale
+   The object's scale, relative to its center, in local coordinates
+   (i.e. the *Scale X* value represents the scale along the local X-axis).
+   Each object (cube, sphere, etc.), when created, has a scale of one Blender unit in each local direction.
+   To make the object bigger or smaller, you scale it in the desired dimension.
+Dimensions
+   The object's basic dimensions (in Blender units) from one outside edge to another, as if measured with a ruler.
+   For multi-faceted surfaces, these fields give the dimensions of the bounding box
+   (aligned with the local axes - think of a cardboard box just big enough to hold the object).
+
+Use this panel to either edit or display the object's transform properties such as position,
+rotation and/or scaling. These fields change the object's center and then affects the aspect
+of all of its *vertices* and faces.
+
+
+变换 Properties Locking
+----------------------------
+
+The locking feature of the Location, Rotation and Scale fields allows you to control a
+transform property solely from the properties panel.
+Once a lock has been activated any other methods used for transformation are blocked.
+For example, if you locked the *Location X* field then you cannot use the mouse to
+translate the object along the global X axis.
+However, you can still translate it using the *Location X* edit field.
+Consider the locking feature as a rigid constraint only changeable from the panel.
+
+To lock a field, click the padlock icon next to the field.
+The field is unlocked if the icon appears as (|unlock-button|),
+and it is locked if the icon appears as (|lock-button|).

@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Metas" href="index.html"/>
+        <link rel="next" title="Editing Metas" href="editing.html"/>
+        <link rel="prev" title="Metas" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Metas</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#primitives">Primitives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualization">Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#meta-ball-options">Meta Ball Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#meta-structure">Meta Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">Editing Metas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">Metas</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/metas/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object or 编辑模式s</div>
+<div class="line">Menu:     <span class="menuselection">Add ‣ Meta</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-A</span></code></div>
+</div>
+</div>
+<p>Meta objects are <em>implicit surfaces</em>,
+meaning that they are <em>not</em> <em>explicitly</em> defined by vertices (as meshes are)
+or control points (as surfaces are): they exist <em>procedurally</em>.
+Meta objects are literally mathematical formulas that are calculated on-the-fly by Blender.</p>
+<p>A very distinct visual characteristic of metas is that they are fluid <em>mercurial</em>,
+or <em>clay-like</em> forms that have a &#8220;rounded&#8221; shape. Furthermore,
+when two meta objects get close to one another, they begin to interact with one another.
+They &#8220;blend&#8221; or &#8220;merge&#8221;, as water droplets do, especially in zero-g (which, by the way, makes
+them very handy for modeling streams of water when you do not want to do a fluid simulation).
+If they subsequently move away from one another, they restore their original shape.</p>
+<p>Each of these is defined by its own underlying mathematical structure
+(<a class="reference internal" href="#technical-details">Technical Details</a>), and you can at any time switch between them using the <em>活动元素</em> panel.</p>
+<p>Typically <em>Meta</em> objects are used for special effects or as a basis for modeling.
+For example, you could use a collection of metas to form the initial shape of your model and
+then convert it to a mesh for further modeling. Meta objects are also very efficient for ray-tracing.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Meta</em> objects have a slightly different behavior in <em>物体模式</em>.</p>
+</div>
+<div class="section" id="primitives">
+<h2>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h2>
+<p>There are five predefined meta &#8220;primitives&#8221; (or configurations)
+available in the <span class="menuselection">Add ‣ Meta</span> sub-menu:</p>
+<dl class="docutils">
+<dt>Meta Ball</dt>
+<dd>adds a meta with a point underlying structure.</dd>
+<dt>Meta Tube</dt>
+<dd>adds a meta with a line segment underlying structure.</dd>
+<dt>Meta Plane</dt>
+<dd>adds a meta with a planar underlying structure.</dd>
+<dt>Meta Ellipsoid</dt>
+<dd>adds a meta with an ellipsoidal underlying structure.</dd>
+<dt>Meta Cube</dt>
+<dd>adds a meta with a volumetric cubic underlying structure.</dd>
+</dl>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<p>In 物体模式, the calculated mesh is shown, along with a black &#8220;selection ring&#8221; (becoming pink when selected).</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/metainfluenceandselection.jpg"><img alt="../../_images/metainfluenceandselection.jpg" src="../../_images/metainfluenceandselection.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Meta Ball example.</span></p>
+</div>
+<p>In <em>编辑模式</em> (<em>Meta Ball</em> <em>example</em>), a meta is drawn as a mesh (either shaded or as black wireframe,
+but without any vertex of course), with two colored circles: a red one for selection (pink when selected),
+and a green one for a direct control of the meta&#8217;s stiffness (light green when active).
+Note that except for the <em>Scale</em> <code class="kbd docutils literal"><span class="pre">S</span></code> transformation,
+having the green circle highlighted is equivalent to having the red one.</p>
+</div>
+<div class="section" id="meta-ball-options">
+<h2>Meta Ball Options<a class="headerlink" href="#meta-ball-options" title="Permalink to this headline">¶</a></h2>
+<p>All Meta objects in a scene interact with each other.
+The settings in the <em>MetaBall</em> section apply to all meta objects.
+In <em>编辑模式</em>,
+the <em>活动元素</em> panel appears for editing individual meta elements.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/metapropertiesobjectmode.jpg"><img alt="../../_images/metapropertiesobjectmode.jpg" src="../../_images/metapropertiesobjectmode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">global meta properties.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<a class="reference internal image-reference" href="../../_images/metapropertieseditmode.jpg"><img alt="../../_images/metapropertieseditmode.jpg" src="../../_images/metapropertieseditmode.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">individual meta properties.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="resolution">
+<h3>Resolution<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Resolution</em> controls the resolution of the resultant mesh as generated by the</p>
+<dl class="docutils">
+<dt>Meta</dt>
+<dd>object.</dd>
+<dt>View</dt>
+<dd>The 3D视图 resolution of the generated mesh. The range is from (0.05  to 1.0) (finest to coarsest).</dd>
+<dt>渲染</dt>
+<dd>The rendered resolution of the generated mesh. The range is from (0.05 to 1.0) (finest to coarsest).</dd>
+</dl>
+<p>One way to see the underlying mathematical structure is to lower the <em>Resolution</em>,
+increase the <em>Threshold</em> and set the <em>Stiffness</em> (see below)
+a fraction above the <em>Threshold</em>. Fig. <a class="reference internal" href="#fig-meta-intro-underlying"><span class="std std-ref">Underlying.</span></a> is a <em>Meta cube</em>
+with the above mentioned configuration applied as follows:
+<em>Resolution</em> of 0.410, <em>Threshold</em> of 5.0 and <em>Stiffness</em> a fraction above at 5.01.</p>
+<div class="figure" id="id4">
+<span id="fig-meta-intro-underlying"></span><a class="reference internal image-reference" href="../../_images/metaunderlyingstructure.jpg"><img alt="../../_images/metaunderlyingstructure.jpg" src="../../_images/metaunderlyingstructure.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Underlying.</span></p>
+<div class="legend">
+Left: Underlying structure, Right: the shape.</div>
+</div>
+<p>You can clearly see the underlying cubic structure that gives the meta cube its shape.</p>
+</div>
+<div class="section" id="threshold-influence">
+<h3>Threshold (Influence)<a class="headerlink" href="#threshold-influence" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object or 编辑模式s</div>
+<div class="line">Panel:    MetaBall</div>
+</div>
+</div>
+<p><em>Threshold</em> defines how much a meta&#8217;s surface &#8220;influences&#8221; other metas.
+It controls the <em>field level</em> at which the surface is computed.
+The setting is global to a group of <em>Meta</em> objects.
+As the threshold increases, the influence that each meta has on each other increases.</p>
+<p>There are two types of influence: <em>positive</em> or <em>negative</em>. The type can be toggled on
+the <em>活动元素</em> panel while in <em>编辑模式</em>,
+using the <em>Negative</em> button.
+You could think of <em>positive</em> as attraction and <em>negative</em> as repulsion of meshes.
+A negative meta will push away or repel the meshes of positive <em>Meta</em> objects.</p>
+<div class="figure" id="id5">
+<span id="fig-meta-intro-positive"></span><a class="reference internal image-reference" href="../../_images/metaintersection.jpg"><img alt="../../_images/metaintersection.jpg" src="../../_images/metaintersection.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Positive.</span></p>
+</div>
+<p>A <em>positive</em> influence is defined as an attraction,
+meaning the meshes will stretch towards each other as the <em>rings of influence</em> intersect.
+Fig. <a class="reference internal" href="#fig-meta-intro-positive"><span class="std std-ref">Positive.</span></a> shows two meta balls&#8217; <em>rings of influence</em> intersecting with a <em>positive</em> influence.</p>
+<p>Notice how the meshes have pulled towards one another.
+The area circled in white shows the green <em>influence</em> rings intersecting.</p>
+</div>
+<div class="section" id="update">
+<h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
+<p>While transforming metas (grab/move, scale, etc.), you have four &#8220;modes&#8221; of visualization,
+located in the <em>Update</em> buttons group of the <em>MetaBall</em> panel:</p>
+<dl class="docutils">
+<dt>Always</dt>
+<dd>fully draw the meta during transformations.</dd>
+<dt>Half Res</dt>
+<dd>During transformations, draw the meta at half its <em>Wiresize</em> resolution.</dd>
+<dt>Fast</dt>
+<dd>Do not show meta mesh during transformations.</dd>
+<dt>Never</dt>
+<dd>Never show meta mesh (not a very recommended option, as the meta is only visible at render time!).</dd>
+</dl>
+<p>This should help you if you experience difficulties (metas are quite compute-intensive...),
+but with modern computers, this shouldn&#8217;t happen, unless you use many metas,
+or very high resolutions...</p>
+</div>
+</div>
+<div class="section" id="meta-structure">
+<h2>Meta Structure<a class="headerlink" href="#meta-structure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="technical-details">
+<h3>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h3>
+<p>A more formal definition of a meta object can be given as a <em>directing structure</em> which can
+be seen as the source of a static field. The field can be either positive or negative and
+hence the field generated by neighboring directing structures can attract or repel.</p>
+<p>The implicit surface is defined as the surface where the 3D field generated by all the
+directing structures assume a given value. For example a meta ball,
+whose directing structure is a point, generates an isotropic (i.e.
+identical in all directions) field around it and the surfaces at constant field value are
+spheres centered at the directing point.</p>
+<p><em>Meta</em> objects are nothing more than mathematical formulae that perform logical operations on one another
+(AND, OR), and that can be added and subtracted from each other.
+This method is also called <em>Constructive Solid Geometry</em> (CSG).
+Because of its mathematical nature, CSG uses little memory, but requires lots of processing power to compute.</p>
+</div>
+<div class="section" id="underlying-structure">
+<h3>Underlying Structure<a class="headerlink" href="#underlying-structure" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    <span class="menuselection">MetaBall tools ‣ 变换 Properties</span></div>
+</div>
+</div>
+<p>Blender has five types of metas, each determined by its underlying (or directing) structure.
+In <em>编辑模式</em>, you can change this structure,
+either using the relevant buttons in the <em>MetaBall tools</em> panel,
+or the drop-down list in the <em>变换 Properties</em> panel <code class="kbd docutils literal"><span class="pre">N</span></code>.
+Depending on the structure, you might have additional parameters,
+located in both <em>变换 Properties</em> and <em>MetaBall tools</em> panels.</p>
+<dl class="docutils">
+<dt>Ball (point, zero-dimensional structure)</dt>
+<dd>This is the simplest meta, without any additional setting. As it is just a point,
+it generates an isotropic field, yielding a spherical surface
+(this is why it is called <em>Meta Ball</em> or <em>Ball</em> in Blender).</dd>
+<dt>Tube (straight line, uni-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a straight line of a given length.
+This gives a cylindrical surface, with rounded closed ends. It has one additional parameter:</p>
+<dl class="last docutils">
+<dt>dx</dt>
+<dd>The length of the line (and hence of the tube - defaults set to 1.0).</dd>
+</dl>
+</dd>
+<dt>Plane (rectangular plane, bi-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a rectangular plane.
+This gives a parallelepipedal surface, with a fixed thickness,
+and rounded borders. It has two additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy</dt>
+<dd>The length, width of the rectangle (defaults set to 1.0).</dd>
+</dl>
+<p class="last">Note that by default, the plane is a square.</p>
+</dd>
+<dt>Elipsoid (ellipsoidal volume, tri-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by an ellipsoidal volume.
+This gives an ellipsoidal surface. It has three additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy, dz</dt>
+<dd>The length, width, height of the ellipsoid (defaults set to 1.0).</dd>
+</dl>
+<p class="last">Note that by default, the volume is a sphere, producing a spherical meta, as the <em>Ball</em> option...</p>
+</dd>
+<dt>Cube (parallelepipedal volume, tri-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a parallelepipedal volume.
+This gives a parallelepipedal surface, with rounded edges.
+As you might have guessed, it has three additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy, dz</dt>
+<dd>The length, width, height of the parallelepiped (defaults set to 1.0).</dd>
+</dl>
+<p class="last">Note that by default, the volume is a cube.</p>
+</dd>
+</dl>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/metaprimitives.jpg"><img alt="../../_images/metaprimitives.jpg" src="../../_images/metaprimitives.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">The five Meta primitives.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Editing Metas" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Metas" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing and Manipulating &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="视频序列编辑器" href="index.html"/>
+        <link rel="next" title="Strips" href="strips/index.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/图像编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">视频序列编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Editing and Manipulating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strips/index.html">Strips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="display_modes.html">Sequence Display Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">视频序列编辑器</a> &raquo;</li>
+      
+    <li>Editing and Manipulating</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/sequencer/usage.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-and-manipulating">
+<h1>Editing and Manipulating<a class="headerlink" href="#editing-and-manipulating" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="adjusting-the-view">
+<h2>Adjusting the View<a class="headerlink" href="#adjusting-the-view" title="Permalink to this headline">¶</a></h2>
+<p>Use these shortcuts to adjust the sequence area of the VSE:
+Pan <code class="kbd docutils literal"><span class="pre">MMB</span></code> Zoom <code class="kbd docutils literal"><span class="pre">Wheel</span></code> Vertical Scroll use <code class="kbd docutils literal"><span class="pre">Shift-Wheel</span></code>,
+or drag on the left scroll bar. Horizontal Scroll use <code class="kbd docutils literal"><span class="pre">Ctrl-Wheel</span></code>,
+or drag on the lower scroll bar. Scale View Vertically, drag on the circles on the vertical scroll bar.
+Scale View Horizontally, drag on the circles on the horizontal scroll bar.</p>
+<p>As usual, the View Menu controls what and how you view in the workspace.</p>
+<dl class="docutils">
+<dt>Properties Panel</dt>
+<dd>The Properties Panel contains options for the way the preview is displayed.</dd>
+<dt>View all Sequences <code class="kbd docutils literal"><span class="pre">Home</span></code></dt>
+<dd>Zooms the display to show all strips.</dd>
+<dt>Show Preview 1:1 <code class="kbd docutils literal"><span class="pre">Numpad1</span></code></dt>
+<dd>Resizes preview to a 1:1 scale (actual size).</dd>
+<dt>View Selected <code class="kbd docutils literal"><span class="pre">NumpadPeriod</span></code></dt>
+<dd>Zooms in the display to fit only the selected strips</dd>
+</dl>
+<p>Use this when working arranging a lot of strips and you want to use all of your screen to work.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Sequence</div>
+<div class="line">Menu:     <span class="menuselection">View ‣ Show Frames, View ‣ Show Seconds</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-T</span></code></div>
+</div>
+</div>
+<dl class="docutils">
+<dt>Draw Frames</dt>
+<dd>Displays the frame number instead of the time, in the Frame Number Indicator.</dd>
+<dt>Show Frame Number Indicator</dt>
+<dd>Toggles the units of measure across the bottom of the workspace between seconds or frames.</dd>
+<dt>变换 Markers</dt>
+<dd>变换 Markers as well as Strips.</dd>
+</dl>
+<div class="section" id="scrubbing">
+<h3>Scrubbing<a class="headerlink" href="#scrubbing" title="Permalink to this headline">¶</a></h3>
+<p>To move back and forth through your movie, use the Timeline editor.
+<code class="kbd docutils literal"><span class="pre">LMB</span></code> click and drag left/right in the Timeline editor,
+moving the vertical bar which indicates the current frame. As you do,
+the image for that frame is displayed in the VSE editor.</p>
+<p>When you <code class="kbd docutils literal"><span class="pre">LMB</span></code> directly on a sequence strip, this will show the strip <em>solo</em>,
+(temporarily disregarding effects and other strips, showing only this strips output).</p>
+<p>Real-time scrubbing and image display is possible on reasonable computers when viewing an
+image sequence or movie (avi/mov) file.</p>
+<p>Scene strips can use OpenGL previews or proxies for realtime playback,
+otherwise displaying rendered frame is supported, but typically too slow for real-time playback.</p>
+</div>
+<div class="section" id="view-modes">
+<h3>View Modes<a class="headerlink" href="#view-modes" title="Permalink to this headline">¶</a></h3>
+<p>The icons in the header allow to change the view of the VSE. By default,
+only the sequencer is displayed. The second button displays only the Preview window,
+and the third button displays both the Sequencer and the Preview.</p>
+<p>When the preview is enabled, you have several options to change what type pf preview to display.
+They are explained in the <a class="reference internal" href="display_modes.html"><span class="doc">Display Modes Page</span></a>.</p>
+</div>
+<div class="section" id="refresh-view">
+<h3>Refresh View<a class="headerlink" href="#refresh-view" title="Permalink to this headline">¶</a></h3>
+<p>Certain operations, like moving an object in 3D视图, may not force the <em>Sequencer</em>
+to call for a refresh of the rendered image (since the movement may not affect the rendered image).
+If an image or video, used as a strip, is changed by some application outside of Blender,
+Blender has no real way of being notified from your operating system.
+To force Blender to re-read in files, and to force a re-render of the 3D视图,
+click the <em>Refresh</em> button to force Blender to clear all cached images and compute the current frame.</p>
+</div>
+</div>
+<div class="section" id="selecting-strips">
+<h2>Selecting Strips<a class="headerlink" href="#selecting-strips" title="Permalink to this headline">¶</a></h2>
+<p>The Select Menu helps you select strips in different ways.</p>
+<dl class="docutils">
+<dt>Strips to the Left</dt>
+<dd>Select all strips to the left of the currently selected strip.</dd>
+<dt>Strips to the Right</dt>
+<dd>Select all strips to the right of the currently selected strip.</dd>
+<dt>Select Linked Time <code class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></code></dt>
+<dd>Selects the strip under the cursor as well as all strips with the same start/end.</dd>
+<dt>Select Surrounding Handles <code class="kbd docutils literal"><span class="pre">Alt-RMB</span></code></dt>
+<dd><p class="first">Selects the strip under the cursor as well as the handles of neighboring strips.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Select with this method
+to move a strip that is between to others without affecting the selected strip&#8217;s length.</p>
+</div>
+</dd>
+<dt>Select Both Handles <code class="kbd docutils literal"><span class="pre">Alt-RMB</span></code></dt>
+<dd><p class="first">Select the handle under the cursor as well as the handles of the adjacent strip.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Select with this method
+when you want to change the timing of a cut.</p>
+</div>
+</dd>
+<dt>Linked <code class="kbd docutils literal"><span class="pre">L</span></code></dt>
+<dd>Select all strips linked to the currently selected strip</dd>
+<dt>Select All <code class="kbd docutils literal"><span class="pre">A</span></code></dt>
+<dd>Selects all the strips loaded.</dd>
+<dt>Select Inverse <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></dt>
+<dd>Inverts the current selection.</dd>
+<dt>Border Select <code class="kbd docutils literal"><span class="pre">B</span></code></dt>
+<dd>Begins the <em>Box</em> mode select process.
+Click and drag a rectangular lasso around a region of strips in your Sequence workspace.
+When you release the mouse button, the additional strips will be selected.</dd>
+</dl>
+</div>
+<div class="section" id="frame">
+<h2>Frame<a class="headerlink" href="#frame" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Set Preview Range</dt>
+<dd>TODO.</dd>
+<dt>Clear Preview Range</dt>
+<dd>TODO.</dd>
+<dt>Jump to end of strip <code class="kbd docutils literal"><span class="pre">PageUp</span></code></dt>
+<dd>Current frame will jump to end of strip.</dd>
+<dt>Jump to beginning of strip <code class="kbd docutils literal"><span class="pre">PageDown</span></code></dt>
+<dd>Current frame will jump to beginning of strip.</dd>
+</dl>
+</div>
+<div class="section" id="moving-and-modifying-strips">
+<h2>Moving and Modifying Strips<a class="headerlink" href="#moving-and-modifying-strips" title="Permalink to this headline">¶</a></h2>
+<p><code class="kbd docutils literal"><span class="pre">G</span></code> Moves the selected strip(s) in time or in channels.
+Move your mouse horizontally (left/right) to change the strip&#8217;s position in time.
+Move vertically (up/down) to change channels.</p>
+<ul class="simple">
+<li>To snap while dragging hold <code class="kbd docutils literal"><span class="pre">Ctrl</span></code></li>
+<li>To &#8220;ripple edit&#8221; (Make room for strips you drag) hold <code class="kbd docutils literal"><span class="pre">Alt</span></code> when placing a strip.</li>
+</ul>
+<p>If you have added a strip by mistake or no longer want it,
+delete it by pressing <em>X</em> or using this menu option.</p>
+<p><em>Duplicate</em> a strip to make an unlinked copy; drag it to a time and channel, and drop it by <code class="kbd docutils literal"><span class="pre">LMB</span></code> click.</p>
+<p>The Strip Menu contains additional tools for working with strips:</p>
+<ul class="simple">
+<li><em>Grab/Move</em></li>
+<li><em>Grab/Extend from Frame</em></li>
+<li><em>Cut (hard) at frame</em></li>
+<li><em>Cut (soft) at frame</em></li>
+<li><em>Separate 图像s</em></li>
+<li><em>Deinterlace Movies</em></li>
+<li><em>Duplicate Strips</em></li>
+<li><em>Erase Strips</em></li>
+<li><em>Set 渲染 Size</em></li>
+<li><em>Make Meta Strip</em></li>
+<li><em>UnMeta Strip</em></li>
+<li><em>Reload Strips</em></li>
+<li><em>Reassign Inputs</em></li>
+<li><em>Swap Inputs</em></li>
+<li><em>Lock Strips</em></li>
+<li><em>UnLock Strips</em></li>
+<li><em>Mute Strips</em></li>
+<li><em>Un-Mute Strips</em></li>
+<li><em>Mute Deselected Strips</em></li>
+<li><em>Snap Strips</em></li>
+<li><em>Swap Strips</em></li>
+</ul>
+<div class="section" id="snap-to-frame">
+<h3>Snap to Frame<a class="headerlink" href="#snap-to-frame" title="Permalink to this headline">¶</a></h3>
+<p><code class="kbd docutils literal"><span class="pre">Shift-S</span></code>
+Position your cursor (vertical green line) to the time you want.
+Snap to current frame to start a strip exactly at the beginning of the frame.
+If your Time display is in seconds,
+you can get to fractional parts of a second by zooming the display;
+you can get all the way down to an individual frame.</p>
+</div>
+<div class="section" id="separate-images-to-strips">
+<h3>Separate 图像s to Strips<a class="headerlink" href="#separate-images-to-strips" title="Permalink to this headline">¶</a></h3>
+<p><code class="kbd docutils literal"><span class="pre">Y</span></code> Converts the strip into multiple strips, one strip for each frame.
+Very useful for slide shows and other cases where you want to bring in a set on non-continuous images.</p>
+</div>
+<div class="section" id="editing-strips">
+<h3>Editing Strips<a class="headerlink" href="#editing-strips" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">The <em>entire</em> strip could be selected by clicking <code class="kbd docutils literal"><span class="pre">RMB</span></code> in the middle of the strip;
+holding it down (or pressing <code class="kbd docutils literal"><span class="pre">G</span></code> rab) and then moving the mouse drags a strip around.</p>
+</li>
+<li><p class="first">The <em>start frame offset</em> for that strip could be selected by clicking <code class="kbd docutils literal"><span class="pre">RMB</span></code> on the left arrow of the strip;
+holding it down (or pressing <code class="kbd docutils literal"><span class="pre">G</span></code> rab and then moving the mouse left/right
+changes the start frame within the strip by the number of frames you move it:</p>
+<ul class="simple">
+<li>If you have a 20-image sequence strip, and drag the left arrow to the right by 10 frames,
+the strip will start at image 11 (images 1 to 10 will be skipped).
+Use this to clip off a rollup or useless lead-in.</li>
+<li>Dragging the left arrow left will create a lead-in (copies) of the first frame for as many frames as you drag it.
+Use this when you want some frames for transitions to the this clip.</li>
+</ul>
+</li>
+<li><p class="first">The <em>end frame</em> of the strip could be selected by clicking <code class="kbd docutils literal"><span class="pre">RMB</span></code> on the right arrow of the strip;
+holding it down (or pressing <code class="kbd docutils literal"><span class="pre">G</span></code> rab) and then moving the mouse changes the ending frame within the strip:</p>
+<ul class="simple">
+<li>Dragging the right arrow to the left shortens the clip;
+any original images at the tail are ignored. Use this to quickly clip off a rolldown.</li>
+<li>Dragging the right arrow right extends the clip.
+For movies and images sequences, more of the animation is used until exhausted.
+Extending a clip beyond its end results in Blender making a copy of the last image.
+Use this for transitions out of this clip.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>多选</p>
+<p class="last">You can select several (handles of) strips by <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> clicking: when you press <code class="kbd docutils literal"><span class="pre">G</span></code>,
+everything that is selected will move with your mouse- this means that,
+for example, you can at the same time move a strip, shorten two others, and extend a forth one.</p>
+</div>
+</li>
+<li><p class="first">Strip Extend</p>
+<p>With a number of strips selected, pressing <code class="kbd docutils literal"><span class="pre">E</span></code> lets you interactively extend the strips.
+This is is similar to grabbing but is useful for extending (or shortening) time around the current frame.</p>
+<p>All selected strip handles to the &#8220;mouse side&#8221; of the current frame indicator will transform together,
+so you can change the duration of the current frame.</p>
+</li>
+</ul>
+<p>While splicing two strips happens just by placing them finish-to-start,
+cut a strip by pressing <code class="kbd docutils literal"><span class="pre">K</span></code> to cut. At the selected frame for the selected strips,
+<code class="kbd docutils literal"><span class="pre">K</span></code> cuts them in two. Use Cut to trim off roll-ups or lead-ins, or roll-downs or extra film shot.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Note on the <em>Cut</em></p>
+<p>When you cut a strip, you do not really make a cut like it cutting a real of film.
+In fact, you make a copy of the strip: the end of the original one is &#8220;winded&#8221; to the cut point,
+as with the beginning of the new copy.</p>
+<p>For example, imagine that you have a strip of 50 frames,
+and that you want to delete the first ten ones.
+You have to go to frame 11, and press <code class="kbd docutils literal"><span class="pre">K</span></code>;
+the cut divides your strip in two parts. You now can select the first small part
+(frame 1 to frame 10), and delete it press <code class="kbd docutils literal"><span class="pre">X</span></code>.</p>
+<p>You might think that you have really erased the frames (1 to 10),
+but there are still there, winded, as in a film reel, under your frame 11:
+you just have deleted one of the two copies of your strip created by the cut.
+And you can at any time get your lost frames back
+(just <code class="kbd docutils literal"><span class="pre">RMB</span></code> -click on the left arrow of the strip,
+then <code class="kbd docutils literal"><span class="pre">G</span></code> grab it to the left to display the desired number of frames again (or to
+the right to hid more frames - this is another way to remove frames at the beginning/end of a strip!).</p>
+<p class="last">This is at the heart of nearly every editor solution, and that is quite handy!</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Action Stops</p>
+<p class="last">When extending the start beyond the beginning or end after the ending,
+keep in mind that only the last image copies, so when viewed, action will stop on that frame.
+Start your transition (fade, cross) a little early while action is
+still happening so that the stop action is not that noticeable.</p>
+</div>
+<p>Change the length of an effect strip by changing the start/end frame of the origin strips.</p>
+</div>
+<div class="section" id="copy-and-paste">
+<h3>Copy and Paste<a class="headerlink" href="#copy-and-paste" title="Permalink to this headline">¶</a></h3>
+<p>You can copy a clip and paste it using the two header buttons.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="strips/index.html" class="btn btn-neutral float-right" title="Strips" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

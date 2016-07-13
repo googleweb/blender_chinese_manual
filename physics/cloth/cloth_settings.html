@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>设置 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Cloth Simulations" href="index.html"/>
+        <link rel="next" title="Collisions" href="collisions.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloth Simulations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cloth">Cloth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloth-sewing-springs">Cloth Sewing Springs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="collisions.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html">例子s</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Cloth Simulations</a> &raquo;</li>
+      
+    <li>设置</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/cloth/cloth_settings.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="settings">
+<h1>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cloth">
+<h2>Cloth<a class="headerlink" href="#cloth" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Presets</dt>
+<dd>Contains a number of preset cloth examples, and allows you to add your own.</dd>
+<dt>Quality</dt>
+<dd>Set the number of simulation steps per frame. Higher values result in better quality, but is slower.</dd>
+</dl>
+<div class="section" id="material">
+<h3>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Mass</dt>
+<dd>The mass of the cloth material.</dd>
+<dt>Structural</dt>
+<dd>Overall stiffness of the cloth.</dd>
+<dt>Bending</dt>
+<dd>Wrinkle coefficient. Higher creates more large folds.</dd>
+</dl>
+</div>
+<div class="section" id="damping">
+<h3>Damping<a class="headerlink" href="#damping" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Spring</dt>
+<dd>Damping of cloth velocity. Higher = more smooth, less jiggling.</dd>
+<dt>Air</dt>
+<dd>Air normally has some thickness which slows falling things down.</dd>
+</dl>
+</div>
+<div class="section" id="pinning">
+<h3>Pinning<a class="headerlink" href="#pinning" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/physics-cloth-pin-example_01.png"><img alt="../../_images/physics-cloth-pin-example_01.png" src="../../_images/physics-cloth-pin-example_01.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Cloth in action.</span></p>
+</div>
+<p>The first thing you need when pinning cloth is a <a class="reference internal" href="../../modeling/meshes/vertex_groups/index.html"><span class="doc">Vertex Group</span></a>.
+There are several ways of doing this including using the Weight Paint tool to paint the areas you want to pin
+(see the <a class="reference internal" href="../../painting_sculpting/painting/weight_paint/index.html#painting-weight-index"><span class="std std-ref">Weight Paint</span></a> section of the manual).
+The weight of each vertex in the group controls how strongly it is pinned.</p>
+<p>Once you have a vertex group set, things are pretty straightforward; all you have to do is
+press the <em>Pinning of cloth</em> button in the <em>Cloth</em> panel and select which
+vertex group you want to use, and the stiffness you want it at.</p>
+<dl class="docutils">
+<dt>Stiffness</dt>
+<dd>Target position stiffness. You can leave the stiffness as it is; the default value of 1 is fine.</dd>
+</dl>
+<div class="section" id="pinning-clothing-to-an-armature">
+<h4>Pinning Clothing To An Armature<a class="headerlink" href="#pinning-clothing-to-an-armature" title="Permalink to this headline">¶</a></h4>
+<p>Clothing can be simulated and pinned to an armature.
+For example, a character could have a baggy tunic pinned to the character&#8217;s waist with a belt.</p>
+<p>The typical workflow for pinning:</p>
+<ul class="simple">
+<li>Set the armature to its bind pose.</li>
+<li>Model clothing that encloses but does not penetrate the character&#8217;s mesh.</li>
+<li>Parent the clothing objects to the armature. The armature will now have several child meshes bound to it.</li>
+<li>Create a new vertex group on each cloth object for its pinned vertices</li>
+<li>Add vertexes to be pinned to this vertex group and give these vertices non-zero weights
+(you probably want weight = 1).
+For example the belt area of the tunic would be in the vertex group and have weight one.</li>
+<li>Designate the clothing objects as &#8220;cloth&#8221; in the 物理 tab of the Properties editor.
+Make sure the <em>Cloth</em> modifier is below the <em>Armature</em> modifier in the modifier stack.</li>
+<li>press the <em>Pinning of Cloth</em> button in the <em>Cloth</em> panel and select the vertex group.</li>
+<li>Designate the character&#8217;s mesh as &#8220;collision&#8221; object in the 物理 tab of the Properties editor.</li>
+<li>The clothing is now ready. Non-pinned vertices will be under control of the Cloth modifier.
+Pinned vertices will be under control of the Armature modifier.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When animating or posing the character you must begin from the bind pose.
+Move the character to its initial pose over several frames so the physics engine can simulate the clothing moving.
+Very fast movements and teleport jumps can break the physics simulation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cloth-sewing-springs">
+<h2>Cloth Sewing Springs<a class="headerlink" href="#cloth-sewing-springs" title="Permalink to this headline">¶</a></h2>
+<p>Another method of restraining cloth similar to pinning is sewing springs.
+Sewing springs are virtual springs that pull vertices in one part of
+a cloth mesh toward vertices in another part of the cloth mesh.
+This is different from pinning which binds vertices of the cloth mesh in place or to another object.
+A clasp on a cloak could be created with a sewing spring.
+The spring could  pull two corners of a cloak about a character&#8217;s neck.
+This could result in a more realistic simulation than pinning the cloak to
+the character&#8217;s neck since the cloak would be free to slide about the character&#8217;s neck and shoulders.</p>
+<p>Sewing springs are created by adding extra edges to a cloth mesh that are not included in any faces.
+They should connect vertices in the mesh that should be pulled together.
+For example the corners of a cloak.</p>
+<p>To activate the springs, enable the <em>Cloth Sewing Springs</em> panel.</p>
+<dl class="docutils">
+<dt>Sewing Force</dt>
+<dd>Maximum force that can be applied by sewing springs. Zero means unbounded, but it is not
+recommended to leave the field at zero in most cases, as it can cause instability due to
+extreme forces in the initial frames where the ends of the sewing springs are far apart.</dd>
+</dl>
+<p>The <em>Cloth Sewing Springs</em> panel also contains controls for shrinking the actual cloth faces.</p>
+<dl class="docutils">
+<dt>Shrinking Group</dt>
+<dd>Vertex group that is used to vary the intensity of the shrinking effect over the cloth.</dd>
+<dt>Min</dt>
+<dd>Fraction of the size to shrink the cloth by around vertices with weight 0 (or those not in vertex group.)
+The value 0.01 means shrink by 1% etc.</dd>
+<dt>Max</dt>
+<dd>Fraction of the size to shrink the cloth by around vertices with weight 1.</dd>
+</dl>
+<p>Like unbounded sewing forces, immediately applying a large amount of shrink can cause
+instability, so it is advisable to keyframe these fields and ease in from 0 during draping.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="collisions.html" class="btn btn-neutral float-right" title="Collisions" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

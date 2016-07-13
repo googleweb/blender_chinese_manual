@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 to Textures &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Textures" href="index.html"/>
+        <link rel="next" title="Assigning a Texture" href="assigning_a_texture.html"/>
+        <link rel="prev" title="Textures" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">Materials</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Textures</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介 to Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assigning_a_texture.html">Assigning a Texture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Textures common options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/index.html">Texture Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapping/index.html">Texture Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="influence/index.html">Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">Texture 节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Textures</a> &raquo;</li>
+      
+    <li>简介 to Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/blender_render/textures/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-textures">
+<h1>简介 to Textures<a class="headerlink" href="#introduction-to-textures" title="Permalink to this headline">¶</a></h1>
+<p>In CGI, texture mapping is a method to add detail to surfaces by projecting images and
+patterns onto those surfaces.
+The projected images and patterns can be set to affect not only color, but also specularity,
+reflection, transparency, and even fake 3-dimensional depth. Most often,
+the images and patterns are projected during render time,
+but texture mapping is also used to sculpt, paint and deform objects.</p>
+<p>In Blender, <em>Texture</em> s can be:</p>
+<ul class="simple">
+<li>applied to a <em>Material</em></li>
+<li>applied to a <a class="reference internal" href="../lighting/lights/textures.html"><span class="doc">light</span></a>, that coming from lamp</li>
+<li>applied to the <a class="reference internal" href="../world/background.html"><span class="doc">World Background</span></a></li>
+<li>applied to a <em>Brush</em>, see for example:
+- <a class="reference internal" href="../../../painting_sculpting/sculpting/index.html#painting-sculping-index"><span class="std std-ref">Sculpting</span></a>
+- <a class="reference internal" href="../../../painting_sculpting/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">Texture Paint</span></a></li>
+<li>associated with <em>修改器</em>, see:
+- Particles textures
+- Ocean textures</li>
+</ul>
+<div class="section" id="material-textures">
+<h2>Material Textures<a class="headerlink" href="#material-textures" title="Permalink to this headline">¶</a></h2>
+<p>The material settings that we&#8217;ve seen so far produce smooth, <em>uniform</em> objects,
+but such objects are not particularly true to reality,
+where uniformity tends to be uncommon and out of place.
+In order to deal with this unrealistic uniformity,
+Blender allows the user to apply <em>textures</em> which can modify the reflectivity, specularity,
+roughness and other surface qualities of a material.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/texture-layers.jpg"><img alt="../../../_images/texture-layers.jpg" src="../../../_images/texture-layers.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Textures Layer on base Material.</span></p>
+</div>
+<p>Textures are like additional layers on top of the base material.
+Textures affect one or more aspects of the object&#8217;s net coloring.
+The net color you see is a sort of layering of effects, as shown in this example image.
+The layers, if you will, are:</p>
+<ul class="simple">
+<li>Your object, lit with <em>ambient</em> light based on your world settings.</li>
+<li>Your base <em>material</em>, which colors the whole surface in a uniform color that reacts to light,
+giving different shades of the diffuse, specular,
+and mirror colors based on the way light passes through and into the surface of the object.</li>
+<li>A <em>primary texture</em> layer that overlays a purple marble coloring.</li>
+<li>A <em>second cloud texture</em> that makes the surface transparent
+in a misty/foggy sort of way by affecting the Alpha value.</li>
+<li>These two textures are <em>mixed</em> with the base material to provide the net effect: a cube of purplish-brown fog.</li>
+</ul>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/somemetal.jpg"><img alt="../../../_images/somemetal.jpg" src="../../../_images/somemetal.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Some Metal Textures.</span></p>
+</div>
+<p>This notion of using <em>more than one</em> texture, to achieve a combined effect,
+is one of the &#8220;hidden secrets&#8221; of creating realistic-looking objects.
+If you carefully &#8220;look at the light&#8221; while examining any real-life object,
+you will observe that the final appearance of that object is best described as the combination,
+in different ways and in different amounts, of several distinct underlying visual characteristics.
+These characteristics might be more (or less) strongly apparent at different angles,
+under different lighting conditions, and so forth.
+Blender allows you to achieve this in many ways.
+You can use &#8220;a stack of texture layers&#8221; as described in <a class="reference internal" href="options.html"><span class="doc">this section</span></a>,
+or you can also use arbitrarily-complex networks of &#8220;texture nodes&#8221;
+as discussed <a class="reference internal" href="nodes/introduction.html"><span class="doc">here</span></a>; the choice is yours.</p>
+<p>Materials Textures fall into three primary categories:</p>
+<dl class="docutils">
+<dt>Procedural Textures</dt>
+<dd>Textures generated by a mathematical formula. For example, <em>Wood</em>, <em>Clouds</em>, and <em>Distorted Noise</em></dd>
+<dt>图像s or Movies</dt>
+<dd>Photos and films projected onto objects. For example, a flat map of Earth mapped to a sphere.</dd>
+<dt>Environment Maps</dt>
+<dd>Textures used to create the impression of reflections and refractions.
+For example, an image of a street reflected in a car window.</dd>
+<dt>Data or 修改器 Textures</dt>
+<dd><p class="first">Textures obtained from raw data or obtained by a certain modifier in the scene.
+For example:</p>
+<ul class="last simple">
+<li>volumetric materials use Voxel Data textures, or Point Density textures</li>
+<li>textures can be obtained from an Ocean Modifier</li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/User:Chrisryanleggett">CRL</a> 02:25, 26 May 2014 (UTC)(Sign)</p>
+</div>
+<div class="section" id="world-textures">
+<h2>World Textures<a class="headerlink" href="#world-textures" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All Modes</div>
+<div class="line">Panel:    <span class="menuselection">World ‣ Preview</span></div>
+<div class="line">Hotkey:</div>
+</div>
+</div>
+<p>The world buttons let you set up the shading of your scene in general.
+It can provide ambient color, and special effects such as mist,
+but a very common use of a <em>World</em> is to shade a background color.</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../_images/render_bi_world.jpg"><img alt="../../../_images/render_bi_world.jpg" src="../../../_images/render_bi_world.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Textures Layer on base Material.</span></p>
+</div>
+<dl class="docutils">
+<dt>HoR, HoG, HoB</dt>
+<dd>The RGB color at the horizon</dd>
+<dt>ZeR, ZeG, ZeB</dt>
+<dd>The RGB color at the zenith (overhead)</dd>
+</dl>
+<p>These colors are interpreted differently,
+according to the Buttons in the <span class="menuselection">Preview ‣ Background colors</span> panel:</p>
+<dl class="docutils">
+<dt>None Enabled</dt>
+<dd>If none of these three buttons is checked, your background will just be plain flat color (using the horizon one).</dd>
+<dt>Blend</dt>
+<dd>The background color is blended from horizon to zenith.
+If only this button is pressed,
+the gradient runs from the bottom to the top of the rendered image regardless of the camera orientation.</dd>
+<dt>Real</dt>
+<dd>If this option is added,
+the gradient produced has two transitions, from nadir (same color as zenith) to horizon to zenith;
+the blending is also dependent on the camera orientation, which makes it more realistic.
+The horizon color is exactly at the horizon (on the XY plane),
+and the zenith color is used for points vertically above and below the camera.</dd>
+<dt>Paper</dt>
+<dd>If this option is added, the gradient keeps its characteristics,
+but it is clipped in the image (it stays on a horizontal plane (parallel to XY plane):
+what ever the angle of the camera may be, the horizon is always at the middle of the image).</dd>
+</dl>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/User:Chrisryanleggett">CRL</a></p>
+</div>
+<div class="section" id="brush-textures">
+<h2>Brush Textures<a class="headerlink" href="#brush-textures" title="Permalink to this headline">¶</a></h2>
+<p>图像 textures can be loaded into Blender. These images can then be applied to a mesh model
+that has been unwrapped and assigned an image of user defined size.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/materials-textures-painting-brush-options.jpg"><img alt="../../../_images/materials-textures-painting-brush-options.jpg" src="../../../_images/materials-textures-painting-brush-options.jpg" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Applied Brush texture in different painting modes.</span></p>
+</div>
+<ul class="simple">
+<li>Brush textures can be used to <a class="reference internal" href="../../../painting_sculpting/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">Texture Paint</span></a> textures.</li>
+<li>Brush textures can be used to <a class="reference internal" href="../../../painting_sculpting/painting/vertex_paint/index.html#painting-vertex-index"><span class="std std-ref">Vertex Paint</span></a> vertices.</li>
+<li>Brush textures can also be used in <a class="reference internal" href="../../../painting_sculpting/sculpting/index.html#painting-sculping-index"><span class="std std-ref">Sculpting</span></a> to create topology.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assigning_a_texture.html" class="btn btn-neutral float-right" title="Assigning a Texture" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Textures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

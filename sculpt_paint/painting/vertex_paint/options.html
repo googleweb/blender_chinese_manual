@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Options &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+    <li>Options</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/sculpt_paint/painting/vertex_paint/options.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The Tools Shelf, shortcut <code class="kbd docutils literal"><span class="pre">T</span></code> contains most of the options for vertex painting.
+The following sections describe the controls in each of the available panels.</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/materials-vertexpaint-toolshelf-tools.jpg" src="../../../_images/materials-vertexpaint-toolshelf-tools.jpg" />
+<p class="caption"><span class="caption-text">Vertex Painting Options.</span></p>
+</div>
+<div class="section" id="brush">
+<h3>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Brush Data-Block</dt>
+<dd>The image, name panel and color selector at the top allows you to select brush presets,
+rename brushes, as well as add custom brushes, and delete them.</dd>
+<dt>Radius</dt>
+<dd>Set the radius of the brush</dd>
+<dt>Strength</dt>
+<dd>Set the strength of the brush&#8217;s effect.</dd>
+<dt>Blend</dt>
+<dd><dl class="first last docutils">
+<dt>Mix</dt>
+<dd><p class="first">Mixes RGB values. When set to a strength of 1.0, it will cover the underlying &#8220;paint&#8221;.</p>
+<div class="last figure" id="id4">
+<img alt="../../../_images/mix.jpg" src="../../../_images/mix.jpg" />
+<p class="caption"><span class="caption-text">Mix overlay with full strength.</span></p>
+</div>
+</dd>
+<dt>Add</dt>
+<dd>Adds RGB values.
+Will eventually turn the entire object white as RGB values accumulate to 1.0-1.0-1.0: Pure White.</dd>
+<dt>Subtract</dt>
+<dd><p class="first">Subtracts RGB values. Usually results in Black.</p>
+<div class="last figure" id="id5">
+<img alt="../../../_images/sub.jpg" src="../../../_images/sub.jpg" />
+<p class="caption"><span class="caption-text">Subtract with full strength.</span></p>
+</div>
+</dd>
+<dt>Multiply</dt>
+<dd>Multiplies brush colors by the vertex colors.</dd>
+<dt>Blur</dt>
+<dd>Blurs vertex colors.</dd>
+<dt>Lighten</dt>
+<dd>Lightens the color of the vertices.</dd>
+<dt>Darken</dt>
+<dd>Darkens the color of the vertices.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="texture">
+<h3>Texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
+<p>Use the texture selector at the bottom of the paint panel to select a pre-loaded image or
+procedural texture to use as your brush pattern. Note that in order to use it,
+you must have a placeholder material defined,
+and that particular texture defined using the Material and Texture buttons.
+It is not necessary to have that material or texture applied to any mesh anywhere;
+it must only be defined.</p>
+<dl class="docutils">
+<dt>Brush Mapping Mode</dt>
+<dd><p class="first">Sets how the texture is applied to the brush</p>
+<dl class="last docutils">
+<dt>View Plane</dt>
+<dd>In 2D painting, the texture moves with the brush</dd>
+<dt>Tiled</dt>
+<dd>The texture is offset by the brush location</dd>
+<dt>3D</dt>
+<dd>Same as tiled mode</dd>
+<dt>Stencil</dt>
+<dd>Texture is applied only in borders of the stencil.</dd>
+<dt>Random</dt>
+<dd>Random applying of texture.</dd>
+</dl>
+</dd>
+<dt>Angle</dt>
+<dd><p class="first">This is the rotation angle of the texture brush.
+It can be changed interactively via <code class="kbd docutils literal"><span class="pre">Ctrl-F</span></code> in the 3D视图.
+While in the interactive rotation you can enter a value numerically as well. Can be set to:</p>
+<dl class="last docutils">
+<dt>User</dt>
+<dd>Directly input the angle value.</dd>
+<dt>Rake</dt>
+<dd>Angle follows the direction of the brush stroke. Not available with <em>3D</em> textures.</dd>
+<dt>Random</dt>
+<dd>Angle is randomized.</dd>
+</dl>
+</dd>
+<dt>Offset</dt>
+<dd>Offset the texture in x, y, and z.</dd>
+<dt>Size</dt>
+<dd>Set the scale of the texture in each axis.</dd>
+</dl>
+<div class="section" id="stroke">
+<h4>Stroke<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Stroke Method</dt>
+<dd><p class="first">Allows set the way applying strokes.</p>
+<dl class="last docutils">
+<dt>Airbrush</dt>
+<dd><p class="first">Flow of the brush continues as long as the mouse click is held, determined by the <em>Rate</em> setting.
+If disabled, the brush only modifies the color when the brush changes its location.</p>
+<dl class="last docutils">
+<dt>Rate</dt>
+<dd>Interval between paints for airbrush</dd>
+</dl>
+</dd>
+<dt>Space</dt>
+<dd><p class="first">Creates brush stroke as a series of dots, whose spacing is determined by the <em>Spacing</em> setting.</p>
+<dl class="last docutils">
+<dt>Spacing</dt>
+<dd>Represents the percentage of the brush diameter.
+Limit brush application to the distance specified by spacing.</dd>
+</dl>
+</dd>
+<dt>Dots</dt>
+<dd>Apply paint on each mouse move step</dd>
+<dt>Jitter</dt>
+<dd>Jitter the position of the brush while painting</dd>
+</dl>
+</dd>
+<dt>Smooth stroke</dt>
+<dd><p class="first">Brush lags behind mouse and follows a smoother path. When enabled, the following become active:</p>
+<dl class="last docutils">
+<dt>Radius</dt>
+<dd>Sets the minimun distance from the last point before stroke continues.</dd>
+<dt>Factor</dt>
+<dd>Sets the amount of smoothing.</dd>
+</dl>
+</dd>
+<dt>Input Samples</dt>
+<dd>Average multiple input samples together to smooth the brush stroke.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="curve">
+<h3>Curve<a class="headerlink" href="#curve" title="Permalink to this headline">¶</a></h3>
+<p>Brush Curves affect how strongly the color is applied depending on distance from the center of
+the brush. In other words, they allow you to edit the Falloff of the brush intensity.</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../../_images/brushcurves.jpg"><img alt="../../../_images/brushcurves.jpg" src="../../../_images/brushcurves.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Various brush curves.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id7">
+<img alt="../../../_images/materials-vertexpaint-toolshelf-options.jpg" src="../../../_images/materials-vertexpaint-toolshelf-options.jpg" />
+<p class="caption"><span class="caption-text">Options for vertex painting.</span></p>
+</div>
+<div class="section" id="overlay">
+<h3>Overlay<a class="headerlink" href="#overlay" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to customize the display of curve and texture that applied to the brush.</p>
+</div>
+<div class="section" id="appearance">
+<h3>Appearance<a class="headerlink" href="#appearance" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to customize the color of the brush radius outline,
+as well as specify a custom icon.</p>
+</div>
+<div class="section" id="id2">
+<h3>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Normals</dt>
+<dd>Applies the Vertex Normal before painting. This does not usually affect painting.</dd>
+<dt>Spray</dt>
+<dd>Continues painting for as long as the mouse is held.</dd>
+<dt>Unified 设置</dt>
+<dd><dl class="first last docutils">
+<dt>Size</dt>
+<dd>All brushes use the same size.</dd>
+<dt>Strength</dt>
+<dd>All brushes use the same strength.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

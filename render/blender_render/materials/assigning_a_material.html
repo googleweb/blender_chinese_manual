@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assigning a Material &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Materials" href="index.html"/>
+        <link rel="next" title="Multiple Materials" href="multiple_materials.html"/>
+        <link rel="prev" title="简介 to Materials" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Materials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介 to Materials</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Assigning a Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiple_materials.html">Multiple Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">Material Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">Material 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="special_effects/index.html">Special Material Effects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Materials</a> &raquo;</li>
+      
+    <li>Assigning a Material</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/blender_render/materials/assigning_a_material.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assigning-a-material">
+<h1>Assigning a Material<a class="headerlink" href="#assigning-a-material" title="Permalink to this headline">¶</a></h1>
+<p>Materials available in the currently-open Blender file can be investigated by clicking
+on the Materials icon <a class="reference internal" href="../../../_images/icons_material.png"><img alt="material-icon" src="../../../_images/icons_material.png" style="width: 1.1em;" /></a> in the Properties editor Header.
+In this section we look at how to assign or remove a material to/from the Active Object in Blender, either by:</p>
+<ul class="simple">
+<li>creating a new material,</li>
+<li>re-using an existing material, or</li>
+<li>deleting a material.</li>
+</ul>
+<p>We also give hints about practical material usage.</p>
+<div class="section" id="creating-a-new-material">
+<h2>Creating a new Material<a class="headerlink" href="#creating-a-new-material" title="Permalink to this headline">¶</a></h2>
+<p>Every time a new Object is created it has no material linked to it.
+You can create a new material for the object by</p>
+<ul class="simple">
+<li>Selecting the object</li>
+<li>In the Properties editor, click on the object button</li>
+<li>Click on the Materials button in the Properties editor header (1)</li>
+</ul>
+<p>The Shading panel then appears. This contains the following elements:</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/materials_creating.jpg" src="../../../_images/materials_creating.jpg" />
+<p class="caption"><span class="caption-text">Add new material.</span></p>
+</div>
+<ul class="simple">
+<li>Context - The currently-selected scene and object</li>
+<li>Object Material Slots (3) - this panel shows the &#8220;slots&#8221;
+for the material (or materials) that this object data contains.</li>
+<li>Active Material (2). Initially empty, asking for &#8220;New&#8221;.</li>
+</ul>
+<p>To add a new material, click &#8220;+&#8221; in the Active Material box.
+This action has a series of effects:</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/materials_new.jpg" src="../../../_images/materials_new.jpg" />
+<p class="caption"><span class="caption-text">Materials Panel with New Entry.</span></p>
+</div>
+<ul class="simple">
+<li>opens the new material in the Active Material box,</li>
+<li>brings up additional buttons in the immediate panel,</li>
+<li>adds the new material to the Available Materials list,</li>
+<li>adds the new material to the Object Material Slots list for the active object (or its object data - see below)</li>
+<li>brings up a <a class="reference internal" href="../../../editors/properties/material.html"><span class="doc">preview</span></a> of the new material,</li>
+<li>provides you with a range of panels allowing you to select the
+<a class="reference internal" href="properties/introduction.html"><span class="doc">properties</span></a> of the new material.</li>
+</ul>
+<div class="section" id="new-material-panel-buttons">
+<h3>New Material Panel Buttons<a class="headerlink" href="#new-material-panel-buttons" title="Permalink to this headline">¶</a></h3>
+<p>Details of the additional buttons which appear in the Material panel for a new Active
+Material are as follows:</p>
+<p class="rubric">Active Material</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/icons_material-dropdown.jpg" src="../../../_images/icons_material-dropdown.jpg" />
+<p class="caption"><span class="caption-text">Available Materials
+See Reusing Existing Materials below.</span></p>
+</div>
+<dl class="docutils">
+<dt>Name</dt>
+<dd>Like other data-blocks, Blender will automatically set the name of the new material to
+&#8220;Material&#8221;, &#8220;Material.001&#8221; and so on.
+You can change this by over-typing with your own choice of name.</dd>
+<dt>Number of Users</dt>
+<dd>Specifies the number of meshes which use this material.</dd>
+<dt>F - Fake User</dt>
+<dd>When enabled, this material will always be saved within the Blender file,
+even if it has no meshes which use it (see Deleting a Material).</dd>
+<dt>X</dt>
+<dd>Delete this material (see Deleting a Material).</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Naming materials</p>
+<p class="last">It&#8217;s a very good idea to give your materials clear names so you can keep track of them,
+especially when they&#8217;re linked to multiple objects.
+Try to make your names descriptive of the material,
+not its function (e.g. &#8220;Yellow Painted&#8221; rather than &#8220;Kitchen Table Color&#8221;)</p>
+</div>
+<p class="rubric">节点</p>
+<div class="figure" id="id4">
+<img alt="../../../_images/icons_node.jpg" src="../../../_images/icons_node.jpg" />
+<p class="caption"><span class="caption-text">If dark, use the Shader 节点 to generate the material.</span></p>
+</div>
+<dl class="docutils">
+<dt>Data</dt>
+<dd>Specifies whether the material is to be linked to the Object or to the Object Data.</dd>
+</dl>
+<div class="figure" id="id5">
+<img alt="../../../_images/material-matmenu-linkobjdata.jpg" src="../../../_images/material-matmenu-linkobjdata.jpg" />
+<p class="caption"><span class="caption-text">Link material to object or to object&#8217;s data.</span></p>
+</div>
+<p>The Link pop-up menu has two choices, Data and Object.
+These two menu choices determine whether the material is linked to the object or to the data,
+(in this case) the mesh (or curve, nurbs, etc.).
+The Data menu item determines that this material will be linked to the mesh&#8217;s
+data-block which is linked to the object&#8217;s data-block.
+The Object menu item determines that the material will be linked to the object&#8217;s data block directly.
+This has consequences of course. For example, different objects may share the same mesh data-block.
+Since this data-block defines the shape of the object,
+any change in edit mode will be reflected on all of those objects.
+Moreover, anything linked to that mesh data-block will be shared by every object that shares that mesh.
+So, if the material is linked to the mesh, every object will share it.
+On the other hand, if the material is linked directly to the object data-block,
+the objects can have different materials and still share the same mesh.
+Short explanation: If connected to the object,
+you can have several instances of the same obData using different materials.
+If linked to mesh data, you cannot. See <a class="reference internal" href="../../../data_system/introduction.html"><span class="doc">数据系统</span></a> for more information.</p>
+<dl class="docutils">
+<dt>Object 渲染 Format (menu)</dt>
+<dd>This menu has four options which define how the object is to be rendered:</dd>
+<dt>Surface</dt>
+<dd>Material applied to object planes.</dd>
+<dt>Wire</dt>
+<dd>Material applied to wires following the object edges</dd>
+<dt>Volume</dt>
+<dd>Material applied to the object volume.</dd>
+<dt>Halos</dt>
+<dd>Material applied to halos around each object vertex.</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<img alt="../../../_images/materials_render_surface.jpg" src="../../../_images/materials_render_surface.jpg" />
+<p class="caption"><span class="caption-text">Surface.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<img alt="../../../_images/materials_render_wire.jpg" src="../../../_images/materials_render_wire.jpg" />
+<p class="caption"><span class="caption-text">Wire.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id8">
+<img alt="../../../_images/materials_render_volume.jpg" src="../../../_images/materials_render_volume.jpg" />
+<p class="caption"><span class="caption-text">Volume.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<img alt="../../../_images/materials_render_halo.jpg" src="../../../_images/materials_render_halo.jpg" />
+<p class="caption"><span class="caption-text">Halo.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="reusing-existing-materials">
+<h2>Reusing Existing Materials<a class="headerlink" href="#reusing-existing-materials" title="Permalink to this headline">¶</a></h2>
+<p>Blender is built to allow you to reuse <em>anything</em>, including material settings,
+between many objects. Instead of creating duplicate materials,
+you can simply re-use an existing material.
+There are several ways to do this using the Available Materials menu:</p>
+<blockquote>
+<div><em>Single Object -</em> With the object selected, click the sphere located to the left of the Material name.
+A drop-down list appears showing all the materials available in the current Blender file.
+To use one, just click on it.</div></blockquote>
+<div class="figure" id="id10">
+<img alt="../../../_images/material-matmenu-addfirst-select_exist_button.jpg" src="../../../_images/material-matmenu-addfirst-select_exist_button.jpg" />
+<p class="caption"><span class="caption-text">Select an existing material.</span></p>
+</div>
+<div class="figure" id="id11">
+<img alt="../../../_images/material-matmenu-searchlist.jpg" src="../../../_images/material-matmenu-searchlist.jpg" />
+<p class="caption"><span class="caption-text">List of available materials.</span></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Searching for Materials</p>
+<p>The search field at the bottom of the material list allows you to search the names in the list.
+For example, by entering &#8220;wood&#8221; all existent materials are filtered so that
+only materials containing &#8220;wood&#8221; are displayed in the list.</p>
+<p class="last"><em>Multiple Objects -</em> In the 3D视图, with <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code>
+you can quickly link all selected objects to the material (and other aspects)
+of the <a class="reference internal" href="../../../editors/3dview/selecting.html#object-active"><span class="std std-ref">active object</span></a>.
+Very useful if you need to set a large number of objects to the same material;
+just select all of them,
+then the object that has the desired material, and <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code> link them to that &#8220;parent&#8221;.
+(See Tip on Linking Data in Creating about data linking.)</p>
+</div>
+</div>
+<div class="section" id="deleting-a-material">
+<h2>Deleting a Material<a class="headerlink" href="#deleting-a-material" title="Permalink to this headline">¶</a></h2>
+<p>To delete a material, select the material and click X in the Available Materials List entry.</p>
+<p>Although the material will seem to disappear immediately,
+the Delete action can depend on how the material is used elsewhere.</p>
+<p>If the material is linked to the Object and there are other objects which use this material,
+then the material will be removed from that object (but remain on all its other objects).</p>
+<p>If the &#8220;Fake User&#8221; button (F) has been lit in the Available Materials list,
+then the material will be retained when the file is saved, even if it has no users.</p>
+<p>Only if it has 0 &#8220;real&#8221; users, and no &#8220;Fake&#8221; user, will the material be permanently deleted.
+Note that it will still remain in the Materials list until the Blender file is saved,
+but will have disappeared when the file is reloaded.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multiple_materials.html" class="btn btn-neutral float-right" title="Multiple Materials" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介 to Materials" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

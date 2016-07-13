@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editor &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="节点编辑器" href="index.html"/>
+        <link rel="next" title="节点" href="nodes/index.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">节点编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../logic_editor.html">逻辑编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">节点编辑器</a> &raquo;</li>
+      
+    <li>Editor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/node_editor/editor.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editor">
+<h1>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h1>
+<p>By default, the node editor is configured for <a class="reference internal" href="../../compositing/index.html"><span class="doc">合成</span></a>.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/editors_node_header1.png" src="../../_images/editors_node_header1.png" />
+<p class="caption"><span class="caption-text">Default 节点编辑器 Header.</span></p>
+</div>
+<p>However, the 节点编辑器 can be configured for many other types of <a class="reference internal" href="introduction.html#node-tree-types"><span class="std std-ref">work flows</span></a>.
+After choosing what node context you are you using you you can enable node with the <em>Use 节点</em> button.</p>
+<div class="section" id="node-editor-window-actions">
+<h2>节点编辑器 Window Actions<a class="headerlink" href="#node-editor-window-actions" title="Permalink to this headline">¶</a></h2>
+<p>When the cursor is in the window, several standard Blender hotkeys and mouse actions are available, including:</p>
+<dl class="docutils">
+<dt>Popup Menu</dt>
+<dd>Space - Brings up a main pop-up menu, allowing you to add, view, select, etc.</dd>
+<dt>Delete</dt>
+<dd><code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Delete</span></code> - Deletes the selected node(s).</dd>
+<dt>Box select</dt>
+<dd><code class="kbd docutils literal"><span class="pre">B</span></code> - Starts the bounding box selection process.
+Position your cursor and <code class="kbd docutils literal"><span class="pre">LMB</span></code> click &amp; drag to select a set of nodes.</dd>
+<dt>Cut connections (lasso)</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Ctrl-Alt-LMB</span></code> click &amp; drag - Starts a lasso selection, <strong>but</strong> when you let up the mouse button,
+all threads (connections) within the lasso are broken.</dd>
+<dt>Undo</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Ctrl-Z</span></code></dd>
+<dt>Redo</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Ctrl-Y</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-Z</span></code> - You can use this if you used &#8220;undo&#8221; a bit too often</dd>
+<dt>Select multiple</dt>
+<dd><code class="kbd docutils literal"><span class="pre">Shift-LMB</span></code> or <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>- Multiple node select.</dd>
+<dt>Grab/Move</dt>
+<dd><code class="kbd docutils literal"><span class="pre">G</span></code> - Moves your current selection around.</dd>
+</dl>
+</div>
+<div class="section" id="node-editor-header">
+<h2>节点编辑器 Header<a class="headerlink" href="#node-editor-header" title="Permalink to this headline">¶</a></h2>
+<p>On the editors header, you will see header options:</p>
+<div class="figure" id="id2">
+<img alt="../../_images/editors_node_header.png" src="../../_images/editors_node_header.png" />
+<p class="caption"><span class="caption-text">Common Node Header Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>View</dt>
+<dd>This menu changes your view of the window.</dd>
+<dt>Select</dt>
+<dd>This menu allows you to select a node or groups of nodes.</dd>
+<dt>Add</dt>
+<dd>This menu allows you to add nodes.</dd>
+<dt>Node</dt>
+<dd>To do things with selected nodes, akin to vertices.</dd>
+<dt>Material, 合成 or Texture buttons</dt>
+<dd>节点 are grouped into three categories, to see the list see <a class="reference internal" href="introduction.html#node-tree-types"><span class="std std-ref">Node Tree Types</span></a>.</dd>
+<dt>Use 节点</dt>
+<dd>Tells the render engine to use the node map in computing the material color or rendering the final image,
+or not. If not, the map is ignored and the basic render of the material tabs or scene is accomplished.</dd>
+<dt>Use Pinned</dt>
+<dd>This button tells the render engine to use pinned node tree.</dd>
+<dt>Go to Parent button</dt>
+<dd>This button allows you go to parent node tree.</dd>
+<dt>Snap</dt>
+<dd>Toggle snap mode for node in the 节点编辑器 window.</dd>
+<dt>Snap Node Element Selector</dt>
+<dd><p class="first">This selector provide the follow node elements for snap:</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Grid:</th><td class="field-body">(default) Snap to grid of the 节点编辑器 window.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Node X:</th><td class="field-body">Snap to left/right node border.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Node Y:</th><td class="field-body">Snap to top/bottom node border.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Node X/Y:</th><td class="field-body">Snap to any node border.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Snap Target</dt>
+<dd><p class="first">Which part to snap onto the target.</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Closest:</th><td class="field-body">Snap closest point onto target.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Center:</th><td class="field-body">Snap center onto target.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Median:</th><td class="field-body">Snap median onto target.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Active:</th><td class="field-body">Snap active onto target.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Copy 节点</dt>
+<dd>This button allows you copy selected nodes to the clipboard.</dd>
+<dt>Paste 节点</dt>
+<dd>This button allows you paste nodes from the clipboard to the active node tree.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nodes/index.html" class="btn btn-neutral float-right" title="节点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

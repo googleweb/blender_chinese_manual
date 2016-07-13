@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../index.html"/>
+        <link rel="up" title="合成" href="index.html"/>
+        <link rel="next" title="Types of 节点" href="types/index.html"/>
+        <link rel="prev" title="合成" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">合成</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">入门指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#backdrop">Backdrop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#performance">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">例子s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-size">图像 Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-your-composite-image">Saving your Composite 图像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="types/index.html">Types of 节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="index.html">合成</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/compositing/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>合成 节点 allow you to assemble and enhance an image (or movie). Using composition nodes,
+you can glue two pieces of footage together and colorize the whole sequence all at once.
+You can enhance the colors of a single image or an entire movie clip in a static manner or in a
+dynamic way that changes over time (as the clip progresses). In this way,
+you use composition nodes to both assemble video clips together and enhance them.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Term: 图像</p>
+<p class="last">The term <em>图像</em> may refer to a single picture, a picture in
+a numbered sequence of images, or a frame of a movie clip.
+The Compositor processes one image at a time, no matter what kind of input you provide.</p>
+</div>
+<div class="figure" id="id1">
+<img alt="../_images/editors_node_example.png" src="../_images/editors_node_example.png" />
+<p class="caption"><span class="caption-text">An example of Composition.</span></p>
+</div>
+<p>To process your image, you use nodes to import the image into Blender, change it,
+optionally merge it with other images, and finally, save it.</p>
+<p>The example to the right shows the simplest node setup;
+an input node links the camera view to an output node so it can be saved.</p>
+<div class="section" id="getting-started">
+<h2>入门指南<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Access the <a class="reference internal" href="../editors/node_editor/index.html"><span class="doc">节点编辑器</span></a> and enable
+<em>Composite 节点</em> by clicking on the <em>图像</em> icon.</p>
+<p>To activate nodes for compositing, click the <em>Use 节点</em> checkbox (see <a class="reference internal" href="#options">Options</a>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">After clicking <em>Use 节点</em> the Compositor is enabled, however,
+it can also be disabled in the <a class="reference internal" href="../render/post_process/panel.html"><span class="doc">Post Processing Panel</span></a>.</p>
+</div>
+<p>You now have your first node setup, from here you can add and connect many types of
+<a class="reference internal" href="types/index.html"><span class="doc">合成 节点</span></a>, in a sort of map layout,
+to your heart&#8217;s content (or physical memory constraints, whichever comes first).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">节点 and node concepts are explained in more detail in the <a class="reference internal" href="../editors/node_editor/index.html"><span class="doc">节点编辑器</span></a>.</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../_images/compositing_header.png" src="../_images/compositing_header.png" />
+<p class="caption"><span class="caption-text">合成 Specific Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Use 节点</dt>
+<dd>Enables basic compositing set up with a <a class="reference internal" href="types/input/render_layers.html"><span class="doc">渲染 Layer Node</span></a>
+and a <a class="reference internal" href="types/output/composite.html"><span class="doc">Composite Node</span></a>.</dd>
+<dt>Backdrop</dt>
+<dd><p class="first">Enables the use of a backdrop using a <a class="reference internal" href="types/output/viewer.html"><span class="doc">Viewer Node</span></a>.</p>
+<dl class="last docutils">
+<dt>Backdrop Channels</dt>
+<dd>See below.</dd>
+</dl>
+</dd>
+<dt>Auto 渲染</dt>
+<dd>Re-render and composite changed layer when edits to the 3D scene are made.</dd>
+</dl>
+<div class="section" id="backdrop">
+<h3>Backdrop<a class="headerlink" href="#backdrop" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id3">
+<img alt="../_images/compositing_backdrop.png" src="../_images/compositing_backdrop.png" />
+<p class="caption"><span class="caption-text">Backdrop Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>Backdrop Channels</dt>
+<dd>Set the image to be displayed with <em>Color</em>, <em>Color and Alpha</em>, or just <em>Alpha</em>.</dd>
+<dt>Zoom</dt>
+<dd>Sets how big the backdrop image is.</dd>
+<dt>Offset</dt>
+<dd>Change the screen space position of the backdrop,
+or click the <em>Move</em> button, or shortcut <code class="kbd docutils literal"><span class="pre">Alt-MMB</span></code> to manually move it.</dd>
+<dt>Fit</dt>
+<dd>Automatically scales the backdrop to fit the size of the node editor.</dd>
+</dl>
+</div>
+<div class="section" id="performance">
+<h3>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id4">
+<img alt="../_images/composite_performance.png" src="../_images/composite_performance.png" />
+<p class="caption"><span class="caption-text">Performance 设置.</span></p>
+</div>
+<dl class="docutils">
+<dt>渲染</dt>
+<dd>Sets the quality when doing the final render.</dd>
+<dt>Edit</dt>
+<dd>Sets the quality when making edits.</dd>
+<dt>Chunk Size</dt>
+<dd>Max size of a title (smaller values give a better distribution of multiple threads, but more overhead).</dd>
+<dt>OpenCL</dt>
+<dd>This allows the use of an OpenCL platform to aid in rendering.
+Generally, this should be enabled unless your hardware does not have good OpenCL support.</dd>
+<dt>Buffer Groups</dt>
+<dd>Enables buffering of group nodes to increase the speed at the cost of more memory.</dd>
+<dt>Two Pass</dt>
+<dd>Use two pass execution during editing: first calculate fast nodes, the second pass calculate all nodes.</dd>
+<dt>Viewer Border</dt>
+<dd>This allows to set an area of interest for the backdrop and preview.
+The border is started by <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code> and finished by selection of a rectangular area.
+<code class="kbd docutils literal"><span class="pre">Ctrl-Alt-B</span></code> discards the border back to a full preview.
+This is only a preview option, final compositing during a render ignores this border.</dd>
+<dt>Highlight</dt>
+<dd>Highlights the nodes that are being calculated.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>You can do just about anything with images using nodes.</p>
+<p>Raw footage from a foreground actor in front of a blue screen,
+or a rendered object doing something, can be layered on top of a background.
+Composite both together, and you have composited footage.</p>
+<p>You can change the mood of an image:</p>
+<ul class="simple">
+<li>To make an image &#8216;feel&#8217; colder, a blue tinge is added.</li>
+<li>To convey a flashback or memory, the image may be softened.</li>
+<li>To convey hatred and frustration, add a red tinge or enhance the red.</li>
+<li>A startling event may be sharpened and contrast-enhanced.</li>
+<li>A happy feeling - you guessed it - add yellow (equal parts red and green, no blue) for bright and sunny.</li>
+<li>Dust and airborne dirt are often added as a cloud texture over the image to give a little more realism.</li>
+</ul>
+</div>
+<div class="section" id="image-size">
+<h2>图像 Size<a class="headerlink" href="#image-size" title="Permalink to this headline">¶</a></h2>
+<p>It is recommended to pay attention to image resolution and color depth when mixing and matching
+images. Aliasing (rough edges), color <em>flatness</em>,
+or distorted images can all be traced to mixing inappropriate resolutions and color depths.</p>
+<p>The compositor can mix images with any size,
+and will only perform operations on pixels where images have an overlap.
+When nodes receive inputs with differently sized 图像s, these rules apply:</p>
+<ul class="simple">
+<li>The first/top 图像 input socket defines the output size.</li>
+<li>The composite is centered by default,
+unless a translation has been assigned to a buffer using a <em>Translate</em> node.</li>
+</ul>
+<p>So each node in a composite can operate on different sized images as defined by its inputs.
+Only the <em>Composite</em> output node has a fixed size,
+as defined by the <em>Scene buttons</em> (Format Panel).
+The <em>Viewer</em> node always shows the size from its input, but when not linked
+(or linked to a value) it shows a small 320×256 pixel image.</p>
+</div>
+<div class="section" id="saving-your-composite-image">
+<h2>Saving your Composite 图像<a class="headerlink" href="#saving-your-composite-image" title="Permalink to this headline">¶</a></h2>
+<p>The <em>渲染</em> button renders a single frame or image.
+Save your image using <span class="menuselection">File ‣ Save 图像</span> or <code class="kbd docutils literal"><span class="pre">F3</span></code>.
+The image will be saved using the image format settings on the 渲染 panel.</p>
+<p>To save a sequence of images, for example,
+if you input a movie clip or used a Time node with each frame in its own file,
+use the <em>动画</em> button and its settings. If you might want to later overlay them,
+be sure to use an image format that supports an Alpha channel (such as <code class="docutils literal"><span class="pre">PNG</span></code>).
+If you might want to later arrange them front to back or create a depth of field effect,
+use a format that supports a Z-depth channel (such as <code class="docutils literal"><span class="pre">EXR</span></code>).</p>
+<p>To save a composition as a movie clip (all frames in a single file),
+use an <code class="docutils literal"><span class="pre">AVI</span></code> or <code class="docutils literal"><span class="pre">Quicktime</span></code> format, and use the <em>动画</em> button and its settings.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="types/index.html" class="btn btn-neutral float-right" title="Types of 节点" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="合成" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

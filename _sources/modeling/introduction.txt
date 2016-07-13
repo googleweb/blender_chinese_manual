@@ -1,0 +1,56 @@
+
+************
+简介
+************
+
+The creation of a 3D scene needs at least three key components: Models, Materials and Lights.
+In this part, we will delve deeper into the creation of the first of these: modeling.
+建模 is the art and science of creating a surface that either mimics the shape
+of a real-world object or expresses your imagination of abstract objects.
+
+There are three primary types of modeling - mesh modeling, curve/surface modeling, and meta modeling.
+
+:doc:`Mesh 建模 </modeling/meshes/introduction>`
+   is done within the *3D视图* and typically begins with a primitive shape (e.g. circle, cube, cylinder...).
+
+   This :doc:`Mesh Primitive </editors/3dview/object/types/primitives>`
+   is defined by an array of points in 3D space called vertices (singular form is :term:`Vertex`).
+   From there you might begin extruding faces and moving vertices to create a larger, more complex shape.
+
+   Mesh 建模 Modes
+      The 3D视图 has three principal modes that allow for the creation of,
+      editing and manipulation of the mesh models.
+      Each of the three modes have a variety of tools. Some tools may be found in one or more of the modes.
+
+      Modes that used for modeling:
+
+      - 物体模式
+      - 编辑模式
+      - 雕刻模式
+
+      Creation of a mesh primitive typically starts by adding a mesh object in *物体模式*.
+      Limited types of editing such as size, location, and orientation can be accomplished in *物体模式*.
+      *物体模式* also provides the means to Join and Group multiple mesh primitives.
+
+      More detailed editing of the mesh model shape is done in *编辑模式*, and *雕刻模式*.
+      The nature of these three modes determines the tools that are available
+      within the various panels of the 3D视图.
+      Switching between modes while modeling is common.
+      Some tools may be available in more than one mode while others may be unique to a particular mode.
+:doc:`Curve modeling </modeling/curves/index>`
+   Uses control points to define the shape of the curve.
+:doc:`Surface modeling </modeling/surfaces/index>`
+   Similar to curve modeling,
+   but instead of being limited to simple linear paths,
+   they allow the creation of three dimensional surfaces, potentially with volume.
+:doc:`Meta Object (Metaball) 建模 </modeling/metas/index>`
+   begins similarly to mesh modeling,
+   with a base shape like a cube or sphere, but instead of extruding these base shapes,
+   these objects are clumped together to form a larger object.
+   In order to accomplish this, the metaballs have a liquid-like quality,
+   when two or more are brought together they merge by smoothly rounding out the point of connection,
+   appearing as one unified object.
+
+   This can also be a quick way to get started with a rough shape which can be converted to a mesh later.
+:doc:`文字建模 </modeling/texts/introduction>`
+   Text modeling is an easy way to create logos and to simply add text to a scene.

@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>简介 &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="修改器" href="index.html"/>
+        <link rel="next" title="Data Transfer Modifier" href="modify/data_transfer.html"/>
+        <link rel="prev" title="修改器" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">修改器</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interface">界面</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#modify">Modify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#generate">Generate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#deform">Deform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="index.html">修改器</a> &raquo;</li>
+      
+    <li>简介</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/modifiers/introduction.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>修改器 are automatic operations that affect an object in a non-destructive way. With modifiers,
+you can perform many effects automatically that would otherwise be too tedious to do manually
+(such as subdivision surfaces) and without affecting the base geometry of your object.</p>
+<p>They work by changing how an object is displayed and rendered, but not the geometry which you can edit directly.
+You can add several modifiers to a single object to form <a class="reference internal" href="#the-modifier-stack">The Modifier Stack</a>
+and <em>Apply</em> a modifier if you wish to make its changes permanent.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/modifiers_menu.png" src="../../_images/modifiers_menu.png" />
+<p class="caption"><span class="caption-text">修改器 Menu.</span></p>
+</div>
+<p>There are four types of modifiers:</p>
+<dl class="docutils">
+<dt>Modify</dt>
+<dd>The <em>Modify</em> group of modifiers are tools similar to the <em>Deform 修改器</em> (see below),
+but which do not directly affect the shape of the object;
+rather they affect some other data, such as vertex groups.</dd>
+<dt>Generate</dt>
+<dd>The <em>Generate</em> group of modifiers are constructive tools that either change the
+general appearance of or automatically add new geometry to an object.</dd>
+<dt>Deform</dt>
+<dd>The <em>Deform</em> group of modifiers only change the shape of an object without adding new geometry,
+and are available for meshes, and often texts, curves, surfaces and/or lattices.</dd>
+<dt>Simulate</dt>
+<dd>The <em>Simulate</em> group of modifiers activate simulations. In most cases, these
+modifiers are automatically added to the modifiers stack whenever a <em>Particle System</em>
+or <em>物理</em> simulation is enabled. Their only role is to define the
+place in the modifier stack used as base data by the tool they represent. Generally,
+the attributes of these modifiers are accessible in separate panels.</dd>
+</dl>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../_images/modifier-subsurf.jpg" src="../../_images/modifier-subsurf.jpg" />
+<p class="caption"><span class="caption-text">Panel Layout (Subsurf as an example).</span></p>
+</div>
+<p>Each modifier has been brought in from a different part of Blender,
+so each has its own unique settings and special considerations. However,
+each modifier&#8217;s interface has the same basic components, see (<em>Panel Layout
+(Subsurf as an example)</em>).</p>
+<p>At the top is the <em>panel header</em>.
+The icons each represent different settings for the modifier (left to right):</p>
+<dl class="docutils">
+<dt>Arrow</dt>
+<dd>Collapse modifier to show only the header and not its options.</dd>
+<dt>Icon</dt>
+<dd>A quick visual reference of the modifier&#8217;s type.</dd>
+<dt>Name</dt>
+<dd>Every modifier has a unique name per object. Two modifiers on one object must have unique names,
+but two modifiers on different objects can have the same name. The default name is based off the modifier type.</dd>
+<dt>相机</dt>
+<dd>Toggles visibility of the modifier effect in the render.</dd>
+<dt>Eye</dt>
+<dd>Toggles visibility of the modifier effect in the 3D视图.</dd>
+<dt>Box</dt>
+<dd>Displays the modified geometry in edit mode, as well as the original geometry which you can edit.</dd>
+<dt>Triangle</dt>
+<dd>When enabled, the final modified geometry will be shown in edit mode and can be edited directly.</dd>
+<dt>Up arrow</dt>
+<dd>Moves modifier up in the stack.</dd>
+<dt>Down arrow</dt>
+<dd>Moves modifier down in the stack.</dd>
+<dt>Cross</dt>
+<dd>Deletes the modifier.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <em>Box</em> and <em>Triangle</em> icons may not be available depending on the type of modifier.</p>
+</div>
+<p>Below the header are two buttons:</p>
+<dl class="docutils">
+<dt>Apply</dt>
+<dd>Makes the modifier &#8220;real&#8221; - converts the object&#8217;s geometry to match the applied modifier,
+and deletes the modifier.</dd>
+<dt>Copy</dt>
+<dd>Creates a duplicate of the modifier at the bottom of the stack.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Applying a modifier that is not first in the stack will ignore the stack order and
+could produce undesired results.</p>
+</div>
+<p>Below this header, all of the options unique to each modifier will be displayed.</p>
+<div class="section" id="the-modifier-stack">
+<span id="modifier-stack"></span><h3>The Modifier Stack<a class="headerlink" href="#the-modifier-stack" title="Permalink to this headline">¶</a></h3>
+<p>修改器 are a series of non-destructive operations which can be applied on top of an objects geometry.
+They can be applied in just about any order the users chooses.</p>
+<p>This kind of functionality is often referred to as a &#8220;modifier stack&#8221;
+and is also found in several other 3D applications.</p>
+<p>In a modifier stack the order in which modifiers are applied has an effect on the result.
+Fortunately modifiers can be rearranged easily by clicking the convenient up and down arrow icons.
+For example, the image below shows <a class="reference internal" href="generate/subsurf.html"><span class="doc">SubSurf</span></a> and
+<a class="reference internal" href="generate/mirror.html"><span class="doc">Mirror</span></a> modifiers that have switched places.</p>
+<table border="1" class="docutils" id="id3">
+<caption><span class="caption-text">Modifier Stack example</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/modifier-stackorder-example2.jpg"><img alt="../../_images/modifier-stackorder-example2.jpg" src="../../_images/modifier-stackorder-example2.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The Mirror modifier is the last item in the stack and
+the result looks like two surfaces.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../_images/modifier-stackorder-examp1e1.jpg"><img alt="../../_images/modifier-stackorder-examp1e1.jpg" src="../../_images/modifier-stackorder-examp1e1.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The Subsurface modifier is the last
+item in the stack and the result is a single merged surface.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>修改器 are calculated from top to bottom in the stack.
+In this example, the desired result (on right) is achieved by first mirroring the object,
+and then calculating the subdivision surface.</p>
+<div class="section" id="example">
+<h4>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="figure" id="id6">
+<img alt="../../_images/modifier-stackorder-example3.jpg" src="../../_images/modifier-stackorder-example3.jpg" />
+<p class="caption"><span class="caption-text">In this example a simple subdivided cube has been transformed into a rather complex object using
+a stack of modifiers.</span></p>
+</div>
+<p><a class="reference external" href="https://wiki.blender.org/index.php/:File:25-Manual-修改器-example.blend">Download example file</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modify/data_transfer.html" class="btn btn-neutral float-right" title="Data Transfer Modifier" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="修改器" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

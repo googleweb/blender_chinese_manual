@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deleting and Merging &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Basics" href="index.html"/>
+        <link rel="next" title="Make Edge/Face" href="creating_faces_and_edges.html"/>
+        <link rel="prev" title="Adding Geometry" href="adding.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_structures.html">Vertices, Edges and Faces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">Mesh Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../normals.html">Normals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertices.html">Vertex Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../edges.html">Edge Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../faces.html">Face Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../deforming/index.html">Deforming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../duplicating/index.html">Duplicating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../subdividing/index.html">Subdividing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cleanup.html">Mesh Clean-up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc.html">Miscellaneous Editing Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../vertex_groups/index.html">Vertex Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../smoothing.html">Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../../index.html">网格</a> &raquo;</li>
+      
+          <li><a href="../index.html">Editing</a> &raquo;</li>
+      
+          <li><a href="index.html">Basics</a> &raquo;</li>
+      
+    <li>Deleting and Merging</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/modeling/meshes/editing/basics/deleting.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deleting-and-merging">
+<h1>Deleting and Merging<a class="headerlink" href="#deleting-and-merging" title="Permalink to this headline">¶</a></h1>
+<p>These tools can be used to remove components.</p>
+<div class="section" id="delete">
+<h2>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Delete kbd:<cite>X</cite>, <code class="kbd docutils literal"><span class="pre">Del</span></code></dt>
+<dd><p class="first">Deletes selected vertices, edges, or faces. This operation can also be limited to:</p>
+<dl class="last docutils">
+<dt>Vertices</dt>
+<dd>Delete all vertices in current selection, removing any faces or edges they are connected to.</dd>
+<dt>Edges</dt>
+<dd>Deletes any edges in the current selection. Removes any faces that the edge shares with it.</dd>
+<dt>Faces</dt>
+<dd>Removes any faces in current selection.</dd>
+<dt>Only Edges &amp; Faces</dt>
+<dd>Limits the operation to only selected edges and adjacent faces.</dd>
+<dt>Only faces</dt>
+<dd>Removes faces, but edges within face selection are retained.</dd>
+<dt>Edge Collapse</dt>
+<dd>Collapses edges into single vertices. This can be used to remove a loop of faces.</dd>
+<dt>Edge Loop</dt>
+<dd>Deletes an edge loop. If the current selection is not an edge loop, this operation does nothing.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="dissolve">
+<h2>Dissolve<a class="headerlink" href="#dissolve" title="Permalink to this headline">¶</a></h2>
+<p>Dissolve operations are also accessed from the delete menu. Instead of removing the geometry,
+which may leave holes that you have to fill in again,
+dissolve will remove the geometry and fill in the surrounding geometry.</p>
+<dl class="docutils">
+<dt>Dissolve</dt>
+<dd>Removes selected geometry, but keeps surface closed, effectively turning the selection into a single n-gon.
+Dissolve works slightly different based on if you have edges, faces or vertices selected.
+You can add detail where you need it, or quickly remove it where you do not.</dd>
+<dt>Limited Dissolve</dt>
+<dd>Limited Dissolve reduces detail on planar faces and linear edges with an adjustable angle threshold.</dd>
+</dl>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_limited-dissolve.jpg"><img alt="../../../../_images/bmesh_limited-dissolve.jpg" src="../../../../_images/bmesh_limited-dissolve.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">例子 showing the how Limited Dissolve can be used.</span></p>
+<div class="legend">
+<dl class="docutils">
+<dt>Face Split - dissolve option.</dt>
+<dd>When dissolving vertices into surrounding faces, you can often end up with very large, uneven ngons.
+The face split option limits dissolve to only use the corners of the faces connected to the vertex.</dd>
+</dl>
+</div>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/bmesh_dissolve_face_split.png"><img alt="../../../../_images/bmesh_dissolve_face_split.png" src="../../../../_images/bmesh_dissolve_face_split.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Dissolve Face Split option. Left - the input, middle - regular dissolve, right - Face Split enabled.</span></p>
+</div>
+</div>
+<div class="section" id="convert-triangles-to-quads">
+<h2>Convert Triangles to Quads<a class="headerlink" href="#convert-triangles-to-quads" title="Permalink to this headline">¶</a></h2>
+<p><em>Tris to Quads</em> <code class="kbd docutils literal"><span class="pre">Alt-J</span></code>
+This takes adjacent tris and removes the shared edge to create a quad.
+This tool can be performed on a selection of multiple triangles.</p>
+<p>This same action can be done on a selection of just two tris,
+by selecting them and using the shortcut <code class="kbd docutils literal"><span class="pre">F</span></code>, to create a face.</p>
+</div>
+<div class="section" id="unsubdivide">
+<h2>Unsubdivide<a class="headerlink" href="#unsubdivide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Edges ‣ Unsubdivide</span></div>
+</div>
+</div>
+<p>Unsubdivide functions as the reverse of subdivide by attempting to remove edges that were the
+result of a subdivide operation.
+If additional editing has been done after the subdivide operation,
+unexpected results may occur.</p>
+<dl class="docutils">
+<dt>Iterations</dt>
+<dd>How many subdivisions to remove.</dd>
+</dl>
+</div>
+<div class="section" id="merging">
+<h2>Merging<a class="headerlink" href="#merging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="merging-vertices">
+<h3>Merging Vertices<a class="headerlink" href="#merging-vertices" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Vertices ‣ Merge...</span>,
+<span class="menuselection">Specials ‣ Merge</span> or <span class="menuselection">Vertex Specials ‣ Merge</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-M</span></code></div>
+</div>
+</div>
+<p>This tool allows you to merge all selected vertices into an unique one, deleting all others.
+You can choose the location of the surviving vertex in the menu this tool pops up before
+executing:</p>
+<dl class="docutils">
+<dt>At First</dt>
+<dd>Only available in <em>Vertex</em> select mode,
+it will place the remaining vertex at the location of the first one selected.</dd>
+<dt>At Last</dt>
+<dd>Only available in <em>Vertex</em> select mode,
+it will place the remaining vertex at the location of the last one selected (the active one).</dd>
+<dt>At Center</dt>
+<dd>Available in all select modes, it will place the remaining vertex at the center of the selection.</dd>
+<dt>At Cursor</dt>
+<dd>Available in all select modes, it will place the remaining vertex at the 3D游标.</dd>
+<dt>Collapse</dt>
+<dd>This is a special option, as it might let &#8220;live&#8221; more than one vertex.
+In fact, you will have as many remaining vertices as you had &#8220;islands&#8221; of selection
+(i.e. groups of linked selected vertices).
+The remaining vertices will be positioned at the center of their respective &#8220;islands&#8221;.
+It is also available <em>via</em> the <span class="menuselection">Mesh ‣ Edges ‣ Collapse</span> menu option...</dd>
+</dl>
+<p>Merging vertices of course also deletes some edges and faces. But Blender will do everything
+it can to preserve edges and faces only partly involved in the reunion.</p>
+</div>
+<div class="section" id="automerge-editing">
+<h3>AutoMerge Editing<a class="headerlink" href="#automerge-editing" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ AutoMerge Editing</span></div>
+</div>
+</div>
+<p>The <em>Mesh</em> menu as a related toggle option: <em>AutoMerge Editing</em>.
+When enabled,
+as soon as a vertex moves closer to another one than the <em>Limit</em> setting
+(<em>Mesh Tools</em> panel, see below), they are automatically merged.</p>
+</div>
+<div class="section" id="remove-doubles">
+<h3>Remove Doubles<a class="headerlink" href="#remove-doubles" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     编辑模式</div>
+<div class="line">Panel:    Mesh Tools</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Vertices ‣ Remove Doubles</span>,
+<span class="menuselection">Specials ‣ Remove Doubles</span> or <span class="menuselection">Vertex Specials ‣ Remove Doubles</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W</span></code>, <span class="menuselection">Remove Doubles</span></div>
+</div>
+</div>
+<p>Remove Doubles is a useful tool to simplify a mesh by merging
+vertices that are closer than a specified distance to each other.
+An alternate way to simplify a mesh is to use the <a class="reference internal" href="../../../modifiers/generate/decimate.html"><span class="doc">Decimate modifier</span></a>.</p>
+<dl class="docutils">
+<dt>Merge Distance</dt>
+<dd>Sets the distance threshold for merging vertices, in Blender units.</dd>
+<dt>Unselected</dt>
+<dd>Allows vertices in a selection to be merged with unselected vertices.
+When disabled, selected vertices will only be merged with other selected ones.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="creating_faces_and_edges.html" class="btn btn-neutral float-right" title="Make Edge/Face" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adding.html" class="btn btn-neutral" title="Adding Geometry" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

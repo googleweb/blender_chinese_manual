@@ -1,0 +1,12 @@
+.. _about-index:
+
+####################
+  关于本手册
+####################
+
+.. toctree::
+   :maxdepth: 2
+
+   introduction.rst
+   license.rst
+   contribute/index.rst

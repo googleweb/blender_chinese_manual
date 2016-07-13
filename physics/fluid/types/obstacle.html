@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fluid Obstacle &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Fluid Types" href="index.html"/>
+        <link rel="next" title="Fluid Inflow / Outflow" href="flow.html"/>
+        <link rel="prev" title="Fluid Object" href="fluid_object.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Fluid Simulation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Fluid Types</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="domain.html">Fluid Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fluid_object.html">Fluid Object</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Fluid Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flow.html">Fluid Inflow / Outflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle.html">Fluid Particle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control.html">Fluid Control</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../baking.html">Baking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix.html">Fluid Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">Baking 物理 Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="../index.html">Fluid Simulation</a> &raquo;</li>
+      
+          <li><a href="index.html">Fluid Types</a> &raquo;</li>
+      
+    <li>Fluid Obstacle</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/physics/fluid/types/obstacle.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fluid-obstacle">
+<h1>Fluid Obstacle<a class="headerlink" href="#fluid-obstacle" title="Permalink to this headline">¶</a></h1>
+<p>This object will be used as an obstacle in the simulation. As with a fluid object,
+obstacle objects currently should not intersect. As for fluid objects,
+the actual mesh geometry is used for obstacles. For objects with a volume,
+make sure that the normals of the obstacle are calculated correctly,
+and radiating properly (use the <em>Flip Normal</em> button, in <em>编辑模式</em>,
+<em>Mesh Tools</em> panel, in the Tool shelf), particularly when using a spinned container.
+Applying a <a class="reference internal" href="../../../modeling/modifiers/generate/subsurf.html"><span class="doc">SubSurf Modifier</span></a>
+before baking the simulation could also be a good idea if the mesh is not animated.</p>
+<dl class="docutils">
+<dt>Volume Initialization Type</dt>
+<dd>See <a class="reference internal" href="introduction.html#fluid-initialization"><span class="std std-ref">Volume Initialization Type</span></a></dd>
+<dt>Boundary type</dt>
+<dd><p class="first">Determines the stickiness of the obstacle surface, called &#8220;Surface Adhesion&#8221;.
+Surface Adhesion depends in real-world on the fluid and the graininess or
+friction/adhesion/absorption qualities of the surface.</p>
+<dl class="docutils">
+<dt>No Slip</dt>
+<dd>Causes the fluid to stick to the obstacle (zero velocity).</dd>
+<dt>Free Slip</dt>
+<dd>Allows movement along the obstacle (only zero normal velocity).</dd>
+<dt>Part Slip</dt>
+<dd>Mixes both types, with 0 being mostly no slip, and 1 being identical to free slip.</dd>
+</dl>
+<p class="last">Note that if the mesh is moving, it will be treated as no slip automatically.</p>
+</dd>
+</dl>
+<div class="figure" id="id1">
+<img alt="../../../_images/physics_fluid_bndtcomp.jpg" src="../../../_images/physics_fluid_bndtcomp.jpg" />
+<p class="caption"><span class="caption-text">例子 of the different boundary types for a drop falling onto the slanted wall.
+From left to right: no-slip, part-slip 0.3, part-slip 0.7 and free-slip.</span></p>
+</div>
+<dl class="docutils">
+<dt>Animated Mesh/Export</dt>
+<dd>See <a class="reference internal" href="introduction.html#fluid-animated-mesh"><span class="std std-ref">Animated Mesh/Export</span></a></dd>
+<dt>PartSlip Amount</dt>
+<dd>Amount of mixing between no - and free-slip, described above.</dd>
+<dt>Impact Factor</dt>
+<dd>Amount of fluid volume correction for gain/loss from impacting with moving objects.
+If this object is not moving, this setting has no effect.
+However, it if is and the fluid collides with it, a negative value takes volume away from the Domain,
+and a positive number adds to it. Ranges from -2.0 to 10.0.</dd>
+</dl>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="flow.html" class="btn btn-neutral float-right" title="Fluid Inflow / Outflow" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fluid_object.html" class="btn btn-neutral" title="Fluid Object" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

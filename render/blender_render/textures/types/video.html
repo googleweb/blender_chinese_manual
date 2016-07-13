@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>视频 Textures &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Texture Types" href="index.html"/>
+        <link rel="next" title="Procedural Textures" href="procedural/index.html"/>
+        <link rel="prev" title="图像 Textures" href="image.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Textures</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assigning_a_texture.html">Assigning a Texture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options.html">Textures common options</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Texture Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mapping/index.html">Texture Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../influence/index.html">Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">Texture 节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Textures</a> &raquo;</li>
+      
+          <li><a href="index.html">Texture Types</a> &raquo;</li>
+      
+    <li>视频 Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/render/blender_render/textures/types/video.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="video-textures">
+<h1>视频 Textures<a class="headerlink" href="#video-textures" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/texture-video-example.jpg"><img alt="../../../../_images/texture-video-example.jpg" src="../../../../_images/texture-video-example.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">视频 texture.</span></p>
+</div>
+<p><em>视频 textures</em> are a some kind of <a class="reference internal" href="image.html"><span class="doc">图像</span></a> textures and based on
+movie file or sequence of successive numbered separate images.
+They are added in the same way that image textures are.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image">
+<h3>图像<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/texture-video-imagepanel.jpg"><img alt="../../../../_images/texture-video-imagepanel.jpg" src="../../../../_images/texture-video-imagepanel.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">图像 panel for video texture.</span></p>
+</div>
+<dl class="docutils">
+<dt>Source</dt>
+<dd><p class="first">For video texture the kind of source file to use is</p>
+<dl class="last docutils">
+<dt>Movie</dt>
+<dd>See about supported <a class="reference internal" href="../../../../data_system/files/media/video_formats.html"><span class="doc">Movie</span></a> formats.</dd>
+<dt>图像 Sequence</dt>
+<dd>See about supported <a class="reference internal" href="../../../../data_system/files/media/image_formats.html"><span class="doc">图像</span></a> formats.
+To load image sequence in any of the supported image
+file formats first click on the first frame and then Accept.
+Then change the Source to 图像 Sequence, and enter the ending frame number of this sequence.</dd>
+</dl>
+</dd>
+</dl>
+<p>More about loading source file for video texture see
+<a class="reference internal" href="image.html#render-blender-internal-image-settings"><span class="std std-ref">here</span></a>.</p>
+<dl class="docutils">
+<dt>Fields</dt>
+<dd><p class="first">Work with field images. 视频 frames consist of two different images (fields) that are merged.
+This option ensures that when <em>Fields</em> are rendered,
+the correct field of the image is used in the correct field of the rendering.</p>
+<dl class="last docutils">
+<dt>Upper First</dt>
+<dd>Order of video fields - upper field first.</dd>
+<dt>Lower First</dt>
+<dd>Order of video fields - lower field first.</dd>
+<dt>Fields</dt>
+<dd>Number of fields per rendered frame.
+Used with Fields and interlaced video, it says whether each image has both odd and even, or just one.</dd>
+</dl>
+</dd>
+<dt>Frames</dt>
+<dd>Number of frames/images in the movie or sequence to use</dd>
+<dt>Start</dt>
+<dd>Global starting frame of the sequence/movie</dd>
+<dt>Offset</dt>
+<dd>Offset the number of the frame to use in the animation.
+What frame number inside the movie/sequence to start grabbing.</dd>
+<dt>Match Movie Length</dt>
+<dd>This button set image&#8217;s user&#8217;s length to the one of selected movie/sequence.</dd>
+<dt>Auto Refresh</dt>
+<dd>Automatically refresh images on frame changes</dd>
+<dt>Cyclic</dt>
+<dd>When the video ends, it will loop around the to the start and begin playing again.</dd>
+</dl>
+<p>For <em>Movie</em> source:</p>
+<dl class="docutils">
+<dt>Use Alpha</dt>
+<dd><p class="first">Use the alpha channel information from the image or make image fully opaque</p>
+<dl class="last docutils">
+<dt>Straight</dt>
+<dd>Transparent RGB and alpha pixels are unmodified.</dd>
+<dt>Premultiplied</dt>
+<dd>Transparent RGB pixels of an image are multiplied by the image&#8217;s alpha value.</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">For sampling and mapping documentation see
+<a class="reference internal" href="image.html"><span class="doc">图像 Texture</span></a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="procedural/index.html" class="btn btn-neutral float-right" title="Procedural Textures" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="image.html" class="btn btn-neutral" title="图像 Textures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

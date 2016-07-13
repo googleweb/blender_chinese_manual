@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Halo 渲染ing &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
+        <link rel="up" title="Special Material Effects" href="index.html"/>
+        <link rel="next" title="Volume 渲染ing" href="volume.html"/>
+        <link rel="prev" title="Special Material Effects" href="index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Materials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assigning_a_material.html">Assigning a Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple_materials.html">Multiple Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">Material Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">Material 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Special Material Effects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quality.html">渲染 Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../performance.html">Performance Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Materials</a> &raquo;</li>
+      
+          <li><a href="index.html">Special Material Effects</a> &raquo;</li>
+      
+    <li>Halo 渲染ing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/render/blender_render/materials/special_effects/halo.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="halo-rendering">
+<h1>Halo 渲染ing<a class="headerlink" href="#halo-rendering" title="Permalink to this headline">¶</a></h1>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/materials-helorender-activate.jpg"><img alt="../../../../_images/materials-helorender-activate.jpg" src="../../../../_images/materials-helorender-activate.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Activating helo rendering.</span></p>
+</div>
+<p>Blender provides a set of materials which do not obey the face-shader paradigm and which are
+applied on a per-vertex rather than on a per-face basis.
+These are called <em>Halos</em> because you can see them,
+but they do not have any substance. They are like little clouds of light;
+although they are not really lights because they do not cast light into the scene like a lamp.</p>
+<p>Halos come in very handy when creating certain special effects, when making an object glow,
+or when creating a viewable light or fog/atmospherics around an actual light.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/materials-halos.jpg"><img alt="../../../../_images/materials-halos.jpg" src="../../../../_images/materials-halos.jpg" style="width: 309px;" /></a>
+<p class="caption"><span class="caption-text">Halo panels.</span></p>
+</div>
+<p>To enable <em>Halos</em>, press the <em>Halo</em> button in the <em>Material</em> menu&#8217;s top panel.</p>
+<p>As you will see in the 3D视图, the mesh faces are no longer rendered.
+Instead just the vertex is rendered, since that is where each halo will originate.
+Halos can be hard to find in a crowded scene, so name it well for easy location in
+<a class="reference internal" href="../../../../editors/outliner.html"><span class="doc">the outliner</span></a>.</p>
+<p>In the Properties editors, where we normally find the <em>Diffuse</em>,
+<em>Specular</em>, and <em>Shading</em> panels,
+we now see panels relative to the <em>Halo</em> characteristics:</p>
+<div class="section" id="halo-panel">
+<h3>Halo Panel<a class="headerlink" href="#halo-panel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Alpha</dt>
+<dd>The transparency</dd>
+<dt>Color Swatch</dt>
+<dd>The color of the halo itself</dd>
+<dt>Seed</dt>
+<dd>If non-zero, randomizes the ring dimension and line location.
+To use, give any (integer) number to start the random-number generator.</dd>
+<dt>Size</dt>
+<dd>Sets the dimension of the halo</dd>
+<dt>Hardness</dt>
+<dd>Sets the hardness of the halo. Similar to specular hardness</dd>
+</dl>
+<div class="figure" id="id3">
+<img alt="../../../../_images/materials-haloadd.jpg" src="../../../../_images/materials-haloadd.jpg" />
+<p class="caption"><span class="caption-text">Effect of Add.</span></p>
+</div>
+<dl class="docutils">
+<dt>Add</dt>
+<dd>The <em>Add</em> slider determine how much the halo colors are &#8216;added to&#8217;,
+rather than mixed with, the colors of the objects behind and together with other halos.
+By increasing Add, the Halo will appear to light up objects that move behind it or through the Halo field.</dd>
+<dt>Texture</dt>
+<dd>Gives halo a texture. By default,
+textures are applied to objects with Object coordinates and reflects on the halos by affecting their color,
+as a whole, on the basis of the color of the vertex originating the halo.
+Enable this feature to have the texture take effect <em>within</em> the halo,
+and hence to have it with varying colors or transparencies; this will map the whole texture to <em>every</em> halo.
+This technique proves very useful when you want to create a realistic rain effect using particle systems,
+or similar.</dd>
+<dt>Vertex Normal</dt>
+<dd>Use the vertex normal to specify the dimension of the halo</dd>
+<dt>Extreme Alpha</dt>
+<dd>Boosts alpha</dd>
+<dt>Shaded</dt>
+<dd><p class="first">Lets halo receive light and shadows from external objects</p>
+<p class="last">When shaded is enabled, the Halo will be affected by local light;
+a lamp will make it brighter and affect its diffuse color and intensity.</p>
+</dd>
+<dt>Soft</dt>
+<dd>Softens the edges of the halos at intersections with other geometry</dd>
+</dl>
+<p>In addition, several other special effects are available.
+To enable some or all of these effects, set the number of points/rings,
+or set the color of each effect individually:</p>
+<dl class="docutils">
+<dt>Rings</dt>
+<dd>Adds circular rings around to the halo.</dd>
+<dt>Lines</dt>
+<dd>Adds lines from the center of the halo.</dd>
+<dt>Star tips</dt>
+<dd>Gives the halo a star shape.</dd>
+</dl>
+<p>You cannot use color ramps. Lines,
+Rings and an assortment of special effects are available with the relevant toggle buttons,
+which include Flare, Rings, Lines, Star, Texture, Extreme Alpha, and Shaded.
+<em>Halo Variations</em> shows the result of applying a halo material to a single vertex mesh.</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/halo02.jpg"><img alt="../../../../_images/halo02.jpg" src="../../../../_images/halo02.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">Halo Variations.</span></p>
+</div>
+<p>The halo size, hardness and alpha can be adjusted with the pertinent sliders.
+These are very similar to traditional material settings</p>
+<div class="figure">
+<img alt="../../../../_images/materials-haloadd.jpg" src="../../../../_images/materials-haloadd.jpg" />
+</div>
+<p>The <em>Add</em> slider determine how much the halo colors are &#8216;added to&#8217;,
+rather than mixed with, the colors of the objects behind and together with other halos.
+By increasing Add,
+the Halo will appear to light up objects that move behind it or through the Halo field.</p>
+<p>To set the number of rings, lines, and star points independently,
+once they are enabled with the relative Toggle Button,
+use the Num Buttons <em>Rings:</em>, <em>Lines:</em> and <em>Star:</em>.
+Rings and lines are randomly placed and oriented, to change their pattern you can change the
+<em>Seed:</em> Num Button which sets the random numbers generator seed.</p>
+</div>
+<div class="section" id="flare-panel">
+<h3>Flare Panel<a class="headerlink" href="#flare-panel" title="Permalink to this headline">¶</a></h3>
+<p>Enabling Flare 渲染s the halo as a lens flare</p>
+<dl class="docutils">
+<dt>Size</dt>
+<dd>Sets the factor by which the flare is larger than the halo</dd>
+<dt>Boost</dt>
+<dd>Give the flare extra strength.</dd>
+<dt>Seed</dt>
+<dd>Specifies an offset in the flare seed table</dd>
+<dt>Subflares</dt>
+<dd>Sets the number of subflares</dd>
+<dt>Subsize</dt>
+<dd>Sets the dimensions of the subflares, dots, and circles</dd>
+</dl>
+<div class="section" id="lens-flares">
+<h4>Lens Flares<a class="headerlink" href="#lens-flares" title="Permalink to this headline">¶</a></h4>
+<p>Our eyes have been trained to believe that an image is real if it shows
+artifacts that result from the mechanical process of photography.
+<em>Motion blur</em>, <em>Depth of Field</em>, and <em>lens flares</em>
+are just three examples of these artifacts.
+The first two are discussed in the <em>chapter_rendering</em>;
+the latter can be produced with special halos.
+A simulated lens flare tells the viewer that the image was created with a
+camera, which makes the viewer think that it is authentic.</p>
+<p>We create lens flares in Blender from a mesh object using first the <em>Halo</em> button
+and then the <em>Flare</em> options in the <em>Shaders</em> Panel of the material
+settings. Try turning on <em>Rings</em> and <em>Lines</em>,
+but keep the colors for these settings
+fairly subtle. Play with the <em>Flares:</em> number and <em>Fl. seed:</em>
+settings until you arrive at something that is pleasing to the eye.
+You might need to play with <em>Boost:</em> for a stronger effect
+Fig. <a class="reference internal" href="#fig-bi-material-halo-flare"><span class="std std-ref">Lens Flare.</span></a> settings.</p>
+<p>Note that this tool does not simulate the physics of photons
+traveling through a glass lens; it&#8217;s just a eye candy.</p>
+<p>Blender&#8217;s lens flare looks nice in motion,
+and disappears when another object occludes the flare mesh.</p>
+<div class="figure" id="id5">
+<span id="fig-bi-material-halo-flare"></span><a class="reference internal image-reference" href="../../../../_images/halo04.jpg"><img alt="../../../../_images/halo04.jpg" src="../../../../_images/halo04.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">Lens Flare.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="halo-texturing">
+<h2>Halo Texturing<a class="headerlink" href="#halo-texturing" title="Permalink to this headline">¶</a></h2>
+<p>By default, textures are applied to objects with Object coordinates and reflects on the halos
+by affecting their color, as a whole,
+on the basis of the color of the vertex originating the halo.
+To have the texture take effect <em>within</em> the halo, and hence to have it with varying colors
+or transparencies press the <em>Texture</em> button;
+this will map the whole texture to <em>every</em> halo. This technique proves very useful when you
+want to create a realistic rain effect using particle systems, or similar.</p>
+<p>Another Option is Shaded. When shaded is enabled, the Halo will be affect by local light;
+a lamp will make it brighter and affect its diffuse color and intensity.</p>
+</div>
+<div class="section" id="examples">
+<h2>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dotmatrix-display">
+<h3>Dotmatrix display<a class="headerlink" href="#dotmatrix-display" title="Permalink to this headline">¶</a></h3>
+<p>Let us use a halo material to create a dotmatrix display.</p>
+<ul class="simple">
+<li>To begin, add a grid with the dimensions 32×16.
+Then add a camera and adjust your scene so that you have a nice view of the billboard.</li>
+<li>Use a 2D image program to create some red text on a black background,
+using a simple and bold font,
+you can just save the picture below on your hard drive...).
+<em>Dot matrix image texture.</em> shows an image 512 pixels wide by 64 pixels high, with some black space at both sides.</li>
+</ul>
+<div class="figure" id="id6">
+<img alt="../../../../_images/dotmatrix2.jpg" src="../../../../_images/dotmatrix2.jpg" />
+<p class="caption"><span class="caption-text">Dot matrix image texture.</span></p>
+</div>
+<ul class="simple">
+<li>Add a material for the billboard, and set it to the type <em>Halo</em>.
+Set the <em>HaloSize</em> to 0.06 and when you render the scene you should see a grid of white spots.</li>
+<li>Add a Texture, then change to the Texture Buttons and make it an image texture.
+When you load your picture and render again you should see some red tinted dots in the grid.</li>
+<li>Return to the Material Buttons and adjust the <em>sizeX</em> parameter to about 0.5 then render again;
+the text should now be centered on the Billboard.</li>
+<li>To remove the white dots, adjust the material color to a dark red and render.
+You should now have only red dots, but the billboard is still too dark.
+To fix this enter EditMode for the board and copy all vertices using the <code class="kbd docutils literal"><span class="pre">Shift-D</span></code> shortcut
+(take care not to move them!).
+Then adjust the brightness with the <em>Add</em> value in the MaterialButtons.</li>
+</ul>
+<div class="figure" id="id7">
+<span id="fig-bi-material-halo-dotmatrix"></span><img alt="../../../../_images/dotmatrix.jpg" src="../../../../_images/dotmatrix.jpg" />
+<p class="caption"><span class="caption-text">Dot Matrix display.</span></p>
+</div>
+<p>You can now animate the texture to move over the billboard,
+using the <em>ofsX</em> value in the <em>Texture</em> panel of the MaterialButtons.
+(You could use a higher resolution for the grid,
+but if you do you will have to adjust the size of the halos by shrinking them,
+or they will overlap. Fig. <a class="reference internal" href="#fig-bi-material-halo-dotmatrix"><span class="std std-ref">Dot Matrix display.</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Note about material indices</p>
+<p class="last">Halo materials only work when applied using the first material index.
+Any material(s) in a subsequent material index will not be rendered.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="volume.html" class="btn btn-neutral float-right" title="Volume 渲染ing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Special Material Effects" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

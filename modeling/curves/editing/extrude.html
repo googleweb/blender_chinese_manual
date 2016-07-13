@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Curve Extrusion &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Surfaces" href="../../surfaces/index.html"/>
+        <link rel="prev" title="Curve Deform" href="deform.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Curves</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Curve Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform.html">Curve Deform</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Curve Extrusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../../index.html">建模</a> &raquo;</li>
+      
+          <li><a href="../index.html">Curves</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Curve Extrusion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/curves/editing/extrude.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="curve-extrusion">
+<h1>Curve Extrusion<a class="headerlink" href="#curve-extrusion" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object or 编辑模式</div>
+<div class="line">Panel:    <em>Curve and Surface</em></div>
+</div>
+</div>
+<dl class="docutils">
+<dt>Extrude</dt>
+<dd><p class="first">Turns a one dimensional curve into a two dimensional curve by giving it height.
+Note that this is not related to <em>Extrude</em> used in mesh edit-mode.
+With a scale of one,
+an <em>Extrusion</em> of 0.5 will extrude the curve 0.5 BU in both directions, perpendicular to the curves normals.</p>
+<p class="last">If set to 0.0, there is no extrusion</p>
+</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/curves_extrude_start.jpg"><img alt="../../../_images/curves_extrude_start.jpg" src="../../../_images/curves_extrude_start.jpg" style="width: 315px;" /></a>
+<p class="caption"><span class="caption-text">Bézier Circle 0.0 extrude.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/curves_extrude_by0.5.jpg"><img alt="../../../_images/curves_extrude_by0.5.jpg" src="../../../_images/curves_extrude_by0.5.jpg" style="width: 315px;" /></a>
+<p class="caption"><span class="caption-text">Extruded by 0.5.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Tilt</dt>
+<dd><p class="first">This setting controls how the normals (visualization: arrows)
+twist around each control point - so it is only relevant with 3D curves!
+You set it using the <em>Tilt</em> transform tool in the <code class="kbd docutils literal"><span class="pre">T</span></code> tool shelf,
+the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ Mean tilt</span>, <span class="menuselection">Curve ‣ 变换 ‣ Tilt</span>.</p>
+<p>You can also reset it to its default value (i.e. perpendicular to the original curve plane)
+with <code class="kbd docutils literal"><span class="pre">Alt-T</span></code>, <span class="menuselection">Curve ‣ Control Points ‣ Clear Tilt</span>.
+With NURBS, the tilt is always smoothly interpolated.
+However, with Bézier, you can choose the interpolation algorithm between
+Linear, Ease, BSpline, and Cardinal, in the
+<span class="menuselection">Properties Editor ‣ Object Data ‣ Active Spline ‣ Tilt</span>.</p>
+<div class="last figure" id="id3">
+<img alt="../../../_images/curves_extrude_by0.5_30meantilt.jpg" src="../../../_images/curves_extrude_by0.5_30meantilt.jpg" />
+<p class="caption"><span class="caption-text">30 degree Mean Tilt of all control points.</span></p>
+</div>
+</dd>
+<dt>Bevel Depth</dt>
+<dd><p class="first">This will add a bevel to the extrusion. See below for its effects...
+Note that the bevel makes the extrusion wider and higher.
+If set to 0.0, there is no bevel.</p>
+<div class="last figure" id="id4">
+<img alt="../../../_images/curves_extrude_depth_fullfill.jpg" src="../../../_images/curves_extrude_depth_fullfill.jpg" />
+<p class="caption"><span class="caption-text">Bevel depth of 0.25, fill set to full, zero Mean Tilt.</span></p>
+</div>
+</dd>
+<dt>Bevel Resolution</dt>
+<dd><p class="first">Controls the resolution of the bevel created by a <em>Bevel Depth</em> higher than zero.
+If set the to 0 (the default), the bevel is a simple &#8220;flat&#8221; surface.
+Higher values will smooth, round off the bevel, similar to the resolution settings of the curve itself...</p>
+<div class="last figure" id="id5">
+<img alt="../../../_images/curves_extrude_resolution.jpg" src="../../../_images/curves_extrude_resolution.jpg" />
+<p class="caption"><span class="caption-text">Bevel resolution set to 10.</span></p>
+</div>
+</dd>
+<dt>Offset</dt>
+<dd><p class="first">Moves the extrusion parallel to the curve normals. <em>Almost like scaling</em></p>
+<div class="last figure" id="id6">
+<img alt="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" src="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" />
+<p class="caption"><span class="caption-text">-1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.</span></p>
+</div>
+</dd>
+<dt>Radius</dt>
+<dd><p class="first">The Radius allows you to directly control the width of the extrusion along the “spinal” curve.
+The <em>Radius</em> of the points is set using the <em>Shrink/Fatten Radius</em> transform tool <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
+the <span class="menuselection">Curve ‣ 变换 ‣ Shrink/Fatten Radius</span>,
+or the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ Radius</span>.</p>
+<div class="figure" id="id7">
+<img alt="../../../_images/curves_extrude_radius.jpg" src="../../../_images/curves_extrude_radius.jpg" />
+<p class="caption"><span class="caption-text">One control point radius set to zero.</span></p>
+</div>
+<div class="last admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Remember, these curves can be converted into meshes with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> in 物体模式</p>
+</div>
+</dd>
+</dl>
+<p>We have three sub-classes of results, depending on whether the curve is open or closed or 3D:</p>
+<dl class="docutils">
+<dt>Open 2D Curve</dt>
+<dd><p class="first">The extrusion will create a &#8220;wall&#8221; or &#8220;ribbon&#8221; following the curve shape. If using a <em>Bevel Depth</em>,
+the wall becomes a sort of slide or gutter.
+If your normals are facing the wrong way you can switch their direction as shown
+<a class="reference internal" href="introduction.html#curve-switch-direction"><span class="std std-ref">here</span></a></p>
+<div class="last figure" id="id8">
+<img alt="../../../_images/curves_extrude_open2d_fill_none.jpg" src="../../../_images/curves_extrude_open2d_fill_none.jpg" />
+<p class="caption"><span class="caption-text">Open 2D Curve with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, fill set to none,
+zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.</span></p>
+</div>
+</dd>
+<dt>Closed 2D Curve</dt>
+<dd><p class="first">This is probably the most useful situation, as it will quickly create a volume, with (by default)
+two flat and parallel surfaces filling the two sides of the extruded &#8220;wall&#8221;. You can remove one or both of these
+faces by choosing the fill mode: both, front, back, or none.</p>
+<p>The optional bevel depth will always create a 90 degree bevels here.</p>
+<div class="last figure" id="id9">
+<img alt="../../../_images/curves_extrude_closed2d_fill_both.jpg" src="../../../_images/curves_extrude_closed2d_fill_both.jpg" />
+<p class="caption"><span class="caption-text">Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 Bevel resolution, Fill: Both.</span></p>
+</div>
+</dd>
+<dt>3D Curve</dt>
+<dd><p class="first">Here the fact that the curve is closed or not has no importance - you will never get a volume with an extruded 3D
+curve, only a wall or ribbon, like with open 2D curves.</p>
+<p class="last">However, there is one more feature with 3D curves: the <em>Tilt</em> of the control points (see above).
+It will make the ribbon twist around the curve to create a mobius strip, for example.</p>
+</dd>
+</dl>
+<div class="section" id="advanced-extrusion">
+<h2>高级应用 Extrusion<a class="headerlink" href="#advanced-extrusion" title="Permalink to this headline">¶</a></h2>
+<p>These extrusions use one or two additional curve objects,
+to create very complex organic shapes.</p>
+<p>To enable this type of extrusion, you have to type a valid curve object name in the
+<em>BevOb</em> field of the curve you are going to use as the &#8220;spinal column&#8221; of your
+extrusion. The &#8220;bevel&#8221; curve will control the cross section of the extruded object.
+Whether the <em>BevOb</em> curve is 2D or 3D has no importance, but if it is closed,
+it will create a &#8220;tube-like&#8221; extrusion;
+otherwise you will get a sort of gutter or slide object...</p>
+<p>The object is extruded along the whole length of all internal curves. By default,
+the width of the extrusion is constant, but you have two ways to control it,
+the <em>Radius</em> property of control points(see above), and the &#8220;taper&#8221; object.</p>
+<p>The taper curve is evaluated along <em>the local X axis</em>,
+using <em>the local Y axis</em> for width control. Note also that:</p>
+<ul class="simple">
+<li>It must be an <em>open curve</em>.</li>
+<li>The taper is applied independently to all curves of the extruded object.</li>
+<li>Only the first curve in a <em>TaperOb</em> is evaluated, even if you have several separated segments.</li>
+<li>The scaling starts at the first control-point on the left
+and moves along the curve to the last control-point on the right.</li>
+<li>Negative scaling, (negative local Y on the taper curve) is possible as well.
+However, rendering artifacts may appear.</li>
+<li>Might need to increase the curve resolution to see more detail of the taper</li>
+<li>With closed curves, the taper curve in <em>TaperOb</em> acts along the whole curve (perimeter of the object),
+not just the length of the object, and varies the extrusion depth. In these cases,
+you want the relative height of the <em>TaperOb</em>
+Taper curve at both ends to be the same, so that the cyclic point
+(the place where the endpoint of the curve connects to the beginning) is a smooth transition.</li>
+</ul>
+<div class="section" id="examples">
+<h3>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>Let us taper a simple curve circle extruded object using a taper curve. Add a curve,
+then exit <em>编辑模式</em>. Add another one (a closed one, like a circle); call it &#8220;BevelCurve&#8221;,
+and enter its name in the <em>BevOb</em> field of the first curve
+(<em>Curve and Surface</em> tab). We now have a pipe.
+Add a third curve while in <em>物体模式</em> and call it &#8220;TaperCurve&#8221;.
+Adjust the left control-point by raising it up about 5 units.</p>
+<p>Now return to the Object tab,
+and edit the first curve&#8217;s <em>TaperOb</em> field in the Curve and Surface panel to reference the new taper curve
+which we called <em>TaperCurve</em>.
+When you hit enter the taper curve is applied immediately,
+with the results shown in Fig. <a class="reference internal" href="#fig-curves-extrude-taber-curve"><span class="std std-ref">Taper extruded curve.</span></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id10">
+<span id="fig-curves-extrude-taber-curve"></span><img alt="../../../_images/curves-simple-taper-ex.jpg" src="../../../_images/curves-simple-taper-ex.jpg" />
+<p class="caption"><span class="caption-text">Taper extruded curve.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id11">
+<img alt="../../../_images/curves-simple-taper-ex-solid.jpg" src="../../../_images/curves-simple-taper-ex-solid.jpg" />
+<p class="caption"><span class="caption-text">Taper solid mode.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can see the <em>taper curve</em> being applied to the <em>extruded object</em>.
+Notice how the pipe&#8217;s volume shrinks to nothing as the taper curve goes from left to right.
+If the taper curve went below the local Y axis the pipe&#8217;s inside would become the outside,
+which would lead to rendering artifacts.
+Of course as an artist that may be what you are looking for!</p>
+<div class="figure" id="id12">
+<span id="fig-curves-extrude-taber1"></span><img alt="../../../_images/curvestaper02.jpg" src="../../../_images/curvestaper02.jpg" />
+<p class="caption"><span class="caption-text">Taper example 1.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber1"><span class="std std-ref">Taper example 1.</span></a>
+you can clearly see the effect the left taper curve has on the right curve object. Here the
+left taper curve is closer to the object center and that results in a smaller curve object to
+the right.</p>
+<div class="figure" id="id13">
+<span id="fig-curves-extrude-taber2"></span><img alt="../../../_images/curvestaper03.jpg" src="../../../_images/curvestaper03.jpg" />
+<p class="caption"><span class="caption-text">Taper example 2.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber2"><span class="std std-ref">Taper example 2.</span></a> a control point in the taper curve to the left is moved away from the
+center and that gives a wider result to the curve object on the right.</p>
+<div class="figure" id="id14">
+<span id="fig-curves-extrude-taber3"></span><img alt="../../../_images/curvestaper04.jpg" src="../../../_images/curvestaper04.jpg" />
+<p class="caption"><span class="caption-text">Taper example 3.</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber3"><span class="std std-ref">Taper example 3.</span></a> we see the use of a more irregular taper curve applied to a curve circle.</p>
+<p>TODO: add some &#8220;bevel&#8221; extrusion with <em>Tilt</em> examples.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../surfaces/index.html" class="btn btn-neutral float-right" title="Surfaces" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deform.html" class="btn btn-neutral" title="Curve Deform" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>

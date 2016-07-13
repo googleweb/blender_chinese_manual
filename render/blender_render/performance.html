@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Performance Considerations &mdash; Blender参考手册</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender参考手册" href="../../index.html"/>
+        <link rel="up" title="Blender 渲染 Engine" href="index.html"/>
+        <link rel="next" title="Cycles 渲染 Engine" href="../cycles/index.html"/>
+        <link rel="prev" title="渲染 Quality" href="quality.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.77 手册
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="查找文献" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门指南</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../painting_sculpting/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">渲染 Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passes.html">渲染 Passes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion_blur.html">Motion Blur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="antialiasing.html">Anti-Aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quality.html">渲染 Quality</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Performance Considerations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#optimizing-render-performance">Optimizing 渲染 Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hardware-improvements">Hardware Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operating-system-configuration">Operating System Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blender-settings">Blender 设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scene-and-specific-objects">Scene and Specific Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-settings">渲染 设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-pass-compositing">Multi-Pass 合成</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL 渲染</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户首选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">术语</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.77 手册</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">文献</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Blender 渲染 Engine</a> &raquo;</li>
+      
+    <li>Performance Considerations</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/blender_render/performance.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="performance-considerations">
+<h1>Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="optimizing-render-performance">
+<h2>Optimizing 渲染 Performance<a class="headerlink" href="#optimizing-render-performance" title="Permalink to this headline">¶</a></h2>
+<p>&#8220;A watched pot never boils&#8221; is the old saying, but you may wonder why your render takes so long to create,
+or worse, crashes mid-way through!
+Well, there is lots going on and lots you can do to speed up rendering or enable a complicated render to complete.
+Also, it is possible to render a very complicated scene on a mediocre PC by being &#8220;render-smart&#8221;.
+Here&#8217;s a &#8220;top ten&#8221; list of things to do or not do in order to speed up
+rendering or even avoid crashes during scene render.
+Some options may decrease the quality of your render, but for draft renders you may not care.</p>
+<p>If you get the message &#8220;Malloc returns nil&#8221;, in plain English that means the memory allocator
+tried to get more physical memory for Blender but came back empty-handed.
+This means that you do not have enough memory available to render the scene,
+and Blender cannot continue.
+You will need to do one or more of the following tasks on this page in order to render.</p>
+</div>
+<div class="section" id="hardware-improvements">
+<h2>Hardware Improvements<a class="headerlink" href="#hardware-improvements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Install more system memory.</li>
+<li>Upgrade your CPU to a multi-core/multiprocessor</li>
+<li>Upgrade your OpenGL video drivers</li>
+<li>Get faster memory, up to your PC&#8217;s motherboard limit.</li>
+<li>Use or set up a render farm using all available PCs in your house, or use a render farm.</li>
+</ul>
+</div>
+<div class="section" id="operating-system-configuration">
+<h2>Operating System Configuration<a class="headerlink" href="#operating-system-configuration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Increase Blender&#8217;s processing priority through your OS.</li>
+<li>Increase your swap file space used by the OS for memory swapping. Also called virtual memory pagefile size,
+up to the size of your physical memory.</li>
+<li>Use a system-monitor to check if any other processes are using significant CPU or RAM, which can be closed.</li>
+<li>渲染 in <em>background mode</em> (from the command line), saves extra memory.</li>
+</ul>
+</div>
+<div class="section" id="blender-settings">
+<h2>Blender 设置<a class="headerlink" href="#blender-settings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Increase the MEM Cache Limit in the 用户首选项 System &amp; OpenGL tab.</li>
+<li>Switch to an Orthographic camera, and render your own &#8220;parts&#8221; of the scene as separate images,
+and then paste those parts together in GIMP.
+An old trick in making your own panorama with a real camera is to take three or so pictures of a very wide
+(beach sunset) scene, where you take one picture, rotate to the right, snap another, then another,
+and when you get the pictures developed, you overlap them to make a very wide landscape image.
+Do the same in Blender: render out one shot to a file,
+then move the camera to look at a different area of the scene, and render that shot.
+Each shot will be of a smaller area and thus take in fewer polygons/faces.
+Be sure that when you position your camera that you snap overlapping shots, so that you can then match them up.
+If you do not want to use GIMP, you can use compositing nodes and the Translate node to match them up in Blender.</li>
+<li>Minimize the render window (and the Blender window, if the UV/image editor is used).
+ATI users report dramatic speedup on a per frame basis, which adds up over the frame range.</li>
+<li>Use the Big 渲染 script to render sub-sections of the overall image, and then paste them together.</li>
+</ul>
+</div>
+<div class="section" id="scene-and-specific-objects">
+<h2>Scene and Specific Objects<a class="headerlink" href="#scene-and-specific-objects" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Remove lamps, or move them to unrendered layers, or tie them to layers.</li>
+<li>Turn off some lamp&#8217;s shadows, using only one or two main sun lamps to cast shadows.
+A few &#8220;shadows only&#8221; lights will render faster than every light having shadows on.</li>
+<li>Use Buffer Shadows rather than ray-traced Shadows</li>
+<li>Bake your shadows using 渲染 Baking Full 渲染 bake on surfaces that do not move.
+Use that texture for that mesh, then disable shadows for that material.</li>
+<li>Simplify meshes (remove polygons). The more vertices you have in camera, the more time it takes to render.</li>
+<li>Remove Doubles, or use the Decimator mesh edit feature.</li>
+<li>Remove Subsurf and Multires modifiers.</li>
+<li>Delete backsides of meshes (removing unseen geometry).</li>
+<li>渲染 just a few objects at a time; in the beginning of your project,
+render the background objects and sets that will not change and will always be in the background.</li>
+<li>Put the buildings on another layer, and through render layers, do not render them.
+Then composite them back in later.</li>
+<li>Make the camera static so that you can better accomplish the above two ideas.</li>
+<li>Avoid use of Area lights.</li>
+<li>Make materials Shadeless.</li>
+<li>渲染 Bake AO and textures, and then make those materials Shadeless.</li>
+<li>Decrease the Clip distance for spot lights.</li>
+<li>Decrease the Clip distance for the camera.</li>
+<li>Turn off world AO.</li>
+<li>Turn off Material SSS.</li>
+<li>Use smaller image textures. A 256×256 image takes only 1% of the memory that a 2k image does,
+often with no loss of quality in the ultimate render.</li>
+<li>Reduce Subsurf. Each level quadruples (4x) the number of faces from the previous level.</li>
+<li>Reduce Multires.</li>
+<li>Make a matte render of background objects, like buildings,
+and put the image of them on a billboard in the scene instead of the object themselves.
+This will reduce vertex/face count.</li>
+<li>if you have lots of linked instances of an object, use DupliFaces, as these are instanced. If you have 100 of them,
+Blender will only store the geometry for 1 (Instances themselves take a small amount of memory).</li>
+</ul>
+</div>
+<div class="section" id="render-settings">
+<h2>渲染 设置<a class="headerlink" href="#render-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="../output/output.html"><span class="doc">Output Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>Disable <em>Edge</em> rendering.</li>
+<li><em>Save Buffers</em>.</li>
+<li>渲染 to an <a class="reference internal" href="../../editors/uv_image/index.html#editors-uv-image-index"><span class="std std-ref">UV/图像编辑器</span></a>,
+not a pop-up. <a class="reference internal" href="../output/display.html"><span class="doc">渲染 Window</span></a>.</li>
+<li>Use multiple <em>Threads</em> on a multi-core CPU (with multiple <em>Parts</em>).</li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="../post_process/layers.html"><span class="doc">渲染 Layers Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>渲染 only the Layers of interest.</li>
+<li>渲染 with all lights set to one simple spot (enter its name in the <em>Light:</em> field).</li>
+<li>渲染 with one material override (enter its name in the Mat: field).</li>
+<li>Disable unnecessary 渲染 Passes, such as Z,
+or only render the pass of interest, such as Diffuse.</li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="quality.html"><span class="doc">渲染 Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>Turn off Shadows.</li>
+<li>Turn off Environment Mapping.</li>
+<li>Turn off Panoramic 渲染ing.</li>
+<li>Turn off Raytracing.</li>
+<li>Turn off SSS Subsurface Scattering.</li>
+<li>Turn off or lower oversampling/aliasing OSA.</li>
+<li>Turn off or lower Motion Blur.</li>
+<li>渲染 in Parts. This will also allow you to render <strong>huge</strong> images on a weak PC.
+On a multi-core PC, it will assign a thread to each part as well.</li>
+<li>Increase the octree resolution.</li>
+<li>渲染 at a percentage size of your final resolution (like 25%).</li>
+<li>Turn off <em>Fields</em> rendering.</li>
+<li>Use <em>Border</em> rendering to render a subset of the full image.</li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="../workflows/animations.html"><span class="doc">Anim Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>Decrease the frame count of the animation (and use a lower framerate for the same duration of animation).
+For example, render 30 frames at 10 frames per second for a 3-second animation,
+instead of 75 frames at 25 frames per second.</li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="../workflows/bake.html"><span class="doc">Bake Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>Bake Full 渲染 - create a UV Texture that colors the objects based on materials,
+and then use that UV Texture shadeless instead of the material.</li>
+<li>Bake Ambient Occlusion only.</li>
+<li>Bake textures for objects.</li>
+<li>Baking Normals or Displacement does not speed up render time, and are used for other things.</li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="../output/output.html"><span class="doc">Format Panel</span></a></dt>
+<dd><ul class="first last simple">
+<li>渲染 at a lower resolution. Smaller pictures take less time to render.</li>
+<li>Choose a faster CODEC or CODEC settings.</li>
+<li>渲染 in black and white (<em>BW</em> button).</li>
+<li>If using <code class="docutils literal"><span class="pre">FFMPEG</span></code>, do not activate <em>Multiplex audio</em>.</li>
+<li>If using <code class="docutils literal"><span class="pre">FFMPEG</span></code>, <em>Autosplit Output</em> (<em>视频</em> panel button).</li>
+<li>渲染 only RGB if you just need color; the A channel (<em>RGBA</em> button)
+takes more memory and is unused when saving a movie file.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="multi-pass-compositing">
+<h2>Multi-Pass 合成<a class="headerlink" href="#multi-pass-compositing" title="Permalink to this headline">¶</a></h2>
+<p>Another strategy that can be used to address the problem of long (re-)render times is to
+structure your workflow from the ground up so that you make aggressive use of <em>compositing</em>,
+as described in the &#8220;Post-Production&#8221; section. In this approach,
+you break down each shot into components that can be rendered separately,
+then you combine those separately-rendered elements to achieve the finished clip.
+For instance:</p>
+<ul class="simple">
+<li>If the camera is not moving, then neither is the background: only a single frame is needed.
+(The same is true of any non-moving object within the frame.) These individual elements,
+having been generated <em>once,</em> can be re-used as many times as necessary over as many frames as necessary.</li>
+<li>Both shadows and highlights can be captured separately from the objects that are being illuminated or shadowed,
+such that the intensity, color, and depth of the effect can be adjusted later without re-rendering.</li>
+<li>Start by using lights that do not cast shadows. (Shadow calculations are big time-killers.) Then,
+use &#8220;shadow-only&#8221; lights (which cast shadows, but do not cast light)
+to create shadows <em>only</em> where you judge that they are actually necessary.
+(It is very often the case that only a few of the shadows which could exist in the scene actually matter,
+and that the rest of them simply won&#8217;t be noticed.)</li>
+<li>Tricky lighting situations can be avoided by handling the objects separately,
+then combining the individually-rendered clips and &#8220;tweaking&#8221; the result.</li>
+</ul>
+<p>This is a very familiar idea. Modern sound recordings, for example, always use a &#8220;multi-track&#8221; approach.
+Individual components of the song are captured separately and in isolation, then the components are &#8220;mixed&#8221; together.
+The &#8220;final mix&#8221; then goes through additional processing stages, called <em>mastering</em>,
+to produce the finished product(s). (In fact, the features and design of modern
+sound-processing software are directly comparable to that of Blender&#8217;s node-based compositor.)</p>
+<p>There are compelling advantages to this approach:</p>
+<ul class="simple">
+<li>If something is &#8220;not quite right,&#8221; you do not necessarily have to start over from scratch.</li>
+<li>In practice, the deadline-killer is <em>re-</em> rendering, which ordinarily must be done (in its entirety)
+just because &#8220;&#8216;one little thing&#8217; about the shot is wrong.&#8221; 合成 helps to avoid this, because (ideally...)
+only the specific parts that are found to be in error must be repeated. (Or, maybe,
+the error can be blocked out with a &#8220;garbage matte&#8221; and a corrected version can be inserted in its place.</li>
+<li>Sometimes you might find that it is <em>almost</em> what you wanted, but now you would like to <em>add</em>
+this and maybe <em>take away</em> that.&#8221; A compositing-based approach enables you to do just that, and furthermore,
+to do so <em>non-destructively.</em> In other words, having generated the &#8220;addition&#8221; (or the &#8220;mask&#8221;)
+as a separate channel of information, you can now fine-tune its influence in the overall &#8220;mix&#8221;,
+or even change your mind and remove it altogether, all without permanently altering anything.</li>
+<li>By and large, these stages work <em>two-</em> dimensionally, manipulating what is by that time &#8220;a raster bitmap with R,G,B,
+Alpha and Z-Depth information,&#8221; so they&#8217;re consistently fast.</li>
+<li>Since each discrete rendering task has been simplified, the computer can carry them out using much fewer resources.</li>
+<li>The tasks can be distributed among several different computers.</li>
+<li>&#8220;After all, the scene doesn&#8217;t actually have to be <em>physically perfect,</em> to be <em>convincing</em>&#8221;.
+A compositing-based approach lets you take full advantage of this. You can focus your attention (and Blender&#8217;s)
+upon those specific aspects of the scene which will actually make a noticeable difference.
+It is possible to save a considerable amount of time by consciously choosing to exclude
+less-important aspects which (although &#8220;technically correct&#8221;) probably won&#8217;t be noticed.</li>
+</ul>
+<p>Of course, this approach is not without its own set of trade-offs. You must devise a workable
+asset-management system for keeping track of exactly what material you have, where it is,
+whether it is up-to-date, and exactly how to re-create it. You must understand and use the
+&#8220;library linking&#8221; features of Blender to allow you to refer to objects, nodes, materials,
+textures and scenes in a carefully-organized collection of other files.
+You need to have a very clear notion, <em>in advance</em>,
+of exactly what the finished shot must consist of and what the task breakdown must be.
+You must be a scrupulous note-taker and record-keeper. But sometimes this is the best way,
+if not the <em>only</em> way, to accomplish a substantial production.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cycles/index.html" class="btn btn-neutral float-right" title="Cycles 渲染 Engine" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quality.html" class="btn btn-neutral" title="渲染 Quality" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is licensed under a CC-BY-SA 4.0 Intl. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.77',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+
+
+</body>
+</html>
