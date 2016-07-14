@@ -16,13 +16,13 @@ Warp
 
 
 In *编辑模式*, the *Warp* transformation takes selected elements and
-warps them around the 3D cursor by a certain angle.
-Note that this transformation is always dependent on the location of the 3D cursor.
+warps them around the 3D游标 by a certain angle.
+Note that this transformation is always dependent on the location of the 3D游标.
 The 轴心点 is not taken into account.
 The results of the *Warp* transformation are also view dependent.
 
 In *物体模式*, the *Warp* transformation takes the selected Objects and
-causes them to move in an orbit-like fashion around the 3D cursor.
+causes them to move in an orbit-like fashion around the 3D游标.
 Similar to *编辑模式*,
 the 轴心点 is not taken into account and the results are view dependent.
 
@@ -33,7 +33,7 @@ the 轴心点 is not taken into account and the results are view dependent.
 .. figure:: /images/editors_3dview_transformation_advanced_warp_warp-mesh.jpg
    :width: 350px
 
-   In this example, a plane is warped around the 3D cursor by the indicated number of degrees.
+   In this example, a plane is warped around the 3D游标 by the indicated number of degrees.
 
 
 Select the elements you want to operate on and activate the *Warp* transform
@@ -50,7 +50,7 @@ and altering the Angle slider provided that no other actions take place between 
 Cursor position and view
 ------------------------
 
-The location of the 3D cursor can be used to alter the results of the *Warp*
+The location of the 3D游标 can be used to alter the results of the *Warp*
 transformation. As can be seen from the example in this section, the *Warp* radius
 is dependent on the distance of the cursor from the selected elements.
 The greater the distance, the greater the radius.

@@ -31,7 +31,7 @@ In 物体模式
 When in *物体模式*,
 rotation and scaling happen around the active Object's center.
 This is shown by the figure to the below where the active Object (the cube)
-remains in the same location (note its position relative to the 3D cursor)
+remains in the same location (note its position relative to the 3D游标)
 while the other Objects rotate and scale in relation to the active element.
 
 .. figure:: /images/editors_3dview_transform_control-pivot_point-active_element-active-object-rotation.jpg

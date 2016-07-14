@@ -235,7 +235,7 @@ Axis Orientation
    View Axis
       Set the roll to align with the view-port.
    Cursor
-      Set the roll towards the 3D cursor.
+      Set the roll towards the 3D游标.
 Flip Axis
    Reverse the axis direction.
 Shortest Rotation

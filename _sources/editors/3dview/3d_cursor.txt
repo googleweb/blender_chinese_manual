@@ -9,7 +9,7 @@ The 3D游标 is simply a point in 3D space which can be used for a number of pur
 Placement
 =========
 
-There are a few methods to position the 3D cursor.
+There are a few methods to position the 3D游标.
 
 
 Direct Placement with the Mouse
@@ -18,10 +18,10 @@ Direct Placement with the Mouse
 .. figure:: /images/editors_3dview_transform-control_pivot-point_3d-cursor_two-view-positioning.jpg
    :align: center
 
-   Positioning the 3D cursor with two orthogonal views.
+   Positioning the 3D游标 with two orthogonal views.
 
 
-Using :kbd:`LMB` in the 3D area will place the 3D cursor directly under your mouse pointer.
+Using :kbd:`LMB` in the 3D area will place the 3D游标 directly under your mouse pointer.
 
 For accuracy you should use two perpendicular orthogonal 3D视图s, i.e.
 any combination of top :kbd:`Numpad7`, front :kbd:`Numpad1` and side :kbd:`Numpad3`.
@@ -50,10 +50,10 @@ Cursor to Active
 The *Cursor to Selected* option is also affected by the current :ref:`pivot-point`. For example:
 
  - With the *边界盒中心* 轴心点 active,
-   the *Cursor to Selected* option will snap the 3D cursor to the
+   the *Cursor to Selected* option will snap the 3D游标 to the
    center of the bounding box surrounding the objects' centers.
  - When the *质心点* 轴心点 is selected,
-   *Cursor to Selected* will snap the 3D cursor to the
+   *Cursor to Selected* will snap the 3D游标 to the
    `median <https://en.wikipedia.org/wiki/Median>`__ of the object centers.
 
 
@@ -65,7 +65,7 @@ Numeric Input
    The 3D游标 panel of the Properties shelf.
 
 
-The 3D cursor can also be positioned by entering Numeric location values into the *3D cursor*
+The 3D游标 can also be positioned by entering Numeric location values into the *3D游标*
 panel of the *Properties* shelf :kbd:`N`.
 
 

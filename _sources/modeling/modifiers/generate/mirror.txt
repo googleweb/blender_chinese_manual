@@ -133,7 +133,7 @@ to select the edge, then use :kbd:`Shift-S` and choosing *Cursor to Selection*.
 This will position the 3D游标 in the center of the edge.
 Finally, press :kbd:`Ctrl-Alt-Shift-C` for the *Set Origin* menu,
 then select *Origin to 3D游标*.
-This will move the object's center (and thus, the mirror plane) to where the 3D cursor is located,
+This will move the object's center (and thus, the mirror plane) to where the 3D游标 is located,
 and the mirroring will be exact.
 
 An alternative is to use an Empty as a *Mirror Object* that you move to the correct

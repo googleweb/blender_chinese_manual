@@ -21,7 +21,7 @@ View X Axis
    Sort along the active view's X axis, from left to right by default (again, there's the *Reverse* option).
 
 Cursor Distance
-   Sort from nearest to farthest away from the 3D cursor position (*Reverse* also available).
+   Sort from nearest to farthest away from the 3D游标 position (*Reverse* also available).
 
 Material
    **Faces only!** Sort faces from those having the lowest material's index to those having the highest.

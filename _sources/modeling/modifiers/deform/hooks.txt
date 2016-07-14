@@ -52,7 +52,7 @@ The following settings are only available in 编辑模式:
 Reset
    Recalculate and clear the offset transform of hook.
 Recenter
-   Set hook center to the 3D cursor position.
+   Set hook center to the 3D游标 position.
 
 Select
    Select the vertices affected by this hook.

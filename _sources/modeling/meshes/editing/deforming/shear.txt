@@ -57,7 +57,7 @@ the 轴心点 is altered.
 In frame B, the :doc:`轴心点 </editors/3dview/transform/transform_control/pivot_point/index>`
 is set to *质心点* (indicated by the yellow line)
 and the mouse was moved to the left during the transform. In frame C,
-the *轴心点* is set to the 3D cursor which is located above the mesh
+the *轴心点* is set to the 3D游标 which is located above the mesh
 (indicated again by the yellow line). When the mouse is moved to the left during a
 *Shear* transform the selected vertices are moved to the right as they are below the horizontal axis.
 
@@ -79,7 +79,7 @@ The three frames of the image above show the effects of shearing on the selected
 the *轴心点* is altered. In frame B,
 the *轴心点* is set to *质心点* (indicated by the yellow line)
 and the mouse was moved to the left during the transform. In frame C,
-the *轴心点* is set to the 3D cursor which is located above the Objects
+the *轴心点* is set to the 3D游标 which is located above the Objects
 (indicated again by the yellow line). When the mouse is moved to the left during a
 *Shear* transform all of the selected Objects are moved to the right as they are
 below the horizontal axis. Again, note that the magnitude of the transform is proportional to

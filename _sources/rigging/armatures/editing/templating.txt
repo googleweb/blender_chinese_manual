@@ -20,7 +20,7 @@ Using Bone Sketching
    :class: refbox
 
    | Mode:     编辑模式
-   | Panel:    Bone Sketching (3D视图 editor)
+   | Panel:    Bone Sketching (3D视图编辑窗口)
    | Menu:     :menuselection:`Armature --> Bone Sketching`
    | Hotkey:   :kbd:`P`
 

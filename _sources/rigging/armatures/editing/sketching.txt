@@ -30,7 +30,7 @@ Sketching is done in two steps:
 The *point of view* is important, as it determines the future bones' roll angle:
 the Z axis of a future bone will be aligned with the view Z axis of the 3D视图 in
 which you draw its "parent" stroke (unless you use the *Template* converting method...).
-Strokes are drawn in the current view plane passing through the 3D cursor,
+Strokes are drawn in the current view plane passing through the 3D游标,
 but you can create somewhat "3D" strokes using the *Adjust* drawing option in different views (see below).
 
 If you enable the small *Quick Sketch* option, the two steps are merged into one:

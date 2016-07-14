@@ -130,7 +130,7 @@ Once you click in the *Screw* tool in the Mesh Tools Panel,
 Blender will enter in the *Screw* interactive mode, and the Operator Panel at the
 end of the Mesh Tools Panel will be replaced so you can adjust the values explained below.
 To show the Mesh Tools Panel,
-use the shortcut :kbd:`T` in the 编辑模式 of the 3D视图 editor.
+use the shortcut :kbd:`T` in the 编辑模式 of the 3D视图编辑窗口.
 
 Once you perform any other operation,
 Blender leaves the interactive mode and accepts all of the values. Because it's modal, you
@@ -148,7 +148,7 @@ you can press :kbd:`Ctrl-Z` at any time in *编辑模式*.
   Depending on the Global View position, Blender will automatically add a value of 1 to one of the Axis Vectors,
   giving the profiles a starting direction for the Screw Operation and also giving a direction for the extrusions.
   (See examples below.)
-- The position of the 3D cursor will be the starting center of the rotation.
+- The position of the 3D游标 will be the starting center of the rotation.
   Subsequent operations (e.g. pressing the Screw button again), will start from the last selected element.
   Continuous operations without changing the selection will repeat the operation continuously from the last point.
 

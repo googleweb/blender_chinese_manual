@@ -92,7 +92,7 @@ Active
 Median
    Moves the median of the selection to the target.
 Center
-   Moves the current transformation center to the target. Can be used with 3D cursor to snap with an offset.
+   Moves the current transformation center to the target. Can be used with 3D游标 to snap with an offset.
 Closest
    Moves the closest point of the selection to the target.
 

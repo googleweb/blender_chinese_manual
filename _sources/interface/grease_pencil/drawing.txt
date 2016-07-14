@@ -105,7 +105,7 @@ View
    New strokes are locked to the view.
 Cursor *(3D视图 only)*
    New strokes are drawn in 3D-space,
-   with position determined by the 3D cursor and the view rotation at the time of drawing.
+   with position determined by the 3D游标 and the view rotation at the time of drawing.
    *Cursor* is available as an option in the *UV/图像编辑器*
    but it functions identically to the *View* option.
 Surface *(3D视图 only)*

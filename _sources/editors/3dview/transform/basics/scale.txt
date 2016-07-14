@@ -49,7 +49,7 @@ Scaling using the keyboard shortcut
 - Scale the elements by moving the mouse.
 - :kbd:`LMB` click to accept changes.
 
-The amount of scaling will be displayed in the bottom left hand corner of the 3D视图 editor.
+The amount of scaling will be displayed in the bottom left hand corner of the 3D视图编辑窗口.
 
 .. figure:: /images/editors_3dview_transformations-basic-scale-scale_value_header.jpg
 

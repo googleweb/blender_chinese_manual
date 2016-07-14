@@ -54,7 +54,7 @@ These are described more fully in the next sections.
 
 By default, meshes are not created with UVs. First you must map the faces, then
 you can :doc:`edit them </editors/uv_image/uv_editing/layout_editing>`.
-The process of unwrapping your model is done within 编辑模式 in the 3D视图 editor.
+The process of unwrapping your model is done within 编辑模式 in the 3D视图编辑窗口.
 This process creates one or more UV Islands in the :ref:`UV/图像编辑器 <editors-uv_image-index>`.
 
 To begin, choose the *UV Editing* :doc:`screen layout </interface/editors/screens>`

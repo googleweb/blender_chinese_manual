@@ -14,11 +14,11 @@ Spin
 Use the *Spin* tool to create the sort of objects that you would produce on a lathe
 (this tool is often called a "lathe"-tool or a "sweep"-tool in the literature,
 for this reason). In fact, it does a sort of circular extrusion of your selected elements,
-centered on the 3D cursor, and around the axis perpendicular to the working view...
+centered on the 3D游标, and around the axis perpendicular to the working view...
 
 
 - The point of view will determine around which axis the extrusion spins...
-- The position of the 3D cursor will be the center of the rotation.
+- The position of the 3D游标 will be the center of the rotation.
 
 Here are its settings:
 
@@ -64,7 +64,7 @@ so switch to the top view with :kbd:`Numpad7`.
 
 
 Place the cursor along the center of the profile by selecting one of the vertices along the
-center, and snapping the 3D cursor to that location with :menuselection:`Mesh --> Cursor --> Selection`.
+center, and snapping the 3D游标 to that location with :menuselection:`Mesh --> Cursor --> Selection`.
 (Fig. :ref:`fig-mesh-spin-glass-top`)
 shows the wine glass profile from top view, with the cursor correctly positioned.
 
@@ -145,7 +145,7 @@ too many vertices will have been merged.
 
    Alternatively, you can use :kbd:`W` :menuselection:`--> Merge` from the same *Specials* menu
    (or :kbd:`Alt-M`). Then, in the new pop-up menu, choose whether the merged vertex will
-   be at the center of the selected vertices or at the 3D cursor.
+   be at the center of the selected vertices or at the 3D游标.
    The first choice is better in our case!
 
 

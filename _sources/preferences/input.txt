@@ -135,7 +135,7 @@ Continuous Grab
 Drag Threshold
    The number of pixels that a 用户界面 element has to be moved before it is recognized by Blender.
 Select with
-   You can choose which button is used for selection (the other one is used to place the 3D cursor).
+   You can choose which button is used for selection (the other one is used to place the 3D游标).
 Double Click
    The time for a double click (in ms).
 

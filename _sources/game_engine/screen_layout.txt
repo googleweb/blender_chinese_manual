@@ -55,7 +55,7 @@ This menu gives various options for conditions for running the 游戏引擎.
 Note that this menu is only available when the render engine is set to Blender Game.
 
 Start Game
-   Run game in 游戏引擎 (:kbd:`p` or :kbd:`Shift-P` when the mouse cursor is over the 3D视图 editor).
+   Run game in 游戏引擎 (:kbd:`p` or :kbd:`Shift-P` when the mouse cursor is over the 3D视图编辑窗口).
 Show Debug Properties
    Show properties marked for debugging while game runs
 Show framerate and profile

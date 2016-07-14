@@ -43,7 +43,7 @@ This bone will be:
 
 - of one Blender Unit of length,
 - oriented towards the positive Y axis of the view,
-- with its root placed at the 3D cursor position,
+- with its root placed at the 3D游标 position,
 - with no relationship with any other bone of the armature.
 
 
@@ -141,7 +141,7 @@ About the new bone's tip:
 
 - after you :kbd:`Ctrl-LMB` -clicked it becomes the active element in the armature,
 - it appears to be right where you clicked, but...
-- ...(as in mesh editing) it will be on the plane parallel to the view and passing through the 3D cursor.
+- ...(as in mesh editing) it will be on the plane parallel to the view and passing through the 3D游标.
 
 The position of the root and the parenting of the new bone depends on the active element:
 
@@ -246,7 +246,7 @@ If you have one root and one tip selected, the new bone:
 
 If you have two tips selected, the new bone:
 
-- will have the root placed on the selected tip closest to the 3D cursor
+- will have the root placed on the selected tip closest to the 3D游标
 - will have the tip placed on the other selected tip
 - will be parented and connected to the bone owning the tip used as the new bone's root
 
@@ -256,12 +256,12 @@ If you have two tips selected, the new bone:
    * - .. figure:: /images/riggingfilltailtailleft.jpg
           :width: 300px
 
-          3D cursor on the left.
+          3D游标 on the left.
 
      - .. figure:: /images/riggingfilltailtailright.jpg
           :width: 300px
 
-          3D cursor on the right.
+          3D游标 on the right.
 
 
 If you have two roots selected, you will face a small problem due to the event system in
@@ -269,7 +269,7 @@ Blender not updating the interface in real time.
 
 When clicking :kbd:`F`, similar to the previous case, you will see a new bone:
 
-- with the root placed on the selected root closest to the 3D cursor
+- with the root placed on the selected root closest to the 3D游标
 - with the tip placed on the other selected root
 - parented and connected to the bone owning the root used as the new bone's root
 
@@ -282,7 +282,7 @@ new bone's root moves to the tip of the parent bone.
    * - .. figure:: /images/riggingfillheadhead.jpg
           :width: 300px
 
-          Before UI update (3D cursor on the left).
+          Before UI update (3D游标 on the left).
 
      - .. figure:: /images/riggingfillheadheadcorrect.jpg
           :width: 300px
@@ -291,7 +291,7 @@ new bone's root moves to the tip of the parent bone.
 
 
 Clicking :kbd:`F` with only one bone end selected will create a bone from the selected
-end to the 3D cursor position, and it won't parent it to any bone in the armature.
+end to the 3D游标 position, and it won't parent it to any bone in the armature.
 
 .. list-table::
    Fill with only one bone end selected

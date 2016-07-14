@@ -196,7 +196,7 @@ Multi-Sampling
 Region Overlap
    This checkbox will enable Blender to draw regions overlapping the 3D视图.
    It means that the *Object Tools* and *变换 Properties* regions,
-   which are opened by using the shortcuts :kbd:`T` and :kbd:`N` will be drawn overlapping the 3D视图 editor.
+   which are opened by using the shortcuts :kbd:`T` and :kbd:`N` will be drawn overlapping the 3D视图编辑窗口.
 
    If you have a capable graphics card and drivers with *Triple Buffer* support,
    clicking the checkbox will enable the overlapping regions to be drawn using the *Triple Buffer* method,

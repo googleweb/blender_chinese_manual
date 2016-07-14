@@ -25,7 +25,7 @@ Only 渲染
 Outline Selected
    If disabled, the pink outline around your selected objects in
    *Solid*, *Shaded*, *Textured* draw types will no longer be displayed.
-All Object Origins
+All 物体原心
    If enabled, the center dot of objects will always be visible, even for non-selected ones
    (by default, unselected centers might be hidden by geometry in solid/shaded/textured shadings).
 Relationship Lines
@@ -63,7 +63,7 @@ Lock to Object
    If the locked object is an armature,
    you can further center the view on one of its bones by entering its name in the *Bone* field.
 Lock to Cursor
-   Lock the center of the view to the position of the 3D cursor
+   Lock the center of the view to the position of the 3D游标
 
 .. _3dview-lock_camera_to_view:
 

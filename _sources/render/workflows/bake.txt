@@ -207,7 +207,7 @@ Select to Active
 Workflow
 ========
 
-- In a 3D视图 editor, select a mesh and enter UV/Face Select mode
+- In a 3D视图编辑窗口, select a mesh and enter UV/Face Select mode
 - :ref:`Unwrap the mesh object <editors-uv_image-index>`
 - In a UV/图像编辑器, either create a new image or open an existing one.
   If your 3D视图 is in textured display mode, you should now see the image mapped to your mesh.

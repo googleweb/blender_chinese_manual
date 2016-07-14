@@ -81,7 +81,7 @@ and the axis of transformation is X.
      - .. figure:: /images/mirrortool4.jpg
           :width: 300px
 
-          Mesh after mirrored along X axis using the 3D cursor as a 轴心点.
+          Mesh after mirrored along X axis using the 3D游标 as a 轴心点.
 
 
 变换ation orientation
