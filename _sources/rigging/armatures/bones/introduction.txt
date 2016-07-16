@@ -106,7 +106,7 @@ you cannot see these segments in *物体模式*, because they're aligned.
      - .. figure:: /images/riggingbboneex3dviewprinciples.jpg
           :width: 300px
 
-          The Bézier curve superposed to the chain, with its handles placed at bones' ends.
+          The 贝塞尔 curve superposed to the chain, with its handles placed at bones' ends.
 
    * - .. _fig-rig-bone-intro-same:
 
@@ -119,7 +119,7 @@ you cannot see these segments in *物体模式*, because they're aligned.
 
 
 When you connect bones to form a :ref:`chain <armature-bone_chain>`,
-Blender calculates a Bézier curve passing through all the bones' ends,
+Blender calculates a 贝塞尔 curve passing through all the bones' ends,
 and bones' segments in the chain will bend and roll to follow this invisible curve.
 
 There is no direct access to the curve.
@@ -133,7 +133,7 @@ Look at Fig. :ref:`fig-rig-bone-intro-same`,
 we can see how the bones' segments smoothly "blend" into each other, even for roll.
 
 Of course,
-a geometry influenced by the chain is smoothly deformed according to the Bézier curve!
+a geometry influenced by the chain is smoothly deformed according to the 贝塞尔 curve!
 In fact,
 smooth bones are an easy way to replace long chains of many small rigid bones posed using IK...
 

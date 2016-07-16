@@ -195,10 +195,10 @@ To get interactive feedback on the resulting mask,
 a Mask node can be connected directly to a Viewer node in the compositor,
 which will then keep updating the compositing result while editing.</p>
 <div class="section" id="s-curves">
-<h3>S-Curves<a class="headerlink" href="#s-curves" title="Permalink to this headline">¶</a></h3>
-<p>The curve type used for creating mask splines is almost a Bézier curve, but with some differences.
+<h3>S-曲线<a class="headerlink" href="#s-curves" title="Permalink to this headline">¶</a></h3>
+<p>The curve type used for creating mask splines is almost a 贝塞尔 curve, but with some differences.
 The curve needed to support feathering in a way that stuck to the curve as you edited it,
-for ease of editing an animation. These are called S-Curves.</p>
+for ease of editing an animation. These are called S-曲线.</p>
 <p>Besides the handles, every control point also has points that define the feather between
 the current point and the next point on the spline. Each feather point is stored in UV space,
 where U means position across spline segment, and V means distance between main spline and feather points.</p>
@@ -215,7 +215,7 @@ and the overall shape will be almost the same as artists would want it to be.</p
 </div>
 <div class="section" id="control-points">
 <h3>Control Points<a class="headerlink" href="#control-points" title="Permalink to this headline">¶</a></h3>
-<p>Editing of mask splines happens in a way similar to editing Bézier curves or paths in GIMP or other curve editors:
+<p>Editing of mask splines happens in a way similar to editing 贝塞尔曲线 or paths in GIMP or other curve editors:
 control points are added to define the spline itself, and handles of different types are used to create smooth bends.
 This makes it possible to define a mask with few points to easily follow an object in footage.</p>
 <blockquote>

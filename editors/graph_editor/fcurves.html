@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>F-Curves &mdash; Blender参考手册</title>
+  <title>F-曲线 &mdash; Blender参考手册</title>
   
 
   
@@ -93,7 +93,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Graph Editor</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">F-Curves</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">F-曲线</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fmodifiers.html">F-Curve 修改器</a></li>
 </ul>
 </li>
@@ -157,7 +157,7 @@
       
           <li><a href="index.html">Graph Editor</a> &raquo;</li>
       
-    <li>F-Curves</li>
+    <li>F-曲线</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -172,7 +172,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="f-curves">
-<h1>F-Curves<a class="headerlink" href="#f-curves" title="Permalink to this headline">¶</a></h1>
+<h1>F-曲线<a class="headerlink" href="#f-curves" title="Permalink to this headline">¶</a></h1>
 <p>After animating some property in Blender using keyframes you can edit their corresponding curves.
 When something is &#8220;animated,&#8221; it changes over time. This curve in shown as something called an F-Curve.
 Basically what an F-Curve does is it a interpolates between two animated properties. In Blender,
@@ -238,16 +238,16 @@ to easily get an infinite straight line (i.e. a linear curve).</p>
 <p class="caption"><span class="caption-text">Linear.</span></p>
 </div>
 </dd>
-<dt>Bézier</dt>
+<dt>贝塞尔</dt>
 <dd><p class="first">The more powerful and useful interpolation, and the default one.
 It gives nicely smoothed curves, i.e. smooth animations!</p>
 <div class="last figure" id="id4">
 <a class="reference internal image-reference" href="../../_images/fcurve-clean1.jpg"><img alt="../../_images/fcurve-clean1.jpg" src="../../_images/fcurve-clean1.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Bézier.</span></p>
+<p class="caption"><span class="caption-text">贝塞尔.</span></p>
 </div>
 </dd>
 </dl>
-<p>Remember that some FCurves can only take discrete values,
+<p>Remember that some F曲线 can only take discrete values,
 in which case they are always shown as if constant interpolated, whatever option you chose.</p>
 </div>
 <div class="section" id="extrapolation">
@@ -271,7 +271,7 @@ in which case they are always shown as if constant interpolated, whatever option
 </div>
 </dd>
 <dt>Linear</dt>
-<dd><p class="first">Curves ends are straight lines (linear), as defined by their first two keyframes
+<dd><p class="first">曲线 ends are straight lines (linear), as defined by their first two keyframes
 (respectively their last two keyframes).</p>
 <div class="last figure" id="id6">
 <a class="reference internal image-reference" href="../../_images/fcurve-extrapolate2.jpg"><img alt="../../_images/fcurve-extrapolate2.jpg" src="../../_images/fcurve-extrapolate2.jpg" style="width: 300px;" /></a>
@@ -284,7 +284,7 @@ are located in the <a class="reference internal" href="fmodifiers.html"><span cl
 </div>
 <div class="section" id="handle-types">
 <h3>Handle Types<a class="headerlink" href="#handle-types" title="Permalink to this headline">¶</a></h3>
-<p>There is another curve option quite useful for Bézier-interpolated curves.
+<p>There is another curve option quite useful for 贝塞尔-interpolated curves.
 You can set the type of handle to use for the curve points <code class="kbd docutils literal"><span class="pre">V</span></code></p>
 <dl class="docutils">
 <dt>Automatic</dt>
@@ -328,7 +328,7 @@ The linear segments remain if keyframe centers are moved. If handles are moved, 
 </div>
 <div class="section" id="direction-of-time">
 <h2>Direction of time<a class="headerlink" href="#direction-of-time" title="Permalink to this headline">¶</a></h2>
-<p>Although F-curves are very similar to <a class="reference internal" href="../../modeling/curves/introduction.html#curves-bezier"><span class="std std-ref">Bézier Curves</span></a>,
+<p>Although F-curves are very similar to <a class="reference internal" href="../../modeling/curves/introduction.html#curves-bezier"><span class="std std-ref">贝塞尔曲线</span></a>,
 there are some important differences.</p>
 <p>For obvious reasons, a property represented by a Curve
 cannot have more than <strong>one</strong> value at a given time, hence:</p>
@@ -394,7 +394,7 @@ the transformation can be snapped to increments.</p>
 <dt>Nearest Marker</dt>
 <dd>Snap the selected keyframes to their nearest marker individually.</dd>
 <dt>Flatten Handles</dt>
-<dd><p class="first">Flatten the <em>Bézier</em> handles for the selected keyframes.</p>
+<dd><p class="first">Flatten the <em>贝塞尔</em> handles for the selected keyframes.</p>
 <table border="1" class="last docutils" id="id15">
 <caption><span class="caption-text">Flatten Handles snapping example.</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -523,7 +523,7 @@ seem to be never modified by this tool.</p>
 </tbody>
 </table>
 </dd>
-<dt>Bake Curves <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></dt>
+<dt>Bake 曲线 <code class="kbd docutils literal"><span class="pre">Alt-C</span></code></dt>
 <dd>Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.</dd>
 </dl>
 </div>

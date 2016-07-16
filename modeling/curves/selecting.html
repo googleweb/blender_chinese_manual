@@ -35,7 +35,7 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
-        <link rel="up" title="Curves" href="index.html"/>
+        <link rel="up" title="曲线" href="index.html"/>
         <link rel="next" title="Editing" href="editing/index.html"/>
         <link rel="prev" title="简介" href="introduction.html"/> 
 
@@ -92,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Curves</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Selecting</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#select-menu">Select Menu</a></li>
@@ -157,7 +157,7 @@
       
           <li><a href="../index.html">建模</a> &raquo;</li>
       
-          <li><a href="index.html">Curves</a> &raquo;</li>
+          <li><a href="index.html">曲线</a> &raquo;</li>
       
     <li>Selecting</li>
       <li class="wy-breadcrumbs-aside">
@@ -178,16 +178,16 @@
 <p>Curve selection in <em>编辑模式</em> is much less complex than with meshes! Mainly this is
 because you have only one selectable element type, the control points
 (no select mode needed here...). These points are a bit more complex than simple vertices,
-however, especially for Béziers, as there is the central vertex, and its two handles...</p>
+however, especially for 贝塞尔s, as there is the central vertex, and its two handles...</p>
 <p>The basic tools are the same as with <a class="reference internal" href="../meshes/selecting/basics.html"><span class="doc">meshes</span></a>,
 so you can select a simple control point with a <code class="kbd docutils literal"><span class="pre">RMB</span></code>,
 add to current selection with <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">B</span></code> border-select, and so on.</p>
-<p>One word about the Bézier control points: when you select the main central vertex,
+<p>One word about the 贝塞尔 control points: when you select the main central vertex,
 the two handles are automatically selected too, so you can grab it as a whole,
 without creating an angle in the curve. However, when you select a handle,
 only this vertex is selected, allowing you to modify this control vector...</p>
 <p><code class="kbd docutils literal"><span class="pre">L</span></code> (or <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code>) will add to the selection the cursor&#8217;s nearest control point, and all the linked ones,
-i.e. all points belonging to the same curve. Note that for Bézier,
+i.e. all points belonging to the same curve. Note that for 贝塞尔,
 using <code class="kbd docutils literal"><span class="pre">L</span></code> with a handle selected will select the whole control point and all the linked ones.</p>
 <div class="section" id="select-menu">
 <h2>Select Menu<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>

@@ -7,19 +7,19 @@ Selecting
 Curve selection in *编辑模式* is much less complex than with meshes! Mainly this is
 because you have only one selectable element type, the control points
 (no select mode needed here...). These points are a bit more complex than simple vertices,
-however, especially for Béziers, as there is the central vertex, and its two handles...
+however, especially for 贝塞尔s, as there is the central vertex, and its two handles...
 
 The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting/basics>`,
 so you can select a simple control point with a :kbd:`RMB`,
 add to current selection with :kbd:`Shift-RMB`, :kbd:`B` border-select, and so on.
 
-One word about the Bézier control points: when you select the main central vertex,
+One word about the 贝塞尔 control points: when you select the main central vertex,
 the two handles are automatically selected too, so you can grab it as a whole,
 without creating an angle in the curve. However, when you select a handle,
 only this vertex is selected, allowing you to modify this control vector...
 
 :kbd:`L` (or :kbd:`Ctrl-L`) will add to the selection the cursor's nearest control point, and all the linked ones,
-i.e. all points belonging to the same curve. Note that for Bézier,
+i.e. all points belonging to the same curve. Note that for 贝塞尔,
 using :kbd:`L` with a handle selected will select the whole control point and all the linked ones.
 
 

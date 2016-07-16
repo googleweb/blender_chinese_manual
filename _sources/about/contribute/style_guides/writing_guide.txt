@@ -164,7 +164,7 @@ This entry:
 
    Curve
       It is a class of objects.
-      In Blender there are Bézier curves and NURBS curves.
+      In Blender there are 贝塞尔曲线 and NURBS curves.
 
 Would be written more like this, avoiding the *"it iss"*:
 
@@ -172,4 +172,4 @@ Would be written more like this, avoiding the *"it iss"*:
 
    Curve
       A type of object defined in terms of a line interpolated between Control Vertices.
-      *Available types of curves include Bézier and NURBS.*
+      *Available types of curves include 贝塞尔 and NURBS.*

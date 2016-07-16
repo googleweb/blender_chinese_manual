@@ -92,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Curves</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
@@ -155,7 +155,7 @@
       
           <li><a href="../../index.html">建模</a> &raquo;</li>
       
-          <li><a href="../index.html">Curves</a> &raquo;</li>
+          <li><a href="../index.html">曲线</a> &raquo;</li>
       
           <li><a href="index.html">Editing</a> &raquo;</li>
       
@@ -193,7 +193,7 @@ selecting and advanced editing are covered in the following pages:</p>
 <em>Curve Display</em> panel for how curves are displayed in the 3D视图.</p>
 <dl class="docutils">
 <dt>Handles</dt>
-<dd>Toggles the display of Bézier handles while in edit mode. This does not affect the appearance of the curve itself.</dd>
+<dd>Toggles the display of 贝塞尔 handles while in edit mode. This does not affect the appearance of the curve itself.</dd>
 <dt>Normals</dt>
 <dd>Toggles the display of Curve Normals.</dd>
 <dt>Normal Size</dt>
@@ -269,7 +269,7 @@ The two other tools, <em>Tilt</em> and <em>Shrink/Fatten Radius</em> are related
 <div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ smooth</span></div>
 </div>
 </div>
-<p>Curve smoothing is available through the specials menu. For Bézier curves, this smoothing
+<p>Curve smoothing is available through the specials menu. For 贝塞尔曲线, this smoothing
 operation reduces the distance between the selected control point/s and
 their neighbors, while keeping the neighbors anchored.
 Does not effect control point tangents.</p>
@@ -301,7 +301,7 @@ Does not effect control point tangents.</p>
 <a class="reference internal" href="../../meshes/editing/deforming/mirror.html"><span class="doc">mesh vertices</span></a>,</p>
 </div>
 <div class="section" id="set-bezier-handle-type">
-<h2>Set Bézier Handle Type<a class="headerlink" href="#set-bezier-handle-type" title="Permalink to this headline">¶</a></h2>
+<h2>Set 贝塞尔 Handle Type<a class="headerlink" href="#set-bezier-handle-type" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -311,12 +311,12 @@ Does not effect control point tangents.</p>
 <div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">V</span></code></div>
 </div>
 </div>
-<p>Handle types are a property of <a class="reference internal" href="../introduction.html"><span class="doc">Bézier curves.</span></a> and can be used to alter features of the curve.
+<p>Handle types are a property of <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线.</span></a> and can be used to alter features of the curve.
 For example, switching to <em>Vector handles</em> can be used to create curves with sharp corners.
-Read the <a class="reference internal" href="../introduction.html"><span class="doc">Bézier curves</span></a> page for more details.</p>
+Read the <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线</span></a> page for more details.</p>
 </div>
 <div class="section" id="extending-curves">
-<span id="modeling-curves-extending"></span><h2>Extending Curves<a class="headerlink" href="#extending-curves" title="Permalink to this headline">¶</a></h2>
+<span id="modeling-curves-extending"></span><h2>Extending 曲线<a class="headerlink" href="#extending-curves" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -329,7 +329,7 @@ Read the <a class="reference internal" href="../introduction.html"><span class="
 new control points defining new segments), either by extruding,
 or placing new handles with <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>.
 Each new segment is added to one end of the curve.
-The Bézier curve can only be extend at the endpoints.
+The 贝塞尔 curve can only be extend at the endpoints.
 <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> on inner control points will make unconnected duplicates.</p>
 </div>
 <div class="section" id="subdivision">
@@ -378,13 +378,13 @@ select one end control point from each curve then press <code class="kbd docutil
 The two curves are joined by a segment to become a single curve.</p>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../../../_images/editing_curves_two-curves-joined.jpg"><img alt="../../../_images/editing_curves_two-curves-joined.jpg" src="../../../_images/editing_curves_two-curves-joined.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Curves before and after joining.</span></p>
+<p class="caption"><span class="caption-text">曲线 before and after joining.</span></p>
 </div>
 <p>Additionally, you can close a curve by joining the endpoints but note that you can only join
-curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS)</p>
+curves of the same type (i.e. 贝塞尔 with 贝塞尔, NURBS with NURBS)</p>
 </div>
 <div class="section" id="separating-curves">
-<h2>Separating Curves<a class="headerlink" href="#separating-curves" title="Permalink to this headline">¶</a></h2>
+<h2>Separating 曲线<a class="headerlink" href="#separating-curves" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -456,10 +456,10 @@ So to delete all segments in your selection, you will have to repetitively use t
 </div>
 <p>This toggles between an open curve and closed curve (Cyclic).
 Only curves with at least one selected control point will be closed/open.
-The shape of the closing segment is based on the start and end handles for Bézier curves,
+The shape of the closing segment is based on the start and end handles for 贝塞尔曲线,
 and as usual on adjacent control points for NURBS.
 The only time a handle is adjusted after closing is if the handle is an <em>Auto</em> one.
-Fig. <a class="reference internal" href="#fig-curves-editing-open-close"><span class="std std-ref">Open and Closed curves.</span></a> is the same Bézier curve open and closed.</p>
+Fig. <a class="reference internal" href="#fig-curves-editing-open-close"><span class="std std-ref">Open and Closed curves.</span></a> is the same 贝塞尔 curve open and closed.</p>
 <p>This action only works on the original starting control-point or the last control-point added.
 Deleting a segment(s) doesn&#8217;t change how the action applies;
 it still operates only on the starting and last control-points. This means that
@@ -500,12 +500,12 @@ This is mainly useful when using a curve as path, or using the bevel and taper o
 <a class="reference internal image-reference" href="../../../_images/editing_curves_set-spline-type.jpg"><img alt="../../../_images/editing_curves_set-spline-type.jpg" src="../../../_images/editing_curves_set-spline-type.jpg" style="width: 150px;" /></a>
 <p class="caption"><span class="caption-text">Set Spline Type button.</span></p>
 </div>
-<p>You can convert splines in a curve object between Bézier, NURBS, and Poly curves.
+<p>You can convert splines in a curve object between 贝塞尔, NURBS, and Poly curves.
 Press <code class="kbd docutils literal"><span class="pre">T</span></code> to bring up the Toolshelf. Clicking on the <em>Set Spline Type</em>
-button will allow you to select the Spline type (Poly, Bézier or NURBS).</p>
+button will allow you to select the Spline type (Poly, 贝塞尔 or NURBS).</p>
 <p>Note, this is not a &#8220;smart&#8221; conversion, i.e. Blender does not try to keep the same shape,
-nor the same number of control points. For example, when converting a NURBS to a Bézier,
-each group of three NURBS control points become a unique Bézier one (center point and two handles).</p>
+nor the same number of control points. For example, when converting a NURBS to a 贝塞尔,
+each group of three NURBS control points become a unique 贝塞尔 one (center point and two handles).</p>
 </div>
 <div class="section" id="convert-curve-to-mesh">
 <h3>Convert Curve to Mesh<a class="headerlink" href="#convert-curve-to-mesh" title="Permalink to this headline">¶</a></h3>

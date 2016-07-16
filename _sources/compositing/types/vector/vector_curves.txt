@@ -2,16 +2,16 @@
 .. 编辑器 Note: This page gets copied into render/blender_render/materials/nodes/types/vector/curves
 
 ******************
-Vector Curves Node
+Vector 曲线 Node
 ******************
 
 .. figure:: /images/compositing_nodes_vectorcurves.png
    :align: right
    :width: 150px
 
-   Vector Curves Node.
+   Vector 曲线 Node.
 
-The Vector Curves node maps an input vector components to a curve.
+The Vector 曲线 node maps an input vector components to a curve.
 
 Use this curve node to slow things down or speed them up from the original scene.
 

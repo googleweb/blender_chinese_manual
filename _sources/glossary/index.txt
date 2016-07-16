@@ -111,7 +111,7 @@ This page lists definitions for terms used in Blender and this manual.
    Bump Mapping
       Technique for simulating slight variations in surface height using a grayscale "height-map" texture.
 
-   Bézier
+   贝塞尔
       A computer graphics technique for generating and representing curves.
 
    Caustics
@@ -180,7 +180,7 @@ This page lists definitions for terms used in Blender and this manual.
 
    Curve
       A type of object defined in terms of a line interpolated between Control Vertices.
-      Available types of curves include :term:`Bézier` and :term:`NURBS`.
+      Available types of curves include :term:`贝塞尔` and :term:`NURBS`.
 
    DOF
    Depth Of Field

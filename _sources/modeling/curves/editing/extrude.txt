@@ -23,7 +23,7 @@ Extrude
    * - .. figure:: /images/curves_extrude_start.jpg
           :width: 315px
 
-          Bézier Circle 0.0 extrude.
+          贝塞尔 Circle 0.0 extrude.
 
      - .. figure:: /images/curves_extrude_by0.5.jpg
           :width: 315px
@@ -39,7 +39,7 @@ Tilt
    You can also reset it to its default value (i.e. perpendicular to the original curve plane)
    with :kbd:`Alt-T`, :menuselection:`Curve --> Control Points --> Clear Tilt`.
    With NURBS, the tilt is always smoothly interpolated.
-   However, with Bézier, you can choose the interpolation algorithm between
+   However, with 贝塞尔, you can choose the interpolation algorithm between
    Linear, Ease, BSpline, and Cardinal, in the
    :menuselection:`Properties Editor --> Object Data --> Active Spline --> Tilt`.
 

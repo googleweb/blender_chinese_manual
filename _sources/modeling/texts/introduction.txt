@@ -26,7 +26,7 @@
 
 *Text* objects are exactly what they sound like: they contain some text.
 They share the same object type as curves and surfaces,
-as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally Béziers).
+as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally 贝塞尔s).
 
 Blender uses a "Font System" to manage mapping "letter codes --> objects representing them in 3D
 views". This implies that not only does the font system have its own *built-in* font,
@@ -333,7 +333,7 @@ With the :doc:`curve modifier </modeling/modifiers/deform/curve>` you can let te
    Text on curve.
 
 
-In Fig. :ref:`fig-texts-intro-on-curve` you can see a text deformed by a curve (a 2D Bézier circle).
+In Fig. :ref:`fig-texts-intro-on-curve` you can see a text deformed by a curve (a 2D 贝塞尔 circle).
 
 To apply the curve modifier, the text object first has to be converted to a mesh,
 using :kbd:`Alt-C` and click mesh.

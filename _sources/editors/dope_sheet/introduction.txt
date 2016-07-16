@@ -85,7 +85,7 @@ The left "list-tree"
      (so there is one for *Object* one, one for *Shape* one, etc.).
      They gather *all* keyframes defined in their underlying F-Curve data-block.
    - "Mid-level" channels, which seem currently to have no use
-     (there iss one per top-level channel, they are all named *F-Curves*, and have no option at all).
+     (there iss one per top-level channel, they are all named *F-曲线*, and have no option at all).
    - "Low-level" channels, which represent individual F-Curve,
      with their own keyframes (fortunately, only keyed frames are shown!).
 

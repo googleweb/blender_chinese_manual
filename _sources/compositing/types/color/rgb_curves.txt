@@ -3,14 +3,14 @@
 .. 编辑器 Note: This page gets copied into /blender_render/textures/nodes/types/color/rgb_curves
 
 ***************
-RGB Curves Node
+RGB 曲线 Node
 ***************
 
 .. figure:: /images/compositing_nodes_rgbcurves.png
    :align: right
    :width: 150px
 
-   RGB Curves Node.
+   RGB 曲线 Node.
 
 This node allows color corrections for each color channel and levels adjustments in the compositing context.
 
@@ -40,7 +40,7 @@ Channel
 
    C (Combined RGB), R (Red), G (Green), B (Blue), L (Luminance)
 Curve
-   A Bézier curve that varies the input levels (x-axis) to produce an output level (y-axis).
+   A 贝塞尔 curve that varies the input levels (x-axis) to produce an output level (y-axis).
    For the curve controls see: :ref:`Curve widget <ui-curve_widget>`.
 
 
@@ -62,7 +62,7 @@ Here are some common curves you can use to achieve desired effects:
    From left to right: 1. Lighten 2. Negative 3. Decrease Contrast 4. Posterize.
 
 
-Color correction using Curves
+Color correction using 曲线
 -----------------------------
 
 .. figure:: /images/compo-color-rgb.jpg
@@ -113,7 +113,7 @@ Effects
    Changing colors.
 
 
-Curves and Black/White Levels can also be used to completely change the colors of an image.
+曲线 and Black/White Levels can also be used to completely change the colors of an image.
 
 Note that e.g. setting Black Level to red and White Level to blue does not simply substitute
 black with red and white with blue as the example image might suggest.

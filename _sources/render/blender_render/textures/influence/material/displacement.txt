@@ -70,7 +70,7 @@ Open :doc:`NURBS Surfaces </modeling/surfaces/introduction>`
    Control render faces with U/V *Surface Resolution*. Higher numbers give more faces. (Note normal errors).
 Closed NURBS Surfaces
    Control with *Surface Resolution* controls. (Note the normal errors, and how implicit seam shows).
-:doc:`Curves </modeling/curves/introduction>` **and** :doc:`Text </modeling/texts/introduction>`
+:doc:`曲线 </modeling/curves/introduction>` **and** :doc:`Text </modeling/texts/introduction>`
    Control with *Surface Resolution* controls. Higher gives more render faces.
    (Note that the large flat surfaces have few render faces to displace).
 

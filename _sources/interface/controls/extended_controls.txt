@@ -196,8 +196,8 @@ Curve Widget
 
 The *Curve Widget* is found in several places throughout Blender, such as:
 
-- RGB Curves node
-- Vector Curves node
+- RGB 曲线 node
+- Vector 曲线 node
 - Paint/Sculpt brush falloff
 - Color Management curves
 
@@ -241,7 +241,7 @@ Tools
    .. figure:: /images/interface_controls_curve_tools.png
       :align: right
 
-      Tools for Curves.
+      Tools for 曲线.
 
    Reset View
       Resets the view of the curve.

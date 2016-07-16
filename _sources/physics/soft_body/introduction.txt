@@ -69,7 +69,7 @@ Creating a Soft Body
 Soft Body simulation works for all objects that have vertices or control points:
 
 - 网格.
-- Curves.
+- 曲线.
 - Surfaces.
 - Lattices.
 

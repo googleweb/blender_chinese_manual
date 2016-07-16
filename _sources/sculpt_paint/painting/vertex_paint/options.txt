@@ -132,7 +132,7 @@ Input Samples
 Curve
 -----
 
-Brush Curves affect how strongly the color is applied depending on distance from the center of
+Brush 曲线 affect how strongly the color is applied depending on distance from the center of
 the brush. In other words, they allow you to edit the Falloff of the brush intensity.
 
 .. figure:: /images/brushcurves.jpg

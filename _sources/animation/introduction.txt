@@ -33,7 +33,7 @@ General Principles and Tools
 The Graph Editor
 ----------------
 
-- :doc:`F-Curves </editors/graph_editor/fcurves/introduction>`
+- :doc:`F-曲线 </editors/graph_editor/fcurves/introduction>`
 - :doc:`F-Curve Editing </editors/graph_editor/fcurves/introduction>`
 - :doc:`F-Curve 修改器 </editors/graph_editor/fcurves/fmodifiers>`
 
@@ -94,7 +94,7 @@ Drivers
    The Timeline Editor is a quick editor to set and control the time frame.
    This also has some tools for animation.
 :doc:`Graph Editor </editors/graph_editor/introduction>`
-   The Graph Editor is mostly used to edit the F-Curves and Keyframes for Channels and Drivers.
+   The Graph Editor is mostly used to edit the F-曲线 and Keyframes for Channels and Drivers.
 :doc:`Dope Sheet </editors/dope_sheet/introduction>`
    The Dopes Sheet contains a collection of animation editors.
 :doc:`NLA Editor </editors/nla>`

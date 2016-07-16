@@ -18,8 +18,8 @@ Types of Objects
    and can be edited extensively with Blender's mesh editing tools. The default scene features a cube,
    which is one of the many included basic building-block
    shapes called :doc:`Mesh Primitives </editors/3dview/object/types/primitives>`
-:doc:`Curves </modeling/curves/introduction>`
-   Curves are mathematically defined objects
+:doc:`曲线 </modeling/curves/introduction>`
+   曲线 are mathematically defined objects
    which can be manipulated with control handles or control points (instead of vertices),
    to manage their length and curvature.
 :doc:`Surfaces </modeling/surfaces/introduction>`

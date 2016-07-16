@@ -110,8 +110,8 @@ Gamma
 Look
    Choose an artistic effect from set of measured film response data which
    roughly emulates the look of certain film types. Applied before color space conversion.
-Use Curves
-   Adjust RGB Curves to control image colors before color space conversion.
+Use 曲线
+   Adjust RGB 曲线 to control image colors before color space conversion.
    Read more about using the :ref:`ui-curve_widget`.
 
 

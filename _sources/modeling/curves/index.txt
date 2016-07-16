@@ -1,7 +1,7 @@
 .. _modeling_curves-index:
 
 #########
-  Curves
+  曲线
 #########
 
 .. toctree::

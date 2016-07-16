@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RGB Curves Node &mdash; Blender参考手册</title>
+  <title>RGB 曲线 Node &mdash; Blender参考手册</title>
   
 
   
@@ -110,7 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="hue_saturation.html">Hue Saturation Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="invert.html">Invert Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mix.html">Mix Node</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">RGB Curves Node</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">RGB 曲线 Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tone_map.html">Tone Map Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="z_combine.html">Z-Combine Node</a></li>
 </ul>
@@ -170,7 +170,7 @@
       
           <li><a href="index.html">Color 节点</a> &raquo;</li>
       
-    <li>RGB Curves Node</li>
+    <li>RGB 曲线 Node</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -185,10 +185,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rgb-curves-node">
-<h1>RGB Curves Node<a class="headerlink" href="#rgb-curves-node" title="Permalink to this headline">¶</a></h1>
+<h1>RGB 曲线 Node<a class="headerlink" href="#rgb-curves-node" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
 <a class="reference internal image-reference" href="../../../_images/compositing_nodes_rgbcurves.png"><img alt="../../../_images/compositing_nodes_rgbcurves.png" src="../../../_images/compositing_nodes_rgbcurves.png" style="width: 150px;" /></a>
-<p class="caption"><span class="caption-text">RGB Curves Node.</span></p>
+<p class="caption"><span class="caption-text">RGB 曲线 Node.</span></p>
 </div>
 <p>This node allows color corrections for each color channel and levels adjustments in the compositing context.</p>
 <div class="section" id="inputs">
@@ -216,7 +216,7 @@
 <p class="last">C (Combined RGB), R (Red), G (Green), B (Blue), L (Luminance)</p>
 </dd>
 <dt>Curve</dt>
-<dd>A Bézier curve that varies the input levels (x-axis) to produce an output level (y-axis).
+<dd>A 贝塞尔 curve that varies the input levels (x-axis) to produce an output level (y-axis).
 For the curve controls see: <a class="reference internal" href="../../../interface/controls/extended_controls.html#ui-curve-widget"><span class="std std-ref">Curve widget</span></a>.</dd>
 </dl>
 </div>
@@ -235,7 +235,7 @@ For the curve controls see: <a class="reference internal" href="../../../interfa
 <p class="caption"><span class="caption-text">From left to right: 1. Lighten 2. Negative 3. Decrease Contrast 4. Posterize.</span></p>
 </div>
 <div class="section" id="color-correction-using-curves">
-<h3>Color correction using Curves<a class="headerlink" href="#color-correction-using-curves" title="Permalink to this headline">¶</a></h3>
+<h3>Color correction using 曲线<a class="headerlink" href="#color-correction-using-curves" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/compo-color-rgb.jpg"><img alt="../../../_images/compo-color-rgb.jpg" src="../../../_images/compo-color-rgb.jpg" style="width: 320px;" /></a>
 <p class="caption"><span class="caption-text">Color correction with curves.</span></p>
@@ -271,7 +271,7 @@ setting Black and White Levels.</p>
 <a class="reference internal image-reference" href="../../../_images/nodes-rgbcurve-ex.jpg"><img alt="../../../_images/nodes-rgbcurve-ex.jpg" src="../../../_images/nodes-rgbcurve-ex.jpg" style="width: 320px;" /></a>
 <p class="caption"><span class="caption-text">Changing colors.</span></p>
 </div>
-<p>Curves and Black/White Levels can also be used to completely change the colors of an image.</p>
+<p>曲线 and Black/White Levels can also be used to completely change the colors of an image.</p>
 <p>Note that e.g. setting Black Level to red and White Level to blue does not simply substitute
 black with red and white with blue as the example image might suggest.
 Levels do color scaling, not substitution,

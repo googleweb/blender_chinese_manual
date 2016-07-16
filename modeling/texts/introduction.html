@@ -92,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
@@ -187,7 +187,7 @@
 </div>
 <p><em>Text</em> objects are exactly what they sound like: they contain some text.
 They share the same object type as curves and surfaces,
-as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally Béziers).</p>
+as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally 贝塞尔s).</p>
 <p>Blender uses a &#8220;Font System&#8221; to manage mapping &#8220;letter codes &#8211;&gt; objects representing them in 3D
 views&#8221;. This implies that not only does the font system have its own <em>built-in</em> font,
 but it can use external fonts too, including <em>PostScript Type 1</em>,
@@ -441,7 +441,7 @@ corresponding chars.</p>
 <span id="fig-texts-intro-on-curve"></span><a class="reference internal image-reference" href="../../_images/text-curved-lowres-ex.jpg"><img alt="../../_images/text-curved-lowres-ex.jpg" src="../../_images/text-curved-lowres-ex.jpg" style="width: 200px;" /></a>
 <p class="caption"><span class="caption-text">Text on curve.</span></p>
 </div>
-<p>In Fig. <a class="reference internal" href="#fig-texts-intro-on-curve"><span class="std std-ref">Text on curve.</span></a> you can see a text deformed by a curve (a 2D Bézier circle).</p>
+<p>In Fig. <a class="reference internal" href="#fig-texts-intro-on-curve"><span class="std std-ref">Text on curve.</span></a> you can see a text deformed by a curve (a 2D 贝塞尔 circle).</p>
 <p>To apply the curve modifier, the text object first has to be converted to a mesh,
 using <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and click mesh.</p>
 <div class="admonition note">

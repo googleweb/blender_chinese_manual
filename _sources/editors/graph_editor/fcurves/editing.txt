@@ -44,7 +44,7 @@ Snap Keys :kbd:`Shift-S`
    Nearest Marker
       Snap the selected keyframes to their nearest marker individually.
    Flatten Handles
-      Flatten the *Bézier* handles for the selected keyframes.
+      Flatten the *贝塞尔* handles for the selected keyframes.
 
       .. list-table::
          Flatten Handles snapping example.
@@ -145,14 +145,14 @@ Sample Keyframes :kbd:`Shift-O`
              F-Curve after sampling.
 
 
-Bake Curves :kbd:`Alt-C`
+Bake 曲线 :kbd:`Alt-C`
    Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.
 
 
-Bake Sound to F-Curves
+Bake Sound to F-曲线
 ======================
 
-The *Bake Sound to F-Curves* tool takes and sound file and uses its sound wave to create the animation data.
+The *Bake Sound to F-曲线* tool takes and sound file and uses its sound wave to create the animation data.
 
 Lowest frequency
    Cutoff frequency of a high-pass filter that is applied to the audio data.

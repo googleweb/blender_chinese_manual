@@ -4,16 +4,16 @@
 Action Editor
 *************
 
-In Blender *Actions* are a generic containers for F-Curves.
-Actions can contain any number of F-Curves, and can be attached to any data block.
-As long as the RNA data paths stored in the Action's F-Curves can be found on that data block,
+In Blender *Actions* are a generic containers for F-曲线.
+Actions can contain any number of F-曲线, and can be attached to any data block.
+As long as the RNA data paths stored in the Action's F-曲线 can be found on that data block,
 the animation will work. For example, an action modifying *X location* and *Y location*
 properties can be shared across multiple objects,
 since both objects have *X location* and *Y location* properties beneath them.
 
 The *Action Editor* enables you to see and edit the F-Curve data-blocks you defined as actions in the
 *F-Curve Editor*. So it takes place somewhere in-between the low-level
-:doc:`F-Curves </editors/graph_editor/introduction>`, and the high-level :doc:`NLA editor </editors/nla>`.
+:doc:`F-曲线 </editors/graph_editor/introduction>`, and the high-level :doc:`NLA editor </editors/nla>`.
 Hence, you do not have to use them for simple F-Curve animations - and they have not much interest in themselves,
 so you will mostly use this editor when you do :doc:`NLA animation </editors/nla>`
 (they do have a few specific usages on their own,
@@ -89,5 +89,5 @@ Move...
    This allows you to move top-level channels up/down :kbd:`Shift-PageUp`, :kbd:`Shift-PageDown`,
    or directly to the top/bottom :kbd:`Ctrl-Shift-PageUp`, :kbd:`Ctrl-Shift-PageDown`.
 
-Revive Disabled F-Curves
-   Clears "disabled" tag from all F-Curves to get broken F-Curves working again
+Revive Disabled F-曲线
+   Clears "disabled" tag from all F-曲线 to get broken F-曲线 working again

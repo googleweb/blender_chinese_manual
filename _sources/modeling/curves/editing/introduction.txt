@@ -26,7 +26,7 @@ When in 编辑模式, the Properties Shelf :kbd:`N` contains options in the
 *Curve Display* panel for how curves are displayed in the 3D视图.
 
 Handles
-   Toggles the display of Bézier handles while in edit mode. This does not affect the appearance of the curve itself.
+   Toggles the display of 贝塞尔 handles while in edit mode. This does not affect the appearance of the curve itself.
 Normals
    Toggles the display of Curve Normals.
 Normal Size
@@ -115,7 +115,7 @@ Smoothing
    | Hotkey:   :kbd:`W` :menuselection:`--> smooth`
 
 
-Curve smoothing is available through the specials menu. For Bézier curves, this smoothing
+Curve smoothing is available through the specials menu. For 贝塞尔曲线, this smoothing
 operation reduces the distance between the selected control point/s and
 their neighbors, while keeping the neighbors anchored. 
 Does not effect control point tangents.
@@ -148,7 +148,7 @@ The *Mirror* tool is also available, behaving exactly as with
 :doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
 
 
-Set Bézier Handle Type
+Set 贝塞尔 Handle Type
 ======================
 
 .. admonition:: 参考
@@ -160,15 +160,15 @@ Set Bézier Handle Type
    | Hotkey:   :kbd:`V`
 
 
-Handle types are a property of :doc:`Bézier curves.
+Handle types are a property of :doc:`贝塞尔曲线.
 </modeling/curves/introduction>` and can be used to alter features of the curve.
 For example, switching to *Vector handles* can be used to create curves with sharp corners.
-Read the :doc:`Bézier curves </modeling/curves/introduction>` page for more details.
+Read the :doc:`贝塞尔曲线 </modeling/curves/introduction>` page for more details.
 
 
 .. _modeling-curves-extending:
 
-Extending Curves
+Extending 曲线
 ================
 
 .. admonition:: 参考
@@ -183,7 +183,7 @@ Once a curve is created you can add new segments (in fact,
 new control points defining new segments), either by extruding,
 or placing new handles with :kbd:`Ctrl-LMB`.
 Each new segment is added to one end of the curve.
-The Bézier curve can only be extend at the endpoints.
+The 贝塞尔 curve can only be extend at the endpoints.
 :kbd:`Ctrl-LMB` on inner control points will make unconnected duplicates.
 
 
@@ -244,14 +244,14 @@ The two curves are joined by a segment to become a single curve.
 .. figure:: /images/editing_curves_two-curves-joined.jpg
    :width: 600px
 
-   Curves before and after joining.
+   曲线 before and after joining.
 
 
 Additionally, you can close a curve by joining the endpoints but note that you can only join
-curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS)
+curves of the same type (i.e. 贝塞尔 with 贝塞尔, NURBS with NURBS)
 
 
-Separating Curves
+Separating 曲线
 =================
 
 .. admonition:: 参考
@@ -322,10 +322,10 @@ Opening and Closing a Curve
 
 This toggles between an open curve and closed curve (Cyclic).
 Only curves with at least one selected control point will be closed/open.
-The shape of the closing segment is based on the start and end handles for Bézier curves,
+The shape of the closing segment is based on the start and end handles for 贝塞尔曲线,
 and as usual on adjacent control points for NURBS.
 The only time a handle is adjusted after closing is if the handle is an *Auto* one.
-Fig. :ref:`fig-curves-editing-open-close` is the same Bézier curve open and closed.
+Fig. :ref:`fig-curves-editing-open-close` is the same 贝塞尔 curve open and closed.
 
 This action only works on the original starting control-point or the last control-point added.
 Deleting a segment(s) doesn't change how the action applies;
@@ -379,13 +379,13 @@ Converting Curve Type
    Set Spline Type button.
 
 
-You can convert splines in a curve object between Bézier, NURBS, and Poly curves.
+You can convert splines in a curve object between 贝塞尔, NURBS, and Poly curves.
 Press :kbd:`T` to bring up the Toolshelf. Clicking on the *Set Spline Type*
-button will allow you to select the Spline type (Poly, Bézier or NURBS).
+button will allow you to select the Spline type (Poly, 贝塞尔 or NURBS).
 
 Note, this is not a "smart" conversion, i.e. Blender does not try to keep the same shape,
-nor the same number of control points. For example, when converting a NURBS to a Bézier,
-each group of three NURBS control points become a unique Bézier one (center point and two handles).
+nor the same number of control points. For example, when converting a NURBS to a 贝塞尔,
+each group of three NURBS control points become a unique 贝塞尔 one (center point and two handles).
 
 
 Convert Curve to Mesh

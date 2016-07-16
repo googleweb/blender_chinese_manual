@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|text= move direction of time?}}.
 
 ********
-F-Curves
+F-曲线
 ********
 
 After animating some property in Blender using keyframes you can edit their corresponding curves.
@@ -86,17 +86,17 @@ Linear
       Linear.
 
 
-Bézier
+贝塞尔
    The more powerful and useful interpolation, and the default one.
    It gives nicely smoothed curves, i.e. smooth animations!
 
    .. figure:: /images/fcurve-clean1.jpg
       :width: 300px
 
-      Bézier.
+      贝塞尔.
 
 
-Remember that some FCurves can only take discrete values,
+Remember that some F曲线 can only take discrete values,
 in which case they are always shown as if constant interpolated, whatever option you chose.
 
 
@@ -125,7 +125,7 @@ Constant
 
 
 Linear
-   Curves ends are straight lines (linear), as defined by their first two keyframes
+   曲线 ends are straight lines (linear), as defined by their first two keyframes
    (respectively their last two keyframes).
 
    .. figure:: /images/fcurve-extrapolate2.jpg
@@ -141,7 +141,7 @@ are located in the :doc:`F-Curve 修改器 </editors/graph_editor/fmodifiers>`
 Handle Types
 ------------
 
-There is another curve option quite useful for Bézier-interpolated curves.
+There is another curve option quite useful for 贝塞尔-interpolated curves.
 You can set the type of handle to use for the curve points :kbd:`V`
 
 Automatic
@@ -259,7 +259,7 @@ Snap Keys :kbd:`Shift-S`
    Nearest Marker
       Snap the selected keyframes to their nearest marker individually.
    Flatten Handles
-      Flatten the *Bézier* handles for the selected keyframes.
+      Flatten the *贝塞尔* handles for the selected keyframes.
 
       .. list-table::
          Flatten Handles snapping example.
@@ -360,5 +360,5 @@ Sample Keyframes :kbd:`Shift-O`
              FCurve after sampling.
 
 
-Bake Curves :kbd:`Alt-C`
+Bake 曲线 :kbd:`Alt-C`
    Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.

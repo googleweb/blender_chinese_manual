@@ -92,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Surfaces</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#finding-surface-tools">Finding Surface Tools</a></li>
@@ -178,8 +178,8 @@
 <span id="fig-surface-intro-surface"></span><img alt="../../_images/nurbssurface.jpg" src="../../_images/nurbssurface.jpg" />
 <p class="caption"><span class="caption-text">Surface.</span></p>
 </div>
-<p>Curves are 2D objects, and surfaces are their 3D extension. Note however, that in Blender,
-you only have NURBS surfaces, no Bézier (you have the <em>Bézier</em> knot type, though;
+<p>曲线 are 2D objects, and surfaces are their 3D extension. Note however, that in Blender,
+you only have NURBS surfaces, no 贝塞尔 (you have the <em>贝塞尔</em> knot type, though;
 see below), nor polygonal (but for these, you have meshes!).
 Even though curves and surfaces share the same object type (with texts also...),
 they are not the same thing; for example,
@@ -301,7 +301,7 @@ This makes working with surfaces quite easy.</p>
 <h3>Knots<a class="headerlink" href="#knots" title="Permalink to this headline">¶</a></h3>
 <p>Just like with <a class="reference internal" href="../curves/introduction.html#modeling-curve-knot"><span class="std std-ref">NURBS curves</span></a>, NURBS surfaces have two knot vectors,
 one for each U and V axis. Here again, they can be one of <em>Cyclic</em>, <em>Endpoint</em>,
-or <em>Bézier</em>, with the same properties as for curves. And as with curves, only open surfaces
+or <em>贝塞尔</em>, with the same properties as for curves. And as with curves, only open surfaces
 (in the relevant direction) are affected by this setting...</p>
 <div class="figure" id="id6">
 <span id="fig-surface-intro-endpoint"></span><img alt="../../_images/surfaces-endpoint-u-ex.jpg" src="../../_images/surfaces-endpoint-u-ex.jpg" />
@@ -316,7 +316,7 @@ E1 to E2 along the U interpolation axis.</p>
 </div>
 <div class="section" id="order">
 <h3>Order<a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
-<p>One more time, this property is the same as with <a class="reference internal" href="../curves/introduction.html#modeling-curve-order"><span class="std std-ref">NURBS Curves</span></a>;
+<p>One more time, this property is the same as with <a class="reference internal" href="../curves/introduction.html#modeling-curve-order"><span class="std std-ref">NURBS 曲线</span></a>;
 it specifies how much the control points are taken into account for calculating the curve of the surface shape.
 For high Orders 1 the surface pulls away from the control points,
 creating a smoother surface - assuming that the
@@ -338,7 +338,7 @@ and higher than 6 or the number of control points on the relevant axis.</p>
 <span id="fig-surface-intro-weight"></span><a class="reference internal image-reference" href="../../_images/nurbssurfaceweightexample.jpg"><img alt="../../_images/nurbssurfaceweightexample.jpg" src="../../_images/nurbssurfaceweightexample.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">One control point with a weight of 5.</span></p>
 </div>
-<p>Guess what? Yes, it works exactly like <a class="reference internal" href="../curves/editing/introduction.html#modeling-curve-weight"><span class="std std-ref">NURBS Curves</span></a> ! <em>Weight</em> specifies
+<p>Guess what? Yes, it works exactly like <a class="reference internal" href="../curves/editing/introduction.html#modeling-curve-weight"><span class="std std-ref">NURBS 曲线</span></a> ! <em>Weight</em> specifies
 how much each control point &#8220;pulls&#8221; on the curve.</p>
 <p>In Fig. <a class="reference internal" href="#fig-surface-intro-weight"><span class="std std-ref">One control point with a weight of 5.</span></a> a single control point, labeled &#8220;C&#8221;,
 has had its <em>Weight</em> set to 5.0 while all others are at their default of 1.0.
@@ -356,7 +356,7 @@ from a control point.</p>
 <p class="caption"><span class="caption-text">A sphere surface.</span></p>
 </div>
 <p>NURBS can create pure shapes such as circles, cylinders, and spheres
-(note that a Bézier circle is not a pure circle). To create pure circles, globes,
+(note that a 贝塞尔 circle is not a pure circle). To create pure circles, globes,
 or cylinders, you must set to specific values the weights of the control points - some of
 which are provided as presets in the <em>Curve Tools</em> panel (lower right corner).
 This is not intuitive, and you should read more on NURBS before trying this.</p>

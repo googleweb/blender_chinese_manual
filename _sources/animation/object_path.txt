@@ -7,7 +7,7 @@ To make objects move along a path is a very common animation need.
 Think of a complex camera traveling,
 a train on his rails - and most other vehicles can also use "invisible" tracks! -,
 the links of a bicycle chain, etc.
-All these movements could obviously be done with standard F-Curves, but this would be a nightmare!
+All these movements could obviously be done with standard F-曲线, but this would be a nightmare!
 It is much easier and intuitive to define a path materializing the desired
 movement, and make your object(s) follow it.
 
@@ -31,7 +31,7 @@ You can switch it with the :menuselection:`Curve --> Segments --> Switch Directi
 
 For more on editing path/curves, see the :doc:`modeling chapter </modeling/curves/introduction>`.
 
-.. note:: Shapes on Curves
+.. note:: Shapes on 曲线
 
    If you would rather like to have your object's *shape* follow a path (like e.g.
    a sheet of paper inside a printer),
@@ -94,7 +94,7 @@ which implements a more advanced technique.
 To determine where along the path should lay its owner,
 its uses the *location of this owner* along a given axis.
 So to animate the movement of your owner along its target path, you have to animate some way
-(F-Curves or other indirect animation) its location.
+(F-曲线 or other indirect animation) its location.
 
 This implies that here, the length of the path have no more any effect - and that by default,
 the object is static somewhere on the path!

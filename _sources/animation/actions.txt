@@ -29,7 +29,7 @@ Groups
    Are groups of channels.
 Channels
    Record properties.
-F-Curves
+F-曲线
    Are used to interpolate the difference between the keyframes.
 Keyframes
    Are used to set the values of properties.

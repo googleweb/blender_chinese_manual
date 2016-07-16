@@ -65,7 +65,7 @@ Show 物理 visualization
 Deprecation warnings
    Print warnings when using deprecated features in the python API
 Record animation
-   Record animation to F-Curves
+   Record animation to F-曲线
 Auto Start
    Automatically start game at load time
 

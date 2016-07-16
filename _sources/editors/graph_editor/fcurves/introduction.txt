@@ -47,7 +47,7 @@ you would have to add another control point (or keyframe)...
 设置
 ========
 
-F-Curves have three additional properties, which control the interpolation between points,
+F-曲线 have three additional properties, which control the interpolation between points,
 extension behavior, and the type of handles.
 
 
@@ -85,17 +85,17 @@ Linear
       Linear.
 
 
-Bézier
+贝塞尔
    The more powerful and useful interpolation, and the default one.
    It gives nicely smoothed curves, i.e. smooth animations!
 
    .. figure:: /images/fcurve-clean1.jpg
       :width: 300px
 
-      Bézier.
+      贝塞尔.
 
 
-Remember that some F-Curves can only take discrete values,
+Remember that some F-曲线 can only take discrete values,
 in which case they are always shown as if constant interpolated, whatever option you chose.
 
 
@@ -124,7 +124,7 @@ Constant
 
 
 Linear
-   Curves ends are straight lines (linear), as defined by their first two keyframes
+   曲线 ends are straight lines (linear), as defined by their first two keyframes
    (respectively their last two keyframes).
 
    .. figure:: /images/fcurve-extrapolate2.jpg
@@ -140,7 +140,7 @@ are located in the :doc:`F-Curve 修改器 </editors/graph_editor/fcurves/fmodif
 Handle Types
 ------------
 
-There is another curve option quite useful for Bézier-interpolated curves.
+There is another curve option quite useful for 贝塞尔-interpolated curves.
 You can set the type of handle to use for the curve points :kbd:`V`
 
 Automatic
@@ -192,7 +192,7 @@ Auto Clamped
 Direction of time
 =================
 
-Although F-Curves are very similar to :ref:`curves_bezier`,
+Although F-曲线 are very similar to :ref:`curves_bezier`,
 there are some important differences.
 
 For obvious reasons, a property represented by a Curve
