@@ -96,7 +96,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#curve-primitives">曲线单元</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bezier-curves">贝塞尔曲线</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#curve-properties">Curve Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-properties">曲线属性</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">非均匀有理B样条 (NURBS)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#path">Path</a></li>
 </ul>
@@ -211,13 +211,13 @@ to change the properties of objects as a function of time.</p>
 Blender提供了五种不同的曲线基本单元:</p>
 <dl class="docutils">
 <dt>贝塞尔曲线</dt>
-<dd>Adds an open 2D 贝塞尔曲线 with two control points.</dd>
+<dd>添加一个有两个控制点的开放的 2D 贝塞尔曲线.</dd>
 <dt>贝塞尔圆环</dt>
-<dd>Adds a closed, circle-shaped 2D 贝塞尔曲线 (made of four control points).</dd>
+<dd>添加一个封闭的, 圆形的 2D 贝塞尔曲线 (由4个控制点组成).</dd>
 <dt>NURBS曲线</dt>
-<dd>Adds an open 2D NURBS curve, with four control points, with <em>Uniform</em> knots.</dd>
+<dd>Adds an open 2D NURBS曲线, with four control points, with <em>Uniform</em> knots.</dd>
 <dt>NURBS圆环</dt>
-<dd>Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).</dd>
+<dd>Adds a closed, circle-shaped 2D NURBS曲线 (由8个控制点组成).</dd>
 <dt>Path</dt>
 <dd>Adds a NURBS open 3D curve made of five aligned control points,
 with <em>Endpoint</em> knots and the <em>CurvePath</em> setting enabled.</dd>
@@ -294,8 +294,8 @@ Vector handles convert to <em>Free</em> handles when moved.</p>
 </div>
 </div>
 <div class="section" id="curve-properties">
-<h2>Curve Properties<a class="headerlink" href="#curve-properties" title="Permalink to this headline">¶</a></h2>
-<p>Curve Properties can be set from the <em>Object Data</em> option in the
+<h2>曲线属性<a class="headerlink" href="#curve-properties" title="Permalink to this headline">¶</a></h2>
+<p>曲线属性 can be set from the <em>Object Data</em> option in the
 <em>Properties Header</em> (shown below in blue).</p>
 <div class="figure">
 <img alt="../../_images/properties_header-curve.jpg" src="../../_images/properties_header-curve.jpg" />
@@ -480,7 +480,7 @@ The following text will concentrate only on those aspects that are unique to NUR
 <h3>Editing NURBS 曲线<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
 <p>A NURBS曲线 is edited by moving the location of the Control Points.</p>
 <ul class="simple">
-<li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS curve</span>.</li>
+<li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS曲线</span>.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
 <li>Select one of the Control Points and move it around.
 Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
@@ -503,19 +503,19 @@ While you cannot edit the knot vectors directly, you can influence them through 
 <em>Endpoint</em> and <em>贝塞尔</em> settings only apply to open NURBS曲线.</p>
 <dl class="last docutils">
 <dt>Cyclic</dt>
-<dd><p class="first">Makes the NURBS curve cyclic.</p>
+<dd><p class="first">Makes the NURBS曲线 cyclic.</p>
 <div class="last figure" id="id18">
 <img alt="../../_images/modeling_curves_nurbs-cyclic.jpg" src="../../_images/modeling_curves_nurbs-cyclic.jpg" />
-<p class="caption"><span class="caption-text">A NURBS curve with Cyclic applied.</span></p>
+<p class="caption"><span class="caption-text">A NURBS曲线 with Cyclic applied.</span></p>
 </div>
 </dd>
 <dt>贝塞尔</dt>
-<dd>Makes the NURBS curve act like a 贝塞尔曲线.</dd>
+<dd>Makes the NURBS曲线 act like a 贝塞尔曲线.</dd>
 <dt>Endpoint</dt>
 <dd><p class="first">Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</p>
 <div class="last figure" id="id19">
 <a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-endpoint.jpg"><img alt="../../_images/modeling_curves_nurbs-endpoint.jpg" src="../../_images/modeling_curves_nurbs-endpoint.jpg" style="width: 511px;" /></a>
-<p class="caption"><span class="caption-text">A NURBS curve with Endpoint enabled.</span></p>
+<p class="caption"><span class="caption-text">A NURBS曲线 with Endpoint enabled.</span></p>
 </div>
 </dd>
 </dl>
@@ -523,7 +523,7 @@ While you cannot edit the knot vectors directly, you can influence them through 
 </dl>
 <dl class="docutils" id="modeling-curve-order">
 <dt>Order</dt>
-<dd><p class="first">The order of the NURBS curve determines the area of influence of the control points over the curve.
+<dd><p class="first">The order of the NURBS曲线 determines the area of influence of the control points over the curve.
 Higher order values means that a single control point has a greater
 influence over a greater relative proportion of the curve.
 The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</p>

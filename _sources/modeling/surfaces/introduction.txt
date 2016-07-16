@@ -72,7 +72,7 @@ Here we will just talk about the differences.
 It is very important to understand the difference between NURBS曲线 and NURBS surfaces:
 the first one has one dimension, the latter has two.
 Blender internally treats NURBS surfaces and NURBS曲线 completely differently. There are
-several attributes that separate them but the most important is that a NURBS curve has a
+several attributes that separate them but the most important is that a NURBS曲线 has a
 single interpolation axis (U) and a NURBS surface has two interpolation axes (U and V).
 
 However, you can have "2D" surfaces made of curves
@@ -83,7 +83,7 @@ like a NURBS surface with only one row (either in U or V direction) of control p
 Visually you can tell which is which by entering *编辑模式* and looking at the 3D视图 header:
 either the header shows *Surface* or *Curve* as one of the menu choices. Also,
 you can :doc:`extrude </modeling/curves/editing/extrude>` a whole NURBS surface curve to create a surface,
-but you cannot with a simple NURBS curve.
+but you cannot with a simple NURBS曲线.
 
 
 .. _modeling-surfaces-rows-grids:
@@ -270,7 +270,7 @@ There are also two preset NURBS surface curves (with only one control point on e
 
 .. figure:: /images/nurbscurveprimitives.jpg
 
-   NURBS curve primitives.
+   NURBS曲线 primitives.
 
 
 Note how a circle NURBS surface is never filled, unlike its "real" curve counterpart...

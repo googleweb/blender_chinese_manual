@@ -53,9 +53,9 @@ Blender provides five different curve primitives:
 贝塞尔圆环
    Adds a closed, circle-shaped 2D 贝塞尔曲线 (made of four control points).
 NURBS曲线
-   Adds an open 2D NURBS curve, with four control points, with *Uniform* knots.
+   Adds an open 2D NURBS曲线, with four control points, with *Uniform* knots.
 NURBS圆环
-   Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).
+   Adds a closed, circle-shaped 2D NURBS曲线 (made of eight control points).
 Path
    Adds a NURBS open 3D curve made of five aligned control points,
    with *Endpoint* knots and the *CurvePath* setting enabled.
@@ -138,10 +138,10 @@ Free :kbd:`V-F`
 Additionally, the :kbd:`V-T` shortcut can be used to toggle between Free and Aligned handle types.
 
 
-Curve Properties
+曲线属性
 ================
 
-Curve Properties can be set from the *Object Data* option in the
+曲线属性 can be set from the *Object Data* option in the
 *Properties Header* (shown below in blue).
 
 .. figure:: /images/properties_header-curve.jpg
@@ -335,7 +335,7 @@ Editing NURBS 曲线
 
 A NURBS曲线 is edited by moving the location of the Control Points.
 
-- Place a Curve by :kbd:`Shift-A` to bring up the Add menu, followed by :menuselection:`Curve --> NURBS curve`.
+- Place a Curve by :kbd:`Shift-A` to bring up the Add menu, followed by :menuselection:`Curve --> NURBS曲线`.
 - Press :kbd:`Tab` to enter *编辑模式*.
 - Select one of the Control Points and move it around.
   Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
@@ -360,26 +360,26 @@ Knots
    *Endpoint* and *贝塞尔* settings only apply to open NURBS曲线.
 
    Cyclic
-      Makes the NURBS curve cyclic.
+      Makes the NURBS曲线 cyclic.
 
       .. figure:: /images/modeling_curves_nurbs-cyclic.jpg
 
-         A NURBS curve with Cyclic applied.
+         A NURBS曲线 with Cyclic applied.
 
    贝塞尔
-      Makes the NURBS curve act like a 贝塞尔曲线.
+      Makes the NURBS曲线 act like a 贝塞尔曲线.
    Endpoint
       Makes the curve contact the end control points. Cyclic must be disabled for this option to work.
 
       .. figure:: /images/modeling_curves_nurbs-endpoint.jpg
          :width: 511px
 
-         A NURBS curve with Endpoint enabled.
+         A NURBS曲线 with Endpoint enabled.
 
 .. _modeling-curve-order:
 
 Order
-   The order of the NURBS curve determines the area of influence of the control points over the curve.
+   The order of the NURBS曲线 determines the area of influence of the control points over the curve.
    Higher order values means that a single control point has a greater
    influence over a greater relative proportion of the curve.
    The valid range of *Order* values is 2-6 depending on the number of control points present in the curve.
