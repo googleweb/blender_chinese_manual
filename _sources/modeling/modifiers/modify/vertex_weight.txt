@@ -236,10 +236,10 @@ Proximity mode
    Object Distance
       Use the distance between the modified mesh object and the target object as
       weight for all vertices in the affected vertex group.
-   Geometry Distance
+   几何体 Distance
       Use the distance between each vertex and the target object, or its geometry.
 
-The *Geometry Distance* mode has three additional options, *Vertex*, *Edge* and
+The *几何体 Distance* mode has three additional options, *Vertex*, *Edge* and
 *Face*. If you enable more than one of them, the shortest distance will be used. If the target object has no
 geometry (e.g. an empty or camera), it will use the location of the object itself.
 
@@ -301,7 +301,7 @@ let us dynamically control a *Wave* modifier with a modified vertex group.
 `The Blender file <https://wiki.blender.org/index.php/Media:Man修改器WeightVGroupEx.blend>`__, TEST_1 scene.
 
 
-Using Distance from a Target Object's Geometry
+Using Distance from a Target Object's 几何体
 ----------------------------------------------
 
 We're going to illustrate this with a *Displace* modifier.
@@ -314,7 +314,7 @@ Now add a curve circle, and place it 0.25 BU above the grid. Scale it up a bit
 (e.g. 4.0 BU).
 
 Back to the grid object, add to it a *Vertex Weight Proximity* modifier,
-in *Geometry Distance* mode. Enable *Edge*
+in *几何体 Distance* mode. Enable *Edge*
 (if you use *Vertex* only, and your curve has a low U definition,
 you would get wavy patterns, see Fig. :ref:`fig-modifier-vertex-weight-wavy`).
 

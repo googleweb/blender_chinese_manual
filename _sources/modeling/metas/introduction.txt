@@ -200,7 +200,7 @@ spheres centered at the directing point.
 
 *Meta* objects are nothing more than mathematical formulae that perform logical operations on one another
 (AND, OR), and that can be added and subtracted from each other.
-This method is also called *Constructive Solid Geometry* (CSG).
+This method is also called *Constructive Solid 几何体* (CSG).
 Because of its mathematical nature, CSG uses little memory, but requires lots of processing power to compute.
 
 

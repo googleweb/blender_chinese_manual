@@ -83,7 +83,7 @@ To keep the size of the modifier reasonable, the kind of items to be affected mu
 
 Mapping Type
    How is generated the mapping between those source and destination items. Each type has its own options,
-   see `Geometry Mapping`_ below for details.
+   see `几何体 Mapping`_ below for details.
 
 Data Types
    The left column of toggle buttons, to select which data types to transfer.
@@ -110,10 +110,10 @@ part of the modifier stack, which means e.g. that they will remain even once the
 source data selection is modified.
 
 
-Geometry Mapping
+几何体 Mapping
 ----------------
 
-Geometry mapping is the process by which a given destination vertex/edge/... knows **which part** of the source mesh
+几何体 mapping is the process by which a given destination vertex/edge/... knows **which part** of the source mesh
 to get its data from. It is crucial to understand this topic well to get good results with this modifier.
 
 Topology

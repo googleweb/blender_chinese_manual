@@ -4,7 +4,7 @@
 Empties
 *******
 
-The "Empty" is a null object. It contains no real Geometry,
+The "Empty" is a null object. It contains no real 几何体,
 but can be used as a handle for many purposes.
 
 

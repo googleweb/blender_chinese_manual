@@ -1,11 +1,11 @@
 
 *************
-Geometry Node
+几何体 Node
 *************
 
 .. figure:: /images/geometry-node.jpg
 
-   Geometry node.
+   几何体 node.
 
 
 The geometry node is used to specify how light reflects off the surface.
@@ -63,7 +63,7 @@ Front/Back
    :doc:`Texture Node </render/blender_render/materials/nodes/types/input/texture>`.
 
 
-Geometry Node 例子 using a UV image
+几何体 Node 例子 using a UV image
 ======================================
 
 .. figure:: /images/geometry-node-example.jpg

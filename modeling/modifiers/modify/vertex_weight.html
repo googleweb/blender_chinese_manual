@@ -391,12 +391,12 @@ based on the distance between the object (or its vertices), and another target o
 <dt>Object Distance</dt>
 <dd>Use the distance between the modified mesh object and the target object as
 weight for all vertices in the affected vertex group.</dd>
-<dt>Geometry Distance</dt>
+<dt>几何体 Distance</dt>
 <dd>Use the distance between each vertex and the target object, or its geometry.</dd>
 </dl>
 </dd>
 </dl>
-<p>The <em>Geometry Distance</em> mode has three additional options, <em>Vertex</em>, <em>Edge</em> and
+<p>The <em>几何体 Distance</em> mode has three additional options, <em>Vertex</em>, <em>Edge</em> and
 <em>Face</em>. If you enable more than one of them, the shortest distance will be used. If the target object has no
 geometry (e.g. an empty or camera), it will use the location of the object itself.</p>
 <dl class="docutils">
@@ -456,7 +456,7 @@ and use its <em>Custom Curve</em> mapping to get larger/narrower &#8220;wave inf
 </iframe><p><a class="reference external" href="https://wiki.blender.org/index.php/Media:Man修改器WeightVGroupEx.blend">The Blender file</a>, TEST_1 scene.</p>
 </div>
 <div class="section" id="using-distance-from-a-target-object-s-geometry">
-<h3>Using Distance from a Target Object&#8217;s Geometry<a class="headerlink" href="#using-distance-from-a-target-object-s-geometry" title="Permalink to this headline">¶</a></h3>
+<h3>Using Distance from a Target Object&#8217;s 几何体<a class="headerlink" href="#using-distance-from-a-target-object-s-geometry" title="Permalink to this headline">¶</a></h3>
 <p>We&#8217;re going to illustrate this with a <em>Displace</em> modifier.</p>
 <p>Add a (10×10 BU) 100×100 vertices grid, and in <em>编辑模式</em>,
 add to it a vertex group containing all of its vertices, as above.
@@ -464,7 +464,7 @@ You can even further sub-divide it with a first <em>Subsurf</em> modifier.</p>
 <p>Now add a curve circle, and place it 0.25 BU above the grid. Scale it up a bit
 (e.g. 4.0 BU).</p>
 <p>Back to the grid object, add to it a <em>Vertex Weight Proximity</em> modifier,
-in <em>Geometry Distance</em> mode. Enable <em>Edge</em>
+in <em>几何体 Distance</em> mode. Enable <em>Edge</em>
 (if you use <em>Vertex</em> only, and your curve has a low U definition,
 you would get wavy patterns, see Fig. <a class="reference internal" href="#fig-modifier-vertex-weight-wavy"><span class="std std-ref">Wavy patterns.</span></a>).</p>
 <table border="1" class="docutils" id="id7">

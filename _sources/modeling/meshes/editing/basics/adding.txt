@@ -1,6 +1,6 @@
 
 ***************
-Adding Geometry
+Adding 几何体
 ***************
 
 In Blender, for modeling, you have several ways of adding mesh elements.

@@ -42,7 +42,7 @@ If the particle system type is Emitter or Hair,
 then the following parameters give the particle an initial velocity in the direction of...
 
 
-Emitter Geometry
+Emitter 几何体
 ----------------
 
 Normal

@@ -209,12 +209,12 @@ Path/Curve-Deform
    - :doc:`动画 Paths </animation/object_path>`
 
 
-Geometry
+几何体
 --------
 
 .. figure:: /images/modeling_curves_geometry-panel.jpg
 
-   曲线 Geometry panel.
+   曲线 几何体 panel.
 
 
 Modification
@@ -237,32 +237,32 @@ Bevel
 
          A Curve with different resolutions applied.
 
-Taper Object
+锥化物体
    Tapering a Curve causes it to get thinner towards one end.
    You can also alter the proportions of the Taper throughout the tapered object
-   by moving/scaling/rotating the Control Points of the Taper Object.
-   The Taper Object can only be another Curve.
-   Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.
+   by moving/scaling/rotating the Control Points of the 锥化物体.
+   The 锥化物体 can only be another Curve.
+   Editing the Handles and Control Points of the 锥化物体 will cause the original Object to change shape.
 
    .. figure:: /images/modeling_curves_geometry-taper.jpg
 
-      A Curve before (left) and after (right) a 贝塞尔曲线 Taper Object was applied.
+      A Curve before (left) and after (right) a 贝塞尔曲线 锥化物体 was applied.
 
-Bevel Object
-   Beveling a 贝塞尔曲线 with a 贝塞尔曲线 as the Bevel Object generally gives it the appearance of a plane,
-   while using a 贝塞尔圆环 as the Bevel Object will give it the appearance of a cylinder.
-   The Bevel Object can only be another Curve.
-   Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape.
+倒角物体
+   Beveling a 贝塞尔曲线 with a 贝塞尔曲线 as the 倒角物体 generally gives it the appearance of a plane,
+   while using a 贝塞尔圆环 as the 倒角物体 will give it the appearance of a cylinder.
+   The 倒角物体 can only be another Curve.
+   Editing the Handles and Control Points of the 倒角物体 will cause the original Object to change shape.
    Given the options available, it is best to experiment and see the results of this operation.
 
    .. figure:: /images/modeling_curves_geometry-bevel.jpg
 
-      A Curve with the Bevel Object as a 贝塞尔曲线 (left) and as a 贝塞尔圆环 (right).
+      A Curve with the 倒角物体 as a 贝塞尔曲线 (left) and as a 贝塞尔圆环 (right).
 
 Fill Caps
    Seals the ends of a beveled Curve.
 Map Taper
-   For 曲线 using a Taper Object and with modifications to the *Start/End Bevel Factor*
+   For 曲线 using a 锥化物体 and with modifications to the *Start/End Bevel Factor*
    the *Map Taper* option will apply the taper to the beveled part of the Curve (not the whole Curve).
 
    .. figure:: /images/modeling_curves_geometry-map-taper.jpg

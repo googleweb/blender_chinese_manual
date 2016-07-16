@@ -511,7 +511,7 @@ Fill
 ----
 
 The fill options control how the text curves are filled in when text is *Extruded*
-or *Beveled* in the *Geometry* Panel.
+or *Beveled* in the *几何体* Panel.
 
 Front
    Fills in the front side of the surface.
@@ -535,7 +535,7 @@ Auto Texture Space
    Adjusts the active object's texture space automatically when transforming object.
 
 
-Geometry
+几何体
 ========
 
 Text objects have all the :doc:`curves extrusion features </modeling/curves/editing/extrude>`.

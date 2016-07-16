@@ -15,9 +15,9 @@ Moving Object Centers
 Object Centers can be moved to different positions through
 :menuselection:`3D视图编辑窗口 --> 变换 --> Origin` (press :kbd:`T` to open panel):
 
-Geometry to Origin
+几何体 to Origin
    Move model to origin and this way origin of the object will also be at the center of the object.
-Origin to Geometry
+Origin to 几何体
    Move origin to the center of the object and this way origin of the object will also be at
    the center of the object.
 Origin to 3D游标

@@ -9,7 +9,7 @@ cases.
 
 The mesh analysis works in editmode and shows areas with a high value in red,
 and areas with a low value in blue.
-Geometry outside the range is displayed grey.
+几何体 outside the range is displayed grey.
 
 Currently the different modes target 3D-printing as their primary use.
 

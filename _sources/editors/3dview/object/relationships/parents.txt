@@ -142,7 +142,7 @@ around and anything that they are attached to or associated with will move and d
 similar way.
 
 In Blender Armature Object Types are usually used to associate certain bones of an Armature to
-certain parts of a Mesh Object Types Mesh Geometry.
+certain parts of a Mesh Object Types Mesh 几何体.
 You are then able to move the Armature Bones and the Mesh Object will deform.
 
 .. figure:: /images/sq-3dvieweditorheader-objectmenu-parent-armature_deform.jpg

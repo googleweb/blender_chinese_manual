@@ -11,7 +11,7 @@ Inputs
 
 Vector
    Texture coordinate to sample texture at;
-   defaults to global position (Position output of Geometry node) if the socket is left unconnected.
+   defaults to global position (Position output of 几何体 node) if the socket is left unconnected.
 
 
 Properties

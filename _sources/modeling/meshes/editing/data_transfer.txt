@@ -128,7 +128,7 @@ Auto 变换
    Automatically computer the transformation to get the best possible match between source and destination meshes.
 Object 变换
    Evaluate source and destination meshes in global space.
-Only Neighbor Geometry
+Only Neighbor 几何体
    Source elements must be closer than given distance from destination one.
 
    Max Distance

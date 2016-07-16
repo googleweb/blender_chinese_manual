@@ -342,7 +342,7 @@ Vertex Group
    .. list-table::
       :header-rows: 1
 
-      * - Original Geometry
+      * - Original 几何体
         - No Group Chosen
         - Vertex Weights
         - Result
@@ -392,7 +392,7 @@ Normalized
       * - .. figure:: /images/apinzonf_diagram_monkey_normalized0.jpg
              :width: 130px
 
-             Original Geometry.
+             Original 几何体.
 
         - .. figure:: /images/apinzonf_diagram_monkey_normalized1.jpg
              :width: 130px

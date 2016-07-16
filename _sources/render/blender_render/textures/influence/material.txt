@@ -60,7 +60,7 @@ Ray Mirror
    Influences the strength of raytraced mirror reflection.
 
 
-Geometry
+几何体
 ^^^^^^^^
 
 Normal

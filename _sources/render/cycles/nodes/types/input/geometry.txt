@@ -1,14 +1,14 @@
 
 ********
-Geometry
+几何体
 ********
 
 .. figure:: /images/cycles_nodes_geometry.png
    :align: right
 
-   Geometry Node.
+   几何体 Node.
 
-The *Geometry* node gives geometric information about the current shading point.
+The *几何体* node gives geometric information about the current shading point.
 All vector coordinates are in *World Space*. For volume shaders,
 only the position and incoming vector are available.
 
@@ -35,7 +35,7 @@ Normal
 Tangent
    Tangent at the surface.
 True Normal
-   Geometry or flat normal of the surface.
+   几何体 or flat normal of the surface.
 Incoming
    Vector pointing towards the point the shading point is being viewed from.
 Parametric

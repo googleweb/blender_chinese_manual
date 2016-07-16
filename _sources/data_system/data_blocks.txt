@@ -213,7 +213,7 @@ For reference, here is a table of data-blocks types stored in blend-files.
    * - Mesh
      - |tick|
      - |cross|
-     - | Geometry verts/edges/faces.
+     - | 几何体 verts/edges/faces.
        | Used as object-data.
    * - MetaBall
      - |tick|
@@ -259,7 +259,7 @@ For reference, here is a table of data-blocks types stored in blend-files.
    * - ShapeKeys
      - |cross|
      - |cross|
-     - | Geometry shape storage, which can be animated.
+     - | 几何体 shape storage, which can be animated.
        | Used by mesh, curve and lattice objects.
    * - Sounds
      - |tick|

@@ -21,10 +21,10 @@ Options
    Ocean Modifier.
 
 
-Geometry
+几何体
 --------
 
-Geometry
+几何体
    Generate
       Creates a tiled mesh grid that exactly corresponds with the resolution of the simulation data
 

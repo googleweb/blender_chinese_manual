@@ -31,21 +31,21 @@ The *Topology Mirror* option is available in the
    For *Topology Mirror* to work the *X Mirror* option must be enabled.
 
 
-When using the *X Mirror* option to work on mirrored Mesh Geometry the vertices that
+When using the *X Mirror* option to work on mirrored Mesh 几何体 the vertices that
 are mirrored must be perfectly placed. If they are not exactly positioned in their mirror
 locations then *X Mirror* will not treat those vertices as mirrored. This can be
 annoying because often the out of position vertices are only very slightly out of position.
 
 *Topology Mirror* tries to solve this problem by determining which vertices are mirrored vertices not only by
-using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.
-It looks at the overall Mesh Geometry topology to determine if particular vertices will be treated as mirrored.
+using their positions but also by looking at how those vertices are related to others in the Mesh 几何体.
+It looks at the overall Mesh 几何体 topology to determine if particular vertices will be treated as mirrored.
 The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when
 *X Mirror* and *Topology Mirror* are both active.
 
 .. note::
 
-   The *Topology Mirror* functionality will work more reliably on Mesh Geometry
-   which is more detailed. If you use very simple Mesh Geometry such as a Cube or UV Sphere for
+   The *Topology Mirror* functionality will work more reliably on Mesh 几何体
+   which is more detailed. If you use very simple Mesh 几何体 such as a Cube or UV Sphere for
    example the *Topology Mirror* option will often not work.
 
 
@@ -137,7 +137,7 @@ Direction
           Mesh after Symmetrize.
 
 
-Mirroring Geometry
+Mirroring 几何体
 ==================
 
 See :doc:`Mirror </modeling/meshes/editing/deforming/mirror>` for information on mirroring,

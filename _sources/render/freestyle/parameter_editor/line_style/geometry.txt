@@ -1,12 +1,12 @@
 
 ********
-Geometry
+几何体
 ********
 
 .. figure:: /images/render-freestyle-line_style_geometry_ui.jpg
    :width: 300px
 
-   Line Style Geometry Overall UI.
+   Line Style 几何体 Overall UI.
 
 
 In this tab you control the geometry of your strokes.
