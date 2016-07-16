@@ -164,7 +164,7 @@ This entry:
 
    Curve
       It is a class of objects.
-      In Blender there are 贝塞尔曲线 and NURBS curves.
+      In Blender there are 贝塞尔曲线 and NURBS曲线.
 
 Would be written more like this, avoiding the *"it iss"*:
 

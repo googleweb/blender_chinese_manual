@@ -90,12 +90,12 @@ if they have been modified. *Clean Keyframes* :kbd:`O`
    * - .. figure:: /images/fcurve-clean1.jpg
           :width: 300px
 
-          F-Curve before cleaning.
+          F-曲线 before cleaning.
 
      - .. figure:: /images/fcurve-clean2.jpg
           :width: 300px
 
-          F-Curve after cleaning.
+          F-曲线 after cleaning.
 
 
 Smoothing
@@ -118,12 +118,12 @@ seem to be never modified by this tool.
    * - .. figure:: /images/fcurve-clean1.jpg
           :width: 300px
 
-          F-Curve before smoothing.
+          F-曲线 before smoothing.
 
      - .. figure:: /images/fcurve-smooth.jpg
           :width: 300px
 
-          F-Curve after smoothing.
+          F-曲线 after smoothing.
 
 
 Sampling and Baking Keyframes
@@ -137,12 +137,12 @@ Sample Keyframes :kbd:`Shift-O`
       * - .. figure:: /images/fcurve-sample.jpg
              :width: 300px
 
-             F-Curve before sampling.
+             F-曲线 before sampling.
 
         - .. figure:: /images/fcurve-sample2.jpg
              :width: 300px
 
-             F-Curve after sampling.
+             F-曲线 after sampling.
 
 
 Bake 曲线 :kbd:`Alt-C`

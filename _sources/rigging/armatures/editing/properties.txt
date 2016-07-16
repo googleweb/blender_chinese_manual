@@ -338,12 +338,12 @@ so you cannot visualize the effects of these settings.
 
 
 We saw in :doc:`this page </rigging/armatures/bones/index>` that bones are made
-of small rigid segments mapped to a "virtual" 贝塞尔 curve.
+of small rigid segments mapped to a "virtual" 贝塞尔曲线.
 The *Segm* numeric field allows you to set the number of segments inside a given bone - by default,
 it is set to 1, which gives a standard rigid bone. The higher this setting (max is 32), the smoother the bone,
 but the heavier the pose calculations...
 
-Each bone's ends are mapped to its "virtual" 贝塞尔 curve's
+Each bone's ends are mapped to its "virtual" 贝塞尔曲线's
 :ref:`"auto" <curve-handle_type-auto>`
 handle. Therefore, you cannot control their direction,
 but you can change their "length" using the *In* and *Out* numeric fields,
@@ -353,7 +353,7 @@ angle with previous/next bones in the chain, and so on.
 
 
 .. list-table::
-   Bone In/Out settings example, with a materialized 贝塞尔 curve.
+   Bone In/Out settings example, with a materialized 贝塞尔曲线.
 
    * - .. figure:: /images/riggingbboneinoutex1.jpg
           :width: 300px

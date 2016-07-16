@@ -32,7 +32,7 @@ which will then keep updating the compositing result while editing.
 S-曲线
 --------
 
-The curve type used for creating mask splines is almost a 贝塞尔 curve, but with some differences.
+The curve type used for creating mask splines is almost a 贝塞尔曲线, but with some differences.
 The curve needed to support feathering in a way that stuck to the curve as you edited it,
 for ease of editing an animation. These are called S-曲线.
 

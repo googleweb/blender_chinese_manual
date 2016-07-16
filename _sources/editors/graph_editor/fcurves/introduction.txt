@@ -5,8 +5,8 @@
 ************
 
 After animating some property in Blender using keyframes you can edit their corresponding curves.
-When something is "animated," it changes over time. This curve in shown as something called an F-Curve.
-Basically what an F-Curve does is it a interpolates between two animated properties. In Blender,
+When something is "animated," it changes over time. This curve in shown as something called an F-曲线.
+Basically what an F-曲线 does is it a interpolates between two animated properties. In Blender,
 animating an object means changing one of its properties, such as an objects location, or its scale.
 
 As mentioned, Blender's fundamental unit of time is the "frame",
@@ -134,7 +134,7 @@ Linear
 
 
 Additional extrapolation tools (e.g. the "Cycles" F-Modifier)
-are located in the :doc:`F-Curve 修改器 </editors/graph_editor/fcurves/fmodifiers>`
+are located in the :doc:`F-曲线 修改器 </editors/graph_editor/fcurves/fmodifiers>`
 
 
 Handle Types
@@ -200,7 +200,7 @@ cannot have more than **one** value at a given time, hence:
 
 - when you move a control point ahead of a control point that was previously ahead of the point that you are moving,
   the two control points switch their order in the edited curve, to avoid that the curve goes back in time
-- for the above reason, it is impossible to have a closed F-Curve
+- for the above reason, it is impossible to have a closed F-曲线
 
 .. list-table::
    Two control points switching: the curve cannot go back in time!

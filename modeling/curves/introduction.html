@@ -94,7 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲线</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#curve-primitives">Curve Primitives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-primitives">曲线单元</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bezier-curves">贝塞尔曲线</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#curve-properties">Curve Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">非均匀有理B样条 (NURBS)</a></li>
@@ -181,14 +181,14 @@
 </div>
 <p>曲线和<a class="reference internal" href="../surfaces/introduction.html"><span class="doc">曲面</span></a>是Blender物体的特殊形式.
 它们是由数学函数表示的而不是一系列点.</p>
-<p>Blender offers both <a class="reference internal" href="#bezier-curves">贝塞尔曲线</a> and <a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">非均匀有理B样条(NURBS)</a>.
-Both 贝塞尔曲线 and NURBS 曲线 and 曲面 are defined in terms of a set of &#8220;控制点&#8221;
-(or &#8220;控制顶点&#8221;) which define a &#8220;control polygon&#8221;.</p>
-<p>Both 贝塞尔 and NURBs curves are named after their mathematical definitions, and choosing between them
+<p>Blender提供了<a class="reference internal" href="#bezier-curves">贝塞尔曲线</a>和<a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">非均匀有理B样条(NURBS)</a>.
+贝塞尔曲线和NURBS曲线以及曲面由一组&#8220;控制点&#8221;
+(或者&#8220;控制顶点&#8221;)定义,这些控制点定义了一个&#8220;控制多边形&#8221;.</p>
+<p>贝塞尔和NURBS曲线都是以它们的数学定义命名, and choosing between them
 is often more a matter of how they are computed behind the scenes than how they appear from a modeler&#8217;s
 perspective. 贝塞尔曲线 are generally more intuitive because they start and end at the
 control points that you set,
-but NURBs curves are more efficient for the computer to calculate when there are many twists and turns in a curve.</p>
+but NURBS曲线 are more efficient for the computer to calculate when there are many twists and turns in a curve.</p>
 <p>The main advantage to using curves instead of polygonal meshes is that curves are defined by
 less data and so can produce results using less memory and storage space at modeling
 time. However, this procedural approach to surfaces can increase demands at render time.</p>
@@ -202,21 +202,21 @@ They are also widely used in animation, both as <a class="reference internal" hr
 for objects to move along and as <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">F-曲线</span></a>
 to change the properties of objects as a function of time.</p>
 <div class="section" id="curve-primitives">
-<h2>Curve Primitives<a class="headerlink" href="#curve-primitives" title="Permalink to this headline">¶</a></h2>
+<h2>曲线单元<a class="headerlink" href="#curve-primitives" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id3">
 <img alt="../../_images/modeling_curves_add-curve-menu.jpg" src="../../_images/modeling_curves_add-curve-menu.jpg" />
 <p class="caption"><span class="caption-text">Add Curve menu.</span></p>
 </div>
-<p>In 物体模式, the <em>Add Curve</em> menu,
-Blender provides five different curve primitives:</p>
+<p>在物体模式, <em>添加曲线</em> 菜单,
+Blender提供了五种不同的曲线基本单元:</p>
 <dl class="docutils">
 <dt>贝塞尔 Curve</dt>
-<dd>Adds an open 2D 贝塞尔 curve with two control points.</dd>
+<dd>Adds an open 2D 贝塞尔曲线 with two control points.</dd>
 <dt>贝塞尔 Circle</dt>
-<dd>Adds a closed, circle-shaped 2D 贝塞尔 curve (made of four control points).</dd>
-<dt>NURBS Curve</dt>
+<dd>Adds a closed, circle-shaped 2D 贝塞尔曲线 (made of four control points).</dd>
+<dt>NURBS曲线</dt>
 <dd>Adds an open 2D NURBS curve, with four control points, with <em>Uniform</em> knots.</dd>
-<dt>NURBS Circle</dt>
+<dt>NURBS圆环</dt>
 <dd>Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).</dd>
 <dt>Path</dt>
 <dd>Adds a NURBS open 3D curve made of five aligned control points,
@@ -230,17 +230,17 @@ with <em>Endpoint</em> knots and the <em>CurvePath</em> setting enabled.</dd>
 can be found in the middle of the pink line while the Handles comprise the extensions from the
 Control Point. By default the arrows on the Segment represents the direction and
 <em>relative</em> speed and direction of movement Objects will have when moving along the curve.
-This can be altered by defining a custom F-Curve.</p>
+This can be altered by defining a custom F-曲线.</p>
 <div class="figure" id="id4">
 <img alt="../../_images/modeling_curves_control-points-handles.jpg" src="../../_images/modeling_curves_control-points-handles.jpg" />
 <p class="caption"><span class="caption-text">贝塞尔 Curve in 编辑模式.</span></p>
 </div>
 <div class="section" id="editing-bezier-curves">
-<h3>Editing 贝塞尔曲线<a class="headerlink" href="#editing-bezier-curves" title="Permalink to this headline">¶</a></h3>
-<p>A 贝塞尔 curve can be edited by moving the locations of the Control Points and Handles.</p>
+<h3>编辑贝塞尔曲线<a class="headerlink" href="#editing-bezier-curves" title="Permalink to this headline">¶</a></h3>
+<p>A 贝塞尔曲线 can be edited by moving the locations of the Control Points and Handles.</p>
 <ul class="simple">
 <li>Add a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the <em>Add</em> menu, followed by <span class="menuselection">Curve ‣ 贝塞尔</span>.</li>
-<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
+<li>按<code class="kbd docutils literal"><span class="pre">Tab</span></code>进入到<em>编辑模式</em>.</li>
 <li>Select one of the Control Points and move it around.
 Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
 <li>Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.</li>
@@ -253,7 +253,7 @@ Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to co
 </ul>
 <p>Note that while in <em>编辑模式</em> you cannot directly select a Segment. To do so,
 select all of the Control Points that make up the Segment you want to move.</p>
-<p>There are four 贝塞尔 curve handle types.
+<p>There are four 贝塞尔曲线 handle types.
 They can be accessed by pressing <code class="kbd docutils literal"><span class="pre">V</span></code> and selecting from the list that appears,
 or by pressing the appropriate hotkey combination. Handles can be rotated, moved,
 scaled and shrunk/fattened like any vertex in a mesh.</p>
@@ -474,11 +474,11 @@ are approximations. For example, a 贝塞尔 circle is an <em>approximation</em>
 whereas a NURBS circle is an <em>exact</em> circle.
 NURBS theory can be a <em>very</em> complicated topic. For an introduction,
 please consult the <a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">Wikipedia page.</a> In practice,
-many of the 贝塞尔 curve operations discussed above apply to NURBS curves in the same manner.
-The following text will concentrate only on those aspects that are unique to NURBS curves.</p>
+many of the 贝塞尔曲线 operations discussed above apply to NURBS曲线 in the same manner.
+The following text will concentrate only on those aspects that are unique to NURBS曲线.</p>
 <div class="section" id="editing-nurbs-curves">
 <h3>Editing NURBS 曲线<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
-<p>A NURBS Curve is edited by moving the location of the Control Points.</p>
+<p>A NURBS曲线 is edited by moving the location of the Control Points.</p>
 <ul class="simple">
 <li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS curve</span>.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
@@ -500,7 +500,7 @@ Press <code class="kbd docutils literal"><span class="pre">F6</span></code> imme
 numbers used to determine the influence of the control points on the curve.
 While you cannot edit the knot vectors directly, you can influence them through the
 <em>Endpoint</em> and <em>贝塞尔</em> options in the Active Spline panel. Note that the
-<em>Endpoint</em> and <em>贝塞尔</em> settings only apply to open NURBS curves.</p>
+<em>Endpoint</em> and <em>贝塞尔</em> settings only apply to open NURBS曲线.</p>
 <dl class="last docutils">
 <dt>Cyclic</dt>
 <dd><p class="first">Makes the NURBS curve cyclic.</p>
@@ -510,7 +510,7 @@ While you cannot edit the knot vectors directly, you can influence them through 
 </div>
 </dd>
 <dt>贝塞尔</dt>
-<dd>Makes the NURBS curve act like a 贝塞尔 curve.</dd>
+<dd>Makes the NURBS curve act like a 贝塞尔曲线.</dd>
 <dt>Endpoint</dt>
 <dd><p class="first">Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</p>
 <div class="last figure" id="id19">
@@ -529,7 +529,7 @@ influence over a greater relative proportion of the curve.
 The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</p>
 <div class="last figure" id="id20">
 <a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-order.jpg"><img alt="../../_images/modeling_curves_nurbs-order.jpg" src="../../_images/modeling_curves_nurbs-order.jpg" style="width: 511px;" /></a>
-<p class="caption"><span class="caption-text">NURBS curves with orders of 2 (left), 4 (middle) and 6 (right).</span></p>
+<p class="caption"><span class="caption-text">NURBS曲线 with orders of 2 (left), 4 (middle) and 6 (right).</span></p>
 </div>
 </dd>
 </dl>

@@ -115,7 +115,7 @@ Backbone Length
 The *贝塞尔 Curve* modifier replaces the stroke by a 贝塞尔 approximation of it.
 
 Error
-   The maximum distance allowed between the new 贝塞尔 curve and the original stroke.
+   The maximum distance allowed between the new 贝塞尔曲线 and the original stroke.
 
 
 .. figure:: /images/toycar_bezier.jpg

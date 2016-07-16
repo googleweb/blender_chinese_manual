@@ -43,7 +43,7 @@ Set Inverse
 Clear Inverse 
    Moves the origin of the object back to the spot set in the -
    Movie Clip Editor:(t)tool shelf-->Solve-->Orientation-->Set Origin.
-Constraint to F-Curve
+Constraint to F-曲线
    Applies the constraint, creating keyframes for the transforms.
 Influence
    Control how much this constraint effects the owner.

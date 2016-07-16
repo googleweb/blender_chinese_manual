@@ -1,17 +1,17 @@
 ..    TODO/Review: {{review|im=examples}}.
 
 *****************
-F-Curve 修改器
+F-曲线 修改器
 *****************
 
-F-Curve modifiers are similar to object modifiers, in that they add non-destructive effects,
+F-曲线 modifiers are similar to object modifiers, in that they add non-destructive effects,
 that can be adjusted at any time, and layered to create more complex effects.
 
 
 Adding a Modifier
 =================
 
-The F-Curve modifier panel is located in the Properties panel.
+The F-曲线 modifier panel is located in the Properties panel.
 Select a curve by selecting one of its curve points, or by selecting the channel list.
 Click on the *Add Modifier* button and select a modifier.
 

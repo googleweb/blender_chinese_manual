@@ -52,7 +52,7 @@ menus in the 3D视图 headers, and the *Specials* :kbd:`W` pop-up one.
 Visualization
 =============
 
-There is nearly no difference from NURBS curves,
+There is nearly no difference from NURBS曲线,
 except that the U direction is indicated by yellow grid lines,
 and the V one is materialized by pink grid lines, as you can see in
 Fig. :ref:`fig-surface-intro-surface`.
@@ -69,9 +69,9 @@ carry directly over to NURBS surfaces,
 such as control points, *Order*, *Weight*, *Resolution*, etc.
 Here we will just talk about the differences.
 
-It is very important to understand the difference between NURBS curves and NURBS surfaces:
+It is very important to understand the difference between NURBS曲线 and NURBS surfaces:
 the first one has one dimension, the latter has two.
-Blender internally treats NURBS surfaces and NURBS curves completely differently. There are
+Blender internally treats NURBS surfaces and NURBS曲线 completely differently. There are
 several attributes that separate them but the most important is that a NURBS curve has a
 single interpolation axis (U) and a NURBS surface has two interpolation axes (U and V).
 
@@ -91,7 +91,7 @@ but you cannot with a simple NURBS curve.
 Control Points, Rows and Grid
 -----------------------------
 
-Control points for NURBS surfaces are the same as for NURBS curves. However,
+Control points for NURBS surfaces are the same as for NURBS曲线. However,
 their layout is quite constraining. The concept of "segment" disappears,
 replaced by "rows" and the overall "grid".
 
@@ -114,7 +114,7 @@ be able to "merge" different pieces of surfaces if at least one of their rows ma
 Surface Resolution
 ------------------
 
-Just like :ref:`NURBS curves <modeling-curve-nurbs>`, *Resolution* controls the detail of the surface.
+Just like :ref:`NURBS曲线 <modeling-curve-nurbs>`, *Resolution* controls the detail of the surface.
 The higher the *Resolution* the more detailed and smoother the surface is.
 The lower the *Resolution* the rougher the surface. However, here you have two resolution settings,
 one for each interpolation axis (U and V). Note that unlike with curves, you have only one resolution
@@ -159,7 +159,7 @@ This makes working with surfaces quite easy.
 Knots
 -----
 
-Just like with :ref:`NURBS curves <modeling-curve-knot>`, NURBS surfaces have two knot vectors,
+Just like with :ref:`NURBS曲线 <modeling-curve-knot>`, NURBS surfaces have two knot vectors,
 one for each U and V axis. Here again, they can be one of *Cyclic*, *Endpoint*,
 or *贝塞尔*, with the same properties as for curves. And as with curves, only open surfaces
 (in the relevant direction) are affected by this setting...
@@ -266,7 +266,7 @@ To help get started in creating surfaces there are four preset NURBS surfaces, f
 
 
 There are also two preset NURBS surface curves (with only one control point on each V-row):
-*NURBS Curve* and *NURBS Circle*.
+*NURBS曲线* and *NURBS圆环*.
 
 .. figure:: /images/nurbscurveprimitives.jpg
 

@@ -20,7 +20,7 @@ Cube.location.x is recorded to Channel X Location.
 
 .. figure:: /images/k_animation_actions_keyframes.jpg
 
-   Graph Editor. Each Channel has an F-Curve represented by the lines between the keyframes.
+   Graph Editor. Each Channel has an F-曲线 represented by the lines between the keyframes.
 
 
 Actions
@@ -35,22 +35,22 @@ Keyframes
    Are used to set the values of properties.
 
 
-F-Curve Interpolation
+F-曲线 Interpolation
 =====================
 
 .. figure:: /images/animation_driver_fcurve.jpg
 
-   Graph Editor: Channel F-Curve.
+   Graph Editor: Channel F-曲线.
 
 
 The keyframes are set values by the user.
 
-The *F-Curve* is used to interpolate the difference between the keyframes.
+The *F-曲线* is used to interpolate the difference between the keyframes.
 
-The *F-Curve* has different types of interpolation and also
-:doc:`F-Curve 修改器 </editors/graph_editor/fcurves/fmodifiers>`.
+The *F-曲线* has different types of interpolation and also
+:doc:`F-曲线 修改器 </editors/graph_editor/fcurves/fmodifiers>`.
 
-Most the settings for the :doc:`F-Curve </editors/graph_editor/fcurves/introduction>`
+Most the settings for the :doc:`F-曲线 </editors/graph_editor/fcurves/introduction>`
 are found in the :doc:`Graph Editor </editors/graph_editor/introduction>`.
 
 

@@ -12,7 +12,7 @@ Drivers
 Drivers can use properties, numbers, transformations, and scripts,
 to control the values of properties.
 
-Using a F-Curve, the driver reads the value of the Driver Value and sets the value of the
+Using a F-曲线, the driver reads the value of the Driver Value and sets the value of the
 selected property it was added to.
 
 So from this example, if the Driver Value is 2.0 the property will be 0.5.
@@ -314,7 +314,7 @@ This example is a Shape Key Driver. The driver was added to the shape key Value.
 This example uses the Armature Bone 'b' Z Rotation to control the Value of a Shape Key.
 The bone rotation mode is set to XYZ Euler.
 
-The Driver F-Curve is mapped like so
+The Driver F-曲线 is mapped like so
    Bone Z Rotation 0.0(0.0): Shape Key value 0.0
    Bone Z Rotation -2.09(-120.0): Shape Key value 1.0
 

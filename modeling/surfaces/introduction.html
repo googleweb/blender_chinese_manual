@@ -211,7 +211,7 @@ menus in the 3D视图 headers, and the <em>Specials</em> <code class="kbd docuti
 </div>
 <div class="section" id="visualization">
 <h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
-<p>There is nearly no difference from NURBS curves,
+<p>There is nearly no difference from NURBS曲线,
 except that the U direction is indicated by yellow grid lines,
 and the V one is materialized by pink grid lines, as you can see in
 Fig. <a class="reference internal" href="#fig-surface-intro-surface"><span class="std std-ref">Surface.</span></a>.</p>
@@ -224,9 +224,9 @@ especially <a class="reference internal" href="../curves/introduction.html#model
 carry directly over to NURBS surfaces,
 such as control points, <em>Order</em>, <em>Weight</em>, <em>Resolution</em>, etc.
 Here we will just talk about the differences.</p>
-<p>It is very important to understand the difference between NURBS curves and NURBS surfaces:
+<p>It is very important to understand the difference between NURBS曲线 and NURBS surfaces:
 the first one has one dimension, the latter has two.
-Blender internally treats NURBS surfaces and NURBS curves completely differently. There are
+Blender internally treats NURBS surfaces and NURBS曲线 completely differently. There are
 several attributes that separate them but the most important is that a NURBS curve has a
 single interpolation axis (U) and a NURBS surface has two interpolation axes (U and V).</p>
 <p>However, you can have &#8220;2D&#8221; surfaces made of curves
@@ -239,7 +239,7 @@ you can <a class="reference internal" href="../curves/editing/extrude.html"><spa
 but you cannot with a simple NURBS curve.</p>
 <div class="section" id="control-points-rows-and-grid">
 <span id="modeling-surfaces-rows-grids"></span><h3>Control Points, Rows and Grid<a class="headerlink" href="#control-points-rows-and-grid" title="Permalink to this headline">¶</a></h3>
-<p>Control points for NURBS surfaces are the same as for NURBS curves. However,
+<p>Control points for NURBS surfaces are the same as for NURBS曲线. However,
 their layout is quite constraining. The concept of &#8220;segment&#8221; disappears,
 replaced by &#8220;rows&#8221; and the overall &#8220;grid&#8221;.</p>
 <p>A &#8220;row&#8221; is a set of control points forming one &#8220;line&#8221; in one interpolation direction
@@ -257,7 +257,7 @@ be able to &#8220;merge&#8221; different pieces of surfaces if at least one of t
 </div>
 <div class="section" id="surface-resolution">
 <h3>Surface Resolution<a class="headerlink" href="#surface-resolution" title="Permalink to this headline">¶</a></h3>
-<p>Just like <a class="reference internal" href="../curves/introduction.html#modeling-curve-nurbs"><span class="std std-ref">NURBS curves</span></a>, <em>Resolution</em> controls the detail of the surface.
+<p>Just like <a class="reference internal" href="../curves/introduction.html#modeling-curve-nurbs"><span class="std std-ref">NURBS曲线</span></a>, <em>Resolution</em> controls the detail of the surface.
 The higher the <em>Resolution</em> the more detailed and smoother the surface is.
 The lower the <em>Resolution</em> the rougher the surface. However, here you have two resolution settings,
 one for each interpolation axis (U and V). Note that unlike with curves, you have only one resolution
@@ -299,7 +299,7 @@ This makes working with surfaces quite easy.</p>
 </div>
 <div class="section" id="knots">
 <h3>Knots<a class="headerlink" href="#knots" title="Permalink to this headline">¶</a></h3>
-<p>Just like with <a class="reference internal" href="../curves/introduction.html#modeling-curve-knot"><span class="std std-ref">NURBS curves</span></a>, NURBS surfaces have two knot vectors,
+<p>Just like with <a class="reference internal" href="../curves/introduction.html#modeling-curve-knot"><span class="std std-ref">NURBS曲线</span></a>, NURBS surfaces have two knot vectors,
 one for each U and V axis. Here again, they can be one of <em>Cyclic</em>, <em>Endpoint</em>,
 or <em>贝塞尔</em>, with the same properties as for curves. And as with curves, only open surfaces
 (in the relevant direction) are affected by this setting...</p>
@@ -375,7 +375,7 @@ you will note that the four different weights needed for creating a sphere
 <p class="caption"><span class="caption-text">NURBS surface primitives.</span></p>
 </div>
 <p>There are also two preset NURBS surface curves (with only one control point on each V-row):
-<em>NURBS Curve</em> and <em>NURBS Circle</em>.</p>
+<em>NURBS曲线</em> and <em>NURBS圆环</em>.</p>
 <div class="figure" id="id11">
 <img alt="../../_images/nurbscurveprimitives.jpg" src="../../_images/nurbscurveprimitives.jpg" />
 <p class="caption"><span class="caption-text">NURBS curve primitives.</span></p>

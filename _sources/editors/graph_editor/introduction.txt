@@ -6,7 +6,7 @@
 The graph editor is the main animation editor.
 It allows you to modify the animation for any properties using :doc:`F-曲线 </editors/graph_editor/fcurves/introduction>`.
 
-The graph editor has two modes, *F-Curve* for :doc:`Actions </animation/actions>`,
+The graph editor has two modes, *F-曲线* for :doc:`Actions </animation/actions>`,
 and *Drivers* for :doc:`Drivers </animation/drivers>`. Both are very similar in function.
 
 
@@ -124,7 +124,7 @@ Header Controls
 
 
 Mode
-   F-Curve for :doc:`Actions </animation/actions>`,
+   F-曲线 for :doc:`Actions </animation/actions>`,
    and Drivers for :doc:`Drivers </animation/drivers>`.
 
 
@@ -271,15 +271,15 @@ Cursor Y
       Snap selected keyframes to the *Cursor*.
 
 
-Active F-Curve Panel
+Active F-曲线 Panel
 --------------------
 
 .. figure:: /images/graph_active_fcurve_panel.jpg
 
-   Active F-Curve Panel.
+   Active F-曲线 Panel.
 
 
-This panel displays properties for the active *F-Curve*.
+This panel displays properties for the active *F-曲线*.
 
 Channel Name
    *ID Type* + Channel name (X Location).
@@ -288,16 +288,16 @@ RNA Path
    *RNA Path* to property + Array index.
 
 Color Mode
-   *Color Mode* for the active *F-Curve*.
+   *Color Mode* for the active *F-曲线*.
 
    Auto Rainbow
-      Increment the *HUE* of the *F-Curve* color based on the channel index.
+      Increment the *HUE* of the *F-曲线* color based on the channel index.
 
    Auto XYZ to RGB
       For property sets like location xyz, automatically set the set of colors to red, green, blue.
 
    User Defined
-      Define a custom color for the active *F-Curve*.
+      Define a custom color for the active *F-曲线*.
 
 
 Active Keyframe Panel

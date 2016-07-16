@@ -94,7 +94,7 @@ Active Path properties
    Array Target
       Use *All Items* from the *Data Path* or select the array index for a specific property.
 
-   F-Curve Grouping
+   F-曲线 Grouping
       This controls what *Group* to add the *Channels* to.
       *Keying Set Name*, *None*, *Named Group*.
 

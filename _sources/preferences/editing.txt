@@ -117,7 +117,7 @@ Only Insert Available
    This will only add keyframes to channel F-曲线 that already exist.
 
 
-New F-Curve Defaults
+New F-曲线 Defaults
 ====================
 
    Interpolation
