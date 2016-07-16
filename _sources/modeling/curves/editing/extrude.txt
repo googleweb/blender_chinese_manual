@@ -23,7 +23,7 @@ Extrude
    * - .. figure:: /images/curves_extrude_start.jpg
           :width: 315px
 
-          贝塞尔 Circle 0.0 extrude.
+          贝塞尔圆环 0.0 extrude.
 
      - .. figure:: /images/curves_extrude_by0.5.jpg
           :width: 315px

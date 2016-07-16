@@ -16,7 +16,7 @@ This is a useful tool to quickly arrange objects.
    设置 for the curve.
 
 
-:kbd:`Shift-A` to add a *贝塞尔 Circle* and scale it up.
+:kbd:`Shift-A` to add a *贝塞尔圆环* and scale it up.
 In the *Curve* menu under *Path 动画* enable *Follow*
 and set *Frames* to something more reasonable than 100 (say 16).
 

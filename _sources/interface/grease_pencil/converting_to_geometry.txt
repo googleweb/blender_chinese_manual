@@ -25,10 +25,10 @@ Type
 
    Path
       Create NURBS 3D curves of order 2 (i.e. behaving like polylines).
-   贝塞尔 Curve
+   贝塞尔曲线
       Create 贝塞尔曲线, with free "aligned" handles (i.e. also behaving like polylines).
    Polygon Curve
-      贝塞尔 Curve with strait line segments (auto handles)
+      贝塞尔曲线 with strait line segments (auto handles)
 
    .. note:: Converting to Mesh
 

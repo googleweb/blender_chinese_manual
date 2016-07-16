@@ -83,7 +83,7 @@ Let us make a simple example:
 - Remove default cube object from scene and add a Monkey with
   :menuselection:`Add --> Mesh --> Monkey`
 - Press :kbd:`Tab` to exit *编辑模式*.
-- Now add a curve with :menuselection:`Add --> Curve --> 贝塞尔 Curve`.
+- Now add a curve with :menuselection:`Add --> Curve --> 贝塞尔曲线`.
 
 .. _fig-curves-deform-edit:
 

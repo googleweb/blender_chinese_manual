@@ -105,14 +105,14 @@ Backbone Length
    Length to add to the strokes' ends.
 
 
-贝塞尔 Curve
+贝塞尔曲线
 ------------
 
 .. figure:: /images/render-freestyle-line_style_geometry_bezier_curve.jpg
    :width: 300px
    :align: right
 
-The *贝塞尔 Curve* modifier replaces the stroke by a 贝塞尔 approximation of it.
+The *贝塞尔曲线* modifier replaces the stroke by a 贝塞尔 approximation of it.
 
 Error
    The maximum distance allowed between the new 贝塞尔曲线 and the original stroke.
@@ -122,7 +122,7 @@ Error
    :width: 400px
    :align: center
 
-   贝塞尔 Curve modifier demo by T.K.
+   贝塞尔曲线 modifier demo by T.K.
    `File:toycar_bezier.zip <https://wiki.blender.org/index.php/File:toycar_bezier.zip>`__
 
 
