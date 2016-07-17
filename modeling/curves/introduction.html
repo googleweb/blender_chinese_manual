@@ -308,29 +308,27 @@ Blender提供了五种不同的曲线基本单元:</p>
 </div>
 </dd>
 <dt>扭曲</dt>
-<dd><p class="first">A 3D Curve has Control Points that are not located on the Curve&#8217;s local XY plane.
-This gives the Curve a twist which can affect the Curve normals.
-You can alter how the twist of the Curve is calculated by choosing from <em>最小值,
-切向</em> and <em>Z朝上</em> options from the drop-down menu.</p>
+<dd><p class="first">使一个3D曲线的控制点不位于曲线自身的XY轴面.
+这将会使曲线产生一个影响曲线法向的扭曲.
+你可以修改曲线扭曲的计算方式通过选择下拉菜单<em>最小值,
+切向</em> and <em>Z朝上</em> 选项.</p>
 <div class="last figure" id="id7">
 <img alt="../../_images/modeling_curves_shape-twist.jpg" src="../../_images/modeling_curves_shape-twist.jpg" />
 <p class="caption"><span class="caption-text">曲线扭曲为最小值(左)和切向(右).</span></p>
 </div>
 </dd>
 <dt>填充</dt>
-<dd><p class="first">Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
-When set to <em>Half</em> (the default) the Curve is displayed as half a cylinder.
-The <em>Fill Deformed</em> option allows you to indicate whether the Curve should be filled before or after
-(default) applying any Shape Keys or 修改器.</p>
+<dd><p class="first">填充确定一条曲线在倒角后的显示方式(详情见下面倒角).
+当设置为<em>一半</em> (默认) 曲线显示为圆柱体的一半.
+<em>填充形变结果</em>选项允许您指示曲线是否在应用形变关键帧和修改器之前或之后被填充.</p>
 <div class="last figure" id="id8">
 <img alt="../../_images/modeling_curves_shape-fill.jpg" src="../../_images/modeling_curves_shape-fill.jpg" />
-<p class="caption"><span class="caption-text">曲线 with a fill of half (left) and full (right).</span></p>
+<p class="caption"><span class="caption-text">曲线填充一半(左)和全部(右).</span></p>
 </div>
 </dd>
 <dt>路径/曲线形变</dt>
-<dd>These options are primarily utilized when using a Curve as a Path or when using the 曲线形变 property.
-The <em>Radius, Stretch</em> and <em>Bounds Clamp</em> options control how Objects use the
-Curve and are dealt with in more detail in the appropriate links below.</dd>
+<dd>这选项主要应用在使用曲线作为路径或者使用曲线形变属性时.
+<em>半径, 拉伸</em> and <em>紧固边框</em> 选项控制物体使用曲线的方式 , 查看下面链接了解更详细信息.</dd>
 </dl>
 <div class="admonition seealso">
 <p class="first admonition-title">参见</p>
@@ -392,54 +390,49 @@ Curve and are dealt with in more detail in the appropriate links below.</dd>
 <dt>封盖</dt>
 <dd>将倒角曲线的两端封口.</dd>
 <dt>映射锥化</dt>
-<dd><p class="first">For 曲线 using a 锥化物体 and with modifications to the <em>Start/End Bevel Factor</em>
-the <em>Map Taper</em> option will apply the taper to the beveled part of the Curve (not the whole Curve).</p>
+<dd><p class="first">应用了锥化物体的曲线和修改了的<em>起始/结束 倒角因子</em>,<em>映射锥化</em> 选项将对曲线的倒角部分(不是整条曲线)应用锥化.</p>
 <div class="last figure" id="id14">
 <img alt="../../_images/modeling_curves_geometry-map-taper.jpg" src="../../_images/modeling_curves_geometry-map-taper.jpg" />
-<p class="caption"><span class="caption-text">A Curve without (left) and with (right) Map Taper applied.</span></p>
+<p class="caption"><span class="caption-text">没有(左)和应用了(右)映射锥化的曲线.</span></p>
 </div>
 </dd>
-<dt>Start Bevel Factor and End Bevel Factor</dt>
-<dd><p class="first">These options determine where to start the Bevel operation on the Curve being beveled.
-Increasing the <em>Start Bevel Factor</em> to 0.5 will start beveling the Curve 50% of the distance from the start
-of the Curve (in effect shortening the Curve).
-Decreasing the <em>End Bevel Factor</em> by 0.25 will start beveling the Curve 25% of the distance from the end
-of the Curve (again, shortening the Curve).</p>
+<dt>起始倒角因子和结束倒角因子</dt>
+<dd><p class="first">这些选项确定了曲线开始倒角操作的位置.
+增加<em>起始倒角因子</em>到 0.5 曲线将会从距离曲线开始50%的距离开始倒角(实际上曲线变短).
+减少<em>结束倒角因子</em> 值0.25 曲线将会从距离曲线结束25%的距离开始倒角(同样, 曲线变短).</p>
 <div class="last figure" id="id15">
 <img alt="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" src="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" />
-<p class="caption"><span class="caption-text">A Curve with no Bevel factor applied (left),
-with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).</span></p>
+<p class="caption"><span class="caption-text">没有应用倒角因子(左),应用50%起始倒角因子(中)和应用25%结束倒角因子(右).</span></p>
 </div>
 </dd>
 </dl>
 </div>
 <div class="section" id="path-animation">
-<h3>Path 动画<a class="headerlink" href="#path-animation" title="Permalink to this headline">¶</a></h3>
-<p>The Path 动画 settings can be used to determine how Objects move along a certain path.
-See the link below for further information.</p>
-<p><a class="reference internal" href="../../animation/object_path.html"><span class="doc">Read more about utilizing 曲线 for paths during animation</span></a></p>
+<h3>路径动画<a class="headerlink" href="#path-animation" title="Permalink to this headline">¶</a></h3>
+<p>路径动画设置可以用于确定物体跟随某一路径的运动方式.查阅下面的链接获取更多信息.</p>
+<p><a class="reference internal" href="../../animation/object_path.html"><span class="doc">查阅更多关于在动画期间利用曲线作路径</span></a></p>
 </div>
 <div class="section" id="active-spline">
-<h3>Active Spline<a class="headerlink" href="#active-spline" title="Permalink to this headline">¶</a></h3>
+<h3>激活的样条<a class="headerlink" href="#active-spline" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id16">
 <img alt="../../_images/modeling_curves_active-spline-panel.jpg" src="../../_images/modeling_curves_active-spline-panel.jpg" />
-<p class="caption"><span class="caption-text">曲线 Active Spline panel.</span></p>
+<p class="caption"><span class="caption-text">曲线激活的样条面板.</span></p>
 </div>
-<p>The <em>Active Spline</em> panel becomes available during <em>编辑模式</em>.</p>
+<p><em>激活的样条</em>面版变得可用在<em>编辑模式</em>.</p>
 <dl class="docutils">
-<dt>Cyclic</dt>
-<dd>Closes the Curve.</dd>
-<dt>Resolution</dt>
-<dd>Alters the smoothness of each segment by changing the number of subdivisions.</dd>
-<dt>Interpolation</dt>
+<dt>循环</dt>
+<dd>闭合曲线.</dd>
+<dt>分辨率</dt>
+<dd>通过改变细分的数量来修改每一部分的平滑性.</dd>
+<dt>插值类型</dt>
 <dd><dl class="first last docutils">
-<dt>Tilt</dt>
-<dd>Alters how the tilt of a segment is calculated.</dd>
-<dt>Radius</dt>
-<dd>Alters how the radius of a Beveled Curve is calculated.
-The effects are easier to see after Shrinking/Fattening a control point <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>.</dd>
-<dt>Smooth</dt>
-<dd>Smooths the normals of the Curve</dd>
+<dt>倾斜</dt>
+<dd>修改倾斜部分的计算方式.</dd>
+<dt>半径</dt>
+<dd>修改倒角曲线半径的计算方式.
+效果显而易见当法向缩放一个控制点<code class="kbd docutils literal"><span class="pre">Alt-S</span></code>.</dd>
+<dt>平滑</dt>
+<dd>平滑曲线的法线</dd>
 </dl>
 </dd>
 </dl>
@@ -447,19 +440,17 @@ The effects are easier to see after Shrinking/Fattening a control point <code cl
 </div>
 <div class="section" id="non-uniform-rational-b-splines-nurbs">
 <span id="modeling-curve-nurbs"></span><h2>非均匀有理B样条 (NURBS)<a class="headerlink" href="#non-uniform-rational-b-splines-nurbs" title="Permalink to this headline">¶</a></h2>
-<p>One of the major differences between 贝塞尔 Objects and NURBS Objects is that 贝塞尔曲线
-are approximations. For example, a 贝塞尔 circle is an <em>approximation</em> of a circle,
-whereas a NURBS circle is an <em>exact</em> circle.
-NURBS theory can be a <em>very</em> complicated topic. For an introduction,
-please consult the <a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">Wikipedia page.</a> In practice,
-many of the 贝塞尔曲线 operations discussed above apply to NURBS曲线 in the same manner.
-The following text will concentrate only on those aspects that are unique to NURBS曲线.</p>
+<p>贝塞尔物体和NURBS物体之间一个最主要的不同就是贝塞尔曲线是近似的. 例如, 贝塞尔圆环<em>近似</em>的一个圆环,然而NURBS圆环是一个<em>精确</em>的圆环.
+NURBS原理是一个<em>非常</em>复杂的话题. 有关介绍,
+请查阅<a class="reference external" href="https://en.wikipedia.org/wiki/NURBS">维基百科页面.</a>实际上,
+上面讨论的许多贝塞尔曲线操作可以以同样的方式应用到NURBS曲线.
+接下来集中讲的只是NURBS曲线唯一的方面.</p>
 <div class="section" id="editing-nurbs-curves">
 <h3>编辑 NURBS 曲线<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
-<p>A NURBS曲线 is edited by moving the location of the Control Points.</p>
+<p>NURBS曲线通过移动控制点的位置来编辑.</p>
 <ul class="simple">
 <li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS曲线</span>.</li>
-<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to enter <em>编辑模式</em>.</li>
+<li>按<code class="kbd docutils literal"><span class="pre">Tab</span></code>进入<em>编辑模式</em>.</li>
 <li>Select one of the Control Points and move it around.
 Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
 <li>If you want to add additional Control Points, select both of them, press <code class="kbd docutils literal"><span class="pre">W</span></code> and select <em>Subdivide</em>.
@@ -467,7 +458,7 @@ Press <code class="kbd docutils literal"><span class="pre">F6</span></code> imme
 </ul>
 </div>
 <div class="section" id="id1">
-<h3>Active Spline<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>激活的样条<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id17">
 <img alt="../../_images/modeling_curves_nurbs-active-spline-panel.jpg" src="../../_images/modeling_curves_nurbs-active-spline-panel.jpg" />
 <p class="caption"><span class="caption-text">NURBS Active Spline panel.</span></p>
@@ -480,7 +471,7 @@ While you cannot edit the knot vectors directly, you can influence them through 
 <em>Endpoint</em> and <em>贝塞尔</em> options in the Active Spline panel. Note that the
 <em>Endpoint</em> and <em>贝塞尔</em> settings only apply to open NURBS曲线.</p>
 <dl class="last docutils">
-<dt>Cyclic</dt>
+<dt>循环</dt>
 <dd><p class="first">Makes the NURBS曲线 cyclic.</p>
 <div class="last figure" id="id18">
 <img alt="../../_images/modeling_curves_nurbs-cyclic.jpg" src="../../_images/modeling_curves_nurbs-cyclic.jpg" />
