@@ -1,6 +1,6 @@
 
 **********************************************************
-Installation Guide for Editing the Blender手册 on Linux
+Installation Guide for 编辑 the Blender手册 on Linux
 **********************************************************
 
 This guide covers the following topics:

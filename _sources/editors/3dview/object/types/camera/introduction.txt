@@ -58,7 +58,7 @@ The camera with the solid triangle on top is the active camera.
 
 
 相机s are invisible in renders, so they do not have any material or texture settings.
-However, they do have *Object* and *Editing* setting panels available
+However, they do have *Object* and *编辑* setting panels available
 which are displayed when a camera is the selected (active!) object.
 
 

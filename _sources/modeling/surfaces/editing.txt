@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|split=X|text=split selection and editing}}.
 
 *******
-Editing
+编辑
 *******
 
 Surface editing has even fewer tools and options than its curve counterpart - and has many
@@ -114,7 +114,7 @@ to select the rest of the control points.
 .. figure:: /images/nurbssurfaceselectedge.jpg
    :width: 500px
 
-   Selecting control-point.
+   选择 control-point.
 
 The edge is then extruded using :kbd:`E` as shown in Fig. Extruding.
 Notice how the mesh has bunched up next to the highlighted edge;
@@ -375,7 +375,7 @@ It transforms a *Surface* object into a *Mesh* one,
 using the surface resolutions in both directions to create faces, edges and vertices.
 
 
-Misc Editing
+Misc 编辑
 ------------
 
 You have some of the same options as with meshes, or in *物体模式*.

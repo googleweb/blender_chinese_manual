@@ -1,6 +1,6 @@
 
 *********
-Selecting
+选择
 *********
 
 Surface selection in *编辑模式* is very similar to
@@ -13,7 +13,7 @@ add to current selection with :kbd:`Shift-LMB` -clicks, :kbd:`B` order-select, a
 and all the linked ones, i.e. all points belonging to the same surface.
 
 
-Select Menu
+选择菜单
 ===========
 
 The *Select* menu (3D视图 headers) is even simpler than for curves...

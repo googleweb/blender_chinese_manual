@@ -1,15 +1,15 @@
 
 ************
-Curve Deform
+曲线形变
 ************
 
-*Curve Deform* provides a simple but efficient method of defining a deformation on a mesh.
+*曲线形变* provides a simple but efficient method of defining a deformation on a mesh.
 By parenting a mesh object to a curve, you can deform the mesh up or down the curve by moving the mesh along,
 or orthogonal to, the dominant axis.
 This is a most useful tool to make an object follow a complex path,
 like e.g. a sheet of paper inside a printer, a film inside a camera, the water of a canal...
 
-The *Curve Deform* works on a (global) dominant axis, X, Y, or Z.
+The *曲线形变* works on a (global) dominant axis, X, Y, or Z.
 This means that when you move your mesh in the dominant direction,
 the mesh will traverse along the curve. Moving the mesh in an orthogonal direction will move
 the mesh object closer or further away from the curve.
@@ -30,7 +30,7 @@ to make it control the size of the "curved" object...).
 
 .. note:: Use modifiers!
 
-   The *Curve Deform* relationship is now also a modifier, called :doc:`Curve </modeling/modifiers/deform/curve>`.
+   The *曲线形变* relationship is now also a modifier, called :doc:`Curve </modeling/modifiers/deform/curve>`.
    The *Curve* modifier function acts the same as its counterpart,
    except that when the modifier is used, the "dominant axis" is set inside its properties -
    and the *Track* X, Y, Z buttons no longer have an effect on it.
@@ -48,7 +48,7 @@ to make it control the size of the "curved" object...).
 When parenting an object (mesh, curve, meta, ...) to a curve :kbd:`Ctrl-P`,
 you will be presented with a menu (*Make Parent* *menu*).
 
-By selecting *Curve Deform*, you enable the curve deform function on the mesh object.
+By selecting *曲线形变*, you enable the curve deform function on the mesh object.
 
 .. figure:: /images/curvesdeform_animpanel.jpg
 
@@ -112,7 +112,7 @@ Let us make a simple example:
 
   - Select the Monkey :kbd:`RMB`, and then shift select the curve :kbd:`Shift-RMB`.
   - Press :kbd:`Ctrl-P` to open up the *Make Parent* menu.
-  - Select :menuselection:`Make Parent --> Curve Deform`.
+  - Select :menuselection:`Make Parent --> 曲线形变`.
 - The Monkey should be positioned on the curve, as in Fig. :ref:`fig-curves-deform-monkey-curve`.
 - Now if you select the Monkey :kbd:`RMB`, and move it :kbd:`G`,
   in the Y-direction (the dominant axis by default), the monkey will deform nicely along the curve.

@@ -47,7 +47,7 @@ Pose Library Panel
    A *Pose* is added to the *Pose Library* for each frame with keyframes.
 
 
-Editing
+编辑
 =======
 
 3D视图, 姿态模式.

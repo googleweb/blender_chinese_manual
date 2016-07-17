@@ -212,7 +212,7 @@ Lock curve from editing
    Represented by the padlock icon.
 
 
-Channel Editing
+Channel 编辑
 ---------------
 
 *Select channel* :kbd:`LMB`

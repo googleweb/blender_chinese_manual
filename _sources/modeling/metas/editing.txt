@@ -1,6 +1,6 @@
 
 *************
-Editing Metas
+编辑 Metas
 *************
 
 When in *编辑模式*, the *活动元素* panel appears.

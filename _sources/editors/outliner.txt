@@ -34,7 +34,7 @@ but this will not necessarily select the data-block in the scene.
 To select the data-block in the scene, you have to activate it.
 
 
-Selecting and Activating
+选择 and Activating
 ========================
 
 单选 does not require any pre-selection: just work directly with :kbd:`LMB`

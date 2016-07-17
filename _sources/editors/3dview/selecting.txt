@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|partial=X|text=Missing Keying set}}.
 
 *********
-Selecting
+选择
 *********
 
 Selection determines which elements will be the target of our actions.

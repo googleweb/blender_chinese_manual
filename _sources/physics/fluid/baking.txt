@@ -40,7 +40,7 @@ Unique domain
    Because of the possibility of spanning and linking between scenes,
    there can only be one domain in an entire blend-file.
 
-Selecting a Baked Domain
+选择 a Baked Domain
    After a domain has been baked, it changes to the fluid mesh.
    To re-select the domain so that you can bake it again after you have made changes,
    go to any frame and select :kbd:`RMB` the fluid mesh.

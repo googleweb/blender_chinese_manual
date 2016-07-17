@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Selecting &mdash; Blender参考手册</title>
+  <title>选择 &mdash; Blender参考手册</title>
   
 
   
@@ -36,7 +36,7 @@
   
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
         <link rel="up" title="曲线" href="index.html"/>
-        <link rel="next" title="Editing" href="editing/index.html"/>
+        <link rel="next" title="编辑" href="editing/index.html"/>
         <link rel="prev" title="简介" href="introduction.html"/> 
 
   
@@ -94,15 +94,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Selecting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#select-menu">Select Menu</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#checker-deselect">Checker Deselect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#select-deselect-first-last">Select/Deselect First/Last</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#select-next-previous">Select 下一页/上一页</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#select-more-less">Select More/Less</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选择</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-menu">选择菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checker-deselect">间隔式弃选</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-deselect-first-last">选中/弃选首点/末点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-next-previous">选择下一项 /上一项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-more-less">扩展/缩减 选择</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
@@ -159,7 +159,7 @@
       
           <li><a href="index.html">曲线</a> &raquo;</li>
       
-    <li>Selecting</li>
+    <li>选择</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,7 +174,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="selecting">
-<h1>Selecting<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
+<h1>选择<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
 <p>Curve selection in <em>编辑模式</em> is much less complex than with meshes! Mainly this is
 because you have only one selectable element type, the control points
 (no select mode needed here...). These points are a bit more complex than simple vertices,
@@ -190,7 +190,7 @@ only this vertex is selected, allowing you to modify this control vector...</p>
 i.e. all points belonging to the same curve. Note that for 贝塞尔,
 using <code class="kbd docutils literal"><span class="pre">L</span></code> with a handle selected will select the whole control point and all the linked ones.</p>
 <div class="section" id="select-menu">
-<h2>Select Menu<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>
+<h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>
 <p>With curves, all &#8220;advanced&#8221; selection options are regrouped in the <em>Select</em> menu of
 the 3D视图s header. Let us detail them.</p>
 <ul class="simple">
@@ -206,13 +206,13 @@ the 3D视图s header. Let us detail them.</p>
 </dl>
 </div>
 <div class="section" id="checker-deselect">
-<span id="modeling-curves-checker-deselect"></span><h2>Checker Deselect<a class="headerlink" href="#checker-deselect" title="Permalink to this headline">¶</a></h2>
+<span id="modeling-curves-checker-deselect"></span><h2>间隔式弃选<a class="headerlink" href="#checker-deselect" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
-<div class="line">Mode:     编辑模式</div>
-<div class="line">Menu:     <span class="menuselection">Select ‣ Checker Deselect</span></div>
-<div class="line">Hotkey:   None</div>
+<div class="line">模式:     编辑模式</div>
+<div class="line">菜单:     <span class="menuselection">Select ‣ 间隔式弃选</span></div>
+<div class="line">快捷键:   无</div>
 </div>
 </div>
 <p>This only works if you already have at least one control point selected.
@@ -229,13 +229,13 @@ pop-up numeric field shown during the tool start.</p>
 </dl>
 </div>
 <div class="section" id="select-deselect-first-last">
-<h2>Select/Deselect First/Last<a class="headerlink" href="#select-deselect-first-last" title="Permalink to this headline">¶</a></h2>
+<h2>选中/弃选首点/末点<a class="headerlink" href="#select-deselect-first-last" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
-<div class="line">Mode:     编辑模式</div>
-<div class="line">Menu:     <span class="menuselection">Select ‣ Select/Deselect First</span>, <span class="menuselection">Select ‣ Select/Deselect Last</span></div>
-<div class="line">Hotkey:   None</div>
+<div class="line">模式:     编辑模式</div>
+<div class="line">菜单:     <span class="menuselection">Select ‣ Select/Deselect First</span>, <span class="menuselection">Select ‣ Select/Deselect Last</span></div>
+<div class="line">快捷键:   无</div>
 </div>
 </div>
 <p>These commands will toggle the selection of the first or last control point(s) of the curve(s)
@@ -243,13 +243,13 @@ in the object. This is useful to quickly find the start of a curve (e.g.
 when using it as path...).</p>
 </div>
 <div class="section" id="select-next-previous">
-<h2>Select 下一页/上一页<a class="headerlink" href="#select-next-previous" title="Permalink to this headline">¶</a></h2>
+<h2>选择下一项 /上一项<a class="headerlink" href="#select-next-previous" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
-<div class="line">Mode:     编辑模式</div>
-<div class="line">Menu:     <span class="menuselection">Select ‣ Select 下一页</span>, <span class="menuselection">Select ‣ Select 上一页</span></div>
-<div class="line">Hotkey:   None</div>
+<div class="line">模式:     编辑模式</div>
+<div class="line">菜单:     <span class="menuselection">Select ‣ Select 下一页</span>, <span class="menuselection">Select ‣ Select 上一页</span></div>
+<div class="line">快捷键:   无</div>
 </div>
 </div>
 <p>These commands will select the next or previous control point(s),
@@ -257,13 +257,13 @@ based on the current selection (i.e.
 the control points following or preceding the selected ones along the curve).</p>
 </div>
 <div class="section" id="select-more-less">
-<h2>Select More/Less<a class="headerlink" href="#select-more-less" title="Permalink to this headline">¶</a></h2>
+<h2>扩展/缩减 选择<a class="headerlink" href="#select-more-less" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
-<div class="line">Mode:     编辑模式</div>
-<div class="line">Menu:     <span class="menuselection">Select ‣ More/Less</span></div>
-<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code>/<code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></div>
+<div class="line">模式:     编辑模式</div>
+<div class="line">菜单:     <span class="menuselection">Select ‣ More/Less</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code>/<code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></div>
 </div>
 </div>
 <p>Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.</p>
@@ -292,7 +292,7 @@ Conversely, the same goes when no control points are selected.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="editing/index.html" class="btn btn-neutral float-right" title="Editing" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="editing/index.html" class="btn btn-neutral float-right" title="编辑" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>

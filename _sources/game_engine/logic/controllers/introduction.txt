@@ -13,7 +13,7 @@ The controllers' job is to check and combine these pulses to trigger the proper 
 
 The logic blocks for all types of controller may be constructed and changed using the
 :doc:`逻辑编辑器 </editors/logic_editor>`; details of this process are given in the
-:doc:`Controller Editing </game_engine/logic/controllers/editing>` page.
+:doc:`Controller 编辑 </game_engine/logic/controllers/editing>` page.
 
 
 Controller Types

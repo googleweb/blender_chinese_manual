@@ -111,7 +111,7 @@ Edit Cage
 =========
 
 To view and edit the results of the subdivision while you're editing the mesh,
-you must enable the *Editing Cage* (the triangle button in the modifier's header).
+you must enable the *编辑 Cage* (the triangle button in the modifier's header).
 This lets you grab the vertices as they lie in their new smoothed locations, rather than on the original mesh.
 
 .. list-table::

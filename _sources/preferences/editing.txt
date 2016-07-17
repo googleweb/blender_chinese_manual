@@ -1,6 +1,6 @@
 
 *******
-Editing
+编辑
 *******
 
 These preferences control how several tools will interact with your input.

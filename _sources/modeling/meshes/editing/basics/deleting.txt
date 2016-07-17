@@ -131,17 +131,17 @@ Merging vertices of course also deletes some edges and faces. But Blender will d
 it can to preserve edges and faces only partly involved in the reunion.
 
 
-AutoMerge Editing
+AutoMerge 编辑
 -----------------
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> AutoMerge Editing`
+   | Menu:     :menuselection:`Mesh --> AutoMerge 编辑`
 
 
-The *Mesh* menu as a related toggle option: *AutoMerge Editing*.
+The *Mesh* menu as a related toggle option: *AutoMerge 编辑*.
 When enabled,
 as soon as a vertex moves closer to another one than the *Limit* setting
 (*Mesh Tools* panel, see below), they are automatically merged.

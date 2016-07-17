@@ -1,6 +1,6 @@
 
 *********
-Selecting
+选择
 *********
 
 .. admonition:: 参考
@@ -12,7 +12,7 @@ Selecting
 
 You can select and edit bones of armatures in *编辑模式* and in *姿态模式*.
 Here, we will see how to select bones in *编辑模式*.
-Selecting bones in *姿态模式* is similar to selecting in *编辑模式*
+选择 bones in *姿态模式* is similar to selecting in *编辑模式*
 with a few specific differences that will be detailed in the :doc:`posing part </rigging/posing/editing>`.
 
 Similar to :doc:`vertices/edges selection </modeling/meshes/selecting/introduction>` in meshes,
@@ -30,7 +30,7 @@ behavior. In other words,
 you can select a bone's end or body the same way regardless of the bone visualization chosen.
 
 
-Selecting bones' ends
+选择 bones' ends
 =====================
 
 To select bones' ends you have the standard selection methods.
@@ -109,7 +109,7 @@ when the selection status of bones' ends is inverted, a new set of bones is sele
           and not the bones selection.
 
 
-Selecting connected bones' ends
+选择 connected bones' ends
 -------------------------------
 
 Another example is: when you select the root of a bone connected to its parent,
@@ -121,7 +121,7 @@ you also implicitly select the tip of its parent (and vice versa).
    the tip of the parent bone is the "same thing" as the root of its children bones.
 
 
-Selecting Bones
+选择 Bones
 ===============
 
 By :kbd:`RMB` -clicking on a bone's body, you will select it

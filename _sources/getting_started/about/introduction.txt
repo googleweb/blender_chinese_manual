@@ -28,7 +28,7 @@ Its interface uses OpenGL to provide a consistent experience across all supporte
   :doc:`建模 </modeling/introduction>`,
   :doc:`渲染ing </render/introduction>`,
   :doc:`动画 </animation/introduction>`,
-  :doc:`视频 Editing </editors/sequencer/index>`,
+  :doc:`视频 编辑 </editors/sequencer/index>`,
   :doc:`VFX </editors/movie_clip_editor/index>`,
   :doc:`合成 </compositing/introduction>`,
   :doc:`Texturing </editors/uv_image/uv_editing/overview>`,

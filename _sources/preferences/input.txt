@@ -33,15 +33,15 @@ list to edit it. If you want to delete your *Preset*,
 select it from the list and then click the "minus" symbol.
 
 
-Selecting presets
+选择 presets
 -----------------
 
 You can change the preset you are using by doing one of the following:
 
 
-- Selecting the configuration from the *Interaction* menu of the splash screen at startup or by selecting
+- 选择 the configuration from the *Interaction* menu of the splash screen at startup or by selecting
   :menuselection:`Help --> Splash Screen`.
-- Selecting the configuration from the *用户首选项* Input tab.
+- 选择 the configuration from the *用户首选项* Input tab.
 
 
 .. note::
@@ -62,7 +62,7 @@ you can make this the default configuration by:
 
 
 - Opening the *用户首选项 Input* editor and select your presets from the preset list or,
-- Selecting your preset configuration from the splash screen.
+- 选择 your preset configuration from the splash screen.
 - Saving your configuration using the *Save As Default* option from a *用户首选项* editor or by pressing
   :kbd:`Ctrl-U`.
 

@@ -1,6 +1,6 @@
 
 ************************
-Editing and Manipulating
+编辑 and Manipulating
 ************************
 
 Adjusting the View
@@ -78,10 +78,10 @@ To force Blender to re-read in files, and to force a re-render of the 3D视图,
 click the *Refresh* button to force Blender to clear all cached images and compute the current frame.
 
 
-Selecting Strips
+选择 Strips
 ================
 
-The Select Menu helps you select strips in different ways.
+The 选择菜单 helps you select strips in different ways.
 
 Strips to the Left
    Select all strips to the left of the currently selected strip.
@@ -185,7 +185,7 @@ Separate 图像s to Strips
 Very useful for slide shows and other cases where you want to bring in a set on non-continuous images.
 
 
-Editing Strips
+编辑 Strips
 --------------
 
 - The *entire* strip could be selected by clicking :kbd:`RMB` in the middle of the strip;

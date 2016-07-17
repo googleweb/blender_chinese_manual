@@ -71,7 +71,7 @@ near the active object's name, when you are at their frame
 (see Marker in a 3D视图).
 
 
-Creating and Editing Markers
+Creating and 编辑 Markers
 ============================
 
 Creating Markers
@@ -93,7 +93,7 @@ to make the animation play, and then press :kbd:`M` at the appropriate points.
 This can be especially useful to mark the beats in some music.
 
 
-Selecting Markers
+选择 Markers
 -----------------
 
 .. admonition:: 参考

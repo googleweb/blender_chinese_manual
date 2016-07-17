@@ -100,7 +100,7 @@ The option is available from the footer menu bar of the 3D视图
 
 - The original mesh edges are drawn, even when modifiers are active.
 - You can select faces to restrict painting to the vertices of the selected faces.
-- Selecting tools include:
+- 选择 tools include:
 
 
 Details about selecting
@@ -116,7 +116,7 @@ The following standard selection operations are supported:
 - :kbd:`Ctrl-L` - Select linked.
 - :kbd:`Ctrl-I` - Invert selection *Inverse*.
 
-.. tip:: Selecting Deform Groups
+.. tip:: 选择 Deform Groups
 
    When you are doing weight painting for deform bones (with an Armature),
    you can select a deform group by selecting the corresponding bone.

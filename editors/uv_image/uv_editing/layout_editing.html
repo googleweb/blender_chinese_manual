@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Editing UVs &mdash; Blender参考手册</title>
+  <title>编辑 UVs &mdash; Blender参考手册</title>
   
 
   
@@ -35,7 +35,7 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="UV Editing" href="index.html"/>
+        <link rel="up" title="UV 编辑" href="index.html"/>
         <link rel="next" title="Applying Textures" href="applying_image.html"/>
         <link rel="prev" title="Managing UV Maps" href="layout_management.html"/> 
 
@@ -93,7 +93,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#image-video">图像/视频</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV Editing</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV 编辑</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../painting.html">Painting</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../masking.html">Masking</a></li>
 </ul>
@@ -157,9 +157,9 @@
       
           <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
       
-          <li><a href="index.html">UV Editing</a> &raquo;</li>
+          <li><a href="index.html">UV 编辑</a> &raquo;</li>
       
-    <li>Editing UVs</li>
+    <li>编辑 UVs</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,7 +174,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-uvs">
-<h1>Editing UVs<a class="headerlink" href="#editing-uvs" title="Permalink to this headline">¶</a></h1>
+<h1>编辑 UVs<a class="headerlink" href="#editing-uvs" title="Permalink to this headline">¶</a></h1>
 <p>After unwrap, you will likely need to arrange the UV maps into something that can be logically
 textured or painted. Your goals for editing are:</p>
 <ul class="simple">
@@ -190,8 +190,8 @@ A UV face can be as small as a pixel (the little dots that make up an image)
 or as large as an entire image. You probably want to make some major adjustments first,
 and then tweak the layout.</p>
 <div class="section" id="selecting-uvs">
-<h2>Selecting UVs<a class="headerlink" href="#selecting-uvs" title="Permalink to this headline">¶</a></h2>
-<p>Selection tools are available in the <em>Select Menu</em> and Header bar,
+<h2>选择 UVs<a class="headerlink" href="#selecting-uvs" title="Permalink to this headline">¶</a></h2>
+<p>Selection tools are available in the <em>选择菜单</em> and Header bar,
 and the shortcuts listed below:</p>
 <dl class="docutils">
 <dt>Border Select <code class="kbd docutils literal"><span class="pre">B</span></code></dt>
@@ -202,7 +202,7 @@ When initially unwrapping, you will want to select All UVs to rotate, scale, and
 <dt>Linked UVs <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code></dt>
 <dd>This menu item selects all UVs that are part of the same UV map.
 Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth.
-Selecting <em>Linked UVs</em> works similarly to the command in 3D视图.
+选择 <em>Linked UVs</em> works similarly to the command in 3D视图.
 It will select all UVs that are connected to currently selected UVs.</dd>
 <dt>Pinned UVs <code class="kbd docutils literal"><span class="pre">Shift-P</span></code></dt>
 <dd>You can pin UVs so they do not move between multiple unwrap operations.
@@ -291,9 +291,9 @@ by selecting <em>UVs Menu</em> under <em>Snap</em>.</p>
 </ul>
 </div>
 <div class="section" id="proportional-editing">
-<h3>Proportional Editing<a class="headerlink" href="#proportional-editing" title="Permalink to this headline">¶</a></h3>
-<p>Proportional Editing is available in UV editing. The controls are the same as in the 3D视图.
-See <a class="reference internal" href="../../3dview/transform/transform_control/proportional_edit.html"><span class="doc">Proportional Editing in 3D</span></a>
+<h3>Proportional 编辑<a class="headerlink" href="#proportional-editing" title="Permalink to this headline">¶</a></h3>
+<p>Proportional 编辑 is available in UV editing. The controls are the same as in the 3D视图.
+See <a class="reference internal" href="../../3dview/transform/transform_control/proportional_edit.html"><span class="doc">Proportional 编辑 in 3D</span></a>
 for full reference.</p>
 </div>
 <div class="section" id="snapping">
@@ -413,7 +413,7 @@ UVs will disappear from the UV/图像编辑器, but they are still there, just n
 (To verify this,
 you can select a few faces in 3D视图 and it will show up in the UV/图像编辑器.)</p>
 <p>To work on the ear, in the 3D视图, we now select only the &#8220;ear&#8221; faces.
-You can use Vertex Groups to select the ear faces. Selecting sub-meshes is easy too,
+You can use Vertex Groups to select the ear faces. 选择 sub-meshes is easy too,
 since they are not connected to the rest of the mesh.
 Simply selecting Linked vertices will select that entire submesh. Basically,
 since you are in edit mode, all of the selecting/unselecting features are available to you.</p>

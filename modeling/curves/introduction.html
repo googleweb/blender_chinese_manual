@@ -36,7 +36,7 @@
   
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
         <link rel="up" title="曲线" href="index.html"/>
-        <link rel="next" title="Selecting" href="selecting.html"/>
+        <link rel="next" title="选择" href="selecting.html"/>
         <link rel="prev" title="曲线" href="index.html"/> 
 
   
@@ -101,8 +101,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#path">路径</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing/index.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
@@ -227,103 +227,97 @@ Blender提供了五种不同的曲线基本单元:</p>
 </div>
 <div class="section" id="editing-bezier-curves">
 <h3>编辑贝塞尔曲线<a class="headerlink" href="#editing-bezier-curves" title="Permalink to this headline">¶</a></h3>
-<p>A 贝塞尔曲线 can be edited by moving the locations of the Control Points and Handles.</p>
+<p>可以通过移动控制点和控制柄的位置来编辑贝塞尔曲线.</p>
 <ul class="simple">
-<li>Add a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the <em>Add</em> menu, followed by <span class="menuselection">Curve ‣ 贝塞尔</span>.</li>
+<li>添加一条曲线通过<code class="kbd docutils literal"><span class="pre">Shift-A</span></code>呼出<em>添加</em>菜单, 依次选择 <span class="menuselection">曲线 ‣ 贝塞尔曲线</span>.</li>
 <li>按<code class="kbd docutils literal"><span class="pre">Tab</span></code>进入到<em>编辑模式</em>.</li>
-<li>Select one of the Control Points and move it around.
-Use <code class="kbd docutils literal"><span class="pre">LMB</span></code> to confirm the new location of the Control Point, or use <code class="kbd docutils literal"><span class="pre">RMB</span></code> to cancel.</li>
-<li>Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.</li>
+<li>选择一个控制点来回移动它.
+使用<code class="kbd docutils literal"><span class="pre">LMB</span></code>确认新的控制点的位置, 或使用<code class="kbd docutils literal"><span class="pre">RMB</span></code> 取消.</li>
+<li>现在选择一个控制柄来回移动它. 注意它是如何影响曲线的曲率变化的.</li>
 </ul>
-<p>To add more Control Points</p>
+<p>添加更多的控制点</p>
 <ul class="simple">
-<li>Select at least two adjacent Control Points.</li>
-<li>Press <code class="kbd docutils literal"><span class="pre">W</span></code> and select <em>Subdivide</em>.</li>
-<li>Optionally, you can press <code class="kbd docutils literal"><span class="pre">F6</span></code> immediately after the subdivision to modify the number of subdivisions.</li>
+<li>选择至少两个相邻控制点.</li>
+<li>按<code class="kbd docutils literal"><span class="pre">W</span></code>然后选择<em>细分</em>.</li>
+<li>视需要, 细分后你可以立即按<code class="kbd docutils literal"><span class="pre">F6</span></code>修改细分的数量.</li>
 </ul>
-<p>Note that while in <em>编辑模式</em> you cannot directly select a Segment. To do so,
-select all of the Control Points that make up the Segment you want to move.</p>
-<p>There are four 贝塞尔曲线 handle types.
-They can be accessed by pressing <code class="kbd docutils literal"><span class="pre">V</span></code> and selecting from the list that appears,
-or by pressing the appropriate hotkey combination. Handles can be rotated, moved,
-scaled and shrunk/fattened like any vertex in a mesh.</p>
+<p>注意挡在<em>编辑模式</em>下的时候你不能直接选择一条线段.要想这么做,选择组成你想要移动的线段的所有控制点.</p>
+<p>有四种贝塞尔曲线控制柄类型.
+他们可以使用通过按<code class="kbd docutils literal"><span class="pre">V</span></code> 然后在出现的列表中选择,或者按适当的快捷键组合. 控制柄可以旋转, 移动,
+缩放和法向缩放像网格中的任何顶点一样.</p>
 <div class="section" id="bezier-curve-handle-types">
-<h4>贝塞尔曲线 Handle Types<a class="headerlink" href="#bezier-curve-handle-types" title="Permalink to this headline">¶</a></h4>
+<h4>贝塞尔曲线控制柄类型<a class="headerlink" href="#bezier-curve-handle-types" title="Permalink to this headline">¶</a></h4>
 <dl class="docutils" id="curve-handle-type-auto">
-<dt>Automatic <code class="kbd docutils literal"><span class="pre">V-A</span></code></dt>
-<dd><p class="first">This handle has a completely automatic length and direction which is set by Blender to
-ensure the smoothest result.
-These handles convert to <em>Aligned</em> handles when moved.</p>
+<dt>自动 <code class="kbd docutils literal"><span class="pre">V-A</span></code></dt>
+<dd><p class="first">这个控制柄有一个完全自动的长度和方向,由Blender设置来确保最平滑的效果.
+这些控制柄在移动时会转换为<em>对齐</em> 控制柄.</p>
 <div class="last figure">
 <img alt="../../_images/modeling_curves_automatic-handles.jpg" src="../../_images/modeling_curves_automatic-handles.jpg" />
 </div>
 </dd>
-<dt>Vector <code class="kbd docutils literal"><span class="pre">V-V</span></code></dt>
-<dd><p class="first">Both parts of a handle always point to the previous handle or the next handle which allows
-you to create curves or sections thereof made of straight lines or with sharp corners.
-Vector handles convert to <em>Free</em> handles when moved.</p>
+<dt>矢量 <code class="kbd docutils literal"><span class="pre">V-V</span></code></dt>
+<dd><p class="first">控制柄的两部分总是指向前一控制柄或者后一控制柄, 允许你去创建由直线组成或者拥有锐角的曲线或者区间.
+矢量控制柄在移动时会转换为<em>自由</em> 控制柄.</p>
 <div class="last figure">
 <img alt="../../_images/modeling_curves_vector-handles.jpg" src="../../_images/modeling_curves_vector-handles.jpg" />
 </div>
 </dd>
-<dt>Aligned <code class="kbd docutils literal"><span class="pre">V-L</span></code></dt>
-<dd><p class="first">These handles always lie in a straight line, and give a continuous curve without sharp angles.</p>
+<dt>对齐 <code class="kbd docutils literal"><span class="pre">V-L</span></code></dt>
+<dd><p class="first">这些控制柄总是位于一条直线上, 生成一个没有锐角的连续曲线.</p>
 <div class="last figure">
 <img alt="../../_images/modeling_curves_aligned-handles.jpg" src="../../_images/modeling_curves_aligned-handles.jpg" />
 </div>
 </dd>
-<dt>Free <code class="kbd docutils literal"><span class="pre">V-F</span></code></dt>
-<dd><p class="first">The handles are independent of each other.</p>
+<dt>自由 <code class="kbd docutils literal"><span class="pre">V-F</span></code></dt>
+<dd><p class="first">控制柄相互之间是互相独立的.</p>
 <div class="last figure">
 <img alt="../../_images/modeling_curves_free-handles.jpg" src="../../_images/modeling_curves_free-handles.jpg" />
 </div>
 </dd>
 </dl>
-<p>Additionally, the <code class="kbd docutils literal"><span class="pre">V-T</span></code> shortcut can be used to toggle between Free and Aligned handle types.</p>
+<p>此外,快捷键<code class="kbd docutils literal"><span class="pre">V-T</span></code>可以用于自由和对齐控制柄类型之间切换.</p>
 </div>
 </div>
 </div>
 <div class="section" id="curve-properties">
 <h2>曲线属性<a class="headerlink" href="#curve-properties" title="Permalink to this headline">¶</a></h2>
-<p>曲线属性 can be set from the <em>Object Data</em> option in the
-<em>Properties Header</em> (shown below in blue).</p>
+<p>曲线属性可以在 <em>属性标题栏</em> 中的 <em>物体数据</em> 选项设置(下图蓝色所示).</p>
 <div class="figure">
 <img alt="../../_images/properties_header-curve.jpg" src="../../_images/properties_header-curve.jpg" />
 </div>
 <div class="section" id="shape">
-<h3>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<h3>形状<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id5">
 <img alt="../../_images/modeling_curves_shape-panel.jpg" src="../../_images/modeling_curves_shape-panel.jpg" />
-<p class="caption"><span class="caption-text">曲线 Shape panel.</span></p>
+<p class="caption"><span class="caption-text">曲线形状面板.</span></p>
 </div>
 <dl class="docutils">
-<dt>2D and 3D 曲线</dt>
-<dd>By default, new curves are set to be 3D, which means that Control Points can be placed anywhere in 3D space.
-曲线 can also be set to 2D which constrain the Control Points to the Curve&#8217;s local XY axis.</dd>
+<dt>2D和3D曲线</dt>
+<dd>默认情况下,新建曲线被设置为3D, 这就意味着控制点可以放置在3D空间的任意位置.
+曲线也可以被设置为2D,这样控制点将会被约束到曲线自身XY坐标.</dd>
 </dl>
 <dl class="docutils" id="curve-resolution">
-<dt>Resolution</dt>
-<dd><p class="first">The <em>resolution</em> property defines the number of points that are computed between every pair of Control Points.
-曲线 can be made more or less smooth by increasing and decreasing the resolution respectively.
-The <em>Preview U</em> setting determines the resolution in the 3D视图 while the <em>渲染 U</em> setting
-determines the Curve&#8217;s render resolution. If <em>渲染 U</em> is set to zero (0),
-then the <em>Preview U</em> setting is used for both the 3D视图 and render resolution.</p>
+<dt>分辨率</dt>
+<dd><p class="first"> <em>分辨率</em> 属性定义了每对控制点间计算的点的数量.
+曲线可以变得更加或者较少平滑通过增加和减少各自的分辨率.
+<em>U向预览</em> 设置定义了在3D视图中的分辨率当<em>U向渲染</em>设置定义了曲线的渲染分辨率时. 如果<em>U向渲染</em>设置为0,
+3D视图和渲染分辨率将会共用<em>U向预览</em>的设置.</p>
 <div class="last figure" id="id6">
 <img alt="../../_images/modeling_curves_shape-resolution.jpg" src="../../_images/modeling_curves_shape-resolution.jpg" />
-<p class="caption"><span class="caption-text">曲线 with a resolution of 3 (left) and 12 (right).</span></p>
+<p class="caption"><span class="caption-text">曲线的分辨率3(左)和12(右).</span></p>
 </div>
 </dd>
-<dt>Twisting</dt>
+<dt>扭曲</dt>
 <dd><p class="first">A 3D Curve has Control Points that are not located on the Curve&#8217;s local XY plane.
 This gives the Curve a twist which can affect the Curve normals.
-You can alter how the twist of the Curve is calculated by choosing from <em>Minimum,
-Tangent</em> and <em>Z-Up</em> options from the drop-down menu.</p>
+You can alter how the twist of the Curve is calculated by choosing from <em>最小值,
+切向</em> and <em>Z朝上</em> options from the drop-down menu.</p>
 <div class="last figure" id="id7">
 <img alt="../../_images/modeling_curves_shape-twist.jpg" src="../../_images/modeling_curves_shape-twist.jpg" />
-<p class="caption"><span class="caption-text">曲线 with a twist of minimum (left) and tangent (right).</span></p>
+<p class="caption"><span class="caption-text">曲线扭曲为最小值(左)和切向(右).</span></p>
 </div>
 </dd>
-<dt>Fill</dt>
+<dt>填充</dt>
 <dd><p class="first">Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
 When set to <em>Half</em> (the default) the Curve is displayed as half a cylinder.
 The <em>Fill Deformed</em> option allows you to indicate whether the Curve should be filled before or after
@@ -333,16 +327,16 @@ The <em>Fill Deformed</em> option allows you to indicate whether the Curve shoul
 <p class="caption"><span class="caption-text">曲线 with a fill of half (left) and full (right).</span></p>
 </div>
 </dd>
-<dt>Path/Curve-Deform</dt>
-<dd>These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+<dt>路径/曲线形变</dt>
+<dd>These options are primarily utilized when using a Curve as a Path or when using the 曲线形变 property.
 The <em>Radius, Stretch</em> and <em>Bounds Clamp</em> options control how Objects use the
 Curve and are dealt with in more detail in the appropriate links below.</dd>
 </dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">参见</p>
 <ul class="last simple">
-<li><a class="reference internal" href="editing/introduction.html"><span class="doc">Basic Curve Editing</span></a></li>
-<li><a class="reference internal" href="../../animation/object_path.html"><span class="doc">动画 Paths</span></a></li>
+<li><a class="reference internal" href="editing/introduction.html"><span class="doc">基本曲线编辑</span></a></li>
+<li><a class="reference internal" href="../../animation/object_path.html"><span class="doc">动画路径</span></a></li>
 </ul>
 </div>
 </div>
@@ -353,53 +347,51 @@ Curve and are dealt with in more detail in the appropriate links below.</dd>
 <p class="caption"><span class="caption-text">曲线几何体面板.</span></p>
 </div>
 <dl class="docutils">
-<dt>Modification</dt>
+<dt>修改</dt>
 <dd><dl class="first last docutils">
-<dt>Offset</dt>
-<dd>By default, text Objects are treated as curves. The Offset option will alter the space between letters.</dd>
-<dt>Extrude</dt>
-<dd>Will extrude the curve along both the positive and negative local Z axes.</dd>
+<dt>偏移量</dt>
+<dd>默认情况下, 文本物体作为曲线处理. 偏移量选项修改字母间的距离.</dd>
+<dt>挤出</dt>
+<dd>将会沿着曲线自身Z轴正向和负向挤出.</dd>
 </dl>
 </dd>
-<dt>Bevel</dt>
+<dt>倒角</dt>
 <dd><dl class="first last docutils">
-<dt>Depth</dt>
-<dd><p class="first">Changes the size of the bevel</p>
+<dt>深度</dt>
+<dd><p class="first">改变倒角尺寸</p>
 <div class="last figure" id="id10">
 <img alt="../../_images/modeling_curves_geometry-bevel-depth.jpg" src="../../_images/modeling_curves_geometry-bevel-depth.jpg" />
-<p class="caption"><span class="caption-text">A Curve with different Bevel depths applied.</span></p>
+<p class="caption"><span class="caption-text">应用不同倒角深度的曲线.</span></p>
 </div>
 </dd>
-<dt>Resolution</dt>
-<dd><p class="first">Alters the smoothness of the bevel</p>
+<dt>分辨率</dt>
+<dd><p class="first">修改倒角的平滑度</p>
 <div class="last figure" id="id11">
 <img alt="../../_images/modeling_curves_geometry-bevel-resolution.jpg" src="../../_images/modeling_curves_geometry-bevel-resolution.jpg" />
-<p class="caption"><span class="caption-text">A Curve with different resolutions applied.</span></p>
+<p class="caption"><span class="caption-text">应用不同分辨率的曲线.</span></p>
 </div>
 </dd>
 </dl>
 </dd>
 <dt>锥化物体</dt>
-<dd><p class="first">锥形化一条曲线使其在一端变细变尖.你可以自始至终修改锥形物体的锥形比例通过移动/缩放/旋转锥化物体控制点.锥化物体只能是另一条曲线.编辑锥化物体的控制柄和控制点将引起原对象的形变.</p>
+<dd><p class="first">锥形化一条曲线使其在一端变细变尖.你可以自始至终修改锥形物体的锥形比例通过移动/缩放/旋转锥化物体控制点.锥化物体只能是另一条曲线.编辑锥化物体的控制柄和控制点将引起原物体的形变.</p>
 <div class="last figure" id="id12">
 <img alt="../../_images/modeling_curves_geometry-taper.jpg" src="../../_images/modeling_curves_geometry-taper.jpg" />
 <p class="caption"><span class="caption-text">应用贝塞尔曲线锥化物体之前(左)和之后(右).</span></p>
 </div>
 </dd>
 <dt>倒角物体</dt>
-<dd><p class="first">Beveling a 贝塞尔曲线 with a 贝塞尔曲线 as the 倒角物体 generally gives it the appearance of a plane,
-while using a 贝塞尔圆环 as the 倒角物体 will give it the appearance of a cylinder.
-The 倒角物体 can only be another Curve.
-Editing the Handles and Control Points of the 倒角物体 will cause the original Object to change shape.
-Given the options available, it is best to experiment and see the results of this operation.</p>
+<dd><p class="first">用一条贝塞尔曲线作为倒角物体倒角一条贝塞尔曲线通常会使它看起来像一个平面,当使用一个贝塞尔圆环作为倒角物体会使它看起来像一个圆柱.
+倒角物体只能是另一条曲线.编辑倒角物体的控制柄和控制点将引起原物体的形变.
+鉴于可用的选项,最好实验一番以观察操作的结果.</p>
 <div class="last figure" id="id13">
 <img alt="../../_images/modeling_curves_geometry-bevel.jpg" src="../../_images/modeling_curves_geometry-bevel.jpg" />
-<p class="caption"><span class="caption-text">A Curve with the 倒角物体 as a 贝塞尔曲线 (left) and as a 贝塞尔圆环 (right).</span></p>
+<p class="caption"><span class="caption-text">应用贝塞尔曲线(左)和贝塞尔圆环(右)做倒角物体的曲线.</span></p>
 </div>
 </dd>
-<dt>Fill Caps</dt>
-<dd>Seals the ends of a beveled Curve.</dd>
-<dt>Map Taper</dt>
+<dt>封盖</dt>
+<dd>将倒角曲线的两端封口.</dd>
+<dt>映射锥化</dt>
 <dd><p class="first">For 曲线 using a 锥化物体 and with modifications to the <em>Start/End Bevel Factor</em>
 the <em>Map Taper</em> option will apply the taper to the beveled part of the Curve (not the whole Curve).</p>
 <div class="last figure" id="id14">
@@ -463,7 +455,7 @@ please consult the <a class="reference external" href="https://en.wikipedia.org/
 many of the 贝塞尔曲线 operations discussed above apply to NURBS曲线 in the same manner.
 The following text will concentrate only on those aspects that are unique to NURBS曲线.</p>
 <div class="section" id="editing-nurbs-curves">
-<h3>Editing NURBS 曲线<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
+<h3>编辑 NURBS 曲线<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
 <p>A NURBS曲线 is edited by moving the location of the Control Points.</p>
 <ul class="simple">
 <li>Place a Curve by <code class="kbd docutils literal"><span class="pre">Shift-A</span></code> to bring up the Add menu, followed by <span class="menuselection">Curve ‣ NURBS曲线</span>.</li>
@@ -535,7 +527,7 @@ The valid range of <em>Order</em> values is 2-6 depending on the number of contr
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="selecting.html" class="btn btn-neutral float-right" title="Selecting" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="selecting.html" class="btn btn-neutral float-right" title="选择" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="曲线" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>

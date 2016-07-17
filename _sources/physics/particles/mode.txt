@@ -37,11 +37,11 @@ Setup for Hair Particles
 
 .. figure:: /images/particle_mode.jpg
 
-   Editing hair strands in 粒子模式.
+   编辑 hair strands in 粒子模式.
 
 .. figure:: /images/physics_particle_mode_example.gif
 
-   Editing a baked particle simulation's particle paths in 粒子模式.
+   编辑 a baked particle simulation's particle paths in 粒子模式.
 
 
 Setup for Particle, Cloth, and Soft Body Simulations
@@ -77,7 +77,7 @@ version should something happen, or that you do not like the latest changes you 
       This will display key points along the particle path.
 
 
-Selecting
+选择
 =========
 
 - Single: :kbd:`RMB`.
@@ -198,7 +198,7 @@ Draw
       but it may slow down your system if you have many children.
 
 
-Editing
+编辑
 =======
 
 .. warning:: Beware of Undo!
@@ -230,7 +230,7 @@ Mirroring Particles
 - If you want to create an X-Axis symmetrical haircut you have to do following steps:
   - Select all particles with :kbd:`A`.
   - Mirror the particles with :kbd:`Ctrl-M`, or use the :menuselection:`Particle --> Mirror` menu.
-  - Turn on *X-Axis Mirror Editing* in the *Particle* menu.
+  - Turn on *X-Axis Mirror 编辑* in the *Particle* menu.
 
 It may happen that after mirroring two particles occupy nearly the same place.
 Since this would be a waste of memory and rendertime,
@@ -248,7 +248,7 @@ The particle in fact doesn't vanish, only the key points.
 Hidden particles (i.e. particles whose keypoints are hidden)
 do not react on the various brushes. But:
 
-If you use *Mirror Editing* even particles with hidden keypoints may be moved,
+If you use *Mirror 编辑* even particles with hidden keypoints may be moved,
 if their mirrored counterpart is moved.
 
 To un-hide all hidden particles press :kbd:`Alt-H`.

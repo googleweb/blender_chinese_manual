@@ -1,6 +1,6 @@
 
 ******************
-Controller Editing
+Controller 编辑
 ******************
 
 .. figure:: /images/bge_controller_column.jpg
@@ -78,7 +78,7 @@ Name
    The name of the object.
 Add Controller
    When clicked, a menu appears with the available controller types.
-   Selecting an entry adds a new controller to the object.
+   选择 an entry adds a new controller to the object.
    See :doc:`Controllers </game_engine/logic/controllers/types/index>` for a list of available controller types.
 
 Standard Controller Parts

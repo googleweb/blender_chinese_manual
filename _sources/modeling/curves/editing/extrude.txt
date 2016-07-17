@@ -1,6 +1,6 @@
 
 ***************
-Curve Extrusion
+曲线挤出
 ***************
 
 .. admonition:: 参考

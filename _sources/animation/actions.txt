@@ -180,7 +180,7 @@ Each property also has some Keying Set options.
    Remove from Keying Set.
 
 
-Editing
+编辑
 -------
 
 3D视图.

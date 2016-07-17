@@ -1,6 +1,6 @@
 
 ***************
-Texture Editing
+Texture 编辑
 ***************
 
 3D视图 draw types, UV mapping,
@@ -53,7 +53,7 @@ Blender textures are still used, but this will change in the future.
    .. clear
 
 
-Painting & UV Editing
+Painting & UV 编辑
 =====================
 
 .. figure:: /images/cycles_texture_active.jpg

@@ -115,7 +115,7 @@ The system did not find a solution
 History
 =======
 
-`Laplacian Surface Editing
+`Laplacian Surface 编辑
 <http://igl.ethz.ch/projects/Laplacian-mesh-processing/Laplacian-mesh-editing/laplacian-mesh-editing.pdf>`__
 is a method developed by Olga Sorkine and others in 2004.
 This method preserves geometric details as much as possible while the user makes editing operations.
@@ -133,7 +133,7 @@ of its neighbors to represent the local geometric detail of the mesh.
 
 .. seealso::
 
-   - `Laplacian Surface Editing (Original paper)
+   - `Laplacian Surface 编辑 (Original paper)
      <http://igl.ethz.ch/projects/Laplacian-mesh-processing/Laplacian-mesh-editing/laplacian-mesh-editing.pdf>`__
-   - `Differential Coordinates for Interactive Mesh Editing
+   - `Differential Coordinates for Interactive Mesh 编辑
      <http://igl.ethz.ch/projects/Laplacian-mesh-processing/Laplacian-mesh-editing/diffcoords-editing.pdf>`__

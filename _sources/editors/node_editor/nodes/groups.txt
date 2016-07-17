@@ -50,7 +50,7 @@ so it is recommended some naming convention, that will allow you to easily disti
         if you include an output node in the group, there will not be an output socket available *from* the group!
 
 
-Editing Node Groups
+编辑 Node Groups
 ===================
 
 With a group node selected, :kbd:`Tab` expands the node to a window frame, and the individual nodes within

@@ -85,7 +85,7 @@ Text Input
    - Press :kbd:`Esc` will cancel the value.
 
 
-Multi-Value Editing
+Multi-Value 编辑
 -------------------
 
 .. figure:: /images/ui_multi_value_edit.png

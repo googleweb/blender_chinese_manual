@@ -52,6 +52,6 @@ Removing Groups
    Find the name of the group from which you wish to remove the object,
    and click the x to the right of the group name.
 
-.. tip:: Selecting Groups
+.. tip:: 选择 Groups
 
    Groups can be selected, see :ref:`Select Grouped <select-grouped>` for more information.

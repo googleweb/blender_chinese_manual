@@ -1,6 +1,6 @@
 
 *******
-Editing
+编辑
 *******
 
 By default, when new channels are added, the *Graph Editor* sets them to *编辑模式*.

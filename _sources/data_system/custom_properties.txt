@@ -21,7 +21,7 @@ found at the bottom of most :doc:`Properties Region </editors/properties/index>`
    Custom Properties Panel.
 
 
-Editing Properties
+编辑 Properties
 ==================
 
 

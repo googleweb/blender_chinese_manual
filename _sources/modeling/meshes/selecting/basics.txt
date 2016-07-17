@@ -37,7 +37,7 @@ When enabled, this limits your ability to select based on visible elements
 deleting or otherwise working on backside or hidden items.
 
 
-Selecting Elements in a Region
+选择 Elements in a Region
 ==============================
 
 .. admonition:: 参考
@@ -87,7 +87,7 @@ If any object that was last active appears in the group it will become selected 
        .. figure:: /images/modeling-meshes-selection-borderselect2.jpg
           :width: 200px
 
-          Selecting.
+          选择.
 
      - .. _fig-mesh-select-basics-complete:
 
@@ -174,7 +174,7 @@ To deselect, use :kbd:`Ctrl-Shift-LMB` while dragging.
      - .. figure:: /images/modeling-meshes-selection-lassoselect2.jpg
           :width: 200px
 
-          Selecting.
+          选择.
 
      - .. figure:: /images/modeling-meshes-selection-lassoselect3.jpg
           :width: 200px

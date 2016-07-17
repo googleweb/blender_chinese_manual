@@ -35,7 +35,7 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="UV Editing" href="index.html"/>
+        <link rel="up" title="UV 编辑" href="index.html"/>
         <link rel="next" title="Managing UV Maps" href="layout_management.html"/>
         <link rel="prev" title="Overview" href="overview.html"/> 
 
@@ -93,7 +93,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#image-video">图像/视频</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/图像编辑器</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV Editing</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV 编辑</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../painting.html">Painting</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../masking.html">Masking</a></li>
 </ul>
@@ -157,7 +157,7 @@
       
           <li><a href="../index.html">UV/图像编辑器</a> &raquo;</li>
       
-          <li><a href="index.html">UV Editing</a> &raquo;</li>
+          <li><a href="index.html">UV 编辑</a> &raquo;</li>
       
     <li>UV Mapping a Mesh</li>
       <li class="wy-breadcrumbs-aside">
@@ -182,7 +182,7 @@ Blender will add those new faces for you,
 but you may need to do additional mapping or editing. In this fashion,
 you can use the UV Texture image to guide additional geometry changes.</p>
 <p>This section covers techniques for Mapping Uvs.
-The next sections cover <a class="reference internal" href="layout_editing.html"><span class="doc">Editing UVs</span></a>,
+The next sections cover <a class="reference internal" href="layout_editing.html"><span class="doc">编辑 UVs</span></a>,
 followed by methods of <a class="reference internal" href="layout_management.html"><span class="doc">Managing UV Layouts</span></a>,
 and <a class="reference internal" href="applying_image.html"><span class="doc">Applying 图像s to UVs</span></a>.</p>
 <div class="section" id="about-uvs">
@@ -210,13 +210,13 @@ A face at the hairline of a character might participate in the facial UV Texture
 <h2>入门指南<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/uvunwrapping-screenlayout.jpg"><img alt="../../../_images/uvunwrapping-screenlayout.jpg" src="../../../_images/uvunwrapping-screenlayout.jpg" style="width: 320px;" /></a>
-<p class="caption"><span class="caption-text">UV Editing screen layout.</span></p>
+<p class="caption"><span class="caption-text">UV 编辑 screen layout.</span></p>
 </div>
 <p>By default, meshes are not created with UVs. First you must map the faces, then
 you can <a class="reference internal" href="layout_editing.html"><span class="doc">edit them</span></a>.
 The process of unwrapping your model is done within 编辑模式 in the 3D视图编辑窗口.
 This process creates one or more UV Islands in the <a class="reference internal" href="../index.html#editors-uv-image-index"><span class="std std-ref">UV/图像编辑器</span></a>.</p>
-<p>To begin, choose the <em>UV Editing</em> <a class="reference internal" href="../../../interface/editors/screens.html"><span class="doc">screen layout</span></a>
+<p>To begin, choose the <em>UV 编辑</em> <a class="reference internal" href="../../../interface/editors/screens.html"><span class="doc">screen layout</span></a>
 from the selection list at the top of your screen in the 用户首选项 header.
 This sets one of the panes to show you the UV/图像编辑器
 <code class="kbd docutils literal"><span class="pre">Shift-F10</span></code>, and the other window to the 3D视图 <code class="kbd docutils literal"><span class="pre">Shift-F5</span></code>.</p>
@@ -236,7 +236,7 @@ The process is:</p>
 <li>Add a test image to see if there will be any distortion.
 See <a class="reference internal" href="applying_image.html"><span class="doc">Applying 图像s to UVs</span></a></li>
 <li>Adjust UVs in the UV/图像 editor.
-See <a class="reference internal" href="layout_editing.html"><span class="doc">Editing UVs</span></a></li>
+See <a class="reference internal" href="layout_editing.html"><span class="doc">编辑 UVs</span></a></li>
 </ul>
 </div>
 </div>
@@ -285,7 +285,7 @@ Use this unwrapping option to reset the map and undo any unwrapping (go back to 
 the <span class="menuselection">Mesh ‣ UV Unwrap ‣ Cube, Cylinder and Sphere</span>
 UV Calculations attempt to unfold the faces for you as an initial best fit.
 Here, the view from the 3D视图 is especially important.
-Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
+Also, the settings for cube size or cylinder radius (编辑 buttons, UV Calculation panel)
 should be set (in Blender units) to encompass the object.</p>
 <p>The following settings are common for the Cube, Cylinder, and Sphere mappings:</p>
 <dl class="docutils">
@@ -303,7 +303,7 @@ by being moved to the UV space border it is closest to.</dd>
 <h3>Cube<a class="headerlink" href="#cube" title="Permalink to this headline">¶</a></h3>
 <p>Cube mapping projects s mesh onto six separate planes, creating six UV islands.
 In the UV/图像 editor, these will appear overlapped, but can be moved.
-See <a class="reference internal" href="layout_editing.html"><span class="doc">Editing UVs</span></a>.</p>
+See <a class="reference internal" href="layout_editing.html"><span class="doc">编辑 UVs</span></a>.</p>
 <dl class="docutils">
 <dt>Cube Size</dt>
 <dd>Set the size of the cube to be projected onto.</dd>
@@ -404,7 +404,7 @@ as opposed to 2D texturing, where it is difficult to match the edges of differen
 A seam is marked in 编辑模式 by selecting edges to make the seam and then issuing the command to Mark Seam.</li>
 <li>Unwrap</li>
 <li>Adjust seams and repeat</li>
-<li>Manually adjust UVs. See the next section on Editing UVs.</li>
+<li>Manually adjust UVs. See the next section on 编辑 UVs.</li>
 </ul>
 <div class="section" id="marking-seams">
 <h4>Marking Seams<a class="headerlink" href="#marking-seams" title="Permalink to this headline">¶</a></h4>

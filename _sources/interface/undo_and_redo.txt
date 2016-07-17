@@ -17,7 +17,7 @@ If you want to undo your last action, just press :kbd:`Ctrl-Z`
 
 .. seealso:: 
 
-   :doc:`Editing Preferences </preferences/editing>` section on undo to change defaults.
+   :doc:`编辑 Preferences </preferences/editing>` section on undo to change defaults.
 
 
 Redo

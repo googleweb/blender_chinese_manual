@@ -77,7 +77,7 @@ While Hovering (when the cursor is held over a button).
 - :kbd:`Ctrl` - while dragging snap the discrete steps.
 - :kbd:`Shift` - gives finer control over the value.
 
-.. rubric:: While Editing Text
+.. rubric:: While 编辑 Text
 
 - :kbd:`Home` - go to the start.
 - :kbd:`End` - go to the end.

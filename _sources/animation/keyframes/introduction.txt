@@ -33,7 +33,7 @@ There are several methods of removing keyframes
 - :kbd:`RMB` a value and choose *Delete Keyframe* from the menu.
 
 
-Editing Keyframes
+编辑 Keyframes
 =================
 
 For editing keyframes go to the :doc:`Graph Editor </editors/graph_editor/introduction>`

@@ -25,7 +25,7 @@ At the top of the editor, the available options are grouped into seven tabs:
 
 :doc:`界面 </preferences/interface>`
    Change how UI elements are displayed and how they react.
-:doc:`Editing </preferences/editing>`
+:doc:`编辑 </preferences/editing>`
    Control how several tools will interact with your input.
 :doc:`Input </preferences/input>`
    Customize how Blender reacts to the mouse and keyboard as well as define your own keymap.

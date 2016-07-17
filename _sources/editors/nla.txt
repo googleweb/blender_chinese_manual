@@ -98,7 +98,7 @@ A meta strip still contains the underlying strips. You can ungroup a Meta strip.
    | Hotkey:   :kbd:`Alt-G`
 
 
-Editing Strips
+编辑 Strips
 ==============
 
 The contents of Action strips can be edited, but you must be in *Tweak Mode* to do so.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Curve Editing &mdash; Blender参考手册</title>
+  <title>曲线编辑 &mdash; Blender参考手册</title>
   
 
   
@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="Editing" href="index.html"/>
-        <link rel="next" title="Curve Deform" href="deform.html"/>
-        <link rel="prev" title="Editing" href="index.html"/> 
+        <link rel="up" title="编辑" href="index.html"/>
+        <link rel="next" title="曲线形变" href="deform.html"/>
+        <link rel="prev" title="编辑" href="index.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -94,11 +94,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Curve Editing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="deform.html">Curve Deform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="extrude.html">Curve Extrusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">曲线编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="deform.html">曲线形变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extrude.html">曲线挤出</a></li>
 </ul>
 </li>
 </ul>
@@ -157,9 +157,9 @@
       
           <li><a href="../index.html">曲线</a> &raquo;</li>
       
-          <li><a href="index.html">Editing</a> &raquo;</li>
+          <li><a href="index.html">编辑</a> &raquo;</li>
       
-    <li>Curve Editing</li>
+    <li>曲线编辑</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,12 +174,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="curve-editing">
-<h1>Curve Editing<a class="headerlink" href="#curve-editing" title="Permalink to this headline">¶</a></h1>
+<h1>曲线编辑<a class="headerlink" href="#curve-editing" title="Permalink to this headline">¶</a></h1>
 <p>This page covers the basics of curve editing. Curve basics,
 selecting and advanced editing are covered in the following pages:</p>
 <ul class="simple">
 <li><a class="reference internal" href="../introduction.html"><span class="doc">Curve basics</span></a></li>
-<li><a class="reference internal" href="../selecting.html"><span class="doc">Curve Selecting</span></a></li>
+<li><a class="reference internal" href="../selecting.html"><span class="doc">Curve 选择</span></a></li>
 </ul>
 <div class="section" id="curve-display">
 <h2>Curve Display<a class="headerlink" href="#curve-display" title="Permalink to this headline">¶</a></h2>
@@ -259,7 +259,7 @@ Snapping works with 2D curves but points will be constrained to the local XY axe
 <p>The <em>To Sphere</em>, <em>Shear</em>, <em>Warp</em> and <em>Push/Pull</em> transform tools are described in the
 <a class="reference internal" href="../../../editors/3dview/transform/introduction.html"><span class="doc">变换ations</span></a> sections.
 The two other tools, <em>Tilt</em> and <em>Shrink/Fatten Radius</em> are related to
-<a class="reference internal" href="extrude.html"><span class="doc">Curve Extrusion</span></a>.</p>
+<a class="reference internal" href="extrude.html"><span class="doc">曲线挤出</span></a>.</p>
 <div class="section" id="smoothing">
 <h3>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
@@ -551,7 +551,7 @@ of one or three control points <code class="kbd docutils literal"><span class="p
 <p>To select a mesh(that is in view) while editing a curve, <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> click on it.
 Select either one or three control points,
 then <code class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></code> the object and use <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> to make a vertex parent.
-Selecting three control points will make the child follow
+选择 three control points will make the child follow
 the median point between the three vertices. An alternative would be to use a
 <a class="reference internal" href="../../../rigging/constraints/relationship/child_of.html"><span class="doc">Child of Constraint</span></a></p>
 </div>
@@ -589,10 +589,10 @@ forcing the curve to &#8220;stick&#8221; to their original positions, based on t
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="deform.html" class="btn btn-neutral float-right" title="Curve Deform" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="deform.html" class="btn btn-neutral float-right" title="曲线形变" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral" title="编辑" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

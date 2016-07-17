@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|copy=X}}.
 
 ***********************
-Editing Bone Properties
+编辑 Bone Properties
 ***********************
 
 .. tip:: 
@@ -9,7 +9,7 @@ Editing Bone Properties
    In this page, you will learn how to edit and control most of the properties for Blender bones -
    For editing bones in an armature,
    you should read the :doc:`previous page </rigging/armatures/editing/bones>` first.
-   We will see how to manage the bones' relationships (`Chain Editing`_), rename them (`Naming Bones`_), etc.
+   We will see how to manage the bones' relationships (`Chain 编辑`_), rename them (`Naming Bones`_), etc.
 
 
 变换ing Bones
@@ -276,7 +276,7 @@ BO
    The bone name field, see `Naming Bones`_.
 child of
    These two settings control the bone relationship, as detailed in
-   `Chain Editing`_.
+   `Chain 编辑`_.
 Segm
    This setting controls the number of segments that a bone has; see
    `Bone Rigidity`_.
@@ -368,7 +368,7 @@ angle with previous/next bones in the chain, and so on.
 
 .. _armature-bone_chain_edit:
 
-Chain Editing
+Chain 编辑
 =============
 
 .. admonition:: 参考

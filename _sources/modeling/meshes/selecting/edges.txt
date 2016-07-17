@@ -1,6 +1,6 @@
 
 ***************
-Selecting Edges
+选择 Edges
 ***************
 
 .. figure:: /images/selection-mode_buttons_edge-activated.jpg

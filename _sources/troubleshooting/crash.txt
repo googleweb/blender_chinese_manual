@@ -16,7 +16,7 @@ To prevent the problem from happening again, you can check that the graphics dri
 machine's hardware (the RAM or graphics card), and disable some options that are more memory intensive:
 
 - Reduce undo steps
-  :menuselection:`用户首选项 --> Editing --> Undo Steps`.
+  :menuselection:`用户首选项 --> 编辑 --> Undo Steps`.
 - Disable *Region Overlap* and *Triple buffering* at
   :menuselection:`用户首选项 --> System --> Window Draw Method`.
 - Using multisample, anti-aliasing also increases the memory usage and make display slower.

@@ -10,7 +10,7 @@ and mix them using an F-曲线 as a volume control.
 
 .. figure:: /images/editors_sequencer_audio_editing.png
 
-   例子 of Sound Editing.
+   例子 of Sound 编辑.
 
 
 Options

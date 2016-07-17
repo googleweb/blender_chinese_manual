@@ -113,7 +113,7 @@ Normal
    and the darker blue lines indicate the vertex normals (these were turned on in the
    :kbd:`N` Properties Panel under :menuselection:`Mesh Display --> Normals --> Face` and
    *Vertex*).
-   Selecting any given face will cause our Manipulator's Z-axis to align with that normal.
+   选择 any given face will cause our Manipulator's Z-axis to align with that normal.
    The same goes for Vertex Select Mode.
    Edge Select is different -- A selected Edge has the Z-axis aligned with it
    (so you will have to look at the Manipulator widget to determine the direction of X and Y).

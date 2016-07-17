@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Editing &mdash; Blender参考手册</title>
+  <title>编辑 &mdash; Blender参考手册</title>
   
 
   
@@ -37,7 +37,7 @@
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
         <link rel="up" title="Surfaces" href="index.html"/>
         <link rel="next" title="Text" href="../texts/index.html"/>
-        <link rel="prev" title="Selecting" href="selecting.html"/> 
+        <link rel="prev" title="选择" href="selecting.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -95,8 +95,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Surfaces</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Editing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">编辑</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#translation-rotation-scale">Translation, Rotation, Scale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#advanced-transform-tools">高级应用 变换工具</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#nurbs-control-points-settings">NURBS Control Points 设置</a></li>
@@ -110,7 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#switch-direction">Switch Direction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#other-specials-options">其他 Specials Options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#conversion">Conversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#misc-editing">Misc Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#misc-editing">Misc 编辑</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +168,7 @@
       
           <li><a href="index.html">Surfaces</a> &raquo;</li>
       
-    <li>Editing</li>
+    <li>编辑</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -183,7 +183,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing">
-<h1>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
 <p>Surface editing has even fewer tools and options than its curve counterpart - and has many
 common points with it... So this page covers (or tries to cover) all the subjects,
 from the basics of surface editing to more advanced topics, like retopology.</p>
@@ -265,15 +265,15 @@ so you only can create a new surface by copying (<a class="reference internal" h
 <code class="kbd docutils literal"><span class="pre">Shift-D</span></code>, or adding a new one with the <em>Add</em> menu.</p>
 <div class="section" id="examples">
 <h3>例子s<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<p>图像s Fig. <a class="reference internal" href="#fig-surface-edit-select-control"><span class="std std-ref">Selecting control-point.</span></a> to Fig. <a class="reference internal" href="#fig-surface-edit-select-complete"><span class="std std-ref">Compete.</span></a>
+<p>图像s Fig. <a class="reference internal" href="#fig-surface-edit-select-control"><span class="std std-ref">选择 control-point.</span></a> to Fig. <a class="reference internal" href="#fig-surface-edit-select-complete"><span class="std std-ref">Compete.</span></a>
 show a typical extrusion along the side of a surface.</p>
-<p>In Fig. <a class="reference internal" href="#fig-surface-edit-select-control"><span class="std std-ref">Selecting control-point.</span></a> and <code class="kbd docutils literal"><span class="pre">Shift-R</span></code>,
+<p>In Fig. <a class="reference internal" href="#fig-surface-edit-select-control"><span class="std std-ref">选择 control-point.</span></a> and <code class="kbd docutils literal"><span class="pre">Shift-R</span></code>,
 a border row of control points were highlighted by selecting a single control point,
 labeled &#8220;C&#8221;, and then using the handy row select tool <code class="kbd docutils literal"><span class="pre">Shift-R</span></code>
 to select the rest of the control points.</p>
 <div class="figure" id="id2">
 <span id="fig-surface-edit-select-control"></span><a class="reference internal image-reference" href="../../_images/nurbssurfaceselectedge.jpg"><img alt="../../_images/nurbssurfaceselectedge.jpg" src="../../_images/nurbssurfaceselectedge.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">Selecting control-point.</span></p>
+<p class="caption"><span class="caption-text">选择 control-point.</span></p>
 </div>
 <p>The edge is then extruded using <code class="kbd docutils literal"><span class="pre">E</span></code> as shown in Fig. Extruding.
 Notice how the mesh has bunched up next to the highlighted edge;
@@ -499,7 +499,7 @@ It transforms a <em>Surface</em> object into a <em>Mesh</em> one,
 using the surface resolutions in both directions to create faces, edges and vertices.</p>
 </div>
 <div class="section" id="misc-editing">
-<h2>Misc Editing<a class="headerlink" href="#misc-editing" title="Permalink to this headline">¶</a></h2>
+<h2>Misc 编辑<a class="headerlink" href="#misc-editing" title="Permalink to this headline">¶</a></h2>
 <p>You have some of the same options as with meshes, or in <em>物体模式</em>.
 You can <a class="reference internal" href="../meshes/editing/misc.html#object-separate"><span class="std std-ref">separate</span></a> a given surface <code class="kbd docutils literal"><span class="pre">P</span></code>,
 make other selected objects <a class="reference internal" href="../../editors/3dview/object/relationships/parents.html#object-parenting"><span class="std std-ref">children</span></a>
@@ -521,7 +521,7 @@ or <a class="reference internal" href="../modifiers/deform/hooks.html"><span cla
         <a href="../texts/index.html" class="btn btn-neutral float-right" title="Text" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="selecting.html" class="btn btn-neutral" title="Selecting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="selecting.html" class="btn btn-neutral" title="选择" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

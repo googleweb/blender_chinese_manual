@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|im = add images}}.
 
 *********
-Selecting
+选择
 *********
 
 Curve selection in *编辑模式* is much less complex than with meshes! Mainly this is
@@ -23,7 +23,7 @@ i.e. all points belonging to the same curve. Note that for 贝塞尔,
 using :kbd:`L` with a handle selected will select the whole control point and all the linked ones.
 
 
-Select Menu
+选择菜单
 ===========
 
 With curves, all "advanced" selection options are regrouped in the *Select* menu of
@@ -41,14 +41,14 @@ Border Select
 
 .. _modeling-curves-checker_deselect:
 
-Checker Deselect
+间隔式弃选
 ================
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> Checker Deselect`
+   | Menu:     :menuselection:`Select --> 间隔式弃选`
    | Hotkey:   None
 
 
@@ -65,7 +65,7 @@ Offset
    Offests at what point to start at.
 
 
-Select/Deselect First/Last
+选中/弃选首点/末点
 ==========================
 
 .. admonition:: 参考
@@ -81,7 +81,7 @@ in the object. This is useful to quickly find the start of a curve (e.g.
 when using it as path...).
 
 
-Select 下一页/上一页
+选择下一项 /上一项
 ====================
 
 .. admonition:: 参考
@@ -97,7 +97,7 @@ based on the current selection (i.e.
 the control points following or preceding the selected ones along the curve).
 
 
-Select More/Less
+扩展/缩减 选择
 ================
 
 .. admonition:: 参考

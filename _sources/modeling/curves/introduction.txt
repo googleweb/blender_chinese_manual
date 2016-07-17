@@ -79,7 +79,7 @@ This can be altered by defining a custom F-曲线.
    贝塞尔曲线 in 编辑模式.
 
 
-Editing 贝塞尔曲线
+编辑 贝塞尔曲线
 ---------------------
 
 A 贝塞尔曲线 can be edited by moving the locations of the Control Points and Handles.
@@ -199,13 +199,13 @@ Fill
 
 
 Path/Curve-Deform
-   These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+   These options are primarily utilized when using a Curve as a Path or when using the 曲线形变 property.
    The *Radius, Stretch* and *Bounds Clamp* options control how Objects use the
    Curve and are dealt with in more detail in the appropriate links below.
 
 .. seealso::
 
-   - :doc:`Basic Curve Editing </modeling/curves/editing/introduction>`
+   - :doc:`Basic 曲线编辑 </modeling/curves/editing/introduction>`
    - :doc:`动画 Paths </animation/object_path>`
 
 
@@ -242,7 +242,7 @@ Bevel
    You can also alter the proportions of the Taper throughout the tapered object
    by moving/scaling/rotating the Control Points of the 锥化物体.
    The 锥化物体 can only be another Curve.
-   Editing the Handles and Control Points of the 锥化物体 will cause the original Object to change shape.
+   编辑 the Handles and Control Points of the 锥化物体 will cause the original Object to change shape.
 
    .. figure:: /images/modeling_curves_geometry-taper.jpg
 
@@ -252,7 +252,7 @@ Bevel
    Beveling a 贝塞尔曲线 with a 贝塞尔曲线 as the 倒角物体 generally gives it the appearance of a plane,
    while using a 贝塞尔圆环 as the 倒角物体 will give it the appearance of a cylinder.
    The 倒角物体 can only be another Curve.
-   Editing the Handles and Control Points of the 倒角物体 will cause the original Object to change shape.
+   编辑 the Handles and Control Points of the 倒角物体 will cause the original Object to change shape.
    Given the options available, it is best to experiment and see the results of this operation.
 
    .. figure:: /images/modeling_curves_geometry-bevel.jpg
@@ -330,7 +330,7 @@ many of the 贝塞尔曲线 operations discussed above apply to NURBS曲线 in t
 The following text will concentrate only on those aspects that are unique to NURBS曲线.
 
 
-Editing NURBS 曲线
+编辑 NURBS 曲线
 --------------------
 
 A NURBS曲线 is edited by moving the location of the Control Points.

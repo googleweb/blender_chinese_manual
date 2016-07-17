@@ -1,6 +1,6 @@
 
 **************
-Weight Editing
+Weight 编辑
 **************
 
 .. figure:: /images/modeling-meshes-vertex-weights-panel-overview.jpg

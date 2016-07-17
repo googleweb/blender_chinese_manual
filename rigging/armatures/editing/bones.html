@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Editing Bones &mdash; Blender参考手册</title>
+  <title>编辑 Bones &mdash; Blender参考手册</title>
   
 
   
@@ -35,8 +35,8 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="Editing" href="index.html"/>
-        <link rel="next" title="Editing Bone Properties" href="properties.html"/>
+        <link rel="up" title="编辑" href="index.html"/>
+        <link rel="next" title="编辑 Bone Properties" href="properties.html"/>
         <link rel="prev" title="简介" href="introduction.html"/> 
 
   
@@ -100,10 +100,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../properties.html">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Editing Bones</a></li>
-<li class="toctree-l4"><a class="reference internal" href="properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">编辑 Bones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html">编辑 Bone Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sketching.html">Skeleton Sketching</a></li>
 <li class="toctree-l4"><a class="reference internal" href="templating.html">Armature Templating</a></li>
 </ul>
@@ -160,9 +160,9 @@
       
           <li><a href="../index.html">Armatures</a> &raquo;</li>
       
-          <li><a href="index.html">Editing</a> &raquo;</li>
+          <li><a href="index.html">编辑</a> &raquo;</li>
       
-    <li>Editing Bones</li>
+    <li>编辑 Bones</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -177,7 +177,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-bones">
-<h1>Editing Bones<a class="headerlink" href="#editing-bones" title="Permalink to this headline">¶</a></h1>
+<h1>编辑 Bones<a class="headerlink" href="#editing-bones" title="Permalink to this headline">¶</a></h1>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -187,7 +187,7 @@
 </div>
 <p>You will learn here how to add (<a class="reference internal" href="#adding-bones">Adding Bones</a>), delete (<a class="reference internal" href="#deleting-bones">Deleting Bones</a>) or subdivide (<a class="reference internal" href="#subdividing-bones">Subdividing Bones</a>) bones.
 We will also see how to prevent any bone transformation (<a class="reference internal" href="#locking-bones">Locking Bones</a>) in <em>编辑模式</em>,
-and the option that features an automatic mirroring (<a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror Editing</a>) of editing actions along the X axis.</p>
+and the option that features an automatic mirroring (<a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror 编辑</a>) of editing actions along the X axis.</p>
 <div class="section" id="adding-bones">
 <h2>Adding Bones<a class="headerlink" href="#adding-bones" title="Permalink to this headline">¶</a></h2>
 <p>To add bones to your armature, you have more or less the same options as when editing meshes:</p>
@@ -278,7 +278,7 @@ extrusion along a global or local axis.</p>
 <p>Bones have an extra &#8220;mirror extruding&#8221; tool, called by pressing <code class="kbd docutils literal"><span class="pre">Shift-E</span></code>.
 By default, it behaves exactly like the standard extrusion.
 But once you have enabled the X-Axis mirror editing option
-(see <a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror Editing</a>),
+(see <a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror 编辑</a>),
 each extruded tip will produce <em>two new bones</em>, having the same name except for the &#8220;_L&#8221;/ &#8220;_R&#8221; suffix
 (for left/right, see the <a class="reference internal" href="properties.html#armature-editing-naming-conventions"><span class="std std-ref">next page</span></a>).
 The &#8220;_L&#8221; bone behaves like the single one produced by the default extrusion -
@@ -700,7 +700,7 @@ This means that in a chain of connected bones, when you lock one bone,
 you only really lock its tip. With unconnected bones, the locking is effective on both ends of the bone.</p>
 </div>
 <div class="section" id="x-axis-mirror-editing">
-<h2>X-Axis Mirror Editing<a class="headerlink" href="#x-axis-mirror-editing" title="Permalink to this headline">¶</a></h2>
+<h2>X-Axis Mirror 编辑<a class="headerlink" href="#x-axis-mirror-editing" title="Permalink to this headline">¶</a></h2>
 <p>Another very useful tool is the <em>X-Axis Mirror</em> editing option by
 <span class="menuselection">Tool panel ‣ Armature Options</span>, while Armature is selected in <em>编辑模式</em>.
 When you have pairs of bones of the same name with just a different &#8220;side suffix&#8221;
@@ -730,7 +730,7 @@ in <em>物体模式</em>, you can join all selected armatures in one
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="properties.html" class="btn btn-neutral float-right" title="Editing Bone Properties" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="properties.html" class="btn btn-neutral float-right" title="编辑 Bone Properties" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>

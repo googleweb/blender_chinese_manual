@@ -34,7 +34,7 @@ The Graph Editor
 ----------------
 
 - :doc:`F-曲线 </editors/graph_editor/fcurves/introduction>`
-- :doc:`F-曲线 Editing </editors/graph_editor/fcurves/introduction>`
+- :doc:`F-曲线 编辑 </editors/graph_editor/fcurves/introduction>`
 - :doc:`F-曲线 修改器 </editors/graph_editor/fcurves/fmodifiers>`
 
 

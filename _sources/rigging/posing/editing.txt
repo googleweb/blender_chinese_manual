@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|im=update|text=inbetweens, pose menu tools}}.
 
 *************
-Editing Poses
+编辑 Poses
 *************
 
 .. figure:: /images/rigging-posetools.jpg
@@ -24,7 +24,7 @@ there are some important specificities:
   (and not e.g. the active bone's root when *Active Object* is selected, etc.).
 
 
-Selecting Bones
+选择 Bones
 ===============
 
 Selection in *姿态模式* is very similar to the one in :doc:`编辑模式 </rigging/armatures/bones/selecting>`,

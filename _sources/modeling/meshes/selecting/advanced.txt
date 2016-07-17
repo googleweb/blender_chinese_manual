@@ -12,7 +12,7 @@ Linked
    Selects all components that are connected to the current selection. (see `Select Linked`_)
 Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
-Checker Deselect
+间隔式弃选
    Deselect alternating faces, to create a checker like pattern.
 Select Every N Number of Vertices
    Selects vertices that are multiples of N.
@@ -145,7 +145,7 @@ Face Selection Mode:
       Selects all faces that are (nearly) in the same plane as those selected.
 
 
-Selecting Loops
+选择 Loops
 ===============
 
 You can easily select loops of components:

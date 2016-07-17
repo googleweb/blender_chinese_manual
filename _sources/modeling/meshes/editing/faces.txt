@@ -276,4 +276,4 @@ See :ref:`Rotate Edge <modeling-meshes-editing-edges_rotate>` for more informati
 Normals
 -------
 
-See :ref:`Editing Normals <modeling-meshes-editing-normals_editing>` for more information.
+See :ref:`编辑 Normals <modeling-meshes-editing-normals_editing>` for more information.

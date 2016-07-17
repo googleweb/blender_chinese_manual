@@ -1,6 +1,6 @@
 
 ********************************************************
-Installation Guide for Editing the Blender手册 on OSX
+Installation Guide for 编辑 the Blender手册 on OSX
 ********************************************************
 
 This guide covers the following topics:

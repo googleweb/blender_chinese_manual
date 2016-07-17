@@ -48,7 +48,7 @@ This is why this form of duplication is sometimes called "shallow link",
 because not all data-blocks are shared; some of them are "hard copied"!
 
 Note that you can choose which types of data-block will be linked or copied when duplicating:
-in the :ref:`用户首选项, Editing Page <prefs-editing-duplicate_data>`.
+in the :ref:`用户首选项, 编辑 Page <prefs-editing-duplicate_data>`.
 
 
 例子s

@@ -51,7 +51,7 @@ the other two cubes follow the movement.
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Proportional Editing` and via the |prop-edit-edit-mode-icon| highlighted icon
+   | Menu:     :menuselection:`Mesh --> Proportional 编辑` and via the |prop-edit-edit-mode-icon| highlighted icon
    | Hotkey:   :kbd:`O`, :kbd:`Alt-O`, :kbd:`Shift-O`
 
 
@@ -87,7 +87,7 @@ Options
    * - .. figure:: /images/editors_3dview_transform-control_proportional-edit-tool.jpg
          :width: 200px
 
-         Proportional Editing tool.
+         Proportional 编辑 tool.
 
      - .. figure:: /images/editors_3dview_transform-control_proportional-edit-falloff-options.jpg
          :width: 200px
@@ -95,10 +95,10 @@ Options
          Falloff menu.
 
 
-The *Proportional Editing* mode menu is on the *3D视图* header.
+The *Proportional 编辑* mode menu is on the *3D视图* header.
 
 Disable :kbd:`O`, :kbd:`Alt-O`
-   Proportional Editing is Off, only selected vertices will be affected.
+   Proportional 编辑 is Off, only selected vertices will be affected.
 Enable :kbd:`O`, :kbd:`Alt-O`
    Vertices other than the selected vertex are affected, within a defined radius.
 Projected (2D)

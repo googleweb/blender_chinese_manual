@@ -179,11 +179,11 @@ it will bake significantly slower than before,
 and it will probably clip through the box pretty badly as in the picture on the right.
 
 
-Editing the cached simulation
+编辑 the cached simulation
 -----------------------------
 
 The cache contains the shape of the mesh at each frame. You can edit the cached simulation,
-after you've baked the simulation and pressed the *Bake Editing* button.
+after you've baked the simulation and pressed the *Bake 编辑* button.
 Just go to the frame you want to fix and :kbd:`Tab` into *编辑模式*.
 There you can move your vertices using all of Blender's mesh shaping tools. When you exit,
 the shape of the mesh will be recorded for that frame of the animation.

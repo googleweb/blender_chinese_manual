@@ -29,7 +29,7 @@ The following guides lead you through the process.
 
    Install <install/index.rst>
    Build <build/index.rst>
-   Editing <editing.rst>
+   编辑 <editing.rst>
    Patch & Commit <patch_commit.rst>
 
 

@@ -1,7 +1,7 @@
 .. _modeling_curves_editing-index:
 
 ##########
-  Editing
+  编辑
 ##########
 
 .. toctree::

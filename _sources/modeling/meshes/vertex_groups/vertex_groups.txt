@@ -240,7 +240,7 @@ Note that Removing weight Assignments is not available for locked Vertex Groups.
 The Remove button is grayed out in that case.
 
 
-Using groups for Selecting/Deselecting
+Using groups for 选择/Deselecting
 --------------------------------------
 
 You can quickly select all assigned vertices of a group:
@@ -252,7 +252,7 @@ You can quickly select all assigned vertices of a group:
 - When you :kbd:`LMB` click the *Deselect* button instead,
   then the vertices assigned to the active group will be deselected in the 3D视图.
 
-.. note:: Selecting/Deselecting is additive
+.. note:: 选择/Deselecting is additive
 
    If you already have verts selected in the 3D视图,
    then selecting the verts of a group will add the verts

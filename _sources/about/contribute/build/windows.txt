@@ -34,5 +34,5 @@ We are now ready to convert all those **rst** files into pretty **html**!
 
 ------------------------
 
-Continue with the next step: :doc:`Editing </about/contribute/editing>`
+Continue with the next step: :doc:`编辑 </about/contribute/editing>`
 

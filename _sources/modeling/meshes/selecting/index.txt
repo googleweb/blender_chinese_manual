@@ -1,7 +1,7 @@
 .. _modeling_meshes_selecting-index:
 
 ############
-  Selecting
+  选择
 ############
 
 .. toctree::

@@ -133,7 +133,7 @@ Invert Selection :kbd:`Ctrl-I`
    Selects all geometry that are not selected, and deselect currently selected components.
 Select Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
-Checker Deselect
+间隔式弃选
    Deselect alternating faces, to create a checker like pattern.
 Select Sharp Edges
    This option will select all edges that are between two faces forming an angle less than a given value,

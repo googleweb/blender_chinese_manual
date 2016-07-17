@@ -65,7 +65,7 @@ including the "blue" font that has been applied to a curve path.
    (rather than the entire character set).
 
 
-Editing Text
+编辑 Text
 ============
 
 .. admonition:: 参考
@@ -81,7 +81,7 @@ Editing Text
    Text in 编辑模式.
 
 
-Editing text is quite different from other object types in Blender, and happens mainly in two areas.
+编辑 text is quite different from other object types in Blender, and happens mainly in two areas.
 First, the 3D视图, of course, where you type your text, and have a few shortcuts, e.g. for applying
 styles (see `Character`_) - note however, that most Blender hotkeys you know in *编辑模式*
 do not exist for texts! The second place is the Properties Editor, especially the *Font* tab.
@@ -90,7 +90,7 @@ The menu of the 3D视图 header has nearly no use,
 and there is no *Specials* menu... You have no transform nor mirror tools, and so on.
 However, you can apply to texts the same modifiers as for curves.
 
-Editing *Text* is similar to using a standard text editor but is not as
+编辑 *Text* is similar to using a standard text editor but is not as
 full-featured and has some differences:
 
 Exit *编辑模式*
@@ -118,7 +118,7 @@ Inserting Text
 --------------
 
 You can insert text in two ways: from the internal text buffer
-(`Editing Text`_), or from a text file.
+(`编辑 Text`_), or from a text file.
 
 To load text from a text file, use the :menuselection:`Text --> Paste File` tool.
 This will bring up a *文件浏览器* editor for navigating to a valid UTF-8 file.
@@ -503,7 +503,7 @@ Preview, 渲染 resolution. See :ref:`curve resolution <curve-resolution>`.
    the shape settings.
 
 
-Fast Editing
+Fast 编辑
    disables curve filling while in edit mode.
 
 

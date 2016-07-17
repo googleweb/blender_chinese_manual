@@ -88,7 +88,7 @@ The typical workflow for pinning:
 .. Note that if you move the cloth object ''after'' you have already run some simulations,
    you must unprotect and clear the cache; otherwise, Blender will use the position of the
    current/cached mesh's vertices when trying to represent where they are.
-   Editing the shape of the mesh, after simulation, is also discussed below.
+   编辑 the shape of the mesh, after simulation, is also discussed below.
    You may disable the cloth and edit the mesh as a normal mesh editing process.
    This is jumping ahead and not clear and not true at this point.
    --[[User:Roger|Roger]] 18:42, 27 April 2008 (UTC)

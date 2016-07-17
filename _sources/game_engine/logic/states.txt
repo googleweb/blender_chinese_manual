@@ -39,7 +39,7 @@ These will operate different actuators depending on the current state of the act
 and some of these actuators may switch the actor's state under appropriate conditions.
 
 
-Editing States
+编辑 States
 ==============
 
 .. figure:: /images/bge_controller_state_panel.jpg

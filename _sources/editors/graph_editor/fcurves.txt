@@ -215,7 +215,7 @@ cannot have more than **one** value at a given time, hence:
           After moving the second keyframe.
 
 
-Editing Tools
+编辑 Tools
 =============
 
 By default, when new channels are added, the *Graph Editor* sets them to *编辑模式*.

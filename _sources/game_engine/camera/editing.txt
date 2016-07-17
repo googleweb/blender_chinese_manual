@@ -1,6 +1,6 @@
 
 **************
-相机 Editing
+相机 编辑
 **************
 
 .. figure:: /images/bge_camera_properties.jpg

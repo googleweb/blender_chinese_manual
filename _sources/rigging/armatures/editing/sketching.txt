@@ -142,7 +142,7 @@ By the way, the *Peel Objects* button at the bottom of the *Bone Sketching* pane
 :ref:`snap to mesh <transform-snap-element>` page for details.
 
 
-Selecting Strokes
+选择 Strokes
 =================
 
 A stroke can be selected (materialized by a solid red-to-white line), or not

@@ -9,7 +9,7 @@ of their controllers.
 
 The logic blocks for all types of actuator may be constructed and changed using the
 :doc:`逻辑编辑器 </editors/logic_editor>`; details of this process are given in the
-:doc:`Actuator Editing </game_engine/logic/actuators/editing>` page.
+:doc:`Actuator 编辑 </game_engine/logic/actuators/editing>` page.
 
 
 The following types of actuator are currently available:

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Curve Deform &mdash; Blender参考手册</title>
+  <title>曲线形变 &mdash; Blender参考手册</title>
   
 
   
@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="Editing" href="index.html"/>
-        <link rel="next" title="Curve Extrusion" href="extrude.html"/>
-        <link rel="prev" title="Curve Editing" href="introduction.html"/> 
+        <link rel="up" title="编辑" href="index.html"/>
+        <link rel="next" title="曲线挤出" href="extrude.html"/>
+        <link rel="prev" title="曲线编辑" href="introduction.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -94,11 +94,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selecting.html">Selecting</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Editing</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">Curve Editing</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Curve Deform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="extrude.html">Curve Extrusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">曲线编辑</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">曲线形变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extrude.html">曲线挤出</a></li>
 </ul>
 </li>
 </ul>
@@ -157,9 +157,9 @@
       
           <li><a href="../index.html">曲线</a> &raquo;</li>
       
-          <li><a href="index.html">Editing</a> &raquo;</li>
+          <li><a href="index.html">编辑</a> &raquo;</li>
       
-    <li>Curve Deform</li>
+    <li>曲线形变</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,13 +174,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="curve-deform">
-<h1>Curve Deform<a class="headerlink" href="#curve-deform" title="Permalink to this headline">¶</a></h1>
-<p><em>Curve Deform</em> provides a simple but efficient method of defining a deformation on a mesh.
+<h1>曲线形变<a class="headerlink" href="#curve-deform" title="Permalink to this headline">¶</a></h1>
+<p><em>曲线形变</em> provides a simple but efficient method of defining a deformation on a mesh.
 By parenting a mesh object to a curve, you can deform the mesh up or down the curve by moving the mesh along,
 or orthogonal to, the dominant axis.
 This is a most useful tool to make an object follow a complex path,
 like e.g. a sheet of paper inside a printer, a film inside a camera, the water of a canal...</p>
-<p>The <em>Curve Deform</em> works on a (global) dominant axis, X, Y, or Z.
+<p>The <em>曲线形变</em> works on a (global) dominant axis, X, Y, or Z.
 This means that when you move your mesh in the dominant direction,
 the mesh will traverse along the curve. Moving the mesh in an orthogonal direction will move
 the mesh object closer or further away from the curve.
@@ -200,7 +200,7 @@ before adding the curve deform. This gives the best control over how the deforma
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Use modifiers!</p>
-<p class="last">The <em>Curve Deform</em> relationship is now also a modifier, called <a class="reference internal" href="../../modifiers/deform/curve.html"><span class="doc">Curve</span></a>.
+<p class="last">The <em>曲线形变</em> relationship is now also a modifier, called <a class="reference internal" href="../../modifiers/deform/curve.html"><span class="doc">Curve</span></a>.
 The <em>Curve</em> modifier function acts the same as its counterpart,
 except that when the modifier is used, the &#8220;dominant axis&#8221; is set inside its properties -
 and the <em>Track</em> X, Y, Z buttons no longer have an effect on it.
@@ -214,7 +214,7 @@ And you have some goodies, like the possibility, if &#8220;curving&#8221; a mesh
 </div>
 <p>When parenting an object (mesh, curve, meta, ...) to a curve <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>,
 you will be presented with a menu (<em>Make Parent</em> <em>menu</em>).</p>
-<p>By selecting <em>Curve Deform</em>, you enable the curve deform function on the mesh object.</p>
+<p>By selecting <em>曲线形变</em>, you enable the curve deform function on the mesh object.</p>
 <div class="figure" id="id2">
 <img alt="../../../_images/curvesdeform_animpanel.jpg" src="../../../_images/curvesdeform_animpanel.jpg" />
 <p class="caption"><span class="caption-text">动画 settings panel.</span></p>
@@ -267,7 +267,7 @@ and optionally change the dominant axis to Y.</li>
 <li>Or you can choose the old, deprecated method (note that it creates a &#8220;virtual&#8221; modifier...):<ul>
 <li>Select the Monkey <code class="kbd docutils literal"><span class="pre">RMB</span></code>, and then shift select the curve <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> to open up the <em>Make Parent</em> menu.</li>
-<li>Select <span class="menuselection">Make Parent ‣ Curve Deform</span>.</li>
+<li>Select <span class="menuselection">Make Parent ‣ 曲线形变</span>.</li>
 </ul>
 </li>
 <li>The Monkey should be positioned on the curve, as in Fig. <a class="reference internal" href="#fig-curves-deform-monkey-curve"><span class="std std-ref">Monkey on a Curve.</span></a>.</li>
@@ -301,10 +301,10 @@ Sometimes this is what you want to achieve, so you will need to experiment and t
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="extrude.html" class="btn btn-neutral float-right" title="Curve Extrusion" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="extrude.html" class="btn btn-neutral float-right" title="曲线挤出" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Curve Editing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="introduction.html" class="btn btn-neutral" title="曲线编辑" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

@@ -27,13 +27,13 @@ The header bar contains several menus and options for working with UVs
 View Menu
    Tools for, working with the editor and controlling how things are displayed.
    The properties panel has display options and manipulation tools.
-Select Menu
-   Tools for :doc:`Selecting UV's </editors/uv_image/uv_editing/layout_editing>`
+选择菜单
+   Tools for :doc:`选择 UV's </editors/uv_image/uv_editing/layout_editing>`
 图像 Menu
    This contains options for when :doc:`Working with 图像s </editors/uv_image/uv_editing/applying_image>`
 UVs Menu
    Contains tools for :doc:`Unwrapping 网格 </editors/uv_image/uv_editing/overview>`
-   and :doc:`Editing UV's </editors/uv_image/uv_editing/layout_editing>`.
+   and :doc:`编辑 UV's </editors/uv_image/uv_editing/layout_editing>`.
 
 图像 Selector Menu
    Select the image to apply when :doc:`Working with 图像s </editors/uv_image/uv_editing/applying_image>`.
@@ -50,8 +50,8 @@ Selection Modes:
    - Island
 Sticky Selection Mode
    When Sync Selection is disabled, these options control how UVs are selected.
-Proportional Editing
-   See :doc:`Proportional Editing </editors/3dview/transform/transform_control/proportional_edit>`.
+Proportional 编辑
+   See :doc:`Proportional 编辑 </editors/3dview/transform/transform_control/proportional_edit>`.
 UV Snapping
    Similar to Snapping in the 3D视图
 Active UV Texture Map Selector
@@ -71,7 +71,7 @@ Properties Panel
    图像编辑器 Properties Panel.
 
 UV Vertex
-   变换 Properties :doc:`Selecting UV's </editors/uv_image/uv_editing/layout_editing>`.
+   变换 Properties :doc:`选择 UV's </editors/uv_image/uv_editing/layout_editing>`.
 Grease Pencil
    See the :doc:`Grease Pencil </interface/grease_pencil/converting_to_geometry>` Docs.
 图像

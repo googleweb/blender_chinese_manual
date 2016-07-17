@@ -100,12 +100,12 @@ Tool Shelf
    Maximizes the *3D视图* editor to fill the full screen area.
 
 
-Select Menu
+选择菜单
 -----------
 
 This menu contains tools for selecting objects.
 
-:doc:`Read more about Selecting </editors/3dview/selecting>`
+:doc:`Read more about 选择 </editors/3dview/selecting>`
 
 
 Add Menu

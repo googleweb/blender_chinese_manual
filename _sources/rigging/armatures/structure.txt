@@ -53,7 +53,7 @@ their relationships have no effect on bone transformations in this mode
 (i.e. transforming a parent bone won't affect its children).
 
 
-Editing Bones Relationships
+编辑 Bones Relationships
 ---------------------------
 
 This is expressed in detail in the :ref:`editing pages <armature-bone_chain_edit>`,

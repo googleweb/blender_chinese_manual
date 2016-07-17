@@ -16,7 +16,7 @@ Finally, you can audio and synchronize the timing of the video sequence to match
 
 .. figure:: /images/sequencer_modes_screen_layout.jpg
 
-   Default 视频 Editing screen layout.
+   Default 视频 编辑 screen layout.
 
 The 视频序列编辑器 has a header (where the menu and view modes are shown) and a workspace,
 and works in one of several view modes. The Marker menu allows you to add markers in the VSE.

@@ -12,7 +12,7 @@ but you may need to do additional mapping or editing. In this fashion,
 you can use the UV Texture image to guide additional geometry changes.
 
 This section covers techniques for Mapping Uvs.
-The next sections cover :doc:`Editing UVs </editors/uv_image/uv_editing/layout_editing>`,
+The next sections cover :doc:`编辑 UVs </editors/uv_image/uv_editing/layout_editing>`,
 followed by methods of :doc:`Managing UV Layouts </editors/uv_image/uv_editing/layout_management>`,
 and :doc:`Applying 图像s to UVs </editors/uv_image/uv_editing/applying_image>`.
 
@@ -49,7 +49,7 @@ These are described more fully in the next sections.
 .. figure:: /images/uvunwrapping-screenlayout.jpg
    :width: 320px
 
-   UV Editing screen layout.
+   UV 编辑 screen layout.
 
 
 By default, meshes are not created with UVs. First you must map the faces, then
@@ -57,7 +57,7 @@ you can :doc:`edit them </editors/uv_image/uv_editing/layout_editing>`.
 The process of unwrapping your model is done within 编辑模式 in the 3D视图编辑窗口.
 This process creates one or more UV Islands in the :ref:`UV/图像编辑器 <editors-uv_image-index>`.
 
-To begin, choose the *UV Editing* :doc:`screen layout </interface/editors/screens>`
+To begin, choose the *UV 编辑* :doc:`screen layout </interface/editors/screens>`
 from the selection list at the top of your screen in the 用户首选项 header. 
 This sets one of the panes to show you the UV/图像编辑器
 :kbd:`Shift-F10`, and the other window to the 3D视图 :kbd:`Shift-F5`.
@@ -81,7 +81,7 @@ The process is:
 - Add a test image to see if there will be any distortion.
   See :doc:`Applying 图像s to UVs </editors/uv_image/uv_editing/applying_image>`
 - Adjust UVs in the UV/图像 editor.
-  See :doc:`Editing UVs </editors/uv_image/uv_editing/layout_editing>`
+  See :doc:`编辑 UVs </editors/uv_image/uv_editing/layout_editing>`
 
 
 Mapping Types
@@ -136,7 +136,7 @@ Based on the fundamental geometry of the object, and how it is being viewed,
 the :menuselection:`Mesh --> UV Unwrap --> Cube, Cylinder and Sphere` 
 UV Calculations attempt to unfold the faces for you as an initial best fit.
 Here, the view from the 3D视图 is especially important.
-Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
+Also, the settings for cube size or cylinder radius (编辑 buttons, UV Calculation panel)
 should be set (in Blender units) to encompass the object.
 
 The following settings are common for the Cube, Cylinder, and Sphere mappings:
@@ -158,7 +158,7 @@ Cube
 
 Cube mapping projects s mesh onto six separate planes, creating six UV islands.
 In the UV/图像 editor, these will appear overlapped, but can be moved.
-See :doc:`Editing UVs </editors/uv_image/uv_editing/layout_editing>`.
+See :doc:`编辑 UVs </editors/uv_image/uv_editing/layout_editing>`.
 
 Cube Size
    Set the size of the cube to be projected onto.
@@ -278,7 +278,7 @@ The workflow is the following:
   A seam is marked in 编辑模式 by selecting edges to make the seam and then issuing the command to Mark Seam.
 - Unwrap
 - Adjust seams and repeat
-- Manually adjust UVs. See the next section on Editing UVs.
+- Manually adjust UVs. See the next section on 编辑 UVs.
 
 
 Marking Seams
