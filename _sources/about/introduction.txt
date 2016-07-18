@@ -1,6 +1,6 @@
 
 **********************************
-简介 to the Blender手册
+Blender手册简介
 **********************************
 
 In this manual aims to be a complete and concise source of information
