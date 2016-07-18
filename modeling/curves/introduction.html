@@ -464,41 +464,37 @@ NURBS原理是一个<em>非常</em>复杂的话题. 有关介绍,
 <p class="caption"><span class="caption-text">NURBS激活的样条面板.</span></p>
 </div>
 <dl class="docutils" id="modeling-curve-knot">
-<dt>Knots</dt>
-<dd><p class="first">One of the characteristics of a NURBS object is the <em>knot vector</em>. This is a sequence of
-numbers used to determine the influence of the control points on the curve.
-While you cannot edit the knot vectors directly, you can influence them through the
-<em>Endpoint</em> and <em>贝塞尔</em> options in the Active Spline panel. Note that the
-<em>Endpoint</em> and <em>贝塞尔</em> settings only apply to open NURBS曲线.</p>
+<dt>节点</dt>
+<dd><p class="first">NURBS物体的一个特征就是<em>节点矢量</em>. 这是一系列的数值用于确定对曲线上的控制点的影响.然而你并不能直接编辑节点矢量, 你能通过激活的样条面板的<em>端点</em>和<em>贝塞尔</em>选项改变它们
+.注意<em>端点</em>和<em>贝塞尔</em>设置仅应用与未封闭的NURBS曲线.</p>
 <dl class="last docutils">
 <dt>循环</dt>
-<dd><p class="first">Makes the NURBS曲线 cyclic.</p>
+<dd><p class="first">使NURBS曲线成环.</p>
 <div class="last figure" id="id18">
 <img alt="../../_images/modeling_curves_nurbs-cyclic.jpg" src="../../_images/modeling_curves_nurbs-cyclic.jpg" />
-<p class="caption"><span class="caption-text">A NURBS曲线 with Cyclic applied.</span></p>
+<p class="caption"><span class="caption-text">应用循环的NURBS曲线.</span></p>
 </div>
 </dd>
 <dt>贝塞尔</dt>
-<dd>Makes the NURBS曲线 act like a 贝塞尔曲线.</dd>
-<dt>Endpoint</dt>
-<dd><p class="first">Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</p>
+<dd>使NURBS曲线表现像贝塞尔曲线.</dd>
+<dt>端点</dt>
+<dd><p class="first">使曲线连接到末端控制点. 循环必须禁用该选项才能生效.</p>
 <div class="last figure" id="id19">
 <a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-endpoint.jpg"><img alt="../../_images/modeling_curves_nurbs-endpoint.jpg" src="../../_images/modeling_curves_nurbs-endpoint.jpg" style="width: 511px;" /></a>
-<p class="caption"><span class="caption-text">A NURBS曲线 with Endpoint enabled.</span></p>
+<p class="caption"><span class="caption-text">启用端点的NURBS曲线.</span></p>
 </div>
 </dd>
 </dl>
 </dd>
 </dl>
 <dl class="docutils" id="modeling-curve-order">
-<dt>Order</dt>
-<dd><p class="first">The order of the NURBS曲线 determines the area of influence of the control points over the curve.
-Higher order values means that a single control point has a greater
-influence over a greater relative proportion of the curve.
-The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</p>
+<dt>次序</dt>
+<dd><p class="first">NURBS曲线次序决定了曲线上控制点的影响区域.
+较高的次序值意味着单个控制点有较大的影响作用到较大的曲线相对比例.
+<em>次序</em>的有效值范围为2-6, 取决于曲线呈现的控制点的数量.</p>
 <div class="last figure" id="id20">
 <a class="reference internal image-reference" href="../../_images/modeling_curves_nurbs-order.jpg"><img alt="../../_images/modeling_curves_nurbs-order.jpg" src="../../_images/modeling_curves_nurbs-order.jpg" style="width: 511px;" /></a>
-<p class="caption"><span class="caption-text">NURBS曲线 with orders of 2 (左), 4 (中) and 6 (右).</span></p>
+<p class="caption"><span class="caption-text">NURBS曲线次序值为2(左),4(中)和6(右).</span></p>
 </div>
 </dd>
 </dl>
