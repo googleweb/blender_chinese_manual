@@ -175,34 +175,32 @@
             
   <div class="section" id="selecting">
 <h1>选择<a class="headerlink" href="#selecting" title="Permalink to this headline">¶</a></h1>
-<p>Curve selection in <em>编辑模式</em> is much less complex than with meshes! Mainly this is
-because you have only one selectable element type, the control points
-(no select mode needed here...). These points are a bit more complex than simple vertices,
-however, especially for 贝塞尔s, as there is the central vertex, and its two handles...</p>
-<p>The basic tools are the same as with <a class="reference internal" href="../meshes/selecting/basics.html"><span class="doc">meshes</span></a>,
-so you can select a simple control point with a <code class="kbd docutils literal"><span class="pre">RMB</span></code>,
-add to current selection with <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">B</span></code> border-select, and so on.</p>
-<p>One word about the 贝塞尔 control points: when you select the main central vertex,
-the two handles are automatically selected too, so you can grab it as a whole,
-without creating an angle in the curve. However, when you select a handle,
-only this vertex is selected, allowing you to modify this control vector...</p>
-<p><code class="kbd docutils literal"><span class="pre">L</span></code> (or <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code>) will add to the selection the cursor&#8217;s nearest control point, and all the linked ones,
-i.e. all points belonging to the same curve. Note that for 贝塞尔,
-using <code class="kbd docutils literal"><span class="pre">L</span></code> with a handle selected will select the whole control point and all the linked ones.</p>
+<p><em>编辑模式</em>下曲线选择相对网格没有那么复杂! 主要是因为仅有一种可选元素类型, 就是控制点
+(无需选择模式...). 这些控制点比简单的顶点还是复杂一些,
+不管怎样, 特别是贝塞尔, 同样的是中心顶点, 和它的两个控制柄...</p>
+<p>基本工具和<a class="reference internal" href="../meshes/selecting/basics.html"><span class="doc">网格</span></a>一样,
+因此你可以选择一个简单的控制点通过<code class="kbd docutils literal"><span class="pre">RMB</span></code>,
+添加到当前已选择通过<code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>, <code class="kbd docutils literal"><span class="pre">B</span></code> 框选, 等等.</p>
+<p>关于贝塞尔控制点的一句话: 当你选择主要的中心顶点,
+它的两个控制柄也将会自动选中, 因此你可以作为整体移动它,
+不在曲线创建任何角度. 然而, 当你选择一个控制柄,
+只有这个顶点被选中, 允许你去修改它的控制矢量...</p>
+<p><code class="kbd docutils literal"><span class="pre">L</span></code> (或<code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code>) 将会把以下添加到已选项: 游标最近的控制点, 和与其相连的点,
+也就是属于同一曲线的所有点. 对于贝塞尔需注意,
+对控制柄使用<code class="kbd docutils literal"><span class="pre">L</span></code> 选择将会选择整个控制点和与其相连的点.</p>
 <div class="section" id="select-menu">
 <h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this headline">¶</a></h2>
-<p>With curves, all &#8220;advanced&#8221; selection options are regrouped in the <em>Select</em> menu of
-the 3D视图s header. Let us detail them.</p>
+<p>关于曲线, 所有&#8220;高级&#8221;的选择选项都已重新分组在3D视图标题栏<em>选择</em>菜单. 让我们详述它们.</p>
 <ul class="simple">
-<li><em>Random...</em></li>
-<li><em>Inverse</em></li>
-<li><em>Select/Deselect All</em></li>
+<li><em>随机...</em></li>
+<li><em>反选</em></li>
+<li><em>选择/取消选择 所有</em></li>
 </ul>
 <dl class="docutils">
-<dt>Border Select</dt>
-<dd>All these options have the same meaning and behavior as in <a class="reference internal" href="../../editors/3dview/selecting.html"><span class="doc">物体模式</span></a>
-(and the specifics of <em>Border Select</em> in <em>编辑模式</em> have already been discussed
-<a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">here</span></a>).</dd>
+<dt>框选</dt>
+<dd>所有这些选项与在<a class="reference internal" href="../../editors/3dview/selecting.html"><span class="doc">物体模式</span></a>有相同的含义和行为
+(<em>编辑模式</em>下的<em>框选</em>已经<a class="reference internal" href="../meshes/selecting/introduction.html"><span class="doc">在此</span></a>详细讨论过了
+).</dd>
 </dl>
 </div>
 <div class="section" id="checker-deselect">
@@ -211,12 +209,12 @@ the 3D视图s header. Let us detail them.</p>
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">Select ‣ 间隔式弃选</span></div>
+<div class="line">菜单:     <span class="menuselection">选择 ‣ 间隔式弃选</span></div>
 <div class="line">快捷键:   无</div>
 </div>
 </div>
-<p>This only works if you already have at least one control point selected.
-Using the current selection, it will add to it every nth control point,
+<p>它仅在你至少已经选中一个控制点的情况下生效.
+使用当前的选择, it will add to it 每n个控制点,
 before and after the initial selection. The &#8220;selection step&#8221; is specified in the <em>N</em>
 pop-up numeric field shown during the tool start.</p>
 <dl class="docutils">
@@ -229,12 +227,12 @@ pop-up numeric field shown during the tool start.</p>
 </dl>
 </div>
 <div class="section" id="select-deselect-first-last">
-<h2>选中/弃选首点/末点<a class="headerlink" href="#select-deselect-first-last" title="Permalink to this headline">¶</a></h2>
+<h2>选中/弃选 首点/末点<a class="headerlink" href="#select-deselect-first-last" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">Select ‣ Select/Deselect First</span>, <span class="menuselection">Select ‣ Select/Deselect Last</span></div>
+<div class="line">菜单:     <span class="menuselection">选择 ‣ 选择/弃选 首点</span>, <span class="menuselection">选择 ‣ 选择/弃选 末点</span></div>
 <div class="line">快捷键:   无</div>
 </div>
 </div>
@@ -248,7 +246,7 @@ when using it as path...).</p>
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">Select ‣ Select 下一页</span>, <span class="menuselection">Select ‣ Select 上一页</span></div>
+<div class="line">菜单:     <span class="menuselection">选择 ‣ 选择 下一页</span>, <span class="menuselection">选择 ‣ 选择 上一页</span></div>
 <div class="line">快捷键:   无</div>
 </div>
 </div>
@@ -262,8 +260,8 @@ the control points following or preceding the selected ones along the curve).</p
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">Select ‣ More/Less</span></div>
-<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code>/<code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></div>
+<div class="line">菜单:     <span class="menuselection">选择 ‣ 扩展/缩减</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-数字键盘+</span></code>/<code class="kbd docutils literal"><span class="pre">Ctrl-数字键盘-</span></code></div>
 </div>
 </div>
 <p>Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.</p>
