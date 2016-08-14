@@ -214,16 +214,15 @@
 </div>
 </div>
 <p>它仅在你至少已经选中一个控制点的情况下生效.
-使用当前的选择, it will add to it 每n个控制点,
-before and after the initial selection. The &#8220;selection step&#8221; is specified in the <em>N</em>
-pop-up numeric field shown during the tool start.</p>
+使用当前的选择, 它将会把每n个控制点添加到选择,最初选择的前后. &#8220;选择步进&#8221;将会在 <em>N</em>
+弹出菜单数值栏显示在工具开始应用期间.</p>
 <dl class="docutils">
-<dt>Nth Selection</dt>
-<dd>Number of points to select.</dd>
-<dt>Skip</dt>
-<dd>Number of points to skip.</dd>
-<dt>Offset</dt>
-<dd>Offests at what point to start at.</dd>
+<dt>N项选择</dt>
+<dd>第N项选择.</dd>
+<dt>跳过</dt>
+<dd>跳过的点数.</dd>
+<dt>偏移量</dt>
+<dd>首选点的偏移量.</dd>
 </dl>
 </div>
 <div class="section" id="select-deselect-first-last">
@@ -236,9 +235,8 @@ pop-up numeric field shown during the tool start.</p>
 <div class="line">快捷键:   无</div>
 </div>
 </div>
-<p>These commands will toggle the selection of the first or last control point(s) of the curve(s)
-in the object. This is useful to quickly find the start of a curve (e.g.
-when using it as path...).</p>
+<p>这些命令用于切换选择物体曲线的首端和末端控制点. 这个命令主要用于快速寻找曲线的起点(例如
+当使用它做路径时...).</p>
 </div>
 <div class="section" id="select-next-previous">
 <h2>选择下一项 /上一项<a class="headerlink" href="#select-next-previous" title="Permalink to this headline">¶</a></h2>
@@ -246,13 +244,12 @@ when using it as path...).</p>
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">选择 ‣ 选择 下一页</span>, <span class="menuselection">选择 ‣ 选择 上一页</span></div>
+<div class="line">菜单:     <span class="menuselection">选择 ‣ 选择 下一项</span>, <span class="menuselection">选择 ‣ 选择 上一项</span></div>
 <div class="line">快捷键:   无</div>
 </div>
 </div>
-<p>These commands will select the next or previous control point(s),
-based on the current selection (i.e.
-the control points following or preceding the selected ones along the curve).</p>
+<p>这些命令将会选择下一个或者前一个控制点,
+基于当前的选择(也就是沿着曲线的已选择控制点后面的或者先前的一些控制点).</p>
 </div>
 <div class="section" id="select-more-less">
 <h2>扩展/缩减 选择<a class="headerlink" href="#select-more-less" title="Permalink to this headline">¶</a></h2>
@@ -264,21 +261,21 @@ the control points following or preceding the selected ones along the curve).</p
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-数字键盘+</span></code>/<code class="kbd docutils literal"><span class="pre">Ctrl-数字键盘-</span></code></div>
 </div>
 </div>
-<p>Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.</p>
+<p>它们的目的是, 基于当前所选的控制点, 来减少或者扩大这些选择.</p>
 <dl class="docutils">
-<dt>More</dt>
-<dd>for each selected control point, select <em>all</em> its linked points (i.e. one or two...).</dd>
-<dt>Less</dt>
-<dd>for each selected control point, if <em>all</em> points linked to this point are selected, keep this one selected.
-其他wise, de-select it.</dd>
+<dt>扩展选择</dt>
+<dd>对每一个已选控制点, 选择<em>所有</em>它的相连点 (也就是 一个或者两个...).</dd>
+<dt>缩减选择</dt>
+<dd>对每一个已选控制点, 如果<em>所有</em>与这个点相连的点都已选中, 保持一个点选中.
+其他的, 都取消选中.</dd>
 </dl>
-<p>This implies two points:</p>
+<p>这里暗示两点:</p>
 <ul class="simple">
-<li>First, when <em>all</em> control points of a curve are selected, nothing will happen (as for <em>Less</em>,
-all linked points are always selected, and of course, <em>More</em> cannot add any).
-Conversely, the same goes when no control points are selected.</li>
-<li>Second, these tools will never &#8220;go outside&#8221; of a curve
-(they will never &#8220;jump&#8221; to another curve in the same object).</li>
+<li>首先, 当一条曲线的<em>所有</em>控制点都已选中, 什么都不会发生(至于<em>缩减选择</em>,
+所有相连控制点依旧时选中的, 当然, <em>扩展选择</em>同样不能添加任何选择点).
+反过来, 当没有控制点被选中也是同样的.</li>
+<li>其次, 这些工具从来不会&#8220;走出&#8221;一条曲线
+(它们从来不会&#8220;跳&#8221;到同一个物体的另一条曲线).</li>
 </ul>
 </div>
 </div>
