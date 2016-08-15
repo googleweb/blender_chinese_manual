@@ -278,7 +278,7 @@ Part Slip
    It is a two intermediate. It is almost Noslip, 1 in the Free exactly the same in 0.
 
 Surface
-   Surface Smoothing
+   Surface 平滑
       Amount of smoothing to be applied to the fluid surface.
       1.0 is standard, 0 is off, while larger values increase the amount of smoothing.
 

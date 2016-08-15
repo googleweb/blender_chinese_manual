@@ -15,7 +15,7 @@ To use this modifier effectively, it's useful to understand the basics of how it
 Rest State
    Used as a reference to detect highly distorted areas.
    The original vertex locations are used by default.
-Smoothing
+平滑
    Many options for this modifier relate to smoothing which is used internally
    to correct the distorted regions.
 

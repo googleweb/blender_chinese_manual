@@ -1,6 +1,6 @@
 
 *********
-Smoothing
+平滑
 *********
 
 Mesh Shading
@@ -69,7 +69,7 @@ giving the illusion of a smooth surface. Click the *Flat* button in the
 the first image above.
 
 
-Smoothing parts of a mesh
+平滑 parts of a mesh
 -------------------------
 
 Alternatively, you can choose which edges to smooth by entering *编辑模式*,
@@ -144,7 +144,7 @@ based on angle - those marked as sharp.
           Resulting render with sharp edge weighting.
 
 
-Smoothing the mesh geometry
+平滑 the mesh geometry
 ===========================
 
 The above techniques do not alter the mesh itself, only the way it is displayed and rendered.

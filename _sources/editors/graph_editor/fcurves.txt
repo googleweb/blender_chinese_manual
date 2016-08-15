@@ -313,7 +313,7 @@ if they have been modified. *Clean Keyframes* :kbd:`O`
           FCurve after cleaning.
 
 
-Smoothing
+平滑
 ---------
 
 .. admonition:: 参考

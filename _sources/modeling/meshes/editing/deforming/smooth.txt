@@ -60,7 +60,7 @@ mesh shape. Laplacian smooth exists as a mesh operation and as a non-destructive
    is a non-destructive alternative to the smooth tool.
 
 
-.. note:: Real Smoothing versus Shading Smoothing
+.. note:: Real 平滑 versus Shading 平滑
 
    Do not mistake this tool with the shading smoothing options described at
    :doc:`this page </modeling/meshes/smoothing>`, they do not work the same!

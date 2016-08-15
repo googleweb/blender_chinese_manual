@@ -105,7 +105,7 @@ The two other tools, *Tilt* and *Shrink/Fatten Radius* are related to
 :doc:`曲线挤出 </modeling/curves/editing/extrude>`.
 
 
-Smoothing
+平滑
 ---------
 
 .. admonition:: 参考
@@ -363,7 +363,7 @@ This is mainly useful when using a curve as path, or using the bevel and taper o
 转换工具
 ================
 
-Converting Curve Type
+转换曲线类型
 ---------------------
 
 .. admonition:: 参考
@@ -388,7 +388,7 @@ nor the same number of control points. For example, when converting a NURBS to a
 each group of three NURBS control points become a unique 贝塞尔 one (center point and two handles).
 
 
-Convert Curve to Mesh
+曲线转换为网格
 ---------------------
 
 .. admonition:: 参考
@@ -405,7 +405,7 @@ using the curve resolution to create edges and vertices.
 Note that it also keeps the faces and volumes created by closed and extruded curves.
 
 
-Convert Mesh to Curve
+网格转换为曲线
 ---------------------
 
 .. admonition:: 参考

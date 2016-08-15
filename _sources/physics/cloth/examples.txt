@@ -32,7 +32,7 @@ If you want the flag to flap or otherwise move in the scene,
 re-enable it for the frame range when it is in camera view.
 
 
-Smoothing of Cloth
+平滑 of Cloth
 ==================
 
 Now, if you followed this from the previous section, your cloth is probably looking a little blocky.

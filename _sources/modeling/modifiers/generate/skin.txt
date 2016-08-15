@@ -42,10 +42,10 @@ Create Armature
       Skin modifier because it should only deform the output,
       whereas if it were above the Skin modifier it might change the resulting topology.
 
-Branch Smoothing
+Branch 平滑
    A branch point is a vertex with three or more connected edges.
    These areas tend to produce more complicated topology, some of which may overlap.
-   The *Branch Smoothing* setting relaxes the surface around these points,
+   The *Branch 平滑* setting relaxes the surface around these points,
    with the side effect of shrinking the surface.
 
 Smooth Shading
