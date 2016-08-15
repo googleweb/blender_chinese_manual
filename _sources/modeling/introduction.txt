@@ -52,5 +52,5 @@ There are three primary types of modeling - mesh modeling, curve/surface modelin
    appearing as one unified object.
 
    This can also be a quick way to get started with a rough shape which can be converted to a mesh later.
-:doc:`文字建模 </modeling/texts/introduction>`
+:doc:`文本建模 </modeling/texts/introduction>`
    文本 modeling is an easy way to create logos and to simply add text to a scene.

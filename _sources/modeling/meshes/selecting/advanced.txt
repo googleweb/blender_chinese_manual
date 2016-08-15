@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|partial=X|text= expand advanced selection tools|im=examples}}.
 
 ******************
-高级应用 Selection
+高级选择
 ******************
 
 The select menu in edit mode contains additional tool for selecting components:

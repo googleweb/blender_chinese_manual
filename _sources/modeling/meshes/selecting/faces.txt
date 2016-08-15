@@ -1,6 +1,6 @@
 
 ***************
-选择 Faces
+选择面
 ***************
 
 .. figure:: /images/selection-mode_buttons_face-activated.jpg

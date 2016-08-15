@@ -1,6 +1,6 @@
 
 ***************
-选择 Edges
+选择边
 ***************
 
 .. figure:: /images/selection-mode_buttons_edge-activated.jpg
