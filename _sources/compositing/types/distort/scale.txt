@@ -49,7 +49,7 @@ Outputs
    Standard image output.
 
 
-例子s
+例子
 ========
 
 For instance X: 0.5 and Y: 0.5 would produce an image which width and height would be half of what they used to be.

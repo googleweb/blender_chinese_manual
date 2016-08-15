@@ -85,7 +85,7 @@ This ensures any transformation correctly gets applied,
 also for combinations of rotated and non-uniform scaled parents.
 
 
-例子s
+例子
 ========
 
 .. list-table::

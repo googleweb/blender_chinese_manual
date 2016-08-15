@@ -44,7 +44,7 @@ Operators: ``*``, ``/``, ``+``, ``-``
 
 Returns: a number
 
-例子s: ``3 + 2``, ``35 / 5``
+例子: ``3 + 2``, ``35 / 5``
 
 
 逻辑al operations
@@ -55,7 +55,7 @@ Returns: a number
 
 Returns: ``True`` or ``False``.
 
-例子s: ``3 > 2 (True)``, ``1 AND 0 (False)``
+例子: ``3 > 2 (True)``, ``1 AND 0 (False)``
 
 
 Conditional statement (if)
@@ -80,7 +80,7 @@ If the controller evaluates ``expression`` to False:
 - if ``pulse_if_expression_is_false`` is ``False``, the controller sends a negative pulse to the connected actuators.
 
 
-例子s
+例子
 ========
 
 Given the object has a property ``coins`` equal to 30:

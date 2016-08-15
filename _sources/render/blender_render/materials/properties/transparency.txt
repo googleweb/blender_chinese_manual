@@ -165,7 +165,7 @@ Gloss
       Number of cone samples averaged for blurry refraction.
 
 
-例子s
+例子
 ========
 
 Index of Refraction

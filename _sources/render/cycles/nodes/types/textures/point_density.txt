@@ -90,7 +90,7 @@ Density
    Density of volume.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_tex_point_density.jpg

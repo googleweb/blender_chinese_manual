@@ -170,7 +170,7 @@ it is as if the other metas were "included" or joined into the base one).
    Failing to do this will give confusing behavior *(invisible meta objects)*.
 
 
-例子s
+例子
 ========
 
 Fig. :ref:`fig-meta-ball-base` shows the *base* meta labeled "B".

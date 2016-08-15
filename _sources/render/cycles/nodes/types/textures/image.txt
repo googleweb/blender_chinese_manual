@@ -56,7 +56,7 @@ Alpha
    Alpha channel from image.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_tex_image_example.jpg

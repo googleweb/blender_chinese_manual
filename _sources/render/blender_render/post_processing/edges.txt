@@ -38,7 +38,7 @@ Color RGB
    The color of the rendered edges (black by default). Click on the swatch to see the color picker
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/bi_post_toon2.jpg

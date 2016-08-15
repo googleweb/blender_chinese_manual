@@ -150,7 +150,7 @@ Random Seed
    Same mesh with a different seed value.
 
 
-例子s
+例子
 ========
 
 Below are several examples illustrating the various possibilities of the *Subdivide*

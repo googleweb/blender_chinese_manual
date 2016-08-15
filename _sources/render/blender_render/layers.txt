@@ -9,7 +9,7 @@ For the engine-independent settings, see :doc:`this section </render/post_proces
 Light Override
    Enter the name of a light group, and the scene will be lit with only those lights.
 
-   例子s of where this might be used:
+   例子 of where this might be used:
 
    - Using multiple 渲染 Layers with different light group overrides 
      adds the possibility to tweak light intensity and color

@@ -98,7 +98,7 @@ For all the scenarios listed above (not all were listed, mind you..)
 the bpy module provides functionality to access and modify data.
 
 
-例子s
+例子
 ========
 
 bpy.context

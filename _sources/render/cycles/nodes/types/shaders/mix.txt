@@ -37,7 +37,7 @@ Shader
    Standar shader output
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_shader_mix_example.jpg

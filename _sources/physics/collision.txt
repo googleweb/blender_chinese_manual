@@ -88,7 +88,7 @@ Absorption
    10%, 43% and 3%, the absorption ends up at around 50% (``100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)``).
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/um_part_xiii_kst_pi10.jpg

@@ -38,7 +38,7 @@ Alpha
    Standard alpha output.
 
 
-例子s
+例子
 ========
 
 Using ColorRamp to create an Alpha Mask

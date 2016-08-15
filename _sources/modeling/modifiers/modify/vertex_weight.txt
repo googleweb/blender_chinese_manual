@@ -261,7 +261,7 @@ Falloff Type
    *Lowest* can be set above *Highest* to reverse the mapping.
 
 
-例子s
+例子
 ========
 
 Using Distance from a Target Object

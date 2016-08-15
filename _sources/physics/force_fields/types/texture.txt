@@ -51,7 +51,7 @@ Root Texture Coordinates
 Remember that only procedural texture are truly 3D.
 
 
-例子s
+例子
 ========
 
 - A single colored texture (0.5, 0.0, 0.5) creates a force in the direction of the positive Y-axis,

@@ -36,7 +36,7 @@ Fac
    Checker 1 mask (1 = Checker 1).
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_tex_checker.jpg

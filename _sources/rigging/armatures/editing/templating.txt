@@ -186,7 +186,7 @@ Think of them as A(ngle of bones), L(ength of bones) and D(efinition of stroke).
 
 
 .. list-table::
-   例子s of Template conversions for various influence weights values,
+   例子 of Template conversions for various influence weights values,
    with one stroke quite similar to the template chain's shape, and one stroke very different.
 
    * - .. figure:: /images/riggingtemplatinginfluenceweightsex111.jpg

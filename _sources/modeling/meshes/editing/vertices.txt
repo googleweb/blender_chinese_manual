@@ -110,7 +110,7 @@ so that the new edges are borders of the faces on one side, and the old ones,
 borders of the faces of the other side of the rip.
 
 
-例子s
+例子
 ^^^^^^^^
 
 .. list-table::

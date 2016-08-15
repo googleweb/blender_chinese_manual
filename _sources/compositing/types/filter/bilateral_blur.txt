@@ -53,7 +53,7 @@ Outputs
    Standard image output.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/compositing_nodes-bilateralblur_ex3.jpg

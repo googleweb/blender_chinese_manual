@@ -54,7 +54,7 @@ Outputs
    Standard image output.
 
 
-例子s
+例子
 ========
 
 Below are samples of common mix modes and uses, mixing a color or checker with a mask.

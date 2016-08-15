@@ -38,7 +38,7 @@ Velocity force
    If the fluid control object moves, the resulting velocity can also introduce a force to the fluid.
 
 
-例子s
+例子
 ========
 
 In this examples,

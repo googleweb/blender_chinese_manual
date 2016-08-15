@@ -10,7 +10,7 @@ through various methods.
 .. figure:: /images/render-freestyle-basicedgetypeselectionex.jpg
    :width: 600px
 
-   例子s of some basic edge types by LightBWK
+   例子 of some basic edge types by LightBWK
    (`File:EdgeType.zip <https://wiki.blender.org/index.php/File:EdgeType.zip>`__)
 
 

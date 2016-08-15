@@ -75,7 +75,7 @@ It also depends on whether or not the image has been rendered as a pre-mult,
 or as a straight RGBA image.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/compositing-alphaover-example.jpg

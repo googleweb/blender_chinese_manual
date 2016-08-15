@@ -33,7 +33,7 @@ Volume
    Standard shader output.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_shader_volume_scatter.png

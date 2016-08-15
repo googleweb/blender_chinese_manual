@@ -78,7 +78,7 @@ The input mesh should have some thickness to it; if the input is completely flat
 add a :doc:`solidify </modeling/modifiers/generate/solidify>` modifier above the remesh modifier.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/modifier-remesh-text-00.jpg

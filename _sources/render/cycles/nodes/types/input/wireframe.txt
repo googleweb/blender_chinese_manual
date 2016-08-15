@@ -35,7 +35,7 @@ Fac
    Black and white mask showing white lines representing edges according to the object's :term:`topology`.
 
 
-例子s
+例子
 ========
 
 Todo.

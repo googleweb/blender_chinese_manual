@@ -1,6 +1,6 @@
 
 ***************
-Simple 例子s
+Simple 例子
 ***************
 
 Here are some simple examples showing the power of softbody physics.

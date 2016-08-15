@@ -417,7 +417,7 @@ Normalized
    before executing the modifier on the entire model.
 
 
-例子s
+例子
 ========
 
 .. list-table::

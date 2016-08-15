@@ -163,7 +163,7 @@ Falloff
      -
 
 
-例子s
+例子
 --------
 
 Switch to a front view :kbd:`Numpad1` and activate the grab tool with :kbd:`G`.

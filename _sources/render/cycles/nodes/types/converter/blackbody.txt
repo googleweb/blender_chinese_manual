@@ -32,7 +32,7 @@ Color
    RGB color output.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_blackbody_example.jpg

@@ -50,7 +50,7 @@ BSDF output
    Standard shader output.
 
 
-例子s
+例子
 ========
 
 .. list-table::

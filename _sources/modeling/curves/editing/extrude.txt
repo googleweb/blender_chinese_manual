@@ -153,7 +153,7 @@ using *the local Y axis* for width control. Note also that:
   (the place where the endpoint of the curve connects to the beginning) is a smooth transition.
 
 
-例子s
+例子
 ========
 
 .. TODO: add some "simple" extrusion examples.

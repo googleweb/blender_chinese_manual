@@ -122,7 +122,7 @@ Material
     其他wise, the number is the slot index of the material to use for all newly created faces.
 
 
-例子s
+例子
 ========
 
 .. list-table::

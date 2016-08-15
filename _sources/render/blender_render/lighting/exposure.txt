@@ -51,7 +51,7 @@ Range
       (the brightest) (*Range*: 0.5).
 
 
-例子s
+例子
 ========
 
 With a linear correction every color value will get changed,

@@ -63,7 +63,7 @@ and the :doc:`节点编辑器 </editors/node_editor/index>` to feed the Mist pas
 This produces the mist effect but since Mist is off the object transparency (or lack of) is preserved.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/biworld-mist-example1.jpg

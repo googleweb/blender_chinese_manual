@@ -98,7 +98,7 @@ so you only can create a new surface by copying (`复制`_) an existing one
 :kbd:`Shift-D`, or adding a new one with the *Add* menu.
 
 
-例子s
+例子
 ^^^^^^^^
 
 图像s Fig. :ref:`fig-surface-edit-select-control` to Fig. :ref:`fig-surface-edit-select-complete`
@@ -277,7 +277,7 @@ as they define cross sections all along the object,
 and you just have to "skin" them as described above to get a nice, smooth and harmonious shape.
 
 
-例子s
+例子
 ^^^^^^^^
 
 Fig. Joining ready is an example of two NURBS surface curves, **not** NURBS曲线,

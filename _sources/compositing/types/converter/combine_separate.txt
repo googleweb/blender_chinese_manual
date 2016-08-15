@@ -60,7 +60,7 @@ Properties
 This node has no properties.
 
 
-例子s
+例子
 --------
 
 .. figure:: /images/compositing-covert-combinergba.jpg

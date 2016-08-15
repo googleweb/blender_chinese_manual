@@ -37,7 +37,7 @@ BSDF
    Standard shadder output.
 
 
-例子s
+例子
 ========
 
 .. list-table::

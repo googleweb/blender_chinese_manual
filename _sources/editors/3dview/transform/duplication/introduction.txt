@@ -51,7 +51,7 @@ Note that you can choose which types of data-block will be linked or copied when
 in the :ref:`用户首选项, 编辑 Page <prefs-editing-duplicate_data>`.
 
 
-例子s
+例子
 --------
 
 .. figure:: /images/modeling-duplicate-example.jpg
@@ -105,7 +105,7 @@ not links, so you still can rotate, scale, and move freely without affecting the
 
 .. _expl-object-link-duplicate:
 
-例子s
+例子
 --------
 
 .. figure:: /images/modelling-duplicate-linked-example.jpg

@@ -44,7 +44,7 @@ BSDF
    Standard shader output.
 
 
-例子s
+例子
 ========
 
 Todo.

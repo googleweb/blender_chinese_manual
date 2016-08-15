@@ -43,7 +43,7 @@ Sharp Edges
    :term:`Non-manifold` edges (edges shared by more than two faces) will always be split.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/modifier-edgesplit-example01.jpg

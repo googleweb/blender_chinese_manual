@@ -142,7 +142,7 @@ Warp Data Mesh
 --------------
 
 Many projection environments require images that are not simple perspective projections that
-are the norm for flat screen displays. 例子s include geometry correction for cylindrical
+are the norm for flat screen displays. 例子 include geometry correction for cylindrical
 displays and some new methods of projecting into planetarium domes or upright domes intended
 for VR.
 
@@ -189,7 +189,7 @@ To create your own Warp 网格 an interactive tool called meshmapper is availabl
 software package(requires full version).
 
 
-例子s
+例子
 ========
 
 `Spherical 镜像 Dome 4×3 <https://wiki.blender.org/uploads/8/81/Dev-GameEngine-Dome-Standard_4x3.data>`__,

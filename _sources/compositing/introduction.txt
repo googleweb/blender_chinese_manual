@@ -119,7 +119,7 @@ Highlight
    Highlights the nodes that are being calculated.
 
 
-例子s
+例子
 ========
 
 You can do just about anything with images using nodes.

@@ -55,7 +55,7 @@ Normal
    Direction of the normal.
 
 
-例子s
+例子
 ========
 
 Using the Material Node with Specularity

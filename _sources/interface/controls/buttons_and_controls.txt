@@ -135,7 +135,7 @@ Units
 As well as expressions, you can mix units with numbers; for this to work,
 units need to be set in the scene settings (Metric or Imperial).
 
-例子s of valid units include:
+例子 of valid units include:
 
 
 .. hlist::

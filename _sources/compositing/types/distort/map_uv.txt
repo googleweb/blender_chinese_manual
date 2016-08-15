@@ -51,7 +51,7 @@ Outputs
    it is recommended to keep those UV texture outlines around even, when shooting is done.
 
 
-例子s
+例子
 ========
 
 In the example below,

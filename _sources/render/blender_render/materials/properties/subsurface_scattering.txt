@@ -192,7 +192,7 @@ A more intuitive approach
 - Set the radius values appropriately.
 
 
-例子s
+例子
 ========
 
 Skin

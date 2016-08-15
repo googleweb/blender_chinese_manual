@@ -329,7 +329,7 @@ See the graphic at the end of the description of the *Lin/Quad Weighted* attenua
           渲染 showing the light attenuation of a Constant falloff light type with the Sphere option deactivated.
 
 
-例子s
+例子
 ========
 
 Distance 例子

@@ -198,7 +198,7 @@ Here are important points:
           The rest position of our destination armature.
 
 .. list-table::
-   例子s of pose copy/paste.
+   例子 of pose copy/paste.
 
    * - .. figure:: /images/riggingposingcopyposeexpose1armaorg.jpg
 
@@ -238,7 +238,7 @@ By default, children bones inherit:
 - Their parent scale, here again with their own offset.
 
 .. list-table::
-   例子s of transforming parented/connected bones.
+   例子 of transforming parented/connected bones.
 
    * - .. figure:: /images/riggingposingrelatioshipsandtransformexbasis.jpg
           :width: 200px
@@ -279,7 +279,7 @@ property on in this "family", this will break the scaling propagation, i.e. this
 all its descendants* will no longer be affected when you scale one of its ancestors.
 
 .. list-table::
-   例子s of transforming parented/connected bones with Inherit Rotation disabled.
+   例子 of transforming parented/connected bones with Inherit Rotation disabled.
 
    * - .. figure:: /images/riggingposingrelatioshipsandtransformexhingebone.jpg
           :width: 200px

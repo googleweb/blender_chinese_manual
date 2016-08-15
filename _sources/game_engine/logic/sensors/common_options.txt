@@ -59,7 +59,7 @@ Freq
    Raising the value of *freq* is a good way for saving performance costs by avoiding
    to execute controllers or activate actuators more often than necessary.
 
-   例子s: (Assuming the default frame rate with a frequency of 60 Hz (60 frames per second)).
+   例子: (Assuming the default frame rate with a frequency of 60 Hz (60 frames per second)).
 
 .. list-table::
    :header-rows: 1

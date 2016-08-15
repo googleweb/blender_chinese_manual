@@ -51,7 +51,7 @@ Mask Layer
 Material Override
    Overrides all material settings to use the Material chosen here.
 
-   例子s of where this might be used:
+   例子 of where this might be used:
 
    - To check lighting by using a plain diffuse material on all objects
    - 渲染 a wireframe of the scene

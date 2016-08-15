@@ -43,7 +43,7 @@ Constant
    Constant light falloff, where the distance to the light has no influence on its intensity.
 
 
-例子s
+例子
 ========
 
 Todo.

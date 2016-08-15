@@ -58,7 +58,7 @@ Material Offset
    this is applied as an offset from the first material.
 
 
-例子s
+例子
 ========
 
 When you got more Faces that meet at one point they are forming a star like pattern like seen

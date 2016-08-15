@@ -51,7 +51,7 @@ Z
    The combined Z-depth, which allows to thread multiple Z-combines together.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/node-zcombine_ex_alpha.jpg

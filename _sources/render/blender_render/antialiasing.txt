@@ -142,7 +142,7 @@ Notice that the last two filters also have a negative part;
 this will give an extra sharpening result.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/bi_aa02.jpg

@@ -30,7 +30,7 @@ Outputs
 Vector Output
    The transformed output vector.
 
-例子s
+例子
 ========
 
 Todo.

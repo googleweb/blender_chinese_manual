@@ -197,7 +197,7 @@ and also can be used for shading via the Ocean texture. The internal simulation 
 multi threaded with OpenMP to take advantage of multiple cores.
 
 
-例子s
+例子
 ========
 
 .. vimeo:: 18911131

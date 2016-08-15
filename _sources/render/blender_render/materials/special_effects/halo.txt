@@ -194,7 +194,7 @@ Another Option is Shaded. When shaded is enabled, the Halo will be affect by loc
 a lamp will make it brighter and affect its diffuse color and intensity.
 
 
-例子s
+例子
 ========
 
 Dotmatrix display

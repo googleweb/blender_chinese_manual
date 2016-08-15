@@ -102,7 +102,7 @@ and then run Blender.
 You can also add the Blender folder to your system ``PATH`` so that do you do not have to ``cd`` to it each time.
 
 
-例子s
+例子
 ========
 
 Single 图像

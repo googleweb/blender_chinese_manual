@@ -35,7 +35,7 @@ Outputs
    Standard image output
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/nodes-gamma.jpg

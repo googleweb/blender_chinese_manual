@@ -50,7 +50,7 @@ Animating Audio Track Properties
 ================================
 
 To animate audio strips simply hit :kbd:`I` over any of its values.
-例子s of animating an audio strip are to fade in/out background music or to adjust volume levels.
+例子 of animating an audio strip are to fade in/out background music or to adjust volume levels.
 Layered/crossed audio strips are added together;
 the lower channel does not override and cut out higher channels (unlike image and video strips).
 This makes Blender an audio mixer.

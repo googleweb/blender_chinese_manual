@@ -125,7 +125,7 @@ Gloss
       or based on the mesh's UV co-ordinates.
 
 
-例子s
+例子
 --------
 
 Fresnel

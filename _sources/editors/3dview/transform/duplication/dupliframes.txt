@@ -7,7 +7,7 @@ DupliFrames is a tool to duplicate objects at frames distributed along a path.
 This is a useful tool to quickly arrange objects.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/modeling-dupliframes-example01.jpg

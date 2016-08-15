@@ -35,7 +35,7 @@ Normal
    Standard normal output.
 
 
-例子s
+例子
 ========
 
 Todo.

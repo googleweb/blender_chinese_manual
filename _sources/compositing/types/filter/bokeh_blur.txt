@@ -55,7 +55,7 @@ Outputs
 
 
 
-例子s
+例子
 ========
 
 Three examples of how the size input may be used follow.

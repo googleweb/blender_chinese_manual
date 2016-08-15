@@ -43,7 +43,7 @@ Fac
    Texture intensity output.
 
 
-例子s
+例子
 ========
 
 .. list-table::

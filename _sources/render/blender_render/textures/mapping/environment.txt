@@ -105,7 +105,7 @@ Viewpoint Object
    Usually, an Empty is used as this object.
 
    - For planar reflections, the object should be in a location mirrored from the camera,
-     on the other side of the plane of reflection (see 例子s).
+     on the other side of the plane of reflection (see 例子).
      This is the most accurate usage of Environment maps.
    - For spherical reflections, the object should be in the center of the sphere. Generally,
      if the reflecting sphere's object center point is in the center of its vertices,
@@ -134,7 +134,7 @@ Depth
    If there are multiple reflecting objects using environment maps in the scene, some may appear solid,
    as they won't render each other's reflections. In order to show reflections within reflections,
    the environment maps need to be made multiple times, recursively,
-   so that the effects of one environment map can be seen in another environment map. See 例子s.
+   so that the effects of one environment map can be seen in another environment map. See 例子.
 
 
 Clipping Start/End
@@ -177,7 +177,7 @@ Minimum Filter Size
    Use Filter Size as a minimal filter value in pixels
 
 
-例子s
+例子
 ========
 
 In this example,

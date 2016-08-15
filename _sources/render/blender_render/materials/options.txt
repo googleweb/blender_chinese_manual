@@ -194,7 +194,7 @@ Subsurface Scattering
 ^^^^^^^^^^^^^^^^^^^^^
 
 Subsurface scattering simulates semi translucent objects in which light enters, bounces around,
-then exits in a different place. 例子s are candles, human skin, cheese, etc.
+then exits in a different place. 例子 are candles, human skin, cheese, etc.
 
 See :doc:`Subsurface Scattering </render/blender_render/materials/properties/subsurface_scattering>`
 

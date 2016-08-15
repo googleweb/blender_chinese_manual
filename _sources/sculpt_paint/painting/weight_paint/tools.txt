@@ -125,7 +125,7 @@ Invert
 
 Replaces each Weight of the selected weight group by × -1.0 weight.
 
-例子s:
+例子:
 
 - original 1.0 converts to 0.0
 - original 0.5 remains 0.5

@@ -48,7 +48,7 @@ Vector
    变换ed vector.
 
 
-例子s
+例子
 ========
 
 Todo.

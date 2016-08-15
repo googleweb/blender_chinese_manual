@@ -105,7 +105,7 @@ In this case, Blender won't rotate the source dividing the angle between those e
 For both cases, Blender will inform the user about the source rotation during the creation process.
 If you look at the Bottom of the Mesh Tools Panel, if you press :kbd:`Ctrl-LMB`,
 you will see that the Rotate Source is automatically checked and if :kbd:`Ctrl-Shift-LMB` is used,
-it will be automatically unchecked. 例子s:
+it will be automatically unchecked. 例子:
 
 - Creating Faces with shortcut :kbd:`Ctrl-LMB`, (see Fig. - Faces created with source automatically rotated)
 - Creating Faces with shortcut :kbd:`Ctrl-Shift-LMB`, (see Fig. Faces created with no source rotation) 

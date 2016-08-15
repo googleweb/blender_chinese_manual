@@ -91,7 +91,7 @@ a skinned mesh.
 The radius of selected vertices can be adjusted in the *变换* panel of the *Properties* region :kbd:`N`
 
 
-例子s
+例子
 ========
 
 .. _fig-modifier-skin-creature:

@@ -45,7 +45,7 @@ Fac
    Texture intensity output.
 
 
-例子s
+例子
 ========
 
 .. figure:: /images/cycles_nodes_tex_wave.jpg

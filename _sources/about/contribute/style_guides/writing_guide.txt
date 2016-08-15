@@ -117,7 +117,7 @@ Rules of thumb:
      See also `OpenGL <https://en.wikipedia.org/wiki/OpenGL>`__ on Wikipedia.
 
 
-例子s
+例子
 ^^^^^^^^
 
 This entry:

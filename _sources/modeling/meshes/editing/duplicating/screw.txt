@@ -197,7 +197,7 @@ Axis
    and also adjust the angular vectors of your profile, bending it accordingly. (See Fig. :ref:`fig-mesh-screw-interactive-panel`)
 
 
-例子s
+例子
 ========
 
 The Spring example
