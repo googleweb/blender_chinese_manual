@@ -6,7 +6,7 @@ Voronoi 纹理
 Procedural texture producing Voronoi cells.
 
 
-Inputs
+输入s
 ======
 
 Vector

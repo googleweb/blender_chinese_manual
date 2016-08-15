@@ -6,7 +6,7 @@ Checker 纹理
 Checkerboard texture.
 
 
-Inputs
+输入s
 ======
 
 Vector

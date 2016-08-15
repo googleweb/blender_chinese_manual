@@ -14,7 +14,7 @@ Alpha Over Node
 Use this node to layer images on top of one another.
 AlphaOver does not work on the colors of an image. 
 
-Inputs
+输入s
 ======
 
 Fac

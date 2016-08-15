@@ -16,7 +16,7 @@ For example, this is useful when compositing stock footage of explosions (very b
 which are normally shot against a solid, dark background.
 
 
-Inputs
+输入s
 ======
 
 图像

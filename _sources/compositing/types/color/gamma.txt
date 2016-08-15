@@ -13,7 +13,7 @@ Gamma Node
 
 Use this node to apply a gamma correction.
 
-Inputs
+输入s
 ======
 
 图像

@@ -19,7 +19,7 @@ for skin, red colors scatter further, which gives distinctive red-colored shadow
 and a soft appearance.
 
 
-Inputs
+输入s
 ======
 
 Color

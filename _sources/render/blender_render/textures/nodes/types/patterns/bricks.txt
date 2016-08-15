@@ -13,7 +13,7 @@ Bricks
 The Bricks node creates a brick like pattern.
 
 
-Inputs
+输入s
 ======
 
 Bricks 1, Bricks 2

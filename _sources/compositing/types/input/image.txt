@@ -12,7 +12,7 @@
 The *图像* node injects any image :doc:`format that is supported by Blender </render/output/output>`.
 
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

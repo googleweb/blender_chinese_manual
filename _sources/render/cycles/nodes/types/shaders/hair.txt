@@ -13,7 +13,7 @@ Hair
 Used to add shading for :doc:`Hair </physics/particles/hair/index>`.
 
 
-Inputs
+输入s
 ======
 
 Color
@@ -23,7 +23,7 @@ Offset
 Roughness U/V
    Controls the roughness in the direction light is skewed, and perpendicular to it.
 Tangent
-   Input tangent.
+   输入 tangent.
 
 
 Properties

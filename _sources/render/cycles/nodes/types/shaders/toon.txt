@@ -12,7 +12,7 @@ Toon
 Diffuse and Glossy Toon :abbr:`BSDF (Bidirectional scattering distribution function)` for
 creating cartoon light effects.
 
-Inputs
+输入s
 ======
 
 Color

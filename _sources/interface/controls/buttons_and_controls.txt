@@ -76,7 +76,7 @@ Incremental Steps
    To change the value in steps, click :kbd:`LMB` on the small triangles on the sides of the button.
 Dragging
    To change the value in a wider range, hold down :kbd:`LMB` and drag the mouse to the left or right.
-文本 Input
+文本 输入
    Press :kbd:`LMB` or :kbd:`Return` to edit the value as a text field.
 
    When entering values by hand, this button works like any other text button.
@@ -335,7 +335,7 @@ Pie Menus
 ---------
 
 A pie menu is a menu, whose items are spread radially around the mouse.
-Pie menus has to be activated in the 用户首选项 through :menuselection:`Add-ons --> UI --> Pie Menus Official`. 
+Pie menus has to be activated in the 用户首选项 through :menuselection:`插件 --> UI --> Pie Menus Official`. 
 
 .. figure:: /images/interface_pie-menu.jpg
    :width: 350px

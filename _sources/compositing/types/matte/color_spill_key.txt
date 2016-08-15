@@ -21,7 +21,7 @@ coloring them with a tinge of green or blue. To remove the green (or blue) light
 you use this fancy node.
 
 
-Inputs
+输入s
 ======
 
 图像

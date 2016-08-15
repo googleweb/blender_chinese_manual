@@ -14,7 +14,7 @@ The *UV Map* node is used to retrieve specific UV maps. Unlike the :doc:`纹理 
 this node can retrieve any UV map belonging to the object using the material.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

@@ -12,7 +12,7 @@ The *SplitViewer* node takes two images and displays these side-by-side
 as backdrop or as a Viewer Node output.
 
 
-Inputs
+输入s
 ======
 
 图像

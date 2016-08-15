@@ -12,7 +12,7 @@ At
 Returns the color of a texture at the specified coordinates.
 
 
-Inputs
+输入s
 ======
 
 纹理

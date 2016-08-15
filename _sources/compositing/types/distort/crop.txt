@@ -11,7 +11,7 @@ Crop Node
 
 The Crop Node takes an input image and crops it to a selected region.
 
-Inputs
+输入s
 ======
 
 图像

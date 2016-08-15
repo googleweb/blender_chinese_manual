@@ -8,7 +8,7 @@ sampled at the shading point and two nearby points on the surface to determine t
 direction of the normal.
 
 
-Inputs
+输入s
 ======
 
 Strength

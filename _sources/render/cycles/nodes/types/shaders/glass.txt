@@ -15,7 +15,7 @@ Since the Cycles path tracing integrator is not very good at rendering caustics,
 it helps to combine this with a transparent shader for shadows;
 for :ref:`more details see here <render-cycles-reducing_noise-glass_and_transp_shadows>`
 
-Inputs
+输入s
 ======
 
 Distribution

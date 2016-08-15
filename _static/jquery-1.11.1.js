@@ -604,7 +604,7 @@ var i,
 	compile,
 	select,
 	outermostContext,
-	sortInput,
+	sort输入,
 	hasDuplicate,
 
 	// Local document vars
@@ -976,7 +976,7 @@ function siblingCheck( a, b ) {
  * Returns a function to use in pseudos for input types
  * @param {String} type
  */
-function createInputPseudo( type ) {
+function create输入Pseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
 		return name === "input" && elem.type === type;
@@ -1343,8 +1343,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Maintain original order
-			return sortInput ?
-				( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
+			return sort输入 ?
+				( indexOf.call( sort输入, a ) - indexOf.call( sort输入, b ) ) :
 				0;
 		}
 
@@ -1370,8 +1370,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 				b === doc ? 1 :
 				aup ? -1 :
 				bup ? 1 :
-				sortInput ?
-				( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
+				sort输入 ?
+				( indexOf.call( sort输入, a ) - indexOf.call( sort输入, b ) ) :
 				0;
 
 		// If the nodes are siblings, we can do a quick check
@@ -1485,7 +1485,7 @@ Sizzle.uniqueSort = function( results ) {
 
 	// Unless we *know* we can detect duplicates, assume their presence
 	hasDuplicate = !support.detectDuplicates;
-	sortInput = !support.sortStable && results.slice( 0 );
+	sort输入 = !support.sortStable && results.slice( 0 );
 	results.sort( sortOrder );
 
 	if ( hasDuplicate ) {
@@ -1501,7 +1501,7 @@ Sizzle.uniqueSort = function( results ) {
 
 	// Clear input after sorting to release objects
 	// See https://github.com/jquery/sizzle/pull/225
-	sortInput = null;
+	sort输入 = null;
 
 	return results;
 };
@@ -2011,7 +2011,7 @@ Expr.pseudos["nth"] = Expr.pseudos["eq"];
 
 // Add button/input type pseudos
 for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
-	Expr.pseudos[ i ] = createInputPseudo( i );
+	Expr.pseudos[ i ] = create输入Pseudo( i );
 }
 for ( i in { submit: true, reset: true } ) {
 	Expr.pseudos[ i ] = createButtonPseudo( i );
@@ -7888,7 +7888,7 @@ var nodeHook, boolHook,
 	attrHandle = jQuery.expr.attrHandle,
 	ruseDefault = /^(?:checked|selected)$/i,
 	getSetAttribute = support.getSetAttribute,
-	getSetInput = support.input;
+	getSet输入 = support.input;
 
 jQuery.fn.extend({
 	attr: function( name, value ) {
@@ -7963,7 +7963,7 @@ jQuery.extend({
 				// Boolean attributes get special treatment (#10870)
 				if ( jQuery.expr.match.bool.test( name ) ) {
 					// Set corresponding property to false
-					if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
+					if ( getSet输入 && getSetAttribute || !ruseDefault.test( name ) ) {
 						elem[ propName ] = false;
 					// Support: IE<9
 					// Also clear defaultChecked/defaultSelected (if appropriate)
@@ -8006,7 +8006,7 @@ boolHook = {
 		if ( value === false ) {
 			// Remove boolean attributes when set to false
 			jQuery.removeAttr( elem, name );
-		} else if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
+		} else if ( getSet输入 && getSetAttribute || !ruseDefault.test( name ) ) {
 			// IE<8 needs the *property* name
 			elem.setAttribute( !getSetAttribute && jQuery.propFix[ name ] || name, name );
 
@@ -8024,7 +8024,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 
 	var getter = attrHandle[ name ] || jQuery.find.attr;
 
-	attrHandle[ name ] = getSetInput && getSetAttribute || !ruseDefault.test( name ) ?
+	attrHandle[ name ] = getSet输入 && getSetAttribute || !ruseDefault.test( name ) ?
 		function( elem, name, isXML ) {
 			var ret, handle;
 			if ( !isXML ) {
@@ -8048,7 +8048,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 });
 
 // fix oldIE attroperties
-if ( !getSetInput || !getSetAttribute ) {
+if ( !getSet输入 || !getSetAttribute ) {
 	jQuery.attr挂钩.value = {
 		set: function( elem, value, name ) {
 			if ( jQuery.nodeName( elem, "input" ) ) {

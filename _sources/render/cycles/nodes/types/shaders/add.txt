@@ -12,7 +12,7 @@ Add
 The *Add* node is uses to add to *Shaders* together.
 
 
-Inputs
+输入s
 ======
 
 Shaders

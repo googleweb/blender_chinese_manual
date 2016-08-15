@@ -15,7 +15,7 @@ RGB 曲线 Node
 This node allows color corrections for each color channel and levels adjustments in the compositing context.
 
 
-Inputs
+输入s
 ======
 
 Fac

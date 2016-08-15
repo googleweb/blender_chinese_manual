@@ -15,7 +15,7 @@ With this option it's possible to let only some materials be affected by AO,
 or to let it influence some materials more or less than others.
 
 
-Inputs
+输入s
 ======
 
 Color

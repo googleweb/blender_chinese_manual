@@ -11,7 +11,7 @@
 
 The image node can be used to load an external image.
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

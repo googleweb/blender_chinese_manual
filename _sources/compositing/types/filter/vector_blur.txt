@@ -13,7 +13,7 @@ Vector (Motion) Blur Node
 The Vector Blur node applies a **non** physically based method of simulating :term:`Motion blur`.
 It uses the vector speed render pass to blur the image pixels in 2D.
 
-Inputs
+输入s
 ======
 
 图像
@@ -21,7 +21,7 @@ Inputs
 Z
    Standard Z depth.
 Speed
-   Input for the "Vector" render pass.
+   输入 for the "Vector" render pass.
    See :doc:`Cycles render passes </render/cycles/settings/passes>` or
    :doc:`Blender internal render passes </render/blender_render/passes>`.
 

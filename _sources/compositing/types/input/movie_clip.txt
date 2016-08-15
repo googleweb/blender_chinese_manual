@@ -19,7 +19,7 @@ internal values taken from the tracking. So the controls for
 start and end frames will be defined at the movie clip editor.
 
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

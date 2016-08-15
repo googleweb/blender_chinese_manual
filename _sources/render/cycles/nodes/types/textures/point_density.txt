@@ -6,7 +6,7 @@ Point Density
 Used to add volumetric points for each particle or vertex of another object.
 
 
-Inputs
+输入s
 ======
 
 Vector

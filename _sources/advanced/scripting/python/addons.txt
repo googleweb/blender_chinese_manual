@@ -1,27 +1,27 @@
 
 *******
-Add-ons
+插件
 *******
 
 *Add-on* is the general term for a script that extends Blender's functionality.
-They are found in the *Add-ons* tab of the :doc:`用户首选项 </preferences/addons>`.
-This tab allows to search, install, enable and disable Add-ons.
+They are found in the *插件* tab of the :doc:`用户首选项 </preferences/addons>`.
+This tab allows to search, install, enable and disable 插件.
 
 
 Searching
 =========
 
-Blender comes with some useful Add-ons already, ready to be enabled, but you can also add your own,
+Blender comes with some useful 插件 already, ready to be enabled, but you can also add your own,
 or any interesting ones you find on the web.
 
 .. figure:: /images/user_prefs-addons_tab.png
 
-   Add-ons tab in the 用户首选项.
+   插件 tab in the 用户首选项.
 
 .. TODO - add here explanation on official/contrib/ testing and on search and filter usability with Shift+click
 
 The `Scripts Catalog <https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts>`__ provides
-an index of Add-ons that are included with Blender as well as listing a number of external Add-ons.
+an index of 插件 that are included with Blender as well as listing a number of external 插件.
 
 
 Enabling and Disabling
@@ -93,4 +93,4 @@ Development Guidelines
 ======================
 
 If you are a script developer, you may be interested in the
-`Add-ons development guidelines <https://wiki.blender.org/index.php/Dev:Py/Scripts/Guidelines/Addons>`__
+`插件 development guidelines <https://wiki.blender.org/index.php/Dev:Py/Scripts/Guidelines/Addons>`__

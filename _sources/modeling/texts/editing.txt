@@ -10,7 +10,7 @@
 .. admonition:: 参考
    :class: refbox
 
-   | 模式:     Object or 编辑模式s
+   | 模式:     物体或者编辑模式
    | 面板:    Font
 
 
@@ -129,7 +129,7 @@ The new frame will have the same size as the initial frame. Set the X position t
 something greater or less than the width of the initial frame; see Fig. :ref:`fig-texts-edit-text5`.
 
 
-Assigning Materials
+指定材质
 ===================
 
 .. admonition:: 参考

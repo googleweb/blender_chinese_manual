@@ -11,7 +11,7 @@ Hair Info
 The *Hair Info* node gives access to :doc:`Hair </physics/particles/hair/index>` information.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

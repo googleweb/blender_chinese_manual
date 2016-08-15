@@ -14,7 +14,7 @@ Value Node
 
 The *Value Node* is a simple node to input numerical values to other nodes in the tree.
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

@@ -185,14 +185,14 @@ just create one UV 纹理 (map) as described in this section. Then,
 create material image textures as described in the procedural materials section.
 Instead of mapping to Original Coordinates (OrCo), map to UV.
 
-Use that map name repeatedly in the :menuselection:`Material --> 纹理 --> Map Input`
+Use that map name repeatedly in the :menuselection:`Material --> 纹理 --> Map 输入`
 panel by selecting :guilabel:`UV` and typing the name in the text field. In the example to the right,
 our UV 纹理 is called "Head" (you may have to expand the image to see the panel settings).
 Then, the image texture shown will be mapped using the UV coordinates.
 In the "Base UV 纹理" example to the right, the face has two textures UV mapped;
 one for a base color, and another for spots, blemishes and makeup.
 
-Both textures use the same UV 纹理 map as their Map Input, and both affect Color.
+Both textures use the same UV 纹理 map as their Map 输入, and both affect Color.
 The Makeup texture is transparent except where there is color,
 so that the base color texture shows through.
 Note that the colors were too strong on the image,
@@ -348,7 +348,7 @@ To overlay multiple UV images, you have several options:
 UV 纹理 vs. Procedural 纹理
 ===================================
 
-A Material 纹理, that has a Map Input of UV,
+A Material 纹理, that has a Map 输入 of UV,
 and is an image texture that is mapped to Color, is equivalent to a UV 纹理.
 It provides much more flexibility, because it can be sized and offset, and the degree to which
 it affects the color of your object can be controlled in the Map To panel. In addition,
@@ -367,7 +367,7 @@ like Clouds, are incredibly simple and useful for adding realism and details to 
    * - The 图像 maps once to a range of mesh faces specifically selected
      - Maps once to all the faces to which that material is assigned; either the whole mesh or a portion
    * - 图像 is mapped once to faces.
-     - Size XYZ in the MapInput allows tiling the texture many times across faces.
+     - Size XYZ in the Map输入 allows tiling the texture many times across faces.
        Number of times depends on size of mesh
    * - Affect the color and the alpha of the object.
      - Can also affect normals (bumpiness), reflectivity, emit, displacement,
@@ -388,7 +388,7 @@ So, in a sense, a single UV texture for a mesh is simpler but more limited than 
 adding image details to a range of faces of a mesh. They work together if the procedural
 texture maps to the UV coordinates specified in your layout. As discussed earlier, you can map
 multiple UV textures to different images using the UV Coordinate mapping system in the Map
-Input panel.
+输入 panel.
 
 
 设置
@@ -447,7 +447,7 @@ File for 图像 or Movie texture:
    Reload
       Reloads the file. Useful when an image has been rework in an external application.
 
-Input Color Space
+输入 Color Space
    Color space of the image or movie on disk
 
    XYZ

@@ -352,13 +352,13 @@ and they will layer on top of one another like the examples shown to the right. 
 just create one UV 纹理 (map) as described in this section. Then,
 create material image textures as described in the procedural materials section.
 Instead of mapping to Original Coordinates (OrCo), map to UV.</p>
-<p>Use that map name repeatedly in the <span class="menuselection">Material ‣ 纹理 ‣ Map Input</span>
+<p>Use that map name repeatedly in the <span class="menuselection">Material ‣ 纹理 ‣ Map 输入</span>
 panel by selecting <span class="guilabel">UV</span> and typing the name in the text field. In the example to the right,
 our UV 纹理 is called &#8220;Head&#8221; (you may have to expand the image to see the panel settings).
 Then, the image texture shown will be mapped using the UV coordinates.
 In the &#8220;Base UV 纹理&#8221; example to the right, the face has two textures UV mapped;
 one for a base color, and another for spots, blemishes and makeup.</p>
-<p>Both textures use the same UV 纹理 map as their Map Input, and both affect Color.
+<p>Both textures use the same UV 纹理 map as their Map 输入, and both affect Color.
 The Makeup texture is transparent except where there is color,
 so that the base color texture shows through.
 Note that the colors were too strong on the image,
@@ -494,7 +494,7 @@ simply assign the material to the face using the Multiple Materials</li>
 </div>
 <div class="section" id="uv-textures-vs-procedural-textures">
 <h2>UV 纹理 vs. Procedural 纹理<a class="headerlink" href="#uv-textures-vs-procedural-textures" title="Permalink to this headline">¶</a></h2>
-<p>A Material 纹理, that has a Map Input of UV,
+<p>A Material 纹理, that has a Map 输入 of UV,
 and is an image texture that is mapped to Color, is equivalent to a UV 纹理.
 It provides much more flexibility, because it can be sized and offset, and the degree to which
 it affects the color of your object can be controlled in the Map To panel. In addition,
@@ -519,7 +519,7 @@ like Clouds, are incredibly simple and useful for adding realism and details to 
 <td>Maps once to all the faces to which that material is assigned; either the whole mesh or a portion</td>
 </tr>
 <tr class="row-even"><td>图像 is mapped once to faces.</td>
-<td>Size XYZ in the MapInput allows tiling the texture many times across faces.
+<td>Size XYZ in the Map输入 allows tiling the texture many times across faces.
 Number of times depends on size of mesh</td>
 </tr>
 <tr class="row-odd"><td>Affect the color and the alpha of the object.</td>
@@ -546,7 +546,7 @@ Many mix methods for mixing multiple channels together.</td>
 adding image details to a range of faces of a mesh. They work together if the procedural
 texture maps to the UV coordinates specified in your layout. As discussed earlier, you can map
 multiple UV textures to different images using the UV Coordinate mapping system in the Map
-Input panel.</p>
+输入 panel.</p>
 <div class="section" id="settings">
 <h3>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -602,7 +602,7 @@ Hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> to
 <dd>Reloads the file. Useful when an image has been rework in an external application.</dd>
 </dl>
 </dd>
-<dt>Input Color Space</dt>
+<dt>输入 Color Space</dt>
 <dd><p class="first">Color space of the image or movie on disk</p>
 <dl class="last docutils">
 <dt>XYZ</dt>

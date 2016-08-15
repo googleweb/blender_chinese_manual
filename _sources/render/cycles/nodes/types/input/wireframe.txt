@@ -13,7 +13,7 @@ As meshes are triangulated before being processed by cycles,
 topology will always appear triangulated when viewed with the *Wireframe node*.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

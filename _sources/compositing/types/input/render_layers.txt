@@ -12,7 +12,7 @@
 This node is the starting place for getting a picture of your scene into the compositing node
 map.
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

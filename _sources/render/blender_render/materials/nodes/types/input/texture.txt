@@ -10,7 +10,7 @@
 
 Can be used to input image or procedural textures.
 
-Inputs
+输入s
 ======
 
 Vector

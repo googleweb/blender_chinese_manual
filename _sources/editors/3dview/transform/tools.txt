@@ -33,7 +33,7 @@ Random Seed
    Randomize Delta 变换 values instead of regular transform.
 
 .. TODO: we have no docs for delta or other object properties at the moment.
-   See :doc:`Delta 变换s </editors/3dview/transform/transform_control/transform_properties>`.
+   See :doc:`Delta 变换 </editors/3dview/transform/transform_control/transform_properties>`.
 
 Randomize Location
    Randomize Location vales

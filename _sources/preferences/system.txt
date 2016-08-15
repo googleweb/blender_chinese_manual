@@ -1,6 +1,6 @@
 
 ******************
-System Preferences
+系统首选项
 ******************
 
 The *System* tab allows you to set resolution, scripting console preferences, sound, graphics cards,

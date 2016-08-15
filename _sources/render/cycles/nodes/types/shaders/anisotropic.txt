@@ -14,7 +14,7 @@ The tangents used for shading are derived from the active UV map. If no UV map i
 they are automatically generated using a sphere mapping based on the mesh bounding box.
 
 
-Inputs
+输入s
 ======
 
 Color

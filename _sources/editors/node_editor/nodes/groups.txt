@@ -41,7 +41,7 @@ so it is recommended some naming convention, that will allow you to easily disti
    Remember that the essential idea is that a group should be an easily-reusable,
    self-contained software component. Material node groups should **not** include:
 
-   Input nodes
+   输入 nodes
        if you include a source node in your group,
        you will end up having the source node appearing *twice*: once inside the group,
        and once outside the group in the new material node-network.

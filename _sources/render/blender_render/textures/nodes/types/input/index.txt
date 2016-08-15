@@ -1,9 +1,9 @@
 
 ###############
-  Input 节点
+  输入 节点
 ###############
 
-Input nodes provide input data for other nodes.
+输入 nodes provide input data for other nodes.
 
 .. toctree::
    :maxdepth: 1

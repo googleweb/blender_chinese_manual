@@ -14,7 +14,7 @@ Stabilizes the footage according to the settings set in
 For more information, :ref:`check this out <2D-stabilization>`.
 
 
-Inputs
+输入s
 ======
 
 图像

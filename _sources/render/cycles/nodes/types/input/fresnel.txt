@@ -24,7 +24,7 @@ the blending factor you're specifying that any light which is refracted through 
 coating layer would hit the diffuse base and be reflected off that.
 
 
-Inputs
+输入s
 ======
 
 IOR

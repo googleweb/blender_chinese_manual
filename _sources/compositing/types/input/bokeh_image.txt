@@ -16,7 +16,7 @@ The *Bokeh 图像* node is designed to create a reference image which simulates 
 such as aperture shape and lens distortions which have important impacts on bokeh in real cameras.
 
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

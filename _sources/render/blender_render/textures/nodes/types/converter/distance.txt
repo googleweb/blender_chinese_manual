@@ -11,7 +11,7 @@ Distance
 
 Computes the distance between two 3D coordinates.
 
-Inputs
+输入s
 ======
 
 Coordinate 1

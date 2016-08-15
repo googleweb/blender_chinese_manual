@@ -6,7 +6,7 @@ Brick 纹理
 Procedural texture producing Bricks.
 
 
-Inputs
+输入s
 ======
 
 Color 1/2 and Mortar

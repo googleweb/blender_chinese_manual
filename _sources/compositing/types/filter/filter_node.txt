@@ -13,7 +13,7 @@ Filter Node
 
 The Filter node implements various common image enhancement filters.
 
-Inputs
+输入s
 ======
 
 Fac

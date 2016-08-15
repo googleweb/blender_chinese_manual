@@ -13,7 +13,7 @@ Background light emission. This node should only be used for the world surface o
 it is ignored in other cases.
 
 
-Inputs
+输入s
 ======
 
 Color

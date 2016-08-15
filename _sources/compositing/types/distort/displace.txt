@@ -14,13 +14,13 @@ This node displaces the pixel position based on an input vector.
 This node could be used to model phenomena, like hot air distortion, 
 refractions of uneven glass or for surreal video effects.
 
-Inputs
+输入s
 ======
 
 图像
    Standard image input.
 Vector
-   Input of the displacement map.
+   输入 of the displacement map.
    If the a color output is implicitly converted in the vector input,
    the first channel (red) value determines displacement along X axis.
    The second channel (green) the displacement along Y axis.

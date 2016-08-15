@@ -1,9 +1,9 @@
 
 **************************
-Copy 变换s Constraint
+Copy 变换 Constraint
 **************************
 
-The *Copy 变换s* constraint forces its owner to have the same transforms as its target.
+The *Copy 变换* constraint forces its owner to have the same transforms as its target.
 
 
 Options
@@ -12,7 +12,7 @@ Options
 .. figure:: /images/constraints-transform-copytransforms.jpg
    :width: 304px
 
-   Copy 变换s panel.
+   Copy 变换 panel.
 
 
 Target

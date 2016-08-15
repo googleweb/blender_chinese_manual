@@ -19,7 +19,7 @@ tone mapping addresses the problem of strong contrast reduction from the scene v
 This is important to appreciate the original scene content.
 
 
-Inputs
+输入s
 ======
 
 图像

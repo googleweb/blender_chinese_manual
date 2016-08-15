@@ -6,7 +6,7 @@ Gradient 纹理
 A gradient texture.
 
 
-Inputs
+输入s
 ======
 
 Vector

@@ -12,7 +12,7 @@ The Levels Node read the inputs color channels
 and outputs analytical values.
 
 
-Inputs
+输入s
 ======
 
 图像

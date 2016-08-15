@@ -13,7 +13,7 @@ Scale Node
 This node scales the size of an image.
 
 
-Inputs
+输入s
 ======
 
 图像

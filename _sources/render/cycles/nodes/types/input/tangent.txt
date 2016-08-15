@@ -12,7 +12,7 @@ Tangent
 The *Tangent* node generates a tangent direction for the Anisotropic BSDF.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

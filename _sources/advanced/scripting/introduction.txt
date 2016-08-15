@@ -34,9 +34,9 @@ Links that deal with distributing your scripts.
 
 - `Sharing scripts <https://wiki.blender.org/index.php/Dev:Doc/Process/Addons>`__
   - Information on how to share your scripts and get them included in the official Blender distribution.
-- `Creating Add-ons <https://wiki.blender.org/index.php/Dev:Py/Scripts/Guidelines/Addons>`__
-  - Add-ons are used to encapsulate and distribute scripts.
-- `Add-ons project <https://developer.blender.org/project/profile/3/>`__
+- `Creating 插件 <https://wiki.blender.org/index.php/Dev:Py/Scripts/Guidelines/Addons>`__
+  - 插件 are used to encapsulate and distribute scripts.
+- `插件 project <https://developer.blender.org/project/profile/3/>`__
   - Project to maintain a central repository of extensions to Blender.
 
 
@@ -73,10 +73,10 @@ Here are external links containing a lot of good information to start learning h
 Extending Blender
 =================
 
-Add-ons
+插件
 -------
 
-Add-ons are scripts you can enable to gain extra functionality within Blender,
+插件 are scripts you can enable to gain extra functionality within Blender,
 they can be enabled from the user preferences.
 
 Outside of the Blender executable,
@@ -119,7 +119,7 @@ You can setup an additional search path for scripts in
 Installation
 ^^^^^^^^^^^^
 
-Add-ons are conveniently installed through Blender in the :doc:`用户首选项 </preferences/addons>`. 
+插件 are conveniently installed through Blender in the :doc:`用户首选项 </preferences/addons>`. 
 Click the :menuselection:`Install from File...` button and select the ``.py`` or ``.zip`` file.
 
 To manually install scripts or add-ons place them in the ``add-ons``,

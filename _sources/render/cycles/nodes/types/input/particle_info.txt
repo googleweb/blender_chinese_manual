@@ -18,7 +18,7 @@ this node give access to the data of the particle that spawned the instance.
    .. is this still true? ^^
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

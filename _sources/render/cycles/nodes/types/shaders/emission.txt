@@ -25,7 +25,7 @@ the real sun for example has strength 384.6×10\ :sup:`24`\W.
 Emission shaders on meshes are also in Watts/m\ :sup:`2`\.
 
 
-Inputs
+输入s
 ======
 
 Color

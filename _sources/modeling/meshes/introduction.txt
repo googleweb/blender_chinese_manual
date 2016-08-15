@@ -100,7 +100,7 @@ Most of these tools are also available as shortcuts
 For each tool a context-sensitive menu is opened at the bottom of the *Tool Shelf*.
 
 Even more mesh editing tools can be enabled in the *用户首选项* '
-*Add-ons* section.
+*插件* section.
 
 For further information see :doc:`Panels </interface/editors/panels>`.
 

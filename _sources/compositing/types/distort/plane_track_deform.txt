@@ -20,7 +20,7 @@ Before using this node, plane track for the footage should be made in the *Movie
 .. TODO: add link to plane track's documentation when that is made.
 
 
-Inputs
+输入s
 ======
 
 图像

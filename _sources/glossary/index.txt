@@ -630,7 +630,7 @@ This page lists definitions for terms used in Blender and this manual.
       The arrangement of *Vertices*, *Edges*, and *Faces* which define the shape of a mesh.
       See :term:`vertex`, :term:`edge`, and :term:`face`.
 
-   变换s
+   变换
       The combined idea of location, rotation and scale.
 
    Triangle

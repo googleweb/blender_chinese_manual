@@ -14,7 +14,7 @@ This node combines the functionality of three other nodes: :doc:`Scale </composi
 :doc:`translate </compositing/types/distort/translate>`,
 and :doc:`rotate </compositing/types/distort/rotate>` nodes.
 
-Inputs
+输入s
 ======
 
 图像

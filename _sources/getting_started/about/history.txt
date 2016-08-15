@@ -226,7 +226,7 @@ Blender 2.6x to 2.7x - Improvements & Stabalizing
   Cycles, texture painting workflow is improved, and more than 220 bug fixes.
 - `2.73 <https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.73>`__  - January 2015:
   Cycles gets improved volumetric support, major upgrade to grease pencil,
-  MS-Windows gets Input Method 编辑器 (IMEs)
+  MS-Windows gets 输入 Method 编辑器 (IMEs)
   and general improvements to painting, freestyle, sequencer and add-ons.
 - `2.74 <https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.74>`__ - March 2015:
   Support for custom-normals, viewport compositing and improvements to hair dynamics.

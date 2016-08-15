@@ -17,7 +17,7 @@ This node applies a color transformation in the HSV color space.
 Called "Hue Saturation Value" in shader and texture context.
 
 
-Inputs
+输入s
 ======
 
 Fac

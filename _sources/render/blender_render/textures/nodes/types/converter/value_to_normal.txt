@@ -12,7 +12,7 @@ Value to Normal
 Computes a normal map.
 
 
-Inputs
+输入s
 ======
 
 Val

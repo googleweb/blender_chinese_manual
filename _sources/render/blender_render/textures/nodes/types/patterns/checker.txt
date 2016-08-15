@@ -12,7 +12,7 @@ Checker
 
 The checker node creates a checkerboard pattern.
 
-Inputs
+输入s
 ======
 
 color 1, color 2

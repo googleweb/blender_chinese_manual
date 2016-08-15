@@ -17,7 +17,7 @@ At :menuselection:`File --> 用户首选项 --> System`, enable *International F
 See :ref:`prefs-system-international` for details.
 
 
-Input
+输入
 =====
 
 If you have a compact keyboard without a separate number pad enable
@@ -26,7 +26,7 @@ If you have a compact keyboard without a separate number pad enable
 If you do not have a middle mouse button you can enable
 :menuselection:`File --> 用户首选项 --> Emulate 3 Button Mouse`.
 
-See :doc:`Input Preferences </preferences/input>` for details.
+See :doc:`输入 Preferences </preferences/input>` for details.
 
 
 File and Paths
@@ -49,4 +49,4 @@ This would not happen by accident,
 and most users leave this option on to automatically run scripts often used in advanced rigs
 (such as "Rigify" that controls the skeleton of a human rig).
 
-See :doc:`File Preferences </preferences/file>` for details.
+See :doc:`文件首选项 </preferences/file>` for details.

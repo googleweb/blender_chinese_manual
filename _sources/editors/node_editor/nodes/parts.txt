@@ -49,10 +49,10 @@ Shader (Green)
    Used for shaders in :doc:`Cycles </render/cycles/index>`
 
 
-Inputs
+输入s
 ------
 
-The *Inputs* are located on bottom left side of the node,
+The *输入s* are located on bottom left side of the node,
 and provide the data the node needs to perform its function.
 Each input socket, except for the green shader input, when disconnected,
 has a default value which can be edited via a color, numeric, or vector interface input.

@@ -14,7 +14,7 @@ Math Node
 
 This node performs math operations.
 
-Inputs
+输入s
 ======
 
 Value

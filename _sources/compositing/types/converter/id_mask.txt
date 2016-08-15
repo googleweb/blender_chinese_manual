@@ -12,11 +12,11 @@ ID Mask Node
 
 This node can be used to access an alpha mask per object or per material.
 
-Inputs
+输入s
 ======
 
 ID value
-   Input for the Object index "IndexOb"  or material index "IndexMa" pass. 
+   输入 for the Object index "IndexOb"  or material index "IndexMa" pass. 
    Which is an output of the :doc:`渲染Layers node </compositing/types/input/render_layers>` or 
    the :doc:`图像 node </compositing/types/input/render_layers>` with a multilayer format.
 

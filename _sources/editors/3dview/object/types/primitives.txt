@@ -235,7 +235,7 @@ Suzanne is very useful as a standard test mesh,
 much like the `Utah Tea Pot <https://en.wikipedia.org/wiki/Utah_teapot>`__
 or the `Stanford Bunny <https://en.wikipedia.org/wiki/Stanford_Bunny>`__.
 
-.. note:: Add-ons
+.. note:: 插件
 
    In addition to the basic geometric primitives, Blender has a number of script
    generated meshes to offer as pre-installed add-ons. These become available when

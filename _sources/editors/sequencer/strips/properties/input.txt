@@ -1,14 +1,14 @@
 
 *****************
-Strip Input Panel
+Strip 输入 Panel
 *****************
 
 .. figure:: /images/editors_sequencer_properties_input.png
    :align: right
 
-   Strip Input 设置.
+   Strip 输入 设置.
 
-The Strip Input panel is used to controls the duration of the strip along with some basic transforms.
+The Strip 输入 panel is used to controls the duration of the strip along with some basic transforms.
 
 图像 Offset
    Used to transform the strip by moving it in the X and Y direction.

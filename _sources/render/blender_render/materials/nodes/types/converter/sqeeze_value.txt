@@ -16,7 +16,7 @@ With the squeeze Node high output values to an acceptable material for the node 
 i.e. to values between 0.0 - 1.0 scaled down.
 
 
-Inputs
+输入s
 ======
 
 Value

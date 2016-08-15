@@ -12,7 +12,7 @@ The *Wavelength* node converts a wavelength value to a RGB value.
 This can be used to achieve a specific color on the light spectrum.
 
 
-Inputs
+输入s
 ======
 
 Wavelength

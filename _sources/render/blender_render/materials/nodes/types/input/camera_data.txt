@@ -8,7 +8,7 @@
    相机 Data node.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

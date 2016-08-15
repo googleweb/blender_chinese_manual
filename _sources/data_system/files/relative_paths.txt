@@ -20,7 +20,7 @@ When relative paths are supported, the file selector provides a *Relative Path* 
 when entering the path into a text field, use a double slash prefix (``//``) to make it so.
 
 Relative paths are the default but this can be changed in the
-:doc:`File Preferences Tab </preferences/file>`
+:doc:`文件首选项 Tab </preferences/file>`
 of the 用户首选项 Editor.
 
 .. note::

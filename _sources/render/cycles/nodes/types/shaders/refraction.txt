@@ -17,7 +17,7 @@ but rather mixed with a glossy node using a Fresnel factor.
 其他wise it will give quite dark results at the edges for glossy refraction.
 
 
-Inputs
+输入s
 ======
 
 Color

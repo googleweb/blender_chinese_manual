@@ -13,7 +13,7 @@ The *纹理 Coordinate* node is commonly used for the coordinates of textures,
 typically used as inputs for the *Vector* input for texture nodes.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

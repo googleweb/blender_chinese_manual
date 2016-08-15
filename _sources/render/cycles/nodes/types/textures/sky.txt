@@ -6,7 +6,7 @@ Sky 纹理
 Procedural Sky texture.
 
 
-Inputs
+输入s
 ======
 
 Vector

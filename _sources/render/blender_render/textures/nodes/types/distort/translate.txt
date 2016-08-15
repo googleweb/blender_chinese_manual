@@ -12,7 +12,7 @@ Translate
 Translate the texture coordinates of an image or texture.
 
 
-Inputs
+输入s
 ======
 
 Color

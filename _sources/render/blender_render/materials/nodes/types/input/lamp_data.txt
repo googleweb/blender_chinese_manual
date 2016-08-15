@@ -12,7 +12,7 @@ Lamp Data Node
 The Lamp Data node is used to obtain information related to a specified lamp object.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

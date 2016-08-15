@@ -12,7 +12,7 @@ Translucent
 Lambertian diffuse transmission.
 
 
-Inputs
+输入s
 ======
 
 Color

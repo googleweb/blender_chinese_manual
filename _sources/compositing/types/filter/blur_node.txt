@@ -12,7 +12,7 @@ Blur Node
 The Blur node blurs an image, providing several blur modes.
 
 
-Inputs
+输入s
 ======
 
 图像

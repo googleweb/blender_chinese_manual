@@ -158,8 +158,8 @@ The Strip Menu contains additional tools for working with strips:
 - *Make Meta Strip*
 - *UnMeta Strip*
 - *Reload Strips*
-- *Reassign Inputs*
-- *Swap Inputs*
+- *Reassign 输入s*
+- *Swap 输入s*
 - *Lock Strips*
 - *UnLock Strips*
 - *Mute Strips*

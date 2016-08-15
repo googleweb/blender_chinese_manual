@@ -11,7 +11,7 @@ Vector Math Node
 This node performs vector math operation.
 
 
-Inputs
+输入s
 ======
 
 Vector

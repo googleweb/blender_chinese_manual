@@ -16,7 +16,7 @@ than other :abbr:`BSDF (Bidirectional scattering distribution function)` s.
 Note that only pure white transparent shaders are completely transparent.
 
 
-Inputs
+输入s
 ======
 
 Color

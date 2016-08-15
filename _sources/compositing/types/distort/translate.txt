@@ -13,7 +13,7 @@ The translate node translates (moves) an image.
 
 Could also be used to add a 2D 相机 shake.
 
-Inputs
+输入s
 ======
 
 图像

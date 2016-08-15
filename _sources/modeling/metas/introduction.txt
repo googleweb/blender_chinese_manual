@@ -6,7 +6,7 @@
 .. admonition:: 参考
    :class: refbox
 
-   | 模式:     Object or 编辑模式s
+   | 模式:     物体或者编辑模式
    | 菜单:     :menuselection:`Add --> Meta`
    | 快捷键:   :kbd:`Shift-A`
 
@@ -131,7 +131,7 @@ Threshold (Influence)
 .. admonition:: 参考
    :class: refbox
 
-   | 模式:     Object or 编辑模式s
+   | 模式:     物体或者编辑模式
    | 面板:    MetaBall
 
 

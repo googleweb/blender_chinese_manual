@@ -11,7 +11,7 @@ Set Alpha Node
 
 This node adds an alpha channel to an image.
 
-Inputs
+输入s
 ======
 
 图像

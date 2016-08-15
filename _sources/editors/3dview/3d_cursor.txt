@@ -57,7 +57,7 @@ The *Cursor to Selected* option is also affected by the current :ref:`pivot-poin
    `median <https://en.wikipedia.org/wiki/Median>`__ of the object centers.
 
 
-Numeric Input
+Numeric 输入
 -------------
 
 .. figure:: /images/editors_3dview_transform-control_pivot-point_3d-cursor_view-properties.jpg

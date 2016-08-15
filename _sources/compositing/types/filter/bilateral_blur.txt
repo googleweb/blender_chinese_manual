@@ -20,7 +20,7 @@ to fake some performance-heavy processes, like blurry refractions/reflections, s
 to make non-photorealistic compositing effects.
 
 
-Inputs
+输入s
 ======
 
 图像

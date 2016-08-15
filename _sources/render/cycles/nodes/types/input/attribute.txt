@@ -12,7 +12,7 @@ Attribute
 The *Attribute Node* allows you to retrieve attributes attached to an object or mesh.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

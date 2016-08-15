@@ -15,7 +15,7 @@ This node rotates an image.
 .. TODO: document interpolation methods (bicubic, bilinear, nearest)
 
 
-Inputs
+输入s
 ======
 
 图像

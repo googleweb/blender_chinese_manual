@@ -6,7 +6,7 @@ Mapping
 变换 a coordinate; typically used for modifying texture coordinates.
 
 
-Inputs
+输入s
 ======
 
 Vector

@@ -15,7 +15,7 @@ This node can be used as a way to automatically save the image after a render;
 In addition, since this node can be hooked in anywhere in the node tree,
 it can also save intermediate images automatically.
 
-Inputs
+输入s
 ======
 
 图像

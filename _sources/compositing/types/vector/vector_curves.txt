@@ -15,7 +15,7 @@ The Vector 曲线 node maps an input vector components to a curve.
 
 Use this curve node to slow things down or speed them up from the original scene.
 
-Inputs
+输入s
 ======
 
 In the shader context the node also has an additional Factor property.

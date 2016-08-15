@@ -6,7 +6,7 @@ Environment 纹理
 Environmental textures are used to light your scene using an environment map image file as a texture.
 
 
-Inputs
+输入s
 ======
 
 Vector

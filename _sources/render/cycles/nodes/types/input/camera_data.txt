@@ -16,7 +16,7 @@ the camera is view in order to achieve different effects.
    http://blender.stackexchange.com/questions/27764
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

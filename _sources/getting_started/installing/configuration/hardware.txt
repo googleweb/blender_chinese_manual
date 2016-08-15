@@ -17,7 +17,7 @@ Multi-Monitor Setup
 Todo.
 
 
-Input Devices
+输入 Devices
 =============
 
 .. Add note about emulate 3D buttom mouse and numpad.
@@ -106,4 +106,4 @@ These devices allow you to explore a scene, as well as :ref:`Walk/Fly modes <3dv
 
 .. seealso::
 
-   See :doc:`Input Preference </preferences/input>` for more information on configuring peripherals.
+   See :doc:`输入 Preference </preferences/input>` for more information on configuring peripherals.

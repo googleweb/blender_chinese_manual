@@ -56,5 +56,5 @@ This can be done by:
 
 These named outputs could be used, when the material is defined with Material 节点.
 In this case, 纹理 Channels are probably not used. Instead, insert the
-*纹理* nodes into the Material Node tree by using :menuselection:`Add --> Input --> 纹理`.
+*纹理* nodes into the Material Node tree by using :menuselection:`Add --> 输入 --> 纹理`.
 Inside the just added texture node the output to use can then be selected (e.g. *Diffuse* or *Normal*).

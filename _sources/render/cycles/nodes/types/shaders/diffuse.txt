@@ -13,7 +13,7 @@ Diffuse
 Lambertian and Oren-Nayar diffuse reflection.
 
 
-Inputs
+输入s
 ======
 
 Color

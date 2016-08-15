@@ -15,7 +15,7 @@ Invert Node
 This node inverts the colors in the input image, producing a negative.
 
 
-Inputs
+输入s
 ======
 
 Fac

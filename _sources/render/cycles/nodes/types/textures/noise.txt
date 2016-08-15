@@ -5,7 +5,7 @@ Noise 纹理
 
 Procedural Perlin noise texture, similar to the Clouds texture in Blender Internal.
 
-Inputs
+输入s
 ======
 
 Vector

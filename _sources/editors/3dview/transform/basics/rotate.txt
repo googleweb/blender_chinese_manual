@@ -23,7 +23,7 @@ There are multiple ways to rotate an element which include:
 Basic rotation usage and common options are described below. For additional information, you
 may wish to read the :doc:`变换控制 </editors/3dview/transform/transform_control/index>`
 and :doc:`Read more about 变换 Orientations </editors/3dview/transform/transform_control/transform_orientations>`
-pages which provide more information about options such as Precision, Axis Locking, Numeric Input,
+pages which provide more information about options such as Precision, Axis Locking, Numeric 输入,
 吸附 and the different types of 轴心点.
 
 

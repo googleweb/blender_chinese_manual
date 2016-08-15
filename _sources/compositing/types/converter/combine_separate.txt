@@ -42,7 +42,7 @@ Separate/Combine RGBA Node
    Separate RGBA Node.
 
 
-Input/ Output
+输入/ Output
 -------------
 
 图像
@@ -99,7 +99,7 @@ Separate/Combine HSVA 节点
    Separate HSVA Node.
 
 
-Input/ Output
+输入/ Output
 -------------
 
 图像
@@ -133,7 +133,7 @@ Separate/Combine YUVA Node
    Separate YUVA Node.
 
 
-Input/ Output
+输入/ Output
 -------------
 
 图像
@@ -167,7 +167,7 @@ Separate/Combine YCbCrA Node
    Separate YCbCrA Node.
 
 
-Input/ Output
+输入/ Output
 -------------
 
 图像

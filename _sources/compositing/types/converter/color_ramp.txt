@@ -15,7 +15,7 @@ ColorRamp Node
 The ColorRamp Node is used for mapping values to colors with the use of a gradient.
 
 
-Inputs
+输入s
 ======
 
 Fac

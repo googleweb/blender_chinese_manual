@@ -179,7 +179,7 @@ Smooth stroke
       Sets the minimun distance from the last point before stroke continues.
    Factor
       Sets the amount of smoothing.
-Input Samples
+输入 Samples
    Average multiple input samples together to smooth the brush stroke.
 Wrap
    wraps your paint to the other side of the image as your brush moves off the **other** side of the canvas

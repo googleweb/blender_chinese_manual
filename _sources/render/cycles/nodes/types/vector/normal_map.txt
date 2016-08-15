@@ -10,7 +10,7 @@ the UV coordinates for the image must match,
 and the image texture should be set to Non-Color mode to give correct results.
 
 
-Inputs
+输入s
 ======
 Strength
    Strength of the normal mapping effect.

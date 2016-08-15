@@ -11,7 +11,7 @@
 
 The 纹理 node makes 3D textures available to the compositor.
 
-Inputs
+输入s
 ======
 
 Offset

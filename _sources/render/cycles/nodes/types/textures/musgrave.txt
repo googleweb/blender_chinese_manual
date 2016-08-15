@@ -7,7 +7,7 @@ Musgrave 纹理
 (multiplication and addition) in order to see more detail.
 
 
-Inputs
+输入s
 ======
 
 Vector

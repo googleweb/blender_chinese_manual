@@ -12,7 +12,7 @@ RGB Node
    RGB Node.
 
 
-Inputs
+输入s
 ======
 
 This node has no input sockets.

@@ -1,9 +1,9 @@
 
 ****************
-File Preferences
+文件首选项
 ****************
 
-The *File Preferences* tab allows you to configure auto-save preferences and set default file paths for
+The *文件首选项* tab allows you to configure auto-save preferences and set default file paths for
 blend-files, rendered images, and more.
 
 

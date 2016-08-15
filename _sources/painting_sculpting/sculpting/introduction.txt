@@ -68,7 +68,7 @@ Keyboard Shortcuts
 ==================
 
 These shortcuts may be customized under
-:menuselection:`File --> 用户首选项 --> Input --> 3D视图 --> 雕刻模式`.
+:menuselection:`File --> 用户首选项 --> 输入 --> 3D视图 --> 雕刻模式`.
 
 
 .. list-table::

@@ -6,7 +6,7 @@ Wave 纹理
 Procedural bands or rings texture with noise distortion.
 
 
-Inputs
+输入s
 ======
 
 Vector

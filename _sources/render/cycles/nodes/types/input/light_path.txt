@@ -13,7 +13,7 @@ particularly useful for non-physically based tricks. More information about the 
 is in the :doc:`Light Paths </render/cycles/settings/light_paths>` documentation.
 
 
-Inputs
+输入s
 ======
 
 This node has no inputs.

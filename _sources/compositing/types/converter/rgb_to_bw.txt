@@ -16,7 +16,7 @@ This node linear maps a RGB color image to a grayscale.
 
 .. by computing the luminance ?
 
-Inputs
+输入s
 ======
 
 图像

@@ -12,7 +12,7 @@ Map Value Node
 Map Value node is used to scale, offset and clamp values.
 
 
-Inputs
+输入s
 ======
 
 Value

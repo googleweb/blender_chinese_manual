@@ -25,7 +25,7 @@ For more information on how to edit those values,
 `check this out <http://blender.stackexchange.com/questions/15620>`__.
 
 
-Inputs
+输入s
 ======
 
 图像

@@ -15,7 +15,7 @@ It overlays the images using the provided Z values to
 detect which parts of one image are in front of the other.
 
 
-Inputs
+输入s
 ======
 
 图像
@@ -85,10 +85,10 @@ painted on glass and placed on the left and right at different Z positions; mini
 moves to the right created the illusion of depth as Bambi moved through the forest.
 
 
-.. note:: Valid Input
+.. note:: Valid 输入
 
-   Z Input Sockets do not accept fixed values; they must get a vector set (see Map Value node).
-   图像 Input Sockets will not accept a color since it does not have UV coordinates.
+   Z 输入 Sockets do not accept fixed values; they must get a vector set (see Map Value node).
+   图像 输入 Sockets will not accept a color since it does not have UV coordinates.
 
 
 .. figure:: /images/compositing-z-offset-ex_images.jpg

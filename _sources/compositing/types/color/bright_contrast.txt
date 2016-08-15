@@ -11,7 +11,7 @@ Bright/Contrast Node
    Bright/Contrast Node.
 
 
-Inputs
+输入s
 ======
 
 图像

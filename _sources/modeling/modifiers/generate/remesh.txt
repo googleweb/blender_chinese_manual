@@ -43,7 +43,7 @@ Octree Depth
    .. figure:: /images/modifier-remesh-depth-cone-example.jpg
       :width: 600px
 
-      Input mesh, and the low to high resolution output meshes.
+      输入 mesh, and the low to high resolution output meshes.
 
 Scale
    The result can be tweaked further by setting the Scale;
