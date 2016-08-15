@@ -103,7 +103,7 @@ Apart from add-ons, there are also scripts you can use to extend Blenders functi
   :doc:`文本编辑器 </editors/text_editor>`
 
 
-Saving your own scripts
+保存 your own scripts
 -----------------------
 
 File location

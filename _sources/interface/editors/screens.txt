@@ -109,7 +109,7 @@ Materials
    Properties editor for Material settings, 3D视图 for selecting objects, Outliner,
    Library script (if used), 节点编辑器
    (if using :doc:`Node based materials </render/blender_render/materials/nodes/index>`)
-Painting
+绘制
    UV/图像编辑器 for texture painting image,
    3D视图 for painting directly on object in UV Face Select mode,
    three mini-3D视图s down the side that have background
@@ -119,4 +119,4 @@ Painting
 .. hint:: Reuse your Layouts
 
    If you create a new window layout and would like to use it for future blend-files,
-   you can save it for later reuse, see :ref:`Saving User 设置 <startup-file>`
+   you can save it for later reuse, see :ref:`保存 User 设置 <startup-file>`

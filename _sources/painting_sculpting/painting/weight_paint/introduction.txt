@@ -6,7 +6,7 @@
 ************
 
 Vertex Groups can potentially have a very large number of associated vertices and thus a large
-number of weights (one weight per assigned vertex). *Weight Painting* is a method to
+number of weights (one weight per assigned vertex). *Weight 绘制* is a method to
 maintain large amounts of weight information in a very intuitive way.
 It is primarily used for rigging meshes,
 where the vertex groups are used to define the relative bone influences on the mesh.
@@ -200,7 +200,7 @@ weight gradient and of course brush strokes.
 用法
 =====
 
-Weight Painting for Bones
+Weight 绘制 for Bones
 -------------------------
 
 This is one of the main uses of weight painting.
@@ -247,7 +247,7 @@ If you have a symmetrical mesh and a symmetrical armature you can use the option
 Then the mirrored groups with the mirrored weights are automatically created.
 
 
-Weight Painting for Particles
+Weight 绘制 for Particles
 -----------------------------
 
 .. figure:: /images/weightpaint-particles.jpg

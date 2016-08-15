@@ -11,7 +11,7 @@ The following sections describe the controls in each of the available panels.
 
 .. figure:: /images/materials-vertexpaint-toolshelf-tools.jpg
 
-   Vertex Painting Options.
+   Vertex 绘制 Options.
 
 
 Brush

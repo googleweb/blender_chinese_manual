@@ -1,7 +1,7 @@
 .. _painting_sculping-index:
 
 ############
-  Sculpting
+  雕刻
 ############
 
 .. toctree::

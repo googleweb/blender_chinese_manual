@@ -1,7 +1,7 @@
 .. _composite_nodes_input-index:
 
 ##############
-  输入 节点
+  输入节点
 ##############
 
 输入 nodes produce information from some source.

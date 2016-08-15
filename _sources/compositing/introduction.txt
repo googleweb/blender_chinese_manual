@@ -158,7 +158,7 @@ as defined by the *Scene buttons* (Format Panel).
 The *Viewer* node always shows the size from its input, but when not linked
 (or linked to a value) it shows a small 320×256 pixel image.
 
-Saving your Composite 图像
+保存 your Composite 图像
 ===========================
 
 The *渲染* button renders a single frame or image.

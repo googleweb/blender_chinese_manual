@@ -187,7 +187,7 @@ On the right is a render without face marks activated.
 
      - .. figure:: /images/freestyle-face-marks-disabled.jpg
 
-          渲染 Output.
+          渲染输出.
 
 .. figure:: /images/freestyle-face-mark.jpg
 

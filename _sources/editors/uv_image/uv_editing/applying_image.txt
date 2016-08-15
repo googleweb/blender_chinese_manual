@@ -141,7 +141,7 @@ but bypasses the normal rendering system for fast results,
 but results which do not respect transparency and proper shading.
 
 
-Loading and Saving 图像s
+Loading and 保存 图像s
 =========================
 
 In the UV/图像 editor, you can assign certain faces certain textures. To do so,
@@ -282,7 +282,7 @@ Movie and Sequence
       Cycle the images in a movie/sequence.
 
 
-Saving 图像s
+保存 图像s
 -------------
 
 图像s can be saved to external files if they were created or edited in Blender with tools in

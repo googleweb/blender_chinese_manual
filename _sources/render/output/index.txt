@@ -1,7 +1,7 @@
 .. _render-output-index:
 
 ################
-  渲染 Output
+  渲染输出
 ################
 
 .. toctree::

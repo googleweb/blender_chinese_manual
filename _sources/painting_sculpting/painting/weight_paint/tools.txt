@@ -9,7 +9,7 @@ Weight Tools
    Weight Paint Tools.
 
 
-Blender provides a set of helper tools for Weight Painting.
+Blender provides a set of helper tools for Weight 绘制.
 The tools are accessible from the Tool Shelf in 权重绘制模式.
 And they are located in the weight tools panel.
 

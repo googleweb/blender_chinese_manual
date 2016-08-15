@@ -68,7 +68,7 @@ Format Options
    Set option to add the file extension to the end of the file
 
 
-动画 Playback Options
+动画回放 Options
 ==========================
 
 ``-a`` ``<options>`` ``<file(s)>``

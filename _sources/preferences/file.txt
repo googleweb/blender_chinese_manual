@@ -22,7 +22,7 @@ Fonts
    Default location when searching for font files.
 纹理
    Default location when searching for image textures.
-渲染 Output
+渲染输出
    Where rendered images/videos are saved.
 Scripts
    An additional location to search for Python scripts. See `Scripts Path`_ below.

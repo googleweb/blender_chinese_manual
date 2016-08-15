@@ -1,6 +1,6 @@
 
 ****************************
-Displaying and Saving 图像s
+显示和保存图像
 ****************************
 
 渲染ing still images is fairly simple.
@@ -10,7 +10,7 @@ To render an image from the active camera, in the 渲染 Panel, press the *渲�
 By default the 3D视图 is replaced with the UV/图像编辑器 and the render appears.
 
 
-Displaying 渲染s
+显示渲染
 ==================
 
 渲染s are displayed in the 图像编辑器. You can set the way this is displayed to several
@@ -30,7 +30,7 @@ For each of these options,
 pressing :kbd:`Esc` will close the render view and return to the previous view.
 
 
-Saving
+保存
 ======
 
 渲染ed images can be saved like any other image:
@@ -71,7 +71,7 @@ Display Mode
       as specified in the :doc:`相机 settings </editors/3dview/object/types/camera/introduction>`.
 
 
-动画 Playback
+动画回放
 ==================
 
 The 'Play' button in the render panel will play back your rendered animation in a new window.

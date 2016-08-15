@@ -53,7 +53,7 @@ Blender textures are still used, but this will change in the future.
    .. clear
 
 
-Painting & UV 编辑
+绘制 & UV 编辑
 =====================
 
 .. figure:: /images/cycles_texture_active.jpg

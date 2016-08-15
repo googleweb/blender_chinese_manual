@@ -115,7 +115,7 @@ OpenGL Preview
    Turn Table OpenGL 渲染ing Preview.
 
 Before rendering your scene you can save an OpenGL preview of the animation for testing in the final display.
-In the 渲染 Output panel you can chose the output *Views Format*.
+In the 渲染输出 panel you can chose the output *Views Format*.
 
 The options include individual files per view, top-bottom, anaglyph among others.
 Pick the one that fits your display requirements.

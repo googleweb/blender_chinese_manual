@@ -656,7 +656,7 @@ This page lists definitions for terms used in Blender and this manual.
       The name is a combination of the terms "Volumetric" and ":term:`Pixel <pixel>`".
       Used to store smoke and fire data from physics simulations.
 
-   Weight Painting
+   Weight 绘制
       Assigning :term:`vertices` to :term:`Vertex Groups <Vertex Group>` with a weight of 0.0 - 1.0.
 
    World Space

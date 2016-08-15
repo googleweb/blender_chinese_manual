@@ -63,7 +63,7 @@ you can make this the default configuration by:
 
 - Opening the *用户首选项 输入* editor and select your presets from the preset list or,
 - 选择 your preset configuration from the splash screen.
-- Saving your configuration using the *Save As Default* option from a *用户首选项* editor or by pressing
+- 保存 your configuration using the *Save As Default* option from a *用户首选项* editor or by pressing
   :kbd:`Ctrl-U`.
 
 

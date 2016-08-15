@@ -15,7 +15,7 @@ Brush
    Brush Panel.
 
 
-Painting needs paint brushes and Blender provides a Brush Panel within the Tool Shelf when it
+绘制 needs paint brushes and Blender provides a Brush Panel within the Tool Shelf when it
 operates in *权重绘制模式*. You find predefined Brush Presets when you click on
 the large Brush Icon at the top of the brush Panel.
 And you can make your own presets as needed.
@@ -159,7 +159,7 @@ Changing the curve allows you to specify the characteristics of your brushes to 
 Weight Paint Tools
 ------------------
 
-Blender provides a set of helper tools for Weight Painting.
+Blender provides a set of helper tools for Weight 绘制.
 The tools are located in the weight tools panel.
 
 The weight paint tools are full described in the

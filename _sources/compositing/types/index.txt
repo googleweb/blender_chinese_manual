@@ -1,7 +1,7 @@
 .. _composite_nodes_types-index:
 
 #################
-  Types of 节点
+  节点类型
 #################
 
 .. toctree::

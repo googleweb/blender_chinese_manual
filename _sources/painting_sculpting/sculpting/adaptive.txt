@@ -1,6 +1,6 @@
 
 ******************
-Adaptive Sculpting
+Adaptive 雕刻
 ******************
 
 Dynamic Topology

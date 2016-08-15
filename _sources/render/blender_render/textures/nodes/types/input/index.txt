@@ -1,6 +1,6 @@
 
 ###############
-  输入 节点
+  输入节点
 ###############
 
 输入 nodes provide input data for other nodes.

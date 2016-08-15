@@ -9,7 +9,7 @@ mesh and unwrap it to a flat two-dimensional (X & Y ... or rather, as we shall s
 "U & V") image. Colors in the image are thus mapped to your mesh,
 and show up as the color of the faces of the mesh. Use UV texturing to provide realism to your
 objects that procedural materials and textures cannot do,
-and better details than Vertex Painting can provide.
+and better details than Vertex 绘制 can provide.
 
 
 UVs Explained

@@ -13,7 +13,7 @@ There are three ways to establish the image used by the UV 纹理:
 - Paint a flat image in the UV/图像编辑器 onto the currently selected UV 纹理,
   using its UV map to transfer the colors to the faces of the mesh.
 - Paint the mesh in the 3D视图, and let Blender use the currently selected UV map to update the UV 纹理
-  (see :ref:`Projection Painting <painting_texture-index>`).
+  (see :ref:`Projection 绘制 <painting_texture-index>`).
 - Use any image-editing (paint) program to create an image.
   In the UV/图像编辑器, select the UV 纹理 and load the image.
   Blender will then use that texture's UV map to transfer the colors to the faces of the mesh
@@ -71,10 +71,10 @@ you can modify the image using the 纹理绘制模式:
    square where the side lengths are a power of two, e.g. 256×256, 512×512, 1024×1024, etc.
 
 
-Once you enable 纹理 Painting, your mouse becomes a brush. To work with the UV layout
+Once you enable 纹理 绘制, your mouse becomes a brush. To work with the UV layout
 (for example, to move coordinates) you must go back to "View" mode.
 
-As soon as you enable 纹理 Painting or switch to 纹理绘制模式,
+As soon as you enable 纹理 绘制 or switch to 纹理绘制模式,
 brush settings become available in the Tool Shelf :kbd:`T`.
 
 In the UV/图像编辑器,
@@ -106,7 +106,7 @@ where the gray-scale image is used to make the flat surface appear bumpy.
 See 纹理 Mapping Output for more information on bump mapping.
 
 
-Saving
+保存
 ======
 
 If the header menu item 图像 has an asterisk next to it,
