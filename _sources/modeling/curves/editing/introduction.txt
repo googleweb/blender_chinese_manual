@@ -13,7 +13,7 @@ selecting and advanced editing are covered in the following pages:
 曲线显示
 =============
 
-Display Options
+显示选项
 ---------------
 
 .. figure:: /images/editing_curves_curve-display-panel.jpg

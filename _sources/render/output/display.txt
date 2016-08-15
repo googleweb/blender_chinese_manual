@@ -37,7 +37,7 @@ Saving
 Using :menuselection:`图像 --> Save As 图像` or by pressing :kbd:`F3`
 
 
-Display Options
+显示选项
 ===============
 
 When a rendered image is displayed in the 图像编辑器,

@@ -80,7 +80,7 @@ Display
    Controls display options for UVs and additional settings for when
    :doc:`Working with 图像s </editors/uv_image/uv_editing/applying_image>`.
 
-Display Options
+显示选项
 ---------------
 
 You can set how UVs are displayed in the *Display Panel*:
