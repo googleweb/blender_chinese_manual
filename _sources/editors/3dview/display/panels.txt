@@ -24,7 +24,7 @@ Only 渲染
 
 Outline Selected
    If disabled, the pink outline around your selected objects in
-   *Solid*, *Shaded*, *Textured* draw types will no longer be displayed.
+   *Solid*, *Shaded*, *纹理d* draw types will no longer be displayed.
 All 物体原心
    If enabled, the center dot of objects will always be visible, even for non-selected ones
    (by default, unselected centers might be hidden by geometry in solid/shaded/textured shadings).

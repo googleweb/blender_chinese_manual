@@ -1,7 +1,7 @@
 .. _textures-index:
 
 ###########
-  Textures
+  纹理
 ###########
 
 .. toctree::

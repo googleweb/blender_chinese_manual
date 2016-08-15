@@ -5,7 +5,7 @@ Musgrave
 
 .. figure:: /images/texture-procedural-musgrave.jpg
 
-   Musgrave Texture Panels.
+   Musgrave 纹理 Panels.
 
 
 Often used for

@@ -20,7 +20,7 @@ Use 渲染 Bake in intensive light/shadow solutions,
 such as AO or soft shadows from area lights. If you bake AO for the main objects,
 you will not have to enable it for the full render, saving render time.
 
-Use *Full 渲染* or *Textures* to create an image texture;
+Use *Full 渲染* or *纹理* to create an image texture;
 baked procedural textures can be used as a starting point for further texture painting.
 Use *Normals* to make a low-resolution mesh look like a high-resolution mesh.
 To do that, UV-unwrap a high-resolution, finely sculpted mesh and bake its normals.
@@ -32,7 +32,7 @@ but will have much fewer faces/polygons.
 .. rubric:: Advantages
 
 - Can significantly reduce render times
-- Texture painting made easier
+- 纹理 painting made easier
 - Reduced polygon count
 - Repeated renders are made faster, multiplying the time savings
 
@@ -107,7 +107,7 @@ For materials the same spaces can be chosen as well, in the image texture option
 next to the existing *Normal Map* setting. For correct results,
 the setting here should match the setting used for baking.
 
-Textures
+纹理
 ^^^^^^^^
 
 Bakes colors of materials and textures only, without shading.
@@ -219,7 +219,7 @@ Workflow
 - Apply the image to the mesh as a UV texture. For displacement and normal maps,
   refer to :doc:`Bump and Normal Maps </render/blender_render/textures/influence/material/bump_and_normal>`.
   For full and texture bakes,
-  refer to :doc:`Textures </render/blender_render/textures/index>`.
+  refer to :doc:`纹理 </render/blender_render/textures/index>`.
 - Refine the image using the process described below,
   or embellish with :ref:`painting_texture-index`
   or an external image editor.

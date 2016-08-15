@@ -96,8 +96,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender渲染引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles渲染引擎</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染 Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
@@ -188,7 +188,7 @@ the time spent baking can be much less than time spent rendering out each frame 
 <p>Use 渲染 Bake in intensive light/shadow solutions,
 such as AO or soft shadows from area lights. If you bake AO for the main objects,
 you will not have to enable it for the full render, saving render time.</p>
-<p>Use <em>Full 渲染</em> or <em>Textures</em> to create an image texture;
+<p>Use <em>Full 渲染</em> or <em>纹理</em> to create an image texture;
 baked procedural textures can be used as a starting point for further texture painting.
 Use <em>Normals</em> to make a low-resolution mesh look like a high-resolution mesh.
 To do that, UV-unwrap a high-resolution, finely sculpted mesh and bake its normals.
@@ -199,7 +199,7 @@ but will have much fewer faces/polygons.</p>
 <p class="rubric">Advantages</p>
 <ul class="simple">
 <li>Can significantly reduce render times</li>
-<li>Texture painting made easier</li>
+<li>纹理 painting made easier</li>
 <li>Reduced polygon count</li>
 <li>Repeated renders are made faster, multiplying the time savings</li>
 </ul>
@@ -267,7 +267,7 @@ next to the existing <em>Normal Map</em> setting. For correct results,
 the setting here should match the setting used for baking.</p>
 </div>
 <div class="section" id="textures">
-<h4>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h4>
+<h4>纹理<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h4>
 <p>Bakes colors of materials and textures only, without shading.</p>
 <div class="figure" id="id4">
 <img alt="../../_images/render-bake-disp.jpg" src="../../_images/render-bake-disp.jpg" />
@@ -369,9 +369,9 @@ Ensure that all faces are selected.</li>
 <li>Apply the image to the mesh as a UV texture. For displacement and normal maps,
 refer to <a class="reference internal" href="../blender_render/textures/influence/material/bump_and_normal.html"><span class="doc">Bump and Normal Maps</span></a>.
 For full and texture bakes,
-refer to <a class="reference internal" href="../blender_render/textures/index.html"><span class="doc">Textures</span></a>.</li>
+refer to <a class="reference internal" href="../blender_render/textures/index.html"><span class="doc">纹理</span></a>.</li>
 <li>Refine the image using the process described below,
-or embellish with <a class="reference internal" href="../../painting_sculpting/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">Texture Paint</span></a>
+or embellish with <a class="reference internal" href="../../painting_sculpting/painting/texture_paint/index.html#painting-texture-index"><span class="std std-ref">纹理 Paint</span></a>
 or an external image editor.</li>
 </ul>
 </div>

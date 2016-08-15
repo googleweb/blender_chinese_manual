@@ -14,17 +14,17 @@
 
    | 模式:     编辑模式
    | 面板:    Curve and Surface, Font and Char
-   | 菜单:     :menuselection:`Add --> Text`
+   | 菜单:     :menuselection:`Add --> 文本`
 
 .. _fig-texts-intro-example:
 
 .. figure:: /images/textsamples.jpg
    :width: 400px
 
-   Text 例子.
+   文本 例子.
 
 
-*Text* objects are exactly what they sound like: they contain some text.
+*文本* objects are exactly what they sound like: they contain some text.
 They share the same object type as curves and surfaces,
 as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally 贝塞尔s).
 
@@ -34,7 +34,7 @@ but it can use external fonts too, including *PostScript Type 1*,
 *OpenType* and *TrueType* fonts. And last but not least,
 it can use any objects existing in the current blend-file as letters...
 
-Texts in Bender allow you to create/render 2D or 3D text, shaded as you want,
+文本s in Bender allow you to create/render 2D or 3D text, shaded as you want,
 with various advanced layout options (like justifying and frames), as we will see below.
 By default, letters are just flat filled surfaces, exactly like any closed 2D curve.
 But you can of course extrude them... And texts can follow other curves.
@@ -56,7 +56,7 @@ including the "blue" font that has been applied to a curve path.
    As you can see when you switch between *物体模式* and *编辑模式*,
    the *Font* panel remains the same. This means that its settings can be applied
    equally in both modes ... and this implies that you cannot apply them to just a part of the
-   mesh. So font, size, and so on, are common to all letters in a *Text* object.
+   mesh. So font, size, and so on, are common to all letters in a *文本* object.
    There is just one exception:
    the *Bold* or *Italic* buttons control properties specific to each letter
    (this is a way to use up to four different fonts in a text).
@@ -65,7 +65,7 @@ including the "blue" font that has been applied to a curve path.
    (rather than the entire character set).
 
 
-编辑 Text
+编辑文本
 ============
 
 .. admonition:: 参考
@@ -78,7 +78,7 @@ including the "blue" font that has been applied to a curve path.
 .. figure:: /images/modelling-text-create-ex.jpg
    :width: 300px
 
-   Text in 编辑模式.
+   文本 in 编辑模式.
 
 
 编辑 text is quite different from other object types in Blender, and happens mainly in two areas.
@@ -90,7 +90,7 @@ The menu of the 3D视图 header has nearly no use,
 and there is no *Specials* menu... You have no transform nor mirror tools, and so on.
 However, you can apply to texts the same modifiers as for curves.
 
-编辑 *Text* is similar to using a standard text editor but is not as
+编辑 *文本* is similar to using a standard text editor but is not as
 full-featured and has some differences:
 
 Exit *编辑模式*
@@ -111,16 +111,16 @@ Home/End
 
 The text buffer is in sync with the desktop clipboard.
 But if it is used within Blender the text formatting will be copied as well.
-For other ways of inserting a text, see `Inserting Text`_ below.
+For other ways of inserting a text, see `Inserting 文本`_ below.
 
 
-Inserting Text
+Inserting 文本
 --------------
 
 You can insert text in two ways: from the internal text buffer
-(`编辑 Text`_), or from a text file.
+(`编辑文本`_), or from a text file.
 
-To load text from a text file, use the :menuselection:`Text --> Paste File` tool.
+To load text from a text file, use the :menuselection:`文本 --> Paste File` tool.
 This will bring up a *文件浏览器* editor for navigating to a valid UTF-8 file.
 As usual, be careful that the file doesn't have too many characters,
 as interactive response will slow down.
@@ -133,7 +133,7 @@ Special Characters
    :class: refbox
 
    | 模式:     编辑模式
-   | 菜单:     :menuselection:`Text --> Special Characters`
+   | 菜单:     :menuselection:`文本 --> Special Characters`
 
 If you need special characters (such as accented chars, which are not on your keyboard)
 you can produce many of them using a combination of two other characters. To do so,
@@ -169,7 +169,7 @@ Some examples are given below:
      - :kbd:`O`, :kbd:`Alt-Backspace`, :kbd:`/`
 
 
-Convert Text to Text Object
+Convert 文本 to 文本 Object
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /images/converttexttotextobject.jpg
@@ -177,20 +177,20 @@ Convert Text to Text Object
 
 
 Using an existing text-block, you can convert it to an object from the text editor's header,
-select :menuselection:`Edit --> Text to 3D Object`,
+select :menuselection:`Edit --> 文本 to 3D Object`,
 *One Object* or *One Object per Line* depending on your needs.
 
-It is also possible to paste from the clipboard or a file from the *Edit* menu, while editing 3D Text.
+It is also possible to paste from the clipboard or a file from the *Edit* menu, while editing 3D 文本.
 
 
 3D Mesh
 ^^^^^^^
 
-It is possible to convert a Text Object to a 3D Mesh object.
+It is possible to convert a 文本 Object to a 3D Mesh object.
 This can be useful so that you may edit the vertices in *编辑模式*,
 but you will lose the ability to edit the text itself.
-To do this, go to *物体模式* and select your Text Object.
-Press :kbd:`Alt-C` and select *Mesh From Curve/Meta/Surf/Text*.
+To do this, go to *物体模式* and select your 文本 Object.
+Press :kbd:`Alt-C` and select *Mesh From Curve/Meta/Surf/文本*.
 Now you can return to *编辑模式* and manually edit the vertices.
 They are usually a bit messy, so it may be useful to use a *Limited Dissolve* deletion or *Remesh* Object
 :doc:`Modifier </modeling/modifiers/index>` at a low threshold to clean up your mesh.
@@ -202,13 +202,13 @@ They are usually a bit messy, so it may be useful to use a *Limited Dissolve* de
    left normal text, right the made text object.
 
 
-Text Selection
+文本 Selection
 --------------
 
 .. figure:: /images/modelling-text-create-ex.jpg
    :width: 200px
 
-   Text in 编辑模式.
+   文本 in 编辑模式.
 
 
 In *编辑模式*, your text has a white cursor, and as in any text editor,
@@ -220,7 +220,7 @@ You can use it to specify different materials, the normal/bold/italic state,
 and not much more...
 
 
-Formatting Text
+Formatting 文本
 ===============
 
 Fonts
@@ -309,7 +309,7 @@ so let us detail it:
 - First, you must create your chars. Each char, of any type,  is an object (mesh, curve, meta...).
   They all must have a name following the schema:
   *common prefix* followed by the *char name* (e.g. "ft.a", "ft.b", etc.).
-- Then, for the *Text* object, you must enable the *Dupli Verts* button
+- Then, for the *文本* object, you must enable the *Dupli Verts* button
   (:menuselection:`Object  -->  动画 设置` panel).
 - Back in the *Font* tap,
   fill the *Ob Family* field with the *common prefix* of your "font" objects.
@@ -320,7 +320,7 @@ duplicated so that their center is positioned at the *lower right corner* of the
 corresponding chars.
 
 
-Text on Curve
+文本 on Curve
 ^^^^^^^^^^^^^
 
 With the :doc:`curve modifier </modeling/modifiers/deform/curve>` you can let text follow a curve.
@@ -330,7 +330,7 @@ With the :doc:`curve modifier </modeling/modifiers/deform/curve>` you can let te
 .. figure:: /images/text-curved-lowres-ex.jpg
    :width: 200px
 
-   Text on curve.
+   文本 on curve.
 
 
 In Fig. :ref:`fig-texts-intro-on-curve` you can see a text deformed by a curve (a 2D 贝塞尔 circle).
@@ -340,7 +340,7 @@ using :kbd:`Alt-C` and click mesh.
 
 .. note::
 
-   There is also a Text on Curve feature,
+   There is also a 文本 on Curve feature,
    but the curve modifier offers more options.
 
 
@@ -349,7 +349,7 @@ Underline
 
 Underline
    Toggled with the *Underline* button before typing.
-   Text can also be set to Underlined by selecting it then using the *Underline* button in the Tool Shelf.
+   文本 can also be set to Underlined by selecting it then using the *Underline* button in the Tool Shelf.
 
    Position
       This allows you to shift vertically the position of the underline.
@@ -373,10 +373,10 @@ Character
 
 Bold
    Toggled with the *Bold* button before typing.
-   Text can also be set to Bold by selecting it then using the *Bold* button in the Tool Shelf.
+   文本 can also be set to Bold by selecting it then using the *Bold* button in the Tool Shelf.
 Italics
    Toggled with the *Italic* button before typing.
-   Text can also be set to Italic by selecting it then using the *Italic* button in the Tool Shelf.
+   文本 can also be set to Italic by selecting it then using the *Italic* button in the Tool Shelf.
 Underline
    Enables underlining, as controlled by the Underline settings above.
 Small Caps
@@ -419,14 +419,14 @@ Horizontal Alignment
 
 Left
    Aligns text to left of frames when using them,
-   else uses the center point of the *Text* object as the starting point of the text (which grows to the right).
+   else uses the center point of the *文本* object as the starting point of the text (which grows to the right).
 Center
    Centers text in the frames when using them,
-   else uses the center point of the *Text* object as the mid-point of the text
+   else uses the center point of the *文本* object as the mid-point of the text
    (which grows equally to the left and right).
 Right
    Aligns text to right of frames when using them,
-   else uses the center point of the *Text* object as the ending point of the text (which grows to the left).
+   else uses the center point of the *文本* object as the ending point of the text (which grows to the left).
 Justify
    Only flushes a line when it is terminated by a wordwrap (**not** by :kbd:`Return`),
    it uses *whitespace* instead of *character spacing* (kerning) to fill lines.
@@ -442,17 +442,17 @@ Vertical Alignment
 
 Top Base-Line
    Aligns the text base-line to top of frames when using them,
-   else uses the center point of the *Text* object as the starting point of the text (which grows to the bottom).
+   else uses the center point of the *文本* object as the starting point of the text (which grows to the bottom).
 Top
-   Aligns top of text to the center point of the *Text* object (which grows to the bottom).
+   Aligns top of text to the center point of the *文本* object (which grows to the bottom).
    It behaves as *Top Base-Line* when using frames.
 Center
    Centers text in the frames when using them,
-   else uses the center point of the *Text* object as the mid-point of the text
+   else uses the center point of the *文本* object as the mid-point of the text
    (which grows equally to the top and bottom).
 Bottom
    Aligns text to bottom of frames when using them,
-   else uses the center point of the *Text* object as the ending point of the text (which grows to the top).
+   else uses the center point of the *文本* object as the ending point of the text (which grows to the top).
 
 *Top* only works without frames.
 
@@ -475,7 +475,7 @@ Offset
 
 X offset and Y offset
    Well, these settings control the X and Y offset of the text, regarding its "normal" positioning. Note that with
-   frames (see :doc:`Text Boxes </modeling/texts/editing>`), it applies to all frames' content...
+   frames (see :doc:`文本 Boxes </modeling/texts/editing>`), it applies to all frames' content...
 
 
 Shape
@@ -521,21 +521,21 @@ Fill Deformed
    Fills the curves after applying shape keys and modifiers.
 
 
-Textures
+纹理
 --------
 
 .. figure:: /images/texttexturesettings.jpg
 
-   Texture 设置.
+   纹理 设置.
 
 
 Use UV for Mapping
    Use UV values as generated texture coordinates.
-Auto Texture Space
+Auto 纹理 Space
    Adjusts the active object's texture space automatically when transforming object.
 
 
 几何体
 ========
 
-Text objects have all the :doc:`curves extrusion features </modeling/curves/editing/extrude>`.
+文本 objects have all the :doc:`curves extrusion features </modeling/curves/editing/extrude>`.

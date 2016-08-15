@@ -1,12 +1,12 @@
 
 ************
-Texture Node
+纹理 Node
 ************
 
 .. figure:: /images/texture-node.jpg
    :align: right
 
-   Texture node.
+   纹理 node.
 
 Can be used to input image or procedural textures.
 
@@ -19,9 +19,9 @@ Vector
 Properties
 ==========
 
-Texture
+纹理
    The texture could be selected from a list of textures available in the current blend-file or link in textures.
-   The textures themselves could not be edited in this note, but in the Texture panel.
+   The textures themselves could not be edited in this note, but in the 纹理 panel.
 
 
 Outputs
@@ -30,7 +30,7 @@ Outputs
 Value
    Straight black-and-white value of the texture.
 Color
-   Texture color output.
+   纹理 color output.
 Normal
    The of normal map.
 
@@ -41,7 +41,7 @@ Normal
 .. figure:: /images/texture-node-example.jpg
    :width: 500px
 
-   例子 of the applying Texture node
+   例子 of the applying 纹理 node
 
 In the example to the right, a cloud texture, as it would appear to a viewer,
 is added to a base purple material, giving a velvet effect.

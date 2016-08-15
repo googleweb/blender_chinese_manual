@@ -53,7 +53,7 @@ Real Sky
    and the zenith color is used for points vertically above and below the camera.
 
 
-Textures
+纹理
 ========
 
 Instead of a color, or blend of two colors, Blender can use an 2D image which it maps to a
@@ -64,11 +64,11 @@ or which it maps to a virtual space around the scene.
 .. figure:: /images/bi_world-texcoord.jpg
    :width: 207px
 
-   Texture Coordinates pop-up menu.
+   纹理 Coordinates pop-up menu.
 
 
 The World textures are accessible in the texture menu (just select *World* first,
-then *Texture*. They are used much like the Materials textures,
+then *纹理*. They are used much like the Materials textures,
 except for a couple of differences. The textures can be mapped according to:
 
 View
@@ -90,7 +90,7 @@ Object
 .. figure:: /images/bi_world-texinfluence.jpg
    :width: 297px
 
-   Texture Influence panel.
+   纹理 Influence panel.
 
 
 The texture affects color only, but in four different ways:

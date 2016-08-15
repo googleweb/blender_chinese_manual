@@ -24,8 +24,8 @@ Backface Cull (default On)
 Invisible
    Hide all faces of objects rendered with this material.
 
-Text
-   Use material as :doc:`Text object </modeling/texts/introduction>` in the 游戏引擎.
+文本
+   Use material as :doc:`文本 object </modeling/texts/introduction>` in the 游戏引擎.
 
 Alpha Blend menu:
    Controls how the alpha channel is used to create a transparent texture in the rendered image.

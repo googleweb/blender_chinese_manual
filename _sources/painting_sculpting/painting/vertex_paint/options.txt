@@ -53,13 +53,13 @@ Blend
       Darkens the color of the vertices.
 
 
-Texture
+纹理
 -------
 
 Use the texture selector at the bottom of the paint panel to select a pre-loaded image or
 procedural texture to use as your brush pattern. Note that in order to use it,
 you must have a placeholder material defined,
-and that particular texture defined using the Material and Texture buttons.
+and that particular texture defined using the Material and 纹理 buttons.
 It is not necessary to have that material or texture applied to any mesh anywhere;
 it must only be defined.
 
@@ -73,7 +73,7 @@ Brush Mapping Mode
    3D
       Same as tiled mode
    Stencil
-      Texture is applied only in borders of the stencil.
+      纹理 is applied only in borders of the stencil.
    Random
       Random applying of texture.
 

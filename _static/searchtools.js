@@ -438,7 +438,7 @@ var Search = {
           $.ajax({url: DOCUMENTATION_OPTIONS.URL_ROOT + '_sources/' + item[0] + '.txt',
                   dataType: "text",
                   complete: function(jqxhr, textstatus) {
-                    var data = jqxhr.responseText;
+                    var data = jqxhr.response文本;
                     if (data !== '' && data !== undefined) {
                       listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
                     }
@@ -640,7 +640,7 @@ var Search = {
       ((start + 240 - text.length) ? '...' : '');
     var rv = $('<div class="context"></div>').text(excerpt);
     $.each(hlwords, function() {
-      rv = rv.highlightText(this, 'highlighted');
+      rv = rv.highlight文本(this, 'highlighted');
     });
     return rv;
   }

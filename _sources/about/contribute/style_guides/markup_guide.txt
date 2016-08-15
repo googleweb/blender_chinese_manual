@@ -19,7 +19,7 @@ Markup Style Guide
    many conventions can be noticed along the way by reading existing text.
 
 
-This page covers the conventions for writing and use of the reStructuredText (RST) markup syntax.
+This page covers the conventions for writing and use of the reStructured文本 (RST) markup syntax.
 
 
 Conventions
@@ -66,10 +66,10 @@ Headings
 .. note:: each ``.rst`` file should only have one chapter heading (``*``) per file.
 
 
-Text Styling
+文本 Styling
 ============
 
-See the `overview on ReStructured Text <http://www.sphinx-doc.org/en/stable/rest.html>`__
+See the `overview on ReStructured 文本 <http://www.sphinx-doc.org/en/stable/rest.html>`__
 for more information on how to style the various elements of the documentation and on how to add lists, tables,
 pictures and code blocks.
 The `sphinx reference <http://www.sphinx-doc.org/en/stable/markup/>`__ provides more insight additional constructs.
@@ -284,9 +284,9 @@ By default, a table of contents should show two levels of depth.
 Further Reading
 ===============
 
-To learn more about reStructuredText, see:
+To learn more about reStructured文本, see:
 
 `Sphinx RST Primer <http://www.sphinx-doc.org/en/stable/rest.html>`__
    Good basic introduction.
-`Docutils reStructuredText reference <http://docutils.sourceforge.net/rst.html>`__
+`Docutils reStructured文本 reference <http://docutils.sourceforge.net/rst.html>`__
    Links to reference and user documentation.

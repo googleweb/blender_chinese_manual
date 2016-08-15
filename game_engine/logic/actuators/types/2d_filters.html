@@ -293,10 +293,10 @@ Its usage is the same as built-in filters,
 but you must select <em>Custom Filter</em> in <em>2D Filter</em> actuator,
 then write shader program into the 文本编辑器, and then place shader script name on actuator.</p>
 <p>Blue Sepia 例子:</p>
-<div class="code glsl highlight-default"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">bgl_渲染edTexture</span><span class="p">;</span>
+<div class="code glsl highlight-default"><div class="highlight"><pre><span></span><span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">bgl_渲染ed纹理</span><span class="p">;</span>
 <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">vec4</span> <span class="n">texcolor</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">bgl_渲染edTexture</span><span class="p">,</span> <span class="n">gl_TexCoord</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">st</span><span class="p">);</span>
+  <span class="n">vec4</span> <span class="n">texcolor</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">bgl_渲染ed纹理</span><span class="p">,</span> <span class="n">gl_TexCoord</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">st</span><span class="p">);</span>
   <span class="nb">float</span> <span class="n">gray</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">texcolor</span><span class="o">.</span><span class="n">rgb</span><span class="p">,</span> <span class="n">vec3</span><span class="p">(</span><span class="mf">0.299</span><span class="p">,</span> <span class="mf">0.587</span><span class="p">,</span> <span class="mf">0.114</span><span class="p">));</span>
   <span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">vec4</span><span class="p">(</span><span class="n">gray</span> <span class="o">*</span> <span class="n">vec3</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">),</span> <span class="n">texcolor</span><span class="o">.</span><span class="n">a</span><span class="p">);</span>
 <span class="p">}</span>

@@ -26,7 +26,7 @@ strength factor for the intensity of the light.
 ^^^^^^^^^^^^^^^^^^^^
 
 For image based lighting,
-use the Environment Texture node rather than the 图像 Texture node for correct mapping.
+use the Environment 纹理 node rather than the 图像 纹理 node for correct mapping.
 This supports Equirectangular (also known as Lat/Long) for environment maps,
 and 镜像 Ball mapping for converting photos of mirror balls to environment maps.
 

@@ -795,7 +795,7 @@ $(document).ready(function() {
     var terms = (params.q) ? params.q[0].split(/\s+/) : [];
     var result = $(this);
     $.each(terms, function() {
-      result.highlightText(this.toLowerCase(), 'highlighted');
+      result.highlight文本(this.toLowerCase(), 'highlighted');
     });
   });
 

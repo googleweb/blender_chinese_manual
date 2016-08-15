@@ -32,7 +32,7 @@ Blender has a number of *Modes* used for editing different kinds of data:
 - 雕刻模式
 - Vertex Paint
 - Weight Paint
-- Texture Paint
+- 纹理 Paint
 - Particle Edit
 
 The mode can be changed using the menu in the 3D视图 header, or using the hotkey associated with that mode.

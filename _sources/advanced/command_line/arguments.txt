@@ -102,8 +102,8 @@ Window Options
 ``-g`` 游戏引擎 specific options
    -g fixedtime      Run on 50 hertz without dropping frames
    -g vertexarrays      Use Vertex Arrays for rendering (usually faster)
-   -g nomipmap      No Texture Mipmapping
-   -g linearmipmap      Linear Texture Mipmapping instead of Nearest (default)
+   -g nomipmap      No 纹理 Mipmapping
+   -g linearmipmap      Linear 纹理 Mipmapping instead of Nearest (default)
 
 
 Python Options

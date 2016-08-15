@@ -11,7 +11,7 @@
    A softbody cloth uncovering a text.
 
    `动画 <https://vimeo.com/1865528>`__ -
-   `Blend file <https://wiki.blender.org/index.php/Media:HiddenText例子.blend>`__
+   `Blend file <https://wiki.blender.org/index.php/Media:Hidden文本例子.blend>`__
 
 
 A Soft Body in general, is a simulation of a soft or rigid deformable object.

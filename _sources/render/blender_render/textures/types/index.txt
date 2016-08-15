@@ -1,6 +1,6 @@
 
 ################
-  Texture Types
+  纹理 Types
 ################
 
 .. toctree::

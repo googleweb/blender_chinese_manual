@@ -49,9 +49,9 @@ Falloff Type
    Sets the way the strength of the warp change as it goes from the center of the transform to the Radius value.
    See :doc:`Proportional 编辑 </editors/3dview/transform/transform_control/proportional_edit>`
    for descriptions of the falloff types.
-Texture
+纹理
    Specify a texture the strength is offset by to create variations in the displacement.
-Texture Coordinates
+纹理 Coordinates
    Set the way textures are applied to the mesh when using a textured warp.
 
    Object

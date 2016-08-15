@@ -1,23 +1,23 @@
 
 **************
-图像 Textures
+图像 纹理
 **************
 
-The term *图像 Texture* simply means that a graphic image - a pixel grid
+The term *图像 纹理* simply means that a graphic image - a pixel grid
 composed of R, G, B,
 and sometimes Alpha values - is used as the input source to the texture.
 As with other types of textures, this information can be used in a number of ways,
 not only as a simple "decal".
 
-When the Texture Type *图像 or Movie* is selected, three new panels present
+When the 纹理 Type *图像 or Movie* is selected, three new panels present
 themselves allowing to control most aspects of how image textures are applied:
 *图像*, *图像 Sampling*, and *图像 Mapping*.
 
 
-About 图像 Based Texturing
+About 图像 Based 文本uring
 ===========================
 
-Texture images take up precious memory space,
+纹理 images take up precious memory space,
 often being loaded into a special video memory bank that is very fast and very expensive,
 so it is often very small. So, keep the images as small as possible.
 A 64×64 image takes up only one fourth the memory of a 128×128 image.
@@ -42,7 +42,7 @@ and another that has three maps.
 
 .. figure:: /images/uv-overview.jpg
 
-   How all the parts of UV Texturing work together.
+   How all the parts of UV 文本uring work together.
 
 
 When using file textures, it is very important that you have
@@ -52,9 +52,9 @@ of the mesh, and they are laid out appropriately.
 You do not have to UV map the *entire* mesh.
 The sphere above on the left has some faces mapped,
 but other faces use procedural materials and textures.
-Only use UV Textures for those portions of your mesh where you want very graphic,
+Only use UV 纹理 for those portions of your mesh where you want very graphic,
 precise detail. For example,
-a model of a vase only needs UV Texture for the rim where decorative artwork is incorporated.
+a model of a vase only needs UV 纹理 for the rim where decorative artwork is incorporated.
 A throw pillow does not need a different image for the back as the front;
 in fact many throw pillows have a fabric (procedural material) back.
 
@@ -76,15 +76,15 @@ The process consists of the following steps.
   :doc:`UV Layouts </editors/uv_image/uv_editing/layout_management>`.
 - Create one or more Materials for the Mesh.
 - Create one or more images for each UV Layout and aspect of the texture. Either
-  - paint directly on the mesh using Texture Paint in the 3D视图,
+  - paint directly on the mesh using 纹理 Paint in the 3D视图,
   - load and/or edit an image in the UV/图像编辑器, or
   - Bake the existing materials into an image for the UV/图像编辑器.
-- Apply those images as UV Textures to the mesh to affect one or more aspects of the mesh.
+- Apply those images as UV 纹理 to the mesh to affect one or more aspects of the mesh.
   This is done by using one or more of the numerous Map To options. For example,
   - map to Color to affect the diffuse coloring of the mesh,
   - map to Nor to affect the normal direction to give the surface a bumpy or creased look, or
   - map to Spec (specularity) to make certain areas look shiny and oily.
-- Layer the Textures to create a convincing result.
+- Layer the 纹理 to create a convincing result.
 
 
 Using 图像s and Materials
@@ -99,7 +99,7 @@ you will want to save an outline of your UV faces by using the *Save UV Face Lay
 This is discussed :ref:`here <uv_image-export_layout>`.
 
 
-Creating an 图像 Texture
+Creating an 图像 纹理
 -------------------------
 
 To create an image within Blender,
@@ -112,17 +112,17 @@ After that, you can color the image using the:
 
 After you have created your image,
 you can modify it using Blender's built-in
-:doc:`Texture Paint </sculpt_paint/painting/texture_paint/introduction>`
+:doc:`纹理 Paint </sculpt_paint/painting/texture_paint/introduction>`
 or any external image painting program.
 
 
-.. note:: See Texture in 3D视图 but does not 渲染
+.. note:: See 纹理 in 3D视图 but does not 渲染
 
-   You may be able to see the texture in Textured display mode in the 3D视图;
+   You may be able to see the texture in 纹理d display mode in the 3D视图;
    this is all that is required to have textures show up in Blender's 游戏引擎. 渲染ing, however,
    requires a material.
-   You must have a *Face Textures* material assigned to the mesh for it to render using the UV Texture.
-   In the Material settings, Add New material to a selected object and enable *Face Textures*.
+   You must have a *Face 纹理* material assigned to the mesh for it to render using the UV 纹理.
+   In the Material settings, Add New material to a selected object and enable *Face 纹理*.
 
 
 例子
@@ -140,7 +140,7 @@ Each of these are examples of applying an image as a texture to the mesh.
 
 As another example, the face is the subject of many questions and tutorials. In general,
 you will want to create a Material that has the basic skin color, appropriate shaders,
-and sub-surface scattering. Then you will want to layer on additional UV Textures for:
+and sub-surface scattering. Then you will want to layer on additional UV 纹理 for:
 
 - Freckle map for Color and Normal aspects.
 - Subdermal veins and tendons for Displacement.
@@ -151,13 +151,13 @@ and sub-surface scattering. Then you will want to layer on additional UV Texture
 - Under chin and inside nostrils that receive less Ambient light.
 - Thin skin is more translucent, so a map is needed for that.
 
-Each image is mapped by using another Texture Channel.
+Each image is mapped by using another 纹理 Channel.
 Each of these maps are images which are applied to the different aspects (Color, Normal,
 Specularity) of the image. Tileable images can be repeated to give a smaller,
-denser pattern by using the Texture controls for repeat or size.
+denser pattern by using the 纹理 controls for repeat or size.
 
 
-Layering UV Textures
+Layering UV 纹理
 --------------------
 
 .. list-table::
@@ -165,12 +165,12 @@ Layering UV Textures
    * - .. figure:: /images/uv-layer_one.jpg
           :width: 300px
 
-          Base UV Texture.
+          Base UV 纹理.
 
      - .. figure:: /images/uv-layer-two.jpg
           :width: 300px
 
-          Layered UV Texture.
+          Layered UV 纹理.
 
 
 Great textures are formed by layering images on top of one another.
@@ -181,18 +181,18 @@ but opaque where you want to add on to details.
 To avoid massive confusion, all image textures for a mesh usually use the same UV map.
 If you do, each image will line up with the one below it,
 and they will layer on top of one another like the examples shown to the right. To do this,
-just create one UV Texture (map) as described in this section. Then,
+just create one UV 纹理 (map) as described in this section. Then,
 create material image textures as described in the procedural materials section.
 Instead of mapping to Original Coordinates (OrCo), map to UV.
 
-Use that map name repeatedly in the :menuselection:`Material --> Textures --> Map Input`
+Use that map name repeatedly in the :menuselection:`Material --> 纹理 --> Map Input`
 panel by selecting :guilabel:`UV` and typing the name in the text field. In the example to the right,
-our UV Texture is called "Head" (you may have to expand the image to see the panel settings).
+our UV 纹理 is called "Head" (you may have to expand the image to see the panel settings).
 Then, the image texture shown will be mapped using the UV coordinates.
-In the "Base UV Texture" example to the right, the face has two textures UV mapped;
+In the "Base UV 纹理" example to the right, the face has two textures UV mapped;
 one for a base color, and another for spots, blemishes and makeup.
 
-Both textures use the same UV Texture map as their Map Input, and both affect Color.
+Both textures use the same UV 纹理 map as their Map Input, and both affect Color.
 The Makeup texture is transparent except where there is color,
 so that the base color texture shows through.
 Note that the colors were too strong on the image,
@@ -229,10 +229,10 @@ You can mix and match procedural materials and textures, vertex paint,
 and UV textures onto the same mesh.
 
 The image to the right has a world with a red ambient light.
-The material has both VCol Paint and Face Textures enabled,
+The material has both VCol Paint and Face 纹理 enabled,
 and receives half of ambient light. A weak cloud texture affects color, mixing in a tan color.
 The right vertices are vertex painted yellow and the left is unpainted procedural gray.
-The UV Texture is a stock arrow image from the public domain texture CD.
+The UV 纹理 is a stock arrow image from the public domain texture CD.
 Scene lighting is a white light off to the right.
 From this information and the User Manual thus far,
 you should now be able to recreate this image.
@@ -241,11 +241,11 @@ You can also assign :doc:`multiple materials </render/blender_render/materials/m
 to the mesh based on which faces you want to be procedural and which you want to be texture-mapped.
 Just do not UV map the faces you want to be procedural.
 
-You can use UV Textures and VertexPaint (:kbd:`V` in the 3D视图) simultaneously,
+You can use UV 纹理 and VertexPaint (:kbd:`V` in the 3D视图) simultaneously,
 if both are enabled in the Material settings.
 The vertex colors are used to modulate the brightness or color of the UV image texture:
 
-- UV Texture is at the base *(Face Textures)*
+- UV 纹理 is at the base *(Face 纹理)*
 - Vertex paint affects its colors, then
 - Procedural textures are laid on top of that,
 - Area lights shine on the surface, casting shadows and what not, and finally
@@ -260,7 +260,7 @@ The vertex colors are used to modulate the brightness or color of the UV image t
 
 A UV Layout can only have one image, although you can tile and animate the image.
 Since a layout is a bunch of arranged UV Maps, and a UV Map maps many mesh faces,
-a face can therefore only have one UV Texture image,
+a face can therefore only have one UV 纹理 image,
 and the UV coordinates for that face must fit entirely on the image.
 If you want a face to have multiple images, split the face into parts,
 and assign each part its own image. *(Or* you can get fancy with 节点,
@@ -273,68 +273,68 @@ Using Alpha Transparency
 .. figure:: /images/uv-alpha.jpg
    :width: 200px
 
-   Alpha UV Textures.
+   Alpha UV 纹理.
 
 
 Alpha 0.0 (transparent) areas of a UV 图像 render as black.
 Unlike a procedural texture, they do not make the base material transparent,
-since UV Textures do not operate on the base procedural material.
+since UV 纹理 do not operate on the base procedural material.
 The UV texture overrides any procedural color underneath.
-Procedural Textures are applied on top of UV Textures,
-so a procedural image texture would override any UV Texture. Transparent (black)
+Procedural 纹理 are applied on top of UV 纹理,
+so a procedural image texture would override any UV 纹理. Transparent (black)
 areas of a procedural texture mapped to alpha operate on top of anything else,
 making the object transparent in those places.
-The only thing that modulates visible parts of a UV Texture are the Vertex Colors.
+The only thing that modulates visible parts of a UV 纹理 are the Vertex Colors.
 In the example to the right,
-the finger image is transparent at the cuff and top of the finger and is used as a UV Texture.
+the finger image is transparent at the cuff and top of the finger and is used as a UV 纹理.
 All three balls have a base material of blue and a marbling texture.
-The base material color is not used whenever Face Textures is enabled.
+The base material color is not used whenever Face 纹理 is enabled.
 
 The top left ball has not had any vertex painting,
 and the finger is mapped to the middle band, and the texture is mapped to a pink color.
-As you can see, the base material has VCol Paint and Face Textures enabled;
+As you can see, the base material has VCol Paint and Face 纹理 enabled;
 the base color blue is not used, but the texture is. With no vertex painting,
-there is nothing to modulate the UV Texture colors, so the finger shows as white.
+there is nothing to modulate the UV 纹理 colors, so the finger shows as white.
 Transparent areas of the UV 图像 show as black.
 
 The top right ball has had a pink vertex color applied to the vertical band of faces
 (in the 3D视图编辑窗口, select the faces in UV Paint Mode, switch to 顶点绘制模式,
 pick a pink color, and :menuselection:`Paint --> Set Vertex Colors`).
 The finger is mapped to the middle vertical band of faces,
-and VCol and Face Textures are enabled.
+and VCol and Face 纹理 are enabled.
 The texture is mapped to Alpha black and multiplies the base material alpha value which is 1.0.
 Thus, white areas of the texture are 1.0, and 1.0 times 1.0 is 1.0
 so that area is opaque and shows. Black areas of the procedural texture, 0.0,
 multiply the base material to be transparent. As you can see, the unmapped faces
 (left and right sides of the ball) show the vertex paint (none, which is gray)
 and the painted ones show pink, and the middle stripe that is both painted and mapped change
-the white UV Texture areas to pink.
+the white UV 纹理 areas to pink.
 Where the procedural texture says to make the object transparent,
 the green background shows through.
-Transparent areas of the UV Texture insist on rendering black.
+Transparent areas of the UV 纹理 insist on rendering black.
 
 The bottom ball uses multiple materials. Most of the ball (all faces except the middle band)
-is a base material that does not have Face Textures (nor Vertex Color Paint - VCol Paint)
+is a base material that does not have Face 纹理 (nor Vertex Color Paint - VCol Paint)
 enabled. Without it enabled,
 the base blue material color shows and the pink color texture is mixed on top.
 The middle band is assigned a new material (2 Mat 2)
-that *does* have vertex paint and Face Textures enabled.
+that *does* have vertex paint and Face 纹理 enabled.
 The middle band of faces were vertex painted yellow,
 so the white parts of the finger are yellow. Where the pink texture runs over the UV texture,
 the mixed color changes to green, since pink and yellow make a green.
 
 If you want the two images to show through one another, and mix together,
 you need to use Alpha. The base material can have an image texture with an Alpha setting,
-allowing the underlying UV Texture to show through.
+allowing the underlying UV 纹理 to show through.
 
 To overlay multiple UV images, you have several options:
 
-- Create multiple UV Textures which map the same,
+- Create multiple UV 纹理 which map the same,
   and then use different images (with Alpha) and Blender will overlay them automatically.
 - Use the :doc:`Composite 节点 </compositing/index>` to combine the two images via the AlphaOver node,
-  creating and saving the composite image. Open that composited image as the UV Texture.
+  creating and saving the composite image. Open that composited image as the UV 纹理.
 - Use an external paint program to alpha overlay the images and save the file,
-  and load it as the face's UV Texture
+  and load it as the face's UV 纹理
 - Define two objects, one just inside the other.
   The inner object would have the base image,
   and the outer image the overlaid image with a material alpha less than one (1.0).
@@ -345,11 +345,11 @@ To overlay multiple UV images, you have several options:
   simply assign the material to the face using the Multiple Materials
 
 
-UV Textures vs. Procedural Textures
+UV 纹理 vs. Procedural 纹理
 ===================================
 
-A Material Texture, that has a Map Input of UV,
-and is an image texture that is mapped to Color, is equivalent to a UV Texture.
+A Material 纹理, that has a Map Input of UV,
+and is an image texture that is mapped to Color, is equivalent to a UV 纹理.
 It provides much more flexibility, because it can be sized and offset, and the degree to which
 it affects the color of your object can be controlled in the Map To panel. In addition,
 you can have different images for each texture channel; one for color, one for alpha,
@@ -360,8 +360,8 @@ like Clouds, are incredibly simple and useful for adding realism and details to 
 .. list-table::
    :header-rows: 1
 
-   * - UV Texture
-     - Procedural Texture
+   * - UV 纹理
+     - Procedural 纹理
    * - 图像 maps to precise coordinates on the selected faces of the mesh
      - Pattern is generated dynamically, and is mapped to the entire mesh (or portion covered by that material)
    * - The 图像 maps once to a range of mesh faces specifically selected
@@ -600,12 +600,12 @@ Derivative Map
 
 MIP Map
    `MIP Maps <https://en.wikipedia.org/wiki/Mipmap>`__ are pre-calculated, smaller,
-   filtered Textures for a certain size. A series of pictures is generated, each half the size of the former one.
+   filtered 纹理 for a certain size. A series of pictures is generated, each half the size of the former one.
    This optimizes the filtering process. By default, this option is enabled and speeds up rendering
    (especially useful in the game engine). When this option is OFF, you generally get a sharper image,
    but this can significantly increase calculation time if the filter dimension (see below) becomes large.
    Without MIP Maps you may get varying pictures from slightly different camera angles,
-   when the Textures become very small. This would be noticeable in an animation.
+   when the 纹理 become very small. This would be noticeable in an animation.
 
 
    MIP Map Gaussian filter
@@ -642,8 +642,8 @@ Filter
    If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
    turn this value down from 1.0 to 0.1 or so.
 
-   Texture Filter Type
-      Texture filter to use for image sampling.
+   纹理 Filter Type
+      纹理 filter to use for image sampling.
       Just like a *pixel* represents a *pic* ture *el* ement, a *texel* represents a *tex* ture *el* ement.
       When a texture (2D texture space) is mapped onto a 3D model (3D model space),
       different algorithms can be used to compute a value for each pixel based on samplings from several texels.
@@ -665,7 +665,7 @@ Filter
          Probes
             Number of probes to use. An integer between 1 and 256.
             Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
-            `Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping
+            `Simple and Table Feline: Fast Elliptical Lines for Anisotropic 纹理 Mapping
             <http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf>`__,
             WRL
       Area

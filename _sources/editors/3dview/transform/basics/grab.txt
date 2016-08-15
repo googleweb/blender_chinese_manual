@@ -1,4 +1,4 @@
-..    Todo/review:Text=Split
+..    Todo/review:文本=Split
 
 *********
 Grab/Move

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Applying Textures &mdash; Blender参考手册</title>
+  <title>Applying 纹理 &mdash; Blender参考手册</title>
   
 
   
@@ -159,7 +159,7 @@
       
           <li><a href="index.html">UV 编辑</a> &raquo;</li>
       
-    <li>Applying Textures</li>
+    <li>Applying 纹理</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,7 +174,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="applying-textures">
-<h1>Applying Textures<a class="headerlink" href="#applying-textures" title="Permalink to this headline">¶</a></h1>
+<h1>Applying 纹理<a class="headerlink" href="#applying-textures" title="Permalink to this headline">¶</a></h1>
 <p>Sooner or later, you may want to use an image texture on your model.
 If you are using an external application, you need to know where on the mesh you are painting.
 You may also need to test your UV mapping with a test image.
@@ -182,7 +182,7 @@ This section covers how to export an outline of your UV map,
 and how to load images into the UV/图像 editor.</p>
 <div class="section" id="exporting-uv-layout-image">
 <span id="uv-image-export-layout"></span><h2>Exporting UV Layout 图像<a class="headerlink" href="#exporting-uv-layout-image" title="Permalink to this headline">¶</a></h2>
-<p>As a way of communicating to an artist who is painting your UV Texture for you,
+<p>As a way of communicating to an artist who is painting your UV 纹理 for you,
 Blender has a tool called <em>Save UV Face Layout</em>
 (located in the UV/图像编辑器, <span class="menuselection">UVs ‣ Save UV Face Layout</span>)
 that saves an image as a <code class="docutils literal"><span class="pre">Targa</span></code> (<code class="docutils literal"><span class="pre">.tga</span></code>), <code class="docutils literal"><span class="pre">EPS</span></code>, or an <code class="docutils literal"><span class="pre">SVG</span></code> format for the object you have selected.</p>
@@ -211,7 +211,7 @@ painting your texture. The example below shows Blender in the background,
 and the Gimp working on the texture, using the saved layout as a guide.
 Note that targa format supports the Alpha channel,
 so you can paint transparent areas of the mesh.</p>
-<p>For using images as textures, see the page on <a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 Textures</span></a></p>
+<p>For using images as textures, see the page on <a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 纹理</span></a></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -233,10 +233,10 @@ so you can paint transparent areas of the mesh.</p>
 </table>
 </div>
 <div class="section" id="applying-textures-to-uvs">
-<span id="face-textures"></span><h2>Applying Textures to UVs<a class="headerlink" href="#applying-textures-to-uvs" title="Permalink to this headline">¶</a></h2>
+<span id="face-textures"></span><h2>Applying 纹理 to UVs<a class="headerlink" href="#applying-textures-to-uvs" title="Permalink to this headline">¶</a></h2>
 <p>The UV/图像编辑器 allows you to map textures directly to the mesh faces.
 The 3D视图编辑窗口 shows you the object being textured.
-If you set this editor into Textured viewport shading,
+If you set this editor into 纹理d viewport shading,
 you will immediately see any changes made in the UV/图像 and this editor,
 and vice versa.</p>
 <p>You can edit and load images,
@@ -247,10 +247,10 @@ If you were to apply an image to UVs then render, the texture would not show up 
 <p>To render an image however, you must</p>
 <ul class="simple">
 <li>create a Material for the object, and</li>
-<li>tell Blender to use the UV Textures on faces when rendering.</li>
+<li>tell Blender to use the UV 纹理 on faces when rendering.</li>
 </ul>
 <p>To create a Material, you have to click <em>Add New</em> Material in the Shading context.</p>
-<p>There are two ways to tell Blender to use the UV Texture when rendering:
+<p>There are two ways to tell Blender to use the UV 纹理 when rendering:
 the Proper way and the Quick Way:</p>
 <div class="section" id="use-uv-coordinates">
 <h3>Use UV Coordinates<a class="headerlink" href="#use-uv-coordinates" title="Permalink to this headline">¶</a></h3>
@@ -258,35 +258,35 @@ the Proper way and the Quick Way:</p>
 <img alt="../../../_images/texture-uv-coords.jpg" src="../../../_images/texture-uv-coords.jpg" />
 <p class="caption"><span class="caption-text">A texture setup to map using its UV coordinates.</span></p>
 </div>
-<p>In the Texture channel panel,
-Add a New Texture and define the texture as an image and load the image you want to use.
+<p>In the 纹理 channel panel,
+Add a New 纹理 and define the texture as an image and load the image you want to use.
 In the Mapping section, choose UV from the Coordinates menu, and select the UV layer to use.</p>
 <p>Make sure it is mapped to Color in the Influence section as well
-(it will be mapped to Color by default, and the UV Texture is named &#8220;UVTex&#8221; by default).
+(it will be mapped to Color by default, and the UV 纹理 is named &#8220;UVTex&#8221; by default).
 If the image has an alpha channel and you want to use it,
 click &#8220;UseAlpha&#8221; in the Map 图像 panel.</p>
 <p>Full details of using 图像 textures are on the
-<a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 Textures</span></a> page.</p>
+<a class="reference internal" href="../../../render/blender_render/textures/types/image.html"><span class="doc">图像 纹理</span></a> page.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Material is Required for 渲染ing</p>
-<p class="last">You can perform UV Texturing on a mesh within Blender without assigning a material,
+<p class="last">You can perform UV 文本uring on a mesh within Blender without assigning a material,
 and you will even see it in your 3D视图 in textured viewport mode. However, when you render,
 you will just get a default gray if the object does not have a Material assigned.
 You will get a black if you do not load an image. If you do not create a texture that uses the image,
-or enable <em>Face Texture</em>, your object will render according to the procedural material settings.</p>
+or enable <em>Face 纹理</em>, your object will render according to the procedural material settings.</p>
 </div>
 </div>
 <div class="section" id="id1">
-<h3>Face Textures<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Face 纹理<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id6">
 <img alt="../../../_images/texture-uv-layout-facetex.jpg" src="../../../_images/texture-uv-layout-facetex.jpg" />
-<p class="caption"><span class="caption-text">The Material panel with activated Face Textures button.</span></p>
+<p class="caption"><span class="caption-text">The Material panel with activated Face 纹理 button.</span></p>
 </div>
-<p>An alternate way is to set up a Face Textures Material as shown. To do so,
+<p>An alternate way is to set up a Face 纹理 Material as shown. To do so,
 with the Properties editor displayed, press <code class="kbd docutils literal"><span class="pre">F5</span></code> to display the Shader Buttons.
 In the Properties editor, Material settings, click <em>Add New</em> material.</p>
-<p>On the Options panel, enable <em>Face Textures</em>. This way is quick,
+<p>On the Options panel, enable <em>Face 纹理</em>. This way is quick,
 but bypasses the normal rendering system for fast results,
 but results which do not respect transparency and proper shading.</p>
 </div>
@@ -374,7 +374,7 @@ look like cloth, you do <strong>not</strong> want any stretching (unless you wan
 </tbody>
 </table>
 <p>When you render, the mesh will have the test grid as its colors,
-and the UV Texture will be the size image you specified.
+and the UV 纹理 will be the size image you specified.
 You can save the UV image using the <span class="menuselection">图像 ‣ Save</span> menu.</p>
 </div>
 <div class="section" id="image-settings">
@@ -446,8 +446,8 @@ but will keep the old one open in the 图像 editor.</p>
 </div>
 </div>
 <div class="section" id="modifying-your-image-texture">
-<h2>Modifying your 图像 Texture<a class="headerlink" href="#modifying-your-image-texture" title="Permalink to this headline">¶</a></h2>
-<p>To modify your new Texture, you can:</p>
+<h2>Modifying your 图像 纹理<a class="headerlink" href="#modifying-your-image-texture" title="Permalink to this headline">¶</a></h2>
+<p>To modify your new 纹理, you can:</p>
 <ul class="simple">
 <li><a class="reference internal" href="../../../render/workflows/bake.html"><span class="doc">渲染 Bake</span></a> an image based on how the mesh looks<ul>
 <li>The 渲染 Bake feature provides several tools to replace the current image
@@ -455,7 +455,7 @@ based on a render of <a class="reference internal" href="../../../sculpt_paint/p
 Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.</li>
 </ul>
 </li>
-<li>Paint using <a class="reference internal" href="../../../sculpt_paint/painting/texture_paint/introduction.html"><span class="doc">Texture Paint</span></a>.<ul>
+<li>Paint using <a class="reference internal" href="../../../sculpt_paint/painting/texture_paint/introduction.html"><span class="doc">纹理 Paint</span></a>.<ul>
 <li>Use the UV/图像编辑器 menu <span class="menuselection">图像 ‣ New</span>. Then start painting your mesh with</li>
 </ul>
 </li>
@@ -463,18 +463,18 @@ Normals (bumps), Procedural materials, textures and lighting, and ambient occlus
 <li>Using your favorite image painting program, you could use an exported UV layout to create a texture.
 Then save your changes, and back in Blender,
 use the <span class="menuselection">图像 ‣ Open</span> menu command to load it as your UV image
-for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
+for the mesh in Face Select Mode for the desired (and active) UV 纹理 layer.
 Using the <em>Edit Externally</em> tool in the <em>图像</em> menu, Blender will open an image editor,
 as specified in the <em>用户首选项</em> and load in the image to be edited.</li>
 </ul>
 </li>
 <li>Use the &#8220;projection painting&#8221; feature of recent versions of Blender</li>
-<li>Use the Bake uV-Textures to Vertex Colors add-on to create an image from vertex colors</li>
+<li>Use the Bake uV-纹理 to Vertex Colors add-on to create an image from vertex colors</li>
 <li>Some combination of the above.</li>
 </ul>
-<p>The first three options, (UV Painter, 渲染 Bake, and Texture Baker)
+<p>The first three options, (UV Painter, 渲染 Bake, and 纹理 Baker)
 replace the image with an image that they create.
-Texture paint and external software can be used to add or enhance the image.
+纹理 paint and external software can be used to add or enhance the image.
 Regardless of which method you use, ultimately you must either</p>
 <ul class="simple">
 <li>save your texture in a separate image file (for example <code class="docutils literal"><span class="pre">JPG</span></code> for colors, <code class="docutils literal"><span class="pre">PNG</span></code> with RGBA for alpha),</li>

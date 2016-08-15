@@ -71,7 +71,7 @@ Bone Constraints
    Armature Bone constraints.
 Materials
    Properties of the surface (color, specularity, transparency, etc).
-Textures
+纹理
    Used by materials, world and brushes to provide additional details.
 Particles
    Hair and Emitter particles.

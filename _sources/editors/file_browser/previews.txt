@@ -63,7 +63,7 @@ Clear DataBlock Previews
       Clears previews for lamps.
    Worlds
       Clears previews for worlds.
-   Textures
+   纹理
       Clears previews for textures.
    图像s
       Clears previews for images.

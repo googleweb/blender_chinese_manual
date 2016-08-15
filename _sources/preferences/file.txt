@@ -20,7 +20,7 @@ Locations for various external files can be set for the following options:
 
 Fonts
    Default location when searching for font files.
-Textures
+纹理
    Default location when searching for image textures.
 渲染 Output
    Where rendered images/videos are saved.

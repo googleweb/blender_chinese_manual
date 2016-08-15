@@ -1,6 +1,6 @@
 
 ****************
-Gradient Texture
+Gradient 纹理
 ****************
 
 A gradient texture.
@@ -10,7 +10,7 @@ Inputs
 ======
 
 Vector
-   Texture coordinate to sample texture at;
+   纹理 coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.
 
 
@@ -26,9 +26,9 @@ Outputs
 =======
 
 Color
-   Texture color output.
+   纹理 color output.
 Fac
-   Texture intensity output.
+   纹理 intensity output.
 
 
 例子

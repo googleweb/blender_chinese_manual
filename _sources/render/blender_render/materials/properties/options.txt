@@ -35,10 +35,10 @@ Exclusive
 Local
    When linked in, uses local
    :doc:`light group </render/blender_render/lighting/lights/lights_in_other_contexts>` with the same name.
-Face Textures
+Face 纹理
    Replace object's base color with color from
    :ref:`UV map <editors-uv_image-index>` image textures.
-Face Textures Alpha
+Face 纹理 Alpha
    Replace object's base alpha with alpha from
    :ref:`UV map <editors-uv_image-index>` image textures.
 Vertex Color Paint

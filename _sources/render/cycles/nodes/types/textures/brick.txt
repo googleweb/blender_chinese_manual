@@ -1,6 +1,6 @@
 
 *************
-Brick Texture
+Brick 纹理
 *************
 
 Procedural texture producing Bricks.
@@ -41,7 +41,7 @@ Outputs
 =======
 
 Color
-   Texture color output.
+   纹理 color output.
 Fac
    Mortar mask (1 = mortar).
 

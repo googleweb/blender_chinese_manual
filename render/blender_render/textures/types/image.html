@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>图像 Textures &mdash; Blender参考手册</title>
+  <title>图像 纹理 &mdash; Blender参考手册</title>
   
 
   
@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../../index.html"/>
-        <link rel="up" title="Texture Types" href="index.html"/>
-        <link rel="next" title="视频 Textures" href="video.html"/>
-        <link rel="prev" title="Texture Types" href="index.html"/> 
+        <link rel="up" title="纹理 Types" href="index.html"/>
+        <link rel="next" title="视频 纹理" href="video.html"/>
+        <link rel="prev" title="纹理 Types" href="index.html"/> 
 
   
   <script src="../../../../_static/js/modernizr.min.js"></script>
@@ -96,16 +96,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender 渲染 Engine</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender渲染引擎</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">Materials</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Textures</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to Textures</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../assigning_a_texture.html">Assigning a Texture</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../options.html">Textures common options</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html">Texture Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../mapping/index.html">Texture Mapping</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">纹理</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介 to 纹理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assigning_a_texture.html">Assigning a 纹理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options.html">纹理 common options</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">纹理 Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mapping/index.html">纹理 Mapping</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../influence/index.html">Influence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">Texture 节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nodes/index.html">纹理 节点</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">Lighting</a></li>
@@ -119,7 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../performance.html">Performance Considerations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles 渲染 Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles渲染引擎</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染 Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
@@ -168,13 +168,13 @@
       
           <li><a href="../../../index.html">渲染</a> &raquo;</li>
       
-          <li><a href="../../index.html">Blender 渲染 Engine</a> &raquo;</li>
+          <li><a href="../../index.html">Blender渲染引擎</a> &raquo;</li>
       
-          <li><a href="../index.html">Textures</a> &raquo;</li>
+          <li><a href="../index.html">纹理</a> &raquo;</li>
       
-          <li><a href="index.html">Texture Types</a> &raquo;</li>
+          <li><a href="index.html">纹理 Types</a> &raquo;</li>
       
-    <li>图像 Textures</li>
+    <li>图像 纹理</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -189,18 +189,18 @@
            <div itemprop="articleBody">
             
   <div class="section" id="image-textures">
-<h1>图像 Textures<a class="headerlink" href="#image-textures" title="Permalink to this headline">¶</a></h1>
-<p>The term <em>图像 Texture</em> simply means that a graphic image - a pixel grid
+<h1>图像 纹理<a class="headerlink" href="#image-textures" title="Permalink to this headline">¶</a></h1>
+<p>The term <em>图像 纹理</em> simply means that a graphic image - a pixel grid
 composed of R, G, B,
 and sometimes Alpha values - is used as the input source to the texture.
 As with other types of textures, this information can be used in a number of ways,
 not only as a simple &#8220;decal&#8221;.</p>
-<p>When the Texture Type <em>图像 or Movie</em> is selected, three new panels present
+<p>When the 纹理 Type <em>图像 or Movie</em> is selected, three new panels present
 themselves allowing to control most aspects of how image textures are applied:
 <em>图像</em>, <em>图像 Sampling</em>, and <em>图像 Mapping</em>.</p>
 <div class="section" id="about-image-based-texturing">
-<h2>About 图像 Based Texturing<a class="headerlink" href="#about-image-based-texturing" title="Permalink to this headline">¶</a></h2>
-<p>Texture images take up precious memory space,
+<h2>About 图像 Based 文本uring<a class="headerlink" href="#about-image-based-texturing" title="Permalink to this headline">¶</a></h2>
+<p>纹理 images take up precious memory space,
 often being loaded into a special video memory bank that is very fast and very expensive,
 so it is often very small. So, keep the images as small as possible.
 A 64×64 image takes up only one fourth the memory of a 128×128 image.</p>
@@ -220,7 +220,7 @@ The monkey uses two layouts, one which has one UV map of a few faces,
 and another that has three maps.</p>
 <div class="figure" id="id1">
 <img alt="../../../../_images/uv-overview.jpg" src="../../../../_images/uv-overview.jpg" />
-<p class="caption"><span class="caption-text">How all the parts of UV Texturing work together.</span></p>
+<p class="caption"><span class="caption-text">How all the parts of UV 文本uring work together.</span></p>
 </div>
 <p>When using file textures, it is very important that you have
 <a class="reference internal" href="../../../../editors/uv_image/uv_editing/unwrapping.html"><span class="doc">Mapped the UVs</span></a>
@@ -228,9 +228,9 @@ of the mesh, and they are laid out appropriately.</p>
 <p>You do not have to UV map the <em>entire</em> mesh.
 The sphere above on the left has some faces mapped,
 but other faces use procedural materials and textures.
-Only use UV Textures for those portions of your mesh where you want very graphic,
+Only use UV 纹理 for those portions of your mesh where you want very graphic,
 precise detail. For example,
-a model of a vase only needs UV Texture for the rim where decorative artwork is incorporated.
+a model of a vase only needs UV 纹理 for the rim where decorative artwork is incorporated.
 A throw pillow does not need a different image for the back as the front;
 in fact many throw pillows have a fabric (procedural material) back.</p>
 <p>As another example, you should UV map both eyes of a head to the same image
@@ -249,15 +249,15 @@ Ears are another example where images or section of an images can be mapped to s
 <a class="reference internal" href="../../../../editors/uv_image/uv_editing/layout_management.html"><span class="doc">UV Layouts</span></a>.</li>
 <li>Create one or more Materials for the Mesh.</li>
 <li>Create one or more images for each UV Layout and aspect of the texture. Either
-- paint directly on the mesh using Texture Paint in the 3D视图,
+- paint directly on the mesh using 纹理 Paint in the 3D视图,
 - load and/or edit an image in the UV/图像编辑器, or
 - Bake the existing materials into an image for the UV/图像编辑器.</li>
-<li>Apply those images as UV Textures to the mesh to affect one or more aspects of the mesh.
+<li>Apply those images as UV 纹理 to the mesh to affect one or more aspects of the mesh.
 This is done by using one or more of the numerous Map To options. For example,
 - map to Color to affect the diffuse coloring of the mesh,
 - map to Nor to affect the normal direction to give the surface a bumpy or creased look, or
 - map to Spec (specularity) to make certain areas look shiny and oily.</li>
-<li>Layer the Textures to create a convincing result.</li>
+<li>Layer the 纹理 to create a convincing result.</li>
 </ul>
 </div>
 <div class="section" id="using-images-and-materials">
@@ -269,7 +269,7 @@ or you can create a New image and save it as the texture.</p>
 you will want to save an outline of your UV faces by using the <em>Save UV Face Layout</em> tool located in the UVs menu.
 This is discussed <a class="reference internal" href="../../../../editors/uv_image/uv_editing/applying_image.html#uv-image-export-layout"><span class="std std-ref">here</span></a>.</p>
 <div class="section" id="creating-an-image-texture">
-<h3>Creating an 图像 Texture<a class="headerlink" href="#creating-an-image-texture" title="Permalink to this headline">¶</a></h3>
+<h3>Creating an 图像 纹理<a class="headerlink" href="#creating-an-image-texture" title="Permalink to this headline">¶</a></h3>
 <p>To create an image within Blender,
 you have to first create a <a class="reference internal" href="../../../../editors/uv_image/uv_editing/applying_image.html"><span class="doc">New Blank</span></a>
 图像 with a uniform color or test grid.
@@ -280,16 +280,16 @@ After that, you can color the image using the:</p>
 </ul>
 <p>After you have created your image,
 you can modify it using Blender&#8217;s built-in
-<a class="reference internal" href="../../../../sculpt_paint/painting/texture_paint/introduction.html"><span class="doc">Texture Paint</span></a>
+<a class="reference internal" href="../../../../sculpt_paint/painting/texture_paint/introduction.html"><span class="doc">纹理 Paint</span></a>
 or any external image painting program.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>See Texture in 3D视图 but does not 渲染</p>
-<p class="last">You may be able to see the texture in Textured display mode in the 3D视图;
+<p>See 纹理 in 3D视图 but does not 渲染</p>
+<p class="last">You may be able to see the texture in 纹理d display mode in the 3D视图;
 this is all that is required to have textures show up in Blender&#8217;s 游戏引擎. 渲染ing, however,
 requires a material.
-You must have a <em>Face Textures</em> material assigned to the mesh for it to render using the UV Texture.
-In the Material settings, Add New material to a selected object and enable <em>Face Textures</em>.</p>
+You must have a <em>Face 纹理</em> material assigned to the mesh for it to render using the UV 纹理.
+In the Material settings, Add New material to a selected object and enable <em>Face 纹理</em>.</p>
 </div>
 </div>
 </div>
@@ -306,7 +306,7 @@ you want another image that maps Displacement to the mesh to physically deform t
 Each of these are examples of applying an image as a texture to the mesh.</p>
 <p>As another example, the face is the subject of many questions and tutorials. In general,
 you will want to create a Material that has the basic skin color, appropriate shaders,
-and sub-surface scattering. Then you will want to layer on additional UV Textures for:</p>
+and sub-surface scattering. Then you will want to layer on additional UV 纹理 for:</p>
 <ul class="simple">
 <li>Freckle map for Color and Normal aspects.</li>
 <li>Subdermal veins and tendons for Displacement.</li>
@@ -317,12 +317,12 @@ and sub-surface scattering. Then you will want to layer on additional UV Texture
 <li>Under chin and inside nostrils that receive less Ambient light.</li>
 <li>Thin skin is more translucent, so a map is needed for that.</li>
 </ul>
-<p>Each image is mapped by using another Texture Channel.
+<p>Each image is mapped by using another 纹理 Channel.
 Each of these maps are images which are applied to the different aspects (Color, Normal,
 Specularity) of the image. Tileable images can be repeated to give a smaller,
-denser pattern by using the Texture controls for repeat or size.</p>
+denser pattern by using the 纹理 controls for repeat or size.</p>
 <div class="section" id="layering-uv-textures">
-<h3>Layering UV Textures<a class="headerlink" href="#layering-uv-textures" title="Permalink to this headline">¶</a></h3>
+<h3>Layering UV 纹理<a class="headerlink" href="#layering-uv-textures" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -331,12 +331,12 @@ denser pattern by using the Texture controls for repeat or size.</p>
 <tbody valign="top">
 <tr class="row-odd"><td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/uv-layer_one.jpg"><img alt="../../../../_images/uv-layer_one.jpg" src="../../../../_images/uv-layer_one.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Base UV Texture.</span></p>
+<p class="caption"><span class="caption-text">Base UV 纹理.</span></p>
 </div>
 </td>
 <td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/uv-layer-two.jpg"><img alt="../../../../_images/uv-layer-two.jpg" src="../../../../_images/uv-layer-two.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Layered UV Texture.</span></p>
+<p class="caption"><span class="caption-text">Layered UV 纹理.</span></p>
 </div>
 </td>
 </tr>
@@ -349,16 +349,16 @@ but opaque where you want to add on to details.</p>
 <p>To avoid massive confusion, all image textures for a mesh usually use the same UV map.
 If you do, each image will line up with the one below it,
 and they will layer on top of one another like the examples shown to the right. To do this,
-just create one UV Texture (map) as described in this section. Then,
+just create one UV 纹理 (map) as described in this section. Then,
 create material image textures as described in the procedural materials section.
 Instead of mapping to Original Coordinates (OrCo), map to UV.</p>
-<p>Use that map name repeatedly in the <span class="menuselection">Material ‣ Textures ‣ Map Input</span>
+<p>Use that map name repeatedly in the <span class="menuselection">Material ‣ 纹理 ‣ Map Input</span>
 panel by selecting <span class="guilabel">UV</span> and typing the name in the text field. In the example to the right,
-our UV Texture is called &#8220;Head&#8221; (you may have to expand the image to see the panel settings).
+our UV 纹理 is called &#8220;Head&#8221; (you may have to expand the image to see the panel settings).
 Then, the image texture shown will be mapped using the UV coordinates.
-In the &#8220;Base UV Texture&#8221; example to the right, the face has two textures UV mapped;
+In the &#8220;Base UV 纹理&#8221; example to the right, the face has two textures UV mapped;
 one for a base color, and another for spots, blemishes and makeup.</p>
-<p>Both textures use the same UV Texture map as their Map Input, and both affect Color.
+<p>Both textures use the same UV 纹理 map as their Map Input, and both affect Color.
 The Makeup texture is transparent except where there is color,
 so that the base color texture shows through.
 Note that the colors were too strong on the image,
@@ -389,21 +389,21 @@ enables you to layer and combine textures in almost any way you can imagine.</p>
 <p>You can mix and match procedural materials and textures, vertex paint,
 and UV textures onto the same mesh.</p>
 <p>The image to the right has a world with a red ambient light.
-The material has both VCol Paint and Face Textures enabled,
+The material has both VCol Paint and Face 纹理 enabled,
 and receives half of ambient light. A weak cloud texture affects color, mixing in a tan color.
 The right vertices are vertex painted yellow and the left is unpainted procedural gray.
-The UV Texture is a stock arrow image from the public domain texture CD.
+The UV 纹理 is a stock arrow image from the public domain texture CD.
 Scene lighting is a white light off to the right.
 From this information and the User Manual thus far,
 you should now be able to recreate this image.</p>
 <p>You can also assign <a class="reference internal" href="../../materials/multiple_materials.html"><span class="doc">multiple materials</span></a>
 to the mesh based on which faces you want to be procedural and which you want to be texture-mapped.
 Just do not UV map the faces you want to be procedural.</p>
-<p>You can use UV Textures and VertexPaint (<code class="kbd docutils literal"><span class="pre">V</span></code> in the 3D视图) simultaneously,
+<p>You can use UV 纹理 and VertexPaint (<code class="kbd docutils literal"><span class="pre">V</span></code> in the 3D视图) simultaneously,
 if both are enabled in the Material settings.
 The vertex colors are used to modulate the brightness or color of the UV image texture:</p>
 <ul class="simple">
-<li>UV Texture is at the base <em>(Face Textures)</em></li>
+<li>UV 纹理 is at the base <em>(Face 纹理)</em></li>
 <li>Vertex paint affects its colors, then</li>
 <li>Procedural textures are laid on top of that,</li>
 <li>Area lights shine on the surface, casting shadows and what not, and finally</li>
@@ -415,7 +415,7 @@ The vertex colors are used to modulate the brightness or color of the UV image t
 </div>
 <p>A UV Layout can only have one image, although you can tile and animate the image.
 Since a layout is a bunch of arranged UV Maps, and a UV Map maps many mesh faces,
-a face can therefore only have one UV Texture image,
+a face can therefore only have one UV 纹理 image,
 and the UV coordinates for that face must fit entirely on the image.
 If you want a face to have multiple images, split the face into parts,
 and assign each part its own image. <em>(Or</em> you can get fancy with 节点,
@@ -425,62 +425,62 @@ but that is another story ...)</p>
 <h3>Using Alpha Transparency<a class="headerlink" href="#using-alpha-transparency" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../../../../_images/uv-alpha.jpg"><img alt="../../../../_images/uv-alpha.jpg" src="../../../../_images/uv-alpha.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">Alpha UV Textures.</span></p>
+<p class="caption"><span class="caption-text">Alpha UV 纹理.</span></p>
 </div>
 <p>Alpha 0.0 (transparent) areas of a UV 图像 render as black.
 Unlike a procedural texture, they do not make the base material transparent,
-since UV Textures do not operate on the base procedural material.
+since UV 纹理 do not operate on the base procedural material.
 The UV texture overrides any procedural color underneath.
-Procedural Textures are applied on top of UV Textures,
-so a procedural image texture would override any UV Texture. Transparent (black)
+Procedural 纹理 are applied on top of UV 纹理,
+so a procedural image texture would override any UV 纹理. Transparent (black)
 areas of a procedural texture mapped to alpha operate on top of anything else,
 making the object transparent in those places.
-The only thing that modulates visible parts of a UV Texture are the Vertex Colors.
+The only thing that modulates visible parts of a UV 纹理 are the Vertex Colors.
 In the example to the right,
-the finger image is transparent at the cuff and top of the finger and is used as a UV Texture.
+the finger image is transparent at the cuff and top of the finger and is used as a UV 纹理.
 All three balls have a base material of blue and a marbling texture.
-The base material color is not used whenever Face Textures is enabled.</p>
+The base material color is not used whenever Face 纹理 is enabled.</p>
 <p>The top left ball has not had any vertex painting,
 and the finger is mapped to the middle band, and the texture is mapped to a pink color.
-As you can see, the base material has VCol Paint and Face Textures enabled;
+As you can see, the base material has VCol Paint and Face 纹理 enabled;
 the base color blue is not used, but the texture is. With no vertex painting,
-there is nothing to modulate the UV Texture colors, so the finger shows as white.
+there is nothing to modulate the UV 纹理 colors, so the finger shows as white.
 Transparent areas of the UV 图像 show as black.</p>
 <p>The top right ball has had a pink vertex color applied to the vertical band of faces
 (in the 3D视图编辑窗口, select the faces in UV Paint Mode, switch to 顶点绘制模式,
 pick a pink color, and <span class="menuselection">Paint ‣ Set Vertex Colors</span>).
 The finger is mapped to the middle vertical band of faces,
-and VCol and Face Textures are enabled.
+and VCol and Face 纹理 are enabled.
 The texture is mapped to Alpha black and multiplies the base material alpha value which is 1.0.
 Thus, white areas of the texture are 1.0, and 1.0 times 1.0 is 1.0
 so that area is opaque and shows. Black areas of the procedural texture, 0.0,
 multiply the base material to be transparent. As you can see, the unmapped faces
 (left and right sides of the ball) show the vertex paint (none, which is gray)
 and the painted ones show pink, and the middle stripe that is both painted and mapped change
-the white UV Texture areas to pink.
+the white UV 纹理 areas to pink.
 Where the procedural texture says to make the object transparent,
 the green background shows through.
-Transparent areas of the UV Texture insist on rendering black.</p>
+Transparent areas of the UV 纹理 insist on rendering black.</p>
 <p>The bottom ball uses multiple materials. Most of the ball (all faces except the middle band)
-is a base material that does not have Face Textures (nor Vertex Color Paint - VCol Paint)
+is a base material that does not have Face 纹理 (nor Vertex Color Paint - VCol Paint)
 enabled. Without it enabled,
 the base blue material color shows and the pink color texture is mixed on top.
 The middle band is assigned a new material (2 Mat 2)
-that <em>does</em> have vertex paint and Face Textures enabled.
+that <em>does</em> have vertex paint and Face 纹理 enabled.
 The middle band of faces were vertex painted yellow,
 so the white parts of the finger are yellow. Where the pink texture runs over the UV texture,
 the mixed color changes to green, since pink and yellow make a green.</p>
 <p>If you want the two images to show through one another, and mix together,
 you need to use Alpha. The base material can have an image texture with an Alpha setting,
-allowing the underlying UV Texture to show through.</p>
+allowing the underlying UV 纹理 to show through.</p>
 <p>To overlay multiple UV images, you have several options:</p>
 <ul class="simple">
-<li>Create multiple UV Textures which map the same,
+<li>Create multiple UV 纹理 which map the same,
 and then use different images (with Alpha) and Blender will overlay them automatically.</li>
 <li>Use the <a class="reference internal" href="../../../../compositing/index.html"><span class="doc">Composite 节点</span></a> to combine the two images via the AlphaOver node,
-creating and saving the composite image. Open that composited image as the UV Texture.</li>
+creating and saving the composite image. Open that composited image as the UV 纹理.</li>
 <li>Use an external paint program to alpha overlay the images and save the file,
-and load it as the face&#8217;s UV Texture</li>
+and load it as the face&#8217;s UV 纹理</li>
 <li>Define two objects, one just inside the other.
 The inner object would have the base image,
 and the outer image the overlaid image with a material alpha less than one (1.0).</li>
@@ -493,9 +493,9 @@ simply assign the material to the face using the Multiple Materials</li>
 </div>
 </div>
 <div class="section" id="uv-textures-vs-procedural-textures">
-<h2>UV Textures vs. Procedural Textures<a class="headerlink" href="#uv-textures-vs-procedural-textures" title="Permalink to this headline">¶</a></h2>
-<p>A Material Texture, that has a Map Input of UV,
-and is an image texture that is mapped to Color, is equivalent to a UV Texture.
+<h2>UV 纹理 vs. Procedural 纹理<a class="headerlink" href="#uv-textures-vs-procedural-textures" title="Permalink to this headline">¶</a></h2>
+<p>A Material 纹理, that has a Map Input of UV,
+and is an image texture that is mapped to Color, is equivalent to a UV 纹理.
 It provides much more flexibility, because it can be sized and offset, and the degree to which
 it affects the color of your object can be controlled in the Map To panel. In addition,
 you can have different images for each texture channel; one for color, one for alpha,
@@ -507,8 +507,8 @@ like Clouds, are incredibly simple and useful for adding realism and details to 
 <col width="50%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">UV Texture</th>
-<th class="head">Procedural Texture</th>
+<tr class="row-odd"><th class="head">UV 纹理</th>
+<th class="head">Procedural 纹理</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -761,12 +761,12 @@ See <a class="reference internal" href="../influence/material/bump_and_normal.ht
 <dd>Use red and green as derivative values.</dd>
 <dt>MIP Map</dt>
 <dd><p class="first"><a class="reference external" href="https://en.wikipedia.org/wiki/Mipmap">MIP Maps</a> are pre-calculated, smaller,
-filtered Textures for a certain size. A series of pictures is generated, each half the size of the former one.
+filtered 纹理 for a certain size. A series of pictures is generated, each half the size of the former one.
 This optimizes the filtering process. By default, this option is enabled and speeds up rendering
 (especially useful in the game engine). When this option is OFF, you generally get a sharper image,
 but this can significantly increase calculation time if the filter dimension (see below) becomes large.
 Without MIP Maps you may get varying pictures from slightly different camera angles,
-when the Textures become very small. This would be noticeable in an animation.</p>
+when the 纹理 become very small. This would be noticeable in an animation.</p>
 <dl class="last docutils">
 <dt>MIP Map Gaussian filter</dt>
 <dd>Used in conjunction with MIP Map, it enables the MIP Map to be made smaller based on color similarities.
@@ -813,8 +813,8 @@ Turn this image off if you are using digital photos to preserve crispness.</p>
 If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
 turn this value down from 1.0 to 0.1 or so.</p>
 <dl class="last docutils">
-<dt>Texture Filter Type</dt>
-<dd><p class="first">Texture filter to use for image sampling.
+<dt>纹理 Filter Type</dt>
+<dd><p class="first">纹理 filter to use for image sampling.
 Just like a <em>pixel</em> represents a <em>pic</em> ture <em>el</em> ement, a <em>texel</em> represents a <em>tex</em> ture <em>el</em> ement.
 When a texture (2D texture space) is mapped onto a 3D model (3D model space),
 different algorithms can be used to compute a value for each pixel based on samplings from several texels.</p>
@@ -838,7 +838,7 @@ filter to reduce aliasing artifacts without considerably increasing rendering ti
 <dt>Probes</dt>
 <dd>Number of probes to use. An integer between 1 and 256.
 Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
-<a class="reference external" href="http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf">Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping</a>,
+<a class="reference external" href="http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf">Simple and Table Feline: Fast Elliptical Lines for Anisotropic 纹理 Mapping</a>,
 WRL</dd>
 </dl>
 </dd>
@@ -918,10 +918,10 @@ Use these to crop, or choose a portion of a larger image to use as the texture.<
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="video.html" class="btn btn-neutral float-right" title="视频 Textures" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="video.html" class="btn btn-neutral float-right" title="视频 纹理" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Texture Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral" title="纹理 Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

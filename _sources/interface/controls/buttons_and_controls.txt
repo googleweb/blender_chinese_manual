@@ -76,7 +76,7 @@ Incremental Steps
    To change the value in steps, click :kbd:`LMB` on the small triangles on the sides of the button.
 Dragging
    To change the value in a wider range, hold down :kbd:`LMB` and drag the mouse to the left or right.
-Text Input
+文本 Input
    Press :kbd:`LMB` or :kbd:`Return` to edit the value as a text field.
 
    When entering values by hand, this button works like any other text button.

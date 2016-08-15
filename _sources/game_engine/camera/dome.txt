@@ -179,7 +179,7 @@ ranges from 0 to 1, if negative do not draw that mesh node
 
 - You need to create the file and add it to the 文本编辑器 in order to select it as your Warp Mesh data file.
 - Open the 文本编辑器 :menuselection:`Editor Types --> 文本编辑器`.
-- Open your mesh data file(ie. myDome.data) in the text editor (:menuselection:`Text --> Open` or :kbd:`Alt O`).
+- Open your mesh data file(ie. myDome.data) in the text editor (:menuselection:`文本 --> Open` or :kbd:`Alt O`).
 - Go to Game Framing 设置 :menuselection:`Editor Types --> Properties editor --> Scene`.
 - Enable Dome Mode.
 - Type filename in Warp Data field(ie. myDome.data).

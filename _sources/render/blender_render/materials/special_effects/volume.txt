@@ -410,7 +410,7 @@ If you set the density to values bigger than 0 the domain cube will be filled wi
 The `other settings <https://wiki.blender.org/index.php/User:Broken/Volume渲染ingDev>`__ will affect the smoke,
 though. We'll cover those later.
 
-Add the Texture
+Add the 纹理
 ---------------
 
 In addition, Smoke requires its own texture,

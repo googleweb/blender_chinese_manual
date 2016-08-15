@@ -44,13 +44,13 @@ Vertex Group Mask
    multiplied with the global influence value for each vertex.
    If a vertex is not in the masking vertex group, its weight will be not be affected.
 
-Texture
+纹理
    An additional texture, the values of which will be multiplied with the global influence value for each vertex.
 
    This is a standard texture :doc:`data-block </data_system/data_blocks>` control.
    When set, it reveals other settings:
 
-   Texture Coordinates
+   纹理 Coordinates
       How the texture is mapped to the mesh.
 
       Local
@@ -381,7 +381,7 @@ with a *Remove Threshold* of 0.1, to see the bottom of your valley disappear.
 `The Blender file <https://wiki.blender.org/index.php/Media:Man修改器WeightVGroupEx.blend>`__, TEST_2 scene.
 
 
-Using a Texture and the Mapping Curve
+Using a 纹理 and the Mapping Curve
 -------------------------------------
 
 Here we are going to create a sort of strange alien wave (yes,
@@ -408,7 +408,7 @@ You can then select which texture coordinates and channel to use.
 Leave the mapping to the default *Local* option, and play with the various channels...
 
 .. list-table::
-   Texture channel variations.
+   纹理 channel variations.
 
    * - .. figure:: /images/modifiersweightvgrouptexexintensity.jpg
           :width: 200px

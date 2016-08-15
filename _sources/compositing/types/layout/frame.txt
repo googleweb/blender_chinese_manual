@@ -47,7 +47,7 @@ drop down in the properties panel and add a name for the preset.
 To delete a preset first choose that preset for the active Frame and press the *-* button in the properties panel.
 
 
-Text Display
+文本 Display
 ------------
 
 When you need to display more comprehensive text, frame nodes can display the contents of a text-block.

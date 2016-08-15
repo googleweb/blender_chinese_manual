@@ -395,7 +395,7 @@ each group of three NURBS control points become a unique 贝塞尔 one (center p
    :class: refbox
 
    | 模式:     物体模式
-   | 菜单:     :menuselection:`Object --> Convert to --> Mesh From Curve/Meta/Surface/Text`
+   | 菜单:     :menuselection:`Object --> Convert to --> Mesh From Curve/Meta/Surface/文本`
    | 快捷键:   :kbd:`Alt-C`
 
 
@@ -412,7 +412,7 @@ Note that it also keeps the faces and volumes created by closed and extruded cur
    :class: refbox
 
    | 模式:     物体模式
-   | 菜单:     :menuselection:`Object --> Convert to --> Curve From Mesh/Text`
+   | 菜单:     :menuselection:`Object --> Convert to --> Curve From Mesh/文本`
    | 快捷键:   :kbd:`Alt-C`
 
 

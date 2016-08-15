@@ -226,9 +226,9 @@ Light Group
    Limit material's lighting calculation to a specific light group
 Exclusive
    Material uses light group exclusively
-Face Textures
+Face 纹理
    Replaces object's base color with color from face assigned image textures.
-Face Textures Alpha
+Face 纹理 Alpha
    Replaces object's base alpha value with alpha from face assigned image textures.
 Vertex Color Paint
    Replaces object's base color with vertex colors.

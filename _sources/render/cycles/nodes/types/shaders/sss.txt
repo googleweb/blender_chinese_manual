@@ -33,7 +33,7 @@ Sharpness
    Values increasing from 0 to 1 prevents softening of sharp edges and reduces unwanted darkening.
 Normal
    Normal used for shading; if nothing is connected the default shading normal is used.
-Texture Blur
+纹理 Blur
    How much of the texture will be blurred along with the lighting,
    mixing the texture at the incoming and outgoing points on the surface.
    Note that the right choice depends on the texture.

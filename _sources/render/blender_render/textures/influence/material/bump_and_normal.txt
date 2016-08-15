@@ -20,7 +20,7 @@ Bump maps
    These are textures that store an *intensity*, the relative height of pixels from the viewpoint of the camera.
    The pixels seem to be moved by the required distance in the direction of the face normals.
    (The "bump" consists only of a displacement, which takes place along the existing, and unchanged,
-   normal-vector of the face.) You may either use greyscale pictures or the intensity values of a RGB-Texture
+   normal-vector of the face.) You may either use greyscale pictures or the intensity values of a RGB-纹理
    (including images).
 
 Normal maps
@@ -69,7 +69,7 @@ this may be replaced with a single plane, oriented in the same direction as the 
 modeling feature can be used to good effect here.)
 
 Mapping is the process of applying a texture to the low-poly mesh.
-Consult the :doc:`Textures Mapping section </render/blender_render/textures/mapping/index>`
+Consult the :doc:`纹理 Mapping section </render/blender_render/textures/mapping/index>`
 for more information on applying a texture to a mesh's material.Special considerations for Bump and Normal Maps is:
 
 - When using a Bump map, map the texture to *Normal* and enable *No RGB*.

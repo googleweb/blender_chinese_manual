@@ -1,12 +1,12 @@
 
 **************
-Lamps Textures
+Lamps 纹理
 **************
 
 .. figure:: /images/lighting-lights-texture-panels.jpg
    :width: 307px
 
-   Lamp Texture panels.
+   Lamp 纹理 panels.
 
 
 When a new lamp is added, it produces light in a uniform, flat color.
@@ -25,7 +25,7 @@ Options
 The lamp textures settings are grouped into two panels.
 Here we will only talk about the few things that differ from object material textures;
 see the :doc:`Materials </render/blender_render/materials/index>` and
-:doc:`Textures </render/blender_render/textures/index>` chapters for details about the standard options.
+:doc:`纹理 </render/blender_render/textures/index>` chapters for details about the standard options.
 
 The texture-specific and the *Mapping* panels remain the same. However, you will note
 there are much fewer *Mapping* options - you can only choose between

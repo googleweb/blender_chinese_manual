@@ -65,7 +65,7 @@ jQuery.getQueryParameters = function(s) {
  * highlight a given string on a jquery object by wrapping it in
  * span elements with the given class name.
  */
-jQuery.fn.highlightText = function(text, className) {
+jQuery.fn.highlight文本 = function(text, className) {
   function highlight(node) {
     if (node.nodeType == 3) {
       var val = node.nodeValue;
@@ -73,9 +73,9 @@ jQuery.fn.highlightText = function(text, className) {
       if (pos >= 0 && !jQuery(node.parentNode).hasClass(className)) {
         var span = document.createElement("span");
         span.className = className;
-        span.appendChild(document.createTextNode(val.substr(pos, text.length)));
+        span.appendChild(document.create文本Node(val.substr(pos, text.length)));
         node.parentNode.insertBefore(span, node.parentNode.insertBefore(
-          document.createTextNode(val.substr(pos + text.length)),
+          document.create文本Node(val.substr(pos + text.length)),
           node.nextSibling));
         node.nodeValue = val.substr(0, pos);
       }
@@ -199,7 +199,7 @@ var Documentation = {
       }
       window.setTimeout(function() {
         $.each(terms, function() {
-          body.highlightText(this.toLowerCase(), 'highlighted');
+          body.highlight文本(this.toLowerCase(), 'highlighted');
         });
       }, 10);
       $('<p class="highlight-link"><a href="javascript:Documentation.' +

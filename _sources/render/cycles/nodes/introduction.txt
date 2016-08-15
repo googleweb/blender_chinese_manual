@@ -37,7 +37,7 @@ for direct lighting or global illumination.
    :doc:`Shaders </render/cycles/nodes/types/shaders/index>`
 
 
-Textures
+纹理
 ========
 
 Each texture type in Cycles corresponds to a node,
@@ -45,7 +45,7 @@ with a texture coordinate and various parameters as input, and a color or value 
 No texture data-blocks are needed; instead node groups can be used for reusing texture setups.
 
 For UV mapping and texture painting in the viewport, the 图像 texture node must be used.
-When setting such a node as active, it will be drawn in Textured draw mode,
+When setting such a node as active, it will be drawn in 纹理d draw mode,
 and can be painted on in texture paint mode.
 
 The default texture coordinates for all nodes are Generated coordinates,
@@ -55,7 +55,7 @@ and these can be edited in the texture properties.
 
 .. seealso::
 
-   :doc:`Textures </render/cycles/nodes/types/textures/index>`.
+   :doc:`纹理 </render/cycles/nodes/types/textures/index>`.
 
 
 More

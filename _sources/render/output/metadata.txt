@@ -14,7 +14,7 @@ The *Metadata* panel includes options for writing meta-data into render output.
 Stamp Output
    Add metadata has text to the render.
 
-   Stamp Text Color
+   Stamp 文本 Color
       Set the color and alpha of the stamp text.
    Stamp Background
       Set the color and alpha of the color behind the text.

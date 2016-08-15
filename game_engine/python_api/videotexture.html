@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The 视频Texture module: bge.texture &mdash; Blender参考手册</title>
+  <title>The 视频纹理 module: bge.texture &mdash; Blender参考手册</title>
   
 
   
@@ -107,7 +107,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Python API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bullet_physics.html">Bullet physics Python API</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">The 视频Texture module: bge.texture</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The 视频纹理 module: bge.texture</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#how-it-works">How it works</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#game-preparation">Game preparation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#first-example">First example</a></li>
@@ -161,7 +161,7 @@
       
           <li><a href="index.html">Python API</a> &raquo;</li>
       
-    <li>The 视频Texture module: bge.texture</li>
+    <li>The 视频纹理 module: bge.texture</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -176,7 +176,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="the-videotexture-module-bge-texture">
-<h1>The 视频Texture module: bge.texture<a class="headerlink" href="#the-videotexture-module-bge-texture" title="Permalink to this headline">¶</a></h1>
+<h1>The 视频纹理 module: bge.texture<a class="headerlink" href="#the-videotexture-module-bge-texture" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">bge.texture</span></code> module allows you to manipulate textures during the game.
 Several sources for texture are possible: video files, image files, video capture,
 memory buffer, camera render or a mix of that.
@@ -228,7 +228,7 @@ etc.</p>
 <h2>First example<a class="headerlink" href="#first-example" title="Permalink to this headline">¶</a></h2>
 <p>Let us assume that we have a game object with one or more faces assigned to a material/image on
 which we want to display a video.</p>
-<p>The first step is to create a <code class="docutils literal"><span class="pre">Texture</span></code> object.
+<p>The first step is to create a <code class="docutils literal"><span class="pre">纹理</span></code> object.
 We will do it in a script that runs once. It can be at the start of the game,
 the video is only played when you refresh the texture; we&#8217;ll come to that later. The script is
 normally attached to the object on which we want to display the video so that we can easily
@@ -262,7 +262,7 @@ if we want to find the material called <code class="docutils literal"><span clas
 </div>
 <div class="section" id="create-texture">
 <h3>Create texture<a class="headerlink" href="#create-texture" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">bge.texture.Texture</span></code> is the class that creates the <code class="docutils literal"><span class="pre">Texture</span></code> object that loads the dynamic texture on the GPU.
+<p><code class="docutils literal"><span class="pre">bge.texture.纹理</span></code> is the class that creates the <code class="docutils literal"><span class="pre">纹理</span></code> object that loads the dynamic texture on the GPU.
 The constructor takes one mandatory and three optional arguments:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">gameObj</span></code></dt>
@@ -270,15 +270,15 @@ The constructor takes one mandatory and three optional arguments:</p>
 <dt><code class="docutils literal"><span class="pre">materialID</span></code></dt>
 <dd>Material index as returned by <code class="docutils literal"><span class="pre">bge.texture.materialID()</span></code>, 0 = first material by default.</dd>
 <dt><code class="docutils literal"><span class="pre">textureID</span></code></dt>
-<dd>Texture index in case of multi-texture channel, 0 = first channel by default.
+<dd>纹理 index in case of multi-texture channel, 0 = first channel by default.
 In case of UV texture, this parameter should always be 0.</dd>
 <dt><code class="docutils literal"><span class="pre">textureObj</span></code></dt>
-<dd>参考 to another <code class="docutils literal"><span class="pre">Texture</span></code> object of which we want to reuse the texture.
+<dd>参考 to another <code class="docutils literal"><span class="pre">纹理</span></code> object of which we want to reuse the texture.
 If we use this argument,
 we should not create any source on this texture and there is no need to refresh it either:
-the other <code class="docutils literal"><span class="pre">Texture</span></code> object will provide the texture for both materials/textures.</dd>
+the other <code class="docutils literal"><span class="pre">纹理</span></code> object will provide the texture for both materials/textures.</dd>
 </dl>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">matID</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">纹理</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">matID</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -286,13 +286,13 @@ the other <code class="docutils literal"><span class="pre">Texture</span></code>
 <h3>Make texture persistent<a class="headerlink" href="#make-texture-persistent" title="Permalink to this headline">¶</a></h3>
 <p>Note that we have assigned the object to a <code class="docutils literal"><span class="pre">Game逻辑</span></code>, <code class="docutils literal"><span class="pre">video</span></code>
 attribute that we create for the occasion.
-The reason is that the <code class="docutils literal"><span class="pre">Texture</span></code> object must be persistent across the game scripts.
+The reason is that the <code class="docutils literal"><span class="pre">纹理</span></code> object must be persistent across the game scripts.
 A local variable would be deleted at the end of the script and the GPU texture deleted at the
 same time. <code class="docutils literal"><span class="pre">Game逻辑</span></code> module object is a handy place to store persistent objects.</p>
 </div>
 <div class="section" id="create-a-source">
 <h3>Create a source<a class="headerlink" href="#create-a-source" title="Permalink to this headline">¶</a></h3>
-<p>Now we have a <code class="docutils literal"><span class="pre">Texture</span></code> object but it cannot do anything because it does not have
+<p>Now we have a <code class="docutils literal"><span class="pre">纹理</span></code> object but it cannot do anything because it does not have
 any source. We must create a source object from one of the possible sources available in
 <code class="docutils literal"><span class="pre">bge.texture</span></code>:</p>
 <dl class="docutils">
@@ -321,10 +321,10 @@ assuming the video file is in the same directory as the blend-file:</p>
 <span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">视频FFmpeg</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We create the video source object and assign it to the <code class="docutils literal"><span class="pre">Texture</span></code> object
+<p>We create the video source object and assign it to the <code class="docutils literal"><span class="pre">纹理</span></code> object
 <code class="docutils literal"><span class="pre">source</span></code> attribute to set the source and make it persistent:
-as the <code class="docutils literal"><span class="pre">Texture</span></code> object is persistent, the source object will also be persistent.</p>
-<p>Note that we can change the <code class="docutils literal"><span class="pre">Texture</span></code> source at any time.
+as the <code class="docutils literal"><span class="pre">纹理</span></code> object is persistent, the source object will also be persistent.</p>
+<p>Note that we can change the <code class="docutils literal"><span class="pre">纹理</span></code> source at any time.
 Suppose we want to switch between two movies during the game. We can do the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Game逻辑</span><span class="o">.</span><span class="n">mySources</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">视频FFmpeg</span><span class="p">(</span><span class="s1">&#39;movie1.avi&#39;</span><span class="p">)</span>
 <span class="n">Game逻辑</span><span class="o">.</span><span class="n">mySources</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">视频FFmpeg</span><span class="p">(</span><span class="s1">&#39;movie2.avi&#39;</span><span class="p">)</span>
@@ -352,7 +352,7 @@ Relative frame rate, &lt;1.0 for slow, &gt;1.0 for fast.</dd>
 <dt><code class="docutils literal"><span class="pre">scale</span></code></dt>
 <dd>(bool).
 Set to True to activate fast nearest neighbor scaling algorithm.
-Texture width and height must be a power of 2.
+纹理 width and height must be a power of 2.
 If the video picture size is not a power of 2, rescaling is required.
 By default <code class="docutils literal"><span class="pre">bge.texture</span></code> uses the precise but slow <code class="docutils literal"><span class="pre">gluScale图像()</span></code> function.
 Best is to rescale the video offline so that no scaling is necessary at runtime!</dd>
@@ -381,7 +381,7 @@ In case the video dimensions are already a power of 2, it has no effect.</p>
 </div>
 <p>视频 playback is not a background process: it happens only when we refresh the texture.
 So we must have another script that runs on every frame and calls the <code class="docutils literal"><span class="pre">refresh</span>
-<span class="pre">()</span></code> method of the <code class="docutils literal"><span class="pre">Texture</span></code> object:</p>
+<span class="pre">()</span></code> method of the <code class="docutils literal"><span class="pre">纹理</span></code> object:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">Game逻辑</span><span class="p">,</span> <span class="s1">&#39;video&#39;</span><span class="p">):</span>
 <span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
@@ -402,14 +402,14 @@ If video is playing, its value is 2, if it&#8217;s stopped, it&#8217;s 3. So in 
 </div>
 <div class="section" id="advanced-work-flow">
 <h3>高级应用 work flow<a class="headerlink" href="#advanced-work-flow" title="Permalink to this headline">¶</a></h3>
-<p>True argument in <code class="docutils literal"><span class="pre">Texture.refresh()</span></code> method simply invalidates the image buffer
+<p>True argument in <code class="docutils literal"><span class="pre">纹理.refresh()</span></code> method simply invalidates the image buffer
 after sending it to the GPU so that on next frame, a new image will be loaded from the source.
 It has the side effect of making the image unavailable to Python.
 You can also do it manually by calling the <code class="docutils literal"><span class="pre">refresh</span>
 <span class="pre">()</span></code> method of the source directly.</p>
 <p>Here are some possible advanced work flow:</p>
 <ul class="simple">
-<li>Use the image buffer in python (doesn&#8217;t effect the Texture):</li>
+<li>Use the image buffer in python (doesn&#8217;t effect the 纹理):</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">image</span>
@@ -421,8 +421,8 @@ You can also do it manually by calling the <code class="docutils literal"><span 
 </div>
 <ul class="simple">
 <li>Load image from source for Python processing without download to GPU:</li>
-<li>note that we do not even call refresh on the Texture</li>
-<li>we could also just create a source object without a Texture object</li>
+<li>note that we do not even call refresh on the 纹理</li>
+<li>we could also just create a source object without a 纹理 object</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">Game逻辑</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">image</span>
 <span class="c1"># ... use image</span>
@@ -438,21 +438,21 @@ get its ID</li>
 </div>
 <p>GLSL material can have more than one texture channel,
 identify the texture by the texture slot where it is defined, here 2</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">tex</span><span class="o">=</span><span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">gameobj</span><span class="p">,</span> <span class="n">matID</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">tex</span><span class="o">=</span><span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">纹理</span><span class="p">(</span><span class="n">gameobj</span><span class="p">,</span> <span class="n">matID</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="advanced-demos">
 <h2>高级应用 demos<a class="headerlink" href="#advanced-demos" title="Permalink to this headline">¶</a></h2>
-<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/视频TextureDemo2video.blend">demo</a>
+<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/视频纹理Demo2video.blend">demo</a>
 that demonstrates the use of two videos alternatively on the same texture.
 Note that it requires an additional video file which is the elephant dream teaser.
 You can replace with another other file that you want to run the demo.</p>
-<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/视频TextureDemo2videoMix.blend">demo</a>
+<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/视频纹理Demo2videoMix.blend">demo</a>
 that demonstrates the use of the <code class="docutils literal"><span class="pre">图像Mix</span></code> source.
 <code class="docutils literal"><span class="pre">图像Mix</span></code> is a source that needs sources,
-which can be any other <code class="docutils literal"><span class="pre">Texture</span></code> source, like <code class="docutils literal"><span class="pre">视频FFmpeg</span></code>,
+which can be any other <code class="docutils literal"><span class="pre">纹理</span></code> source, like <code class="docutils literal"><span class="pre">视频FFmpeg</span></code>,
 <code class="docutils literal"><span class="pre">图像FFmpeg</span></code> or <code class="docutils literal"><span class="pre">图像渲染</span></code>. You set them with <code class="docutils literal"><span class="pre">setSource</span>
 <span class="pre">()</span></code> and their relative weight with <code class="docutils literal"><span class="pre">setWeight()</span></code>.
 Pay attention that the weight is a short number between 0 and 255,

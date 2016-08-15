@@ -427,7 +427,7 @@ This page lists definitions for terms used in Blender and this manual.
       A computer graphics technique for generating and representing **curves** and **surfaces**.
 
    Object
-      Container for a type (Mesh, Curve, Surface, Metaball, Text, Armature,
+      Container for a type (Mesh, Curve, Surface, Metaball, 文本, Armature,
       Lattice, Empty, 相机, Lamp) and basic 3D transform data(:term:`Object Center`).
 
    Object Center
@@ -505,7 +505,7 @@ This page lists definitions for terms used in Blender and this manual.
    Primitive
       A basic object that can be used as a basis for modeling more complicated objects.
 
-   Procedural Texture
+   Procedural 纹理
       Computer generated (generic) textures. Procedural textures can be configured via parameters.
 
    Projection
@@ -616,7 +616,7 @@ This page lists definitions for terms used in Blender and this manual.
       to define the :term:`local <Local Space>` Y axis of a :term:`Bone` in :term:`姿态模式`.
       The smaller of the two ends when drawn as an :term:`Octahedron`.
 
-   Texture
+   纹理
       Specifies visual patterns on surfaces and simulates physical surface structure.
 
    Timecode

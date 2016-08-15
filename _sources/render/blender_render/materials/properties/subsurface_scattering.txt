@@ -145,7 +145,7 @@ Blend
    Color
       This controls how much the RGB option modulates the diffuse color and textures.
       Note that even with this option set to 0.0, the RGB option still influences the scattering behavior.
-   Texture
+   纹理
       How much the surface texture is blurred along with the shading.
 Scattering Weight
    Front

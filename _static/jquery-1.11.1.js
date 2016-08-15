@@ -598,7 +598,7 @@ var Sizzle =
 var i,
 	support,
 	Expr,
-	getText,
+	get文本,
 	isXML,
 	tokenize,
 	compile,
@@ -1510,7 +1510,7 @@ Sizzle.uniqueSort = function( results ) {
  * Utility function for retrieving the text value of an array of DOM nodes
  * @param {Array|Element} elem
  */
-getText = Sizzle.getText = function( elem ) {
+get文本 = Sizzle.get文本 = function( elem ) {
 	var node,
 		ret = "",
 		i = 0,
@@ -1520,17 +1520,17 @@ getText = Sizzle.getText = function( elem ) {
 		// If no nodeType, this is expected to be an array
 		while ( (node = elem[i++]) ) {
 			// Do not traverse comment nodes
-			ret += getText( node );
+			ret += get文本( node );
 		}
 	} else if ( nodeType === 1 || nodeType === 9 || nodeType === 11 ) {
 		// Use textContent for elements
-		// innerText usage removed for consistency of new lines (jQuery #11153)
+		// inner文本 usage removed for consistency of new lines (jQuery #11153)
 		if ( typeof elem.textContent === "string" ) {
 			return elem.textContent;
 		} else {
 			// Traverse its children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
-				ret += getText( elem );
+				ret += get文本( elem );
 			}
 		}
 	} else if ( nodeType === 3 || nodeType === 4 ) {
@@ -1846,7 +1846,7 @@ Expr = Sizzle.selectors = {
 
 		"contains": markFunction(function( text ) {
 			return function( elem ) {
-				return ( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
+				return ( elem.textContent || elem.inner文本 || get文本( elem ) ).indexOf( text ) > -1;
 			};
 		}),
 
@@ -2625,7 +2625,7 @@ jQuery.find = Sizzle;
 jQuery.expr = Sizzle.selectors;
 jQuery.expr[":"] = jQuery.expr.pseudos;
 jQuery.unique = Sizzle.uniqueSort;
-jQuery.text = Sizzle.getText;
+jQuery.text = Sizzle.get文本;
 jQuery.isXMLDoc = Sizzle.isXML;
 jQuery.contains = Sizzle.contains;
 
@@ -3567,7 +3567,7 @@ jQuery(function() {
 	// Setup
 	div = document.createElement( "div" );
 	container = document.createElement( "div" );
-	container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
+	container.style.css文本 = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
 	body.appendChild( container ).appendChild( div );
 
 	if ( typeof div.style.zoom !== strundefined ) {
@@ -3575,7 +3575,7 @@ jQuery(function() {
 		// Check if natively block-level elements act like inline-block
 		// elements when setting their display to 'inline' and giving
 		// them layout
-		div.style.cssText = "display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1";
+		div.style.css文本 = "display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1";
 
 		support.inlineBlockNeedsLayout = val = div.offsetWidth === 3;
 		if ( val ) {
@@ -5558,7 +5558,7 @@ jQuery.extend({
 
 				// Convert non-html into a text node
 				} else if ( !rhtml.test( elem ) ) {
-					nodes.push( context.createTextNode( elem ) );
+					nodes.push( context.create文本Node( elem ) );
 
 				// Convert html into DOM nodes
 				} else {
@@ -5578,7 +5578,7 @@ jQuery.extend({
 
 					// Manually add leading whitespace removed by IE
 					if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
-						nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[0] ) );
+						nodes.push( context.create文本Node( rleadingWhitespace.exec( elem )[0] ) );
 					}
 
 					// Remove IE's autoinserted <tbody> from table fragments
@@ -5721,7 +5721,7 @@ jQuery.fn.extend({
 		return access( this, function( value ) {
 			return value === undefined ?
 				jQuery.text( this ) :
-				this.empty().append( ( this[0] && this[0].ownerDocument || document ).createTextNode( value ) );
+				this.empty().append( ( this[0] && this[0].ownerDocument || document ).create文本Node( value ) );
 		}, null, value, arguments.length );
 	},
 
@@ -6081,14 +6081,14 @@ function defaultDisplay( nodeName ) {
 		// Setup
 		div = document.createElement( "div" );
 		container = document.createElement( "div" );
-		container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
+		container.style.css文本 = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
 		body.appendChild( container ).appendChild( div );
 
 		// Support: IE6
 		// Check if elements with layout shrink-wrap their children
 		if ( typeof div.style.zoom !== strundefined ) {
 			// Reset CSS: box-sizing; display; margin; border
-			div.style.cssText =
+			div.style.css文本 =
 				// Support: Firefox<29, Android 2.3
 				// Vendor-prefix box-sizing
 				"-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
@@ -6262,7 +6262,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 		return;
 	}
 
-	style.cssText = "float:left;opacity:.5";
+	style.css文本 = "float:left;opacity:.5";
 
 	// Support: IE<9
 	// Make sure that element opacity exists (as opposed to filter)
@@ -6325,10 +6325,10 @@ function addGetHookIf( conditionFn, hookFn ) {
 		// Setup
 		div = document.createElement( "div" );
 		container = document.createElement( "div" );
-		container.style.cssText = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
+		container.style.css文本 = "position:absolute;border:0;width:0;height:0;top:0;left:-9999px";
 		body.appendChild( container ).appendChild( div );
 
-		div.style.cssText =
+		div.style.css文本 =
 			// Support: Firefox<29, Android 2.3
 			// Vendor-prefix box-sizing
 			"-webkit-box-sizing:border-box;-moz-box-sizing:border-box;" +
@@ -6353,7 +6353,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 			contents = div.appendChild( document.createElement( "div" ) );
 
 			// Reset CSS: box-sizing; display; margin; border; padding
-			contents.style.cssText = div.style.cssText =
+			contents.style.css文本 = div.style.css文本 =
 				// Support: Firefox<29, Android 2.3
 				// Vendor-prefix box-sizing
 				"-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
@@ -6374,7 +6374,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 		// hidden; don safety goggles and see bug #4512 for more information).
 		div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
 		contents = div.getElementsByTagName( "td" );
-		contents[ 0 ].style.cssText = "margin:0;border:0;padding:0;display:none";
+		contents[ 0 ].style.css文本 = "margin:0;border:0;padding:0;display:none";
 		reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
 		if ( reliableHiddenOffsetsVal ) {
 			contents[ 0 ].style.display = "";
@@ -6786,7 +6786,7 @@ if ( !support.opacity ) {
 					jQuery.trim( filter.replace( ralpha, "" ) ) === "" &&
 					style.removeAttribute ) {
 
-				// Setting style.filter to null, "" & " " still leave "filter:" in the cssText
+				// Setting style.filter to null, "" & " " still leave "filter:" in the css文本
 				// if "filter:" is present at all, clearType is disabled, we want to avoid this
 				// style.removeAttribute is IE Only, but so apparently is this code path...
 				style.removeAttribute( "filter" );
@@ -7669,13 +7669,13 @@ jQuery.fn.delay = function( time, type ) {
 	opt = select.appendChild( document.createElement("option") );
 	input = div.getElementsByTagName("input")[ 0 ];
 
-	a.style.cssText = "top:1px";
+	a.style.css文本 = "top:1px";
 
 	// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
 	support.getSetAttribute = div.className !== "t";
 
 	// Get the style information from getAttribute
-	// (IE uses .cssText instead)
+	// (IE uses .css文本 instead)
 	support.style = /top/.test( a.getAttribute("style") );
 
 	// Make sure that URLs aren't manipulated
@@ -8135,11 +8135,11 @@ if ( !support.style ) {
 		get: function( elem ) {
 			// Return undefined in the case of empty string
 			// Note: IE uppercases css property names, but if we were to .toLowerCase()
-			// .cssText, that would destroy case senstitivity in URL's, like in "background"
-			return elem.style.cssText || undefined;
+			// .css文本, that would destroy case senstitivity in URL's, like in "background"
+			return elem.style.css文本 || undefined;
 		},
 		set: function( elem, value ) {
-			return ( elem.style.cssText = value + "" );
+			return ( elem.style.css文本 = value + "" );
 		}
 	};
 }
@@ -8863,7 +8863,7 @@ jQuery.extend({
 
 		responseFields: {
 			xml: "responseXML",
-			text: "responseText",
+			text: "response文本",
 			json: "responseJSON"
 		},
 
@@ -8874,7 +8874,7 @@ jQuery.extend({
 			// Convert anything to text
 			"* text": String,
 
-			// Text to html (true = no transformation)
+			// 文本 to html (true = no transformation)
 			"text html": true,
 
 			// Evaluate text as a json expression
@@ -9019,12 +9019,12 @@ jQuery.extend({
 				},
 
 				// Cancel the request
-				abort: function( statusText ) {
-					var finalText = statusText || strAbort;
+				abort: function( status文本 ) {
+					var final文本 = status文本 || strAbort;
 					if ( transport ) {
-						transport.abort( finalText );
+						transport.abort( final文本 );
 					}
-					done( 0, finalText );
+					done( 0, final文本 );
 					return this;
 				}
 			};
@@ -9186,9 +9186,9 @@ jQuery.extend({
 		}
 
 		// Callback for when everything is done
-		function done( status, nativeStatusText, responses, headers ) {
+		function done( status, nativeStatus文本, responses, headers ) {
 			var isSuccess, success, error, response, modified,
-				statusText = nativeStatusText;
+				status文本 = nativeStatus文本;
 
 			// Called once
 			if ( state === 2 ) {
@@ -9241,25 +9241,25 @@ jQuery.extend({
 
 				// if no content
 				if ( status === 204 || s.type === "HEAD" ) {
-					statusText = "nocontent";
+					status文本 = "nocontent";
 
 				// if not modified
 				} else if ( status === 304 ) {
-					statusText = "notmodified";
+					status文本 = "notmodified";
 
 				// If we have data, let's convert it
 				} else {
-					statusText = response.state;
+					status文本 = response.state;
 					success = response.data;
 					error = response.error;
 					isSuccess = !error;
 				}
 			} else {
-				// We extract error from statusText
-				// then normalize statusText and status for non-aborts
-				error = statusText;
-				if ( status || !statusText ) {
-					statusText = "error";
+				// We extract error from status文本
+				// then normalize status文本 and status for non-aborts
+				error = status文本;
+				if ( status || !status文本 ) {
+					status文本 = "error";
 					if ( status < 0 ) {
 						status = 0;
 					}
@@ -9268,13 +9268,13 @@ jQuery.extend({
 
 			// Set data for the fake xhr object
 			jqXHR.status = status;
-			jqXHR.statusText = ( nativeStatusText || statusText ) + "";
+			jqXHR.status文本 = ( nativeStatus文本 || status文本 ) + "";
 
 			// Success/Error
 			if ( isSuccess ) {
-				deferred.resolveWith( callbackContext, [ success, statusText, jqXHR ] );
+				deferred.resolveWith( callbackContext, [ success, status文本, jqXHR ] );
 			} else {
-				deferred.rejectWith( callbackContext, [ jqXHR, statusText, error ] );
+				deferred.rejectWith( callbackContext, [ jqXHR, status文本, error ] );
 			}
 
 			// Status-dependent callbacks
@@ -9287,7 +9287,7 @@ jQuery.extend({
 			}
 
 			// Complete
-			completeDeferred.fireWith( callbackContext, [ jqXHR, statusText ] );
+			completeDeferred.fireWith( callbackContext, [ jqXHR, status文本 ] );
 
 			if ( fireGlobals ) {
 				globalEventContext.trigger( "ajaxComplete", [ jqXHR, s ] );
@@ -9632,7 +9632,7 @@ if ( xhrSupported ) {
 
 					// Listener
 					callback = function( _, isAbort ) {
-						var status, statusText, responses;
+						var status, status文本, responses;
 
 						// Was never called and is aborted or complete
 						if ( callback && ( isAbort || xhr.readyState === 4 ) ) {
@@ -9651,19 +9651,19 @@ if ( xhrSupported ) {
 								status = xhr.status;
 
 								// Support: IE<10
-								// Accessing binary-data responseText throws an exception
+								// Accessing binary-data response文本 throws an exception
 								// (#11426)
-								if ( typeof xhr.responseText === "string" ) {
-									responses.text = xhr.responseText;
+								if ( typeof xhr.response文本 === "string" ) {
+									responses.text = xhr.response文本;
 								}
 
 								// Firefox throws an exception when accessing
-								// statusText for faulty cross-domain requests
+								// status文本 for faulty cross-domain requests
 								try {
-									statusText = xhr.statusText;
+									status文本 = xhr.status文本;
 								} catch( e ) {
-									// We normalize with Webkit giving an empty statusText
-									statusText = "";
+									// We normalize with Webkit giving an empty status文本
+									status文本 = "";
 								}
 
 								// Filter status for non standard behaviors
@@ -9682,7 +9682,7 @@ if ( xhrSupported ) {
 
 						// Call complete if needed
 						if ( responses ) {
-							complete( status, statusText, responses, xhr.getAllResponse标题栏() );
+							complete( status, status文本, responses, xhr.getAllResponse标题栏() );
 						}
 					};
 
@@ -9971,7 +9971,7 @@ jQuery.fn.load = function( url, params, callback ) {
 			type: type,
 			dataType: "html",
 			data: params
-		}).done(function( responseText ) {
+		}).done(function( response文本 ) {
 
 			// Save response for use in complete callback
 			response = arguments;
@@ -9980,13 +9980,13 @@ jQuery.fn.load = function( url, params, callback ) {
 
 				// If a selector was specified, locate the right elements in a dummy div
 				// Exclude scripts to avoid IE 'Permission Denied' errors
-				jQuery("<div>").append( jQuery.parseHTML( responseText ) ).find( selector ) :
+				jQuery("<div>").append( jQuery.parseHTML( response文本 ) ).find( selector ) :
 
 				// 其他wise use the full result
-				responseText );
+				response文本 );
 
 		}).complete( callback && function( jqXHR, status ) {
-			self.each( callback, response || [ jqXHR.responseText, status, jqXHR ] );
+			self.each( callback, response || [ jqXHR.response文本, status, jqXHR ] );
 		});
 	}
 

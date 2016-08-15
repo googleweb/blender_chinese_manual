@@ -36,7 +36,7 @@
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
         <link rel="up" title="UV 编辑" href="index.html"/>
-        <link rel="next" title="Applying Textures" href="applying_image.html"/>
+        <link rel="next" title="Applying 纹理" href="applying_image.html"/>
         <link rel="prev" title="Managing UV Maps" href="layout_management.html"/> 
 
   
@@ -185,7 +185,7 @@ textured or painted. Your goals for editing are:</p>
 <li>Shrink the faces that are too grainy and have too much detail.</li>
 </ul>
 <p>With a minimum of dead space,
-the most pixels can be dedicated to giving the maximum detail and fineness to the UV Texture.
+the most pixels can be dedicated to giving the maximum detail and fineness to the UV 纹理.
 A UV face can be as small as a pixel (the little dots that make up an image)
 or as large as an entire image. You probably want to make some major adjustments first,
 and then tweak the layout.</p>
@@ -338,7 +338,7 @@ reduces UV stretch by minimizing angles. This essentially relaxes the UVs.</p>
 </div>
 <div class="section" id="face-mirror-and-rotate-uvs">
 <h3>Face 镜像 and Rotate UVs<a class="headerlink" href="#face-mirror-and-rotate-uvs" title="Permalink to this headline">¶</a></h3>
-<p>The orientation of the UV Texture is defined by each face.
+<p>The orientation of the UV 纹理 is defined by each face.
 If the image is, for example, upside down or laying on its side,
 use the <span class="menuselection">Face ‣ Rotate UVs</span> (in the 3D视图 in Face Select mode)
 menu to rotate the UVs per face in 90-degree turns.</p>
@@ -371,7 +371,7 @@ arranging the UV maps, stitching several maps together.</p>
 <p>The next step is to work with the UV layouts that you have created through the unwrap process.
 If you do add faces or subdivide existing faces when a model is already unwrapped,
 Blender will add those new faces for you. In this fashion,
-you can use the UV Texture image to guide additional geometry changes.</p>
+you can use the UV 纹理 image to guide additional geometry changes.</p>
 <p>When arranging, keep in mind that the entire window is your workspace,
 but only the UV coordinates within the grid are mapped to the image. So,
 you can put pieces off to the side while you arrange them. Also,
@@ -430,7 +430,7 @@ painting of that piece.</p>
 <p>When all of the pieces of the mesh have been unwrapped using the various calculations,
 you should end up with something that looks like to the 例子 to the right.
 All of the sections of the mesh have been mapped,
-and all those maps are laid out in the same UV Texture map. Congratulations! From here,
+and all those maps are laid out in the same UV 纹理 map. Congratulations! From here,
 it is a simple matter of &#8220;stitching&#8221; (discussed in the next section)
 to construct the entire UV Map as a single map.</p>
 <div class="figure" id="id5">
@@ -496,7 +496,7 @@ but at the same time taking away pixels (detail) from something else,
 like the back of the head. After refining the UV map,
 you then edit the image so that it looks right and contains the details you want.</p>
 <div class="section" id="reusing-textures">
-<h3>Reusing Textures<a class="headerlink" href="#reusing-textures" title="Permalink to this headline">¶</a></h3>
+<h3>Reusing 纹理<a class="headerlink" href="#reusing-textures" title="Permalink to this headline">¶</a></h3>
 <p>Another consideration is the need to conserve resources. Each image file is loaded in memory.
 If you can re-use the same image on different meshes, it saves memory. So, for example,
 you might want to have a generic face painting, and use that on different characters,
@@ -518,7 +518,7 @@ and you would Reset Unwrap the sword faces to re-use that image down the length 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="applying_image.html" class="btn btn-neutral float-right" title="Applying Textures" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="applying_image.html" class="btn btn-neutral float-right" title="Applying 纹理" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="layout_management.html" class="btn btn-neutral" title="Managing UV Maps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>

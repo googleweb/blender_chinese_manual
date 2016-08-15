@@ -2,10 +2,10 @@
 ..    TODO/Review: {{review|text=missing dupli part}} .
 
 ***************
-Texture Mapping
+纹理 Mapping
 ***************
 
-Textures need mapping coordinates, to determine how they are applied to the object.
+纹理 need mapping coordinates, to determine how they are applied to the object.
 The mapping specifies how the texture will ultimately wrap itself to the object.
 
 For example,

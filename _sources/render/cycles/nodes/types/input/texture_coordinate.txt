@@ -1,15 +1,15 @@
 
 ******************
-Texture Coordinate
+纹理 Coordinate
 ******************
 
 .. figure:: /images/cycles_nodes_texture-coordinate.png
    :align: right
 
-   Texture Coordinate Node.
+   纹理 Coordinate Node.
 
 
-The *Texture Coordinate* node is commonly used for the coordinates of textures,
+The *纹理 Coordinate* node is commonly used for the coordinates of textures,
 typically used as inputs for the *Vector* input for texture nodes.
 
 

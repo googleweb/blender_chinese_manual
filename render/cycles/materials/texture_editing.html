@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Texture 编辑 &mdash; Blender参考手册</title>
+  <title>纹理编辑 &mdash; Blender参考手册</title>
   
 
   
@@ -96,8 +96,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender 渲染 Engine</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender渲染引擎</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles渲染引擎</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../settings/index.html">渲染 设置</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Materials</a><ul class="current">
@@ -105,7 +105,7 @@
 <li class="toctree-l4"><a class="reference internal" href="displacement.html">Displacement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="surface.html">Surface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="volume.html">Volume</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Texture 编辑</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">纹理编辑</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../nodes/index.html">节点</a></li>
@@ -167,11 +167,11 @@
       
           <li><a href="../../index.html">渲染</a> &raquo;</li>
       
-          <li><a href="../index.html">Cycles 渲染 Engine</a> &raquo;</li>
+          <li><a href="../index.html">Cycles渲染引擎</a> &raquo;</li>
       
           <li><a href="index.html">Materials</a> &raquo;</li>
       
-    <li>Texture 编辑</li>
+    <li>纹理编辑</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -186,16 +186,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="texture-editing">
-<h1>Texture 编辑<a class="headerlink" href="#texture-editing" title="Permalink to this headline">¶</a></h1>
+<h1>纹理编辑<a class="headerlink" href="#texture-editing" title="Permalink to this headline">¶</a></h1>
 <p>3D视图 draw types, UV mapping,
 and texture painting work somewhat differently when Cycles is enabled.
 UV Maps no longer get image textures assigned themselves;
 rather they must always be assigned by adding an image texture node to a material.</p>
 <div class="section" id="d-view-draw-types">
 <h2>3D视图 Draw Types<a class="headerlink" href="#d-view-draw-types" title="Permalink to this headline">¶</a></h2>
-<p>The Texture draw types used for Blender Internal have been replaced by three others in Cycles:</p>
+<p>The 纹理 draw types used for Blender Internal have been replaced by three others in Cycles:</p>
 <dl class="docutils">
-<dt>Texture</dt>
+<dt>纹理</dt>
 <dd>This draw mode is used for editing, painting and mapping individual textures.
 Lighting is the same as in solid mode, so this is similar to the existing textured solid for Blender Internal.
 The texture drawn is the active image texture node for the material.</dd>
@@ -213,7 +213,7 @@ Unlike offline rendering, objects still use the viewport rather than render reso
 </div>
 </div>
 <div class="section" id="texture-properties">
-<h2>Texture Properties<a class="headerlink" href="#texture-properties" title="Permalink to this headline">¶</a></h2>
+<h2>纹理 Properties<a class="headerlink" href="#texture-properties" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right">
 <a class="reference internal image-reference" href="../../../_images/cycles_texture_tab_menu.jpg"><img alt="../../../_images/cycles_texture_tab_menu.jpg" src="../../../_images/cycles_texture_tab_menu.jpg" style="width: 225px;" /></a>
 </div>

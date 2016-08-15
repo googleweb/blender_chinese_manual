@@ -1,6 +1,6 @@
 
 *******************
-Environment Texture
+Environment 纹理
 *******************
 
 Environmental textures are used to light your scene using an environment map image file as a texture.
@@ -10,7 +10,7 @@ Inputs
 ======
 
 Vector
-   Texture coordinate for texture lookup. If this socket is left unconnected,
+   纹理 coordinate for texture lookup. If this socket is left unconnected,
    the image is mapped as environment with the Z axis as up.
 
 
@@ -23,7 +23,7 @@ Color Space
    Type of data that the image contains, either Color or Non-Color Data.
    For most color textures the default of Color should be used, but in case of e.g. a bump or alpha map,
    the pixel values should be interpreted as Non-Color Data, to avoid doing any unwanted color space conversions.
-Texture Interpolation
+纹理 Interpolation
    Interpolation method used for the environment texture. The following interpolations are available:
 
    Linear

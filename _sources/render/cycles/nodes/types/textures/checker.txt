@@ -1,6 +1,6 @@
 
 ***************
-Checker Texture
+Checker 纹理
 ***************
 
 Checkerboard texture.
@@ -10,7 +10,7 @@ Inputs
 ======
 
 Vector
-   Texture coordinate to sample texture at;
+   纹理 coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.
 Color1, Color 2
    Color of the checkers.
@@ -31,7 +31,7 @@ Outputs
 =======
 
 Color
-   Texture color output.
+   纹理 color output.
 Fac
    Checker 1 mask (1 = Checker 1).
 

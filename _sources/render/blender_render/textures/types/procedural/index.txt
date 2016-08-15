@@ -1,6 +1,6 @@
 
 ######################
-  Procedural Textures
+  Procedural 纹理
 ######################
 
 .. toctree::

@@ -15,7 +15,7 @@ Returns the color of a texture at the specified coordinates.
 Inputs
 ======
 
-Texture
+纹理
    Standard image input.
 Coordinates
    The point at which to sample the color. For images, the space is between -1 and 1 for X and Y.
@@ -31,6 +31,6 @@ This node has no properties.
 Outputs
 =======
 
-Texture
+纹理
    Standard image output.
 

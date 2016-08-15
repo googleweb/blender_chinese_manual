@@ -1,14 +1,14 @@
 
 *******
-Texture
+纹理
 *******
 
 .. figure:: /images/force_field_type_texture.jpg
    :width: 400px
 
-   Texture force field.
+   纹理 force field.
 
-You can use a *Texture* force field to create an arbitrarily complicated force field,
+You can use a *纹理* force field to create an arbitrarily complicated force field,
 which force in the three directions is color coded. Red is coding for the X-axis,
 green for the Y-axis and blue for the Z-axis
 (like the color of the coordinate axes in the 3D视图). A value of 0.5 means no force,
@@ -18,9 +18,9 @@ a value smaller than 0.5 acceleration in positive axis direction (like +Z).
 .. figure:: /images/force_field_panel_texture.jpg
    :width: 400px
 
-   UI for a Texture force field.
+   UI for a 纹理 force field.
 
-Texture mode
+纹理 mode
    This sets the way a force vector is derived from the texture.
 
    RGB
@@ -41,7 +41,7 @@ Nabla
 Use Object Coordinates
    Uses the emitter object coordinates (and rotation & scale) as the texture space the particles use.
    Allows for moving force fields, that have their coordinates bound to the location coordinates of an object.
-Root Texture Coordinates
+Root 纹理 Coordinates
    This is useful for hair as it uses the texture force calculated for
    the particle root position for all parts of the hair strand.
 2D

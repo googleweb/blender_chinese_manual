@@ -4,7 +4,7 @@
 渲染 Passes
 *************
 
-渲染 Passes are necessary because of the different things the Blender 渲染 Engine must
+渲染 Passes are necessary because of the different things the Blender渲染引擎 must
 calculate to give you the final image.
 In each 'pass' the engine calculates different interactions between objects.
 

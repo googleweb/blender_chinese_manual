@@ -12,4 +12,4 @@ To see the full Python API please click on the following link:
 More informations:
 
 - :doc:`Bullet physics </game_engine/python_api/bullet_physics>`
-- :doc:`视频 Texture </game_engine/python_api/videotexture>`
+- :doc:`视频 纹理 </game_engine/python_api/videotexture>`

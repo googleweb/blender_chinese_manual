@@ -2,7 +2,7 @@
 .. leaved out: Mapping Coordinates
 
 *****************
-Texture Influence
+纹理 Influence
 *****************
 
 
@@ -10,7 +10,7 @@ Texture Influence
    :align: right
    :width: 300px
 
-   Texture influence settings.
+   纹理 influence settings.
 
 Defines the settings of a Particle system spatial with a texture.
 

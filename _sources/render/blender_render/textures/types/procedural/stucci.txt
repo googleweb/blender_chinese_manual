@@ -5,7 +5,7 @@ Stucci
 
 .. figure:: /images/texture-procedural-stucci.jpg
 
-   Stucci Texture Panels.
+   Stucci 纹理 Panels.
 
 
 The *Stucci* texture is based on noise functions.

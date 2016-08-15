@@ -180,7 +180,7 @@ with respect to the number of faces it needs to have.
 If you do add faces or subdivide existing faces when a model is already unwrapped,
 Blender will add those new faces for you,
 but you may need to do additional mapping or editing. In this fashion,
-you can use the UV Texture image to guide additional geometry changes.</p>
+you can use the UV 纹理 image to guide additional geometry changes.</p>
 <p>This section covers techniques for Mapping Uvs.
 The next sections cover <a class="reference internal" href="layout_editing.html"><span class="doc">编辑 UVs</span></a>,
 followed by methods of <a class="reference internal" href="layout_management.html"><span class="doc">Managing UV Layouts</span></a>,
@@ -190,9 +190,9 @@ and <a class="reference internal" href="applying_image.html"><span class="doc">A
 <p>Every point in the UV map corresponds to a vertex in the mesh.
 The lines joining the UVs correspond to edges in the mesh.
 Each face in the UV map corresponds to a mesh face.</p>
-<p>Each face of a mesh can have many UV Textures.
-Each UV Texture can have an individual image assigned to it.
-When you unwrap a face to a UV Texture in the UV/图像编辑器, each face of the mesh is
+<p>Each face of a mesh can have many UV 纹理.
+Each UV 纹理 can have an individual image assigned to it.
+When you unwrap a face to a UV 纹理 in the UV/图像编辑器, each face of the mesh is
 automatically assigned <em>four UV coordinates:</em> These coordinates define the way an image or a
 texture is mapped onto the face. These are 2D coordinates, which is why they are called UV,
 to distinguish them from XYZ coordinates.
@@ -201,9 +201,9 @@ These coordinates can be used for rendering or for real-time OpenGL display as w
 The UV coordinates define how this image is mapped onto the face.
 This image then can be rendered or displayed in real time. A 3D视图 has to be in &#8220;Face
 Select&#8221; mode to be able to assign 图像s or change UV coordinates of the active Mesh Object.
-This allows a face to participate in many UV Textures.
-A face at the hairline of a character might participate in the facial UV Texture,
-<em>and</em> in the scalp/hair UV Texture.</p>
+This allows a face to participate in many UV 纹理.
+A face at the hairline of a character might participate in the facial UV 纹理,
+<em>and</em> in the scalp/hair UV 纹理.</p>
 <p>These are described more fully in the next sections.</p>
 </div>
 <div class="section" id="getting-started">
@@ -360,7 +360,7 @@ map of the earth as the UV image will give a very nice planet mapping onto the s
 <p>In the 3D视图, the <span class="menuselection">Face ‣ Unwrap UVs ‣ Project from View</span> option maps the face as
 seen through the view of the 3D视图 it was selected from.
 It is almost like you had x-ray vision or squashed the mesh flat as a pancake onto the UV map.
-Use this option if you are using a picture of a real object as a UV Texture for an object that
+Use this option if you are using a picture of a real object as a UV 纹理 for an object that
 you have modeled. You will get some stretching in areas where the model recedes away from you.</p>
 <p>Using <em>Project from View (Bounds)</em> will do the same as above,
 but scales the UVs to the bounds of the UV space.</p>

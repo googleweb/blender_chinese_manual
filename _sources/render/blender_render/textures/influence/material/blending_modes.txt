@@ -1,6 +1,6 @@
 
 **********************
-Texture Blending Modes
+纹理 Blending Modes
 **********************
 
 Blending Modes are different methods of controlling how the texture influences material

@@ -54,7 +54,7 @@ Proportional 编辑
    See :doc:`Proportional 编辑 </editors/3dview/transform/transform_control/proportional_edit>`.
 UV 吸附
    Similar to 吸附 in the 3D视图
-Active UV Texture Map Selector
+Active UV 纹理 Map Selector
    Select which UV texture to use
 图像 Channels to Draw
    Set the image to be displayed with *Color*, *Color and Alpha*, or just *Alpha*.

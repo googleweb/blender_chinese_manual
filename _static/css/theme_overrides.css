@@ -57,7 +57,7 @@ input[type="number"], input[type="tel"], input[type="color"] {
 /* Moves the table captions to the bottom */ 
 table {caption-side: bottom}
 
-/* Text wrap of figure captions in tables
+/* 文本 wrap of figure captions in tables
  * (without this images with captions in tables can cause a log of horizontal scrolling). */
 .wy-table caption, .rst-content table.docutils caption, 
 .rst-content table.field-list caption.rst-content .docutils.caption,

@@ -25,7 +25,7 @@ section of the community wiki.
 
 Be sure to check the :doc:`/about/contribute/style_guides/writing_guide`
 for conventions and :doc:`/about/contribute/style_guides/markup_guide`
-to learn how to write in the reStructuredText markup language.
+to learn how to write in the reStructured文本 markup language.
 
 Happy writing!
 

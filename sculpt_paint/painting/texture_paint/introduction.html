@@ -147,32 +147,32 @@
             
   <div class="section" id="introduction">
 <h1>简介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>A UV Texture is a picture (image, sequence or movie)
+<p>A UV 纹理 is a picture (image, sequence or movie)
 that is used to color the surface of a mesh.
-The UV Texture is mapped to the mesh through one or more UV maps.
-There are three ways to establish the image used by the UV Texture:</p>
+The UV 纹理 is mapped to the mesh through one or more UV maps.
+There are three ways to establish the image used by the UV 纹理:</p>
 <ul class="simple">
-<li>Paint a flat image in the UV/图像编辑器 onto the currently selected UV Texture,
+<li>Paint a flat image in the UV/图像编辑器 onto the currently selected UV 纹理,
 using its UV map to transfer the colors to the faces of the mesh.</li>
-<li>Paint the mesh in the 3D视图, and let Blender use the currently selected UV map to update the UV Texture
+<li>Paint the mesh in the 3D视图, and let Blender use the currently selected UV map to update the UV 纹理
 (see <a class="reference internal" href="index.html#painting-texture-index"><span class="std std-ref">Projection Painting</span></a>).</li>
 <li>Use any image-editing (paint) program to create an image.
-In the UV/图像编辑器, select the UV Texture and load the image.
+In the UV/图像编辑器, select the UV 纹理 and load the image.
 Blender will then use that texture&#8217;s UV map to transfer the colors to the faces of the mesh</li>
 </ul>
-<p>Blender features a built-in paint mode called Texture Paint which is designed specifically to
-help you edit your UV Textures and images quickly and
+<p>Blender features a built-in paint mode called 纹理 Paint which is designed specifically to
+help you edit your UV 纹理 and images quickly and
 easily in either the UV/图像 or the 3D视图 Editor.
-Since a UV Texture is just a special-purpose image,
+Since a UV 纹理 is just a special-purpose image,
 you can also use any external paint program. For example,
 GIMP is a full-featured image manipulation program that is also open-source.</p>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../../_images/texture-painting.jpg"><img alt="../../../_images/texture-painting.jpg" src="../../../_images/texture-painting.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Texture painting in Blender.</span></p>
+<p class="caption"><span class="caption-text">纹理 painting in Blender.</span></p>
 </div>
-<p>Since a mesh can have layers of UV Textures, there may be many images that color the mesh.
-However, each UV Texture only has one image.</p>
-<p>Texture Paint works in both a 3D视图 and the UV/图像编辑器.
+<p>Since a mesh can have layers of UV 纹理, there may be many images that color the mesh.
+However, each UV 纹理 only has one image.</p>
+<p>纹理 Paint works in both a 3D视图 and the UV/图像编辑器.
 In the 3D视图 in 纹理绘制模式, you paint directly on the mesh by
 <a class="reference internal" href="index.html#painting-texture-index"><span class="std std-ref">projecting onto the UVs</span></a>.</p>
 <div class="section" id="getting-started">
@@ -196,12 +196,12 @@ and you can paint directly onto the mesh.</li>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Square Power of 2</p>
-<p class="last">Texture paint is very fast and responsive when working in the 3D视图 and when your image is sized as a
+<p class="last">纹理 paint is very fast and responsive when working in the 3D视图 and when your image is sized as a
 square where the side lengths are a power of two, e.g. 256×256, 512×512, 1024×1024, etc.</p>
 </div>
-<p>Once you enable Texture Painting, your mouse becomes a brush. To work with the UV layout
+<p>Once you enable 纹理 Painting, your mouse becomes a brush. To work with the UV layout
 (for example, to move coordinates) you must go back to &#8220;View&#8221; mode.</p>
-<p>As soon as you enable Texture Painting or switch to 纹理绘制模式,
+<p>As soon as you enable 纹理 Painting or switch to 纹理绘制模式,
 brush settings become available in the Tool Shelf <code class="kbd docutils literal"><span class="pre">T</span></code>.</p>
 <p>In the UV/图像编辑器,
 you paint on a flat canvas that is wrapped around the mesh using UV coordinates.
@@ -214,18 +214,18 @@ the modified texture will <strong>not</strong> be saved automatically;
 you must explicitly do so by :menuselection`图像 &#8211;&gt; Save` in the UV/图像编辑器.</p>
 </div>
 <div class="section" id="texture-preview">
-<h2>Texture Preview<a class="headerlink" href="#texture-preview" title="Permalink to this headline">¶</a></h2>
+<h2>纹理 Preview<a class="headerlink" href="#texture-preview" title="Permalink to this headline">¶</a></h2>
 <p>If your texture is already used to color, bump map, displace, alpha-transparent, etc.,
 a surface of a model in your scene (in other technical words,
 is mapped to some aspect of a texture via a texture channel using UV as a map input),
 you can see the effects of your painting in the context of your scene as you paint.</p>
-<p>To do this, set up side-by-side windows, one window in 3D视图 set to <em>Texture</em> shading option,
+<p>To do this, set up side-by-side windows, one window in 3D视图 set to <em>纹理</em> shading option,
 and in the second window the UV/图像编辑器 loaded with your image.
 Position the 3D视图 to show the object that is UV mapped to the loaded image.
 In the image to the right, the texture being painted is mapped to the &#8220;Normal&#8221; attribute,
 and is called &#8220;bump mapping&#8221;,
 where the gray-scale image is used to make the flat surface appear bumpy.
-See Texture Mapping Output for more information on bump mapping.</p>
+See 纹理 Mapping Output for more information on bump mapping.</p>
 </div>
 <div class="section" id="saving">
 <h2>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h2>
@@ -235,8 +235,8 @@ Use the :menuselection`图像 &#8211;&gt; Save 图像`
 option to save your work with a different name or overwrite the original image.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>UV Textures</p>
-<p class="last">Since images used as UV Textures are functionally different from other images,
+<p>UV 纹理</p>
+<p class="last">Since images used as UV 纹理 are functionally different from other images,
 you should keep them in a directory separate from other images.</p>
 </div>
 <p>The image format for saving is independent of the format for rendering.
@@ -248,7 +248,7 @@ saving your images to a separate file is not necessary.</p>
 </div>
 <div class="section" id="using-an-external-image-editor">
 <h2>Using an External 图像编辑器<a class="headerlink" href="#using-an-external-image-editor" title="Permalink to this headline">¶</a></h2>
-<p>If you use an external program to edit your UV Texture, you must:</p>
+<p>If you use an external program to edit your UV 纹理, you must:</p>
 <ul class="simple">
 <li>run that paint program (GIMP, Photoshop<sup>®</sup> , etc.)</li>
 <li>load the image or create a new one</li>
@@ -258,7 +258,7 @@ saving your images to a separate file is not necessary.</p>
 </ul>
 <p>You want to use an external program if you have teams of people using different programs that
 are developing the UV textures,
-or if you want to apply any special effects that Texture Paint does not feature,
+or if you want to apply any special effects that 纹理 Paint does not feature,
 or if you are much more familiar with your favorite paint program.</p>
 </div>
 <div class="section" id="known-limitations">

@@ -1,6 +1,6 @@
 
 ***************************
-Material Textures Influence
+Material 纹理 Influence
 ***************************
 
 Not only can textures affect the color of a material,
@@ -9,7 +9,7 @@ material that a texture influences are controlled in the *Influence* panel.
 
 .. note::
 
-   Texture options for *Surface* and *Wire* materials and in some cases also for *Volume* and *Halo* materials.
+   纹理 options for *Surface* and *Wire* materials and in some cases also for *Volume* and *Halo* materials.
 
 
 Surface and Wire materials
@@ -18,7 +18,7 @@ Surface and Wire materials
 .. figure:: /images/texture-influence-surface.jpg
    :width: 308px
 
-   Texture Influence panel for a Surface material.
+   纹理 Influence panel for a Surface material.
 
 
 Diffuse
@@ -80,14 +80,14 @@ Displace
 
 Blend
    Blending operation to perform.
-   See :doc:`Texture Blending Modes </render/blender_render/textures/influence/material/blending_modes>` for details.
+   See :doc:`纹理 Blending Modes </render/blender_render/textures/influence/material/blending_modes>` for details.
 RGB to intensity
    With this option enabled, an RGB texture (affects color) is used as an intensity texture (affects a value).
 Blend Color
    If the texture is mapped to Col,
    what color is blended in according to the intensity of the texture? Click on the swatch or set the RGB sliders.
 Negative
-   The effect of the Texture is negated. Normally white means on, black means off, *Negative* reverses that.
+   The effect of the 纹理 is negated. Normally white means on, black means off, *Negative* reverses that.
 Stencil
    The active texture is used as a mask for all following textures.
    This is useful for semitransparent textures and "Dirt Maps".
@@ -114,7 +114,7 @@ Bump Mapping
    *Best Quality*, *Default*, *Compatible*, *Original*
    *Space*
 
-      *Texture Space*, *Object Space*, *View Space*
+      *纹理 Space*, *Object Space*, *View Space*
 
 
 Volume materials
@@ -123,7 +123,7 @@ Volume materials
 .. figure:: /images/texture-influence-volume.jpg
    :width: 308px
 
-   Texture Influence panel for Volume material.
+   纹理 Influence panel for Volume material.
 
 
 Special texture options for *Volume* materials
@@ -150,7 +150,7 @@ Halo materials
 .. figure:: /images/texture-influence-halo.jpg
    :width: 308px
 
-   Texture Influence panel for a Halo material.
+   纹理 Influence panel for a Halo material.
 
 
 Special texture options for *Halo* materials

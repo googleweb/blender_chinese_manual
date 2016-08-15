@@ -35,7 +35,7 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
-        <link rel="up" title="Cycles 渲染 Engine" href="index.html"/>
+        <link rel="up" title="Cycles渲染引擎" href="index.html"/>
         <link rel="next" title="渲染 Output" href="../output/index.html"/>
         <link rel="prev" title="Open Shading Language" href="osl.html"/> 
 
@@ -96,8 +96,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender 渲染 Engine</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles 渲染 Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender渲染引擎</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles渲染引擎</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="settings/index.html">渲染 设置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="materials/index.html">Materials</a></li>
@@ -164,7 +164,7 @@
       
           <li><a href="../index.html">渲染</a> &raquo;</li>
       
-          <li><a href="index.html">Cycles 渲染 Engine</a> &raquo;</li>
+          <li><a href="index.html">Cycles渲染引擎</a> &raquo;</li>
       
     <li>渲染 Baking</li>
       <li class="wy-breadcrumbs-aside">
@@ -186,12 +186,12 @@
 <p>Cycles uses the render settings (samples, bounces, ...) for baking.
 This way the quality of the baked textures should match the result you get from the rendered scene.</p>
 <p>The baking happens into the respective active textures of the object materials.
-The active texture is the last selected 图像 Texture node of the material nodetree.
+The active texture is the last selected 图像 纹理 node of the material nodetree.
 That means the active object (or the selected objects, when not baking &#8216;Selected to Active&#8217;) needs a material,
-and that material needs at least an 图像 Texture node, with the image to be used for the baking.
+and that material needs at least an 图像 纹理 node, with the image to be used for the baking.
 Note, the node doesn&#8217;t need to be connected to any other node.
 The active texture is what projection painting and the viewport use as a criteria to which image to use.
-This way after the baking is done you can automatically preview the baked result in the Texture mode.</p>
+This way after the baking is done you can automatically preview the baked result in the 纹理 mode.</p>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id1">

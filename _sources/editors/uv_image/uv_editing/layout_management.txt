@@ -31,19 +31,19 @@ Multiple UV Maps
 .. figure:: /images/uv-fashion.jpg
    :width: 300px
 
-   Mesh with Multiple UV Textures.
+   Mesh with Multiple UV 纹理.
 
 
 You are not limited to one UV Map per mesh.
-You can have multiple UV maps for parts of the mesh by creating new UV Textures.
-The first UV Texture is created for you when you select a face in UV Face Select mode. You can
-manually create more UV Textures by clicking the *New* button next to "UV map" list
+You can have multiple UV maps for parts of the mesh by creating new UV 纹理.
+The first UV 纹理 is created for you when you select a face in UV Face Select mode. You can
+manually create more UV 纹理 by clicking the *New* button next to "UV map" list
 in *Object Data* tab in the Properties Editor)
-and unwrapping a different part of the mesh. Those faces will then go with that UV Texture,
-while the previously unwrapped faces will still go with the previous UV Texture.
+and unwrapping a different part of the mesh. Those faces will then go with that UV 纹理,
+while the previously unwrapped faces will still go with the previous UV 纹理.
 Note that if you unwrap the same face twice or more times
-(each time to a different UV Texture),
-the coloring for that face will be the alpha combination of the layers of those UV Textures.
+(each time to a different UV 纹理),
+the coloring for that face will be the alpha combination of the layers of those UV 纹理.
 
 In the example to the right, we have a mesh for a blouse.
 The mesh has been seamed as a normal blouse would, shown in the middle in UV Face Select mode.
@@ -63,12 +63,12 @@ In this case, some faces map to the first texture,
 while other faces map to the second texture.
 
 
-UV Textures List
+UV 纹理 List
 ================
 
 .. figure:: /images/uv-editing-mesh-panel.jpg
 
-The Mesh panel lists the UV Texture maps created for this mesh,
+The Mesh panel lists the UV 纹理 maps created for this mesh,
 and allows you to create New ones as placeholders for future unwrapping operations.
 
 Click the *+* button to add a new UV texture, and the *-* to delete an existing one.

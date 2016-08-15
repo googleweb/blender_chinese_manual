@@ -1,6 +1,6 @@
 
 #################
- Texture Mapping
+ 纹理 Mapping
 #################
 
 .. toctree::

@@ -5,7 +5,7 @@
 简介
 ************
 
-As an alternative to using the :doc:`Texture Stack </render/blender_render/textures/options>`,
+As an alternative to using the :doc:`纹理 Stack </render/blender_render/textures/options>`,
 Blender includes a node-based texture generation system, which enables textures creation by combining colors,
 patterns and other textures in the same way as shader writing with
 :doc:`Material 节点 </render/blender_render/materials/nodes/index>`.
@@ -19,11 +19,11 @@ and even inside other textures.
    Node-based textures do **not** work for realtime display, they will only be visible in rendered images.
 
 
-Using Texture 节点
+Using 纹理 节点
 ===================
 
 To use texture nodes with the current texture, open the :doc:`节点编辑器 </editors/node_editor/index>`
-and set it to *Texture* mode by clicking the "Texture" icon (|texture-button|) in its header.
+and set it to *纹理* mode by clicking the "纹理" icon (|texture-button|) in its header.
 
 To start adding nodes, a material has to be to selected.
 A new texture can be created by either clicking the *New* button in the Node editor,
@@ -42,7 +42,7 @@ see the :doc:`节点编辑器 manual </editors/node_editor/nodes/usage>`.
 Using Multiple Outputs
 ======================
 
-Each texture defined with Texture 节点 can have several outputs,
+Each texture defined with 纹理 节点 can have several outputs,
 which can then be used for different things. For example,
 a texture that defines both a diffuse (color) map and a normal map. 
 This can be done by:
@@ -55,6 +55,6 @@ This can be done by:
   e.g. set on to *Diffuse* and the other to *Normal*).
 
 These named outputs could be used, when the material is defined with Material 节点.
-In this case, Texture Channels are probably not used. Instead, insert the
-*Texture* nodes into the Material Node tree by using :menuselection:`Add --> Input --> Texture`.
+In this case, 纹理 Channels are probably not used. Instead, insert the
+*纹理* nodes into the Material Node tree by using :menuselection:`Add --> Input --> 纹理`.
 Inside the just added texture node the output to use can then be selected (e.g. *Diffuse* or *Normal*).

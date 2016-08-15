@@ -30,7 +30,7 @@ Subject
    to a message sensor listening for "end game" ``and`` Quit Game actuator.
 Body
    Body of message sent (only read by Python).
-Text
+文本
    User specified text in body.
 Property
    User specified property.

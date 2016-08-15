@@ -75,7 +75,7 @@ The maximum frame for each scene is currently 500,000, and allows for continuous
    So this limit does not prevent you from creating longer works.
 
 
-Text Fields
+文本 Fields
 ===========
 
 Fixed strings are used internally, and while its not useful to list all limits,

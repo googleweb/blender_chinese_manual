@@ -127,7 +127,7 @@ head, or scratches on a car do not occur in random places,
 but depend on the shape of the model and its usage. Manually-painted images,
 or images captured from the real world gives more control and realism.
 For details such as book covers, tapestry, rugs, stains, and detailed props,
-artists are able to control every pixel on the surface using a UV Texture.
+artists are able to control every pixel on the surface using a UV 纹理.
 
 A UV map describes what part of the texture should be attached to each polygon
 in the model. Each polygon's vertex gets assigned to 2D coordinates that define which part of

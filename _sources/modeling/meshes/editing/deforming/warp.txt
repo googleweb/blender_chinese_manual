@@ -69,8 +69,8 @@ to the same Suzanne mesh when in different views. A 3D render is also provided f
 
 .. note:: Warping text
 
-   If you want to warp text, you will need to convert it from a Text Object to Mesh
-   by pressing :kbd:`Alt-C` and selecting the *Mesh from Curve/Meta/Surf/Text* option.
+   If you want to warp text, you will need to convert it from a 文本 Object to Mesh
+   by pressing :kbd:`Alt-C` and selecting the *Mesh from Curve/Meta/Surf/文本* option.
 
 
 例子
@@ -78,5 +78,5 @@ to the same Suzanne mesh when in different views. A 3D render is also provided f
 
 .. figure:: /images/editors_3dview_transformation_advanced_warp_warp-text.jpg
 
-   Text wrapped around logo. This was made by creating the Blender logo and text as separate Objects.
+   文本 wrapped around logo. This was made by creating the Blender logo and text as separate Objects.
    The text was converted to a mesh and then warped around the Blender logo.

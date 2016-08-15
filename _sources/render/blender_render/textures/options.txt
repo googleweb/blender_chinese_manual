@@ -1,49 +1,49 @@
 
 ***********************
-Textures common options
+纹理 common options
 ***********************
 
-In the Properties editor, choose the Texture tab: this will show the Texture panel.
+In the Properties editor, choose the 纹理 tab: this will show the 纹理 panel.
 
 
-Textures Stack
+纹理 Stack
 ==============
 
 .. figure:: /images/texture-stack.jpg
    :width: 300px
 
-   Textures Stack.
+   纹理 Stack.
 
 
 The list below these buttons represents the *Stack* of textures that we can manage.
-It can have up to eighteen *Texture Slots*:
+It can have up to eighteen *纹理 Slots*:
 
 
 - Tick or untick a texture to enable/disable it.
 - Use the three buttons on the right side to move individual textures up and down in the stack or to copy/paste
   material's settings between slots.
 
-The order in the Stack Textures defines how textures overlay each other for finally result
+The order in the Stack 纹理 defines how textures overlay each other for finally result
 image.
 
 
-Texture Data-Block
+纹理 Data-Block
 ==================
 
 .. figure:: /images/texture-datablock.jpg
    :width: 300px
 
-   Active Texture Data-Block.
+   Active 纹理 Data-Block.
 
 
-Select a slot in the Textures Stack to see its settings.
+Select a slot in the 纹理 Stack to see its settings.
 
 The first group of buttons below the stack displays the texture currently selected in the
 stack.
 
 Browse
    The first button below the stack displays the all available textures in the current file.
-   Textures are stored globally, and can be linked to more than one material.
+   纹理 are stored globally, and can be linked to more than one material.
    If you have already created a texture that you want to reuse, select from this list.
 Name
    A name field where the name of the material can be changed.
@@ -60,24 +60,24 @@ Unlink
    Removes the texture from the active slot.
 
 
-Texture Type
+纹理 Type
 ============
 
 .. figure:: /images/texture-types.jpg
    :width: 300px
 
-   Texture Types.
+   纹理 Types.
 
 
 Choose the type of texture that is used for the current texture data-block.
 
 
-- :doc:`Procedural Textures </render/blender_render/textures/types/procedural/introduction>`
+- :doc:`Procedural 纹理 </render/blender_render/textures/types/procedural/introduction>`
 - :doc:`图像 </render/blender_render/textures/types/image>` and
-  :doc:`视频 </render/blender_render/textures/types/video>` Textures
+  :doc:`视频 </render/blender_render/textures/types/video>` 纹理
 - :doc:`Environment Map </render/blender_render/textures/mapping/environment>`
-- :doc:`Volume Textures </render/blender_render/textures/types/volume/index>`
-- Ocean Texture
+- :doc:`Volume 纹理 </render/blender_render/textures/types/volume/index>`
+- Ocean 纹理
 
 These types are described in detail :doc:`in this section </render/blender_render/textures/types/index>`.
 
@@ -94,7 +94,7 @@ Preview
 The texture preview panel provides a quick pre-visualisation of how the texture looks on its
 own, without mapping.
 
-Texture, Material, or Both
+纹理, Material, or Both
    Choose to display only the texture, only the material, or both.
 Show Alpha
    Show alpha in preview.

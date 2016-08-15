@@ -3,7 +3,7 @@
 
 
 *********************
-Point Density Texture
+Point Density 纹理
 *********************
 
 Point density renders a given point cloud (object vertices or particle system) as a 3D volume,

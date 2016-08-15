@@ -115,11 +115,11 @@ Accumulate
    Causes stroke dabs to accumulate on top of each other.
 
 
-Texture Panel
+纹理 Panel
 -------------
 
-Texture
-   Texture to be used to determine the strength of brush.
+纹理
+   纹理 to be used to determine the strength of brush.
 Brush Mapping
    Sets the way the texture is mapped to the brush stroke:
 

@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|}}.
 
 *****************
-Applying Textures
+Applying 纹理
 *****************
 
 Sooner or later, you may want to use an image texture on your model.
@@ -16,7 +16,7 @@ and how to load images into the UV/图像 editor.
 Exporting UV Layout 图像
 =========================
 
-As a way of communicating to an artist who is painting your UV Texture for you,
+As a way of communicating to an artist who is painting your UV 纹理 for you,
 Blender has a tool called *Save UV Face Layout*
 (located in the UV/图像编辑器, :menuselection:`UVs --> Save UV Face Layout`)
 that saves an image as a ``Targa`` (``.tga``), ``EPS``, or an ``SVG`` format for the object you have selected.
@@ -50,7 +50,7 @@ and the Gimp working on the texture, using the saved layout as a guide.
 Note that targa format supports the Alpha channel,
 so you can paint transparent areas of the mesh.
 
-For using images as textures, see the page on :doc:`图像 Textures </render/blender_render/textures/types/image>`
+For using images as textures, see the page on :doc:`图像 纹理 </render/blender_render/textures/types/image>`
 
 
 .. list-table::
@@ -68,12 +68,12 @@ For using images as textures, see the page on :doc:`图像 Textures </render/ble
 
 .. _face_textures:
 
-Applying Textures to UVs
+Applying 纹理 to UVs
 ========================
 
 The UV/图像编辑器 allows you to map textures directly to the mesh faces.
 The 3D视图编辑窗口 shows you the object being textured.
-If you set this editor into Textured viewport shading,
+If you set this editor into 纹理d viewport shading,
 you will immediately see any changes made in the UV/图像 and this editor,
 and vice versa.
 
@@ -86,11 +86,11 @@ If you were to apply an image to UVs then render, the texture would not show up 
 To render an image however, you must
 
 - create a Material for the object, and
-- tell Blender to use the UV Textures on faces when rendering.
+- tell Blender to use the UV 纹理 on faces when rendering.
 
 To create a Material, you have to click *Add New* Material in the Shading context.
 
-There are two ways to tell Blender to use the UV Texture when rendering:
+There are two ways to tell Blender to use the UV 纹理 when rendering:
 the Proper way and the Quick Way:
 
 
@@ -102,41 +102,41 @@ Use UV Coordinates
    A texture setup to map using its UV coordinates.
 
 
-In the Texture channel panel,
-Add a New Texture and define the texture as an image and load the image you want to use.
+In the 纹理 channel panel,
+Add a New 纹理 and define the texture as an image and load the image you want to use.
 In the Mapping section, choose UV from the Coordinates menu, and select the UV layer to use.
 
 Make sure it is mapped to Color in the Influence section as well
-(it will be mapped to Color by default, and the UV Texture is named "UVTex" by default).
+(it will be mapped to Color by default, and the UV 纹理 is named "UVTex" by default).
 If the image has an alpha channel and you want to use it,
 click "UseAlpha" in the Map 图像 panel.
 
 Full details of using 图像 textures are on the
-:doc:`图像 Textures </render/blender_render/textures/types/image>` page.
+:doc:`图像 纹理 </render/blender_render/textures/types/image>` page.
 
 
 .. note:: Material is Required for 渲染ing
 
-   You can perform UV Texturing on a mesh within Blender without assigning a material,
+   You can perform UV 文本uring on a mesh within Blender without assigning a material,
    and you will even see it in your 3D视图 in textured viewport mode. However, when you render,
    you will just get a default gray if the object does not have a Material assigned.
    You will get a black if you do not load an image. If you do not create a texture that uses the image,
-   or enable *Face Texture*, your object will render according to the procedural material settings.
+   or enable *Face 纹理*, your object will render according to the procedural material settings.
 
 
-Face Textures
+Face 纹理
 -------------
 
 .. figure:: /images/texture-uv-layout-facetex.jpg
 
-   The Material panel with activated Face Textures button.
+   The Material panel with activated Face 纹理 button.
 
 
-An alternate way is to set up a Face Textures Material as shown. To do so,
+An alternate way is to set up a Face 纹理 Material as shown. To do so,
 with the Properties editor displayed, press :kbd:`F5` to display the Shader Buttons.
 In the Properties editor, Material settings, click *Add New* material.
 
-On the Options panel, enable *Face Textures*. This way is quick,
+On the Options panel, enable *Face 纹理*. This way is quick,
 but bypasses the normal rendering system for fast results,
 but results which do not respect transparency and proper shading.
 
@@ -227,7 +227,7 @@ look like cloth, you do **not** want any stretching (unless you want the cloth t
 
 
 When you render, the mesh will have the test grid as its colors,
-and the UV Texture will be the size image you specified.
+and the UV 纹理 will be the size image you specified.
 You can save the UV image using the :menuselection:`图像 --> Save` menu.
 
 
@@ -297,10 +297,10 @@ but will keep the old one open in the 图像 editor.
    :ref:`pack-unpack-data`.
 
 
-Modifying your 图像 Texture
+Modifying your 图像 纹理
 ============================
 
-To modify your new Texture, you can:
+To modify your new 纹理, you can:
 
 
 - :doc:`渲染 Bake </render/workflows/bake>` an image based on how the mesh looks
@@ -308,7 +308,7 @@ To modify your new Texture, you can:
   - The 渲染 Bake feature provides several tools to replace the current image
     based on a render of :ref:`Vertex Paint <painting_vertex-index>` colors,
     Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.
-- Paint using :doc:`Texture Paint </sculpt_paint/painting/texture_paint/introduction>`.
+- Paint using :doc:`纹理 Paint </sculpt_paint/painting/texture_paint/introduction>`.
 
   - Use the UV/图像编辑器 menu :menuselection:`图像 --> New`. Then start painting your mesh with
 - Use external software to create an image
@@ -316,16 +316,16 @@ To modify your new Texture, you can:
   - Using your favorite image painting program, you could use an exported UV layout to create a texture.
     Then save your changes, and back in Blender,
     use the :menuselection:`图像 --> Open` menu command to load it as your UV image
-    for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
+    for the mesh in Face Select Mode for the desired (and active) UV 纹理 layer.
     Using the *Edit Externally* tool in the *图像* menu, Blender will open an image editor,
     as specified in the *用户首选项* and load in the image to be edited.
 - Use the "projection painting" feature of recent versions of Blender
-- Use the Bake uV-Textures to Vertex Colors add-on to create an image from vertex colors
+- Use the Bake uV-纹理 to Vertex Colors add-on to create an image from vertex colors
 - Some combination of the above.
 
-The first three options, (UV Painter, 渲染 Bake, and Texture Baker)
+The first three options, (UV Painter, 渲染 Bake, and 纹理 Baker)
 replace the image with an image that they create.
-Texture paint and external software can be used to add or enhance the image.
+纹理 paint and external software can be used to add or enhance the image.
 Regardless of which method you use, ultimately you must either
 
 - save your texture in a separate image file (for example ``JPG`` for colors, ``PNG`` with RGBA for alpha),

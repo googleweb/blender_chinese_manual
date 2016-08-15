@@ -1,31 +1,31 @@
 
 *******************
-Assigning a Texture
+Assigning a 纹理
 *******************
 
 This page just shows how to add a texture to a slot.
 The textures' commons options are explained :doc:`here </render/blender_render/textures/options>`.
 
 
-Choosing the Texture tab
+Choosing the 纹理 tab
 ========================
 
 .. figure:: /images/texture-top-panel.jpg
    :width: 300px
 
-   Texture panel.
+   纹理 panel.
 
 
-In the Properties editor, choose the Texture tab: this will show the Texture panels.
+In the Properties editor, choose the 纹理 tab: this will show the 纹理 panels.
 
 
-Choosing the Texture data type
+Choosing the 纹理 data type
 ==============================
 
 .. figure:: /images/texture-panel.jpg
    :width: 311px
 
-   Texture panel with buttons for Material, World, and Brush textures highlighted.
+   纹理 panel with buttons for Material, World, and Brush textures highlighted.
 
 
 The three buttons *Material*, *World*,
@@ -36,20 +36,20 @@ the kind of texture that is being edited.
 .. figure:: /images/texture-lamp-panel.jpg
    :width: 300px
 
-   Texture panel with button for Lamp textures highlighted.
+   纹理 panel with button for Lamp textures highlighted.
 
 
-Textures Slots
+纹理 Slots
 ==============
 
 .. figure:: /images/texture-top-panel.jpg
    :width: 300px
 
-   Texture panel.
+   纹理 panel.
 
 
 The list below these buttons represent the *Stack* of textures that we can manage.
-It can have up to eighteen *Texture Slots*:
+It can have up to eighteen *纹理 Slots*:
 
 
 - Tick or untick a texture to enable/disable it.
@@ -57,7 +57,7 @@ It can have up to eighteen *Texture Slots*:
   up and down in the stack or to copy/paste material's settings between slots.
 
 
-Creating a new Texture Data-Block in a new Texture Slot
+Creating a new 纹理 Data-Block in a new 纹理 Slot
 =======================================================
 
 Select an empty slot, then click on the *New* button.
@@ -68,7 +68,7 @@ This will do two things:
 - also, it will add a new slot in the textures stack
 
 
-Creating a new Texture Data-Block in a non-empty slot
+Creating a new 纹理 Data-Block in a non-empty slot
 =====================================================
 
 Select a non-empty slot, then click on the *Plus* button.
@@ -80,11 +80,11 @@ This will do two things:
 - it will assign this new data-block to the selected slot
 
 
-Sharing a Texture Data-Block in a non-empty slot
+Sharing a 纹理 Data-Block in a non-empty slot
 ================================================
 
 - Select a non-empty slot, then click on the *Browse* button.
-  This will open a menu showing all the available Texture data-blocks in this file.
+  This will open a menu showing all the available 纹理 data-blocks in this file.
 - Choose a texture data-block in the menu to assign it to the selected slot.
   This will share the chosen texture with more than one object,
   hence the *Number of users* shown in the texture data-block will increase by one.

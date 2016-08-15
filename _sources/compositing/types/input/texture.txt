@@ -1,15 +1,15 @@
 
 ************
-Texture Node
+纹理 Node
 ************
 
 .. figure:: /images/compositing_nodes_texture.png
    :align: right
    :width: 150px
 
-   Texture Node.
+   纹理 Node.
 
-The Texture node makes 3D textures available to the compositor.
+The 纹理 node makes 3D textures available to the compositor.
 
 Inputs
 ======
@@ -22,9 +22,9 @@ Scale
 Properties
 ==========
 
-Texture
+纹理
    The texture could be selected from a list of textures available in the current blend-file or link in textures.
-   The textures themselves could not be edited in this note, but in the Texture panel.
+   The textures themselves could not be edited in this note, but in the 纹理 panel.
 
 Outputs
 =======

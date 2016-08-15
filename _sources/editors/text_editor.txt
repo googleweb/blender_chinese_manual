@@ -6,25 +6,25 @@
 Blender has a *文本编辑器* among its editor types,
 accessible via the *Editor type* menu, or the shortcut :kbd:`Shift-F11`.
 
-The newly opened Text editor is grey and empty, with a very simple header 
+The newly opened 文本 editor is grey and empty, with a very simple header 
 Fig. :ref:`fig-text-header`.
 
 .. _fig-text-header:
 
 .. figure:: /images/editors_text_header1.jpg
 
-   Text header.
+   文本 header.
 
 
 From left to right there are the standard *Editor type* selection button and the
-editors menus. Then there is the Text ID Block browse button followed by the New button for
-creating new Text files. Once you click it, you will find that the header has changed..
+editors menus. Then there is the 文本 ID Block browse button followed by the New button for
+creating new 文本 files. Once you click it, you will find that the header has changed..
 for good!
 
 
 .. figure:: /images/editors_text_header2.jpg
 
-   Text header with a file open.
+   文本 header with a file open.
 
 
 Now you find a textbox to change name of your text file,
@@ -41,7 +41,7 @@ The following keyboard commands apply:
 
 - :kbd:`Ctrl-C` - Copies the marked text into the text clipboard.
 - :kbd:`Ctrl-X` - Cuts out the marked text into the text clipboard.
-- :kbd:`Ctrl-V` - Pastes the text from the clipboard at the cursor location in the Text editor.
+- :kbd:`Ctrl-V` - Pastes the text from the clipboard at the cursor location in the 文本 editor.
 - :kbd:`Ctrl-D` - Duplicate the current line.
 - :kbd:`Tab` - Indent the selection.
 - :kbd:`Shift-Tab` - Un-indent the selection.
@@ -64,10 +64,10 @@ as described in the :ref:`API references <scripting-index>`.
 
 The *文本编辑器* has now also some dedicated Python scripts,
 which add some useful writing tools, like a class/function/variable browser, completion... You
-can access them through the :menuselection:`Text --> Text Plugins` menu entry.
+can access them through the :menuselection:`文本 --> 文本 Plugins` menu entry.
 
-.. tip:: 用法s for the Text editor
+.. tip:: 用法s for the 文本 editor
 
    The text editor is handy also when you want to share your blend-files with others.
-   A *Text* editor can be used to write in a ``README`` text explaining the contents of your blend-file.
+   A *文本* editor can be used to write in a ``README`` text explaining the contents of your blend-file.
    Be sure to keep it visible when saving!

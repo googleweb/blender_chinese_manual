@@ -10,12 +10,12 @@ Cycles uses the render settings (samples, bounces, ...) for baking.
 This way the quality of the baked textures should match the result you get from the rendered scene.
 
 The baking happens into the respective active textures of the object materials.
-The active texture is the last selected 图像 Texture node of the material nodetree.
+The active texture is the last selected 图像 纹理 node of the material nodetree.
 That means the active object (or the selected objects, when not baking 'Selected to Active') needs a material,
-and that material needs at least an 图像 Texture node, with the image to be used for the baking.
+and that material needs at least an 图像 纹理 node, with the image to be used for the baking.
 Note, the node doesn't need to be connected to any other node.
 The active texture is what projection painting and the viewport use as a criteria to which image to use.
-This way after the baking is done you can automatically preview the baked result in the Texture mode.
+This way after the baking is done you can automatically preview the baked result in the 纹理 mode.
 
 Options
 =======

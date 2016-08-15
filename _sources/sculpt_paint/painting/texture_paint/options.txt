@@ -10,7 +10,7 @@ Press :kbd:`T` in the UV/图像编辑器 to show the Tool Shelf. With this panel
 you can create many brushes, each with unique settings (such as color and width).
 Use the Brush selector to switch between brushes, or to create a new brush.
 When you add a brush, the new brush is a clone of the current one.
-You can then change the setting for the new brush. Texture paint has an unlimited number of
+You can then change the setting for the new brush. 纹理 paint has an unlimited number of
 brushes and unique user-defined controls for those brushes which can be set in the Paint Tool
 panel.
 
@@ -94,19 +94,19 @@ Alpha
    Opacity of the clone image display
 
 
-Texture
+纹理
 -------
 
 .. figure:: /images/texture-painting-brushtexture.jpg
    :width: 250px
 
-   Texture options and example.
+   纹理 options and example.
 
 
 Use the texture selector at the bottom of the paint panel to select a pre-loaded image or
 procedural texture to use as your brush pattern. Note that in order to use it,
 you must have a placeholder material defined,
-and that particular texture defined using the Material and Texture buttons.
+and that particular texture defined using the Material and 纹理 buttons.
 It is not necessary to have that material or texture applied to any mesh anywhere;
 it must only be defined. The example to the right shows the effects of painting with a flat
 (banded) wood texture.
@@ -127,7 +127,7 @@ Brush Mapping
    3D
       Same as tiled mode
    Stencil
-      Texture is applied only in borders of the stencil.
+      纹理 is applied only in borders of the stencil.
    Random
       Random applying of texture.
 

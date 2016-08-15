@@ -93,7 +93,7 @@ It rearrange selected triangles to obtain more "balanced" ones (i.e. less long t
    * - .. figure:: /images/mesh_beauty_fill_before.jpg
           :width: 300px
 
-          Text converted to a mesh.
+          文本 converted to a mesh.
 
      - .. figure:: /images/mesh_beauty_fill_after.jpg
           :width: 300px

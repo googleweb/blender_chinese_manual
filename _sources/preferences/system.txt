@@ -93,7 +93,7 @@ The Options here will set the compute device used by the Cycles render engine.
 
 None
    When set to *None* or the only option is *None*:
-   your CPU will be used as a computing device for Cycles 渲染 Engine
+   your CPU will be used as a computing device for Cycles渲染引擎
 CUDA
    If the system has a compatible Nvidia CUDA enabled graphics card you will be able
    to use it to render with the :doc:`Cycles </render/cycles/features>` render engine.
@@ -140,8 +140,8 @@ Mipmaps
    Scale textures for 3D视图 using Mipmap filtering. This increases display quality, but uses more memory.
 GPU MipMap Generation
    Generate MipMaps on the GPU. Offloads the CPU Mimpap generation to the GPU.
-16 Bit Float Textures
-   Enables the use of 16 Bit per component Texture 图像s (Floating point 图像s).
+16 Bit Float 纹理
+   Enables the use of 16 Bit per component 纹理 图像s (Floating point 图像s).
 
 Selection
    Selection method to use for selecting.
@@ -203,12 +203,12 @@ Region Overlap
    which will also enable them to be drawn using Alpha, showing the 3D视图 contents trough the
    *Object Tools* and *变换 Properties* regions.
 
-Text Draw Options
+文本 Draw Options
    Enable interface text anti-aliasing.
    When disabled, texts are drawn using text straight render (Filling only absolute Pixels).
 
 
-Textures
+纹理
 ========
 
 Limit Size
@@ -227,7 +227,7 @@ Collection Rate
 图像 Draw Method
    Method to draw images as the following options are supported:
    
-   2D Texture
+   2D 纹理
       Uses CPU for display transform and draws images as a 2D texture.
    GLSL
       Fastest method using GLSL for display transform and draws images as a 2D texture.
@@ -316,4 +316,4 @@ whenever the user hovers a mouse over Blender tools.
 
 Blender supports I18N for internationalization.
 For more Information on how to load International fonts,
-see: :doc:`编辑 Texts </modeling/texts/editing>` page.
+see: :doc:`编辑文本s </modeling/texts/editing>` page.

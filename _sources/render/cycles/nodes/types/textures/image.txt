@@ -1,6 +1,6 @@
 
 *************
-图像 Texture
+图像 纹理
 *************
 
 Use an image file as a texture.
@@ -10,7 +10,7 @@ Inputs
 ======
 
 Vector
-   Texture coordinate for texture lookup. If this socket is left unconnected,
+   纹理 coordinate for texture lookup. If this socket is left unconnected,
    UV coordinates from the active UV render layer are used.
 
 
@@ -62,4 +62,4 @@ Alpha
 .. figure:: /images/cycles_nodes_tex_image_example.jpg
    :width: 200px
 
-   图像 texture from `GoodTextures.com <http://www.goodtextures.com/>`__.
+   图像 texture from `Good纹理.com <http://www.goodtextures.com/>`__.

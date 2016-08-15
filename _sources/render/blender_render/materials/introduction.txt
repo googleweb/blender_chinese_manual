@@ -22,8 +22,8 @@ However, different faces of the object may use different materials
 (see :doc:`Multiple Materials </render/blender_render/materials/multiple_materials>`).
 
 In Blender, materials can (optionally) have associated textures.
-Textures *describe* the substance: e.g. *polished* brass,
-*dirty* glass or *embroidered* linen. The :doc:`Textures </render/blender_render/textures/index>`
+纹理 *describe* the substance: e.g. *polished* brass,
+*dirty* glass or *embroidered* linen. The :doc:`纹理 </render/blender_render/textures/index>`
 chapter describes how to add textures to materials.
 
 
@@ -82,7 +82,7 @@ depends on many inter-related settings:
 - World (Ambient color, Radiosity, Ambient Occlusion)
 - Lights
 - Material settings (including ambient, emission, and every other setting on every panel in that tab)
-- Texture(s) and how they are mixed
+- 纹理(s) and how they are mixed
 - Material 节点
 - 相机
 - Viewing angle
@@ -122,10 +122,10 @@ object in your scene.
    and :doc:`Halo 渲染ing </render/blender_render/materials/special_effects/halo>`.
 
 The exact effect of Material settings can be affected by a number of system settings.
-First and foremost is the 渲染 Engine used - Cycles and the Blender 渲染 Engine
+First and foremost is the 渲染 Engine used - Cycles and the Blender渲染引擎
 (aka Blender Internal or BI)
 require quite different illumination levels to achieve similar results,
 and even then the appearance of objects can be quite different. Also,
-the material properties settings can be affected by the texture method used (Single Texture,
+the material properties settings can be affected by the texture method used (Single 纹理,
 Multitexture or GLSL). So it is recommended to always select the appropriate system settings
 before starting the design of materials.

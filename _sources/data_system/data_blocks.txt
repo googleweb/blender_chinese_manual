@@ -88,7 +88,7 @@ As covered in `Users (Garbage Collection)`_, data-blocks are typically removed w
 There are some exceptions to this, however.
 
 The following data-blocks can be removed directly:
-Scene, Text, Group and Screen.
+Scene, 文本, Group and Screen.
 
 其他 data-blocks such as groups and actions can be *Unlinked* from the *Outliner* context menu.
 
@@ -271,12 +271,12 @@ For reference, here is a table of data-blocks types stored in blend-files.
      - |cross|
      - | Sound sources for a 3D scene.
        | Used as object-data.
-   * - Text
+   * - 文本
      - |tick|
      - |cross|
-     - | Text data.
+     - | 文本 data.
        | Used by Python scripts and OSL shaders.
-   * - Texture
+   * - 纹理
      - |tick|
      - |cross|
      - | 2D/3D textures.

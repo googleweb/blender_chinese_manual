@@ -55,7 +55,7 @@ Add
    This menu allows you to add nodes.
 Node
    To do things with selected nodes, akin to vertices.
-Material, 合成 or Texture buttons
+Material, 合成 or 纹理 buttons
    节点 are grouped into three categories, to see the list see :ref:`Node Tree Types <node-tree-types>`.
 Use 节点
    Tells the render engine to use the node map in computing the material color or rendering the final image,

@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../index.html"/>
-        <link rel="up" title="Text" href="index.html"/>
-        <link rel="next" title="Text 编辑" href="editing.html"/>
-        <link rel="prev" title="Text" href="index.html"/> 
+        <link rel="up" title="文本" href="index.html"/>
+        <link rel="next" title="文本编辑" href="editing.html"/>
+        <link rel="prev" title="文本" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -94,15 +94,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">文本</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#editing-text">编辑 Text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#formatting-text">Formatting Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-text">编辑文本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#formatting-text">Formatting 文本</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#shape">Shape</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#geometry">几何体</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">Text 编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">文本编辑</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
@@ -155,7 +155,7 @@
       
           <li><a href="../index.html">建模</a> &raquo;</li>
       
-          <li><a href="index.html">Text</a> &raquo;</li>
+          <li><a href="index.html">文本</a> &raquo;</li>
       
     <li>简介</li>
       <li class="wy-breadcrumbs-aside">
@@ -178,14 +178,14 @@
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
 <div class="line">面板:    Curve and Surface, Font and Char</div>
-<div class="line">菜单:     <span class="menuselection">Add ‣ Text</span></div>
+<div class="line">菜单:     <span class="menuselection">Add ‣ 文本</span></div>
 </div>
 </div>
 <div class="figure" id="id1">
 <span id="fig-texts-intro-example"></span><a class="reference internal image-reference" href="../../_images/textsamples.jpg"><img alt="../../_images/textsamples.jpg" src="../../_images/textsamples.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Text 例子.</span></p>
+<p class="caption"><span class="caption-text">文本 例子.</span></p>
 </div>
-<p><em>Text</em> objects are exactly what they sound like: they contain some text.
+<p><em>文本</em> objects are exactly what they sound like: they contain some text.
 They share the same object type as curves and surfaces,
 as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally 贝塞尔s).</p>
 <p>Blender uses a &#8220;Font System&#8221; to manage mapping &#8220;letter codes &#8211;&gt; objects representing them in 3D
@@ -193,7 +193,7 @@ views&#8221;. This implies that not only does the font system have its own <em>b
 but it can use external fonts too, including <em>PostScript Type 1</em>,
 <em>OpenType</em> and <em>TrueType</em> fonts. And last but not least,
 it can use any objects existing in the current blend-file as letters...</p>
-<p>Texts in Bender allow you to create/render 2D or 3D text, shaded as you want,
+<p>文本s in Bender allow you to create/render 2D or 3D text, shaded as you want,
 with various advanced layout options (like justifying and frames), as we will see below.
 By default, letters are just flat filled surfaces, exactly like any closed 2D curve.
 But you can of course extrude them... And texts can follow other curves.</p>
@@ -201,7 +201,7 @@ But you can of course extrude them... And texts can follow other curves.</p>
 (with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, in <em>物体模式</em>), either to a curve,
 or directly to a mesh,
 allowing you to use all the powerful features of these types of objects on it...</p>
-<p>Fig. <a class="reference internal" href="#fig-texts-intro-example"><span class="std std-ref">Text 例子.</span></a> shows some examples of various fonts in action,
+<p>Fig. <a class="reference internal" href="#fig-texts-intro-example"><span class="std std-ref">文本 例子.</span></a> shows some examples of various fonts in action,
 including the &#8220;blue&#8221; font that has been applied to a curve path.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -211,7 +211,7 @@ the slower the object will respond interactively.</p>
 <p>As you can see when you switch between <em>物体模式</em> and <em>编辑模式</em>,
 the <em>Font</em> panel remains the same. This means that its settings can be applied
 equally in both modes ... and this implies that you cannot apply them to just a part of the
-mesh. So font, size, and so on, are common to all letters in a <em>Text</em> object.
+mesh. So font, size, and so on, are common to all letters in a <em>文本</em> object.
 There is just one exception:
 the <em>Bold</em> or <em>Italic</em> buttons control properties specific to each letter
 (this is a way to use up to four different fonts in a text).</p>
@@ -219,7 +219,7 @@ the <em>Bold</em> or <em>Italic</em> buttons control properties specific to each
 (rather than the entire character set).</p>
 </div>
 <div class="section" id="editing-text">
-<h2>编辑 Text<a class="headerlink" href="#editing-text" title="Permalink to this headline">¶</a></h2>
+<h2>编辑文本<a class="headerlink" href="#editing-text" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -229,7 +229,7 @@ the <em>Bold</em> or <em>Italic</em> buttons control properties specific to each
 </div>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="../../_images/modelling-text-create-ex.jpg"><img alt="../../_images/modelling-text-create-ex.jpg" src="../../_images/modelling-text-create-ex.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Text in 编辑模式.</span></p>
+<p class="caption"><span class="caption-text">文本 in 编辑模式.</span></p>
 </div>
 <p>编辑 text is quite different from other object types in Blender, and happens mainly in two areas.
 First, the 3D视图, of course, where you type your text, and have a few shortcuts, e.g. for applying
@@ -238,7 +238,7 @@ do not exist for texts! The second place is the Properties Editor, especially th
 <p>The menu of the 3D视图 header has nearly no use,
 and there is no <em>Specials</em> menu... You have no transform nor mirror tools, and so on.
 However, you can apply to texts the same modifiers as for curves.</p>
-<p>编辑 <em>Text</em> is similar to using a standard text editor but is not as
+<p>编辑 <em>文本</em> is similar to using a standard text editor but is not as
 full-featured and has some differences:</p>
 <dl class="docutils">
 <dt>Exit <em>编辑模式</em></dt>
@@ -259,12 +259,12 @@ but rather enters and exits <em>编辑模式</em>, as with other object types.</
 </dl>
 <p>The text buffer is in sync with the desktop clipboard.
 But if it is used within Blender the text formatting will be copied as well.
-For other ways of inserting a text, see <a class="reference internal" href="#inserting-text">Inserting Text</a> below.</p>
+For other ways of inserting a text, see <a class="reference internal" href="#inserting-text">Inserting 文本</a> below.</p>
 <div class="section" id="inserting-text">
-<h3>Inserting Text<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
+<h3>Inserting 文本<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
 <p>You can insert text in two ways: from the internal text buffer
-(<a class="reference internal" href="#editing-text">编辑 Text</a>), or from a text file.</p>
-<p>To load text from a text file, use the <span class="menuselection">Text ‣ Paste File</span> tool.
+(<a class="reference internal" href="#editing-text">编辑文本</a>), or from a text file.</p>
+<p>To load text from a text file, use the <span class="menuselection">文本 ‣ Paste File</span> tool.
 This will bring up a <em>文件浏览器</em> editor for navigating to a valid UTF-8 file.
 As usual, be careful that the file doesn&#8217;t have too many characters,
 as interactive response will slow down.</p>
@@ -274,7 +274,7 @@ as interactive response will slow down.</p>
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
 <div class="line">模式:     编辑模式</div>
-<div class="line">菜单:     <span class="menuselection">Text ‣ Special Characters</span></div>
+<div class="line">菜单:     <span class="menuselection">文本 ‣ Special Characters</span></div>
 </div>
 </div>
 <p>If you need special characters (such as accented chars, which are not on your keyboard)
@@ -310,22 +310,22 @@ Some examples are given below:</p>
 </table>
 </div>
 <div class="section" id="convert-text-to-text-object">
-<h4>Convert Text to Text Object<a class="headerlink" href="#convert-text-to-text-object" title="Permalink to this headline">¶</a></h4>
+<h4>Convert 文本 to 文本 Object<a class="headerlink" href="#convert-text-to-text-object" title="Permalink to this headline">¶</a></h4>
 <div class="figure">
 <a class="reference internal image-reference" href="../../_images/converttexttotextobject.jpg"><img alt="../../_images/converttexttotextobject.jpg" src="../../_images/converttexttotextobject.jpg" style="width: 250px;" /></a>
 </div>
 <p>Using an existing text-block, you can convert it to an object from the text editor&#8217;s header,
-select <span class="menuselection">Edit ‣ Text to 3D Object</span>,
+select <span class="menuselection">Edit ‣ 文本 to 3D Object</span>,
 <em>One Object</em> or <em>One Object per Line</em> depending on your needs.</p>
-<p>It is also possible to paste from the clipboard or a file from the <em>Edit</em> menu, while editing 3D Text.</p>
+<p>It is also possible to paste from the clipboard or a file from the <em>Edit</em> menu, while editing 3D 文本.</p>
 </div>
 <div class="section" id="d-mesh">
 <h4>3D Mesh<a class="headerlink" href="#d-mesh" title="Permalink to this headline">¶</a></h4>
-<p>It is possible to convert a Text Object to a 3D Mesh object.
+<p>It is possible to convert a 文本 Object to a 3D Mesh object.
 This can be useful so that you may edit the vertices in <em>编辑模式</em>,
 but you will lose the ability to edit the text itself.
-To do this, go to <em>物体模式</em> and select your Text Object.
-Press <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and select <em>Mesh From Curve/Meta/Surf/Text</em>.
+To do this, go to <em>物体模式</em> and select your 文本 Object.
+Press <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and select <em>Mesh From Curve/Meta/Surf/文本</em>.
 Now you can return to <em>编辑模式</em> and manually edit the vertices.
 They are usually a bit messy, so it may be useful to use a <em>Limited Dissolve</em> deletion or <em>Remesh</em> Object
 <a class="reference internal" href="../modifiers/index.html"><span class="doc">Modifier</span></a> at a low threshold to clean up your mesh.</p>
@@ -336,10 +336,10 @@ They are usually a bit messy, so it may be useful to use a <em>Limited Dissolve<
 </div>
 </div>
 <div class="section" id="text-selection">
-<h3>Text Selection<a class="headerlink" href="#text-selection" title="Permalink to this headline">¶</a></h3>
+<h3>文本 Selection<a class="headerlink" href="#text-selection" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../../_images/modelling-text-create-ex.jpg"><img alt="../../_images/modelling-text-create-ex.jpg" src="../../_images/modelling-text-create-ex.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">Text in 编辑模式.</span></p>
+<p class="caption"><span class="caption-text">文本 in 编辑模式.</span></p>
 </div>
 <p>In <em>编辑模式</em>, your text has a white cursor, and as in any text editor,
 it determines where new chars will be inserted! You move this cursor with the arrow keys or
@@ -350,7 +350,7 @@ and not much more...</p>
 </div>
 </div>
 <div class="section" id="formatting-text">
-<h2>Formatting Text<a class="headerlink" href="#formatting-text" title="Permalink to this headline">¶</a></h2>
+<h2>Formatting 文本<a class="headerlink" href="#formatting-text" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="fonts">
 <h3>Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
@@ -424,7 +424,7 @@ so let us detail it:</p>
 <li>First, you must create your chars. Each char, of any type,  is an object (mesh, curve, meta...).
 They all must have a name following the schema:
 <em>common prefix</em> followed by the <em>char name</em> (e.g. &#8220;ft.a&#8221;, &#8220;ft.b&#8221;, etc.).</li>
-<li>Then, for the <em>Text</em> object, you must enable the <em>Dupli Verts</em> button
+<li>Then, for the <em>文本</em> object, you must enable the <em>Dupli Verts</em> button
 (<span class="menuselection">Object  ‣  动画 设置</span> panel).</li>
 <li>Back in the <em>Font</em> tap,
 fill the <em>Ob Family</em> field with the <em>common prefix</em> of your &#8220;font&#8221; objects.</li>
@@ -435,18 +435,18 @@ duplicated so that their center is positioned at the <em>lower right corner</em>
 corresponding chars.</p>
 </div>
 <div class="section" id="text-on-curve">
-<h4>Text on Curve<a class="headerlink" href="#text-on-curve" title="Permalink to this headline">¶</a></h4>
+<h4>文本 on Curve<a class="headerlink" href="#text-on-curve" title="Permalink to this headline">¶</a></h4>
 <p>With the <a class="reference internal" href="../modifiers/deform/curve.html"><span class="doc">curve modifier</span></a> you can let text follow a curve.</p>
 <div class="figure" id="id7">
 <span id="fig-texts-intro-on-curve"></span><a class="reference internal image-reference" href="../../_images/text-curved-lowres-ex.jpg"><img alt="../../_images/text-curved-lowres-ex.jpg" src="../../_images/text-curved-lowres-ex.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">Text on curve.</span></p>
+<p class="caption"><span class="caption-text">文本 on curve.</span></p>
 </div>
-<p>In Fig. <a class="reference internal" href="#fig-texts-intro-on-curve"><span class="std std-ref">Text on curve.</span></a> you can see a text deformed by a curve (a 2D 贝塞尔 circle).</p>
+<p>In Fig. <a class="reference internal" href="#fig-texts-intro-on-curve"><span class="std std-ref">文本 on curve.</span></a> you can see a text deformed by a curve (a 2D 贝塞尔 circle).</p>
 <p>To apply the curve modifier, the text object first has to be converted to a mesh,
 using <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> and click mesh.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">There is also a Text on Curve feature,
+<p class="last">There is also a 文本 on Curve feature,
 but the curve modifier offers more options.</p>
 </div>
 </div>
@@ -455,7 +455,7 @@ but the curve modifier offers more options.</p>
 <dl class="docutils">
 <dt>Underline</dt>
 <dd><p class="first">Toggled with the <em>Underline</em> button before typing.
-Text can also be set to Underlined by selecting it then using the <em>Underline</em> button in the Tool Shelf.</p>
+文本 can also be set to Underlined by selecting it then using the <em>Underline</em> button in the Tool Shelf.</p>
 <dl class="last docutils">
 <dt>Position</dt>
 <dd>This allows you to shift vertically the position of the underline.</dd>
@@ -478,10 +478,10 @@ Text can also be set to Underlined by selecting it then using the <em>Underline<
 <dl class="docutils">
 <dt>Bold</dt>
 <dd>Toggled with the <em>Bold</em> button before typing.
-Text can also be set to Bold by selecting it then using the <em>Bold</em> button in the Tool Shelf.</dd>
+文本 can also be set to Bold by selecting it then using the <em>Bold</em> button in the Tool Shelf.</dd>
 <dt>Italics</dt>
 <dd>Toggled with the <em>Italic</em> button before typing.
-Text can also be set to Italic by selecting it then using the <em>Italic</em> button in the Tool Shelf.</dd>
+文本 can also be set to Italic by selecting it then using the <em>Italic</em> button in the Tool Shelf.</dd>
 <dt>Underline</dt>
 <dd>Enables underlining, as controlled by the Underline settings above.</dd>
 <dt>Small Caps</dt>
@@ -515,14 +515,14 @@ setting. Note that the <em>Small Caps Scale</em> is applied the same to all <em>
 <dl class="docutils">
 <dt>Left</dt>
 <dd>Aligns text to left of frames when using them,
-else uses the center point of the <em>Text</em> object as the starting point of the text (which grows to the right).</dd>
+else uses the center point of the <em>文本</em> object as the starting point of the text (which grows to the right).</dd>
 <dt>Center</dt>
 <dd>Centers text in the frames when using them,
-else uses the center point of the <em>Text</em> object as the mid-point of the text
+else uses the center point of the <em>文本</em> object as the mid-point of the text
 (which grows equally to the left and right).</dd>
 <dt>Right</dt>
 <dd>Aligns text to right of frames when using them,
-else uses the center point of the <em>Text</em> object as the ending point of the text (which grows to the left).</dd>
+else uses the center point of the <em>文本</em> object as the ending point of the text (which grows to the left).</dd>
 <dt>Justify</dt>
 <dd>Only flushes a line when it is terminated by a wordwrap (<strong>not</strong> by <code class="kbd docutils literal"><span class="pre">Return</span></code>),
 it uses <em>whitespace</em> instead of <em>character spacing</em> (kerning) to fill lines.</dd>
@@ -537,17 +537,17 @@ it uses character spacing (kerning) to fill lines.</dd>
 <dl class="docutils">
 <dt>Top Base-Line</dt>
 <dd>Aligns the text base-line to top of frames when using them,
-else uses the center point of the <em>Text</em> object as the starting point of the text (which grows to the bottom).</dd>
+else uses the center point of the <em>文本</em> object as the starting point of the text (which grows to the bottom).</dd>
 <dt>Top</dt>
-<dd>Aligns top of text to the center point of the <em>Text</em> object (which grows to the bottom).
+<dd>Aligns top of text to the center point of the <em>文本</em> object (which grows to the bottom).
 It behaves as <em>Top Base-Line</em> when using frames.</dd>
 <dt>Center</dt>
 <dd>Centers text in the frames when using them,
-else uses the center point of the <em>Text</em> object as the mid-point of the text
+else uses the center point of the <em>文本</em> object as the mid-point of the text
 (which grows equally to the top and bottom).</dd>
 <dt>Bottom</dt>
 <dd>Aligns text to bottom of frames when using them,
-else uses the center point of the <em>Text</em> object as the ending point of the text (which grows to the top).</dd>
+else uses the center point of the <em>文本</em> object as the ending point of the text (which grows to the top).</dd>
 </dl>
 <p><em>Top</em> only works without frames.</p>
 </div>
@@ -569,7 +569,7 @@ to decrease/increase spacing by steps of 0.1 .</dd>
 <dl class="docutils">
 <dt>X offset and Y offset</dt>
 <dd>Well, these settings control the X and Y offset of the text, regarding its &#8220;normal&#8221; positioning. Note that with
-frames (see <a class="reference internal" href="editing.html"><span class="doc">Text Boxes</span></a>), it applies to all frames&#8217; content...</dd>
+frames (see <a class="reference internal" href="editing.html"><span class="doc">文本 Boxes</span></a>), it applies to all frames&#8217; content...</dd>
 </dl>
 </div>
 </div>
@@ -611,22 +611,22 @@ or <em>Beveled</em> in the <em>几何体</em> Panel.</p>
 </dl>
 </div>
 <div class="section" id="textures">
-<h3>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<h3>纹理<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id12">
 <img alt="../../_images/texttexturesettings.jpg" src="../../_images/texttexturesettings.jpg" />
-<p class="caption"><span class="caption-text">Texture 设置.</span></p>
+<p class="caption"><span class="caption-text">纹理 设置.</span></p>
 </div>
 <dl class="docutils">
 <dt>Use UV for Mapping</dt>
 <dd>Use UV values as generated texture coordinates.</dd>
-<dt>Auto Texture Space</dt>
+<dt>Auto 纹理 Space</dt>
 <dd>Adjusts the active object&#8217;s texture space automatically when transforming object.</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="geometry">
 <h2>几何体<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
-<p>Text objects have all the <a class="reference internal" href="../curves/editing/extrude.html"><span class="doc">curves extrusion features</span></a>.</p>
+<p>文本 objects have all the <a class="reference internal" href="../curves/editing/extrude.html"><span class="doc">curves extrusion features</span></a>.</p>
 </div>
 </div>
 
@@ -637,10 +637,10 @@ or <em>Beveled</em> in the <em>几何体</em> Panel.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="editing.html" class="btn btn-neutral float-right" title="Text 编辑" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="editing.html" class="btn btn-neutral float-right" title="文本编辑" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Text" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral" title="文本" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

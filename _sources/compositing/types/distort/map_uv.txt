@@ -18,7 +18,7 @@ Inputs
 ======
 
 图像
-   The new 2D Texture.
+   The new 2D 纹理.
 UV
    The input for UV render pass. 
    See :doc:`Cycles render passes </render/cycles/settings/passes>` or
@@ -58,18 +58,18 @@ In the example below,
 we have overlaid a grid pattern on top of the two "Emo" heads after they have been rendered.
 During rendering, we enabled the UV layer in the Properties editor
 :menuselection:`渲染 Layer --> Passes`. Using a mix node,
-we mix that new UV Texture over the original face.
+we mix that new UV 纹理 over the original face.
 We can use this grid texture to help in any motion tracking that we need to do.
 
 .. figure:: /images/compositing-node-mapuv_ex.jpg
    :width: 300px
 
-   Adding a Grid UV Textures for Motion Tracking.
+   Adding a Grid UV 纹理 for Motion Tracking.
 
 
 In the next example, we overlay a flag on top of a cubie-type thing,
 and we ensure that we Enable the Alpha pre-multiply button on the Mix node.
-The flag is used as additional UV Texture on top of the grid. 其他 examples include the
+The flag is used as additional UV 纹理 on top of the grid. 其他 examples include the
 possibility that there was used an unauthorized product box during the initial animation,
 and it is needed to substitute in a different product sponsor after rendering.
 
@@ -81,4 +81,4 @@ and it is needed to substitute in a different product sponsor after rendering.
 .. figure:: /images/compositing-node-mapuv_ex02.jpg
    :width: 300px
 
-   Adding UV Textures in Post-Production
+   Adding UV 纹理 in Post-Production

@@ -25,7 +25,7 @@ You may limit the effect on particles to a group of objects
 
    Force field types from left to right:
    Force, Wind, Vortex, Magnetic, Harmonic, Charge, Lennard Jones,
-   Texture, Curve Guide, Boid, Turbulence, Drag, and Smoke Flow.
+   纹理, Curve Guide, Boid, Turbulence, Drag, and Smoke Flow.
 
 
 Creating a Force Field
@@ -65,7 +65,7 @@ Common Field 设置
 
 Most Fields have the same settings, even though they act very differently.
 设置 unique to a field type are described below.
-Curve Guide and Texture Fields have very different options.
+Curve Guide and 纹理 Fields have very different options.
 
 Shape
    The field is either a *Point*, with omni-directional influence, or a *Plane*,

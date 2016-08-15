@@ -19,7 +19,7 @@ Properties
 Vector type
    Todo.
 
-   Texture
+   纹理
       Todo.
    Point
       Todo.

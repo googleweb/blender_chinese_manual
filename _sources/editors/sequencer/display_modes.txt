@@ -48,7 +48,7 @@ OpenGL Preview
 
    Sequencer Preview Shading
       Method for rendering OpenGL renders.
-   Textured Solid
+   纹理d Solid
       Display textures even when in solid mode.
 
    设置 used by OpenGL Previews:

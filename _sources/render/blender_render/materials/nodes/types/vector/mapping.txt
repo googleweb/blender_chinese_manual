@@ -30,7 +30,7 @@ Clamping can be enabled by Min and Max.
 Vector type selector
    Type of vector that the mapping transforms.
 
-   Texture
+   纹理
       变换 a texture by inverse mapping the texture coordinates.
    Point
       变换 a point.

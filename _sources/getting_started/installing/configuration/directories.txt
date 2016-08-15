@@ -152,7 +152,7 @@ for example.
    Presets used for storing user defined settings for cloth, render formats etc.
 
 ``./scripts/templates/*.py``
-   例子 scripts which can be accessed from :menuselection:`文本编辑器 --> Text --> Script Templates`.
+   例子 scripts which can be accessed from :menuselection:`文本编辑器 --> 文本 --> Script Templates`.
 
 ``./python/ ...``
    Bundled Python distribution, only necessary when the system Python installation is absent or incompatible.

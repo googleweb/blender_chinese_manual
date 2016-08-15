@@ -94,7 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
@@ -199,7 +199,7 @@ Y and Z directions simultaneously (sometimes referred to as <em>Vector Displacem
 <p class="caption"><span class="caption-text">Displace Modifier.</span></p>
 </div>
 <dl class="docutils">
-<dt>Texture</dt>
+<dt>纹理</dt>
 <dd>The name of the texture from which the displacement for each vertex is derived.
 If this field is empty, the modifier defaults to 1.0 (white).</dd>
 <dt>Direction</dt>
@@ -216,7 +216,7 @@ Can be one of the following:</p>
 This is sometimes referred to as <em>Vector Displacement</em>.</dd>
 </dl>
 </dd>
-<dt>Texture Coordinates</dt>
+<dt>纹理 Coordinates</dt>
 <dd><p class="first">The texture coordinate system to use when retrieving values from the texture for each vertex.
 Can be one of the following:</p>
 <dl class="last docutils">
@@ -262,7 +262,7 @@ consider parenting the coordinate object to the modified object.</p>
 If left empty, the modifier affects all vertices equally.</dd>
 <dt>Midlevel</dt>
 <dd><p class="first">The texture value which will be treated as no displacement by the modifier.
-Texture values below this value will result in negative displacement along the selected direction,
+纹理 values below this value will result in negative displacement along the selected direction,
 while texture values above this value will result in positive displacement.</p>
 <p><em>displacement</em> = <em>texture_value</em> - <em>Midlevel</em></p>
 <p class="last">Recall that color/ luminosity values are typically between (0.0 to 1.0) in Blender,

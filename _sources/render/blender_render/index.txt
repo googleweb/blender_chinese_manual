@@ -1,7 +1,7 @@
 .. _blender-render-index:
 
 ########################
-  Blender 渲染 Engine
+  Blender渲染引擎
 ########################
 
 .. toctree::

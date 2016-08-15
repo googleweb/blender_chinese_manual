@@ -6,7 +6,7 @@
 .. figure:: /images/texture-procedural-menu.jpg
    :width: 240px
 
-   The Texture Type list in the Texture panel of the Texture Buttons. (Non procedural textures darkened out.).
+   The 纹理 Type list in the 纹理 panel of the 纹理 Buttons. (Non procedural textures darkened out.).
 
 
 Procedural textures are textures that are defined mathematically.

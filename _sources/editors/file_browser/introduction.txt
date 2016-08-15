@@ -174,7 +174,7 @@ File filtering
    - Scripts
    - Font files
    - Music files
-   - Text files
+   - 文本 files
 
    Search box
       Filter files by name.

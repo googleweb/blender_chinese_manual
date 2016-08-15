@@ -1,6 +1,6 @@
 
 ***************
-Texture 编辑
+纹理编辑
 ***************
 
 3D视图 draw types, UV mapping,
@@ -12,10 +12,10 @@ rather they must always be assigned by adding an image texture node to a materia
 3D视图 Draw Types
 ======================
 
-The Texture draw types used for Blender Internal have been replaced by three others in Cycles:
+The 纹理 draw types used for Blender Internal have been replaced by three others in Cycles:
 
 
-Texture
+纹理
    This draw mode is used for editing, painting and mapping individual textures.
    Lighting is the same as in solid mode, so this is similar to the existing textured solid for Blender Internal.
    The texture drawn is the active image texture node for the material.
@@ -33,7 +33,7 @@ Material
    :width: 600px
 
 
-Texture Properties
+纹理 Properties
 ==================
 
 .. figure:: /images/cycles_texture_tab_menu.jpg

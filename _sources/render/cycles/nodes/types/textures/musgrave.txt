@@ -1,6 +1,6 @@
 
 ****************
-Musgrave Texture
+Musgrave 纹理
 ****************
 
 高级应用 procedural noise texture. Note that it often needs some adjustments
@@ -11,7 +11,7 @@ Inputs
 ======
 
 Vector
-   Texture coordinate to sample texture at;
+   纹理 coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.
 Scale
    Overall texture scale.
@@ -38,9 +38,9 @@ Outputs
 =======
 
 Color
-   Texture color output.
+   纹理 color output.
 Fac
-   Texture intensity output.
+   纹理 intensity output.
 
 
 例子

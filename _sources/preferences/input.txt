@@ -218,7 +218,7 @@ The Keymap editor lets you change the default Hotkeys. You can change keymaps fo
   - Keyboard: Only hotkey or combo hotkey :kbd:`E`, :kbd:`Shift-E`.
   - Mouse: Left/middle/right click. Can be combined with :kbd:`Alt`, :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Cmd`.
   - Tweak: Click and drag. Can also be combined with the four previous keys.
-  - Text input: Use this function by entering a text
+  - 文本 input: Use this function by entering a text
   - Timer: Used to control actions based on a time period.
     e.g. By default, 动画 Step uses Timer 0, Smooth view uses Timer 1.
 

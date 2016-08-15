@@ -31,7 +31,7 @@ Its interface uses OpenGL to provide a consistent experience across all supporte
   :doc:`视频 编辑 </editors/sequencer/index>`,
   :doc:`VFX </editors/movie_clip_editor/index>`,
   :doc:`合成 </compositing/introduction>`,
-  :doc:`Texturing </editors/uv_image/uv_editing/overview>`,
+  :doc:`文本uring </editors/uv_image/uv_editing/overview>`,
   :doc:`骨骼装配 </rigging/introduction>`,
   many types of :doc:`Simulations </physics/introduction>`,
   and :doc:`Game Creation </game_engine/introduction>`.

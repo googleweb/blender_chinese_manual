@@ -61,7 +61,7 @@ Options:
       - The mirror side vertex group must already exist (it will not be created automatically).
         It must also be completely empty (no vertices assigned to it).
 
-Textures
+纹理
    The U and V options allows you to mirror the UV texture coordinates across the middle
    of the image.
 

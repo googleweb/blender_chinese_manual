@@ -1,6 +1,6 @@
 
 ************************************
-The 视频Texture module: bge.texture
+The 视频纹理 module: bge.texture
 ************************************
 
 The ``bge.texture`` module allows you to manipulate textures during the game.
@@ -64,7 +64,7 @@ First example
 Let us assume that we have a game object with one or more faces assigned to a material/image on
 which we want to display a video.
 
-The first step is to create a ``Texture`` object.
+The first step is to create a ``纹理`` object.
 We will do it in a script that runs once. It can be at the start of the game,
 the video is only played when you refresh the texture; we'll come to that later. The script is
 normally attached to the object on which we want to display the video so that we can easily
@@ -112,7 +112,7 @@ if we want to find the material called ``视频Mat`` on this object, the code be
 Create texture
 --------------
 
-``bge.texture.Texture`` is the class that creates the ``Texture`` object that loads the dynamic texture on the GPU.
+``bge.texture.纹理`` is the class that creates the ``纹理`` object that loads the dynamic texture on the GPU.
 The constructor takes one mandatory and three optional arguments:
 
 ``gameObj``
@@ -122,19 +122,19 @@ The constructor takes one mandatory and three optional arguments:
    Material index as returned by ``bge.texture.materialID()``, 0 = first material by default.
 
 ``textureID``
-   Texture index in case of multi-texture channel, 0 = first channel by default.
+   纹理 index in case of multi-texture channel, 0 = first channel by default.
    In case of UV texture, this parameter should always be 0.
 
 ``textureObj``
-   参考 to another ``Texture`` object of which we want to reuse the texture.
+   参考 to another ``纹理`` object of which we want to reuse the texture.
    If we use this argument,
    we should not create any source on this texture and there is no need to refresh it either:
-   the other ``Texture`` object will provide the texture for both materials/textures.
+   the other ``纹理`` object will provide the texture for both materials/textures.
 
 
 .. code-block:: python
 
-   Game逻辑.video = bge.texture.Texture(obj, matID)
+   Game逻辑.video = bge.texture.纹理(obj, matID)
 
 
 Make texture persistent
@@ -142,7 +142,7 @@ Make texture persistent
 
 Note that we have assigned the object to a ``Game逻辑``, ``video``
 attribute that we create for the occasion.
-The reason is that the ``Texture`` object must be persistent across the game scripts.
+The reason is that the ``纹理`` object must be persistent across the game scripts.
 A local variable would be deleted at the end of the script and the GPU texture deleted at the
 same time. ``Game逻辑`` module object is a handy place to store persistent objects.
 
@@ -150,7 +150,7 @@ same time. ``Game逻辑`` module object is a handy place to store persistent obj
 Create a source
 ---------------
 
-Now we have a ``Texture`` object but it cannot do anything because it does not have
+Now we have a ``纹理`` object but it cannot do anything because it does not have
 any source. We must create a source object from one of the possible sources available in
 ``bge.texture``:
 
@@ -187,11 +187,11 @@ assuming the video file is in the same directory as the blend-file:
    Game逻辑.video.source = bge.texture.视频FFmpeg(movie)
 
 
-We create the video source object and assign it to the ``Texture`` object
+We create the video source object and assign it to the ``纹理`` object
 ``source`` attribute to set the source and make it persistent:
-as the ``Texture`` object is persistent, the source object will also be persistent.
+as the ``纹理`` object is persistent, the source object will also be persistent.
 
-Note that we can change the ``Texture`` source at any time.
+Note that we can change the ``纹理`` source at any time.
 Suppose we want to switch between two movies during the game. We can do the following:
 
 .. code-block:: python
@@ -229,7 +229,7 @@ The ``视频FFmpeg`` source has several attributes to control the movie playback
 ``scale``
    (bool).
    Set to True to activate fast nearest neighbor scaling algorithm.
-   Texture width and height must be a power of 2.
+   纹理 width and height must be a power of 2.
    If the video picture size is not a power of 2, rescaling is required.
    By default ``bge.texture`` uses the precise but slow ``gluScale图像()`` function.
    Best is to rescale the video offline so that no scaling is necessary at runtime!
@@ -268,7 +268,7 @@ We are now ready to play the video:
 
 视频 playback is not a background process: it happens only when we refresh the texture.
 So we must have another script that runs on every frame and calls the ``refresh
-()`` method of the ``Texture`` object:
+()`` method of the ``纹理`` object:
 
 .. code-block:: python
 
@@ -299,7 +299,7 @@ If video is playing, its value is 2, if it's stopped, it's 3. So in our example:
 高级应用 work flow
 ------------------
 
-True argument in ``Texture.refresh()`` method simply invalidates the image buffer
+True argument in ``纹理.refresh()`` method simply invalidates the image buffer
 after sending it to the GPU so that on next frame, a new image will be loaded from the source.
 It has the side effect of making the image unavailable to Python.
 You can also do it manually by calling the ``refresh
@@ -307,7 +307,7 @@ You can also do it manually by calling the ``refresh
 
 Here are some possible advanced work flow:
 
-- Use the image buffer in python (doesn't effect the Texture):
+- Use the image buffer in python (doesn't effect the 纹理):
 
 .. code-block:: python
 
@@ -320,8 +320,8 @@ Here are some possible advanced work flow:
 
 
 - Load image from source for Python processing without download to GPU:
-- note that we do not even call refresh on the Texture
-- we could also just create a source object without a Texture object
+- note that we do not even call refresh on the 纹理
+- we could also just create a source object without a 纹理 object
 
 .. code-block:: python
 
@@ -343,21 +343,21 @@ identify the texture by the texture slot where it is defined, here 2
 
 .. code-block:: python
 
-   tex=bge.texture.Texture(gameobj, matID, 2)
+   tex=bge.texture.纹理(gameobj, matID, 2)
 
 
 高级应用 demos
 ==============
 
-Here is a `demo <http://www.graphicall.org/ftp/ben2610/视频TextureDemo2video.blend>`__
+Here is a `demo <http://www.graphicall.org/ftp/ben2610/视频纹理Demo2video.blend>`__
 that demonstrates the use of two videos alternatively on the same texture.
 Note that it requires an additional video file which is the elephant dream teaser.
 You can replace with another other file that you want to run the demo.
 
-Here is a `demo <http://www.graphicall.org/ftp/ben2610/视频TextureDemo2videoMix.blend>`__
+Here is a `demo <http://www.graphicall.org/ftp/ben2610/视频纹理Demo2videoMix.blend>`__
 that demonstrates the use of the ``图像Mix`` source.
 ``图像Mix`` is a source that needs sources,
-which can be any other ``Texture`` source, like ``视频FFmpeg``,
+which can be any other ``纹理`` source, like ``视频FFmpeg``,
 ``图像FFmpeg`` or ``图像渲染``. You set them with ``setSource
 ()`` and their relative weight with ``setWeight()``.
 Pay attention that the weight is a short number between 0 and 255,

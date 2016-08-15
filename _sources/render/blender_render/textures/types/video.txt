@@ -1,6 +1,6 @@
 
 **************
-视频 Textures
+视频 纹理
 **************
 
 .. figure:: /images/texture-video-example.jpg
@@ -82,5 +82,5 @@ Use Alpha
 .. seealso::
 
    For sampling and mapping documentation see
-   :doc:`图像 Texture </render/blender_render/textures/types/image>`
+   :doc:`图像 纹理 </render/blender_render/textures/types/image>`
 
