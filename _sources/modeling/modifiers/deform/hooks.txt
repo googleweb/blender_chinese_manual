@@ -15,7 +15,7 @@ they have the advantage that you can grab vertices directly for manipulation.
 
 .. figure:: /images/modifier-hook-example1.jpg
 
-   Two spheres used as Hooks to deform a subdivided cube.
+   Two spheres used as 挂钩 to deform a subdivided cube.
 
 
 Options

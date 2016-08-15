@@ -7,10 +7,10 @@ DupliFaces
    :class: refbox
 
    | Mode:     物体模式
-   | Panel:    :menuselection:`Object --> Duplication`
+   | Panel:    :menuselection:`Object --> 复制`
 
 
-*Duplication Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object.
+*复制 Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object.
 One of the best ways to explain this is through an example illustration.
 
 
@@ -35,10 +35,10 @@ first :kbd:`RMB` select the sphere, then :kbd:`Shift-RMB` select the cube
 
 .. figure:: /images/dupliface-example01-2duplifaceenabled.jpg
 
-   Duplication Faces applied to the cube.
+   复制 Faces applied to the cube.
 
 
-下一页, in the *物体模式* *Duplication* panel,
+下一页, in the *物体模式* *复制* panel,
 enable *Faces*. The sphere is duplicated one for each face of the cube.
 
 .. note:: Inherited properties
@@ -86,7 +86,7 @@ If the geometry of the children is not symmetrical then the orientation of the f
 tools which allow you to adjust the ordering of the vertices on a face.
 
 However, there is a workflow that lets you control for this. Make a single square and enable
-the Duplication/Faces so you can see the duplicated geometry in your editor.
+the 复制/Faces so you can see the duplicated geometry in your editor.
 If the orientation is not what you want, rotate the face until it is how you want.
 Typically you want to do the rotation in 编辑模式, not 物体模式,
 but this is not a hard rule.

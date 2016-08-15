@@ -208,7 +208,7 @@ Layer
 Group
    Objects that are part of a group (rendered green with the default theme)
    will be selected if they are in one of the groups that the active object is in.
-Object Hooks
+Object 挂钩
    Every hook that belongs to the active object.
 Pass
    Select objects assigned to the same render pass.
@@ -346,8 +346,8 @@ Select Pattern
 Select 相机
    Select the active camera.
 
-Mirror :kbd:`Shift-Ctrl-M`
-   Select the Mirror objects of the selected object eg. :menuselection:`L.sword --> R.sword`.
+镜像 :kbd:`Shift-Ctrl-M`
+   Select the 镜像 objects of the selected object eg. :menuselection:`L.sword --> R.sword`.
 
 Random
    Randomly selects unselected objects based on percentage probability on currently active layers.

@@ -76,13 +76,13 @@ Specials
       Transfer the *Current Shape* from a different object.
       Select two objects, the Shape is copied to the active object.
 
-   Mirror Shape Key
+   镜像 Shape Key
       If your mesh is nice and symmetrical, in *物体模式*, you can mirror the shape keys on the X axis.
       This will nott work unless the mesh vertices are perfectly symmetrical.
       Use the :menuselection:`Mesh --> Symmetrize` function in *编辑模式*.
 
-   Mirror Shape Key (Topology)
-      This is the same as *Mirror Shape Key* though it detects
+   镜像 Shape Key (Topology)
+      This is the same as *镜像 Shape Key* though it detects
       the mirrored vertices based on the topology of the mesh.
       The mesh vertices do not have to be perfectly symmetrical for this one to work.
 

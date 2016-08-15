@@ -164,7 +164,7 @@ More :kbd:`Ctrl-NumpadPlus`
    Propagates selection by adding geometry that are adjacent to selected elements.
 Less :kbd:`Ctrl-NumpadMinus`
    Deselects geometry that form the bounds of the current selection
-Mirror
+镜像
    Select mesh items at the mirrored location.
 Pick Linked :kbd:`L`
    Selects all geometry connected to the geometry under the cursor.

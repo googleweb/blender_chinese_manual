@@ -85,7 +85,7 @@ The following are useful markups for text styling: ::
 ==================
 
 - ``:kbd:`LMB``` - keyboard and mouse shortcuts.
-- ``*Mirror*`` - interface labels.
+- ``*镜像*`` - interface labels.
 - ``:menuselection:`3D视图 --> Add --> Mesh --> Monkey``` - menus.
 
 

@@ -54,9 +54,9 @@ Ambient
    Influences the amount of Ambient light the material receives.
 Emit
    Influences the amount of light Emitted by the material.
-Mirror
+镜像
    Influences the mirror color. This works with environment maps and raytraced reflection.
-Ray Mirror
+Ray 镜像
    Influences the strength of raytraced mirror reflection.
 
 

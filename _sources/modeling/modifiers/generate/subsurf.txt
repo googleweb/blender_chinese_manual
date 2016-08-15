@@ -1,9 +1,9 @@
 
 ****************************
-Subdivision Surface Modifier
+细分 Surface Modifier
 ****************************
 
-Subdivision Surface (*Subsurf* in short) is a method of subdividing the faces of a mesh to give a smooth appearance,
+细分 Surface (*Subsurf* in short) is a method of subdividing the faces of a mesh to give a smooth appearance,
 to enable modeling of complex smooth surfaces with simple, low-vertex meshes.
 This allows high resolution mesh modeling without the need to save and maintain huge amounts of data and gives
 a smooth *organic* look to the object.
@@ -49,7 +49,7 @@ Type
       (the same as :kbd:`W` :menuselection:`--> Subdivide`, in 编辑模式).
       Can be used, for example, to increase base mesh resolution when using displacement maps.
 
-Subdivisions
+细分s
    Recursively adds more geometry. For details on polygon counts, see the :ref:`subsurf_performance` section.
 
    View
@@ -198,10 +198,10 @@ Keyboard Shortcuts
 ==================
 
 To quickly add a subsurf modifier to one or more objects, select it/them and press :kbd:`Ctrl-1`.
-That will add a subsurf modifier with *View Subdivisions* on 1.
+That will add a subsurf modifier with *View 细分s* on 1.
 
 You can use other numbers too, such as :kbd:`Ctrl-2`, :kbd:`Ctrl-3`, etc, to add a subsurf with that number of
-subdivisions. The *渲染 Subdivisions* will always be on 2 when added like this.
+subdivisions. The *渲染 细分s* will always be on 2 when added like this.
 
 If an object already has a subsurf modifier, doing this will simply change its subdivision level instead of adding
 another modifier.

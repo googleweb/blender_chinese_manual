@@ -11,7 +11,7 @@
 
 
 Holding :kbd:`Ctrl` during a transform operation (such as grab, rotate or scale)
-will toggle :ref:`变换 Snapping <transform-snap>`.
+will toggle :ref:`变换 吸附 <transform-snap>`.
 When the :ref:`Snap Element <transform-snap-element>` is set to *Increment*,
 this allows the transformation to be performed in fixed amounts.
 
@@ -94,13 +94,13 @@ Scale transformations
 
 Holding :kbd:`Ctrl` will cause size changes in increments of 0.1 BU.
 
-.. note:: Snapping modes
+.. note:: 吸附 modes
 
    Note that if you have a
    :ref:`Snap Element <transform-snap-element>` option enabled,
    holding :kbd:`Ctrl` will cause the selection to snap to the nearest element.
 
-   :doc:`Read more about Snapping </editors/3dview/transform/transform_control/precision/snap>`
+   :doc:`Read more about 吸附 </editors/3dview/transform/transform_control/precision/snap>`
 
 
 Holding SHIFT

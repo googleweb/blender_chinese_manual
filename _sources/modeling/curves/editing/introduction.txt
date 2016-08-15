@@ -10,7 +10,7 @@ selecting and advanced editing are covered in the following pages:
 - :doc:`Curve 选择 </modeling/curves/selecting>`
 
 
-Curve Display
+曲线显示
 =============
 
 Display Options
@@ -19,11 +19,11 @@ Display Options
 .. figure:: /images/editing_curves_curve-display-panel.jpg
    :align: right
 
-   Curve Display panel.
+   曲线显示 panel.
 
 
 When in 编辑模式, the Properties Shelf :kbd:`N` contains options in the
-*Curve Display* panel for how curves are displayed in the 3D视图.
+*曲线显示* panel for how curves are displayed in the 3D视图.
 
 Handles
    Toggles the display of 贝塞尔 handles while in edit mode. This does not affect the appearance of the curve itself.
@@ -53,7 +53,7 @@ Hide Unselected elements
    or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D视图 header.
 
 
-Translation, Rotation, Scale
+移动, 旋转, 缩放
 ============================
 
 .. admonition:: 参考
@@ -72,7 +72,7 @@ When in *编辑模式*, :doc:`proportional editing
 is also available for transformation actions.
 
 
-Snapping
+吸附
 ========
 
 .. admonition:: 参考
@@ -86,10 +86,10 @@ Snapping
 also works with curve components.
 Both control points and their handles will be affected by snapping,
 except for within itself (other components of the active curve).
-Snapping works with 2D curves but points will be constrained to the local XY axes.
+吸附 works with 2D curves but points will be constrained to the local XY axes.
 
 
-Deforming Tools
+变形工具
 ===============
 
 .. admonition:: 参考
@@ -133,22 +133,22 @@ Does not effect control point tangents.
    Only three control points in the center smoothed over 200 times.
 
 
-Mirror
+镜像
 ======
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Mirror`
+   | Menu:     :menuselection:`Curve --> 镜像`
    | Hotkey:   :kbd:`Ctrl-M`
 
 
-The *Mirror* tool is also available, behaving exactly as with
+The *镜像* tool is also available, behaving exactly as with
 :doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
 
 
-Set 贝塞尔 Handle Type
+贝塞尔曲线控制柄类型
 ======================
 
 .. admonition:: 参考
@@ -168,7 +168,7 @@ Read the :doc:`贝塞尔曲线 </modeling/curves/introduction>` page for more de
 
 .. _modeling-curves-extending:
 
-Extending 曲线
+曲线挤出
 ================
 
 .. admonition:: 参考
@@ -189,7 +189,7 @@ The 贝塞尔曲线 can only be extend at the endpoints.
 
 .. _modeling-curves-subdivision:
 
-Subdivision
+细分
 ===========
 
 .. admonition:: 参考
@@ -207,7 +207,7 @@ press :kbd:`W` to make a single subdivision.
 Then press :kbd:`F6` to bring up the *Number of Cuts* menu.
 
 
-Duplication
+复制
 ===========
 
 .. admonition:: 参考
@@ -225,14 +225,14 @@ The copy is selected and placed in *Grab* mode, so you can move it to another pl
 
 .. _modeling-curves-joining-segments:
 
-Joining Curve Segments
+连接曲线段
 ======================
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Make Segment`
+   | Menu:     :menuselection:`Curve --> 创建段`
    | Hotkey:   :kbd:`F`
 
 
@@ -251,7 +251,7 @@ Additionally, you can close a curve by joining the endpoints but note that you c
 curves of the same type (i.e. 贝塞尔 with 贝塞尔, NURBS with NURBS)
 
 
-Separating 曲线
+分离曲线
 =================
 
 .. admonition:: 参考
@@ -268,7 +268,7 @@ if there is only one curve in a Curve object,
 pressing :kbd:`P` will create a new Curve object with no control points.
 
 
-Deleting Elements
+删除元素
 =================
 
 .. admonition:: 参考
@@ -309,7 +309,7 @@ Segment
 
 .. _modeling-curves-opening-and-closing:
 
-Opening and Closing a Curve
+开放闭合曲线
 ===========================
 
 .. admonition:: 参考
@@ -343,15 +343,15 @@ that when a 2D curve is closed, it creates a renderable flat face.
 
 .. _curve-switch_direction:
 
-Switch Direction
+切换方向
 ================
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Segments --> Switch Direction`,
-     :menuselection:`Specials --> Switch Direction`
+   | Menu:     :menuselection:`Curve --> Segments --> 切换方向`,
+     :menuselection:`Specials --> 切换方向`
    | Hotkey:   :kbd:`W-Numpad2`
 
 
@@ -360,7 +360,7 @@ This command will "reverse" the direction of any curve with at least one selecte
 This is mainly useful when using a curve as path, or using the bevel and taper options.
 
 
-Converting Tools
+转换工具
 ================
 
 Converting Curve Type
@@ -421,7 +421,7 @@ objects. The resulting curve will be a Poly curve type,
 but can be converted to have smooth segments as described above.
 
 
-Curve Parenting
+曲线父处理
 ===============
 
 .. admonition:: 参考
@@ -442,7 +442,7 @@ the median point between the three vertices. An alternative would be to use a
 :doc:`Child of Constraint </rigging/constraints/relationship/child_of>`
 
 
-Hooks
+挂钩
 =====
 
 .. admonition:: 参考
@@ -453,19 +453,19 @@ Hooks
    | Hotkey:   :kbd:`Ctrl-H`
 
 
-:doc:`Hooks </modeling/modifiers/deform/hooks>` can be added to control one or more points with other objects.
+:doc:`挂钩 </modeling/modifiers/deform/hooks>` can be added to control one or more points with other objects.
 
 
 .. _modeling-curve-weight:
 
-Set Goal Weight
+设置目标权重
 ===============
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :kbd:`W` :menuselection:`--> Set Goal Weight`
+   | Menu:     :kbd:`W` :menuselection:`--> 设置目标权重`
 
 
 This sets the "goal weight" of selected control points,

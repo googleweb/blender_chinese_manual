@@ -1,7 +1,7 @@
 .. _modeling_objects_duplication-index:
 
 ##############
-  Duplication
+  复制
 ##############
 
 .. toctree::

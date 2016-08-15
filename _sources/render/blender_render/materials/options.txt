@@ -182,12 +182,12 @@ Set options for objects in which light can pass through
 See :doc:`Transparency </render/blender_render/materials/properties/transparency>`
 
 
-Mirror
+镜像
 ^^^^^^
 
 Here you can set options for materials that are reflective
 
-See :doc:`Mirror </render/blender_render/materials/properties/mirror>`
+See :doc:`镜像 </render/blender_render/materials/properties/mirror>`
 
 
 Subsurface Scattering

@@ -158,7 +158,7 @@ Bone Direction
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Specials --> Switch Direction`
+   | Menu:     :menuselection:`Specials --> 切换方向`
    | Hotkey:   :kbd:`W-3`
 
 
@@ -488,7 +488,7 @@ but also to tell Blender when any two of them are counterparts.
 In case your armature can be mirrored in half (i.e. it's bilaterally symmetrical),
 it's worthwhile to stick to a left/right naming convention.
 This will enable you to use some tools that will probably save you time and effort
-(like the *X-Axis Mirror* editing tool we saw above...).
+(like the *X-Axis 镜像* editing tool we saw above...).
 
 
 - First you should give your bones meaningful base-names, like "leg", "arm", "finger", "back", "foot", etc.

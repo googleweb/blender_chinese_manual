@@ -30,7 +30,7 @@ and brief details of their scope. Details of their controls and settings are giv
    Properties of various characteristics of the shading model for the material.
 :doc:`Transparency </render/blender_render/materials/properties/transparency>`
    Can other objects be seen through the object, and if so, how?
-:doc:`Mirror </render/blender_render/materials/properties/mirror>`
+:doc:`镜像 </render/blender_render/materials/properties/mirror>`
    (Only Blender 渲染): Reflective properties of the material.
 :doc:`SubSurface Scattering </render/blender_render/materials/properties/subsurface_scattering>`
    (Only Blender 渲染): Simulates semi-translucent objects in which light enters,

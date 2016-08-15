@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mirror Modifier &mdash; Blender参考手册</title>
+  <title>镜像 Modifier &mdash; Blender参考手册</title>
   
 
   
@@ -107,13 +107,13 @@
 <li class="toctree-l4"><a class="reference internal" href="decimate.html">Decimate Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="edge_split.html">Edge Split Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mask.html">Mask Modifier</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Mirror Modifier</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">镜像 Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="multiresolution.html">Multiresolution Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="remesh.html">Remesh Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="screw.html">Screw Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="skin.html">Skin Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="solidify.html">Solidify Modifier</a></li>
-<li class="toctree-l4"><a class="reference internal" href="subsurf.html">Subdivision Surface Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分 Surface Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="triangulate.html">Triangulate Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wireframe.html">Wireframe Modifier</a></li>
 </ul>
@@ -172,7 +172,7 @@
       
           <li><a href="../index.html">修改器</a> &raquo;</li>
       
-    <li>Mirror Modifier</li>
+    <li>镜像 Modifier</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -187,19 +187,19 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mirror-modifier">
-<h1>Mirror Modifier<a class="headerlink" href="#mirror-modifier" title="Permalink to this headline">¶</a></h1>
+<h1>镜像 Modifier<a class="headerlink" href="#mirror-modifier" title="Permalink to this headline">¶</a></h1>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../../_images/modifiers_mirror_example_cube.jpg"><img alt="../../../_images/modifiers_mirror_example_cube.jpg" src="../../../_images/modifiers_mirror_example_cube.jpg" style="width: 350px;" /></a>
 <p class="caption"><span class="caption-text">The corner of a cube mirrored across three axes to form... well... a cube.</span></p>
 </div>
-<p>The Mirror modifier mirrors a mesh along its <em>local</em> X-, Y- and/or Z-Axes, across the object&#8217;s center
+<p>The 镜像 modifier mirrors a mesh along its <em>local</em> X-, Y- and/or Z-Axes, across the object&#8217;s center
 (the mirror plane is then defined by the two other axes).</p>
 <p>It can also use another object as the mirror center, then use that object&#8217;s local axes instead of its own.</p>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id2">
 <img alt="../../../_images/modifiers_mirror.jpg" src="../../../_images/modifiers_mirror.jpg" />
-<p class="caption"><span class="caption-text">Mirror modifier.</span></p>
+<p class="caption"><span class="caption-text">镜像 modifier.</span></p>
 </div>
 <dl class="docutils">
 <dt>Axis</dt>
@@ -228,7 +228,7 @@ You must disable <em>Clipping</em> to be able to move the vertices along the mir
 </div>
 </dd>
 <dt>Vertex Groups</dt>
-<dd><p class="first">When enabled, the Mirror modifier will try to mirror existing vertex groups.</p>
+<dd><p class="first">When enabled, the 镜像 modifier will try to mirror existing vertex groups.</p>
 <p>A very nice feature, but one that has very specific prerequisites:</p>
 <ul class="last simple">
 <li>The vertex groups you want to mirror must be named following the usual left/right pattern
@@ -248,7 +248,7 @@ its mirror copy will have UV coordinates of (0.7, 0.1).</p>
 <dt>Merge Limit</dt>
 <dd>The maximum distance between a vertex and its mirror copy before they are merged together.
 In other words, a vertex may be half this distance away from the mirror plane before it snaps to it.</dd>
-<dt>Mirror Object</dt>
+<dt>镜像 Object</dt>
 <dd>The name of another object (usually an empty), to be used as the reference for the mirror process:
 its center and axes will drive the plane(s) of symmetry.
 You can of course animate its position/rotation to animate the mirror effect.</dd>
@@ -261,31 +261,31 @@ no quick way to model both halves of an object without using one of the workarou
 been discovered by clever Blender artists over the years. A common technique was to model one
 half of an object and use <code class="kbd docutils literal"><span class="pre">Alt-D</span></code> to create a linked duplicate which can then be
 scaled on one axis by -1 to produce a perfect mirror-image copy which updates in real time as you edit.</p>
-<p>The Mirror modifier offers a simpler way to do this. Once your modeling is completed you can either
+<p>The 镜像 modifier offers a simpler way to do this. Once your modeling is completed you can either
 click <em>Apply</em> to make a real version of your mesh or leave it as is for future editing.</p>
 <div class="section" id="using-the-mirror-modifier-with-a-subdivision-surface-modifier">
-<h3>Using the Mirror Modifier with a Subdivision Surface Modifier<a class="headerlink" href="#using-the-mirror-modifier-with-a-subdivision-surface-modifier" title="Permalink to this headline">¶</a></h3>
-<p>When using the Mirror modifier along with a <a class="reference internal" href="subsurf.html"><span class="doc">subsurf</span></a> modifier,
+<h3>Using the 镜像 Modifier with a 细分 Surface Modifier<a class="headerlink" href="#using-the-mirror-modifier-with-a-subdivision-surface-modifier" title="Permalink to this headline">¶</a></h3>
+<p>When using the 镜像 modifier along with a <a class="reference internal" href="subsurf.html"><span class="doc">subsurf</span></a> modifier,
 the order in which the modifiers are placed is important.</p>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../../_images/modifier-mirror-subsurf2.jpg"><img alt="../../../_images/modifier-mirror-subsurf2.jpg" src="../../../_images/modifier-mirror-subsurf2.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Subsurf modifier before Mirror modifier.</span></p>
+<p class="caption"><span class="caption-text">Subsurf modifier before 镜像 modifier.</span></p>
 </div>
-<p>The above image shows the subsurf modifier placed before the Mirror one; as you
+<p>The above image shows the subsurf modifier placed before the 镜像 one; as you
 can see the effect of this is that the mesh is split down the center line of the mirror effect.
 This is because the subsurf calculation moves vertices away from the mirror plane, too far away from the
 <em>Merge Limit</em>.</p>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../../../_images/modifier-mirror-subsurf1.jpg"><img alt="../../../_images/modifier-mirror-subsurf1.jpg" src="../../../_images/modifier-mirror-subsurf1.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Mirror modifier before Subsurf modifier.</span></p>
+<p class="caption"><span class="caption-text">镜像 modifier before Subsurf modifier.</span></p>
 </div>
-<p>The above image shows the Mirror modifier placed before the subsurf modifier.
+<p>The above image shows the 镜像 modifier placed before the subsurf modifier.
 In this order, the mirror calculation is done and the vertices are merged together.
 Only after that does the subsurf modifier move any vertices.</p>
 </div>
 <div class="section" id="accurately-positioning-the-mirror-plane">
-<h3>Accurately Positioning the Mirror Plane<a class="headerlink" href="#accurately-positioning-the-mirror-plane" title="Permalink to this headline">¶</a></h3>
-<p>To apply a Mirror modifier, it is common to have to move the object&#8217;s center onto
+<h3>Accurately Positioning the 镜像 Plane<a class="headerlink" href="#accurately-positioning-the-mirror-plane" title="Permalink to this headline">¶</a></h3>
+<p>To apply a 镜像 modifier, it is common to have to move the object&#8217;s center onto
 the edge or face that is to be the axis for mirroring.
 This can be tricky when attempted visually.</p>
 <p>A good technique to achieve an exact position is
@@ -295,7 +295,7 @@ Finally, press <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Shi
 then select <em>Origin to 3D游标</em>.
 This will move the object&#8217;s center (and thus, the mirror plane) to where the 3D游标 is located,
 and the mirroring will be exact.</p>
-<p>An alternative is to use an Empty as a <em>Mirror Object</em> that you move to the correct
+<p>An alternative is to use an Empty as a <em>镜像 Object</em> that you move to the correct
 position.</p>
 </div>
 </div>

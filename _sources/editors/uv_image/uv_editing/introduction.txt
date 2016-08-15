@@ -52,8 +52,8 @@ Sticky Selection Mode
    When Sync Selection is disabled, these options control how UVs are selected.
 Proportional 编辑
    See :doc:`Proportional 编辑 </editors/3dview/transform/transform_control/proportional_edit>`.
-UV Snapping
-   Similar to Snapping in the 3D视图
+UV 吸附
+   Similar to 吸附 in the 3D视图
 Active UV Texture Map Selector
    Select which UV texture to use
 图像 Channels to Draw

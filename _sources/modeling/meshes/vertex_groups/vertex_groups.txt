@@ -326,8 +326,8 @@ Copy Vertex Group to Selected:
    Copy all Vertex Groups to other Selected Objects provided they have matching indices
    (typically this is true for copies of the mesh which are only deformed and not otherwise edited).
 
-Mirror Vertex Group:
-   Mirror all Vertex Groups, flip weights and/or names, editing only selected vertices,
+镜像 Vertex Group:
+   镜像 all Vertex Groups, flip weights and/or names, editing only selected vertices,
    flipping when both sides are selected; otherwise copy from unselected.
    Note this function will be reworked (and fully documented) in a future release.
 

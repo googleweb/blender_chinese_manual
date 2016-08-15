@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mirror Reflections &mdash; Blender参考手册</title>
+  <title>镜像 Reflections &mdash; Blender参考手册</title>
   
 
   
@@ -174,7 +174,7 @@
       
           <li><a href="index.html">Material Properties</a> &raquo;</li>
       
-    <li>Mirror Reflections</li>
+    <li>镜像 Reflections</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -189,8 +189,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mirror-reflections">
-<h1>Mirror Reflections<a class="headerlink" href="#mirror-reflections" title="Permalink to this headline">¶</a></h1>
-<p>Mirror reflections are computed in the Blender 渲染 and Cycles render engines using ray
+<h1>镜像 Reflections<a class="headerlink" href="#mirror-reflections" title="Permalink to this headline">¶</a></h1>
+<p>镜像 reflections are computed in the Blender 渲染 and Cycles render engines using ray
 tracing. (NB: Reflections are not available in the 游戏引擎.)
 Ray tracing can be used to make a material reflect its surroundings, like a mirror.
 The principle of ray-traced reflections is very simple:
@@ -219,7 +219,7 @@ will be tinted the color set in the swatch.</p>
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id1">
 <img alt="../../../../_images/material-mirrorpanel.jpg" src="../../../../_images/material-mirrorpanel.jpg" />
-<p class="caption"><span class="caption-text">The Mirror Panel.</span></p>
+<p class="caption"><span class="caption-text">The 镜像 Panel.</span></p>
 </div>
 <dl class="docutils">
 <dt>Enable ray-traced reflections</dt>
@@ -239,7 +239,7 @@ By default, an almost perfectly reflective material like chrome, or a mirror obj
 will reflect the exact colors of its surrounding.
 But some other equally reflective materials tint the reflections with their own color.
 This is the case for well-polished copper and gold, for example. In order to replicate this within Blender,
-you have to set the Mirror Color accordingly. To set a mirror color,
+you have to set the 镜像 Color accordingly. To set a mirror color,
 simply click the color swatch in the mirror panel and select a color.</dd>
 <dt>Fresnel</dt>
 <dd>Sets the power of the Fresnel effect. The Fresnel effect controls how reflective the material is,
@@ -264,7 +264,7 @@ for outdoor scenes.</dd>
 <div class="figure" id="id3">
 <img alt="../../../../_images/material-raymirror-example.jpg" src="../../../../_images/material-raymirror-example.jpg" />
 <p class="caption"><span class="caption-text">Suzanne in the Fun House
-(<a class="reference external" href="https://wiki.blender.org/index.php/:File:Manual-2.5-Material-MonkeyMirror.blend">blend-file</a>)</span></p>
+(<a class="reference external" href="https://wiki.blender.org/index.php/:File:Manual-2.5-Material-Monkey镜像.blend">blend-file</a>)</span></p>
 </div>
 <dl class="docutils">
 <dt>Gloss</dt>
@@ -292,7 +292,7 @@ More samples will give a smoother result, but will also increase render time.</d
 <div class="figure" id="id4">
 <img alt="../../../../_images/material-raymirror-anisotropicexample.jpg" src="../../../../_images/material-raymirror-anisotropicexample.jpg" />
 <p class="caption"><span class="caption-text">Anisotropic tangent reflecting spheres with anisotropic set to 0.0, 0.75, 1.0.
-(<a class="reference external" href="https://wiki.blender.org/index.php/:File:Manual-2.5-Material-Mirror-anisotropic-example.blend">.blend</a>)</span></p>
+(<a class="reference external" href="https://wiki.blender.org/index.php/:File:Manual-2.5-Material-镜像-anisotropic-example.blend">.blend</a>)</span></p>
 <div class="legend">
 <dl class="docutils">
 <dt>Anisotropic</dt>
@@ -328,7 +328,7 @@ This is the Fresnel effect: having a surface sharing reflective and non-reflecti
 according to the viewing angle and the surface normal.</p>
 <p>In <em>Demonstration of Fresnel effect with values equal to (from top to bottom) 0.0,
 2.5 and 5.0</em>, this behavior is demonstrated for a perfectly reflective Material
-(Mirror Reflectivity 1.0).</p>
+(镜像 Reflectivity 1.0).</p>
 <p>Fresnel 0.0 stands for a perfect mirror Material, while Fresnel 5.
 0 could stand for a glossy Material. It&#8217;s barely noticeable but in the lower picture,
 the Material is perfectly reflective around the edges.</p>

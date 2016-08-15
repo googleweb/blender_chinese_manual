@@ -6,7 +6,7 @@
 
 The select menu in edit mode contains additional tool for selecting components:
 
-Mirror
+镜像
    Select mesh items at the mirrored location.
 Linked
    Selects all components that are connected to the current selection. (see `Select Linked`_)

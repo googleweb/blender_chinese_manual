@@ -42,7 +42,7 @@ Vertex Group
       - On 1.0 , the weights are ignored and the *thickness* value is used for every vertex.
 
 Crease
-   These options are intended for usage with the :doc:`Subdivision Modifier </modeling/modifiers/generate/subsurf>`.
+   These options are intended for usage with the :doc:`细分 Modifier </modeling/modifiers/generate/subsurf>`.
 
 
    .. figure:: /images/modifier-solidify-rims.jpg

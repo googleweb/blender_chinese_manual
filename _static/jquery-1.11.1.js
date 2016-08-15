@@ -3980,7 +3980,7 @@ jQuery.extend({
 		var queue = jQuery.queue( elem, type ),
 			startLength = queue.length,
 			fn = queue.shift(),
-			hooks = jQuery._queueHooks( elem, type ),
+			hooks = jQuery._queue挂钩( elem, type ),
 			next = function() {
 				jQuery.dequeue( elem, type );
 			};
@@ -4009,9 +4009,9 @@ jQuery.extend({
 		}
 	},
 
-	// not intended for public consumption - generates a queueHooks object, or returns the current one
-	_queueHooks: function( elem, type ) {
-		var key = type + "queueHooks";
+	// not intended for public consumption - generates a queue挂钩 object, or returns the current one
+	_queue挂钩: function( elem, type ) {
+		var key = type + "queue挂钩";
 		return jQuery._data( elem, key ) || jQuery._data( elem, key, {
 			empty: jQuery.Callbacks("once memory").add(function() {
 				jQuery._removeData( elem, type + "queue" );
@@ -4041,7 +4041,7 @@ jQuery.fn.extend({
 				var queue = jQuery.queue( this, type, data );
 
 				// ensure a hooks for this queue
-				jQuery._queueHooks( this, type );
+				jQuery._queue挂钩( this, type );
 
 				if ( type === "fx" && queue[0] !== "inprogress" ) {
 					jQuery.dequeue( this, type );
@@ -4077,7 +4077,7 @@ jQuery.fn.extend({
 		type = type || "fx";
 
 		while ( i-- ) {
-			tmp = jQuery._data( elements[ i ], type + "queueHooks" );
+			tmp = jQuery._data( elements[ i ], type + "queue挂钩" );
 			if ( tmp && tmp.empty ) {
 				count++;
 				tmp.empty.add( resolve );
@@ -4716,12 +4716,12 @@ jQuery.event = {
 		var i, prop, copy,
 			type = event.type,
 			originalEvent = event,
-			fixHook = this.fixHooks[ type ];
+			fixHook = this.fix挂钩[ type ];
 
 		if ( !fixHook ) {
-			this.fixHooks[ type ] = fixHook =
-				rmouseEvent.test( type ) ? this.mouseHooks :
-				rkeyEvent.test( type ) ? this.keyHooks :
+			this.fix挂钩[ type ] = fixHook =
+				rmouseEvent.test( type ) ? this.mouse挂钩 :
+				rkeyEvent.test( type ) ? this.key挂钩 :
 				{};
 		}
 		copy = fixHook.props ? this.props.concat( fixHook.props ) : this.props;
@@ -4756,9 +4756,9 @@ jQuery.event = {
 	// Includes some event props shared by KeyEvent and MouseEvent
 	props: "altKey bubbles cancelable ctrlKey currentTarget eventPhase metaKey relatedTarget shiftKey target timeStamp view which".split(" "),
 
-	fixHooks: {},
+	fix挂钩: {},
 
-	keyHooks: {
+	key挂钩: {
 		props: "char charCode key keyCode".split(" "),
 		filter: function( event, original ) {
 
@@ -4771,7 +4771,7 @@ jQuery.event = {
 		}
 	},
 
-	mouseHooks: {
+	mouse挂钩: {
 		props: "button buttons clientX clientY fromElement offsetX offsetY pageX pageY screenX screenY toElement".split(" "),
 		filter: function( event, original ) {
 			var body, eventDoc, doc,
@@ -6506,7 +6506,7 @@ function showHide( elements, show ) {
 function setPositiveNumber( elem, value, subtract ) {
 	var matches = rnumsplit.exec( value );
 	return matches ?
-		// Guard against undefined "subtract", e.g., when used as in cssHooks
+		// Guard against undefined "subtract", e.g., when used as in css挂钩
 		Math.max( 0, matches[ 1 ] - ( subtract || 0 ) ) + ( matches[ 2 ] || "px" ) :
 		value;
 }
@@ -6596,7 +6596,7 @@ function getWidthOrHeight( elem, name, extra ) {
 jQuery.extend({
 	// Add in style property hooks for overriding the default
 	// behavior of getting and setting a style property
-	cssHooks: {
+	css挂钩: {
 		opacity: {
 			get: function( elem, computed ) {
 				if ( computed ) {
@@ -6647,7 +6647,7 @@ jQuery.extend({
 
 		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
+		hooks = jQuery.css挂钩[ name ] || jQuery.css挂钩[ origName ];
 
 		// Check if we're setting a value
 		if ( value !== undefined ) {
@@ -6670,7 +6670,7 @@ jQuery.extend({
 				value += "px";
 			}
 
-			// Fixes #8908, it can be done more correctly by specifing setters in cssHooks,
+			// Fixes #8908, it can be done more correctly by specifing setters in css挂钩,
 			// but it would mean to define eight (for every problematic property) identical functions
 			if ( !support.clearCloneStyle && value === "" && name.indexOf("background") === 0 ) {
 				style[ name ] = "inherit";
@@ -6706,7 +6706,7 @@ jQuery.extend({
 
 		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
+		hooks = jQuery.css挂钩[ name ] || jQuery.css挂钩[ origName ];
 
 		// If a hook was provided get the computed value from there
 		if ( hooks && "get" in hooks ) {
@@ -6733,7 +6733,7 @@ jQuery.extend({
 });
 
 jQuery.each([ "height", "width" ], function( i, name ) {
-	jQuery.cssHooks[ name ] = {
+	jQuery.css挂钩[ name ] = {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
 				// certain elements can have dimension info if we invisibly show them
@@ -6762,7 +6762,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 });
 
 if ( !support.opacity ) {
-	jQuery.cssHooks.opacity = {
+	jQuery.css挂钩.opacity = {
 		get: function( elem, computed ) {
 			// IE uses filters for opacity
 			return ropacity.test( (computed && elem.currentStyle ? elem.currentStyle.filter : elem.style.filter) || "" ) ?
@@ -6805,7 +6805,7 @@ if ( !support.opacity ) {
 	};
 }
 
-jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
+jQuery.css挂钩.marginRight = addGetHookIf( support.reliableMarginRight,
 	function( elem, computed ) {
 		if ( computed ) {
 			// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
@@ -6822,7 +6822,7 @@ jQuery.each({
 	padding: "",
 	border: "Width"
 }, function( prefix, suffix ) {
-	jQuery.cssHooks[ prefix + suffix ] = {
+	jQuery.css挂钩[ prefix + suffix ] = {
 		expand: function( value ) {
 			var i = 0,
 				expanded = {},
@@ -6840,7 +6840,7 @@ jQuery.each({
 	};
 
 	if ( !rmargin.test( prefix ) ) {
-		jQuery.cssHooks[ prefix + suffix ].set = setPositiveNumber;
+		jQuery.css挂钩[ prefix + suffix ].set = setPositiveNumber;
 	}
 });
 
@@ -6906,15 +6906,15 @@ Tween.prototype = {
 		this.unit = unit || ( jQuery.cssNumber[ prop ] ? "" : "px" );
 	},
 	cur: function() {
-		var hooks = Tween.propHooks[ this.prop ];
+		var hooks = Tween.prop挂钩[ this.prop ];
 
 		return hooks && hooks.get ?
 			hooks.get( this ) :
-			Tween.propHooks._default.get( this );
+			Tween.prop挂钩._default.get( this );
 	},
 	run: function( percent ) {
 		var eased,
-			hooks = Tween.propHooks[ this.prop ];
+			hooks = Tween.prop挂钩[ this.prop ];
 
 		if ( this.options.duration ) {
 			this.pos = eased = jQuery.easing[ this.easing ](
@@ -6932,7 +6932,7 @@ Tween.prototype = {
 		if ( hooks && hooks.set ) {
 			hooks.set( this );
 		} else {
-			Tween.propHooks._default.set( this );
+			Tween.prop挂钩._default.set( this );
 		}
 		return this;
 	}
@@ -6940,7 +6940,7 @@ Tween.prototype = {
 
 Tween.prototype.init.prototype = Tween.prototype;
 
-Tween.propHooks = {
+Tween.prop挂钩 = {
 	_default: {
 		get: function( tween ) {
 			var result;
@@ -6963,7 +6963,7 @@ Tween.propHooks = {
 			// available and use plain properties where available
 			if ( jQuery.fx.step[ tween.prop ] ) {
 				jQuery.fx.step[ tween.prop ]( tween );
-			} else if ( tween.elem.style && ( tween.elem.style[ jQuery.cssProps[ tween.prop ] ] != null || jQuery.cssHooks[ tween.prop ] ) ) {
+			} else if ( tween.elem.style && ( tween.elem.style[ jQuery.cssProps[ tween.prop ] ] != null || jQuery.css挂钩[ tween.prop ] ) ) {
 				jQuery.style( tween.elem, tween.prop, tween.now + tween.unit );
 			} else {
 				tween.elem[ tween.prop ] = tween.now;
@@ -6975,7 +6975,7 @@ Tween.propHooks = {
 // Support: IE <=9
 // Panic based approach to setting things on disconnected nodes
 
-Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
+Tween.prop挂钩.scrollTop = Tween.prop挂钩.scrollLeft = {
 	set: function( tween ) {
 		if ( tween.elem.nodeType && tween.elem.parentNode ) {
 			tween.elem[ tween.prop ] = tween.now;
@@ -7004,7 +7004,7 @@ var
 	fxNow, timerId,
 	rfxtypes = /^(?:toggle|show|hide)$/,
 	rfxnum = new RegExp( "^(?:([+-])=|)(" + pnum + ")([a-z%]*)$", "i" ),
-	rrun = /queueHooks$/,
+	rrun = /queue挂钩$/,
 	animationPrefilters = [ defaultPrefilter ],
 	tweeners = {
 		"*": [ function( prop, value ) {
@@ -7111,7 +7111,7 @@ function defaultPrefilter( elem, props, opts ) {
 
 	// handle queue: false promises
 	if ( !opts.queue ) {
-		hooks = jQuery._queueHooks( elem, "fx" );
+		hooks = jQuery._queue挂钩( elem, "fx" );
 		if ( hooks.unqueued == null ) {
 			hooks.unqueued = 0;
 			oldfire = hooks.empty.fire;
@@ -7260,7 +7260,7 @@ function propFilter( props, specialEasing ) {
 			delete props[ index ];
 		}
 
-		hooks = jQuery.cssHooks[ name ];
+		hooks = jQuery.css挂钩[ name ];
 		if ( hooks && "expand" in hooks ) {
 			value = hooks.expand( value );
 			delete props[ name ];
@@ -7489,7 +7489,7 @@ jQuery.fn.extend({
 
 		return this.each(function() {
 			var dequeue = true,
-				index = type != null && type + "queueHooks",
+				index = type != null && type + "queue挂钩",
 				timers = jQuery.timers,
 				data = jQuery._data( this );
 
@@ -7529,7 +7529,7 @@ jQuery.fn.extend({
 			var index,
 				data = jQuery._data( this ),
 				queue = data[ type + "queue" ],
-				hooks = data[ type + "queueHooks" ],
+				hooks = data[ type + "queue挂钩" ],
 				timers = jQuery.timers,
 				length = queue ? queue.length : 0;
 
@@ -7719,7 +7719,7 @@ jQuery.fn.extend({
 
 		if ( !arguments.length ) {
 			if ( elem ) {
-				hooks = jQuery.valHooks[ elem.type ] || jQuery.valHooks[ elem.nodeName.toLowerCase() ];
+				hooks = jQuery.val挂钩[ elem.type ] || jQuery.val挂钩[ elem.nodeName.toLowerCase() ];
 
 				if ( hooks && "get" in hooks && (ret = hooks.get( elem, "value" )) !== undefined ) {
 					return ret;
@@ -7763,7 +7763,7 @@ jQuery.fn.extend({
 				});
 			}
 
-			hooks = jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ];
+			hooks = jQuery.val挂钩[ this.type ] || jQuery.val挂钩[ this.nodeName.toLowerCase() ];
 
 			// If set returns undefined, fall back to normal setting
 			if ( !hooks || !("set" in hooks) || hooks.set( this, val, "value" ) === undefined ) {
@@ -7774,7 +7774,7 @@ jQuery.fn.extend({
 });
 
 jQuery.extend({
-	valHooks: {
+	val挂钩: {
 		option: {
 			get: function( elem ) {
 				var val = jQuery.find.attr( elem, "value" );
@@ -7832,7 +7832,7 @@ jQuery.extend({
 				while ( i-- ) {
 					option = options[ i ];
 
-					if ( jQuery.inArray( jQuery.valHooks.option.get( option ), values ) >= 0 ) {
+					if ( jQuery.inArray( jQuery.val挂钩.option.get( option ), values ) >= 0 ) {
 
 						// Support: IE6
 						// When new option element is added to select box we need to
@@ -7865,7 +7865,7 @@ jQuery.extend({
 
 // Radios and checkboxes getter/setter
 jQuery.each([ "radio", "checkbox" ], function() {
-	jQuery.valHooks[ this ] = {
+	jQuery.val挂钩[ this ] = {
 		set: function( elem, value ) {
 			if ( jQuery.isArray( value ) ) {
 				return ( elem.checked = jQuery.inArray( jQuery(elem).val(), value ) >= 0 );
@@ -7873,7 +7873,7 @@ jQuery.each([ "radio", "checkbox" ], function() {
 		}
 	};
 	if ( !support.checkOn ) {
-		jQuery.valHooks[ this ].get = function( elem ) {
+		jQuery.val挂钩[ this ].get = function( elem ) {
 			// Support: Webkit
 			// "" is returned instead of "on" if a value isn't specified
 			return elem.getAttribute("value") === null ? "on" : elem.value;
@@ -7921,7 +7921,7 @@ jQuery.extend({
 		// Grab necessary hook if one is defined
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			name = name.toLowerCase();
-			hooks = jQuery.attrHooks[ name ] ||
+			hooks = jQuery.attr挂钩[ name ] ||
 				( jQuery.expr.match.bool.test( name ) ? boolHook : nodeHook );
 		}
 
@@ -7982,7 +7982,7 @@ jQuery.extend({
 		}
 	},
 
-	attrHooks: {
+	attr挂钩: {
 		type: {
 			set: function( elem, value ) {
 				if ( !support.radioValue && value === "radio" && jQuery.nodeName(elem, "input") ) {
@@ -8049,7 +8049,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 
 // fix oldIE attroperties
 if ( !getSetInput || !getSetAttribute ) {
-	jQuery.attrHooks.value = {
+	jQuery.attr挂钩.value = {
 		set: function( elem, value, name ) {
 			if ( jQuery.nodeName( elem, "input" ) ) {
 				// Does not return so that setAttribute is also used
@@ -8098,7 +8098,7 @@ if ( !getSetAttribute ) {
 		};
 
 	// Fixing value retrieval on a button requires this module
-	jQuery.valHooks.button = {
+	jQuery.val挂钩.button = {
 		get: function( elem, name ) {
 			var ret = elem.getAttributeNode( name );
 			if ( ret && ret.specified ) {
@@ -8110,7 +8110,7 @@ if ( !getSetAttribute ) {
 
 	// Set contenteditable to false on removals(#10429)
 	// Setting to empty string throws an error as an invalid value
-	jQuery.attrHooks.contenteditable = {
+	jQuery.attr挂钩.contenteditable = {
 		set: function( elem, value, name ) {
 			nodeHook.set( elem, value === "" ? false : value, name );
 		}
@@ -8119,7 +8119,7 @@ if ( !getSetAttribute ) {
 	// Set width and height to auto instead of 0 on empty string( Bug #8150 )
 	// This is for removals
 	jQuery.each([ "width", "height" ], function( i, name ) {
-		jQuery.attrHooks[ name ] = {
+		jQuery.attr挂钩[ name ] = {
 			set: function( elem, value ) {
 				if ( value === "" ) {
 					elem.setAttribute( name, "auto" );
@@ -8131,7 +8131,7 @@ if ( !getSetAttribute ) {
 }
 
 if ( !support.style ) {
-	jQuery.attrHooks.style = {
+	jQuery.attr挂钩.style = {
 		get: function( elem ) {
 			// Return undefined in the case of empty string
 			// Note: IE uppercases css property names, but if we were to .toLowerCase()
@@ -8187,7 +8187,7 @@ jQuery.extend({
 		if ( notxml ) {
 			// Fix name and attach hooks
 			name = jQuery.propFix[ name ] || name;
-			hooks = jQuery.propHooks[ name ];
+			hooks = jQuery.prop挂钩[ name ];
 		}
 
 		if ( value !== undefined ) {
@@ -8202,7 +8202,7 @@ jQuery.extend({
 		}
 	},
 
-	propHooks: {
+	prop挂钩: {
 		tabIndex: {
 			get: function( elem ) {
 				// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
@@ -8225,7 +8225,7 @@ jQuery.extend({
 if ( !support.hrefNormalized ) {
 	// href/src property should get the full normalized URL (#10299/#12915)
 	jQuery.each([ "href", "src" ], function( i, name ) {
-		jQuery.propHooks[ name ] = {
+		jQuery.prop挂钩[ name ] = {
 			get: function( elem ) {
 				return elem.getAttribute( name, 4 );
 			}
@@ -8237,7 +8237,7 @@ if ( !support.hrefNormalized ) {
 // mis-reports the default selected property of an option
 // Accessing the parent's selectedIndex property fixes it
 if ( !support.optSelected ) {
-	jQuery.propHooks.selected = {
+	jQuery.prop挂钩.selected = {
 		get: function( elem ) {
 			var parent = elem.parentNode;
 
@@ -10180,12 +10180,12 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	};
 });
 
-// Add the top/left cssHooks using jQuery.fn.position
+// Add the top/left css挂钩 using jQuery.fn.position
 // Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
 // getComputedStyle returns percent when specified for top/left/bottom/right
 // rather than make the css module depend on the offset module, we just check for it here
 jQuery.each( [ "top", "left" ], function( i, prop ) {
-	jQuery.cssHooks[ prop ] = addGetHookIf( support.pixelPosition,
+	jQuery.css挂钩[ prop ] = addGetHookIf( support.pixelPosition,
 		function( elem, computed ) {
 			if ( computed ) {
 				computed = curCSS( elem, prop );

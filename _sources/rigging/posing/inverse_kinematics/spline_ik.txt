@@ -96,7 +96,7 @@ Tips for Nice Setups
   Also, bones should ideally be created in a way that follows the shape of the curve in its 'rest pose' shape,
   to minimise the problems in areas where the curve has sharp bends
   which may be especially noticeable when stretching is disabled.
-- For control of the curve, it is recommended that hooks (in particular, Bone Hooks)
+- For control of the curve, it is recommended that hooks (in particular, Bone 挂钩)
   are used to control the control-verts of the curve, with one hook per control-vert.
   In general, only a few control-verts should be needed for the curve
   (i.e. 1 for every 3-5 bones offers decent control).

@@ -61,7 +61,7 @@ Constraints
    Used to control an Object’s transform (position, rotation, scale),
    tracking and relationship properties.
 修改器
-   Array, Mirror, Subdivision Surface, Armature, Cast.
+   Array, 镜像, 细分 Surface, Armature, Cast.
 Object Data
    设置 for the objects data,
    depending on the Object Type.

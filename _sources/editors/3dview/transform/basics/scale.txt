@@ -35,7 +35,7 @@ Basic scale usage and common options are described below. For additional informa
 wish to read the :doc:`变换控制 </editors/3dview/transform/transform_control/index>`
 and :doc:`变换 Orientations </editors/3dview/transform/transform_control/transform_orientations>`
 pages which provide more information about options such as Precision, Axis Locking, Numeric Input,
-Snapping and the different types of 轴心点.
+吸附 and the different types of 轴心点.
 
 
 用法

@@ -1,6 +1,6 @@
 
 ***************
-Mirror Modifier
+镜像 Modifier
 ***************
 
 .. figure:: /images/modifiers_mirror_example_cube.jpg
@@ -9,7 +9,7 @@ Mirror Modifier
    The corner of a cube mirrored across three axes to form... well... a cube.
 
 
-The Mirror modifier mirrors a mesh along its *local* X-, Y- and/or Z-Axes, across the object's center
+The 镜像 modifier mirrors a mesh along its *local* X-, Y- and/or Z-Axes, across the object's center
 (the mirror plane is then defined by the two other axes).
 
 It can also use another object as the mirror center, then use that object's local axes instead of its own.
@@ -20,7 +20,7 @@ Options
 
 .. figure:: /images/modifiers_mirror.jpg
 
-   Mirror modifier.
+   镜像 modifier.
 
 
 Axis
@@ -52,7 +52,7 @@ Options:
          You must disable *Clipping* to be able to move the vertices along the mirror axis again.
 
    Vertex Groups
-      When enabled, the Mirror modifier will try to mirror existing vertex groups.
+      When enabled, the 镜像 modifier will try to mirror existing vertex groups.
 
       A very nice feature, but one that has very specific prerequisites:
 
@@ -72,7 +72,7 @@ Merge Limit
    The maximum distance between a vertex and its mirror copy before they are merged together.
    In other words, a vertex may be half this distance away from the mirror plane before it snaps to it.
 
-Mirror Object
+镜像 Object
    The name of another object (usually an empty), to be used as the reference for the mirror process:
    its center and axes will drive the plane(s) of symmetry.
    You can of course animate its position/rotation to animate the mirror effect.
@@ -87,24 +87,24 @@ been discovered by clever Blender artists over the years. A common technique was
 half of an object and use :kbd:`Alt-D` to create a linked duplicate which can then be
 scaled on one axis by -1 to produce a perfect mirror-image copy which updates in real time as you edit.
 
-The Mirror modifier offers a simpler way to do this. Once your modeling is completed you can either
+The 镜像 modifier offers a simpler way to do this. Once your modeling is completed you can either
 click *Apply* to make a real version of your mesh or leave it as is for future editing.
 
 
-Using the Mirror Modifier with a Subdivision Surface Modifier
+Using the 镜像 Modifier with a 细分 Surface Modifier
 -------------------------------------------------------------
 
-When using the Mirror modifier along with a :doc:`subsurf </modeling/modifiers/generate/subsurf>` modifier,
+When using the 镜像 modifier along with a :doc:`subsurf </modeling/modifiers/generate/subsurf>` modifier,
 the order in which the modifiers are placed is important.
 
 
 .. figure:: /images/modifier-mirror-subsurf2.jpg
    :width: 300px
 
-   Subsurf modifier before Mirror modifier.
+   Subsurf modifier before 镜像 modifier.
 
 
-The above image shows the subsurf modifier placed before the Mirror one; as you
+The above image shows the subsurf modifier placed before the 镜像 one; as you
 can see the effect of this is that the mesh is split down the center line of the mirror effect.
 This is because the subsurf calculation moves vertices away from the mirror plane, too far away from the
 *Merge Limit*.
@@ -113,18 +113,18 @@ This is because the subsurf calculation moves vertices away from the mirror plan
 .. figure:: /images/modifier-mirror-subsurf1.jpg
    :width: 300px
 
-   Mirror modifier before Subsurf modifier.
+   镜像 modifier before Subsurf modifier.
 
 
-The above image shows the Mirror modifier placed before the subsurf modifier.
+The above image shows the 镜像 modifier placed before the subsurf modifier.
 In this order, the mirror calculation is done and the vertices are merged together.
 Only after that does the subsurf modifier move any vertices.
 
 
-Accurately Positioning the Mirror Plane
+Accurately Positioning the 镜像 Plane
 ---------------------------------------
 
-To apply a Mirror modifier, it is common to have to move the object's center onto
+To apply a 镜像 modifier, it is common to have to move the object's center onto
 the edge or face that is to be the axis for mirroring.
 This can be tricky when attempted visually.
 
@@ -136,5 +136,5 @@ then select *Origin to 3D游标*.
 This will move the object's center (and thus, the mirror plane) to where the 3D游标 is located,
 and the mirroring will be exact.
 
-An alternative is to use an Empty as a *Mirror Object* that you move to the correct
+An alternative is to use an Empty as a *镜像 Object* that you move to the correct
 position.

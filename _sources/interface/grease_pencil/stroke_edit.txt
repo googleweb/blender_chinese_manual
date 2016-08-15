@@ -89,7 +89,7 @@ Edit
    snap to *Increment* and
    *Proportional 编辑*
    detailed in the general :doc:`变换ations Instructions </editors/3dview/transform/index>`.
-*Mirror* :kbd:`Ctrl-M` *Bend* :kbd:`Shift-W` *Shear* :kbd:`Shift-Ctrl-Alt-S` *To Sphere* :kbd:`Shift-Alt-S`
+*镜像* :kbd:`Ctrl-M` *Bend* :kbd:`Shift-W` *Shear* :kbd:`Shift-Ctrl-Alt-S` *To Sphere* :kbd:`Shift-Alt-S`
    These are similar to the equivalent mesh operations detailed in
    :doc:`Deforming Instructions </modeling/meshes/editing/deforming/index>`.
 

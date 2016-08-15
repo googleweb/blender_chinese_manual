@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Subdivision Surface Modifier &mdash; Blender参考手册</title>
+  <title>细分 Surface Modifier &mdash; Blender参考手册</title>
   
 
   
@@ -107,13 +107,13 @@
 <li class="toctree-l4"><a class="reference internal" href="decimate.html">Decimate Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="edge_split.html">Edge Split Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mask.html">Mask Modifier</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mirror.html">Mirror Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像 Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="multiresolution.html">Multiresolution Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="remesh.html">Remesh Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="screw.html">Screw Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="skin.html">Skin Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="solidify.html">Solidify Modifier</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Subdivision Surface Modifier</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">细分 Surface Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="triangulate.html">Triangulate Modifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wireframe.html">Wireframe Modifier</a></li>
 </ul>
@@ -172,7 +172,7 @@
       
           <li><a href="../index.html">修改器</a> &raquo;</li>
       
-    <li>Subdivision Surface Modifier</li>
+    <li>细分 Surface Modifier</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -187,8 +187,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="subdivision-surface-modifier">
-<h1>Subdivision Surface Modifier<a class="headerlink" href="#subdivision-surface-modifier" title="Permalink to this headline">¶</a></h1>
-<p>Subdivision Surface (<em>Subsurf</em> in short) is a method of subdividing the faces of a mesh to give a smooth appearance,
+<h1>细分 Surface Modifier<a class="headerlink" href="#subdivision-surface-modifier" title="Permalink to this headline">¶</a></h1>
+<p>细分 Surface (<em>Subsurf</em> in short) is a method of subdividing the faces of a mesh to give a smooth appearance,
 to enable modeling of complex smooth surfaces with simple, low-vertex meshes.
 This allows high resolution mesh modeling without the need to save and maintain huge amounts of data and gives
 a smooth <em>organic</em> look to the object.</p>
@@ -229,7 +229,7 @@ resulting surfaces rather than on a mathematical derivation.&#8221;</dd>
 Can be used, for example, to increase base mesh resolution when using displacement maps.</dd>
 </dl>
 </dd>
-<dt>Subdivisions</dt>
+<dt>细分s</dt>
 <dd><p class="first">Recursively adds more geometry. For details on polygon counts, see the <a class="reference internal" href="#subsurf-performance"><span class="std std-ref">Performance Considerations</span></a> section.</p>
 <dl class="last docutils">
 <dt>View</dt>
@@ -364,9 +364,9 @@ because the render is generated using your Object Data,
 <div class="section" id="keyboard-shortcuts">
 <h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
 <p>To quickly add a subsurf modifier to one or more objects, select it/them and press <code class="kbd docutils literal"><span class="pre">Ctrl-1</span></code>.
-That will add a subsurf modifier with <em>View Subdivisions</em> on 1.</p>
+That will add a subsurf modifier with <em>View 细分s</em> on 1.</p>
 <p>You can use other numbers too, such as <code class="kbd docutils literal"><span class="pre">Ctrl-2</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-3</span></code>, etc, to add a subsurf with that number of
-subdivisions. The <em>渲染 Subdivisions</em> will always be on 2 when added like this.</p>
+subdivisions. The <em>渲染 细分s</em> will always be on 2 when added like this.</p>
 <p>If an object already has a subsurf modifier, doing this will simply change its subdivision level instead of adding
 another modifier.</p>
 </div>

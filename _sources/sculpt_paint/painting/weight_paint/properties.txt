@@ -105,7 +105,7 @@ Multi-Paint
 
    Since the ratio is undefined if all weights are zero, Multi-Paint cannot operate on vertices that do not
    have any weight assigned to the relevant Vertex Groups. For this reason it also doesn't allow reducing
-   the weight all the way to zero. When used with X-Mirror, it only guarantees completely symmetrical
+   the weight all the way to zero. When used with X-镜像, it only guarantees completely symmetrical
    result if weights are initially symmetrical.
 
    .. tip::
@@ -216,7 +216,7 @@ X-mirror
    You can read more about the naming convention in
    :doc:`编辑 Armatures: Naming conventions </rigging/armatures/editing/properties>`.
    The convention for armatures/bones apply here as well.
-Topology Mirror
+Topology 镜像
    Use topology-based mirroring, for when both side of a mesh have matching mirrored topology.
 Show Zero Weights
    To display unreferenced and zero weighted areas in black (by default).

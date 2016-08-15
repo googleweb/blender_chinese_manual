@@ -76,7 +76,7 @@ Symmetry Axes
    .. note::
 
       These symmetry axes checkboxes do not add geometry flipped across an axis.
-      For that, the Mirror modifier should be used, typically placed above the Skin modifier.
+      For that, the 镜像 modifier should be used, typically placed above the Skin modifier.
 
 用法
 =====

@@ -7,7 +7,7 @@ Mesh Shading
 ============
 
 .. list-table::
-   例子 mesh rendered flat, smoothed using edge split, and using Subdivision Surface.
+   例子 mesh rendered flat, smoothed using edge split, and using 细分 Surface.
    Note how edges are rendered differently.
    `Sample blend-file <https://wiki.blender.org/index.php/:File:25-manual-meshsmooth-example.blend>`__
 
@@ -183,7 +183,7 @@ you can smooth the mesh non-destructively with one or several of the following m
 :doc:`Bevel Modifier </modeling/modifiers/generate/bevel>`
    Works like the *Bevel* tool in *编辑模式*;
    Bevel can be set to work on an angle threshold, or on edge weight values.
-:doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subsurf>`
+:doc:`细分 Surface Modifier </modeling/modifiers/generate/subsurf>`
    Catmull-Clark subdivision produces smooth results. Sharp edges can be defined with
    :ref:`subdivision creases <modifiers-generate-subsurf-creases>`
    or by setting certain edges to "sharp" and adding an :doc:`EdgeSplit modifier

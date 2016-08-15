@@ -170,7 +170,7 @@ Lock to Scene
 Snap to Mesh
    Controls the snapping tools that help with transforming and modeling objects.
 
-   :doc:`Read more about Snapping </editors/3dview/transform/transform_control/precision/snap>`
+   :doc:`Read more about 吸附 </editors/3dview/transform/transform_control/precision/snap>`
 
 渲染 Buttons
    The 渲染 Buttons render an OpenGL version of the 3D视图.

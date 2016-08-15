@@ -112,7 +112,7 @@ OpenSubdiv Compute
 ==================
 
 The Options here will set the compute device used by OpenSubdiv for the
-:doc:`Subdivision Surface Modifier </modeling/modifiers/generate/subsurf>`.
+:doc:`细分 Surface Modifier </modeling/modifiers/generate/subsurf>`.
 
 None
    Disables any OpenSubdiv compute devices, makes sure legacy subsurf method is used.

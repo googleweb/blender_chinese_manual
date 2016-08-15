@@ -40,7 +40,7 @@ Projection Method
 
    Equirectangular
       Projection from an Equirectangular photo.
-   Mirror Ball
+   镜像 Ball
       Projection from an orthographic photo or mirror ball.
 
 

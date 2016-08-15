@@ -58,7 +58,7 @@ Animating Deformation
 
 - :doc:`Shape Keys </animation/shape_keys>`
 - :doc:`Deforming by a Lattice </modeling/modifiers/deform/lattice>`
-- :doc:`Deforming with Hooks </modeling/modifiers/deform/hooks>`
+- :doc:`Deforming with 挂钩 </modeling/modifiers/deform/hooks>`
 
 See also :doc:`Hook Modifier </modeling/modifiers/deform/hooks>`
 

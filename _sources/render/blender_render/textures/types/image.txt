@@ -709,8 +709,8 @@ Extension:
 
       Repeat
          X/Y repetition multiplier
-      Mirror
-         Mirror on X/Y axes. This buttons allow you to map the texture as a mirror, or automatic flip of the image,
+      镜像
+         镜像 on X/Y axes. This buttons allow you to map the texture as a mirror, or automatic flip of the image,
          in the corresponding X and/or Y direction.
    Checker
       Checkerboards quickly made.

@@ -187,7 +187,7 @@
 </div>
 <p>You will learn here how to add (<a class="reference internal" href="#adding-bones">Adding Bones</a>), delete (<a class="reference internal" href="#deleting-bones">Deleting Bones</a>) or subdivide (<a class="reference internal" href="#subdividing-bones">Subdividing Bones</a>) bones.
 We will also see how to prevent any bone transformation (<a class="reference internal" href="#locking-bones">Locking Bones</a>) in <em>编辑模式</em>,
-and the option that features an automatic mirroring (<a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror 编辑</a>) of editing actions along the X axis.</p>
+and the option that features an automatic mirroring (<a class="reference internal" href="#x-axis-mirror-editing">X-Axis 镜像 编辑</a>) of editing actions along the X axis.</p>
 <div class="section" id="adding-bones">
 <h2>Adding Bones<a class="headerlink" href="#adding-bones" title="Permalink to this headline">¶</a></h2>
 <p>To add bones to your armature, you have more or less the same options as when editing meshes:</p>
@@ -256,7 +256,7 @@ as with meshes, by pressing respectively <code class="kbd docutils literal"><spa
 as well as <a class="reference internal" href="../../../editors/3dview/transform/transform_control/precision/axis_locking.html"><span class="doc">locked</span></a>
 extrusion along a global or local axis.</p>
 <table border="1" class="docutils" id="id4">
-<span id="fig-rig-bone-mirror"></span><caption><span class="caption-text">Mirror extrusion example</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<span id="fig-rig-bone-mirror"></span><caption><span class="caption-text">镜像 extrusion example</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -278,12 +278,12 @@ extrusion along a global or local axis.</p>
 <p>Bones have an extra &#8220;mirror extruding&#8221; tool, called by pressing <code class="kbd docutils literal"><span class="pre">Shift-E</span></code>.
 By default, it behaves exactly like the standard extrusion.
 But once you have enabled the X-Axis mirror editing option
-(see <a class="reference internal" href="#x-axis-mirror-editing">X-Axis Mirror 编辑</a>),
+(see <a class="reference internal" href="#x-axis-mirror-editing">X-Axis 镜像 编辑</a>),
 each extruded tip will produce <em>two new bones</em>, having the same name except for the &#8220;_L&#8221;/ &#8220;_R&#8221; suffix
 (for left/right, see the <a class="reference internal" href="properties.html#armature-editing-naming-conventions"><span class="std std-ref">next page</span></a>).
 The &#8220;_L&#8221; bone behaves like the single one produced by the default extrusion -
 you can grab/rotate/scale it exactly the same way.
-The &#8220;_R&#8221; bone is its mirror counterpart (along the armature&#8217;s local X axis), see Fig. <a class="reference internal" href="#fig-rig-bone-mirror"><span class="std std-ref">Mirror extrusion example</span></a>.</p>
+The &#8220;_R&#8221; bone is its mirror counterpart (along the armature&#8217;s local X axis), see Fig. <a class="reference internal" href="#fig-rig-bone-mirror"><span class="std std-ref">镜像 extrusion example</span></a>.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Cancelling the extrude action causes the newly created bones to snap back to the source position,
@@ -483,7 +483,7 @@ end to the 3D游标 position, and it won&#8217;t parent it to any bone in the ar
 </ul>
 </div>
 <div class="section" id="duplication">
-<h3>Duplication<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h3>
+<h3>复制<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -508,9 +508,9 @@ so the copied bones are interconnected exactly like the original ones.</p>
 bone, even if the root bone is not selected for the duplication. Be aware, though,
 that if a bone is parented <strong>and</strong> connected to an unselected bone,
 its copy will be parented, but <strong>not</strong> connected to the unselected bone
-(see Fig. <a class="reference internal" href="#fig-rig-bone-duplication"><span class="std std-ref">Duplication example</span></a>).</p>
+(see Fig. <a class="reference internal" href="#fig-rig-bone-duplication"><span class="std std-ref">复制 example</span></a>).</p>
 <table border="1" class="docutils" id="id23">
-<span id="fig-rig-bone-duplication"></span><caption><span class="caption-text">Duplication example</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
+<span id="fig-rig-bone-duplication"></span><caption><span class="caption-text">复制 example</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -663,7 +663,7 @@ the bones created from a subdivision always form a connected chain of bones.</p>
 <p>Then specify the number of cuts you want in the pop-up. As in mesh editing,
 if you set <em>n</em> cuts, you will get <em>n</em> + 1 bones for each selected bone.</p>
 <table border="1" class="docutils" id="id34">
-<caption><span class="caption-text">Subdivision example</span><a class="headerlink" href="#id34" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">细分 example</span><a class="headerlink" href="#id34" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -700,8 +700,8 @@ This means that in a chain of connected bones, when you lock one bone,
 you only really lock its tip. With unconnected bones, the locking is effective on both ends of the bone.</p>
 </div>
 <div class="section" id="x-axis-mirror-editing">
-<h2>X-Axis Mirror 编辑<a class="headerlink" href="#x-axis-mirror-editing" title="Permalink to this headline">¶</a></h2>
-<p>Another very useful tool is the <em>X-Axis Mirror</em> editing option by
+<h2>X-Axis 镜像 编辑<a class="headerlink" href="#x-axis-mirror-editing" title="Permalink to this headline">¶</a></h2>
+<p>Another very useful tool is the <em>X-Axis 镜像</em> editing option by
 <span class="menuselection">Tool panel ‣ Armature Options</span>, while Armature is selected in <em>编辑模式</em>.
 When you have pairs of bones of the same name with just a different &#8220;side suffix&#8221;
 (e.g. &#8221;.R&#8221;/&#8221;.L&#8221;, or &#8220;_right&#8221;/&#8221;_left&#8221; ...), once this option is enabled,

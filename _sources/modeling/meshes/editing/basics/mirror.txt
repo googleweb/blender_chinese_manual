@@ -1,10 +1,10 @@
 ..    TODO/Review: {{review|}}.
 
 **************
-Mirror 编辑
+镜像 编辑
 **************
 
-X-Mirror
+X-镜像
 ========
 
 .. admonition:: 参考
@@ -20,48 +20,48 @@ if there is its exact X-mirrored counterpart (in local space),
 it will be transformed accordingly, through a symmetry along the local X axis.
 
 
-Topology Mirror
+Topology 镜像
 ===============
 
-The *Topology Mirror* option is available in the
+The *Topology 镜像* option is available in the
 :menuselection:`3D视图 Editor --> Toolshelf Region --> Mesh Options Panel` while in *编辑模式*
 
 .. note::
 
-   For *Topology Mirror* to work the *X Mirror* option must be enabled.
+   For *Topology 镜像* to work the *X 镜像* option must be enabled.
 
 
-When using the *X Mirror* option to work on mirrored Mesh 几何体 the vertices that
+When using the *X 镜像* option to work on mirrored Mesh 几何体 the vertices that
 are mirrored must be perfectly placed. If they are not exactly positioned in their mirror
-locations then *X Mirror* will not treat those vertices as mirrored. This can be
+locations then *X 镜像* will not treat those vertices as mirrored. This can be
 annoying because often the out of position vertices are only very slightly out of position.
 
-*Topology Mirror* tries to solve this problem by determining which vertices are mirrored vertices not only by
+*Topology 镜像* tries to solve this problem by determining which vertices are mirrored vertices not only by
 using their positions but also by looking at how those vertices are related to others in the Mesh 几何体.
 It looks at the overall Mesh 几何体 topology to determine if particular vertices will be treated as mirrored.
 The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when
-*X Mirror* and *Topology Mirror* are both active.
+*X 镜像* and *Topology 镜像* are both active.
 
 .. note::
 
-   The *Topology Mirror* functionality will work more reliably on Mesh 几何体
+   The *Topology 镜像* functionality will work more reliably on Mesh 几何体
    which is more detailed. If you use very simple Mesh 几何体 such as a Cube or UV Sphere for
-   example the *Topology Mirror* option will often not work.
+   example the *Topology 镜像* option will often not work.
 
 
 例子
 -------
 
-For an example of how to use *Topology Mirror* open up a new Blender scene,
+For an example of how to use *Topology 镜像* open up a new Blender scene,
 then delete Blender's default cube and add a Monkey Object to the 3D视图.
 
 #. Press :kbd:`Tab` to put the Monkey Object into *编辑模式*.
-#. With the *X Mirror* option disabled move one of the Monkey Object's vertices slightly.
-#. Then Turn *X Mirror* option on again but leave *Topology Mirror* disabled
-#. If you now move that vertice again *X Mirror* will not work and the mirrored
+#. With the *X 镜像* option disabled move one of the Monkey Object's vertices slightly.
+#. Then Turn *X 镜像* option on again but leave *Topology 镜像* disabled
+#. If you now move that vertice again *X 镜像* will not work and the mirrored
    vertices will not be altered.
-#. If you then enable *Topology Mirror* and move the same vertices again,
-   then *X Mirror* should still mirror the other vertice,
+#. If you then enable *Topology 镜像* and move the same vertices again,
+   then *X 镜像* should still mirror the other vertice,
    even though they are not perfectly positioned.
 
 
@@ -137,14 +137,14 @@ Direction
           Mesh after Symmetrize.
 
 
-Mirroring 几何体
+镜像ing 几何体
 ==================
 
-See :doc:`Mirror </modeling/meshes/editing/deforming/mirror>` for information on mirroring,
+See :doc:`镜像 </modeling/meshes/editing/deforming/mirror>` for information on mirroring,
 which allows you to flip geometry across an axis.
 
 .. seealso::
 
    The conditions for X-mirror to work are quite strict, which can make it difficult to use.
    To have an exact mirrored version of a (half) mesh,
-   its easier and simpler to use the :doc:`Mirror modifier </modeling/modifiers/generate/mirror>`
+   its easier and simpler to use the :doc:`镜像 modifier </modeling/modifiers/generate/mirror>`

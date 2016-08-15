@@ -186,7 +186,7 @@ Keep
       This is done by moving all the other keypoints.
    Root
       Keep first key unmodified, so you cannot transplant hair.
-X Mirror
+X 镜像
    Enable mirror editing across the local x axis.
 
 Draw
@@ -224,13 +224,13 @@ setting in the Tool Shelf. Low settings produce blocky interpolation between poi
 while high settings produce a smooth curve.
 
 
-Mirroring Particles
+镜像ing Particles
 -------------------
 
 - If you want to create an X-Axis symmetrical haircut you have to do following steps:
   - Select all particles with :kbd:`A`.
-  - Mirror the particles with :kbd:`Ctrl-M`, or use the :menuselection:`Particle --> Mirror` menu.
-  - Turn on *X-Axis Mirror 编辑* in the *Particle* menu.
+  - 镜像 the particles with :kbd:`Ctrl-M`, or use the :menuselection:`Particle --> 镜像` menu.
+  - Turn on *X-Axis 镜像 编辑* in the *Particle* menu.
 
 It may happen that after mirroring two particles occupy nearly the same place.
 Since this would be a waste of memory and rendertime,
@@ -248,7 +248,7 @@ The particle in fact doesn't vanish, only the key points.
 Hidden particles (i.e. particles whose keypoints are hidden)
 do not react on the various brushes. But:
 
-If you use *Mirror 编辑* even particles with hidden keypoints may be moved,
+If you use *镜像 编辑* even particles with hidden keypoints may be moved,
 if their mirrored counterpart is moved.
 
 To un-hide all hidden particles press :kbd:`Alt-H`.

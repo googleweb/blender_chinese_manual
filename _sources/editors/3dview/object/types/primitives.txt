@@ -108,7 +108,7 @@ can be specified in the context panel in the *Tool Shelf* after the Icosphere is
 created. Icospheres are normally used to achieve a more isotropical and economical layout of
 vertices than a UV sphere.
 
-Subdivisions
+细分s
    How many recursions are used to define the sphere.
    Increasing the number of subdivisions makes the surface of the Icosphere smoother.
    At level 1 the Icosphere is an icosahedron, a solid with 20 equilateral triangular faces.
@@ -217,9 +217,9 @@ and other organic surfaces. You can also obtain a grid when you create a plane a
 subdivide modifier in *编辑模式*. However,
 there is a *Landscape* add-on available in the *用户首选项*.
 
-X Subdivisions
+X 细分s
    The number of spans in the x direction. Minimum of 3, creating two face loops.
-Y Subdivisions
+Y 细分s
    The number of spans in the y direction.
 Size
    The length of the sides of the grid.

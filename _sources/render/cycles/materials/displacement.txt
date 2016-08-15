@@ -36,7 +36,7 @@ Displacement + Bump
    Both methods can be combined, to do displacement on a coarser mesh, and use bump mapping for the final details.
 
 
-Subdivision
+细分
 ===========
 
 .. note::
@@ -47,7 +47,7 @@ Subdivision
 
    Bump Mapped Displacement.
 
-When using *True Displacement* or *Displacement + Bump* and enabling *Use Subdivision*
+When using *True Displacement* or *Displacement + Bump* and enabling *Use 细分*
 you can reduce the *Dicing Rate* to subdivide the mesh.
 This only affects the render and does not show in the viewport
 (but does show in *渲染ed Shading Mode*).
@@ -57,5 +57,5 @@ Displacement can also be done manually by use of the Displacement Modifier.
 .. figure:: /images/cycles-displacement-dicing.jpg
    :width: 567px
 
-   Subdivision Off - On, Dicing Rate 1.0 - 0.3 - 0.05 (Monkeys look identical in viewport, no modifiers).
+   细分 Off - On, Dicing Rate 1.0 - 0.3 - 0.05 (Monkeys look identical in viewport, no modifiers).
 

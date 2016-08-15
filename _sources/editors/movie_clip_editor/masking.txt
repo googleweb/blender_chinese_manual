@@ -80,7 +80,7 @@ Curve Handles
    - :kbd:`Alt-C` cycle toggle spline, to create a close curve or open it again
    - :kbd:`V` set handle type for selected spline points
    - :kbd:`Ctrl-N` make normals (handle directions) consistent
-   - Switch Direction handle directions in/out. 
+   - 切换方向 handle directions in/out. 
 
 .. _mask-feather:
 

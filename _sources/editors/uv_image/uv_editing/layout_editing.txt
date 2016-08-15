@@ -146,11 +146,11 @@ See :doc:`Proportional 编辑 in 3D </editors/3dview/transform/transform_control
 for full reference.
 
 
-Snapping
+吸附
 --------
 
-Snapping in UV is also similar to
-:doc:`Snapping in 3D </editors/3dview/transform/transform_control/precision/snap>`,
+吸附 in UV is also similar to
+:doc:`吸附 in 3D </editors/3dview/transform/transform_control/precision/snap>`,
 but only snapping to UVs works, however,
 the *Snap to Pixels* option in the *UVs Menu* will force the UVs to snap to the pixels of an image if loaded.
 
@@ -173,11 +173,11 @@ the *Weld* tool, :kbd:`W-1` will move selected UVs to their average position
 will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
 
 
-Mirror
+镜像
 ------
 
-Components can be mirrored on the Y axis or the X axis. You can select *Mirror X*
-and *Mirror Y* from the *Snap* sub menu in the *UV* menu.
+Components can be mirrored on the Y axis or the X axis. You can select *镜像 X*
+and *镜像 Y* from the *Snap* sub menu in the *UV* menu.
 
 You can also use the hotkey :kbd:`Ctrl-M`, then enter :kbd:`X` or :kbd:`Y`,
 or hold the :kbd:`MMB` and drag in the mirror direction.
@@ -198,7 +198,7 @@ The *Minimize Stretch* tool, :kbd:`Ctrl-V`,
 reduces UV stretch by minimizing angles. This essentially relaxes the UVs.
 
 
-Face Mirror and Rotate UVs
+Face 镜像 and Rotate UVs
 --------------------------
 
 The orientation of the UV Texture is defined by each face. 
@@ -206,7 +206,7 @@ If the image is, for example, upside down or laying on its side,
 use the :menuselection:`Face --> Rotate UVs` (in the 3D视图 in Face Select mode)
 menu to rotate the UVs per face in 90-degree turns.
 
-The :menuselection:`Face --> Mirror UVs` tool mirrors the UVs per face, 
+The :menuselection:`Face --> 镜像 UVs` tool mirrors the UVs per face, 
 which flips the image over, showing you the image reversed.
 
 
@@ -221,7 +221,7 @@ or the shortcut :kbd:`P`. You can *Unpin a UV* with the shorctut :kbd:`Alt-P`
 
 Pinning is most effective when using the Unwrap method of UV mapping, for organic objects.
 An example is when you are modeling a symmetrical object using the
-:doc:`Mirror Modifier </modeling/modifiers/generate/mirror>`.
+:doc:`镜像 Modifier </modeling/modifiers/generate/mirror>`.
 Some of the UVs on the mirror axis may be shared across the mirrored counterparts.
 You could pin the UVs that correspond to the midline, then align them on the X axis,
 and they will stay in that location.
@@ -338,10 +338,10 @@ like that shown to the right, arranged such that a single image will cover, or p
 all of the mesh that needs detailed painting.
 All of the detailed instructions on how to do this are contained in the next section.
 The point of this paragraph is to show you the ultimate goal.
-Note that the mesh shown is Mirrored along the Z axis,
+Note that the mesh shown is 镜像ed along the Z axis,
 so the right side of the face is virtual; it is an exact copy of the right,
 so only one set of UVs actually exist. (If more realism is desired,
-the *Mirror* modifier would be applied, resulting in a physical mirror and a complete head.
+the *镜像* modifier would be applied, resulting in a physical mirror and a complete head.
 You could then make both side physically different by editing one side and not the other.
 Unwrapping would produce a full set of UVs (for each side)
 and painting could thus be different for each side of the face, which is more realistic.)

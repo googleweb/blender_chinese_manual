@@ -17,7 +17,7 @@ Only the additional sockets are listed.
 Inputs
 ======
 
-Mirror
+镜像
    Color of mirrored reflection.
 Ambient
    Amount of global ambient color the material receives.

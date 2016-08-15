@@ -101,7 +101,7 @@ or the relevant option in the same :menuselection:`Metaball --> Hide MetaElems` 
 You can also un-toggle the *Hide* button in the (*MetaBall tools* panel).
 
 
-Deleting Elements
+删除元素
 =================
 
 There is no *Erase* menu for metas,

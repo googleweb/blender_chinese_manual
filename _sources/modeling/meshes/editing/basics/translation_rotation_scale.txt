@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|}}.
 
 ****************************
-Translation, Rotation, Scale
+移动, 旋转, 缩放
 ****************************
 
 .. admonition:: 参考

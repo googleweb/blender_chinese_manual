@@ -53,7 +53,7 @@ This creates the trade-off between using memory and CPU time versus render quali
 From best to worst, displacement works with these object types using the methods listed to
 control the render face size:
 
-:doc:`Subdivision Surface </modeling/modifiers/generate/subsurf>` *网格*
+:doc:`细分 Surface </modeling/modifiers/generate/subsurf>` *网格*
    渲染ed face size is controlled with render subsurf level. Displacement really likes smooth normals.
 Manually ( *编辑模式* ) :doc:`subdivided </modeling/meshes/editing/subdividing/subdivide>` meshes
    Control render faces with number of subdivides.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mirror 编辑 &mdash; Blender参考手册</title>
+  <title>镜像 编辑 &mdash; Blender参考手册</title>
   
 
   
@@ -173,7 +173,7 @@
       
           <li><a href="index.html">Basics</a> &raquo;</li>
       
-    <li>Mirror 编辑</li>
+    <li>镜像 编辑</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -188,9 +188,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mirror-editing">
-<h1>Mirror 编辑<a class="headerlink" href="#mirror-editing" title="Permalink to this headline">¶</a></h1>
+<h1>镜像 编辑<a class="headerlink" href="#mirror-editing" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="x-mirror">
-<h2>X-Mirror<a class="headerlink" href="#x-mirror" title="Permalink to this headline">¶</a></h2>
+<h2>X-镜像<a class="headerlink" href="#x-mirror" title="Permalink to this headline">¶</a></h2>
 <div class="refbox admonition">
 <p class="first admonition-title">参考</p>
 <div class="last line-block">
@@ -204,40 +204,40 @@ if there is its exact X-mirrored counterpart (in local space),
 it will be transformed accordingly, through a symmetry along the local X axis.</p>
 </div>
 <div class="section" id="topology-mirror">
-<h2>Topology Mirror<a class="headerlink" href="#topology-mirror" title="Permalink to this headline">¶</a></h2>
-<p>The <em>Topology Mirror</em> option is available in the
+<h2>Topology 镜像<a class="headerlink" href="#topology-mirror" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Topology 镜像</em> option is available in the
 <span class="menuselection">3D视图 Editor ‣ Toolshelf Region ‣ Mesh Options Panel</span> while in <em>编辑模式</em></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For <em>Topology Mirror</em> to work the <em>X Mirror</em> option must be enabled.</p>
+<p class="last">For <em>Topology 镜像</em> to work the <em>X 镜像</em> option must be enabled.</p>
 </div>
-<p>When using the <em>X Mirror</em> option to work on mirrored Mesh 几何体 the vertices that
+<p>When using the <em>X 镜像</em> option to work on mirrored Mesh 几何体 the vertices that
 are mirrored must be perfectly placed. If they are not exactly positioned in their mirror
-locations then <em>X Mirror</em> will not treat those vertices as mirrored. This can be
+locations then <em>X 镜像</em> will not treat those vertices as mirrored. This can be
 annoying because often the out of position vertices are only very slightly out of position.</p>
-<p><em>Topology Mirror</em> tries to solve this problem by determining which vertices are mirrored vertices not only by
+<p><em>Topology 镜像</em> tries to solve this problem by determining which vertices are mirrored vertices not only by
 using their positions but also by looking at how those vertices are related to others in the Mesh 几何体.
 It looks at the overall Mesh 几何体 topology to determine if particular vertices will be treated as mirrored.
 The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when
-<em>X Mirror</em> and <em>Topology Mirror</em> are both active.</p>
+<em>X 镜像</em> and <em>Topology 镜像</em> are both active.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The <em>Topology Mirror</em> functionality will work more reliably on Mesh 几何体
+<p class="last">The <em>Topology 镜像</em> functionality will work more reliably on Mesh 几何体
 which is more detailed. If you use very simple Mesh 几何体 such as a Cube or UV Sphere for
-example the <em>Topology Mirror</em> option will often not work.</p>
+example the <em>Topology 镜像</em> option will often not work.</p>
 </div>
 <div class="section" id="example">
 <h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>For an example of how to use <em>Topology Mirror</em> open up a new Blender scene,
+<p>For an example of how to use <em>Topology 镜像</em> open up a new Blender scene,
 then delete Blender&#8217;s default cube and add a Monkey Object to the 3D视图.</p>
 <ol class="arabic simple">
 <li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to put the Monkey Object into <em>编辑模式</em>.</li>
-<li>With the <em>X Mirror</em> option disabled move one of the Monkey Object&#8217;s vertices slightly.</li>
-<li>Then Turn <em>X Mirror</em> option on again but leave <em>Topology Mirror</em> disabled</li>
-<li>If you now move that vertice again <em>X Mirror</em> will not work and the mirrored
+<li>With the <em>X 镜像</em> option disabled move one of the Monkey Object&#8217;s vertices slightly.</li>
+<li>Then Turn <em>X 镜像</em> option on again but leave <em>Topology 镜像</em> disabled</li>
+<li>If you now move that vertice again <em>X 镜像</em> will not work and the mirrored
 vertices will not be altered.</li>
-<li>If you then enable <em>Topology Mirror</em> and move the same vertices again,
-then <em>X Mirror</em> should still mirror the other vertice,
+<li>If you then enable <em>Topology 镜像</em> and move the same vertices again,
+then <em>X 镜像</em> should still mirror the other vertice,
 even though they are not perfectly positioned.</li>
 </ol>
 </div>
@@ -326,14 +326,14 @@ and either positive to negative, or negative to positive.</dd>
 </table>
 </div>
 <div class="section" id="mirroring-geometry">
-<h2>Mirroring 几何体<a class="headerlink" href="#mirroring-geometry" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../deforming/mirror.html"><span class="doc">Mirror</span></a> for information on mirroring,
+<h2>镜像ing 几何体<a class="headerlink" href="#mirroring-geometry" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="../deforming/mirror.html"><span class="doc">镜像</span></a> for information on mirroring,
 which allows you to flip geometry across an axis.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">The conditions for X-mirror to work are quite strict, which can make it difficult to use.
 To have an exact mirrored version of a (half) mesh,
-its easier and simpler to use the <a class="reference internal" href="../../../modifiers/generate/mirror.html"><span class="doc">Mirror modifier</span></a></p>
+its easier and simpler to use the <a class="reference internal" href="../../../modifiers/generate/mirror.html"><span class="doc">镜像 modifier</span></a></p>
 </div>
 </div>
 </div>

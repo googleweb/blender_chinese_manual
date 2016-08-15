@@ -7,10 +7,10 @@ DupliGroup
    :class: refbox
 
    | Mode:     物体模式
-   | Panel:    :menuselection:`Object --> Duplication --> Group`
+   | Panel:    :menuselection:`Object --> 复制 --> Group`
 
 
-*Duplication Group* or *DupliGroup* allows you to create an instance of a group for each instance of another object.
+*复制 Group* or *DupliGroup* allows you to create an instance of a group for each instance of another object.
 
 *DupliGroups* may contain animations, objects with physics simulations and even other nested *DupliGroups*.
 
@@ -25,7 +25,7 @@ Create a Group:
 Create a new Group Instance:
    - :menuselection:`Add --> Group Instance`
 Change the Group Instance of existing objects:
-   - In the properties editor: :menuselection:`Object --> Duplication`, enable *Group*.
+   - In the properties editor: :menuselection:`Object --> 复制`, enable *Group*.
    - Select the name of your newly created group.
 
 At this point, an instance of the group will appear. You can duplicate the empty,

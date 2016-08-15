@@ -236,7 +236,7 @@ Note on Divisions and High Resolution
 =====================================
 
 :ref:`High Resolution Divisions <smoke-high-resolution>`
-and :ref:`Domain Subdivisions <smoke-resolution>` are not equivalent.
+and :ref:`Domain 细分s <smoke-resolution>` are not equivalent.
 By using different combinations of these resolution settings you can obtain a variety of different styles of smoke.
 
 .. figure:: /images/smoke_domain_high_resolution_comparison.jpg

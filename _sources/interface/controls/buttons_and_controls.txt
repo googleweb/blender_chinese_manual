@@ -353,7 +353,7 @@ The pie menu is spawned by a key press.
 - :kbd:`Tab` Interaction Mode
 - :kbd:`Z` Shade and solid or smooth shading
 - :kbd:`Q` View directions and perspective or ortho. and camera
-- :kbd:`Tab-Shift-Ctrl` Snapping
+- :kbd:`Tab-Shift-Ctrl` 吸附
 - :kbd:`.` Pivot
 - :kbd:`Ctrl-Space` Manipulator
 

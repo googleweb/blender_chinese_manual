@@ -107,7 +107,7 @@ You have to confine the movement of vertices in certain parts of the mesh, e.g.
 to attach a Soft Body object at other objects. This is done with the *Vertex Group*
 (target). The target position is the original position of the vertex, like it would result
 from the "normal" animation of an object including *Shape Keys*,
-*Hooks* and *Armatures*.
+*挂钩* and *Armatures*.
 The vertex tries to reach it's target position with a certain, adjustable intensity.
 
 .. _fig-softbody-force-exterior-shock:

@@ -1,6 +1,6 @@
 
 ***********
-Duplication
+复制
 ***********
 
 There are two types of object duplication,
@@ -132,7 +132,7 @@ Linked duplicates also apply to a set of drinking glasses,
 wheels on a car... anywhere there is repetition or symmetry.
 
 
-Procedural Duplication
+Procedural 复制
 ======================
 
 .. admonition:: 参考
@@ -175,7 +175,7 @@ If you do not want the objects to be shared between the scenes, you can make the
 Further information on working with scenes can be found :doc:`here </data_system/scenes>`.
 
 
-Linked Library Duplication
+Linked Library 复制
 ==========================
 
 .. admonition:: 参考

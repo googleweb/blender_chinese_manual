@@ -1,9 +1,9 @@
 
 ******************
-Mirror Reflections
+镜像 Reflections
 ******************
 
-Mirror reflections are computed in the Blender 渲染 and Cycles render engines using ray
+镜像 reflections are computed in the Blender 渲染 and Cycles render engines using ray
 tracing. (NB: Reflections are not available in the 游戏引擎.)
 Ray tracing can be used to make a material reflect its surroundings, like a mirror.
 The principle of ray-traced reflections is very simple:
@@ -38,7 +38,7 @@ Options
 
 .. figure:: /images/material-mirrorpanel.jpg
 
-   The Mirror Panel.
+   The 镜像 Panel.
 
 
 Enable ray-traced reflections
@@ -58,7 +58,7 @@ Color swatch
    will reflect the exact colors of its surrounding.
    But some other equally reflective materials tint the reflections with their own color.
    This is the case for well-polished copper and gold, for example. In order to replicate this within Blender,
-   you have to set the Mirror Color accordingly. To set a mirror color,
+   you have to set the 镜像 Color accordingly. To set a mirror color,
    simply click the color swatch in the mirror panel and select a color.
 Fresnel
    Sets the power of the Fresnel effect. The Fresnel effect controls how reflective the material is,
@@ -84,7 +84,7 @@ Fade to
 .. figure:: /images/material-raymirror-example.jpg
 
    Suzanne in the Fun House
-   (`blend-file <https://wiki.blender.org/index.php/:File:Manual-2.5-Material-MonkeyMirror.blend>`__)
+   (`blend-file <https://wiki.blender.org/index.php/:File:Manual-2.5-Material-Monkey镜像.blend>`__)
 
 
 Gloss
@@ -110,7 +110,7 @@ Gloss
 .. figure:: /images/material-raymirror-anisotropicexample.jpg
 
    Anisotropic tangent reflecting spheres with anisotropic set to 0.0, 0.75, 1.0.
-   (`.blend <https://wiki.blender.org/index.php/:File:Manual-2.5-Material-Mirror-anisotropic-example.blend>`__)
+   (`.blend <https://wiki.blender.org/index.php/:File:Manual-2.5-Material-镜像-anisotropic-example.blend>`__)
 
 
    Anisotropic
@@ -148,7 +148,7 @@ according to the viewing angle and the surface normal.
 
 In *Demonstration of Fresnel effect with values equal to (from top to bottom) 0.0,
 2.5 and 5.0*, this behavior is demonstrated for a perfectly reflective Material
-(Mirror Reflectivity 1.0).
+(镜像 Reflectivity 1.0).
 
 Fresnel 0.0 stands for a perfect mirror Material, while Fresnel 5.
 0 could stand for a glossy Material. It's barely noticeable but in the lower picture,

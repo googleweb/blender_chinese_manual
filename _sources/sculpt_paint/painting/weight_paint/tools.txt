@@ -72,7 +72,7 @@ All vertices keep their relative weights,
 but the entire set of weights is scaled up such that the highest weight value is 1.0
 
 
-Mirror
+镜像
 ======
 
 .. figure:: /images/modeling-meshes-wp-tools-mirror.jpg
@@ -91,19 +91,19 @@ Operator Parameters
 
 .. figure:: /images/modeling-meshes-wp-tools-mirror-options.jpg
 
-   Mirror Options.
+   镜像 Options.
 
 
-Mirror Weights
-   Mirrors the weights of the active group to the other side. Note, this only affects the active weight group.
+镜像 Weights
+   镜像s the weights of the active group to the other side. Note, this only affects the active weight group.
 Flip Group Names
    Exchange the names of left and right side. This option only renames the groups.
 All Groups
    Operate on all selected bones.
-Topology Mirror
-   Mirror for meshes which are not 100% symmetric (approximate mirror).
+Topology 镜像
+   镜像 for meshes which are not 100% symmetric (approximate mirror).
 
-.. tip:: Mirror to opposite bone
+.. tip:: 镜像 to opposite bone
 
    If you want to create a mirrored weight group for the opposite bone (of a symmetric character),
    then you can do this:
@@ -111,8 +111,8 @@ Topology Mirror
    - Delete the target Vertex Group (where the mirrored weights will be placed)
    - Create a copy of the source bone Vertex Group (the group containing the weights which you want to copy)
    - Rename the new Vertex Group to the name of the target Vertex Group (the group you deleted above)
-   - Select the Target Vertex Group and call the Mirror tool
-     (use only the Mirror weights option and optionally Topology Mirror if your mesh is not symmetric)
+   - Select the Target Vertex Group and call the 镜像 tool
+     (use only the 镜像 weights option and optionally Topology 镜像 if your mesh is not symmetric)
 
 
 Invert

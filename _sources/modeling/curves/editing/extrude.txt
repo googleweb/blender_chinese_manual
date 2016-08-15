@@ -118,7 +118,7 @@ Closed 2D Curve
    It will make the ribbon twist around the curve to create a mobius strip, for example.
 
 
-高级应用 Extrusion
+高级挤出应用
 ------------------
 
 These extrusions use one or two additional curve objects,

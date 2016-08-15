@@ -36,7 +36,7 @@ The mesh tools are found in various places, and available through shortcuts as w
        - Translate
        - Rotate
        - Scale
-       - Mirror
+       - 镜像
        - Shrink/Flatten/Along Normal
        - Push/Pull
        - To Sphere

@@ -1,21 +1,21 @@
 ..    TODO/Review: {{review|}}.
 
 ******
-Mirror
+镜像
 ******
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Mirror --> Desired Axis`
+   | Menu:     :menuselection:`Mesh --> 镜像 --> Desired Axis`
    | Hotkey:   :kbd:`Ctrl-M`
 
 
 The mirror tool mirrors a selection across a selected axis.
 
 The mirror tool in *编辑模式* is similar to
-:doc:`Mirroring in 物体模式 </modeling/meshes/editing/duplicating/mirror>`.
+:doc:`镜像ing in 物体模式 </modeling/meshes/editing/duplicating/mirror>`.
 It is exactly equivalent to scaling by -1 vertices,
 edges or faces around one chosen 轴心点 and in the direction of one chosen axis, only it is faster/handier.
 
@@ -52,7 +52,7 @@ This is a special case of the *编辑模式* as explained on the
 
 .. _fig-mesh-deform-mirror-center:
 
-.. list-table:: Mirror around the Individual Centers
+.. list-table:: 镜像 around the Individual Centers
 
    * - .. figure:: /images/mirrortool1.jpg
           :width: 300px
@@ -71,7 +71,7 @@ and the axis of transformation is X.
 
 .. _fig-mesh-deform-mirror-cursor:
 
-.. list-table:: Mirror around the 3D游标
+.. list-table:: 镜像 around the 3D游标
 
    * - .. figure:: /images/mirrortool3.jpg
           :width: 300px

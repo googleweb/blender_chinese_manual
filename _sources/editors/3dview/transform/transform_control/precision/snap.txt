@@ -1,6 +1,6 @@
 
 ********
-Snapping
+吸附
 ********
 
 There are two types of snap operations that you can use in Blender. The first type snaps your
@@ -35,7 +35,7 @@ Cursor to Active
 
 .. _transform-snap:
 
-变换 Snapping
+变换 吸附
 ==================
 
 The ability to snap Objects and Mesh element to various types of scene elements during a
@@ -76,7 +76,7 @@ Increment
    .. note::
 
       In this context the grid does not mean the visual grid cue displayed.
-      Snapping will use the resolution of the displayed grid,
+      吸附 will use the resolution of the displayed grid,
       but all transformations are relative to the initial position (before the snap operation).
 
 
@@ -157,7 +157,7 @@ Multiple Snap Targets
    Multiple snapping targets.
 
 
-Once transforming a selection with Snapping on (not just when holding :kbd:`Ctrl`),
+Once transforming a selection with 吸附 on (not just when holding :kbd:`Ctrl`),
 you can press :kbd:`A` to mark the current snapping point, then proceed to mark as many other
 snapping points as you wish and the selection will be snapped to the average location of all
 the marked points.

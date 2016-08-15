@@ -18,7 +18,7 @@ According to Snell's Law, light striking a specular surface will be reflected at
 incident light angle (with regard to the surface's normal), which makes the viewing angle very important.
 
 
-.. tip:: Not a Mirror!
+.. tip:: Not a 镜像!
 
    It is important to stress that the *specular reflection*
    phenomenon discussed here is not the reflection we would see in a mirror,

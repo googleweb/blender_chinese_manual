@@ -9,7 +9,7 @@ common points with it... So this page covers (or tries to cover) all the subject
 from the basics of surface editing to more advanced topics, like retopology.
 
 
-Translation, Rotation, Scale
+移动, 旋转, 缩放
 ----------------------------
 
 .. admonition:: 参考
@@ -94,7 +94,7 @@ row is selected - otherwise nothing happens.
 As for curves, you cannot create a new surface in your object out of nowhere,
 by just :kbd:`Ctrl-LMB` - clicking with nothing selected.
 However, unlike for curves, there is no "cut" option allowing you to separate a surface into several parts,
-so you only can create a new surface by copying (`Duplication`_) an existing one
+so you only can create a new surface by copying (`复制`_) an existing one
 :kbd:`Shift-D`, or adding a new one with the *Add* menu.
 
 
@@ -160,10 +160,10 @@ The corresponding surface's outer edges will join together to form a "closed" su
    Surfaces have an "inner" and "outer" face, the first being black whereas the latter is correctly shaded -
    there does not seem to be any "double sided" shading option for surfaces...).
    When you close a surface in one or two directions, you might get an entirely black object! In this case,
-   just `Switch Direction`_ of your surface...
+   just `切换方向`_ of your surface...
 
 
-Duplication
+复制
 -----------
 
 .. admonition:: 参考
@@ -194,7 +194,7 @@ only selections forming a *single* valid sub-grid are copyable; let us see this 
    at once won't work; you will have to do it one after the other...
 
 
-Deleting Elements
+删除元素
 -----------------
 
 .. admonition:: 参考
@@ -246,7 +246,7 @@ Joining or Merging Surfaces
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> Make Segment`
+   | Menu:     :menuselection:`Surface --> 创建段`
    | Hotkey:   :kbd:`F`
 
 Just like :ref:`curves <modeling-curves-joining-segments>`,
@@ -291,7 +291,7 @@ Fig. Joining complete is the result of joining the two curves.
    Joining ready and Joining complete.
 
 
-Subdivision
+细分
 -----------
 
 .. admonition:: 参考
@@ -333,15 +333,15 @@ automatically adjusting the weights of control points to get a perfect circular 
 as for the *NURBS Tube* or *NURBS Donut* primitives.
 
 
-Switch Direction
+切换方向
 ----------------
 
 .. admonition:: 参考
    :class: refbox
 
    | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> Segments --> Switch Direction`,
-     :menuselection:`Specials --> Switch Direction`
+   | Menu:     :menuselection:`Surface --> Segments --> 切换方向`,
+     :menuselection:`Specials --> 切换方向`
 
 
 This command will "reverse" the direction of any curve with at least one selected element 
@@ -385,5 +385,5 @@ of one or three control points
 :kbd:`Ctrl-P`,
 or :doc:`add hooks </modeling/modifiers/deform/hooks>` to control some points with other objects.
 
-The *Mirror* tool is also available, behaving exactly as with
+The *镜像* tool is also available, behaving exactly as with
 :doc:`mesh vertices </modeling/meshes/editing/basics/mirror>`.

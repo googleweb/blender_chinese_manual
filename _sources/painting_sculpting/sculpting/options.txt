@@ -207,8 +207,8 @@ intensity of the brush from its centre (left part of the curve) towards its bord
 Symmetry Panel
 --------------
 
-Mirror
-  Mirror the brush strokes across the selected local axes.
+镜像
+  镜像 the brush strokes across the selected local axes.
   Note that if you want to alter the directions the axes point in,
   you must rotate the model in *编辑模式*, not *物体模式*
 Radial

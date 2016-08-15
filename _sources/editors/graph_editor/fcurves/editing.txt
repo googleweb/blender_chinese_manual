@@ -20,7 +20,7 @@ For precise control of the keyframe position and value,
 you can set values in the *Active Keyframe* of the Properties Region.
 
 
-变换 Snapping
+变换 吸附
 ==================
 
 When transforming keyframes with :kbd:`G`, :kbd:`R`, :kbd:`S`,
@@ -60,23 +60,23 @@ Snap Keys :kbd:`Shift-S`
                 After Flatten Handles.
 
 
-Mirror
+镜像
 ======
 
-Selected keyframes can be mirrored over different properties using the *Mirror Keys*
+Selected keyframes can be mirrored over different properties using the *镜像 Keys*
 tool.
 
-Mirror Keys :kbd:`Shift-M`
+镜像 Keys :kbd:`Shift-M`
    By Times Over Current Frame
-      Mirror horizontally over the *Time Cursor*.
+      镜像 horizontally over the *Time Cursor*.
    By Values over Cursor Value
-      Mirror vertically over the *Cursor*.
+      镜像 vertically over the *Cursor*.
    By Times over Time 0
-      Mirror horizontally over frame 0.
+      镜像 horizontally over frame 0.
    By Values over Value 0
-      Mirror vertically over value 0.
+      镜像 vertically over value 0.
    By Times over First Selected Marker
-      Mirror horizontally the over the first selected *Marker*.
+      镜像 horizontally the over the first selected *Marker*.
 
 
 Clean Keyframes

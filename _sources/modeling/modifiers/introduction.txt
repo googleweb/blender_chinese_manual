@@ -113,7 +113,7 @@ and is also found in several other 3D applications.
 In a modifier stack the order in which modifiers are applied has an effect on the result.
 Fortunately modifiers can be rearranged easily by clicking the convenient up and down arrow icons.
 For example, the image below shows :doc:`SubSurf </modeling/modifiers/generate/subsurf>` and
-:doc:`Mirror </modeling/modifiers/generate/mirror>` modifiers that have switched places.
+:doc:`镜像 </modeling/modifiers/generate/mirror>` modifiers that have switched places.
 
 .. list-table::
    Modifier Stack example
@@ -121,7 +121,7 @@ For example, the image below shows :doc:`SubSurf </modeling/modifiers/generate/s
    * - .. figure:: /images/modifier-stackorder-example2.jpg
           :width: 300px
 
-          The Mirror modifier is the last item in the stack and
+          The 镜像 modifier is the last item in the stack and
           the result looks like two surfaces.
 
      - .. figure:: /images/modifier-stackorder-examp1e1.jpg
