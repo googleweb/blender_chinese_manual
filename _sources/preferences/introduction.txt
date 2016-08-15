@@ -76,9 +76,9 @@ then save the preferences via the *用户首选项* editor.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Menu:     :menuselection:`File --> Save 启动文件`
-   | Hotkey:   :kbd:`Ctrl-U`
+   | 模式:     All modes
+   | 菜单:     :menuselection:`File --> Save 启动文件`
+   | 快捷键:   :kbd:`Ctrl-U`
 
 
 When you start Blender or start a new project with the menu entry :menuselection:`File --> New`,

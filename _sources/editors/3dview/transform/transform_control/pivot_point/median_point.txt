@@ -7,9 +7,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式 and 编辑模式
-   | Menu:     Select from the |pivot-icon| icon in the 3D视图 header.
-   | Hotkey:   :kbd:`Ctrl-,`
+   | 模式:     物体模式 and 编辑模式
+   | 菜单:     Select from the |pivot-icon| icon in the 3D视图 header.
+   | 快捷键:   :kbd:`Ctrl-,`
 
 
 The 质心点 can be considered to be broadly similar to the concept of Center

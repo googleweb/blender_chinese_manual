@@ -25,9 +25,9 @@ it is very useful when you need to smoothly deform the surface of a dense mesh.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     Via the |prop-edit-icon| icon in the header indicated by the yellow square in the below image.
-   | Hotkey:   :kbd:`O`
+   | 模式:     物体模式
+   | 菜单:     Via the |prop-edit-icon| icon in the header indicated by the yellow square in the below image.
+   | 快捷键:   :kbd:`O`
 
 
 Proportional editing is typically used in *编辑模式*, however,
@@ -50,9 +50,9 @@ the other two cubes follow the movement.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Proportional 编辑` and via the |prop-edit-edit-mode-icon| highlighted icon
-   | Hotkey:   :kbd:`O`, :kbd:`Alt-O`, :kbd:`Shift-O`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Proportional 编辑` and via the |prop-edit-edit-mode-icon| highlighted icon
+   | 快捷键:   :kbd:`O`, :kbd:`Alt-O`, :kbd:`Shift-O`
 
 
 When working with dense geometry, it can become difficult to make subtle adjustments to the

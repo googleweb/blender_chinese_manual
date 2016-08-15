@@ -7,8 +7,8 @@ Exposure and Range
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Panel:    :menuselection:`渲染 Layer --> Color management`
+   | 模式:     All modes
+   | 面板:    :menuselection:`渲染 Layer --> Color management`
 
 
 *Exposure* and *Range* are similar to the "Color 曲线" tool in Gimp or Photoshop.

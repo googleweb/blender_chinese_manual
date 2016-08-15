@@ -7,9 +7,9 @@ Mesh Primitives
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Add --> Mesh`
-   | Hotkey:   :kbd:`Shift-A`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Add --> Mesh`
+   | 快捷键:   :kbd:`Shift-A`
 
 
 A common object type used in a 3D scene is a mesh.

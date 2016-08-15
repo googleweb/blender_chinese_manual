@@ -6,8 +6,8 @@ Color Ramps
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Ramps`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Ramps`
 
 
 In many real life situations - like skin or metals -

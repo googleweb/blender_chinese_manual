@@ -6,8 +6,8 @@ Bones
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式, 编辑模式 and 姿态模式
-   | Panel:    All in Properties editor, *Bone* property
+   | 模式:     物体模式, 编辑模式 and 姿态模式
+   | 面板:    All in Properties editor, *Bone* property
 
 
 Let us first have a general grasp of the various panels gathering the bone settings,

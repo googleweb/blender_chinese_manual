@@ -10,9 +10,9 @@ Make Edge/Face
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Edges --> Make Edge/Face`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Edges --> Make Edge/Face`
+   | 快捷键:   :kbd:`F`
 
 
 It will create an edge or some faces, depending on your selection.
@@ -32,8 +32,8 @@ Mark Seam and Clear Seam
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
 
 Seams are a way to create separations, "islands", in UV maps.
 See the :ref:`UVTexturing section <editors-uv_image-index>` for more details.
@@ -46,8 +46,8 @@ Mark Sharp and Clear Sharp
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
 
 The *Sharp* flag is used by the :doc:`EdgeSplit modifier </modeling/modifiers/generate/edge_split>`,
 which is part of the smoothing technics.
@@ -60,8 +60,8 @@ Adjust Bevel Weight
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Edge Bevel Weight`
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Edge Bevel Weight`
 
 
 This edge property, a value between (0.0 to 1.0),
@@ -77,9 +77,9 @@ Crease SubSurf
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Crease SubSurf`
-   | Hotkey:   :kbd:`Shift-E`
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Crease SubSurf`
+   | 快捷键:   :kbd:`Shift-E`
 
 
 This edge property, a value between (0.0 to 1.0), is used by the
@@ -99,9 +99,9 @@ Edge Slide
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Slide Edge` (or the same option in *Edge Specials* menu)
-   | Hotkey:   :kbd:`G`, :kbd:`G`
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Slide Edge` (or the same option in *Edge Specials* menu)
+   | 快捷键:   :kbd:`G`, :kbd:`G`
 
 
 Slides one or more edges across adjacent faces with a few restrictions involving the selection
@@ -220,8 +220,8 @@ Rotate Edge
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Rotate Edge CW / Rotate Edge CCW`
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Edges --> Rotate Edge CW / Rotate Edge CCW`
 
 
 Rotating an edge clockwise or counter-clockwise spins an edge between two faces around their
@@ -258,9 +258,9 @@ Delete Edge Loop
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Vertex or Edge select modes)
-   | Menu:     :menuselection:`Mesh --> Delete --> Edge Loop`
-   | Hotkey:   :kbd:`X` or :kbd:`Delete`, :menuselection:`Edge Loop`
+   | 模式:     编辑模式 (Vertex or Edge select modes)
+   | 菜单:     :menuselection:`Mesh --> Delete --> Edge Loop`
+   | 快捷键:   :kbd:`X` or :kbd:`Delete`, :menuselection:`Edge Loop`
 
 
 *Delete Edge Loop* allows you to delete a selected edge loop if it is between two other edge loops.
@@ -302,9 +302,9 @@ Collapse
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Delete --> Edge Collapse`
-   | Hotkey:   :kbd:`Alt-M`, :menuselection:`Collapse`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Delete --> Edge Collapse`
+   | 快捷键:   :kbd:`Alt-M`, :menuselection:`Collapse`
 
 
 This takes a selection of edges and for each edge, merges its two vertices together.
@@ -330,8 +330,8 @@ Edge Split
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Edges --> Edge Split`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Edges --> Edge Split`
 
 
 *Edge split* is similar to the rip tool. When two or more touching interior edges,
@@ -359,8 +359,8 @@ Bridge Edge Loops
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Edges --> Bridge Edge Loops`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Edges --> Bridge Edge Loops`
 
 
 *Bridge Edge Loops* connects multiple edge loops with faces.

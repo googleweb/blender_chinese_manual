@@ -58,8 +58,8 @@ Interpolation Mode
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`Curve --> Interpolation Mode`
-   | Hotkey:   :kbd:`T`
+   | 菜单:     :menuselection:`Curve --> Interpolation Mode`
+   | 快捷键:   :kbd:`T`
 
 
 You have three choices:
@@ -106,8 +106,8 @@ Extrapolation
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`Channel --> Extrapolation Mode`
-   | Hotkey:   :kbd:`Shift-E`
+   | 菜单:     :menuselection:`Channel --> Extrapolation Mode`
+   | 快捷键:   :kbd:`Shift-E`
 
 
 Extrapolation defines the behavior of a curve before the first and after the last keyframes.
@@ -319,8 +319,8 @@ Smoothing
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`Key --> Smooth Keys`
-   | Hotkey:   :kbd:`Alt-O`
+   | 菜单:     :menuselection:`Key --> Smooth Keys`
+   | 快捷键:   :kbd:`Alt-O`
 
 
 There is also an option to smooth the selected curves , but beware: its algorithm seems to be

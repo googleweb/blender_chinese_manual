@@ -32,8 +32,8 @@ Shape Keys Panel
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Panel:    :menuselection:`Properties editor --> Object Data --> Shape Keys`
+   | 模式:     All modes
+   | 面板:    :menuselection:`Properties editor --> Object Data --> Shape Keys`
 
 
 .. figure:: /images/shape_keys3.jpg

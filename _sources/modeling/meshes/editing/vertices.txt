@@ -17,10 +17,10 @@ Merging Vertices
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`,
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Merge...`,
      :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
-   | Hotkey:   :kbd:`Alt-M`
+   | 快捷键:   :kbd:`Alt-M`
 
 
 This tool allows you to merge all selected vertices to an unique one, deleting all others. You
@@ -56,8 +56,8 @@ AutoMerge 编辑
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> AutoMerge 编辑`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> AutoMerge 编辑`
 
 
 The *Mesh* menu as a related toggle option: *AutoMerge 编辑*.
@@ -72,11 +72,11 @@ Remove Doubles
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
      :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
-   | Hotkey:   :kbd:`W` :menuselection:`--> Remove Doubles` or :menuselection:`Mesh --> Vertices --> Remove doubles`
+   | 快捷键:   :kbd:`W` :menuselection:`--> Remove Doubles` or :menuselection:`Mesh --> Vertices --> Remove doubles`
 
 
 Remove Doubles is a useful tool to simplify a mesh by merging vertices that
@@ -99,9 +99,9 @@ Rip
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Rip`
-   | Hotkey:   :kbd:`V`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Rip`
+   | 快捷键:   :kbd:`V`
 
 
 Rip creates a "hole" into a mesh by making a copy of selected vertices and edges,
@@ -162,9 +162,9 @@ Rip Fill
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Rip Fill`
-   | Hotkey:   :kbd:`Alt-V`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Rip Fill`
+   | 快捷键:   :kbd:`Alt-V`
 
 
 Rip fill works the same as the Rip tool above, but instead of leaving a hole,
@@ -189,9 +189,9 @@ Split
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Split`
-   | Hotkey:   :kbd:`Y`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Split`
+   | 快捷键:   :kbd:`Y`
 
 
 A quite specific tool, it makes a sort of copy of the selection,
@@ -211,9 +211,9 @@ Separate
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Separate`
-   | Hotkey:   :kbd:`P`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Separate`
+   | 快捷键:   :kbd:`P`
 
 
 This will separate the selection in another mesh object,
@@ -226,9 +226,9 @@ Connect Vertex Path
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Connect Vertex Path`
-   | Hotkey:   :kbd:`J`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Connect Vertex Path`
+   | 快捷键:   :kbd:`J`
 
 This tool connects vertices in the order they're selected, splitting the faces between them.
 
@@ -254,8 +254,8 @@ Connect Vertices
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Connect Vertices`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Connect Vertices`
 
 
 This tool connects selected vertices by creating edges between them and splitting the face.
@@ -290,10 +290,10 @@ Vertex Slide
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Slide`
-   | Hotkey:   :kbd:`Shift-V`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Vertex Slide`
+   | 快捷键:   :kbd:`Shift-V`
 
 
 Vertex Slide will transform a vertex along one of its adjacent edges.
@@ -339,11 +339,11 @@ Smooth
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`,
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Smooth`,
      :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
-   | Hotkey:   :menuselection:`Mesh --> Vertices --> Smooth vertex`
+   | 快捷键:   :menuselection:`Mesh --> Vertices --> Smooth vertex`
 
 
 This will apply once the :doc:`Smooth Tool </modeling/meshes/editing/deforming/smooth>`.
@@ -355,9 +355,9 @@ Make Vertex Parent
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Make Vertex Parent`
-   | Hotkey:   :kbd:`Ctrl-P`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Make Vertex Parent`
+   | 快捷键:   :kbd:`Ctrl-P`
 
 
 This will parent the other selected object(s) to the vertices/edges/faces selected,
@@ -370,9 +370,9 @@ Add Hook
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Add Hook`
-   | Hotkey:   :kbd:`Ctrl-H`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Add Hook`
+   | 快捷键:   :kbd:`Ctrl-H`
 
 
 Adds a :doc:`Hook Modifier </modeling/modifiers/deform/hooks>` (using either a new empty,
@@ -387,8 +387,8 @@ Blend From Shape, Propagate Shapes
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`(Vertex) Specials --> Blend From Shape` and
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`(Vertex) Specials --> Blend From Shape` and
                :menuselection:`Mesh --> Vertices --> Shape Propagate`
 
 

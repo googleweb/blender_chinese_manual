@@ -6,9 +6,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Menu:     :menuselection:`View --> 相机 --> Active 相机`
-   | Hotkey:   :kbd:`Numpad0`
+   | 模式:     All modes
+   | 菜单:     :menuselection:`View --> 相机 --> Active 相机`
+   | 快捷键:   :kbd:`Numpad0`
 
 
 
@@ -43,8 +43,8 @@ Move Active 相机 to View
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Hotkey:   :kbd:`Ctrl-Alt-Numpad0`
+   | 模式:     物体模式
+   | 快捷键:   :kbd:`Ctrl-Alt-Numpad0`
 
 
 This feature allows you to position and orient the active camera to match your current viewport.

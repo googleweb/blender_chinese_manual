@@ -10,9 +10,9 @@ The objects location and rotation values return to 0, and the scale returns to 1
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Clear --> Clear Location/Clear Scale/Clear Rotation/Clear Origin`
-   | Hotkey:   :kbd:`Alt-G`, :kbd:`Alt-S`, :kbd:`Alt-R`, :kbd:`Alt-O`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Clear --> Clear Location/Clear Scale/Clear Rotation/Clear Origin`
+   | 快捷键:   :kbd:`Alt-G`, :kbd:`Alt-S`, :kbd:`Alt-R`, :kbd:`Alt-O`
 
 
 Clear Options
@@ -46,9 +46,9 @@ Apply Object transformations
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Apply -->`
-   | Hotkey:   :kbd:`Ctrl-A`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Apply -->`
+   | 快捷键:   :kbd:`Ctrl-A`
 
 
 Applying transform values essentially resets the values of object's position, rotation,

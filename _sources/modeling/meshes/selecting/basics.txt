@@ -7,8 +7,8 @@ Basic Selection
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`RMB` and :kbd:`Shift-RMB`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`RMB` and :kbd:`Shift-RMB`
 
 
 The most common way to select an element is to :kbd:`RMB` on that item;
@@ -43,8 +43,8 @@ deleting or otherwise working on backside or hidden items.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`B`, :kbd:`C`, and :kbd:`Ctrl-LMB` click and drag
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`B`, :kbd:`C`, and :kbd:`Ctrl-LMB` click and drag
 
 
 Region selection allows you to select groups of elements within a 2D region in your 3D视图.

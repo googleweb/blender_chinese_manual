@@ -6,8 +6,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Tab`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Tab`
 
 
 As with any other object, you edit your armature in *编辑模式* :kbd:`Tab`.

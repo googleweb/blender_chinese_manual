@@ -59,9 +59,9 @@ Rectangular or Border Select
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式 and 编辑模式
-   | Menu:     :menuselection:`Select --> Border Select`
-   | Hotkey:   :kbd:`B`
+   | 模式:     物体模式 and 编辑模式
+   | 菜单:     :menuselection:`Select --> Border Select`
+   | 快捷键:   :kbd:`B`
 
 
 With *Border Select* you draw a rectangle while holding down :kbd:`LMB`.
@@ -103,9 +103,9 @@ Lasso Select
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式 and 编辑模式
-   | Menu:     no entry in the menu
-   | Hotkey:   :kbd:`Ctrl-LMB`
+   | 模式:     物体模式 and 编辑模式
+   | 菜单:     no entry in the menu
+   | 快捷键:   :kbd:`Ctrl-LMB`
 
 
 Lasso select is used by drawing a dotted line around the 轴心点 of the objects,
@@ -132,9 +132,9 @@ Circle Select
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式 and 编辑模式
-   | Menu:     :menuselection:`Select --> Circle Select`
-   | Hotkey:   :kbd:`C`
+   | 模式:     物体模式 and 编辑模式
+   | 菜单:     :menuselection:`Select --> Circle Select`
+   | 快捷键:   :kbd:`C`
 
 
 *Circle Select* is used by moving with dotted circle through objects with :kbd:`LMB`.
@@ -173,9 +173,9 @@ Select Grouped
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Select --> Grouped`
-   | Hotkey:   :kbd:`Shift-G`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Select --> Grouped`
+   | 快捷键:   :kbd:`Shift-G`
 
 .. figure:: /images/editors_3dview_selecting_grouped.png
    :align: right
@@ -234,9 +234,9 @@ Select linked
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Select --> Linked`
-   | Hotkey:   :kbd:`Shift-L`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Select --> Linked`
+   | 快捷键:   :kbd:`Shift-L`
 
 
 Selects all objects which share a common data-block with the active object.
@@ -271,9 +271,9 @@ Select All by Type
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Select --> Select All by Type`
-   | Hotkey:   None
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Select --> Select All by Type`
+   | 快捷键:   None
 
 
 With this tool it becomes possible to select every **visible**
@@ -294,9 +294,9 @@ Select All by Layer
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Select --> Select All by Layer`
-   | Hotkey:   None
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Select --> Select All by Layer`
+   | 快捷键:   None
 
 
 .. figure:: /images/editors_3dview_select_allbylayer.png

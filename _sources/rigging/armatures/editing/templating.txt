@@ -19,10 +19,10 @@ Using Bone Sketching
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Bone Sketching (3D视图编辑窗口)
-   | Menu:     :menuselection:`Armature --> Bone Sketching`
-   | Hotkey:   :kbd:`P`
+   | 模式:     编辑模式
+   | 面板:    Bone Sketching (3D视图编辑窗口)
+   | 菜单:     :menuselection:`Armature --> Bone Sketching`
+   | 快捷键:   :kbd:`P`
 
 
 The *Template* conversion method of *Bone Sketching* tool maps a copy of

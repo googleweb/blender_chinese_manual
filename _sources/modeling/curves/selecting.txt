@@ -47,9 +47,9 @@ Border Select
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> 间隔式弃选`
-   | Hotkey:   None
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> 间隔式弃选`
+   | 快捷键:   None
 
 
 This only works if you already have at least one control point selected.
@@ -71,9 +71,9 @@ Offset
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> Select/Deselect First`, :menuselection:`Select --> Select/Deselect Last`
-   | Hotkey:   None
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> Select/Deselect First`, :menuselection:`Select --> Select/Deselect Last`
+   | 快捷键:   None
 
 
 These commands will toggle the selection of the first or last control point(s) of the curve(s)
@@ -87,9 +87,9 @@ when using it as path...).
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> Select 下一页`, :menuselection:`Select --> Select 上一页`
-   | Hotkey:   None
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> Select 下一页`, :menuselection:`Select --> Select 上一页`
+   | 快捷键:   None
 
 
 These commands will select the next or previous control point(s),
@@ -103,9 +103,9 @@ the control points following or preceding the selected ones along the curve).
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> More/Less`
-   | Hotkey:   :kbd:`Ctrl-NumpadPlus`/:kbd:`Ctrl-NumpadMinus`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> More/Less`
+   | 快捷键:   :kbd:`Ctrl-NumpadPlus`/:kbd:`Ctrl-NumpadMinus`
 
 
 Their purpose, based on the currently selected control points, is to reduce or enlarge this selection.

@@ -6,9 +6,9 @@ Shear
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Menu:     :menuselection:`Object/Mesh/Curve/Surface --> 变换 --> Shear`
-   | Hotkey:   :kbd:`Shift-Ctrl-Alt-S`
+   | 模式:     Object and 编辑模式s
+   | 菜单:     :menuselection:`Object/Mesh/Curve/Surface --> 变换 --> Shear`
+   | 快捷键:   :kbd:`Shift-Ctrl-Alt-S`
 
 
 Shearing is a form of movement where parallel surfaces move past one another. During this transform,

@@ -9,8 +9,8 @@ Randomize 变换
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> 变换 --> Randomize 变换`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> 变换 --> Randomize 变换`
 
 .. figure:: /images/transform-randomize.jpg
    :align: right
@@ -63,8 +63,8 @@ Align Objects
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> 变换 --> Align Objects`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> 变换 --> Align Objects`
 
 
 TODO.
@@ -76,8 +76,8 @@ Animated 变换 to Deltas
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> 变换 --> Animated 变换 to Deltas`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> 变换 --> Animated 变换 to Deltas`
 
 
 TODO.

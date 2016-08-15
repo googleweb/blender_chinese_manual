@@ -6,10 +6,10 @@ Shrink/Fatten Along Normals
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> 变换 --> Shrink/Fatten Along Normals`
-   | Hotkey:   :kbd:`Alt-S`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> 变换 --> Shrink/Fatten Along Normals`
+   | 快捷键:   :kbd:`Alt-S`
 
 
 This tool translates selected vertices/edges/faces along their own normal

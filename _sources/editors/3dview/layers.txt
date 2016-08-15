@@ -6,10 +6,10 @@ Layers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    :menuselection:`Object --> Relations`
-   | Menu:     :menuselection:`Object --> Move to Layer...`
-   | Hotkey:   :kbd:`M`
+   | 模式:     物体模式
+   | 面板:    :menuselection:`Object --> Relations`
+   | 菜单:     :menuselection:`Object --> Move to Layer...`
+   | 快捷键:   :kbd:`M`
 
 
 3D scenes often become exponentially more confusing as they grow more complex.

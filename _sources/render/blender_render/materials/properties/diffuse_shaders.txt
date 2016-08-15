@@ -6,8 +6,8 @@ Diffuse Shaders
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Diffuse`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Diffuse`
 
 
 A diffuse shader determines, simply speaking,
@@ -61,8 +61,8 @@ Lambert
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Shaders`
 
 
 .. figure:: /images/material-shader-lambert.jpg
@@ -95,8 +95,8 @@ Oren-Nayar
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Shaders`
 
 
 .. figure:: /images/material-shader-oren-nayar.jpg
@@ -133,8 +133,8 @@ Toon
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Shaders`
 
 
 .. figure:: /images/material-shader-toon.jpg
@@ -175,8 +175,8 @@ Minnaert
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Shaders`
 
 
 .. figure:: /images/material-shader-lambert.jpg
@@ -213,8 +213,8 @@ Fresnel
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Shading/Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Shading/Material --> Shaders`
 
 
 .. figure:: /images/material-shader-fresnel-vary.jpg

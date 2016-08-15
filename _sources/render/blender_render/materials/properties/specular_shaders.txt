@@ -6,8 +6,8 @@ Specular Shaders
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Specular`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Specular`
 
 
 Specular shaders create the bright highlights that one would see on a glossy surface,
@@ -95,8 +95,8 @@ CookTorr
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Shaders`
 
 
 .. figure:: /images/material-shader-cooktorr.jpg
@@ -128,8 +128,8 @@ Phong
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Shaders`
 
 
 .. figure:: /images/material-shader-phong.jpg
@@ -167,8 +167,8 @@ Blinn
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Shaders`
 
 
 .. figure:: /images/material-shader-blinn.jpg
@@ -209,8 +209,8 @@ Toon
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Shaders`
 
 
 .. figure:: /images/material-shader-toonspec.jpg
@@ -241,8 +241,8 @@ WardIso
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Shaders`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Shaders`
 
 
 .. figure:: /images/material-shader-wardiso.jpg

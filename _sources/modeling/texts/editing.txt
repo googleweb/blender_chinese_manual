@@ -10,8 +10,8 @@ Text Boxes
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object or 编辑模式s
-   | Panel:    Font
+   | 模式:     Object or 编辑模式s
+   | 面板:    Font
 
 
 .. figure:: /images/text-frame-upperpanel-area.jpg
@@ -135,8 +135,8 @@ Assigning Materials
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Link and Materials
+   | 模式:     编辑模式
+   | 面板:    Link and Materials
 
 
 Each character can have a different *Material index* in order to have different

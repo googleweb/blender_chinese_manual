@@ -12,9 +12,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve and Surface, Font and Char
-   | Menu:     :menuselection:`Add --> Text`
+   | 模式:     编辑模式
+   | 面板:    Curve and Surface, Font and Char
+   | 菜单:     :menuselection:`Add --> Text`
 
 .. _fig-texts-intro-example:
 
@@ -71,8 +71,8 @@ including the "blue" font that has been applied to a curve path.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   see below
+   | 模式:     编辑模式
+   | 快捷键:   see below
 
 
 .. figure:: /images/modelling-text-create-ex.jpg
@@ -132,8 +132,8 @@ Special Characters
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Text --> Special Characters`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Text --> Special Characters`
 
 If you need special characters (such as accented chars, which are not on your keyboard)
 you can produce many of them using a combination of two other characters. To do so,
@@ -229,8 +229,8 @@ Fonts
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Font
+   | 模式:     编辑模式
+   | 面板:    Font
 
 
 The *Font* panel has several options for changing the look of characters.
@@ -484,8 +484,8 @@ Shape
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object or 编辑模式
-   | Panel:    Curve and Surface
+   | 模式:     Object or 编辑模式
+   | 面板:    Curve and Surface
 
 
 As you can see in the *Curve and Surface* panel,

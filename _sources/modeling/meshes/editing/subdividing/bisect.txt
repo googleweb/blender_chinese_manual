@@ -6,8 +6,8 @@ Mesh Bisect
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Bisect`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Bisect`
 
 
 The bisect tool is a quick way to cut a mesh in-two along a custom plane.

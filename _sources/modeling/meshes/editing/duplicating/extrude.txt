@@ -10,10 +10,10 @@ Extrude Region
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`Mesh Tools --> Extrude`
-   | Menu:     :menuselection:`Mesh --> Extrude Region`
-   | Hotkey:   :kbd:`E` or :kbd:`Alt-E`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`Mesh Tools --> Extrude`
+   | 菜单:     :menuselection:`Mesh --> Extrude Region`
+   | 快捷键:   :kbd:`E` or :kbd:`Alt-E`
 
 
 One tool of paramount importance for working with meshes is the *Extrude* tool.
@@ -75,10 +75,10 @@ Extrude Individual
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`Mesh Tools --> Extrude Individual`
-   | Menu:     :menuselection:`Mesh --> Extrude Individual`
-   | Hotkey:   :kbd:`Alt-E`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`Mesh Tools --> Extrude Individual`
+   | 菜单:     :menuselection:`Mesh --> Extrude Individual`
+   | 快捷键:   :kbd:`Alt-E`
 
 
 *Extrude Individual* allows you to extrude a selection of multiple faces as individuals, instead of as a region.
@@ -110,8 +110,8 @@ Extrude Edges and Vertices Only
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式, Vertex and Edge
-   | Hotkey:   :kbd:`Alt-E`
+   | 模式:     编辑模式, Vertex and Edge
+   | 快捷键:   :kbd:`Alt-E`
 
 
 If vertices are selected while doing an extrude, but they do not form an edge or face,

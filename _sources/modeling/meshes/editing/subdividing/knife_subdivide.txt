@@ -6,9 +6,9 @@ Knife Tool
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Hotkey:   :kbd:`K` or :kbd:`Shift-K`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 快捷键:   :kbd:`K` or :kbd:`Shift-K`
 
 
 The knife tool can be used to interactively cut up geometry by drawing lines or closed loops to create holes.

@@ -7,9 +7,9 @@ Make Edge/Face
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Make Face/Edge`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Make Face/Edge`
+   | 快捷键:   :kbd:`F`
 
 
 This is a context-sensitive tool which creates geometry by filling in the selection.

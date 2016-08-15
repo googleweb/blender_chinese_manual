@@ -6,8 +6,8 @@ Noise
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
 
 
 .. note::

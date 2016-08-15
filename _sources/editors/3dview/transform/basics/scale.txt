@@ -6,9 +6,9 @@ Scale
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Menu:     :menuselection:`Object/Mesh/Curve/Surface --> 变换 --> Scale`
-   | Hotkey:   :kbd:`S`
+   | 模式:     Object and 编辑模式s
+   | 菜单:     :menuselection:`Object/Mesh/Curve/Surface --> 变换 --> Scale`
+   | 快捷键:   :kbd:`S`
 
 
 Pressing :kbd:`S` will enter the *Scale* transformation mode where the

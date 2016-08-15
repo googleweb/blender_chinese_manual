@@ -17,9 +17,9 @@ but changes in the external source file will not be reflected in the referencing
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Menu:     :menuselection:`File --> Append or Link`
-   | Hotkey:   :kbd:`Shift-F1`  or  :kbd:`Ctrl-Alt-O`
+   | 模式:     All Modes
+   | 菜单:     :menuselection:`File --> Append or Link`
+   | 快捷键:   :kbd:`Shift-F1`  or  :kbd:`Ctrl-Alt-O`
 
 In the :doc:`文件浏览器 </editors/file_browser/introduction>`
 navigate to the external source blend-file and select the data-block you want to reuse.

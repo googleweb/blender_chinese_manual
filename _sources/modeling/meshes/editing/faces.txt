@@ -14,9 +14,9 @@ Make Edge/Face
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Make Edge/Face`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Make Edge/Face`
+   | 快捷键:   :kbd:`F`
 
 
 This will create an edge or some faces, depending on your selection.
@@ -43,9 +43,9 @@ Fill
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Fill/Beautify Fill`
-   | Hotkey:   :kbd:`Alt-F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Fill/Beautify Fill`
+   | 快捷键:   :kbd:`Alt-F`
 
 
 The *Fill* option will create *triangular* faces from any group of selected edges
@@ -80,9 +80,9 @@ Beauty Fill
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Fill/Beautify Fill`
-   | Hotkey:   :kbd:`Alt-Shift-F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Fill/Beautify Fill`
+   | 快捷键:   :kbd:`Alt-Shift-F`
 
 
 *Beautify Fill* works only on selected existing faces.
@@ -109,8 +109,8 @@ Grid Fill
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Fill/Grid Fill`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Fill/Grid Fill`
 
 
 *Grid Fill* uses a pair of connected edge-loops to fill in a grid that follows the surrounding geometry.
@@ -134,10 +134,10 @@ Convert Quads to Triangles
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Convert Quads to Triangles` or
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Convert Quads to Triangles` or
      :menuselection:`Face Specials --> Triangulate`
-   | Hotkey:   :kbd:`Ctrl-T`
+   | 快捷键:   :kbd:`Ctrl-T`
 
 
 As its name intimates, this tool converts each selected quadrangle into two triangles.
@@ -150,10 +150,10 @@ Convert Triangles to Quads
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Faces --> Convert Triangles to Quads`
-   | Hotkey:   :kbd:`Alt-J`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Faces --> Convert Triangles to Quads`
+   | 快捷键:   :kbd:`Alt-J`
 
 
 This tool converts the selected triangles into quads by taking adjacent tris and removes the
@@ -212,9 +212,9 @@ Solidify
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Solidify`
-   | Hotkey:   :kbd:`Ctrl-F` :menuselection:`--> Solidify`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Solidify`
+   | 快捷键:   :kbd:`Ctrl-F` :menuselection:`--> Solidify`
 
 
 This takes a selection of faces and solidifies them by extruding them
@@ -251,8 +251,8 @@ Rotate Edges
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Rotate Edge CW`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Rotate Edge CW`
 
 
 This command functions the same edge rotation in edge mode.

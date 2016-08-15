@@ -23,8 +23,8 @@ clear the cache for all selected objects with :kbd:`Ctrl-B` :menuselection:`--> 
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    :menuselection:`物理 --> Collision`
+   | 模式:     物体模式
+   | 面板:    :menuselection:`物理 --> Collision`
 
 
 Options

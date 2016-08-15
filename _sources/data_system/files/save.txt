@@ -7,7 +7,7 @@ Saving Files
    :class: refbox
 
    | Editor:   Info
-   | Menu:     File
+   | 菜单:     File
 
 There are a number of slightly different methods you can use to save your blend-file to your hard drive:
 

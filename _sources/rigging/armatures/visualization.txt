@@ -34,8 +34,8 @@ Display Panel
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object, Edit and 姿态模式
-   | Panel:    :menuselection:`Object Data --> Display`
+   | 模式:     Object, Edit and 姿态模式
+   | 面板:    :menuselection:`Object Data --> Display`
 
 
 But let us first see some general visualization properties of armatures,
@@ -115,8 +115,8 @@ Shaped Bones
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 姿态模式
-   | Panel:    :menuselection:`Bone --> Display`
+   | 模式:     Object and 姿态模式
+   | 面板:    :menuselection:`Bone --> Display`
 
 
 Blender allows you to give to each bone of an armature a specific shape
@@ -198,8 +198,8 @@ Armature Layers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object, Edit and 姿态模式
-   | Panel:    :menuselection:`Object data --> Skeleton`
+   | 模式:     Object, Edit and 姿态模式
+   | 面板:    :menuselection:`Object data --> Skeleton`
 
 .. figure:: /images/riggingeditingobjectdatapropertycxtskeletonpanel.jpg
    :width: 250px
@@ -245,8 +245,8 @@ Bone Layers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object, Edit and 姿态模式
-   | Panel:    :menuselection:`Bone --> Relations`
+   | 模式:     Object, Edit and 姿态模式
+   | 面板:    :menuselection:`Bone --> Relations`
 
 .. figure:: /images/riggingeditingbonecxtrelationspanel.jpg
    :width: 250px
@@ -277,8 +277,8 @@ Hiding Bones
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Edit and 姿态模式
-   | Panel:    :menuselection:`Bone --> Display`
+   | 模式:     Edit and 姿态模式
+   | 面板:    :menuselection:`Bone --> Display`
 
 .. figure:: /images/riggingeditingbonecxtdisplaypanel.jpg
    :width: 250px

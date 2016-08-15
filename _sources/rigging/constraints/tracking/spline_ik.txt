@@ -42,7 +42,7 @@ Spline Fitting:
 Chain Scaling
    Y stretch
       Stretch the Y axis of the bones to fit the curve
-   XZ Scale Mode:
+   XZ Scale 模式:
       None
          Do not scale the X and X axes (default)
       Bone Original

@@ -6,8 +6,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object or 编辑模式
-   | Panel:    *Curve and Surface*
+   | 模式:     Object or 编辑模式
+   | 面板:    *Curve and Surface*
 
 
 Extrude

@@ -7,9 +7,9 @@ Loop Subdivide
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Hotkey:   :kbd:`Ctrl-R`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 快捷键:   :kbd:`Ctrl-R`
 
 
 *Loop Cut* splits a loop of faces by inserting a new edge loop intersecting the chosen edge.

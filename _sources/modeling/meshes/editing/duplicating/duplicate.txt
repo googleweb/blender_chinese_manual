@@ -7,9 +7,9 @@ Duplicate
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Duplicate`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Duplicate`
+   | 快捷键:   :kbd:`Shift-D`
 
 
 This tool simply duplicates the selected elements,

@@ -7,9 +7,9 @@ Grab/Move
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式, 编辑模式, and 姿态模式 for the 3D视图;
-   | Menu:     Context sensitive, :menuselection:`Object Based --> 变换 --> Grab/Move`
-   | Hotkey:   :kbd:`G` or combinations for specific Axis constraint
+   | 模式:     物体模式, 编辑模式, and 姿态模式 for the 3D视图;
+   | 菜单:     Context sensitive, :menuselection:`Object Based --> 变换 --> Grab/Move`
+   | 快捷键:   :kbd:`G` or combinations for specific Axis constraint
 
 
 In 物体模式, the grab/move option lets you translate (move) objects.

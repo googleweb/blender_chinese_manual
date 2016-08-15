@@ -10,8 +10,8 @@ X-镜像
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`Mesh Options --> X-mirror`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`Mesh Options --> X-mirror`
 
 
 The *X-mirror* option of the *Mesh Options* panel allows you edit both
@@ -71,8 +71,8 @@ Snap to Symmetry
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Snap to Symmetry`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Snap to Symmetry`
 
 
 The *Snap to Symmetry* tool works on meshes which are mostly symmetrical but have
@@ -111,8 +111,8 @@ Symmetrize Mesh
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Symmetrize`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Symmetrize`
 
 
 The *Symmetrize* tool is a quick way to make a mesh symmetrical.

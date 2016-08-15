@@ -6,8 +6,8 @@ DupliGroup
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    :menuselection:`Object --> 复制 --> Group`
+   | 模式:     物体模式
+   | 面板:    :menuselection:`Object --> 复制 --> Group`
 
 
 *复制 Group* or *DupliGroup* allows you to create an instance of a group for each instance of another object.

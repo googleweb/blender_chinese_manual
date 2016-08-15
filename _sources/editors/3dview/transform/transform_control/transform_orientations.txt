@@ -9,8 +9,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Hotkey:   :kbd:`Alt-Spacebar`
+   | 模式:     Object and 编辑模式s
+   | 快捷键:   :kbd:`Alt-Spacebar`
 
 .. figure:: /images/editors_3dview_orientations_menu.png
    :align: right
@@ -119,7 +119,7 @@ Normal
    (so you will have to look at the Manipulator widget to determine the direction of X and Y).
    If you select several elements, it will orient towards the average of those normals.
 
-   A great example of how this is useful is in Vertex Select Mode: Pick a vertex and then do
+   A great example of how this is useful is in Vertex Select 模式: Pick a vertex and then do
    :kbd:`G, Z, Z` to tug it away from the mesh and shove it into the mesh.
    To make this even more useful, select a nearby vertex and press :kbd:`Shift-R` to repeat
    the same movement -- except along that second vertex's normal instead.
@@ -166,8 +166,8 @@ Custom Orientations
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Hotkey:   :kbd:`Ctrl-Alt-Spacebar`
+   | 模式:     Object and 编辑模式s
+   | 快捷键:   :kbd:`Ctrl-Alt-Spacebar`
 
 .. figure:: /images/transformorientationpanel-custom.jpg
 

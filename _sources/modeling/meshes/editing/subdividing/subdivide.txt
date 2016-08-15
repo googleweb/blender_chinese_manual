@@ -7,9 +7,9 @@ Subdivide
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Edges --> Subdivide`,
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Edges --> Subdivide`,
      :menuselection:`Specials --> Subdivide/Subdivide Smooth`
 
 

@@ -6,9 +6,9 @@ Inset
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Faces --> Inset`
-   | Hotkey:   :kbd:`I`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Faces --> Inset`
+   | 快捷键:   :kbd:`I`
 
 
 This tool takes the currently selected faces and creates an inset of them,

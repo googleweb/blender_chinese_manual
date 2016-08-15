@@ -12,8 +12,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`File --> Open`
-   | Hotkey:   :kbd:`Ctrl-O` or :kbd:`F1`
+   | 菜单:     :menuselection:`File --> Open`
+   | 快捷键:   :kbd:`Ctrl-O` or :kbd:`F1`
 
 
 The upper text box displays the current directory path,

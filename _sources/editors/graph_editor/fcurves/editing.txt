@@ -104,8 +104,8 @@ Smoothing
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`Key --> Smooth Keys`
-   | Hotkey:   :kbd:`Alt-O`
+   | 菜单:     :menuselection:`Key --> Smooth Keys`
+   | 快捷键:   :kbd:`Alt-O`
 
 
 There is also an option to smooth the selected curves , but beware: its algorithm seems to be

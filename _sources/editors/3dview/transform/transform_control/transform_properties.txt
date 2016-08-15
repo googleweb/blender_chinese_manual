@@ -17,9 +17,9 @@ These may need to be manipulated numerically, reset, or applied.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Edit and 物体模式s
-   | Menu:     :menuselection:`Object --> 变换 Properties`
-   | Hotkey:   :kbd:`N`
+   | 模式:     Edit and 物体模式s
+   | 菜单:     :menuselection:`Object --> 变换 Properties`
+   | 快捷键:   :kbd:`N`
 
 
 The *变换 Properties* section in the *View Properties* panel allows you to view and

@@ -80,9 +80,9 @@ Creating Markers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Add Marker`
-   | Hotkey:   :kbd:`M` or :kbd:`Ctrl-Alt-M` in the VSE Editor
+   | 模式:     all modes
+   | 菜单:     :menuselection:`Marker --> Add Marker`
+   | 快捷键:   :kbd:`M` or :kbd:`Ctrl-Alt-M` in the VSE Editor
 
 
 The simplest way to add a marker is to move to the frame where you would like it to appear,
@@ -99,8 +99,8 @@ This can be especially useful to mark the beats in some music.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Hotkey:   :kbd:`RMB`
+   | 模式:     all modes
+   | 快捷键:   :kbd:`RMB`
 
 
 Click :kbd:`RMB` on the marker's triangle to select it.
@@ -120,9 +120,9 @@ Naming Markers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Rename Marker`
-   | Hotkey:   :kbd:`Ctrl-M`
+   | 模式:     all modes
+   | 菜单:     :menuselection:`Marker --> Rename Marker`
+   | 快捷键:   :kbd:`Ctrl-M`
 
 
 Having dozens of markers scattered throughout your scene's time will not help you much unless you
@@ -136,9 +136,9 @@ Moving Markers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Grab/Move Marker`
-   | Hotkey:   :kbd:`Ctrl-G`
+   | 模式:     all modes
+   | 菜单:     :menuselection:`Marker --> Grab/Move Marker`
+   | 快捷键:   :kbd:`Ctrl-G`
 
 
 Once you have one or more markers selected, press :kbd:`G`
@@ -155,9 +155,9 @@ Duplicating Markers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Duplicate Marker`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     all modes
+   | 菜单:     :menuselection:`Marker --> Duplicate Marker`
+   | 快捷键:   :kbd:`Shift-D`
 
 
 You can duplicate the selected markers by pressing :kbd:`Shift-D`. Once duplicated,
@@ -176,9 +176,9 @@ Deleting Markers
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Delete Marker`
-   | Hotkey:   :kbd:`X`
+   | 模式:     all modes
+   | 菜单:     :menuselection:`Marker --> Delete Marker`
+   | 快捷键:   :kbd:`X`
 
 
 To delete the selected markers simply press :kbd:`X`,

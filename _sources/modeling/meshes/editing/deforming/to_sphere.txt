@@ -6,9 +6,9 @@ To Sphere
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> 变换 --> To Sphere`
-   | Hotkey:   :kbd:`Shift-Alt-S`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> 变换 --> To Sphere`
+   | 快捷键:   :kbd:`Shift-Alt-S`
 
 
 The *To Sphere* transformation will give the selection spherical qualities. The

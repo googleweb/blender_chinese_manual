@@ -28,9 +28,9 @@ Use this when working arranging a lot of strips and you want to use all of your 
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Sequence
-   | Menu:     :menuselection:`View --> Show Frames, View --> Show Seconds`
-   | Hotkey:   :kbd:`Ctrl-T`
+   | 模式:     Sequence
+   | 菜单:     :menuselection:`View --> Show Frames, View --> Show Seconds`
+   | 快捷键:   :kbd:`Ctrl-T`
 
 
 Draw Frames

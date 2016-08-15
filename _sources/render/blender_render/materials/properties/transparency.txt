@@ -6,8 +6,8 @@ Transparency
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`Material --> Transparency`
+   | 模式:     All Modes
+   | 面板:    :menuselection:`Material --> Transparency`
 
 
 Materials in Blender can be set to be transparent,

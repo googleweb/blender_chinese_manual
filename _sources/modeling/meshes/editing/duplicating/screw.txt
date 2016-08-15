@@ -6,8 +6,8 @@ Screw Tool
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`编辑模式 --> Mesh Tools` or :kbd:`T` :menuselection:`--> Add --> Screw Button`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`编辑模式 --> Mesh Tools` or :kbd:`T` :menuselection:`--> Add --> Screw Button`
 
 
 he *Screw* tool combines a repetitive *Spin* with a translation,

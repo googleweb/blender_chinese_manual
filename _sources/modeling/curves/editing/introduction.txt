@@ -59,9 +59,9 @@ Hide Unselected elements
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> 变换 --> Grab/Move, Rotate, Scale, ...`
-   | Hotkey:   :kbd:`G`, :kbd:`R`, :kbd:`S`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> 变换 --> Grab/Move, Rotate, Scale, ...`
+   | 快捷键:   :kbd:`G`, :kbd:`R`, :kbd:`S`
 
 
 Like other elements in Blender, Curve control points can be grabbed/moved :kbd:`G`,
@@ -78,8 +78,8 @@ is also available for transformation actions.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve Tools
+   | 模式:     编辑模式
+   | 面板:    Curve Tools
 
 
 :doc:`Mesh snapping </editors/3dview/transform/transform_control/precision/snap>`
@@ -95,8 +95,8 @@ except for within itself (other components of the active curve).
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> 变换`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> 变换`
 
 
 The *To Sphere*, *Shear*, *Warp* and *Push/Pull* transform tools are described in the
@@ -111,8 +111,8 @@ Smoothing
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`W` :menuselection:`--> smooth`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`W` :menuselection:`--> smooth`
 
 
 Curve smoothing is available through the specials menu. For 贝塞尔曲线, this smoothing
@@ -139,9 +139,9 @@ Does not effect control point tangents.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> 镜像`
-   | Hotkey:   :kbd:`Ctrl-M`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> 镜像`
+   | 快捷键:   :kbd:`Ctrl-M`
 
 
 The *镜像* tool is also available, behaving exactly as with
@@ -154,10 +154,10 @@ The *镜像* tool is also available, behaving exactly as with
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`Curve Tools --> Handles`
-   | Menu:     :menuselection:`Curve --> Control Points --> Set Handle Type`
-   | Hotkey:   :kbd:`V`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`Curve Tools --> Handles`
+   | 菜单:     :menuselection:`Curve --> Control Points --> Set Handle Type`
+   | 快捷键:   :kbd:`V`
 
 
 Handle types are a property of :doc:`贝塞尔曲线.
@@ -174,9 +174,9 @@ Read the :doc:`贝塞尔曲线 </modeling/curves/introduction>` page for more de
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Extrude`
-   | Hotkey:   :kbd:`Ctrl-LMB`, :kbd:`E`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Extrude`
+   | 快捷键:   :kbd:`Ctrl-LMB`, :kbd:`E`
 
 
 Once a curve is created you can add new segments (in fact,
@@ -195,10 +195,10 @@ The 贝塞尔曲线 can only be extend at the endpoints.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve Tools
-   | Menu:     :menuselection:`SurfaceTools --> 建模 --> Subdivide`
-   | Hotkey:   :kbd:`W`
+   | 模式:     编辑模式
+   | 面板:    Curve Tools
+   | 菜单:     :menuselection:`SurfaceTools --> 建模 --> Subdivide`
+   | 快捷键:   :kbd:`W`
 
 
 Curve subdivision simply subdivides all selected segments by adding one or more control points
@@ -213,9 +213,9 @@ Then press :kbd:`F6` to bring up the *Number of Cuts* menu.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Duplicate`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Duplicate`
+   | 快捷键:   :kbd:`Shift-D`
 
 
 This command duplicates the selected control points,
@@ -231,9 +231,9 @@ The copy is selected and placed in *Grab* mode, so you can move it to another pl
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> 创建段`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> 创建段`
+   | 快捷键:   :kbd:`F`
 
 
 Two open curves can be combined into one by creating a segment between the two curves.
@@ -257,9 +257,9 @@ curves of the same type (i.e. 贝塞尔 with 贝塞尔, NURBS with NURBS)
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Separate`
-   | Hotkey:   :kbd:`P`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Separate`
+   | 快捷键:   :kbd:`P`
 
 
 Curve objects that are made of multiple distinct curves can be separated into their own
@@ -274,9 +274,9 @@ pressing :kbd:`P` will create a new Curve object with no control points.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Delete...`
-   | Hotkey:   :kbd:`X`, :kbd:`Del`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Delete...`
+   | 快捷键:   :kbd:`X`, :kbd:`Del`
 
 Options for the *Erase* pop-up menu:
 
@@ -315,9 +315,9 @@ Segment
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Toggle Cyclic`
-   | Hotkey:   :kbd:`Alt-C`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Toggle Cyclic`
+   | 快捷键:   :kbd:`Alt-C`
 
 
 This toggles between an open curve and closed curve (Cyclic).
@@ -349,10 +349,10 @@ that when a 2D curve is closed, it creates a renderable flat face.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Segments --> 切换方向`,
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Segments --> 切换方向`,
      :menuselection:`Specials --> 切换方向`
-   | Hotkey:   :kbd:`W-Numpad2`
+   | 快捷键:   :kbd:`W-Numpad2`
 
 
 This command will "reverse" the direction of any curve with at least one selected element
@@ -369,8 +369,8 @@ Converting Curve Type
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve Tools --> Set Spline type
+   | 模式:     编辑模式
+   | 面板:    Curve Tools --> Set Spline type
 
 .. figure:: /images/editing_curves_set-spline-type.jpg
    :width: 150px
@@ -394,9 +394,9 @@ Convert Curve to Mesh
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Convert to --> Mesh From Curve/Meta/Surface/Text`
-   | Hotkey:   :kbd:`Alt-C`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Convert to --> Mesh From Curve/Meta/Surface/Text`
+   | 快捷键:   :kbd:`Alt-C`
 
 
 There is also an "external" conversion, from curve to mesh, that only works in *物体模式*.
@@ -411,9 +411,9 @@ Convert Mesh to Curve
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Convert to --> Curve From Mesh/Text`
-   | Hotkey:   :kbd:`Alt-C`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Convert to --> Curve From Mesh/Text`
+   | 快捷键:   :kbd:`Alt-C`
 
 
 Mesh objects that consist of a series of connected vertices can be converted into curve
@@ -427,8 +427,8 @@ but can be converted to have smooth segments as described above.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Ctrl-P`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Ctrl-P`
 
 
 You can make other selected objects :ref:`children <object-parenting>`
@@ -448,9 +448,9 @@ the median point between the three vertices. An alternative would be to use a
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> control points --> hooks`
-   | Hotkey:   :kbd:`Ctrl-H`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> control points --> hooks`
+   | 快捷键:   :kbd:`Ctrl-H`
 
 
 :doc:`挂钩 </modeling/modifiers/deform/hooks>` can be added to control one or more points with other objects.
@@ -464,8 +464,8 @@ the median point between the three vertices. An alternative would be to use a
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :kbd:`W` :menuselection:`--> 设置目标权重`
+   | 模式:     编辑模式
+   | 菜单:     :kbd:`W` :menuselection:`--> 设置目标权重`
 
 
 This sets the "goal weight" of selected control points,

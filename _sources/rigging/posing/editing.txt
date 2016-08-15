@@ -148,9 +148,9 @@ Copy/Paste Pose
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     姿态模式
-   | Panel:    *3D视图* header
-   | Menu:     :menuselection:`Pose --> Copy Current Pose`,
+   | 模式:     姿态模式
+   | 面板:    *3D视图* header
+   | 菜单:     :menuselection:`Pose --> Copy Current Pose`,
      :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose --> Paste Flipped Pose`
 
 

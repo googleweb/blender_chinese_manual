@@ -100,9 +100,9 @@ World Textures
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All Modes
-   | Panel:    :menuselection:`World --> Preview`
-   | Hotkey:
+   | 模式:     All Modes
+   | 面板:    :menuselection:`World --> Preview`
+   | 快捷键:
 
 
 The world buttons let you set up the shading of your scene in general.

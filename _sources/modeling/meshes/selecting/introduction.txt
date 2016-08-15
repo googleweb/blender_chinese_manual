@@ -18,9 +18,9 @@ Select Mode Header Widgets
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`3D视图 Header --> Select Mode`
-   | Hotkey:   :kbd:`Ctrl-Tab`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`3D视图 Header --> Select Mode`
+   | 快捷键:   :kbd:`Ctrl-Tab`
 
 .. figure:: /images/modeling-meshes-selection-mode-buttons.jpg
    :align: right

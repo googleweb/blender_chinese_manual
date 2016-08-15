@@ -55,9 +55,9 @@ Join
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Join`
-   | Hotkey:   :kbd:`Ctrl-J`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Join`
+   | 快捷键:   :kbd:`Ctrl-J`
 
 Joining merges all objects into the last selected *Active* object.
 
@@ -81,9 +81,9 @@ Separate
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Separate`
-   | Hotkey:   :kbd:`P`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Separate`
+   | 快捷键:   :kbd:`P`
 
 At some point, you will come to a time when you need to cut parts away from a mesh to be separate.
 

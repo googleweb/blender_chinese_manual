@@ -7,9 +7,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> 镜像 --> Desired Axis`
-   | Hotkey:   :kbd:`Ctrl-M`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> 镜像 --> Desired Axis`
+   | 快捷键:   :kbd:`Ctrl-M`
 
 
 The mirror tool mirrors a selection across a selected axis.

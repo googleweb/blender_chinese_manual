@@ -7,9 +7,9 @@ Manipulators
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Menu:     |manip-menu|
-   | Hotkey:   :kbd:`Ctrl-Spacebar`
+   | 模式:     Object and 编辑模式s
+   | 菜单:     |manip-menu|
+   | 快捷键:   :kbd:`Ctrl-Spacebar`
 
 
 In combination with :doc:`axis locking </editors/3dview/transform/transform_control/precision/axis_locking>`,
@@ -73,8 +73,8 @@ Choosing the 变换 Orientation
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Hotkey:   :kbd:`Alt-Spacebar`
+   | 模式:     Object and 编辑模式s
+   | 快捷键:   :kbd:`Alt-Spacebar`
 
 .. figure:: /images/editors_3dview_orientations_menu.png
    :align: right

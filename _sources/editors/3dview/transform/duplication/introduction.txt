@@ -32,9 +32,9 @@ Duplicate
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Edit and 物体模式s
-   | Menu:     :menuselection:`Object --> Duplicate`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     Edit and 物体模式s
+   | 菜单:     :menuselection:`Object --> Duplicate`
+   | 快捷键:   :kbd:`Shift-D`
 
 
 This will create a visually-identical copy of the selected object(s).
@@ -80,9 +80,9 @@ Linked Duplicates
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Menu:     :menuselection:`Object --> Duplicate Linked`
-   | Hotkey:   :kbd:`Alt-D`
+   | 模式:     物体模式
+   | 菜单:     :menuselection:`Object --> Duplicate Linked`
+   | 快捷键:   :kbd:`Alt-D`
 
 
 You also have the choice of creating a *Linked Duplicate* rather than a *Duplicate*;
@@ -138,8 +138,8 @@ Procedural 复制
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:    物体模式 and 编辑模式
-   | Panel:    :menuselection:`Object settings`
+   | 模式:    物体模式 and 编辑模式
+   | 面板:    :menuselection:`Object settings`
 
 
 There are currently four ways in Blender to procedurally duplicate objects.
@@ -181,8 +181,8 @@ Linked Library 复制
 .. admonition:: 参考
    :class: refbox
 
-   | Menu:     :menuselection:`File --> Link Append`
-   | Hotkey:   :kbd:`Shift-F1`
+   | 菜单:     :menuselection:`File --> Link Append`
+   | 快捷键:   :kbd:`Shift-F1`
 
 
 :doc:`Linked Libraries </data_system/linked_libraries>` :Linked Libraries are also a form of duplication.

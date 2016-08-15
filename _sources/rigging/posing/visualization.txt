@@ -115,8 +115,8 @@ Ghosts
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     姿态模式
-   | Panel:    Visualisations
+   | 模式:     姿态模式
+   | 面板:    Visualisations
 
 .. list-table::
    Ghosts examples.
@@ -201,10 +201,10 @@ Motion Paths
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     姿态模式
-   | Panel:    Visualisations
-   | Menu:     :menuselection:`Pose --> Motion Paths --> ...`
-   | Hotkey:   :kbd:`W-3`, :kbd:`W-4`
+   | 模式:     姿态模式
+   | 面板:    Visualisations
+   | 菜单:     :menuselection:`Pose --> Motion Paths --> ...`
+   | 快捷键:   :kbd:`W-3`, :kbd:`W-4`
 
 .. figure:: /images/riggingposingmotionpathsex.jpg
    :width: 250px

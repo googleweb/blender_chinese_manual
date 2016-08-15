@@ -6,8 +6,8 @@ DupliVerts
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    :menuselection:`Object --> 复制`
+   | 模式:     物体模式
+   | 面板:    :menuselection:`Object --> 复制`
 
 
 *复制 Vertices* or *DupliVerts* is the duplication of a base object at the location of the vertices of a mesh.

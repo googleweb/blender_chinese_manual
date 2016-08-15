@@ -7,9 +7,9 @@ Bevel
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Edges --> Bevel` or :kbd:`Ctrl-E` :menuselection:`--> Bevel`
-   | Hotkey:   :kbd:`Ctrl-B` or :kbd:`W` :menuselection:`--> Bevel`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Edges --> Bevel` or :kbd:`Ctrl-E` :menuselection:`--> Bevel`
+   | 快捷键:   :kbd:`Ctrl-B` or :kbd:`W` :menuselection:`--> Bevel`
    | Menu (vertex-only):    :menuselection:`Mesh --> Vertices --> Bevel` or :kbd:`Ctrl-V` :menuselection:`--> Bevel`
    | Hotkey (vertex-only):  :kbd:`Shift-Ctrl-B`
 

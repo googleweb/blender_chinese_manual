@@ -78,8 +78,8 @@ Unsubdivide
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Edges --> Unsubdivide`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Edges --> Unsubdivide`
 
 
 Unsubdivide functions as the reverse of subdivide by attempting to remove edges that were the
@@ -100,10 +100,10 @@ Merging Vertices
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`,
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Merge...`,
                :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
-   | Hotkey:   :kbd:`Alt-M`
+   | 快捷键:   :kbd:`Alt-M`
 
 
 This tool allows you to merge all selected vertices into an unique one, deleting all others.
@@ -137,8 +137,8 @@ AutoMerge 编辑
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> AutoMerge 编辑`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> AutoMerge 编辑`
 
 
 The *Mesh* menu as a related toggle option: *AutoMerge 编辑*.
@@ -153,11 +153,11 @@ Remove Doubles
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
                :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
-   | Hotkey:   :kbd:`W`, :menuselection:`Remove Doubles`
+   | 快捷键:   :kbd:`W`, :menuselection:`Remove Doubles`
 
 
 Remove Doubles is a useful tool to simplify a mesh by merging

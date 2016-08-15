@@ -20,9 +20,9 @@ Edge Loops
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Mesh)
-   | Menu:     :menuselection:`Select --> Edge Loop`
-   | Hotkey:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
+   | 模式:     编辑模式 (Mesh)
+   | 菜单:     :menuselection:`Select --> Edge Loop`
+   | 快捷键:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
 
 
 Edge loops can be selected by first selecting an edge (vertex or edge selection mode),
@@ -47,9 +47,9 @@ Edge Rings
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Mesh)
-   | Menu:     :menuselection:`Select --> Edge Ring`
-   | Hotkey:   :kbd:`Alt-Ctrl-RMB` - or :kbd:`Shift-Alt-Ctrl-RMB` for modifying existing selection
+   | 模式:     编辑模式 (Mesh)
+   | 菜单:     :menuselection:`Select --> Edge Ring`
+   | 快捷键:   :kbd:`Alt-Ctrl-RMB` - or :kbd:`Shift-Alt-Ctrl-RMB` for modifying existing selection
 
 
 Edge Rings are selected similarly.

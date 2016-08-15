@@ -49,9 +49,9 @@ Radius and Scaling in Envelope Visualization
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式, Envelope visualization
-   | Menu:     :menuselection:`Armature --> 变换 --> Scale`
-   | Hotkey:   :kbd:`S`
+   | 模式:     编辑模式, Envelope visualization
+   | 菜单:     :menuselection:`Armature --> 变换 --> Scale`
+   | 快捷键:   :kbd:`S`
 
 
 When bones are displayed using *Octahedron*, *Stick* or *B-Bone* visualizations,
@@ -97,8 +97,8 @@ ScaleB and Envelope
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Ctrl-Alt-S`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Ctrl-Alt-S`
 
 
 :kbd:`Ctrl-Alt-S` activates a transform tool that is specific to armatures.
@@ -157,9 +157,9 @@ Bone Direction
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Specials --> 切换方向`
-   | Hotkey:   :kbd:`W-3`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Specials --> 切换方向`
+   | 快捷键:   :kbd:`W-3`
 
 
 This tool is not available from the *Armature* menu,
@@ -207,9 +207,9 @@ Set Bone Roll
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Bone Roll --> Set`
-   | Hotkey:   :kbd:`Ctrl-R`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Bone Roll --> Set`
+   | 快捷键:   :kbd:`Ctrl-R`
 
 This is a transform mode where you can edit the roll of all selected bones.
 
@@ -220,9 +220,9 @@ Recalculate Bone Roll
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Bone Roll --> Recalculate`
-   | Hotkey:   :kbd:`Ctrl-N`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Bone Roll --> Recalculate`
+   | 快捷键:   :kbd:`Ctrl-N`
 
 
 Axis Orientation
@@ -250,10 +250,10 @@ Properties
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Armature
-   | Menu:     :menuselection:`Armature --> Bone 设置 --> ...`
-   | Hotkey:   :kbd:`Shift-W`, :kbd:`Ctrl-Shift-W`, :kbd:`Alt-W`
+   | 模式:     编辑模式
+   | 面板:    Armature
+   | 菜单:     :menuselection:`Armature --> Bone 设置 --> ...`
+   | 快捷键:   :kbd:`Shift-W`, :kbd:`Ctrl-Shift-W`, :kbd:`Alt-W`
 
 
 .. figure:: /images/riggingeditingcxtarmaturebonespaneleditmode.jpg
@@ -312,8 +312,8 @@ Bone Rigidity
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Edit and 姿态模式
-   | Panel:    Armature
+   | 模式:     Edit and 姿态模式
+   | 面板:    Armature
 
 
 .. figure:: /images/riggingeditingcxtarmaturebonespanelposemode.jpg
@@ -374,10 +374,10 @@ Chain 编辑
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Armature
-   | Menu:     :menuselection:`Armature --> Parent --> ...`
-   | Hotkey:   :kbd:`Ctrl-P`, :kbd:`Alt-P`
+   | 模式:     编辑模式
+   | 面板:    Armature
+   | 菜单:     :menuselection:`Armature --> Parent --> ...`
+   | 快捷键:   :kbd:`Ctrl-P`, :kbd:`Alt-P`
 
 
 You can edit the relationships between bones (and hence create/modify the chains of bones)
@@ -457,8 +457,8 @@ Naming Bones
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Armature, 变换 Properties (3D视图, :kbd:`N`)
+   | 模式:     编辑模式
+   | 面板:    Armature, 变换 Properties (3D视图, :kbd:`N`)
 
 
 You can rename your bones, either using the *Bone* field of the *变换 Properties*
@@ -524,9 +524,9 @@ Bone name flipping
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Flip Left & Right Names`
-   | Hotkey:   :kbd:`W-4`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Flip Left & Right Names`
+   | 快捷键:   :kbd:`W-4`
 
 
 You can flip left/right markers (see above) in selected bone names,
@@ -545,10 +545,10 @@ Auto bone naming
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> AutoName Left-Right`,
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> AutoName Left-Right`,
      :menuselection:`Armature --> AutoName Front-Back`, :menuselection:`Armature --> AutoName Top-Bottom`
-   | Hotkey:   :kbd:`W-5`, :kbd:`W-6`, :kbd:`W-7`
+   | 快捷键:   :kbd:`W-5`, :kbd:`W-6`, :kbd:`W-7`
 
 
 The three *AutoName* entries of the *Armature* and *Specials*

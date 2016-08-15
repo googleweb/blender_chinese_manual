@@ -20,8 +20,8 @@ Motion Paths
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    *Object*
+   | 模式:     物体模式
+   | 面板:    *Object*
 
 
 This feature allows you to visualize the animation of objects by displaying their position

@@ -476,7 +476,7 @@ by following continuous face loops, even if the mesh face is irregularly shaped.
 Note that it does not respect the image size,
 so you may have to scale them all down a bit to fit the image area.
 
-Edge Length Mode:
+Edge Length 模式:
 
 Even
    Space all UVs evenly.

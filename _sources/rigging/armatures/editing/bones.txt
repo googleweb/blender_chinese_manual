@@ -6,8 +6,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Tab`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Tab`
 
 
 You will learn here how to add (`Adding Bones`_), delete (`Deleting Bones`_) or subdivide (`Subdividing Bones`_) bones.
@@ -33,8 +33,8 @@ Add Menu
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Shift-A`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Shift-A`
 
 
 In the 3D视图, :kbd:`Shift-A` :menuselection:`--> Bone` to add a new bone to your armature.
@@ -53,9 +53,9 @@ Extrusion
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Extrude`
-   | Hotkey:   :kbd:`E`, :kbd:`Shift-E`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Extrude`
+   | 快捷键:   :kbd:`E`, :kbd:`Shift-E`
 
 
 When you press :kbd:`E`, for each selected tip
@@ -131,8 +131,8 @@ Mouse Clicks
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Hotkey:   :kbd:`Ctrl-LMB`
+   | 模式:     编辑模式
+   | 快捷键:   :kbd:`Ctrl-LMB`
 
 
 If at least one bone is selected, :kbd:`Ctrl-LMB` -clicking adds a new bone.
@@ -216,9 +216,9 @@ Fill between joints
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Fill Between Joints`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Fill Between Joints`
+   | 快捷键:   :kbd:`F`
 
 
 The main use of this tool is to create one bone between two selected ends by pressing
@@ -319,9 +319,9 @@ You will get an error when:
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Duplicate`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Duplicate`
+   | 快捷键:   :kbd:`Shift-D`
 
 .. note::
 
@@ -374,9 +374,9 @@ Standard deletion
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Delete`
-   | Hotkey:   :kbd:`X`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Delete`
+   | 快捷键:   :kbd:`X`
 
 .. note::
 
@@ -413,9 +413,9 @@ Merge
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Merge`
-   | Hotkey:   :kbd:`Alt-M`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Merge`
+   | 快捷键:   :kbd:`Alt-M`
 
 
 You can merge together several selected bones, as long as they form a chain.
@@ -467,9 +467,9 @@ Subdividing Bones
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Armature --> Subdivide`, :menuselection:`Armature --> Subdivide Multi`
-   | Hotkey:   :kbd:`W-1`, :kbd:`W-2`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Armature --> Subdivide`, :menuselection:`Armature --> Subdivide Multi`
+   | 快捷键:   :kbd:`W-1`, :kbd:`W-2`
 
 
 You can subdivide bones, to get two or more bones where there was just one bone.

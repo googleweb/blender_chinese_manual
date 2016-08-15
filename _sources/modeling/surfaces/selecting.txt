@@ -34,9 +34,9 @@ Control Point Row
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> Control Point Row`
-   | Hotkey:   :kbd:`Shift-R`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> Control Point Row`
+   | 快捷键:   :kbd:`Shift-R`
 
 
 This option works a bit like
@@ -54,9 +54,9 @@ More and Less
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Select --> More/Less`
-   | Hotkey:   :kbd:`Ctrl-NumpadPlus` / :kbd:`Ctrl-NumpadMinus`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Select --> More/Less`
+   | 快捷键:   :kbd:`Ctrl-NumpadPlus` / :kbd:`Ctrl-NumpadMinus`
 
 
 These two options are complementary and very similar to

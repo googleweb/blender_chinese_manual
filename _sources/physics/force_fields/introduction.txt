@@ -34,8 +34,8 @@ Creating a Force Field
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Panel:    :menuselection:`物理 --> Fields`
+   | 模式:     物体模式
+   | 面板:    :menuselection:`物理 --> Fields`
 
 
 To create a single Force Field,

@@ -6,8 +6,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Hotkey:   :kbd:`Ctrl` and/or :kbd:`Shift`
+   | 模式:     Object and 编辑模式s
+   | 快捷键:   :kbd:`Ctrl` and/or :kbd:`Shift`
 
 
 Holding :kbd:`Ctrl` during a transform operation (such as grab, rotate or scale)

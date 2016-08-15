@@ -15,9 +15,9 @@ from the basics of surface editing to more advanced topics, like retopology.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> 变换 --> Grab/Move, Rotate, Scale, ...`
-   | Hotkey:   :kbd:`G`, :kbd:`R`, :kbd:`S`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> 变换 --> Grab/Move, Rotate, Scale, ...`
+   | 快捷键:   :kbd:`G`, :kbd:`R`, :kbd:`S`
 
 
 Once you have a selection of one or more control points,
@@ -34,8 +34,8 @@ You also have in *编辑模式* an extra option when using these basic manipulat
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> 变换`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> 变换`
 
 
 The *To Sphere*, *Shear*, *Warp* and *Push/Pull* transform tools are described in the
@@ -49,8 +49,8 @@ NURBS Control Points 设置
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:     Curve Tools (编辑模式) and 变换 Properties
+   | 模式:     编辑模式
+   | 面板:     Curve Tools (编辑模式) and 变换 Properties
 
 
 We saw in a :ref:`previous page <modeling-surfaces-weight>` that NURBS control points have a weight,
@@ -66,9 +66,9 @@ Adding or Extruding
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> Extrude`
-   | Hotkey:   :kbd:`E`, :kbd:`Ctrl-LMB`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> Extrude`
+   | 快捷键:   :kbd:`E`, :kbd:`Ctrl-LMB`
 
 
 Unlike meshes or curves, you cannot generally directly add new control points to a surface
@@ -142,9 +142,9 @@ Opening or Closing a Surface
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> Toggle Cyclic`
-   | Hotkey:   :kbd:`C`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> Toggle Cyclic`
+   | 快捷键:   :kbd:`C`
 
 
 As in :ref:`curves <modeling-curves-opening-and-closing>`,
@@ -169,9 +169,9 @@ The corresponding surface's outer edges will join together to form a "closed" su
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Duplicate`
-   | Hotkey:   :kbd:`Shift-D`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Duplicate`
+   | 快捷键:   :kbd:`Shift-D`
 
 
 Well, as with meshes and curves, this command just duplicates the selection. As usual,
@@ -200,9 +200,9 @@ only selections forming a *single* valid sub-grid are copyable; let us see this 
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Curve --> Delete...`
-   | Hotkey:   :kbd:`X`, :kbd:`Del`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Curve --> Delete...`
+   | 快捷键:   :kbd:`X`, :kbd:`Del`
 
 
 The *Erase* pop-up menu of surfaces offers you two options:
@@ -245,9 +245,9 @@ Joining or Merging Surfaces
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> 创建段`
-   | Hotkey:   :kbd:`F`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> 创建段`
+   | 快捷键:   :kbd:`F`
 
 Just like :ref:`curves <modeling-curves-joining-segments>`,
 merging two surfaces requires that a single edge, a border row of control points,
@@ -297,9 +297,9 @@ Fig. Joining complete is the result of joining the two curves.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve Tools
-   | Menu:     :menuselection:`SurfaceTools --> 建模 --> Subdivide`, :menuselection:`Specials --> Subdivide`
+   | 模式:     编辑模式
+   | 面板:    Curve Tools
+   | 菜单:     :menuselection:`SurfaceTools --> 建模 --> Subdivide`, :menuselection:`Specials --> Subdivide`
 
 
 Surface subdivision is most simple:
@@ -319,8 +319,8 @@ Spin
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Curve Tools
+   | 模式:     编辑模式
+   | 面板:    Curve Tools
 
 
 This tool is a bit similar to its :doc:`mesh counterpart </modeling/meshes/editing/duplicating/spin>` -
@@ -339,8 +339,8 @@ as for the *NURBS Tube* or *NURBS Donut* primitives.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Surface --> Segments --> 切换方向`,
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Surface --> Segments --> 切换方向`,
      :menuselection:`Specials --> 切换方向`
 
 
@@ -355,9 +355,9 @@ Mainly useful when using a curve as path, or the bevel and taper options...
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     Specials
-   | Hotkey:   :kbd:`W`
+   | 模式:     编辑模式
+   | 菜单:     Specials
+   | 快捷键:   :kbd:`W`
 
 
 The *Specials* menu contains exactly the same additional options as for

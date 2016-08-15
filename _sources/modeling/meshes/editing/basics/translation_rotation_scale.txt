@@ -7,10 +7,10 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    Mesh Tools
-   | Menu:     :menuselection:`Mesh --> 变换 --> Grab/Move, Rotate, Scale, ...`
-   | Hotkey:   :kbd:`G` / :kbd:`R` / :kbd:`S`
+   | 模式:     编辑模式
+   | 面板:    Mesh Tools
+   | 菜单:     :menuselection:`Mesh --> 变换 --> Grab/Move, Rotate, Scale, ...`
+   | 快捷键:   :kbd:`G` / :kbd:`R` / :kbd:`S`
 
 
 Once you have a selection of one or more elements, you can grab/move :kbd:`G`,

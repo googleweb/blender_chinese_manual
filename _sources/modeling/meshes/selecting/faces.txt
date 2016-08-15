@@ -21,8 +21,8 @@ Face Loops
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式 (Mesh)
-   | Hotkey:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
+   | 模式:     编辑模式 (Mesh)
+   | 快捷键:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
 
 
 Face Loops are pretty much the same as Edge Rings. If you want to select a Face Loop,

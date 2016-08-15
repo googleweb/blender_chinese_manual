@@ -10,8 +10,8 @@ selection or cursor to a given point while the second type is used during transf
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式
-   | Hotkey:   :kbd:`Shift-S`
+   | 模式:     Object and 编辑模式
+   | 快捷键:   :kbd:`Shift-S`
 
 
 The *Snap* menu (also available from the 3D header in both *物体模式* and *编辑模式*

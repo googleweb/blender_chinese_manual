@@ -6,9 +6,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object or 编辑模式s
-   | Menu:     :menuselection:`Add --> Meta`
-   | Hotkey:   :kbd:`Shift-A`
+   | 模式:     Object or 编辑模式s
+   | 菜单:     :menuselection:`Add --> Meta`
+   | 快捷键:   :kbd:`Shift-A`
 
 
 Meta objects are *implicit surfaces*,
@@ -131,8 +131,8 @@ Threshold (Influence)
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object or 编辑模式s
-   | Panel:    MetaBall
+   | 模式:     Object or 编辑模式s
+   | 面板:    MetaBall
 
 
 *Threshold* defines how much a meta's surface "influences" other metas.
@@ -210,8 +210,8 @@ Underlying Structure
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`MetaBall tools --> 变换 Properties`
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`MetaBall tools --> 变换 Properties`
 
 
 Blender has five types of metas, each determined by its underlying (or directing) structure.

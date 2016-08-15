@@ -33,9 +33,9 @@ Flip Direction
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Normals --> Flip` or :menuselection:`Specials --> Flip Normals`
-   | Hotkey:   :kbd:`W`, :menuselection:`Flip Normals`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Normals --> Flip` or :menuselection:`Specials --> Flip Normals`
+   | 快捷键:   :kbd:`W`, :menuselection:`Flip Normals`
 
 
 Well, it will just reverse the normals direction of all selected faces.
@@ -49,10 +49,10 @@ Recalculate Normals
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Normals --> Recalculate Outside` and
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Normals --> Recalculate Outside` and
      :menuselection:`Mesh --> Normals --> RecalculateInside`
-   | Hotkey:   :kbd:`Ctrl-N` and :kbd:`Ctrl-Shift-N`
+   | 快捷键:   :kbd:`Ctrl-N` and :kbd:`Ctrl-Shift-N`
 
 
 These commands will recalculate the normals of selected faces so that they point outside

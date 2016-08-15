@@ -18,8 +18,8 @@ Changing the Active 相机
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
-   | Hotkey:   :kbd:`Ctrl-Numpad0`
+   | 模式:     物体模式
+   | 快捷键:   :kbd:`Ctrl-Numpad0`
 
 
 .. figure:: /images/cameraview-activecamera.jpg
@@ -53,7 +53,7 @@ The camera with the solid triangle on top is the active camera.
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     物体模式
+   | 模式:     物体模式
    | Editor:   :menuselection:`Properties -->  相机`
 
 
@@ -213,9 +213,9 @@ When this is enabled, extra dotted frames are drawn when in camera view, delimit
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Menu:     :menuselection:`View --> 渲染 Border`
-   | Hotkey:   :kbd:`Ctrl-B`
+   | 模式:     All modes
+   | 菜单:     :menuselection:`View --> 渲染 Border`
+   | 快捷键:   :kbd:`Ctrl-B`
 
 .. figure:: /images/editors_3dview_navigating_camera-view-render-border-toggle.jpg
 

@@ -28,9 +28,9 @@ Context Sensitive Manual Access
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     All modes
-   | Menu:     :kbd:`RMB`, :menuselection:`Online Manual`
-   | Hotkey:   :kbd:`Alt-F1`
+   | 模式:     All modes
+   | 菜单:     :kbd:`RMB`, :menuselection:`Online Manual`
+   | 快捷键:   :kbd:`Alt-F1`
 
 
 You may want to access help for a tool or area from within Blender.

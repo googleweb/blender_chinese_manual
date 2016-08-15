@@ -7,7 +7,7 @@ Background 图像s
    :class: refbox
 
    | Editor:   *3D视图*
-   | Panel:    *Background 图像*
+   | 面板:    *Background 图像*
 
 
 A background picture in your 3D视图 is very helpful in many situations:

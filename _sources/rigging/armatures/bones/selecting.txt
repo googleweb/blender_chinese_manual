@@ -6,8 +6,8 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Panel:    :menuselection:`Bone` panel
+   | 模式:     编辑模式
+   | 面板:    :menuselection:`Bone` panel
 
 
 You can select and edit bones of armatures in *编辑模式* and in *姿态模式*.

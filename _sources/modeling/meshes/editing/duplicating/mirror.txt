@@ -6,9 +6,9 @@
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Menu:     :menuselection:`Object/Mesh --> 镜像`
-   | Hotkey:   :kbd:`Ctrl-M`
+   | 模式:     Object and 编辑模式s
+   | 菜单:     :menuselection:`Object/Mesh --> 镜像`
+   | 快捷键:   :kbd:`Ctrl-M`
 
 
 镜像ing an Object or Mesh selection will create a reversed version of the selection. The

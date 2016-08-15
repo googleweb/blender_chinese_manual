@@ -12,8 +12,8 @@ Fill Holes
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Clean up --> Fill Holes`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Clean up --> Fill Holes`
 
 
 This tool is can take a large selection and detect the holes in the mesh, filling them in.
@@ -32,8 +32,8 @@ Split Non-Planar Faces
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Clean up --> Split Non-Planar Faces`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Clean up --> Split Non-Planar Faces`
 
 
 This tool avoids ambiguous areas of geometry by splitting non-flat faces when they are bent
@@ -46,8 +46,8 @@ Delete Loose 几何体
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Clean up --> Delete Loose`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Clean up --> Delete Loose`
 
 
 This tool removes disconnected vertices and edges (optionally faces - off by default).
@@ -59,8 +59,8 @@ Degenerate Dissolve
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     编辑模式
-   | Menu:     :menuselection:`Mesh --> Clean up --> Degenerate Dissolve`
+   | 模式:     编辑模式
+   | 菜单:     :menuselection:`Mesh --> Clean up --> Degenerate Dissolve`
 
 
 This tool collapses / removes geometry which you typically won't want.

@@ -6,8 +6,8 @@ Push/Pull
 .. admonition:: 参考
    :class: refbox
 
-   | Mode:     Object and 编辑模式s
-   | Menu:     :menuselection:`Object/Mesh --> 变换 --> Push Pull`
+   | 模式:     Object and 编辑模式s
+   | 菜单:     :menuselection:`Object/Mesh --> 变换 --> Push Pull`
 
 
 .. figure:: /images/editors_3dview_transformations-advanced-push_pull_toolshelf-f6.jpg
