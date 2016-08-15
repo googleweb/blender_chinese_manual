@@ -73,9 +73,9 @@ MS-Windows
 LOCAL
    .. parsed-literal:: .\\\ |BLENDER_VERSION|\\.
 USER
-   .. parsed-literal:: C:\\Documents and 设置\\$USERNAME\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
+   .. parsed-literal:: C:\\Documents and Settings\\$USERNAME\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
 SYSTEM
-   .. parsed-literal:: C:\\Documents and 设置\\All Users\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
+   .. parsed-literal:: C:\\Documents and Settings\\All Users\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
 
 
 Path Layout
