@@ -66,9 +66,9 @@ Manually ( *编辑模式* ) :doc:`subdivided </modeling/meshes/editing/subdividi
 The following are available, but currently do not work well.
 It is recommended that you convert these to meshes before rendering.
 
-Open :doc:`NURBS Surfaces </modeling/surfaces/introduction>`
+Open :doc:`NURBS 曲面 </modeling/surfaces/introduction>`
    Control render faces with U/V *Surface Resolution*. Higher numbers give more faces. (Note normal errors).
-Closed NURBS Surfaces
+Closed NURBS 曲面
    Control with *Surface Resolution* controls. (Note the normal errors, and how implicit seam shows).
 :doc:`曲线 </modeling/curves/introduction>` **and** :doc:`Text </modeling/texts/introduction>`
    Control with *Surface Resolution* controls. Higher gives more render faces.

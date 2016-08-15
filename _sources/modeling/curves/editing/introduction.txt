@@ -35,7 +35,7 @@ Normal Size
 
 .. _curves-hiding:
 
-Hiding Elements
+隐藏元素
 ---------------
 
 When in *编辑模式*, you can hide and reveal elements from the display.

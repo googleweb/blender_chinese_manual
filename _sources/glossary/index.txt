@@ -195,13 +195,13 @@ This page lists definitions for terms used in Blender and this manual.
       Even, directed light coming off a surface.
       For most things, diffuse light is the main lighting we see.
       Diffuse light comes from a specific direction or location and creates shading.
-      Surfaces facing towards the light source will be brighter,
+      曲面 facing towards the light source will be brighter,
       while surfaces facing away from the light source will be darker.
 
    Directional Light
       The light that has a specific direction, but no location.
       It seems to come from an infinitely far away source, like the sun.
-      Surfaces facing the light are illuminated more than surfaces facing away, but their location doesn't matter.
+      曲面 facing the light are illuminated more than surfaces facing away, but their location doesn't matter.
       A Directional Light illuminates all objects in the scene, no matter where they are.
 
    Displacement Mapping

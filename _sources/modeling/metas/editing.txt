@@ -81,7 +81,7 @@ To make a meta *negative*, just select the meta in edit mode,
 and check *negative* in the *active element* panel.
 
 
-Hiding Elements
+隐藏元素
 ===============
 
 As in *物体模式*, you can hide the selected meta(s),

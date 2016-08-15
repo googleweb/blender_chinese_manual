@@ -22,8 +22,8 @@ Types of Objects
    曲线 are mathematically defined objects
    which can be manipulated with control handles or control points (instead of vertices),
    to manage their length and curvature.
-:doc:`Surfaces </modeling/surfaces/introduction>`
-   Surfaces are patches that are also manipulated with control points.
+:doc:`曲面 </modeling/surfaces/introduction>`
+   曲面 are patches that are also manipulated with control points.
    These are useful for simple rounded forms and organic landscapes.
 :doc:`Meta Objects </modeling/metas/introduction>`
    Meta Objects (or Metaballs) are objects formed by a mathematical function (with no control points or vertices)

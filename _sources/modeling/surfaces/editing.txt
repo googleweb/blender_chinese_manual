@@ -40,7 +40,7 @@ You also have in *编辑模式* an extra option when using these basic manipulat
 
 The *To Sphere*, *Shear*, *Warp* and *Push/Pull* transform tools are described in the
 :doc:`Mesh Deforming </modeling/meshes/editing/deforming/index>` section.
-Surfaces have no specific transform tools.
+曲面 have no specific transform tools.
 
 
 NURBS Control Points 设置
@@ -83,7 +83,7 @@ ready to drag the new extruded surface to its destination.
 
 There are two things very important to understand:
 
-- Surfaces are *2D* objects - so you cannot extrude anything *inside* a surface
+- 曲面 are *2D* objects - so you cannot extrude anything *inside* a surface
   (e.g. "inner" row); it wouldn't make any sense!
 - The control "grid" *must* remain "squarish",
   which means that you can only extrude a whole row, not parts of rows here and there...
@@ -157,7 +157,7 @@ The corresponding surface's outer edges will join together to form a "closed" su
 
 .. note:: Inner and Outer
 
-   Surfaces have an "inner" and "outer" face, the first being black whereas the latter is correctly shaded -
+   曲面 have an "inner" and "outer" face, the first being black whereas the latter is correctly shaded -
    there does not seem to be any "double sided" shading option for surfaces...).
    When you close a surface in one or two directions, you might get an entirely black object! In this case,
    just `切换方向`_ of your surface...
@@ -239,7 +239,7 @@ Then, using the *Delete Menu* :kbd:`X`,
 the *selected* row of control points is erased, resulting in Fig. After.
 
 
-Joining or Merging Surfaces
+Joining or Merging 曲面
 ---------------------------
 
 .. admonition:: 参考

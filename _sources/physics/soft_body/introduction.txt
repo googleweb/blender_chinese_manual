@@ -70,7 +70,7 @@ Soft Body simulation works for all objects that have vertices or control points:
 
 - 网格.
 - 曲线.
-- Surfaces.
+- 曲面.
 - Lattices.
 
 To activate the Soft Body simulation for an object:

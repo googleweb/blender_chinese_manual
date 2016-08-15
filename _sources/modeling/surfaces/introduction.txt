@@ -147,7 +147,7 @@ You can adjust the resolution separately for both preview and render,
 to not slow things down in the viewport, but still get good render results.
 
 
-Closed and Open Surfaces
+Closed and Open 曲面
 ------------------------
 
 Like curves, surfaces can be closed (cyclical) or open, independently in both directions,

@@ -8,7 +8,7 @@
    Bird logo made from 贝塞尔曲线.
 
 
-曲线 and :doc:`Surfaces </modeling/surfaces/introduction>` are particular types of Blender Objects.
+曲线 and :doc:`曲面 </modeling/surfaces/introduction>` are particular types of Blender Objects.
 They are expressed by mathematical functions rather than a series of points.
 
 Blender offers both `贝塞尔曲线`_ and `非均匀有理B样条 (NURBS)`_.
