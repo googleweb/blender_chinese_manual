@@ -28,7 +28,7 @@ You also have in *编辑模式* an extra option when using these basic manipulat
 :doc:`proportional editing </editors/3dview/transform/transform_control/proportional_edit>`.
 
 
-高级应用 变换工具
+高级变换工具
 ------------------------
 
 .. admonition:: 参考
