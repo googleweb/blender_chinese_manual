@@ -49,7 +49,7 @@ Multi Modifier
 Bind To
    Method to bind the armature to the mesh.
 
-   Vertex Groups
+   顶点组
       When enabled, bones of a given name will deform vertices which belong to vertex groups of the same name.
 
    Bone Envelopes

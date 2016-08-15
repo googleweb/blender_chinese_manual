@@ -51,7 +51,7 @@ Options:
          as long as *Clipping* is enabled.
          You must disable *Clipping* to be able to move the vertices along the mirror axis again.
 
-   Vertex Groups
+   顶点组
       When enabled, the 镜像 modifier will try to mirror existing vertex groups.
 
       A very nice feature, but one that has very specific prerequisites:

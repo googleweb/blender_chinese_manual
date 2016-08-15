@@ -300,7 +300,7 @@ UVs will disappear from the UV/图像编辑器, but they are still there, just n
 you can select a few faces in 3D视图 and it will show up in the UV/图像编辑器.)
 
 To work on the ear, in the 3D视图, we now select only the "ear" faces.
-You can use Vertex Groups to select the ear faces. 选择 sub-meshes is easy too,
+You can use 顶点组 to select the ear faces. 选择 sub-meshes is easy too,
 since they are not connected to the rest of the mesh.
 Simply selecting Linked vertices will select that entire submesh. Basically,
 since you are in edit mode, all of the selecting/unselecting features are available to you.

@@ -317,7 +317,7 @@ we have not yet told Blender which Bones can alter which Child Objects or by how
 <p>To do that we must individually select each Child Object individually and toggle into Edit
 Mode on that Child Object. Once in 编辑模式 we can then select the vertices we want to be
 influenced by the Bones in the Armature. Then with the vertices still selected navigate to
-<span class="menuselection">Properties Editor ‣ Object Data ‣ Vertex Groups</span> and create a new Vertex Group
+<span class="menuselection">Properties Editor ‣ Object Data ‣ 顶点组</span> and create a new Vertex Group
 with the same name as the Bone that you want the selected vertices to be influenced by.</p>
 <p>Once the Vertex Group has been created we then assign the selected vertices to the Vertex
 Group by clicking the Assign Button. By default when selected vertices are assigned to a
@@ -329,7 +329,7 @@ if the Influence Weight had been 0.5 then when the bone moves the vertices would
 <p class="caption"><span class="caption-text">Vertex groups panel with Assign Button and influence Weight Slider highlighted.</span></p>
 </div>
 <p>Once all these steps have been carried out, the Bones of the Armature Object should be
-associated with the Vertex Groups with the same names as the Bones. You can then select the
+associated with the 顶点组 with the same names as the Bones. You can then select the
 Armature Object and switch to 姿态模式 in the <span class="menuselection">3D视图 Editor Header ‣ Mode Select</span> menu.</p>
 <div class="figure" id="id8">
 <img alt="../../../../_images/st-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" src="../../../../_images/st-3dvieweditorheader-objectmenu-parent-armature_deform.jpg" />
@@ -344,14 +344,14 @@ vertices of an object will result in those vertices also being transformed.</p>
 <p>The Armature Deform With Empty Groups parenting method works in almost the same way as
 Armature Deform parenting with one difference. That difference is that when you parent a
 Child Object to an Armature Object the names of the bones in the armature are copied to the
-Child Objects in the form of newly created Vertex Groups,
-one for each different deforming armature bone name. The newly created Vertex Groups will be
-empty this means they will not have any vertices assigned to those Vertex Groups. You still
+Child Objects in the form of newly created 顶点组,
+one for each different deforming armature bone name. The newly created 顶点组 will be
+empty this means they will not have any vertices assigned to those 顶点组. You still
 must manually select the vertices and assign them to a particular Vertex Group of your
 choosing to have bones in the armature influence them.</p>
 <p>For example, if you have an Armature Object which consists of three bones named &#8220;BoneA&#8221;,
 &#8220;BoneB&#8221; and &#8220;BoneC&#8221; and Cube Mesh Object type called &#8220;Cube&#8221;. If you parent the Cube Child Object to
-the Armature Parent Object the Cube will get three new Vertex Groups created on it called &#8220;BoneA&#8221;,
+the Armature Parent Object the Cube will get three new 顶点组 created on it called &#8220;BoneA&#8221;,
 &#8220;BoneB&#8221; and &#8220;BoneC&#8221;. Notice that each Vertex Group is empty.</p>
 <div class="figure" id="id9">
 <img alt="../../../../_images/editors_3dview_header-objectmenu-parent-armature_deform_with_empty_groups-blend.jpg" src="../../../../_images/editors_3dview_header-objectmenu-parent-armature_deform_with_empty_groups-blend.jpg" />
@@ -373,7 +373,7 @@ transformed, when the Control Bone is positioned to the right,
 transforming other bones or objects could do something completely different.
 Control Bones are not directly used to alter the positions of vertices,
 in fact, Control Bones often have no vertices directly associated with themselves.</p>
-<p>When using the Armature Deform With Empty Groups parenting method Vertex Groups on the Child
+<p>When using the Armature Deform With Empty Groups parenting method 顶点组 on the Child
 Object will only be created for Armature Bones which are setup as Deforming Bone types.
 If a Bone is a Control Bone no Vertex Group will be created on the Child Object for that bone.</p>
 <p>To check whether a particular bone in an armature is a Deforming Bone simply switch to Pose or 编辑模式
@@ -391,16 +391,16 @@ otherwise, it is a Control Bone.</p>
 <h3>Armature Deform With Automatic Weights<a class="headerlink" href="#armature-deform-with-automatic-weights" title="Permalink to this headline">¶</a></h3>
 <p>Armature Deform With Automatic Weights parenting feature does everything Armature Deform With Empty Groups does with
 one extra thing. That extra thing is that unlike Armature Deform With Empty Groups which leaves the automatically
-created Vertex Groups empty with no vertices assigned to them; Armature Deform With Automatic Weight will try to
+created 顶点组 empty with no vertices assigned to them; Armature Deform With Automatic Weight will try to
 calculate how much Influence Weight a particular Armature Bone would have on a certain collection of vertices based
 on the distance from those vertices to a particular Armature Bone.</p>
 <p>Once Blender has calculated the Influence Weight vertices should have it will assign that Influence Weight to the
-Vertex Groups that were previously created automatically by Blender on the Child Object when Armature Deform With
+顶点组 that were previously created automatically by Blender on the Child Object when Armature Deform With
 Automatic Weights parenting command was carried out.</p>
 <p>If all went well it should be possible to select the Armature Object switch it into 姿态模式 and transform the bones
 of the Armature and the Child Object should deform in response.
-Unlike Armature Deform parenting you will not have to create Vertex Groups on the Child Object,
-neither will you have to assign Influences Weights to those Vertex Groups, Blender will try to do it for you.</p>
+Unlike Armature Deform parenting you will not have to create 顶点组 on the Child Object,
+neither will you have to assign Influences Weights to those 顶点组, Blender will try to do it for you.</p>
 <p>To activate Armature Deform With Automatic Weights you must be in 物体模式 or 姿态模式,
 then select all the Child Objects (usually Mesh Object Types) and lastly select the Armature Object;
 Once done press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> and select the Armature Deform With Automatic Weights from the
@@ -410,13 +410,13 @@ Objects in ways you would want as Blender can get a little confused when it come
 influence certain vertices when calculating Influence Weights for more complex armatures and Child Objects. Symptoms
 of this confusion are that when transforming the Armature Object in 姿态模式 parts of the Child Objects do not deform
 as you expect; If Blender does not give you the results you require you will have to manually alter the Influence
-Weights of vertices in relation to the Vertex Groups they belong to and have influence in.</p>
+Weights of vertices in relation to the 顶点组 they belong to and have influence in.</p>
 </div>
 <div class="section" id="armature-deform-with-envelope-weights">
 <h3>Armature Deform With Envelope Weights<a class="headerlink" href="#armature-deform-with-envelope-weights" title="Permalink to this headline">¶</a></h3>
 <p>Works in a similar way to Armature Deform With Automatic Weights in that it will create Vertex
 Groups on the Child Objects that have names matching those of the Parent Object Armature Bones.
-The created Vertex Groups will then be assigned Influence Weights.
+The created 顶点组 will then be assigned Influence Weights.
 The major difference is in the way those Influence Weights are calculated.</p>
 <p>Influence Weights that are calculated when using Armature Deform With Envelope Weights
 parenting are calculated entirely visually using Bone Envelopes.</p>
@@ -479,10 +479,10 @@ certain vertices after you have already used Armature Deform With Envelope Weigh
 by default, the newly included/excluded vertices will not be affected by the change. When using
 Armature Deform With Envelope Weights it only calculates which vertices will be affected by
 the Bone Envelope volume at the time of parenting, at which point it creates the required
-named Vertex Groups and assigns vertices to them as required. If you want any vertices to
+named 顶点组 and assigns vertices to them as required. If you want any vertices to
 take account of the new Bone Envelope volume size you will have to carry out the Armature Deform
 With Envelope Weights parenting again; In fact, all parenting used in the Set Parent To pop-up
-menu which tries to automatically assign vertices to Vertex Groups works like this.</p>
+menu which tries to automatically assign vertices to 顶点组 works like this.</p>
 </div>
 </div>
 </div>

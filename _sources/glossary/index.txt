@@ -657,7 +657,7 @@ This page lists definitions for terms used in Blender and this manual.
       Used to store smoke and fire data from physics simulations.
 
    Weight 绘制
-      Assigning :term:`vertices` to :term:`Vertex Groups <Vertex Group>` with a weight of 0.0 - 1.0.
+      Assigning :term:`vertices` to :term:`顶点组 <Vertex Group>` with a weight of 0.0 - 1.0.
 
    World Space
       A 3D coordinate system that originates at a point at the origin of the world.

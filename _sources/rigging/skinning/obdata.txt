@@ -19,7 +19,7 @@ Bones can affect the object's shape in two ways:
 
 - The `Envelope`_ process is available for all type of skinnable objects -
   it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
-- The `Vertex Groups`_ method is (obviously) reserved to meshes and lattices -
+- The `顶点组`_ method is (obviously) reserved to meshes and lattices -
   one bone only affect the vertices in the
   :doc:`group </modeling/meshes/vertex_groups/index>` having the same name,
   using vertices' :ref:`weights <painting_weight-index>` as influence value.
@@ -48,7 +48,7 @@ you can use the :kbd:`Ctrl-P` parent shortcut in the 3D视图s
 (after having selected first the "skin" object, then the armature).
 The *Make Parent To* menu pops up, select the *Armature* entry.
 If the skinning object is a lattice, you are done; no more options are available.
-But with a child mesh, another *Create Vertex Groups?* menu appears,
+But with a child mesh, another *Create 顶点组?* menu appears,
 with the following options - all regarding the "vertex groups" skinning method:
 
 With Empty Groups
@@ -77,7 +77,7 @@ And so, of course, adding an :doc:`Armature modifier </modeling/modifiers/deform
 to an object is the second, new skinning method (which also works for curves/surfaces/texts...).
 Follow the above link to read more about this modifier's specific options.
 Note that there is a way with new *Armature* modifiers to automatically create vertex groups and weight them;
-see the `Vertex Groups`_ description below.
+see the `顶点组`_ description below.
 
 .. warning::
 
@@ -92,7 +92,7 @@ see the `Vertex Groups`_ description below.
 
    Finally that for settings that are present in both the armature's 
    *Armature panel* and in the objects' *Armature modifier panel* 
-   (namely, *Vertex Groups* */* *VertGroups* *,* *Envelopes*, *Quaternion* *and* *B-Bone Rest*),
+   (namely, *顶点组* */* *VertGroups* *,* *Envelopes*, *Quaternion* *and* *B-Bone Rest*),
    the modifier ones always override the armature ones. This means that if, for example,
    you only enable the *Envelopes* deformation method of the armature,
    and then skin it with an object using an *Armature* modifier, where only
@@ -230,7 +230,7 @@ which results in smoother deformations for longer bones.
    The :doc:`editing pages </rigging/armatures/editing/properties>` for how to edit these properties.
 
 
-Vertex Groups
+顶点组
 =============
 
 Vertex groups skinning method is only available for meshes and lattices - the only objects having
@@ -259,8 +259,8 @@ methods as available when doing an "old-parenting" to armature :kbd:`Ctrl-P`:
 
 - Select the bone (and hence the vertex group) you want.
 - Hit :kbd:`W`, and in the *Specials* menu that pops up,
-  choose either *Apply Bone Envelopes to Vertex Groups*
-  or *Apply Bone Heat Weights to Vertex Groups*.
+  choose either *Apply Bone Envelopes to 顶点组*
+  or *Apply Bone Heat Weights to 顶点组*.
   Once again, even though these names are plural,
   you can only affect *one* vertex group's weights at a time with these options.
 

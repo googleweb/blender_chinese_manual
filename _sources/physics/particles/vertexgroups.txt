@@ -3,7 +3,7 @@
 
 
 *************
-Vertex Groups
+顶点组
 *************
 
 The Vertex groups panel allows you to specify vertex groups to use for several child particle settings.

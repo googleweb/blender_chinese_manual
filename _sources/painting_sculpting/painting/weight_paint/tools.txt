@@ -38,7 +38,7 @@ Normalize All
 =============
 
 For each vertex,
-this tool makes sure that the sum of the weights across all Vertex Groups is equal to 1.
+this tool makes sure that the sum of the weights across all 顶点组 is equal to 1.
 This tool normalizes all of the vertex groups, except for locked groups,
 which keep their weight values untouched.
 

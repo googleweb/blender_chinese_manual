@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="Vertex Groups" href="index.html"/>
+        <link rel="up" title="顶点组" href="index.html"/>
         <link rel="next" title="平滑" href="../smoothing.html"/>
-        <link rel="prev" title="Vertex Groups" href="vertex_groups.html"/> 
+        <link rel="prev" title="顶点组" href="vertex_groups.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -97,8 +97,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Vertex Groups</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="vertex_groups.html">Vertex Groups</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">顶点组</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="vertex_groups.html">顶点组</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Weight 编辑</a></li>
 </ul>
 </li>
@@ -160,7 +160,7 @@
       
           <li><a href="../index.html">网格</a> &raquo;</li>
       
-          <li><a href="index.html">Vertex Groups</a> &raquo;</li>
+          <li><a href="index.html">顶点组</a> &raquo;</li>
       
     <li>Weight 编辑</li>
       <li class="wy-breadcrumbs-aside">
@@ -182,11 +182,11 @@
 <a class="reference internal image-reference" href="../../../_images/modeling-meshes-vertex-weights-panel-overview.jpg"><img alt="../../../_images/modeling-meshes-vertex-weights-panel-overview.jpg" src="../../../_images/modeling-meshes-vertex-weights-panel-overview.jpg" style="width: 235px;" /></a>
 <p class="caption"><span class="caption-text">Vertex Weights Panel.</span></p>
 </div>
-<p>As mentioned before in <a class="reference internal" href="index.html"><span class="doc">Vertex Groups</span></a> each entry
+<p>As mentioned before in <a class="reference internal" href="index.html"><span class="doc">顶点组</span></a> each entry
 in a Vertex Group also contains a weight value in the range of [0.0,1.0].
 Blender provides a <em>Vertex Weights</em> panel from where you can get (and edit)
 information about the weight values of each Vertex of a mesh.
-That is: to which Vertex Groups the vertex is assigned with which weight value.</p>
+That is: to which 顶点组 the vertex is assigned with which weight value.</p>
 <p>The Vertex Weights panel can be found in the right property sidebar of the 3D视图.
 It is available in 编辑模式 and in 权重绘制模式
 (when Vertex Selection masking is enabled as well). The panel is separated into the sections</p>
@@ -197,12 +197,12 @@ It is available in 编辑模式 and in 权重绘制模式
 </ul>
 <div class="section" id="vertex-group-categories">
 <h2>Vertex Group Categories<a class="headerlink" href="#vertex-group-categories" title="Permalink to this headline">¶</a></h2>
-<p>Actually we do not have any strict categories of Vertex Groups in Blender.
+<p>Actually we do not have any strict categories of 顶点组 in Blender.
 Technically they all behave the same way.
-However, we can identify two implicit categories of Vertex Groups:</p>
+However, we can identify two implicit categories of 顶点组:</p>
 <div class="section" id="the-deform-groups">
 <h3>The Deform Groups<a class="headerlink" href="#the-deform-groups" title="Permalink to this headline">¶</a></h3>
-<p>These Vertex Groups are sometimes also named <em>Weight Groups</em> or <em>Weight Maps</em>.
+<p>These 顶点组 are sometimes also named <em>Weight Groups</em> or <em>Weight Maps</em>.
 They are used for defining the weight tables of Armature bones.
 All Deform Groups of an Object are strictly related to each other via their weight values.</p>
 <p>Strictly speaking, the sum of all deform weights for any vertex of a mesh should be exactly 1.
@@ -212,7 +212,7 @@ that allows restricting the Vertex Weight panel to display only the Deform bones
 </div>
 <div class="section" id="the-other-groups">
 <h3>The 其他 Groups<a class="headerlink" href="#the-other-groups" title="Permalink to this headline">¶</a></h3>
-<p>All other usages of Vertex Groups are summarized into the <em>其他</em> category.
+<p>All other usages of 顶点组 are summarized into the <em>其他</em> category.
 These vertex groups can be found within Shape keys, 修改器, etc...
 There is really no good name for this category,
 so we kept it simple and named it <em>其他</em>.</p>
@@ -259,7 +259,7 @@ Now you can see the weights of the active Vertex Group displayed on the mesh sur
 </div>
 <div class="section" id="edit-weights-in-edit-mode">
 <h2>Edit Weights in 编辑模式<a class="headerlink" href="#edit-weights-in-edit-mode" title="Permalink to this headline">¶</a></h2>
-<p>It is now very easy to work with Vertex Groups in 编辑模式. All edit options of the mesh are
+<p>It is now very easy to work with 顶点组 in 编辑模式. All edit options of the mesh are
 available and you have direct visual control over how your Weights change when you edit the
 weight values.</p>
 <div class="figure" id="id5">
@@ -310,13 +310,13 @@ Thus all previously defined weights are overwritten.</dd>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p>The filter setting is respected</p>
-<p class="last">Note that both functions only work on the Vertex Groups currently displayed in the Weights Table.
+<p class="last">Note that both functions only work on the 顶点组 currently displayed in the Weights Table.
 So if for example only the <em>Deform weights</em> are displayed,
 then Normalize and Copy only affect the Deform bones.</p>
 </div>
 </div>
 <div class="section" id="about-locked-vertex-groups">
-<h3>About locked Vertex Groups<a class="headerlink" href="#about-locked-vertex-groups" title="Permalink to this headline">¶</a></h3>
+<h3>About locked 顶点组<a class="headerlink" href="#about-locked-vertex-groups" title="Permalink to this headline">¶</a></h3>
 <div class="figure" id="id9">
 <a class="reference internal image-reference" href="../../../_images/modeling-meshes-vertex-weight-editor-locked.jpg"><img alt="../../../_images/modeling-meshes-vertex-weight-editor-locked.jpg" src="../../../_images/modeling-meshes-vertex-weight-editor-locked.jpg" style="width: 235px;" /></a>
 <p class="caption"><span class="caption-text">Vertex Weights panel Locked.</span></p>
@@ -349,7 +349,7 @@ and use all available functions from the Weight table again.</p>
         <a href="../smoothing.html" class="btn btn-neutral float-right" title="平滑" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="vertex_groups.html" class="btn btn-neutral" title="Vertex Groups" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="vertex_groups.html" class="btn btn-neutral" title="顶点组" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

@@ -5,7 +5,7 @@
 简介
 ************
 
-Vertex Groups can potentially have a very large number of associated vertices and thus a large
+顶点组 can potentially have a very large number of associated vertices and thus a large
 number of weights (one weight per assigned vertex). *Weight 绘制* is a method to
 maintain large amounts of weight information in a very intuitive way.
 It is primarily used for rigging meshes,

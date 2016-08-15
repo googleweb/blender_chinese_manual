@@ -102,7 +102,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#parenting-to-whole-armatures">Parenting to Whole Armatures</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#common-options">Common Options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bone-deform-options">Bone Deform Options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vertex-groups">Vertex Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vertex-groups">顶点组</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="objects.html">Mesh Skinning</a></li>
@@ -186,7 +186,7 @@ This type of skinning is available for meshes, lattices, curves, surfaces, and t
 <ul class="simple">
 <li>The <a class="reference internal" href="#envelope">Envelope</a> process is available for all type of skinnable objects -
 it uses the &#8220;proximity&#8221; and &#8220;influence&#8221; of the bones to determine which part of the object they can deform.</li>
-<li>The <a class="reference internal" href="#vertex-groups">Vertex Groups</a> method is (obviously) reserved to meshes and lattices -
+<li>The <a class="reference internal" href="#vertex-groups">顶点组</a> method is (obviously) reserved to meshes and lattices -
 one bone only affect the vertices in the
 <a class="reference internal" href="../../modeling/meshes/vertex_groups/index.html"><span class="doc">group</span></a> having the same name,
 using vertices&#8217; <a class="reference internal" href="../../painting_sculpting/painting/weight_paint/index.html#painting-weight-index"><span class="std std-ref">weights</span></a> as influence value.
@@ -209,7 +209,7 @@ you can use the <code class="kbd docutils literal"><span class="pre">Ctrl-P</spa
 (after having selected first the &#8220;skin&#8221; object, then the armature).
 The <em>Make Parent To</em> menu pops up, select the <em>Armature</em> entry.
 If the skinning object is a lattice, you are done; no more options are available.
-But with a child mesh, another <em>Create Vertex Groups?</em> menu appears,
+But with a child mesh, another <em>Create 顶点组?</em> menu appears,
 with the following options - all regarding the &#8220;vertex groups&#8221; skinning method:</p>
 <dl class="docutils">
 <dt>With Empty Groups</dt>
@@ -238,7 +238,7 @@ And so, of course, adding an <a class="reference internal" href="../../modeling/
 to an object is the second, new skinning method (which also works for curves/surfaces/texts...).
 Follow the above link to read more about this modifier&#8217;s specific options.
 Note that there is a way with new <em>Armature</em> modifiers to automatically create vertex groups and weight them;
-see the <a class="reference internal" href="#vertex-groups">Vertex Groups</a> description below.</p>
+see the <a class="reference internal" href="#vertex-groups">顶点组</a> description below.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">A single object can have several <em>Armature</em> modifiers
@@ -252,7 +252,7 @@ and only one &#8220;virtual old parenting&#8221; one, which will always be at th
 <p class="first admonition-title">Note</p>
 <p class="last">Finally that for settings that are present in both the armature&#8217;s
 <em>Armature panel</em> and in the objects&#8217; <em>Armature modifier panel</em>
-(namely, <em>Vertex Groups</em> <em>/</em> <em>VertGroups</em> <em>,</em> <em>Envelopes</em>, <em>Quaternion</em> <em>and</em> <em>B-Bone Rest</em>),
+(namely, <em>顶点组</em> <em>/</em> <em>VertGroups</em> <em>,</em> <em>Envelopes</em>, <em>Quaternion</em> <em>and</em> <em>B-Bone Rest</em>),
 the modifier ones always override the armature ones. This means that if, for example,
 you only enable the <em>Envelopes</em> deformation method of the armature,
 and then skin it with an object using an <em>Armature</em> modifier, where only
@@ -388,7 +388,7 @@ which results in smoother deformations for longer bones.</p>
 </div>
 </div>
 <div class="section" id="vertex-groups">
-<h2>Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h2>
+<h2>顶点组<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h2>
 <p>Vertex groups skinning method is only available for meshes and lattices - the only objects having
 <a class="reference internal" href="../../modeling/meshes/vertex_groups/index.html"><span class="doc">vertex groups</span></a> Its principle is very simple:
 each bone only affects vertices belonging to a vertex group having the same name as the bone.
@@ -412,8 +412,8 @@ methods as available when doing an &#8220;old-parenting&#8221; to armature <code
 <ul class="simple">
 <li>Select the bone (and hence the vertex group) you want.</li>
 <li>Hit <code class="kbd docutils literal"><span class="pre">W</span></code>, and in the <em>Specials</em> menu that pops up,
-choose either <em>Apply Bone Envelopes to Vertex Groups</em>
-or <em>Apply Bone Heat Weights to Vertex Groups</em>.
+choose either <em>Apply Bone Envelopes to 顶点组</em>
+or <em>Apply Bone Heat Weights to 顶点组</em>.
 Once again, even though these names are plural,
 you can only affect <em>one</em> vertex group&#8217;s weights at a time with these options.</li>
 </ul>

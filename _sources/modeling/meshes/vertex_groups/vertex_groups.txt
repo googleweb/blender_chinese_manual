@@ -1,6 +1,6 @@
 
 *************
-Vertex Groups
+顶点组
 *************
 
 .. figure:: /images/modeling_meshes_vgroups_01.jpg
@@ -8,14 +8,14 @@ Vertex Groups
 
    The Vertex Group Panel.
 
-Vertex Groups are mainly used to tag the vertices belonging
+顶点组 are mainly used to tag the vertices belonging
 to parts of a Mesh Object or :term:`Lattice`. Think of the legs of a chair or
 the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character.
 In addition you can assign different *weight values*
 (in the range [ 0.0, 1.0 ] ) to the vertices within a Vertex Group.
-Hence Vertex Groups are sometimes also named *Weight Groups*.
+Hence 顶点组 are sometimes also named *Weight Groups*.
 
-Vertex Groups are most commonly used for Armatures
+顶点组 are most commonly used for Armatures
 (See also :doc:`Skinning Mesh Objects </rigging/skinning/obdata>`).
 But they are also used in many other areas of Blender, like for example:
 
@@ -25,14 +25,14 @@ But they are also used in many other areas of Blender, like for example:
 - 物理 Simulations
 
 Many more usage scenarios are possible.
-Actually you can use Vertex Groups for whatever makes sense to you.
-In some contexts Vertex Groups can also be automatically generated
+Actually you can use 顶点组 for whatever makes sense to you.
+In some contexts 顶点组 can also be automatically generated
 (i.e. for rigged objects). However, in this section we will focus
-on manually created (user-defined) Vertex Groups.
+on manually created (user-defined) 顶点组.
 
 .. note:: Vertex groups only apply to Mesh and Lattice Objects
 
-   Any other Object type has no vertices, hence it cannot have Vertex Groups.
+   Any other Object type has no vertices, hence it cannot have 顶点组.
 
 
 Typical usage scenarios for Vertex groups
@@ -41,7 +41,7 @@ Typical usage scenarios for Vertex groups
 Skinning an armature
    If you want to animate your mesh and make it move, you will
    define an armature which consists of a bunch of bones.
-   Vertex Groups are used to associate parts of the Mesh
+   顶点组 are used to associate parts of the Mesh
    to Bones of the Armature, where you can specify an influence
    *weight* in the range (0.0 - 1.0) for each vertex
    in the Vertex Group.
@@ -49,11 +49,11 @@ Skinning an armature
 Working with 修改器
    Many modifiers contain the ability to control the modifier
    influence on each vertex separately.
-   This is also done via Vertex Groups and the weight values
+   This is also done via 顶点组 and the weight values
    associated to the vertices.
 
 Quickly select/edit/hide parts of a mesh
-   By defining mesh regions with Vertex Groups you can easily
+   By defining mesh regions with 顶点组 you can easily
    select entire parts of your mesh with three clicks and work
    on them in isolation without having to create separate objects.
    With the hide function you can even remove a vertex
@@ -68,7 +68,7 @@ Cull out and duplicate parts of a mesh
    where you want them.
 
 
-Creating Vertex Groups
+Creating 顶点组
 ======================
 
 .. figure:: /images/modeling-meshes-vertex-group-panel-empty.jpg
@@ -77,8 +77,8 @@ Creating Vertex Groups
    Empty Vertex Group Panel.
 
 
-Vertex Groups are maintained within the *Object Data* Properties Editor (1),
-and there in the *Vertex Groups* panel.
+顶点组 are maintained within the *Object Data* Properties Editor (1),
+and there in the *顶点组* panel.
 As long as no Vertex groups are defined (the default for new Mesh Objects),
 the Panel is empty (2).
 
@@ -87,7 +87,7 @@ border (3). Initially the group is named *Group*
 (or *Group.nnn* when the name already exists) and gets displayed in the Panel (2)
 (see next image).
 
-Vertex Groups Panel Controls
+顶点组 Panel Controls
 ----------------------------
 
 .. figure:: /images/modeling-meshes-vertex-group-panel-one.jpg
@@ -138,7 +138,7 @@ Deleting a Vertex Group only deletes the vertex assignments to the Group.
 The vertices themselves are not deleted.
 
 
-Locking Vertex Groups
+Locking 顶点组
 =====================
 
 .. figure:: /images/modeling-meshes-vertex-group-panel-lg.jpg
@@ -156,11 +156,11 @@ And you can change it with the weight paint brushes, etc.
 When you click on the icon,
 it changes to a closed lock icon and all vertex group modifications get disabled.
 You can only rename or delete the group, and unlock it again.
-No other operations are allowed on locked Vertex Groups,
-thus all corresponding function buttons become disabled for locked Vertex Groups.
+No other operations are allowed on locked 顶点组,
+thus all corresponding function buttons become disabled for locked 顶点组.
 
 
-Working with Content of Vertex Groups
+Working with Content of 顶点组
 =====================================
 
 .. figure:: /images/modeling-meshes-vertex-group-panel-one.jpg
@@ -204,7 +204,7 @@ You add vertices to a group as follows:
 - Set the weight value that shall be assigned to all selected verts (2).
 - :kbd:`LMB` the *Assign* button to assign the selected verts to the active group using the given weight (3).
 
-Note that weight Assignment is not available for locked Vertex Groups.
+Note that weight Assignment is not available for locked 顶点组.
 The Assign button is grayed out in that case.
 
 .. note:: Assign is additive
@@ -236,7 +236,7 @@ You remove vertices from a group as follows:
 - Select all vertices that you want to remove from the group.
 - Press the *Remove* button.
 
-Note that Removing weight Assignments is not available for locked Vertex Groups.
+Note that Removing weight Assignments is not available for locked 顶点组.
 The Remove button is grayed out in that case.
 
 
@@ -277,12 +277,12 @@ Keyboard Shortcuts
 .. figure:: /images/modeling-meshes-vertex-group-pop-up.png
    :align: right
 
-   Vertex Groups pop-up menu.
+   顶点组 pop-up menu.
 
 
 In 编辑模式 you can press :kbd:`Ctrl-G` to a shortcut Menu for adding/removing verts to/from groups.
 The pop-up menu provides the following functions with obvious functionality:
-(also available via :menuselection:`Mesh --> Vertices --> Vertex Groups`)
+(also available via :menuselection:`Mesh --> Vertices --> 顶点组`)
 
 - Assign to New Group
 - Assign to Active Group
@@ -303,15 +303,15 @@ Vertex Group Management
    Vertex groups panel's pop-up menu.
 
 
-Vertex Groups provide a more complex set of functions
+顶点组 provide a more complex set of functions
 inside a pop-up menu. This menu is accessible
 from the Vertex Group Panel by clicking on the
 dark gray *arrow down* icon on the right panel border.
 
 The following functions of the pop-up menu operate on the assigned vertices:
 
-Sort Vertex Groups:
-   Sorts Vertex Groups Alphabetically
+Sort 顶点组:
+   Sorts 顶点组 Alphabetically
 
 Copy Vertex Group:
    Add a Copy of the active Vertex Group as a new Group.
@@ -319,15 +319,15 @@ Copy Vertex Group:
    And it will contain associations to exactly the same verts
    with the exact same weights as in the source vertex group.
 
-Copy Vertex Groups to Linked:
-   Copy Vertex Groups of this Mesh to all linked Objects which use the same mesh data (all users of the data).
+Copy 顶点组 to Linked:
+   Copy 顶点组 of this Mesh to all linked Objects which use the same mesh data (all users of the data).
 
 Copy Vertex Group to Selected:
-   Copy all Vertex Groups to other Selected Objects provided they have matching indices
+   Copy all 顶点组 to other Selected Objects provided they have matching indices
    (typically this is true for copies of the mesh which are only deformed and not otherwise edited).
 
 镜像 Vertex Group:
-   镜像 all Vertex Groups, flip weights and/or names, editing only selected vertices,
+   镜像 all 顶点组, flip weights and/or names, editing only selected vertices,
    flipping when both sides are selected; otherwise copy from unselected.
    Note this function will be reworked (and fully documented) in a future release.
 
@@ -337,10 +337,10 @@ Remove from All Groups:
 
 Clear Active group (not available for locked groups):
    Remove all assigned vertices from the active Group. The group is made empty.
-   Note that the vertices may still be assigned to other Vertex Groups of the Object.
+   Note that the vertices may still be assigned to other 顶点组 of the Object.
 
 Delete All Groups:
-   Remove all Vertex Groups from the Object.
+   Remove all 顶点组 from the Object.
 
 The following functions operate only on the lock state settings:
 

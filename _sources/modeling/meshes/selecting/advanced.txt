@@ -99,7 +99,7 @@ Vertex Selection 模式:
       Selects all vertices that have normals pointing in similar directions to those currently selected.
    Amount of Adjacent Faces
       Selects all vertices that have the same number of faces connected to them.
-   Vertex Groups
+   顶点组
       Selects all vertices in the same :doc:`vertex group </modeling/meshes/vertex_groups/index>`.
    Amount of connecting edges
       Selects all vertices that have the same number of edges connected to them.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Vertex Groups &mdash; Blender参考手册</title>
+  <title>顶点组 &mdash; Blender参考手册</title>
   
 
   
@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="Blender参考手册" href="../../../index.html"/>
-        <link rel="up" title="Vertex Groups" href="index.html"/>
+        <link rel="up" title="顶点组" href="index.html"/>
         <link rel="next" title="Weight 编辑" href="weight_edit.html"/>
-        <link rel="prev" title="Vertex Groups" href="index.html"/> 
+        <link rel="prev" title="顶点组" href="index.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -97,8 +97,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">Mesh Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Vertex Groups</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Vertex Groups</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">顶点组</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">顶点组</a></li>
 <li class="toctree-l4"><a class="reference internal" href="weight_edit.html">Weight 编辑</a></li>
 </ul>
 </li>
@@ -160,9 +160,9 @@
       
           <li><a href="../index.html">网格</a> &raquo;</li>
       
-          <li><a href="index.html">Vertex Groups</a> &raquo;</li>
+          <li><a href="index.html">顶点组</a> &raquo;</li>
       
-    <li>Vertex Groups</li>
+    <li>顶点组</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -177,18 +177,18 @@
            <div itemprop="articleBody">
             
   <div class="section" id="vertex-groups">
-<h1>Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h1>
+<h1>顶点组<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" id="id1">
 <img alt="../../../_images/modeling_meshes_vgroups_01.jpg" src="../../../_images/modeling_meshes_vgroups_01.jpg" />
 <p class="caption"><span class="caption-text">The Vertex Group Panel.</span></p>
 </div>
-<p>Vertex Groups are mainly used to tag the vertices belonging
+<p>顶点组 are mainly used to tag the vertices belonging
 to parts of a Mesh Object or <a class="reference internal" href="../../../glossary/index.html#term-lattice"><span class="xref std std-term">Lattice</span></a>. Think of the legs of a chair or
 the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character.
 In addition you can assign different <em>weight values</em>
 (in the range [ 0.0, 1.0 ] ) to the vertices within a Vertex Group.
-Hence Vertex Groups are sometimes also named <em>Weight Groups</em>.</p>
-<p>Vertex Groups are most commonly used for Armatures
+Hence 顶点组 are sometimes also named <em>Weight Groups</em>.</p>
+<p>顶点组 are most commonly used for Armatures
 (See also <a class="reference internal" href="../../../rigging/skinning/obdata.html"><span class="doc">Skinning Mesh Objects</span></a>).
 But they are also used in many other areas of Blender, like for example:</p>
 <ul class="simple">
@@ -198,14 +198,14 @@ But they are also used in many other areas of Blender, like for example:</p>
 <li>物理 Simulations</li>
 </ul>
 <p>Many more usage scenarios are possible.
-Actually you can use Vertex Groups for whatever makes sense to you.
-In some contexts Vertex Groups can also be automatically generated
+Actually you can use 顶点组 for whatever makes sense to you.
+In some contexts 顶点组 can also be automatically generated
 (i.e. for rigged objects). However, in this section we will focus
-on manually created (user-defined) Vertex Groups.</p>
+on manually created (user-defined) 顶点组.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>Vertex groups only apply to Mesh and Lattice Objects</p>
-<p class="last">Any other Object type has no vertices, hence it cannot have Vertex Groups.</p>
+<p class="last">Any other Object type has no vertices, hence it cannot have 顶点组.</p>
 </div>
 <div class="section" id="typical-usage-scenarios-for-vertex-groups">
 <h2>Typical usage scenarios for Vertex groups<a class="headerlink" href="#typical-usage-scenarios-for-vertex-groups" title="Permalink to this headline">¶</a></h2>
@@ -213,17 +213,17 @@ on manually created (user-defined) Vertex Groups.</p>
 <dt>Skinning an armature</dt>
 <dd>If you want to animate your mesh and make it move, you will
 define an armature which consists of a bunch of bones.
-Vertex Groups are used to associate parts of the Mesh
+顶点组 are used to associate parts of the Mesh
 to Bones of the Armature, where you can specify an influence
 <em>weight</em> in the range (0.0 - 1.0) for each vertex
 in the Vertex Group.</dd>
 <dt>Working with 修改器</dt>
 <dd>Many modifiers contain the ability to control the modifier
 influence on each vertex separately.
-This is also done via Vertex Groups and the weight values
+This is also done via 顶点组 and the weight values
 associated to the vertices.</dd>
 <dt>Quickly select/edit/hide parts of a mesh</dt>
-<dd>By defining mesh regions with Vertex Groups you can easily
+<dd>By defining mesh regions with 顶点组 you can easily
 select entire parts of your mesh with three clicks and work
 on them in isolation without having to create separate objects.
 With the hide function you can even remove a vertex
@@ -238,13 +238,13 @@ where you want them.</dd>
 </dl>
 </div>
 <div class="section" id="creating-vertex-groups">
-<h2>Creating Vertex Groups<a class="headerlink" href="#creating-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<h2>Creating 顶点组<a class="headerlink" href="#creating-vertex-groups" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id2">
 <img alt="../../../_images/modeling-meshes-vertex-group-panel-empty.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-empty.jpg" />
 <p class="caption"><span class="caption-text">Empty Vertex Group Panel.</span></p>
 </div>
-<p>Vertex Groups are maintained within the <em>Object Data</em> Properties Editor (1),
-and there in the <em>Vertex Groups</em> panel.
+<p>顶点组 are maintained within the <em>Object Data</em> Properties Editor (1),
+and there in the <em>顶点组</em> panel.
 As long as no Vertex groups are defined (the default for new Mesh Objects),
 the Panel is empty (2).</p>
 <p>You create a vertex group by <code class="kbd docutils literal"><span class="pre">LMB</span></code> <em>+</em> on the right Panel
@@ -252,7 +252,7 @@ border (3). Initially the group is named <em>Group</em>
 (or <em>Group.nnn</em> when the name already exists) and gets displayed in the Panel (2)
 (see next image).</p>
 <div class="section" id="vertex-groups-panel-controls">
-<h3>Vertex Groups Panel Controls<a class="headerlink" href="#vertex-groups-panel-controls" title="Permalink to this headline">¶</a></h3>
+<h3>顶点组 Panel Controls<a class="headerlink" href="#vertex-groups-panel-controls" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-right" id="id3">
 <img alt="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" />
 <p class="caption"><span class="caption-text">One Vertex Group.</span></p>
@@ -294,7 +294,7 @@ the <em>-</em> button at the right Panel border.</p>
 The vertices themselves are not deleted.</p>
 </div>
 <div class="section" id="locking-vertex-groups">
-<h2>Locking Vertex Groups<a class="headerlink" href="#locking-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<h2>Locking 顶点组<a class="headerlink" href="#locking-vertex-groups" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id5">
 <img alt="../../../_images/modeling-meshes-vertex-group-panel-lg.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-lg.jpg" />
 <p class="caption"><span class="caption-text">Lock a Vertex Group.</span></p>
@@ -307,11 +307,11 @@ And you can change it with the weight paint brushes, etc.</p>
 <p>When you click on the icon,
 it changes to a closed lock icon and all vertex group modifications get disabled.
 You can only rename or delete the group, and unlock it again.
-No other operations are allowed on locked Vertex Groups,
-thus all corresponding function buttons become disabled for locked Vertex Groups.</p>
+No other operations are allowed on locked 顶点组,
+thus all corresponding function buttons become disabled for locked 顶点组.</p>
 </div>
 <div class="section" id="working-with-content-of-vertex-groups">
-<h2>Working with Content of Vertex Groups<a class="headerlink" href="#working-with-content-of-vertex-groups" title="Permalink to this headline">¶</a></h2>
+<h2>Working with Content of 顶点组<a class="headerlink" href="#working-with-content-of-vertex-groups" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id6">
 <img alt="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" src="../../../_images/modeling-meshes-vertex-group-panel-one.jpg" />
 <p class="caption"><span class="caption-text">Vertex Group Panel in 编辑模式.</span></p>
@@ -345,7 +345,7 @@ value that gets assigned to the selected verts when you press the Assign Button.
 <li>Set the weight value that shall be assigned to all selected verts (2).</li>
 <li><code class="kbd docutils literal"><span class="pre">LMB</span></code> the <em>Assign</em> button to assign the selected verts to the active group using the given weight (3).</li>
 </ul>
-<p>Note that weight Assignment is not available for locked Vertex Groups.
+<p>Note that weight Assignment is not available for locked 顶点组.
 The Assign button is grayed out in that case.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -372,7 +372,7 @@ will have their weight set to the value in the <em>Weight:</em> field.</p>
 <li>Select all vertices that you want to remove from the group.</li>
 <li>Press the <em>Remove</em> button.</li>
 </ul>
-<p>Note that Removing weight Assignments is not available for locked Vertex Groups.
+<p>Note that Removing weight Assignments is not available for locked 顶点组.
 The Remove button is grayed out in that case.</p>
 </div>
 <div class="section" id="using-groups-for-selecting-deselecting">
@@ -409,11 +409,11 @@ and keep all other verts selected.</p>
 <h3>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-right" id="id8">
 <img alt="../../../_images/modeling-meshes-vertex-group-pop-up.png" src="../../../_images/modeling-meshes-vertex-group-pop-up.png" />
-<p class="caption"><span class="caption-text">Vertex Groups pop-up menu.</span></p>
+<p class="caption"><span class="caption-text">顶点组 pop-up menu.</span></p>
 </div>
 <p>In 编辑模式 you can press <code class="kbd docutils literal"><span class="pre">Ctrl-G</span></code> to a shortcut Menu for adding/removing verts to/from groups.
 The pop-up menu provides the following functions with obvious functionality:
-(also available via <span class="menuselection">Mesh ‣ Vertices ‣ Vertex Groups</span>)</p>
+(also available via <span class="menuselection">Mesh ‣ Vertices ‣ 顶点组</span>)</p>
 <ul class="simple">
 <li>Assign to New Group</li>
 <li>Assign to Active Group</li>
@@ -430,26 +430,26 @@ The pop-up menu provides the following functions with obvious functionality:
 <img alt="../../../_images/modeling-meshes-vertex-group-list-popup.jpg" src="../../../_images/modeling-meshes-vertex-group-list-popup.jpg" />
 <p class="caption"><span class="caption-text">Vertex groups panel&#8217;s pop-up menu.</span></p>
 </div>
-<p>Vertex Groups provide a more complex set of functions
+<p>顶点组 provide a more complex set of functions
 inside a pop-up menu. This menu is accessible
 from the Vertex Group Panel by clicking on the
 dark gray <em>arrow down</em> icon on the right panel border.</p>
 <p>The following functions of the pop-up menu operate on the assigned vertices:</p>
 <dl class="docutils">
-<dt>Sort Vertex Groups:</dt>
-<dd>Sorts Vertex Groups Alphabetically</dd>
+<dt>Sort 顶点组:</dt>
+<dd>Sorts 顶点组 Alphabetically</dd>
 <dt>Copy Vertex Group:</dt>
 <dd>Add a Copy of the active Vertex Group as a new Group.
 The new group will be named like the original group with &#8220;_copy&#8221; appended at the end of its name.
 And it will contain associations to exactly the same verts
 with the exact same weights as in the source vertex group.</dd>
-<dt>Copy Vertex Groups to Linked:</dt>
-<dd>Copy Vertex Groups of this Mesh to all linked Objects which use the same mesh data (all users of the data).</dd>
+<dt>Copy 顶点组 to Linked:</dt>
+<dd>Copy 顶点组 of this Mesh to all linked Objects which use the same mesh data (all users of the data).</dd>
 <dt>Copy Vertex Group to Selected:</dt>
-<dd>Copy all Vertex Groups to other Selected Objects provided they have matching indices
+<dd>Copy all 顶点组 to other Selected Objects provided they have matching indices
 (typically this is true for copies of the mesh which are only deformed and not otherwise edited).</dd>
 <dt>镜像 Vertex Group:</dt>
-<dd>镜像 all Vertex Groups, flip weights and/or names, editing only selected vertices,
+<dd>镜像 all 顶点组, flip weights and/or names, editing only selected vertices,
 flipping when both sides are selected; otherwise copy from unselected.
 Note this function will be reworked (and fully documented) in a future release.</dd>
 <dt>Remove from All Groups:</dt>
@@ -457,9 +457,9 @@ Note this function will be reworked (and fully documented) in a future release.<
 After this operation has been performed, the verts will no longer be contained in any vertex group.</dd>
 <dt>Clear Active group (not available for locked groups):</dt>
 <dd>Remove all assigned vertices from the active Group. The group is made empty.
-Note that the vertices may still be assigned to other Vertex Groups of the Object.</dd>
+Note that the vertices may still be assigned to other 顶点组 of the Object.</dd>
 <dt>Delete All Groups:</dt>
-<dd>Remove all Vertex Groups from the Object.</dd>
+<dd>Remove all 顶点组 from the Object.</dd>
 </dl>
 <p>The following functions operate only on the lock state settings:</p>
 <dl class="docutils">
@@ -491,7 +491,7 @@ vertex group will remove the group from all objects sharing this mesh.</p>
         <a href="weight_edit.html" class="btn btn-neutral float-right" title="Weight 编辑" accesskey="n">下一页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Vertex Groups" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral" title="顶点组" accesskey="p"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
       
     </div>
   

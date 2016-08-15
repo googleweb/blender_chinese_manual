@@ -229,7 +229,7 @@ The strength defines how much the smoothing is applied.</p>
 </dd>
 <dt>Auto Normalize</dt>
 <dd><p class="first">Ensures that all deforming vertex groups add up to one while painting. When this option is turned off,
-then all weights of a vertex can have any value between 0.0 and 1.0. However, when Vertex Groups are used as
+then all weights of a vertex can have any value between 0.0 and 1.0. However, when 顶点组 are used as
 Deform Groups for character animation then Blender always interprets the weight values relative to each other.
 That is, Blender always does a normalization over all deform bones. Hence in practice it is not necessary to
 maintain a strict normalization and further normalizing weights should not affect animation at all.</p>
@@ -237,16 +237,16 @@ maintain a strict normalization and further normalizing weights should not affec
 that are already normalized with some other tool.</p>
 </dd>
 <dt>Multi-Paint</dt>
-<dd><p class="first">Paint on all selected Vertex Groups simultaneously, in a way that preserves their relative influence.
+<dd><p class="first">Paint on all selected 顶点组 simultaneously, in a way that preserves their relative influence.
 This can be useful when tweaking weights in an area that is affected by more than three bones at once,
 e.g. certain areas on a character&#8217;s face.</p>
-<p>This option is only useful in the Armature tab, where you can select multiple Vertex Groups
-by selecting multiple Pose bones. Once at least two Vertex Groups are selected, viewport colors and
+<p>This option is only useful in the Armature tab, where you can select multiple 顶点组
+by selecting multiple Pose bones. Once at least two 顶点组 are selected, viewport colors and
 paint logic switch to Multi-Paint Mode, using the sum of the selected groups&#8217; weights if Auto Normalize
 is enabled, and the average otherwise. Any paint operations aimed at this collective weight are applied
 to individual Vertex Group weights in such way that their ratio stays the same.</p>
 <p>Since the ratio is undefined if all weights are zero, Multi-Paint cannot operate on vertices that do not
-have any weight assigned to the relevant Vertex Groups. For this reason it also doesn&#8217;t allow reducing
+have any weight assigned to the relevant 顶点组. For this reason it also doesn&#8217;t allow reducing
 the weight all the way to zero. When used with X-镜像, it only guarantees completely symmetrical
 result if weights are initially symmetrical.</p>
 <div class="last admonition tip">

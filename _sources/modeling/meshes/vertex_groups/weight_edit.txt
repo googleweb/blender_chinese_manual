@@ -9,11 +9,11 @@ Weight 编辑
    Vertex Weights Panel.
 
 
-As mentioned before in :doc:`Vertex Groups </modeling/meshes/vertex_groups/index>` each entry
+As mentioned before in :doc:`顶点组 </modeling/meshes/vertex_groups/index>` each entry
 in a Vertex Group also contains a weight value in the range of [0.0,1.0].
 Blender provides a *Vertex Weights* panel from where you can get (and edit)
 information about the weight values of each Vertex of a mesh.
-That is: to which Vertex Groups the vertex is assigned with which weight value.
+That is: to which 顶点组 the vertex is assigned with which weight value.
 
 The Vertex Weights panel can be found in the right property sidebar of the 3D视图.
 It is available in 编辑模式 and in 权重绘制模式
@@ -27,15 +27,15 @@ It is available in 编辑模式 and in 权重绘制模式
 Vertex Group Categories
 =======================
 
-Actually we do not have any strict categories of Vertex Groups in Blender.
+Actually we do not have any strict categories of 顶点组 in Blender.
 Technically they all behave the same way.
-However, we can identify two implicit categories of Vertex Groups:
+However, we can identify two implicit categories of 顶点组:
 
 
 The Deform Groups
 -----------------
 
-These Vertex Groups are sometimes also named *Weight Groups* or *Weight Maps*.
+These 顶点组 are sometimes also named *Weight Groups* or *Weight Maps*.
 They are used for defining the weight tables of Armature bones.
 All Deform Groups of an Object are strictly related to each other via their weight values.
 
@@ -48,7 +48,7 @@ that allows restricting the Vertex Weight panel to display only the Deform bones
 The 其他 Groups
 ----------------
 
-All other usages of Vertex Groups are summarized into the *其他* category.
+All other usages of 顶点组 are summarized into the *其他* category.
 These vertex groups can be found within Shape keys, 修改器, etc...
 There is really no good name for this category,
 so we kept it simple and named it *其他*.
@@ -110,7 +110,7 @@ Now you can see the weights of the active Vertex Group displayed on the mesh sur
 Edit Weights in 编辑模式
 =========================
 
-It is now very easy to work with Vertex Groups in 编辑模式. All edit options of the mesh are
+It is now very easy to work with 顶点组 in 编辑模式. All edit options of the mesh are
 available and you have direct visual control over how your Weights change when you edit the
 weight values.
 
@@ -178,12 +178,12 @@ Copy
 
 .. tip:: The filter setting is respected
 
-   Note that both functions only work on the Vertex Groups currently displayed in the Weights Table.
+   Note that both functions only work on the 顶点组 currently displayed in the Weights Table.
    So if for example only the *Deform weights* are displayed,
    then Normalize and Copy only affect the Deform bones.
 
 
-About locked Vertex Groups
+About locked 顶点组
 --------------------------
 
 .. figure:: /images/modeling-meshes-vertex-weight-editor-locked.jpg

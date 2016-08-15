@@ -144,5 +144,5 @@ but options within those sets vary based on the system employed. These sets of c
    Factors for external forces.
 :doc:`Force Field 设置 </physics/particles/physics/index>`
    Makes particles force fields.
-:doc:`Vertex Groups </physics/particles/vertexgroups>`
+:doc:`顶点组 </physics/particles/vertexgroups>`
    Influencing various settings with vertex groups.
