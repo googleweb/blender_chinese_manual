@@ -82,7 +82,7 @@ Backdrop Channels
    Set the image to be displayed with *Color*, *Color and Alpha*, or just *Alpha*.
 Zoom
    Sets how big the backdrop image is.
-Offset
+偏移量
    Change the screen space position of the backdrop,
    or click the *Move* button, or shortcut :kbd:`Alt-MMB` to manually move it.
 Fit

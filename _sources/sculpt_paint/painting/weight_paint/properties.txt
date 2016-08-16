@@ -30,7 +30,7 @@ Weight
 Strength
    This is the amount of paint to be applied per brush stroke.
    What that means exactly also depends on the Brush Blending mode.
-Radius
+半径
    The radius defines the area of influence of the brush.
 
    .. note::
@@ -143,7 +143,7 @@ Jitter
    Jitter the position of the brush while painting
 Smooth Stroke
    Brush lags behind mouse and follows a smoother path
-Radius
+半径
    Minimum distance from last point before stroke continues
 Factor
    Higher values give a smoother stroke

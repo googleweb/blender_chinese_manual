@@ -220,7 +220,7 @@ Use Mist
    Uses Mist with this material.
 Invert Z Depth
    渲染s materials faces with an inverted Z buffer.
-Z Offset
+Z 偏移量
    If using Invert Z Depth, this is an artificial offset to z values.
 Light Group
    Limit material's lighting calculation to a specific light group

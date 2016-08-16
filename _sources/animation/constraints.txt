@@ -41,10 +41,10 @@ and hence use :doc:`Armatures </rigging/armatures/index>` to animate them!
 Back to our simple *Copy Location* example,
 you can have two different behaviors of this constraint:
 
-- When it is *Offset* button is disabled (the default), the location of the owner is "absolutely"
+- When it is *偏移量* button is disabled (the default), the location of the owner is "absolutely"
   controlled by the constraint's target, which means nothing (except other constraints below in the stack...)
   will be able to control the owner's position. Not even the object's animation curves.
-- However, when the *Offset* button is enabled,
+- However, when the *偏移量* button is enabled,
   the location of the owner is "relatively" controlled by the constraint's target.
   This means that location's properties of the owner are offset from the location of the target.
   And these owner's location properties can be controlled e.g.
@@ -54,10 +54,10 @@ you can have two different behaviors of this constraint:
 例子
 -------
 
-Let us use the *Copy Location* constraint and its *Offset* button. For example,
+Let us use the *Copy Location* constraint and its *偏移量* button. For example,
 you can make your owner (let us call it "moon") describe perfect circles centered on the (0.0, 0.0, 0.0)
 point (using e.g. pydriven *LocX*/*LocY* animation curves, see :doc:`this page </animation/drivers>`),
-and then make it copy the location of a target (called it "earth", for example) with the *Offset* button enabled.
+and then make it copy the location of a target (called it "earth", for example) with the *偏移量* button enabled.
 Congratulation, you just modeled a satellite in a (simplified) orbit around its planet.
 Just do the same thing with its planet around its star (which you might call "sun", what do you think?),
 and why not, for the star around its galaxy.
@@ -81,7 +81,7 @@ used to create this animation.
 
    - You can animate the *Influence* of a constraint.
      For example, in the `例子`_ above, it is used to first stick the camera to the "moon", then to the "earth",
-     and finally to nothing, using two *Copy Location* constraints with *Offset* set,
+     and finally to nothing, using two *Copy Location* constraints with *偏移量* set,
      and their *Influence* cross-fading together.
    - More anecdotal, you can also, for some constraints using an armature's bone as target,
      animate where along this bone (between root and tip) lays the real target point

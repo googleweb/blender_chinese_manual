@@ -201,10 +201,10 @@ and hence use <a class="reference internal" href="../rigging/armatures/index.htm
 <p>Back to our simple <em>Copy Location</em> example,
 you can have two different behaviors of this constraint:</p>
 <ul class="simple">
-<li>When it is <em>Offset</em> button is disabled (the default), the location of the owner is &#8220;absolutely&#8221;
+<li>When it is <em>偏移量</em> button is disabled (the default), the location of the owner is &#8220;absolutely&#8221;
 controlled by the constraint&#8217;s target, which means nothing (except other constraints below in the stack...)
 will be able to control the owner&#8217;s position. Not even the object&#8217;s animation curves.</li>
-<li>However, when the <em>Offset</em> button is enabled,
+<li>However, when the <em>偏移量</em> button is enabled,
 the location of the owner is &#8220;relatively&#8221; controlled by the constraint&#8217;s target.
 This means that location&#8217;s properties of the owner are offset from the location of the target.
 And these owner&#8217;s location properties can be controlled e.g.
@@ -212,10 +212,10 @@ by its <em>Loc...</em> curves (or actions, or NLA...)!</li>
 </ul>
 <div class="section" id="example">
 <h3>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>Let us use the <em>Copy Location</em> constraint and its <em>Offset</em> button. For example,
+<p>Let us use the <em>Copy Location</em> constraint and its <em>偏移量</em> button. For example,
 you can make your owner (let us call it &#8220;moon&#8221;) describe perfect circles centered on the (0.0, 0.0, 0.0)
 point (using e.g. pydriven <em>LocX</em>/<em>LocY</em> animation curves, see <a class="reference internal" href="drivers.html"><span class="doc">this page</span></a>),
-and then make it copy the location of a target (called it &#8220;earth&#8221;, for example) with the <em>Offset</em> button enabled.
+and then make it copy the location of a target (called it &#8220;earth&#8221;, for example) with the <em>偏移量</em> button enabled.
 Congratulation, you just modeled a satellite in a (simplified) orbit around its planet.
 Just do the same thing with its planet around its star (which you might call &#8220;sun&#8221;, what do you think?),
 and why not, for the star around its galaxy.</p>
@@ -234,7 +234,7 @@ used to create this animation.</p>
 <ul class="last simple">
 <li>You can animate the <em>Influence</em> of a constraint.
 For example, in the <a class="reference internal" href="#example">例子</a> above, it is used to first stick the camera to the &#8220;moon&#8221;, then to the &#8220;earth&#8221;,
-and finally to nothing, using two <em>Copy Location</em> constraints with <em>Offset</em> set,
+and finally to nothing, using two <em>Copy Location</em> constraints with <em>偏移量</em> set,
 and their <em>Influence</em> cross-fading together.</li>
 <li>More anecdotal, you can also, for some constraints using an armature&#8217;s bone as target,
 animate where along this bone (between root and tip) lays the real target point

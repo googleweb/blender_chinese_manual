@@ -14,7 +14,7 @@ The 纹理 node makes 3D textures available to the compositor.
 输入s
 ======
 
-Offset
+偏移量
    A vector (XYZ) transforming the origin of the texture.
 Scale
    A vector (XYZ) to scale the texture.

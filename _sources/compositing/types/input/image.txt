@@ -40,8 +40,8 @@ Source
          The range of frames to be shown.
       Start Frame
          The frame of the global sequence, when the playback should start. 
-      Offset
-         Offsets the first frame of the clip.
+      偏移量
+         偏移量s the first frame of the clip.
       Cyclic
          Start over and repeats after the last frame to create a continuous loop.
       Auto-Refresh

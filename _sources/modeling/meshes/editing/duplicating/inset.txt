@@ -40,9 +40,9 @@ Options
 
 Boundary
    Determines whether open edges will be inset or not.
-Offset Even
+偏移量 Even
    Scale the offset to give more even thickness.
-Offset Relative
+偏移量 Relative
    Scale the offset by surrounding geometry.
 Thickness
    Set the size of the inset.

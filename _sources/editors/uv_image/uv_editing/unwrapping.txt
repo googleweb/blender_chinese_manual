@@ -210,7 +210,7 @@ Align
       Polar 0 is on the y axis
 
 
-Radius
+半径
    The radius of the cylinder to use
 
 

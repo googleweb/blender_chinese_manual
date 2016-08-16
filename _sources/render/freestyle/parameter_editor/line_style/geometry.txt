@@ -24,10 +24,10 @@ in various ways.
 As with other modifier stacks in Blender, they are applied from top to bottom.
 
 
-2D Offset
+2D 偏移量
 ---------
 
-The *2D Offset* modifier adds some two-dimensional offsets to the stroke backbone
+The *2D 偏移量* modifier adds some two-dimensional offsets to the stroke backbone
 geometry. It has two sets of independent options/effects:
 
 
@@ -146,7 +146,7 @@ Rounds
    How many rounds are generated, as if the pen draws the same stroke several times
    (i.e. how many times the process is repeated).
 
-Random Radius and Random Center
+Random 半径 and Random Center
    For the *Circles* and *Ellipses* shapes.
    Adds some randomness to each round in the relevant aspect.
    Using more than one round with no randomness would be meaningless, as they would draw over each other exactly.
@@ -171,8 +171,8 @@ its ends.
    :width: 300px
    :align: right
 
-Offset
-   Offset the start and end points along the original stroke, before generating the new straight one.
+偏移量
+   偏移量 the start and end points along the original stroke, before generating the new straight one.
 
 This modifier will produce reasonable results when strokes are short enough,
 because shorter strokes are more likely to be well approximated by straight lines. Therefore,

@@ -28,8 +28,8 @@ Target
    Vertex Group
       When *Target* is a mesh, a new field is display where a vertex group can be selected.
 
-Pivot Offset
-   Offset of pivot from target.
+Pivot 偏移量
+   偏移量 of pivot from target.
 Pivot When
    Always, Z Rot, Y Rot...
 

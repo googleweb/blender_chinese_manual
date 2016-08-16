@@ -24,7 +24,7 @@ Use Mist
    Use :doc:`mist </render/blender_render/world/mist>` on this material (see "World 设置" for more details)
 Invert Z depth
    渲染 material's faces with an inverted Z buffer (scanline only)
-Z Offset
+Z 偏移量
    Give faces an artificial Z offset for Z transparency.
 Light Group
    Limit lighting to lamps in this

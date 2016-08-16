@@ -22,7 +22,7 @@ Value
 Properties
 ==========
 
-Offset
+偏移量
    Factor added to the input value.
 Size
    Scales (multiply) the input value.

@@ -272,8 +272,8 @@ Movie and Sequence
       Set the number of frames to use
    Start
       Set the starting frame of the movie/sequence
-   Offset
-      Offset the number of frame used in the animation
+   偏移量
+      偏移量 the number of frame used in the animation
    Fields
       Set the number fields per rendered frame to use(2 fields is 1 frame)
    Auto Refresh

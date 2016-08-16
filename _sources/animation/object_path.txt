@@ -60,10 +60,10 @@ Evaluation Time
    but could be keyframed to give more control over the path animation.
 Follow
    Causes the curve path children to rotate along the curvature of the path.
-Radius
+半径
    Causes the curve path child to be scaled by the set curve radius.
    See :doc:`Curve Extruding </modeling/curves/editing/extrude>`
-Offset Children
+偏移量 Children
    Causes the animation to be offset by the curve path child's time offset value,
    which can be found in its *动画 Hacks* section of the *Object Panel*.
 
@@ -73,7 +73,7 @@ The Follow Path Constraint
 
 The *Follow Path* constraint implements the most "classical" technique. By default,
 the owner object will walk the whole path only once, starting at frame one,
-and over 100 frames. You can set a different starting frame in the *Offset*
+and over 100 frames. You can set a different starting frame in the *偏移量*
 field of the constraint panel, and change the length (in frames)
 of the path using its *Frames* property (*Curve and Surface* panel).
 

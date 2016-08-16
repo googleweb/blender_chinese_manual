@@ -301,10 +301,10 @@ Tilt Angle
 Random
    Random variation of tilt.
 
-Offset X
-   Offset the billboard horizontally in relation to the particle center, this does not move the texture.
-Offset Y
-   Offset the billboard vertically in relation to the particle center.
+偏移量 X
+   偏移量 the billboard horizontally in relation to the particle center, this does not move the texture.
+偏移量 Y
+   偏移量 the billboard vertically in relation to the particle center.
 
 UV Channels
    Billboards are just square polygons.
@@ -332,7 +332,7 @@ This generated UV coordinates for this layer.
 Split UV's
    The amount of rows/columns in the texture to be used.
    Coordinates are a single part of the *UV Split* grid, which is a n?n grid over the whole texture. What
-   the part is used for each particle and at what time is determined by the *Offset* and
+   the part is used for each particle and at what time is determined by the *偏移量* and
    *Animate* controls. These can be used to make each billboard unique or to use an "animated" texture for
    them by having each frame of the animation in a grid in a big image.
 Billboard Split UV
@@ -352,7 +352,7 @@ Animate
    Frame
       The section is changes according to the frame.
 
-Offset
+偏移量
    Specifies how to choose the first part
    (of all the parts in the n×n grid in the texture defined by the *UV Split* number) for all particles.
 

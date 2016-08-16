@@ -136,7 +136,7 @@ Only Neighbor 几何体
 
 .. The below defintion is confusing for users. Change?
 
-Ray Radius
+Ray 半径
    Width of rays. Useful when raycasting against vertices or edges.
 Mix Mode
    How to affect destination elements with source values.

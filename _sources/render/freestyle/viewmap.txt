@@ -38,7 +38,7 @@ Culling
    高级应用 Options.
 
 
-*Sphere Radius*
+*Sphere 半径*
 It affects the calculation of curvatures for *Ridge*,
 *Valley* and *Suggestive Contour* edge type selection in a line set.
 

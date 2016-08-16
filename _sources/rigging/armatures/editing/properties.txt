@@ -43,7 +43,7 @@ the positions and radius of both ends of the active selected bone,
 as well as its :ref:`roll rotation <armature-bone_roll>`.
 
 
-Radius and Scaling in Envelope Visualization
+半径 and Scaling in Envelope Visualization
 --------------------------------------------
 
 .. admonition:: 参考
@@ -390,7 +390,7 @@ To parent and/or connect bones, you can:
 - In a 3D视图, select the bone and *then* its future parent, and press :kbd:`Ctrl-P`
   (or :menuselection:`Armature --> Parent --> Make Parent...`).
   In the small *Make Parent* menu that pops up, choose *Connected*
-  if you want the child to be connected to its parent, else click on *Keep Offset*.
+  if you want the child to be connected to its parent, else click on *Keep 偏移量*.
   If you have selected more than two bones, they will all be parented to the last selected one.
   If you only select one already-parented bone, or all selected bones are already parented to the last selected one,
   your only choice is to connect them, if not already done.

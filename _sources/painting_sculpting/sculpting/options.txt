@@ -71,7 +71,7 @@ Brush Type
       Similar to the *Nudge* brush, this one flattens the mesh in the brush area,
       while moving it in the direction of the brush stroke.
 
-Radius
+半径
    This option controls the radius of the brush, measured in pixels.
    :kbd:`F` allows you to change the brush size interactively by
    dragging the mouse and then :kbd:`LMB` (the texture of the brush should be visible inside the circle).
@@ -148,7 +148,7 @@ Rake
    TODO.
 Random
    TODO.
-Offset
+偏移量
    Fine tunes the texture map placement in the x, y, and z axes.
 Size
    This setting allows you to modify the scaling factor of the texture. Not available for *Drag* textures.
@@ -186,7 +186,7 @@ Jitter
 Smooth stroke
    Brush lags behind mouse and follows a smoother path. When enabled, the following become active:
 
-   Radius
+   半径
       Sets the minimum distance from the last point before stroke continues.
    Factor
       Sets the amount of smoothing
@@ -222,7 +222,7 @@ Lock
 Tiling
    Using this option allows you to seamlessly tile your strokes along the given
    axes.
-Tile Offset
+Tile 偏移量
    The default tile size is set to one :abbr:`BU (Blender Unit)`. The offset allows the
    option to alter the tile size along all three axes.
 

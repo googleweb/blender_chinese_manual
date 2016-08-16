@@ -95,7 +95,7 @@ External Contour
 
 Suggestive Contour
    Draws some lines which would form the contour of the mesh if the viewport was shifted.
-   Depends on your viewmap settings for *Kr Derivative Epsilon* and *Sphere Radius*
+   Depends on your viewmap settings for *Kr Derivative Epsilon* and *Sphere 半径*
    (further information: `File:Manual-2.6-渲染-Freestyle-PrincetownLinestyle.pdf
    <https://wiki.blender.org/index.php/File:Manual-2.6-渲染-Freestyle-PrincetownLinestyle.pdf>`__).
 
@@ -103,7 +103,7 @@ Material Boundary
    Draws lines where two materials meet on the same object. Must be activated in the viewmap settings.
 
 Ridge & Valley
-   Draws ridges and valleys. Depends on your *Sphere Radius* viewmap settings.
+   Draws ridges and valleys. Depends on your *Sphere 半径* viewmap settings.
 
 
 Edge Marks

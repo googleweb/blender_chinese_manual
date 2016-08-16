@@ -62,9 +62,9 @@ Amplitude
    Adjusts the Y scaling
 Phase Multiplier
    Adjusts the X scaling
-Phase Offset
+Phase 偏移量
    Adjusts the X offset
-Value Offset
+Value 偏移量
    Adjusts the Y offset
 
 
@@ -99,7 +99,7 @@ The options can be set for before and after the curve.
 Cycle Mode
    Repeat Motion
       Repeats the curve data, while maintaining their values each cycle.
-   Repeat with Offset
+   Repeat with 偏移量
       Repeats the curve data, but offsets the value of the first point to the value of the last point each cycle.
    Repeat 镜像ed
       Each cycle the curve data is flipped across the X-axis.
@@ -153,7 +153,7 @@ Gives the curve a stepped appearance by rounding values down within a certain ra
 
 Step Size
    Specify the number of frames to hold each frame
-Offset
+偏移量
    参考 number of frames before frames get held. Use to get hold for '1-3' vs '5-7' holding patterns.
 Use Start Frame
    Restrict modifier to only act before its 'end' frame

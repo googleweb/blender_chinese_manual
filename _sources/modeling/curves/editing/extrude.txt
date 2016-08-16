@@ -54,7 +54,7 @@ Bevel Depth
 
    .. figure:: /images/curves_extrude_depth_fullfill.jpg
 
-      Bevel depth of 0.25, fill set to full, zero Mean Tilt.
+      倒角深度 of 0.25, fill set to full, zero Mean Tilt.
 
 Bevel Resolution
    Controls the resolution of the bevel created by a *Bevel Depth* higher than zero.
@@ -63,20 +63,20 @@ Bevel Resolution
 
    .. figure:: /images/curves_extrude_resolution.jpg
 
-      Bevel resolution set to 10.
+      倒角分辨率 set to 10.
 
-Offset
+偏移量
    Moves the extrusion parallel to the curve normals. *Almost like scaling*
 
    .. figure:: /images/curves_extrude_closed2d_fillboth_offset-1.jpg
 
-      -1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.
+      -1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.
 
-Radius
-   The Radius allows you to directly control the width of the extrusion along the “spinal” curve.
-   The *Radius* of the points is set using the *Shrink/Fatten Radius* transform tool :kbd:`Alt-S`,
-   the :menuselection:`Curve --> 变换 --> Shrink/Fatten Radius`,
-   or the :kbd:`N` :menuselection:`--> transform --> Radius`.
+半径
+   The 半径 allows you to directly control the width of the extrusion along the “spinal” curve.
+   The *半径* of the points is set using the *Shrink/Fatten 半径* transform tool :kbd:`Alt-S`,
+   the :menuselection:`Curve --> 变换 --> Shrink/Fatten 半径`,
+   or the :kbd:`N` :menuselection:`--> transform --> 半径`.
 
    .. figure:: /images/curves_extrude_radius.jpg
 
@@ -97,7 +97,7 @@ Open 2D Curve
    .. figure:: /images/curves_extrude_open2d_fill_none.jpg
 
       Open 2D Curve with :kbd:`Alt-C`, fill set to none,
-      zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.
+      zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.
 
 Closed 2D Curve
    This is probably the most useful situation, as it will quickly create a volume, with (by default)
@@ -108,7 +108,7 @@ Closed 2D Curve
 
    .. figure:: /images/curves_extrude_closed2d_fill_both.jpg
 
-      Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 Bevel resolution, Fill: Both.
+      Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.
 
 3D Curve
    Here the fact that the curve is closed or not has no importance - you will never get a volume with an extruded 3D
@@ -133,7 +133,7 @@ otherwise you will get a sort of gutter or slide object...
 
 The object is extruded along the whole length of all internal curves. By default,
 the width of the extrusion is constant, but you have two ways to control it,
-the *Radius* property of control points(see above), and the "taper" object.
+the *半径* property of control points(see above), and the "taper" object.
 
 The taper curve is evaluated along *the local X axis*,
 using *the local Y axis* for width control. Note also that:
@@ -157,7 +157,7 @@ using *the local Y axis* for width control. Note also that:
 ========
 
 .. TODO: add some "simple" extrusion examples.
-   TODO: add some "bevel" extrusion with *Radius* examples.
+   TODO: add some "bevel" extrusion with *半径* examples.
 
 Let us taper a simple curve circle extruded object using a taper curve. Add a curve,
 then exit *编辑模式*. Add another one (a closed one, like a circle); call it "BevelCurve",

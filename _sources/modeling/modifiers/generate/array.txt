@@ -53,11 +53,11 @@ Count
    - Applying the scale with :kbd:`Ctrl-A` can be useful for each one.
 
 
-Constant Offset, X, Y, Z
+Constant 偏移量, X, Y, Z
    Adds a constant translation component to the duplicate object's offset.
    X, Y and Z constant components can be specified.
 
-Relative Offset, X, Y, Z
+Relative 偏移量, X, Y, Z
    .. figure:: /images/array-scale_eg.jpg
 
       Relative offset example.
@@ -66,7 +66,7 @@ Relative Offset, X, Y, Z
    to the offset. X, Y and Z scaling factors can be specified.
 
 
-Object Offset
+Object 偏移量
    .. figure:: /images/array_offset_eg.jpg
 
       Object offset example.
@@ -114,7 +114,7 @@ Start Cap / End Cap
 Hints
 =====
 
-Offset Calculation
+偏移量 Calculation
 ------------------
 
 The transformation applied from one copy to the next is calculated as the sum of the three

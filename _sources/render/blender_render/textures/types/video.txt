@@ -57,8 +57,8 @@ Frames
    Number of frames/images in the movie or sequence to use
 Start
    Global starting frame of the sequence/movie
-Offset
-   Offset the number of the frame to use in the animation.
+偏移量
+   偏移量 the number of the frame to use in the animation.
    What frame number inside the movie/sequence to start grabbing.
 
 Match Movie Length

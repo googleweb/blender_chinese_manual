@@ -31,8 +31,8 @@ Lift/Gamma/Gain
    Gain
       Adjusts highlights.
 
-Offset/Power/Slope (ASC-CDL)
-   Offset
+偏移量/Power/Slope (ASC-CDL)
+   偏移量
       Summand.
    Power
       Over all exponent.
@@ -49,7 +49,7 @@ Color
 高级应用
 ========
 
-The Offset/Power/Slope formula
+The 偏移量/Power/Slope formula
 ------------------------------
 
 *out* = (*i* × *s* + *o*)\ :sup:`p`
@@ -59,6 +59,6 @@ where:
 - *out*: The color graded pixel code value.
 - *i*: The input pixel code value (0 to 1) (black to white).
 - *s*: Slope (any number 0 or greater, nominal value is 1.0).
-- *o*: Offset (any number, the nominal value is 0).
+- *o*: 偏移量 (any number, the nominal value is 0).
 - *p*: Power (any number greater than 0, nominal value is 1.0).
 

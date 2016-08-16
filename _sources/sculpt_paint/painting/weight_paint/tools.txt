@@ -217,7 +217,7 @@ Operator Parameters
 
 Subset
    Restrict the tool to a subset. See above `The Subset Option`_ for how subsets are defined.
-Offset
+偏移量
    A value from the range (-1.0 - 1.0) to be added to all weights in the Vertex Group.
 Gain
    All weights in the Subset are multiplied with the gain.
@@ -226,7 +226,7 @@ Gain
 
 .. note::
 
-   Whichever Gain and Offset you choose,
+   Whichever Gain and 偏移量 you choose,
    in all cases the final value of each weight will be clamped to the range (0.0 - 1.0).
    So you will never get negative weights or overheated areas (weight > 1.0) with this tool.
 

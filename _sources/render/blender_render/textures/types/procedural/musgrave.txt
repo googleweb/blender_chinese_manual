@@ -80,13 +80,13 @@ Octaves
    Octave controls the number of times the original noise pattern is overlayed on itself and
    scaled/contrasted with the fractal dimension and lacunarity settings.
 Intensity
-   Light intensity. Called *Offset* for *Hetero Terrain*.
+   Light intensity. Called *偏移量* for *Hetero Terrain*.
 
 
 The *Hybrid Multifractal* and *Ridged Multifractal* types have these additional settings:
 
-Offset
-   Both have a "Fractal Offset" button that serves as a "sea level"
+偏移量
+   Both have a "Fractal 偏移量" button that serves as a "sea level"
    adjustment and indicates the base height of the resulting bump map.
    Bump values below this threshold will be returned as zero.
 Gain

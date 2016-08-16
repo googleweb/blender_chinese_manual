@@ -199,7 +199,7 @@ The visual objects will correctly move and their physics representation will upd
 <p>Another important note is that the default
 <a class="reference internal" href="#collision-bounds">Collision Bounds</a>
 is a Triangle Mesh, meaning it is higher in computational requirements but also in detail.
-This in turn means the &#8220;Radius&#8221; option has no effect by default.</p>
+This in turn means the &#8220;半径&#8221; option has no effect by default.</p>
 <p>For more documentation, see the <a class="reference internal" href="../index.html"><span class="doc">Top BGE 物理 page</span></a>.</p>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
@@ -224,7 +224,7 @@ such as unchecking the &#8220;相机&#8221; icon in the Outliner).
 - Python property: <code class="docutils literal"><span class="pre">obj.use_render</span></code></li>
 </ul>
 <dl class="docutils">
-<dt>Radius</dt>
+<dt>半径</dt>
 <dd>If you have the &#8220;Collision Bounds: Sphere&#8221;
 set explicitly (or implicitly through having the Collision Bounds subpanel unchecked),
 this will multiply with the Object&#8217;s (unapplied) Scale. Note that none of the other bounds types are affected.
@@ -241,7 +241,7 @@ even though it is only actually used with Sphere. Python property: <code class="
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Basic</th>
-<th class="head">Radius= 1.5</th>
+<th class="head">半径= 1.5</th>
 <th class="head">Unapplied Scale</th>
 <th class="head">Applied Scale</th>
 <th class="head">Collision Bounds</th>
@@ -322,16 +322,16 @@ and look for the white (or green, if sleeping) geometry.</p>
 <dd>For Dynamic and Static objects, it is a Triangle Mesh (see below).
 For everything else, it is a Sphere (see below).</dd>
 <dt>Capsule - A cylinder with hemispherical caps, like a pill.</dt>
-<dd>Radius of the hemispheres is the greater of the x or y extent.
+<dd>半径 of the hemispheres is the greater of the x or y extent.
 Height is the z bounds</dd>
 <dt>Box</dt>
 <dd>The x,y,z bounding box, as defined above.</dd>
 <dt>Sphere</dt>
-<dd>Radius is defined by the object&#8217;s scale (visible in the N properties panel) times the physics radius
-(can be found in 物理 » Attributes » Radius.
-Note: This is the only bounds that respects the Radius option.</dd>
+<dd>半径 is defined by the object&#8217;s scale (visible in the N properties panel) times the physics radius
+(can be found in 物理 » Attributes » 半径.
+Note: This is the only bounds that respects the 半径 option.</dd>
 <dt>Cylinder</dt>
-<dd>Radius is the greater of the x or y extent.
+<dd>半径 is the greater of the x or y extent.
 Height is the z bounds.</dd>
 <dt>Cone</dt>
 <dd>Base radius is the greater of the x or y extent.

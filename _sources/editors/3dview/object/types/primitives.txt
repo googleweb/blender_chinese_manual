@@ -23,7 +23,7 @@ Blender comes with a number of "primitive" mesh shapes that you can start modeli
 
 Options included in more than one primitive are:
 
-Radius
+半径
    Sets the starting size for *Circle*, *Cylinder*, *Cone*, *UVSphere* and *IcoSphere*.
 Depth
    Sets the starting length for *Cylinder* and *Cone*.
@@ -66,7 +66,7 @@ Vertices
    see (*"Circles" obtained with various settings*).
    In contrast, a circle with only three vertices is actually a triangle -
    the circle is actually the standard way of adding polygons such as triangles, pentagons, et cetera.
-Radius
+半径
    Sets the radius of the circle.
 Fill Type
    Set how the circle will be filled
@@ -139,7 +139,7 @@ Vertices
    Then number of vertical edge loops used to define the cylinder.
    Similarly to the circle, specifying a small number of vertices produces an object with a polygonal cross section
    (a prism).
-Radius
+半径
    Sets the radius of the cylinder.
 Depth
    Sets the height of the cylinder.
@@ -163,9 +163,9 @@ Vertices
    The number of vertical edge loops used to define the cone.
    Similarly to the circle and cylinder,
    specifying a small number of vertices produces an object with a polygonal base section (a pyramid).
-Radius 1
+半径 1
    Sets the radius of the base of the cone.
-Radius 2
+半径 2
    Sets the radius of the tip of the cone. A value of 0 will produce a standard cone shape.
 Depth
    Sets the height of the cylinder.
@@ -178,15 +178,15 @@ Torus
 =====
 
 A doughnut-shaped primitive created by rotating a circle around an axis.
-The overall dimensions are defined by the *Major* and *Minor Radius*.
+The overall dimensions are defined by the *Major* and *Minor 半径*.
 The number of vertices (in segments) can be different for the circles and is specified in the
 context panel in the *Tool Shelf* with both radii
 (*Major Segments* and *Minor Segments*).
 
-Major Radius
-   Radius from the origin to the center of the cross sections
-Minor Radius
-   Radius of the torus's cross section
+Major 半径
+   半径 from the origin to the center of the cross sections
+Minor 半径
+   半径 of the torus's cross section
 Major Segments
    Number of segments for the main ring of the torus.
    If you think of a torus as a "spin" operation around an axis, this is how many steps in the spin.
@@ -197,10 +197,10 @@ Minor segments
 Use Int+Ext Controls
    Change the way the torus is defined:
 
-Exterior Radius
+Exterior 半径
    When *Use Int+Ext Controls* is active, if viewed along the major axis,
    this is the radius from the center to the outer edge.
-Interior Radius
+Interior 半径
    When *Use Int+Ext Controls* is active, if viewed along the major axis,
    this is the radius of the hole in the center.
 

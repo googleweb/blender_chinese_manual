@@ -50,7 +50,7 @@ Mass
    Will also affect material force fields.
    Will also change behaviors if you are using the suspension and steering portions of Bullet physics.
    Python property: ``obj.game.mass``
-Radius
+半径
    If you have the "Collision Bounds: Sphere"
    set explicitly (or implicitly through having the Collision Bounds subpanel unchecked),
    this will multiply with the Object's (unapplied) Scale. Note that none of the other bounds types are affected.
@@ -62,7 +62,7 @@ Radius
 
    * - Basic
 
-     - Radius= 1.5
+     - 半径= 1.5
 
      - Unapplied Scale
 
@@ -190,16 +190,16 @@ Default
    For Dynamic and Static objects, it is a Triangle Mesh (see below).
    For everything else, it is a Sphere (see below). 
 Capsule - A cylinder with hemispherical caps, like a pill.
-   Radius of the hemispheres is the greater of the x or y extent.
+   半径 of the hemispheres is the greater of the x or y extent.
    Height is the z bounds 
 Box
    The x,y,z bounding box, as defined above.
 Sphere
-   Radius is defined by the object's scale (visible in the N properties panel) times the physics radius
-   (can be found in 物理 » Attributes » Radius.
-   Note: This is the only bounds that respects the Radius option. 
+   半径 is defined by the object's scale (visible in the N properties panel) times the physics radius
+   (can be found in 物理 » Attributes » 半径.
+   Note: This is the only bounds that respects the 半径 option. 
 Cylinder
-   Radius is the greater of the x or y extent.
+   半径 is the greater of the x or y extent.
    Height is the z bounds. 
 Cone
    Base radius is the greater of the x or y extent.

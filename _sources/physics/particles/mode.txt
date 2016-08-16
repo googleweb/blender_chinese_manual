@@ -162,7 +162,7 @@ Options
 -------
 
 Common Options:
-   Radius
+   半径
       Set the radius if the brush.
 
       .. tip:: Brush Size

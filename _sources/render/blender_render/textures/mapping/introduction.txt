@@ -96,15 +96,15 @@ From Dupli
 **Todo: explaination**
 
 
-Coordinate Offset, Scaling and 变换ation
+Coordinate 偏移量, Scaling and 变换ation
 =============================================
 
 .. figure:: /images/texture-mapping-offset.jpg
 
-   Offset panel.
+   偏移量 panel.
 
 
-Offset
+偏移量
    The texture co-ordinates can be translated by an offset.
    Enlarging of the Ofs moves the texture towards the top left.
 

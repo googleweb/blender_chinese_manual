@@ -20,7 +20,7 @@ the curve endings.
 If the "curve path" is *3D*, the *Tilt* value of its control points will be used
 (see the :doc:`Extrusion </modeling/curves/editing/extrude>` section above)
 to twist the "curved" object around it.
-Unfortunately, the other *Radius* property is not used (it would have been possible, for example,
+Unfortunately, the other *半径* property is not used (it would have been possible, for example,
 to make it control the size of the "curved" object...).
 
 .. tip::

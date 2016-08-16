@@ -42,7 +42,7 @@ X, Y, Z
    These buttons control along which axes the scale is constrained - by default,
    it is enabled along all three.
 
-Offset
+偏移量
    When enabled, this control allows the owner to be scaled (using its current transform properties),
    relatively to its target's scale.
 

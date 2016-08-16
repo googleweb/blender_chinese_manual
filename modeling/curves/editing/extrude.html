@@ -184,11 +184,10 @@
 </div>
 <dl class="docutils">
 <dt>挤出</dt>
-<dd><p class="first">Turns a one dimensional curve into a two dimensional curve by giving it height.
-Note that this is not related to <em>Extrude</em> used in mesh edit-mode.
-With a scale of one,
-an <em>Extrusion</em> of 0.5 will extrude the curve 0.5 BU in both directions, perpendicular to the curves normals.</p>
-<p class="last">If set to 0.0, there is no extrusion</p>
+<dd><p class="first">通过给予一定高度将一维曲线变成二维曲线.
+注意这与网格编辑模式使用的<em>挤出</em>没有关系.
+给予一条曲线一个比例,<em>挤出</em>比例0.5曲线将会在两个方向挤出0.5 BU, 垂直于曲线的法线.</p>
+<p class="last">如果设置为0.0, 将会没有挤出效果</p>
 </dd>
 </dl>
 <table border="1" class="docutils">
@@ -199,64 +198,62 @@ an <em>Extrusion</em> of 0.5 will extrude the curve 0.5 BU in both directions, p
 <tbody valign="top">
 <tr class="row-odd"><td><div class="first last figure" id="id1">
 <a class="reference internal image-reference" href="../../../_images/curves_extrude_start.jpg"><img alt="../../../_images/curves_extrude_start.jpg" src="../../../_images/curves_extrude_start.jpg" style="width: 315px;" /></a>
-<p class="caption"><span class="caption-text">贝塞尔圆环 0.0 extrude.</span></p>
+<p class="caption"><span class="caption-text">贝塞尔圆环挤出 0.0.</span></p>
 </div>
 </td>
 <td><div class="first last figure" id="id2">
 <a class="reference internal image-reference" href="../../../_images/curves_extrude_by0.5.jpg"><img alt="../../../_images/curves_extrude_by0.5.jpg" src="../../../_images/curves_extrude_by0.5.jpg" style="width: 315px;" /></a>
-<p class="caption"><span class="caption-text">Extruded by 0.5.</span></p>
+<p class="caption"><span class="caption-text">挤出 0.5.</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
-<dt>Tilt</dt>
-<dd><p class="first">This setting controls how the normals (visualization: arrows)
-twist around each control point - so it is only relevant with 3D curves!
-You set it using the <em>Tilt</em> transform tool in the <code class="kbd docutils literal"><span class="pre">T</span></code> tool shelf,
-the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ Mean tilt</span>, <span class="menuselection">Curve ‣ 变换 ‣ Tilt</span>.</p>
-<p>You can also reset it to its default value (i.e. perpendicular to the original curve plane)
-with <code class="kbd docutils literal"><span class="pre">Alt-T</span></code>, <span class="menuselection">Curve ‣ Control Points ‣ Clear Tilt</span>.
-With NURBS, the tilt is always smoothly interpolated.
-However, with 贝塞尔, you can choose the interpolation algorithm between
-Linear, Ease, BSpline, and Cardinal, in the
-<span class="menuselection">Properties Editor ‣ Object Data ‣ Active Spline ‣ Tilt</span>.</p>
+<dt>倾斜</dt>
+<dd><p class="first">这个设置控制着曲线每个控制点周围法线(视觉化: 箭头)的倾斜度 - 因此它仅与3D曲线有关!
+你设置它通过使用<code class="kbd docutils literal"><span class="pre">T</span></code> 工具栏中<em>倾斜</em>变换工具,
+<code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ 变换 ‣ 平均倾斜</span>, <span class="menuselection">曲线 ‣ 控制点 ‣ 倾斜</span>.</p>
+<p>你也可以把它重置为默认值(也就是垂直于原始曲线平面)
+通过<code class="kbd docutils literal"><span class="pre">Alt-T</span></code>, <span class="menuselection">曲线 ‣ 控制点 ‣ 清空倾斜量</span>.
+对于NURBS曲线, 倾斜总是平滑插值.然而, 对于贝塞尔曲线, 你可以选择插值算法在
+线性, 平缓, B样条, 和基数, 在
+<span class="menuselection">属性编辑器 ‣ 物体数据 ‣ 激活的样条 ‣ 倾斜</span>.</p>
 <div class="last figure" id="id3">
 <img alt="../../../_images/curves_extrude_by0.5_30meantilt.jpg" src="../../../_images/curves_extrude_by0.5_30meantilt.jpg" />
-<p class="caption"><span class="caption-text">30 degree Mean Tilt of all control points.</span></p>
+<p class="caption"><span class="caption-text">所有控制点平均倾斜30°.</span></p>
 </div>
 </dd>
-<dt>Bevel Depth</dt>
+<dt>倒角深度</dt>
 <dd><p class="first">This will add a bevel to the extrusion. See below for its effects...
 Note that the bevel makes the extrusion wider and higher.
 If set to 0.0, there is no bevel.</p>
 <div class="last figure" id="id4">
 <img alt="../../../_images/curves_extrude_depth_fullfill.jpg" src="../../../_images/curves_extrude_depth_fullfill.jpg" />
-<p class="caption"><span class="caption-text">Bevel depth of 0.25, fill set to full, zero Mean Tilt.</span></p>
+<p class="caption"><span class="caption-text">倒角深度 of 0.25, fill set to full, zero Mean Tilt.</span></p>
 </div>
 </dd>
-<dt>Bevel Resolution</dt>
+<dt>倒角分辨率</dt>
 <dd><p class="first">Controls the resolution of the bevel created by a <em>Bevel Depth</em> higher than zero.
 If set the to 0 (the default), the bevel is a simple &#8220;flat&#8221; surface.
 Higher values will smooth, round off the bevel, similar to the resolution settings of the curve itself...</p>
 <div class="last figure" id="id5">
 <img alt="../../../_images/curves_extrude_resolution.jpg" src="../../../_images/curves_extrude_resolution.jpg" />
-<p class="caption"><span class="caption-text">Bevel resolution set to 10.</span></p>
+<p class="caption"><span class="caption-text">倒角分辨率 set to 10.</span></p>
 </div>
 </dd>
-<dt>Offset</dt>
+<dt>偏移量</dt>
 <dd><p class="first">Moves the extrusion parallel to the curve normals. <em>Almost like scaling</em></p>
 <div class="last figure" id="id6">
 <img alt="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" src="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" />
-<p class="caption"><span class="caption-text">-1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.</span></p>
+<p class="caption"><span class="caption-text">-1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.</span></p>
 </div>
 </dd>
-<dt>Radius</dt>
-<dd><p class="first">The Radius allows you to directly control the width of the extrusion along the “spinal” curve.
-The <em>Radius</em> of the points is set using the <em>Shrink/Fatten Radius</em> transform tool <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
-the <span class="menuselection">Curve ‣ 变换 ‣ Shrink/Fatten Radius</span>,
-or the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ Radius</span>.</p>
+<dt>半径</dt>
+<dd><p class="first">The 半径 allows you to directly control the width of the extrusion along the “spinal” curve.
+The <em>半径</em> of the points is set using the <em>Shrink/Fatten 半径</em> transform tool <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
+the <span class="menuselection">Curve ‣ 变换 ‣ Shrink/Fatten 半径</span>,
+or the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ 半径</span>.</p>
 <div class="figure" id="id7">
 <img alt="../../../_images/curves_extrude_radius.jpg" src="../../../_images/curves_extrude_radius.jpg" />
 <p class="caption"><span class="caption-text">One control point radius set to zero.</span></p>
@@ -277,7 +274,7 @@ If your normals are facing the wrong way you can switch their direction as shown
 <div class="last figure" id="id8">
 <img alt="../../../_images/curves_extrude_open2d_fill_none.jpg" src="../../../_images/curves_extrude_open2d_fill_none.jpg" />
 <p class="caption"><span class="caption-text">Open 2D Curve with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, fill set to none,
-zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 Bevel resolution.</span></p>
+zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.</span></p>
 </div>
 </dd>
 <dt>Closed 2D Curve</dt>
@@ -287,7 +284,7 @@ faces by choosing the fill mode: both, front, back, or none.</p>
 <p>The optional bevel depth will always create a 90 degree bevels here.</p>
 <div class="last figure" id="id9">
 <img alt="../../../_images/curves_extrude_closed2d_fill_both.jpg" src="../../../_images/curves_extrude_closed2d_fill_both.jpg" />
-<p class="caption"><span class="caption-text">Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 Bevel resolution, Fill: Both.</span></p>
+<p class="caption"><span class="caption-text">Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.</span></p>
 </div>
 </dd>
 <dt>3D Curve</dt>
@@ -309,7 +306,7 @@ it will create a &#8220;tube-like&#8221; extrusion;
 otherwise you will get a sort of gutter or slide object...</p>
 <p>The object is extruded along the whole length of all internal curves. By default,
 the width of the extrusion is constant, but you have two ways to control it,
-the <em>Radius</em> property of control points(see above), and the &#8220;taper&#8221; object.</p>
+the <em>半径</em> property of control points(see above), and the &#8220;taper&#8221; object.</p>
 <p>The taper curve is evaluated along <em>the local X axis</em>,
 using <em>the local Y axis</em> for width control. Note also that:</p>
 <ul class="simple">

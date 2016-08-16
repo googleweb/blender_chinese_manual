@@ -27,7 +27,7 @@ Row Height
 Properties
 ==========
 
-Offset
+偏移量
    Determines the brick offset of the various rows.
 Frequency
    Determines the offset frequency. A value of 2 gives a even/uneven pattern of rows.

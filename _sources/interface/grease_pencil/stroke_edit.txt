@@ -107,7 +107,7 @@ Manhattan Distance
    Decreasing this should work better for curvy lines.
 Euclidean Distance
    The minimum distance that the mouse should have traveled before movement is recorded.
-Eraser Radius
+Eraser 半径
    The size of the eraser "brush".
 Smooth Stroke
    This turns on the 后期处理 step of smoothing the stroke to remove jitter.
@@ -138,7 +138,7 @@ pattern of edits.
 
 Common Options:
 
-Radius
+半径
    The size of the brush.
 Strength
    The Strength off the brush, can be changed by the pressure of the stylus.

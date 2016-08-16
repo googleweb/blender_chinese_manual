@@ -44,7 +44,7 @@ Repulsion Factor
    Check box sets repulsion as a factor of stiffness.
 Stiff Viscosity
    Creates viscosity for expanding fluid. Check box sets this to be a factor of normal viscosity.
-Interaction Radius
+Interaction 半径
    Fluid's interaction radius. Check box sets this to be a factor of 4 × *particle size*.
 Rest Density
    Density of fluid when at rest. Check box sets this to be a factor of default density.

@@ -17,7 +17,7 @@ Translate the texture coordinates of an image or texture.
 
 Color
    Standard image input.
-Offset
+偏移量
    The amount to offset the coordinates in each of the three axes.
 
 

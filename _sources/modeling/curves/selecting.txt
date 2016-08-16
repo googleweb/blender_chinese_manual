@@ -61,7 +61,7 @@ Nth Selection
    Number of points to select.
 Skip
    Number of points to skip.
-Offset
+偏移量
    Offests at what point to start at.
 
 

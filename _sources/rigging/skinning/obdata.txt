@@ -215,7 +215,7 @@ Mult
    (based from its envelope settings) is multiplied with this vertex's weight in the corresponding vertex group.
    In other words, the vertex groups method is further "weighted" by the envelopes method.
 
-Radius
+半径
    Set the radius for the head and the tail of envelope bones.
 
 

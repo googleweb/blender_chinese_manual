@@ -361,7 +361,7 @@ Mainly useful when using a curve as path, or the bevel and taper options...
 
 
 The *Specials* menu contains exactly the same additional options as for
-curves, except for *Set Radius* and *Smooth Radius*.
+curves, except for *Set 半径* and *Smooth 半径*.
 
 
 Conversion

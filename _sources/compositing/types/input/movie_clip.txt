@@ -41,9 +41,9 @@ The first two sockets are the minimum output.
    Outputs the entire image at the specified color space.
 Alpha
    The alpha value taken from the movie or image.
-Offset X
+偏移量 X
    The X offset value from the footage camera or tracking.
-Offset Y
+偏移量 Y
    The Y offset value from the footage camera or tracking.
 Scale
    The scale of the image taken from the footage camera or tracking.

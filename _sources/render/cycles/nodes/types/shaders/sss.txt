@@ -26,7 +26,7 @@ Color
    Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 Scale
    Global scale factor for the scattering radius.
-Radius
+半径
    Scattering radius for each RGB color channel, the maximum distance that light can scatter.
 Sharpness
    Used only with *Cubic* falloff.

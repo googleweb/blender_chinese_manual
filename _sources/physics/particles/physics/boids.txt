@@ -48,7 +48,7 @@ Max Air Angular Velocity
    Tangential acceleration in air, percent 180 degrees.
    Defines how much the boid can suddenly accelerate in order to fulfill a rule.
 Air Personal Space
-   Radius of boids personal space in air. Percentage of particle size.
+   半径 of boids personal space in air. Percentage of particle size.
 Landing Smoothness
    How smoothly the boids land.
 
@@ -62,7 +62,7 @@ Max Land Angular Velocity
    Tangential acceleration on land, percent 180 degrees.
    Defines how much the boid can suddenly accelerate in order to fulfill a rule.
 Land Personal Space
-   Radius of boids personal space on land. Percentage of particle size.
+   半径 of boids personal space on land. Percentage of particle size.
 Land Stick Force
    How strong a force must be to start effecting a boid on land.
 

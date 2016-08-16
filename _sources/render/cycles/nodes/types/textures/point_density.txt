@@ -39,8 +39,8 @@ Space
 
 .. TODO As far as I can tell this is how it works, but should be checked with a developer.
 
-Radius
-   Radius from the shaded sample to look for points within.
+半径
+   半径 from the shaded sample to look for points within.
 
 .. TODO Same as tooltip, this does not make much sense to me.
 

@@ -32,7 +32,7 @@ Vertex Group
    Allows you to define the influence per-vertex.
 
    Useful when you do not something other than a spherical field of influence.
-Radius
+半径
    The size of the hooks influence.
 Strength
    Adjust this hooks influance on the vertices, were (0.0 to 1.0) (no change to fully follows the hook).

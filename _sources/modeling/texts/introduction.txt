@@ -470,7 +470,7 @@ Line
    A factor by which the vertical space between lines is scaled.
 
 
-Offset
+偏移量
 ^^^^^^
 
 X offset and Y offset

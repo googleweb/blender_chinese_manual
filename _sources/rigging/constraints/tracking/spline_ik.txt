@@ -36,8 +36,8 @@ Spline Fitting:
       How many bones are included in the chain
    Even Division
       Ignore the relative length of the bones when fitting to the curve
-   Chain Offset
-      Offset the entire chain relative to the root joint
+   Chain 偏移量
+      偏移量 the entire chain relative to the root joint
 
 Chain Scaling
    Y stretch
@@ -49,7 +49,7 @@ Chain Scaling
          Use the original scaling of the bones
       Volume Preservation
          Scale of the X and Z axes is the inverse of the Y scale
-   Use Curve Radius
+   Use Curve 半径
       Average radius of the endpoints is used to tweak the X and Z scaling of the bones,
       on top of the X and Z scale mode
 

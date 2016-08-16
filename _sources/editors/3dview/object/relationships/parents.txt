@@ -375,13 +375,13 @@ This will make the selected bone fatter or thinner without altering the thicknes
 
 
 You can also alter the bone radius by selecting the tail or head of the bone you wish to alter and switching to Edit
-Mode, then navigate to :menuselection:`Properties Editor --> Bone --> Deform --> Radius Section`
+Mode, then navigate to :menuselection:`Properties Editor --> Bone --> Deform --> 半径 Section`
 and entering new values for the *Tail* and *Head* fields.
 
 
 .. figure:: /images/ts-3dvieweditorheader-objectmenu-parent-armature_deform_with_envelope_weights.jpg
 
-   Deform Radius Section
+   Deform 半径 Section
 
    Head and tail fields highlighted.
 

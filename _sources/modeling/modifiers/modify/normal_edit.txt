@@ -36,7 +36,7 @@ Parallel Normals
 
    Only relevant in *Directional* mode
 
-Offset
+偏移量
    Gives modified object’s center an offset before using it to generate normals.
 
    Only relevant in *Radial* mode if no *Target Object* is set,

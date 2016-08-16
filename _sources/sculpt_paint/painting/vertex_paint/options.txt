@@ -20,7 +20,7 @@ Brush
 Brush Data-Block
    The image, name panel and color selector at the top allows you to select brush presets,
    rename brushes, as well as add custom brushes, and delete them.
-Radius
+半径
    Set the radius of the brush
 Strength
    Set the strength of the brush's effect.
@@ -89,8 +89,8 @@ Angle
    Random
       Angle is randomized.
 
-Offset
-   Offset the texture in x, y, and z.
+偏移量
+   偏移量 the texture in x, y, and z.
 
 Size
    Set the scale of the texture in each axis.
@@ -121,7 +121,7 @@ Stroke Method
 Smooth stroke
    Brush lags behind mouse and follows a smoother path. When enabled, the following become active:
 
-   Radius
+   半径
       Sets the minimun distance from the last point before stroke continues.
    Factor
       Sets the amount of smoothing.

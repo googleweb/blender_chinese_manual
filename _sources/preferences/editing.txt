@@ -83,7 +83,7 @@ Manhattan Distance
    The minimum number of pixels the mouse has to move horizontally or vertically before the movement is recorded.
 Euclidian Distance
    The minimum distance that mouse has to travel before movement is recorded.
-Eraser Radius
+Eraser 半径
    The size of the eraser used with the grease pencil.
 Smooth Stroke
    Smooths the pencil stroke after it's finished.

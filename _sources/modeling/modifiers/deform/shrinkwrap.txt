@@ -25,7 +25,7 @@ Vertex Group
    The vertex group to control whether and how much each vertex is displaced to its target position.
    If a vertex is not a member of this group, it is not displaced (same as weight 0).
 
-Offset
+偏移量
    The distance that must be kept from the calculated target position, in Blender Units.
 
 Mode
@@ -36,7 +36,7 @@ Mode
       This will select the nearest point over the surface of the shrink target.
       It adds the extra option *Above surface*,
       which always keep the computed vertices above their "floor faces".
-      This is only meaningful when *Offset* is not null.
+      This is only meaningful when *偏移量* is not null.
 
    Projection
 

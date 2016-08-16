@@ -39,7 +39,7 @@ Max Distance
    This allows to transfer a small sub-detailed mesh onto a more complete one
    (e.g. from a "hand" mesh towards a "full body" one).
 
-Ray Radius
+Ray 半径
    For ray-casting-based mapping methods, the radius of the cast rays. Especially important for 1D and 2D
    items (i.e. vertices and edges), without some width there would be nearly no ray-casting matches...
 

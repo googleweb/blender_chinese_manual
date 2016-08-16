@@ -200,7 +200,7 @@ Fill
 
 Path/Curve-Deform
    These options are primarily utilized when using a Curve as a Path or when using the 曲线形变 property.
-   The *Radius, Stretch* and *Bounds Clamp* options control how Objects use the
+   The *半径, Stretch* and *Bounds Clamp* options control how Objects use the
    Curve and are dealt with in more detail in the appropriate links below.
 
 .. seealso::
@@ -218,8 +218,8 @@ Path/Curve-Deform
 
 
 Modification
-   Offset
-      By default, text Objects are treated as curves. The Offset option will alter the space between letters.
+   偏移量
+      By default, text Objects are treated as curves. The 偏移量 option will alter the space between letters.
    Extrude
       Will extrude the curve along both the positive and negative local Z axes.
 Bevel
@@ -228,7 +228,7 @@ Bevel
 
       .. figure:: /images/modeling_curves_geometry-bevel-depth.jpg
 
-         A Curve with different Bevel depths applied.
+         A Curve with different 倒角深度s applied.
 
    Resolution
       Alters the smoothness of the bevel
@@ -309,7 +309,7 @@ Resolution
 Interpolation
    Tilt
       Alters how the tilt of a segment is calculated.
-   Radius
+   半径
       Alters how the radius of a Beveled Curve is calculated.
       The effects are easier to see after Shrinking/Fattening a control point :kbd:`Alt-S`.
    Smooth

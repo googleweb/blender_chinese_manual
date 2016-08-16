@@ -27,7 +27,7 @@ Object Vertices
    Object Vertices, Generate point density from an object's vertices.
 
 Object
-Radius
+半径
 System
 Falloff
 

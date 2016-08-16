@@ -25,7 +25,7 @@ Everything that is "below" the horizontal axis will move in the opposite directi
 .. figure:: /images/editors_3dview_transformations-advanced-shear_toolshelf-f6.jpg
    :width: 150px
 
-   Shear Offset Factor.
+   Shear 偏移量 Factor.
 
 
 用法
@@ -38,7 +38,7 @@ function. The *Shear* option can be invoked from the
 interactively by moving the mouse or by typing a number.
 Pressing :kbd:`Return` will confirm the transformation. The confirmed transformation can
 be further edited by pressing F6 or by going into the Toolshelf :kbd:`T` and altering
-the Offset slider provided that no other actions take place between the *Shear*
+the 偏移量 slider provided that no other actions take place between the *Shear*
 transform confirmation and accessing the slider.
 
 Note that the result of the *Shear* transform is also dependant on the number and

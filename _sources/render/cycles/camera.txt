@@ -96,12 +96,12 @@ Blades
   (Only available with High Quality).
 
 Aperture
-  Use F-Stop or Radius to set the aperture for the render, and render preview.
-  F-Stop is the focal ratio, where Radius is the the raidus of the focal point.
+  Use F-Stop or 半径 to set the aperture for the render, and render preview.
+  F-Stop is the focal ratio, where 半径 is the the raidus of the focal point.
 
 Size/Number
   Aperture radius *size*, or F-Stop *number* used for the render, and render preview.
-  Using the F-Stop with a low number, or Radius with a large size will result in a strong blur,
+  Using the F-Stop with a low number, or 半径 with a large size will result in a strong blur,
   also allowing the use of the *bokeh effect*.
 
 Blades

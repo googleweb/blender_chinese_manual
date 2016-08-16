@@ -43,10 +43,10 @@ Vertex Group
 
 Strength
    Sets how strong the effect is.
-Radius
+半径
    Sets the distance from the transforms that can be warped by the transform handles.
 Falloff Type
-   Sets the way the strength of the warp change as it goes from the center of the transform to the Radius value.
+   Sets the way the strength of the warp change as it goes from the center of the transform to the 半径 value.
    See :doc:`Proportional 编辑 </editors/3dview/transform/transform_control/proportional_edit>`
    for descriptions of the falloff types.
 纹理

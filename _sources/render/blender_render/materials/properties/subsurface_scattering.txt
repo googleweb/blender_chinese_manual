@@ -91,7 +91,7 @@ Enabling Subsurface Scattering
 - Accessible at the top are various presets.
   Add new or remove old presets by clicking the *+* and *-* buttons.
   When you select a preset,
-  the *Radius* values, the *RGB Radius* and the :term:`IOR` are set for you.
+  the *半径* values, the *RGB 半径* and the :term:`IOR` are set for you.
   The remaining options are not set (because they are mostly dependent on the size of your object).
 
 *SubSurface Scattering* doesn't need ray tracing.
@@ -130,7 +130,7 @@ Scattering Color (Albedo)
    So if you set it to green, the lit areas of the object will appear as green, and green is scattered only a little.
    Therefore the darker areas will appear in red and blue.
    You can compensate the different scattering by setting a larger radius for the color.
-RGB Radius
+RGB 半径
    This is not in fact the radius of the subsurface scattering,
    but the average path length between scattering events.
    As the light travels through the object it bounces around then emerges from the surface at some other point.

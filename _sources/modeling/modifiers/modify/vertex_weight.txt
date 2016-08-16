@@ -270,7 +270,7 @@ Using Distance from a Target Object
 As a first example,
 let us dynamically control a *Wave* modifier with a modified vertex group.
 
-#. Add a *Grid* mesh with (100×100) x/y subdivisions and a 5 BU Radius
+#. Add a *Grid* mesh with (100×100) x/y subdivisions and a 5 BU 半径
 
 #. Switch to *编辑模式* :kbd:`Tab`, and in the *Object Data* properties, *顶点组* panel,
    add a vertex group. Assign to it all your mesh's vertices with 1.0 weight.

@@ -18,7 +18,7 @@ Used to add shading for :doc:`Hair </physics/particles/hair/index>`.
 
 Color
    Color of the hair.
-Offset
+偏移量
    Controls the way the light is rotated for the reflection/transmission.
 Roughness U/V
    Controls the roughness in the direction light is skewed, and perpendicular to it.

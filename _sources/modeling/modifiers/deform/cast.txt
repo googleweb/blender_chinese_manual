@@ -46,7 +46,7 @@ Factor
    1.0 casts to the target shape.
    Values below 0.0 or above 1.0 exaggerate the deformation, sometimes in interesting ways.
 
-Radius
+半径
    If non-zero, this radius defines a sphere of influence. Vertices outside it are not affected by the modifier.
 
 Size
@@ -54,7 +54,7 @@ Size
    it is defined by the initial shape and the control object, if any.
 
 From radius
-   If activated, calculate *Size* from *Radius*, for smoother results.
+   If activated, calculate *Size* from *半径*, for smoother results.
 
 Vertex Group
    A vertex group name, to restrict the effect to the vertices in it only.

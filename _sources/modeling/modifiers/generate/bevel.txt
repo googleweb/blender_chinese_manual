@@ -88,7 +88,7 @@ Limit Method
 Width Method
    Used to control how the *Width* is measured.
 
-   Offset
+   偏移量
       Amount is offset of new edges from original.
    Width
       Amount is width of new face.

@@ -103,7 +103,7 @@ also for combinations of rotated and non-uniform scaled parents.
 
    * - .. figure:: /images/constraintschildofobjectsex03cstsetoffset.jpg
 
-          3. Offset set:
+          3. 偏移量 set:
           Set Inverse has been clicked, and Owner is back to its original position.
 
      - .. figure:: /images/constraintschildofobjectsex04csttargettransformed.jpg
@@ -114,13 +114,13 @@ also for combinations of rotated and non-uniform scaled parents.
 
    * - .. figure:: /images/constraintschildofobjectsex05cstclearoffset.jpg
 
-          5. Offset cleared:
+          5. 偏移量 cleared:
           Clear Inverse has been clicked. Owner is fully again controlled by Target_1.
 
      - .. figure:: /images/constraintschildofobjectsex06cstsetoffset.jpg
 
-          6. Offset set again:
-          Set Offset has been clicked again.
+          6. 偏移量 set again:
+          Set 偏移量 has been clicked again.
           As you can see, it does not gives the same result as in (Target/parent transformed).
           As noted above, use Set Inverse only once, before transforming your target/parent.
 

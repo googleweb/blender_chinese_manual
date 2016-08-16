@@ -54,11 +54,11 @@ the chain from that point onwards.
 Applying copy rotation constraints on the bones should also work.
 
 
-Offset Controls
+偏移量 Controls
 ---------------
 
 The entire bone chain can be made to follow the shape of the curve while still being able to
-be placed at an arbitrary point in 3D-space when the 'Chain Offset' option is enabled.
+be placed at an arbitrary point in 3D-space when the 'Chain 偏移量' option is enabled.
 By default, this option is not enabled,
 and the bones will be made to follow the curve in its untransformed position.
 
@@ -81,7 +81,7 @@ Volume Preserve
 Bone Original
    this options just uses the X and Z scaling factors the bone would have after being evaluated in the standard way.
 
-In addition to these modes, there is an option, *Use Curve Radius*.
+In addition to these modes, there is an option, *Use Curve 半径*.
 When this option is enabled, the average radius of the radii of the points on the curve where
 the endpoints of each bone are placed, are used to derive X and Z scaling factors.
 This allows the scaling effects, determined using the modes above,

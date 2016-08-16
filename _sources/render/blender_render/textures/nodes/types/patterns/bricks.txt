@@ -34,10 +34,10 @@ Row Height
 Properties
 ==========
 
-Offset
+偏移量
    The relative offset of the next row of bricks.
 Frequency
-   Offset every N rows. The brick pattern offset repeats every N rows.
+   偏移量 every N rows. The brick pattern offset repeats every N rows.
 Squash
    Scales the bricks in every N rows by this amount.
 Frequency

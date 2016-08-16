@@ -6249,7 +6249,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 (function() {
 	// Minified: var b,c,d,e,f,g, h,i
 	var div, style, a, pixelPositionVal, boxSizingReliableVal,
-		reliableHiddenOffsetsVal, reliableMarginRightVal;
+		reliableHidden偏移量sVal, reliableMarginRightVal;
 
 	// Setup
 	div = document.createElement( "div" );
@@ -6282,11 +6282,11 @@ function addGetHookIf( conditionFn, hookFn ) {
 		style.WebkitBoxSizing === "";
 
 	jQuery.extend(support, {
-		reliableHiddenOffsets: function() {
-			if ( reliableHiddenOffsetsVal == null ) {
+		reliableHidden偏移量s: function() {
+			if ( reliableHidden偏移量sVal == null ) {
 				computeStyleTests();
 			}
-			return reliableHiddenOffsetsVal;
+			return reliableHidden偏移量sVal;
 		},
 
 		boxSizingReliable: function() {
@@ -6375,11 +6375,11 @@ function addGetHookIf( conditionFn, hookFn ) {
 		div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
 		contents = div.getElementsByTagName( "td" );
 		contents[ 0 ].style.css文本 = "margin:0;border:0;padding:0;display:none";
-		reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
-		if ( reliableHiddenOffsetsVal ) {
+		reliableHidden偏移量sVal = contents[ 0 ].offsetHeight === 0;
+		if ( reliableHidden偏移量sVal ) {
 			contents[ 0 ].style.display = "";
 			contents[ 1 ].style.display = "none";
-			reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
+			reliableHidden偏移量sVal = contents[ 0 ].offsetHeight === 0;
 		}
 
 		body.removeChild( container );
@@ -9421,7 +9421,7 @@ jQuery.expr.filters.hidden = function( elem ) {
 	// Support: Opera <= 12.12
 	// Opera reports offsetWidths and offsetHeights less than zero on some elements
 	return elem.offsetWidth <= 0 && elem.offsetHeight <= 0 ||
-		(!support.reliableHiddenOffsets() &&
+		(!support.reliableHidden偏移量s() &&
 			((elem.style && elem.style.display) || jQuery.css( elem, "display" )) === "none");
 };
 
@@ -10020,8 +10020,8 @@ function getWindow( elem ) {
 }
 
 jQuery.offset = {
-	setOffset: function( elem, options, i ) {
-		var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition,
+	set偏移量: function( elem, options, i ) {
+		var curPosition, curLeft, curCSSTop, curTop, cur偏移量, curCSSLeft, calculatePosition,
 			position = jQuery.css( elem, "position" ),
 			curElem = jQuery( elem ),
 			props = {};
@@ -10031,7 +10031,7 @@ jQuery.offset = {
 			elem.style.position = "relative";
 		}
 
-		curOffset = curElem.offset();
+		cur偏移量 = curElem.offset();
 		curCSSTop = jQuery.css( elem, "top" );
 		curCSSLeft = jQuery.css( elem, "left" );
 		calculatePosition = ( position === "absolute" || position === "fixed" ) &&
@@ -10048,14 +10048,14 @@ jQuery.offset = {
 		}
 
 		if ( jQuery.isFunction( options ) ) {
-			options = options.call( elem, i, curOffset );
+			options = options.call( elem, i, cur偏移量 );
 		}
 
 		if ( options.top != null ) {
-			props.top = ( options.top - curOffset.top ) + curTop;
+			props.top = ( options.top - cur偏移量.top ) + curTop;
 		}
 		if ( options.left != null ) {
-			props.left = ( options.left - curOffset.left ) + curLeft;
+			props.left = ( options.left - cur偏移量.left ) + curLeft;
 		}
 
 		if ( "using" in options ) {
@@ -10072,7 +10072,7 @@ jQuery.fn.extend({
 			return options === undefined ?
 				this :
 				this.each(function( i ) {
-					jQuery.offset.setOffset( this, options, i );
+					jQuery.offset.set偏移量( this, options, i );
 				});
 		}
 
@@ -10099,8 +10099,8 @@ jQuery.fn.extend({
 		}
 		win = getWindow( doc );
 		return {
-			top: box.top  + ( win.pageYOffset || docElem.scrollTop )  - ( docElem.clientTop  || 0 ),
-			left: box.left + ( win.pageXOffset || docElem.scrollLeft ) - ( docElem.clientLeft || 0 )
+			top: box.top  + ( win.pageY偏移量 || docElem.scrollTop )  - ( docElem.clientTop  || 0 ),
+			left: box.left + ( win.pageX偏移量 || docElem.scrollLeft ) - ( docElem.clientLeft || 0 )
 		};
 	},
 
@@ -10110,10 +10110,10 @@ jQuery.fn.extend({
 		}
 
 		var offsetParent, offset,
-			parentOffset = { top: 0, left: 0 },
+			parent偏移量 = { top: 0, left: 0 },
 			elem = this[ 0 ];
 
-		// fixed elements are offset from window (parentOffset = {top:0, left: 0}, because it is its only offset parent
+		// fixed elements are offset from window (parent偏移量 = {top:0, left: 0}, because it is its only offset parent
 		if ( jQuery.css( elem, "position" ) === "fixed" ) {
 			// we assume that getBoundingClientRect is available when computed position is fixed
 			offset = elem.getBoundingClientRect();
@@ -10124,20 +10124,20 @@ jQuery.fn.extend({
 			// Get correct offsets
 			offset = this.offset();
 			if ( !jQuery.nodeName( offsetParent[ 0 ], "html" ) ) {
-				parentOffset = offsetParent.offset();
+				parent偏移量 = offsetParent.offset();
 			}
 
 			// Add offsetParent borders
-			parentOffset.top  += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
-			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
+			parent偏移量.top  += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
+			parent偏移量.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
 		}
 
 		// Subtract parent offsets and element margins
 		// note: when an element has margin: auto the offsetLeft and marginLeft
 		// are the same in Safari causing offset.left to incorrectly be 0
 		return {
-			top:  offset.top  - parentOffset.top - jQuery.css( elem, "marginTop", true ),
-			left: offset.left - parentOffset.left - jQuery.css( elem, "marginLeft", true)
+			top:  offset.top  - parent偏移量.top - jQuery.css( elem, "marginTop", true ),
+			left: offset.left - parent偏移量.left - jQuery.css( elem, "marginLeft", true)
 		};
 	},
 
@@ -10154,7 +10154,7 @@ jQuery.fn.extend({
 });
 
 // Create scrollLeft and scrollTop methods
-jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method, prop ) {
+jQuery.each( { scrollLeft: "pageX偏移量", scrollTop: "pageY偏移量" }, function( method, prop ) {
 	var top = /Y/.test( prop );
 
 	jQuery.fn[ method ] = function( val ) {
