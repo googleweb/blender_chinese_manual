@@ -41,14 +41,14 @@ Normal Size
 When in *编辑模式*, you can hide and reveal elements from the display.
 This can be useful in complex models with many elements on the Screen.
 
-Hide Selected elements
+隐藏选中元素
    Use :kbd:`H`, or the :menuselection:`Curve --> Show/Hide --> Hide Selected` menu option from the 3D视图 header.
 
-Show Hidden elements
+显示隐藏元素
    Use :kbd:`Alt-H`, or the
    :menuselection:`Curve --> Show/Hide --> Show Hidden` menu option from the 3D视图 header.
 
-Hide Unselected elements
+隐藏未选中元素
    Use :kbd:`Shift-H`,
    or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D视图 header.
 
