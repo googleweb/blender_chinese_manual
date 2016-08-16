@@ -221,7 +221,7 @@
 <span class="menuselection">属性编辑器 ‣ 物体数据 ‣ 激活的样条 ‣ 倾斜</span>.</p>
 <div class="last figure" id="id3">
 <img alt="../../../_images/curves_extrude_by0.5_30meantilt.jpg" src="../../../_images/curves_extrude_by0.5_30meantilt.jpg" />
-<p class="caption"><span class="caption-text">所有控制点平均倾斜30°.</span></p>
+<p class="caption"><span class="caption-text">所有控制点平均倾斜30度.</span></p>
 </div>
 </dd>
 <dt>倒角深度</dt>
@@ -252,7 +252,7 @@ Higher values will smooth, round off the bevel, similar to the resolution settin
 <dt>半径</dt>
 <dd><p class="first">The 半径 allows you to directly control the width of the extrusion along the “spinal” curve.
 The <em>半径</em> of the points is set using the <em>Shrink/Fatten 半径</em> transform tool <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
-the <span class="menuselection">Curve ‣ 变换 ‣ Shrink/Fatten 半径</span>,
+the <span class="menuselection">曲线 ‣ 变换 ‣ Shrink/Fatten 半径</span>,
 or the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ 半径</span>.</p>
 <div class="figure" id="id7">
 <img alt="../../../_images/curves_extrude_radius.jpg" src="../../../_images/curves_extrude_radius.jpg" />
@@ -266,28 +266,28 @@ or the <code class="kbd docutils literal"><span class="pre">N</span></code> <spa
 </dl>
 <p>We have three sub-classes of results, depending on whether the curve is open or closed or 3D:</p>
 <dl class="docutils">
-<dt>Open 2D Curve</dt>
+<dt>开放的2D曲线</dt>
 <dd><p class="first">The extrusion will create a &#8220;wall&#8221; or &#8220;ribbon&#8221; following the curve shape. If using a <em>Bevel Depth</em>,
 the wall becomes a sort of slide or gutter.
 If your normals are facing the wrong way you can switch their direction as shown
 <a class="reference internal" href="introduction.html#curve-switch-direction"><span class="std std-ref">here</span></a></p>
 <div class="last figure" id="id8">
 <img alt="../../../_images/curves_extrude_open2d_fill_none.jpg" src="../../../_images/curves_extrude_open2d_fill_none.jpg" />
-<p class="caption"><span class="caption-text">Open 2D Curve with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, fill set to none,
+<p class="caption"><span class="caption-text">开放的2D曲线 with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, fill set to none,
 zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.</span></p>
 </div>
 </dd>
-<dt>Closed 2D Curve</dt>
+<dt>封闭的2D曲线</dt>
 <dd><p class="first">This is probably the most useful situation, as it will quickly create a volume, with (by default)
 two flat and parallel surfaces filling the two sides of the extruded &#8220;wall&#8221;. You can remove one or both of these
 faces by choosing the fill mode: both, front, back, or none.</p>
 <p>The optional bevel depth will always create a 90 degree bevels here.</p>
 <div class="last figure" id="id9">
 <img alt="../../../_images/curves_extrude_closed2d_fill_both.jpg" src="../../../_images/curves_extrude_closed2d_fill_both.jpg" />
-<p class="caption"><span class="caption-text">Closed 2D Curve, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.</span></p>
+<p class="caption"><span class="caption-text">封闭的2D曲线, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.</span></p>
 </div>
 </dd>
-<dt>3D Curve</dt>
+<dt>3D曲线</dt>
 <dd><p class="first">Here the fact that the curve is closed or not has no importance - you will never get a volume with an extruded 3D
 curve, only a wall or ribbon, like with open 2D curves.</p>
 <p class="last">However, there is one more feature with 3D curves: the <em>Tilt</em> of the control points (see above).
