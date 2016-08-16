@@ -2,10 +2,10 @@
 .. |prop-edit-edit-mode-icon| image:: /images/editors_3dview_transform-control_proportional-edit-header-icon-edit-mode.jpg
 
 *****************
-Proportional Edit
+比例化编辑
 *****************
 
-Proportional Edit is a way of transforming selected elements (such as vertices)
+比例化编辑 is a way of transforming selected elements (such as vertices)
 while having that transformation affect other nearby elements. For example, having the
 movement of a single vertex cause the movement of unselected vertices within a given range.
 Unselected vertices that are closer to the selected vertex will move more than those farther
