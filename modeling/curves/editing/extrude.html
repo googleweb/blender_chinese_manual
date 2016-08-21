@@ -225,118 +225,108 @@
 </div>
 </dd>
 <dt>倒角深度</dt>
-<dd><p class="first">This will add a bevel to the extrusion. See below for its effects...
-Note that the bevel makes the extrusion wider and higher.
-If set to 0.0, there is no bevel.</p>
+<dd><p class="first">这将会给挤出添加一个倒角. 它的效果如下...注意倒角会使挤出更宽和更高.
+如果设置为0.0, 无倒角效果.</p>
 <div class="last figure" id="id4">
 <img alt="../../../_images/curves_extrude_depth_fullfill.jpg" src="../../../_images/curves_extrude_depth_fullfill.jpg" />
-<p class="caption"><span class="caption-text">倒角深度 of 0.25, fill set to full, zero Mean Tilt.</span></p>
+<p class="caption"><span class="caption-text">倒角深度为0.25, 填充为全部, 平均倾斜为0.</span></p>
 </div>
 </dd>
 <dt>倒角分辨率</dt>
-<dd><p class="first">Controls the resolution of the bevel created by a <em>Bevel Depth</em> higher than zero.
-If set the to 0 (the default), the bevel is a simple &#8220;flat&#8221; surface.
-Higher values will smooth, round off the bevel, similar to the resolution settings of the curve itself...</p>
+<dd><p class="first">控制倒角的分辨率创建一个高于0的<em>倒角深度</em>.
+如果设置为0(默认值), 倒角会是一个简单 &#8220;平展&#8221; 的表面.
+更高的值会平滑些, 使倒角更圆滑, 如同曲线本身的分辨率设置...</p>
 <div class="last figure" id="id5">
 <img alt="../../../_images/curves_extrude_resolution.jpg" src="../../../_images/curves_extrude_resolution.jpg" />
-<p class="caption"><span class="caption-text">倒角分辨率 set to 10.</span></p>
+<p class="caption"><span class="caption-text">倒角分辨率设置为10.</span></p>
 </div>
 </dd>
 <dt>偏移量</dt>
-<dd><p class="first">Moves the extrusion parallel to the curve normals. <em>Almost like scaling</em></p>
+<dd><p class="first">平行于曲线的法线移动挤出. <em>很像缩放</em></p>
 <div class="last figure" id="id6">
 <img alt="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" src="../../../_images/curves_extrude_closed2d_fillboth_offset-1.jpg" />
-<p class="caption"><span class="caption-text">-1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.</span></p>
+<p class="caption"><span class="caption-text">-1 偏移, 0.5 挤出, 0.25 倒角深度, 10 倒角分辨率.</span></p>
 </div>
 </dd>
 <dt>半径</dt>
-<dd><p class="first">The 半径 allows you to directly control the width of the extrusion along the “spinal” curve.
-The <em>半径</em> of the points is set using the <em>Shrink/Fatten 半径</em> transform tool <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
-the <span class="menuselection">曲线 ‣ 变换 ‣ Shrink/Fatten 半径</span>,
-or the <code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ transform ‣ 半径</span>.</p>
+<dd><p class="first">半径允许你直接空挤出的宽度沿着曲线“脊柱”.
+控制点法向<em>半径</em> 设置使用 <em>法向缩放</em> 变换工具 <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>,
+或者<span class="menuselection">曲线 ‣ 变换 ‣ 法向缩放</span>,
+或者<code class="kbd docutils literal"><span class="pre">N</span></code> <span class="menuselection">‣ 变换 ‣ 半径</span>.</p>
 <div class="figure" id="id7">
 <img alt="../../../_images/curves_extrude_radius.jpg" src="../../../_images/curves_extrude_radius.jpg" />
-<p class="caption"><span class="caption-text">One control point radius set to zero.</span></p>
+<p class="caption"><span class="caption-text">一个控制点半径设置为0.</span></p>
 </div>
 <div class="last admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Remember, these curves can be converted into meshes with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> in 物体模式</p>
+<p class="first admonition-title">提示</p>
+<p class="last">记住, 这些曲线能够转换为网格物体通过 <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> 在物体模式下</p>
 </div>
 </dd>
 </dl>
-<p>We have three sub-classes of results, depending on whether the curve is open or closed or 3D:</p>
+<p>我们有三种效果的子集, 取决于曲线是开放或者闭合或者3D:</p>
 <dl class="docutils">
 <dt>开放的2D曲线</dt>
-<dd><p class="first">The extrusion will create a &#8220;wall&#8221; or &#8220;ribbon&#8221; following the curve shape. If using a <em>Bevel Depth</em>,
-the wall becomes a sort of slide or gutter.
-If your normals are facing the wrong way you can switch their direction as shown
-<a class="reference internal" href="introduction.html#curve-switch-direction"><span class="std std-ref">here</span></a></p>
+<dd><p class="first">挤出将会创建一个 &#8220;墙面&#8221; 或者 &#8220;缎带&#8221; 沿着曲线的形状. 如果使用 <em>倒角深度</em>,
+墙面变得有点像滑梯或者水槽.
+如果你的法线面向了错误的方向你可以切换它们的方向如
+<a class="reference internal" href="introduction.html#curve-switch-direction"><span class="std std-ref">此处</span></a>描述</p>
 <div class="last figure" id="id8">
 <img alt="../../../_images/curves_extrude_open2d_fill_none.jpg" src="../../../_images/curves_extrude_open2d_fill_none.jpg" />
-<p class="caption"><span class="caption-text">开放的2D曲线 with <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, fill set to none,
-zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.</span></p>
+<p class="caption"><span class="caption-text">开放的2D曲线通过 <code class="kbd docutils literal"><span class="pre">Alt-C</span></code>, 无填充,
+0 偏移, 0.5 挤出, 0.25 倒角深度, 10 倒角分辨率.</span></p>
 </div>
 </dd>
 <dt>封闭的2D曲线</dt>
-<dd><p class="first">This is probably the most useful situation, as it will quickly create a volume, with (by default)
-two flat and parallel surfaces filling the two sides of the extruded &#8220;wall&#8221;. You can remove one or both of these
-faces by choosing the fill mode: both, front, back, or none.</p>
-<p>The optional bevel depth will always create a 90 degree bevels here.</p>
+<dd><p class="first">这可能时最有用的情形, 它将会快速创建一个体积, (默认情况下)并有两个平行的平面填充挤出的 &#8220;墙面&#8221; 的两边. 你可以移除一个或者全部两个面通过选择填充模式
+: 两者, 前, 后, 或者无.</p>
+<p>倒角深度选项这里总是产生一个90度的倒角.</p>
 <div class="last figure" id="id9">
 <img alt="../../../_images/curves_extrude_closed2d_fill_both.jpg" src="../../../_images/curves_extrude_closed2d_fill_both.jpg" />
-<p class="caption"><span class="caption-text">封闭的2D曲线, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.</span></p>
+<p class="caption"><span class="caption-text">封闭的2D曲线, 0.5 挤出, 0.25 倒角深度, 10 倒角分辨率, 填充: 两者.</span></p>
 </div>
 </dd>
 <dt>3D曲线</dt>
-<dd><p class="first">Here the fact that the curve is closed or not has no importance - you will never get a volume with an extruded 3D
-curve, only a wall or ribbon, like with open 2D curves.</p>
-<p class="last">However, there is one more feature with 3D curves: the <em>Tilt</em> of the control points (see above).
-It will make the ribbon twist around the curve to create a mobius strip, for example.</p>
+<dd><p class="first">事实就是曲线是封闭的或者不是没有重要性的 - 你不可能通过挤出3D曲线来得到一个体积, 仅会是一面墙或者一条缎带, 就像开放的2D曲线.</p>
+<p class="last">然而, 这里有一个3D曲线的功能: 控制点 <em>倾斜</em> (见上文).
+它会使缎带缠绕着这曲线产生一条莫比乌斯带.</p>
 </dd>
 </dl>
 <div class="section" id="advanced-extrusion">
 <h2>高级挤出应用<a class="headerlink" href="#advanced-extrusion" title="Permalink to this headline">¶</a></h2>
-<p>These extrusions use one or two additional curve objects,
-to create very complex organic shapes.</p>
-<p>To enable this type of extrusion, you have to type a valid curve object name in the
-<em>BevOb</em> field of the curve you are going to use as the &#8220;spinal column&#8221; of your
-extrusion. The &#8220;bevel&#8221; curve will control the cross section of the extruded object.
-Whether the <em>BevOb</em> curve is 2D or 3D has no importance, but if it is closed,
-it will create a &#8220;tube-like&#8221; extrusion;
-otherwise you will get a sort of gutter or slide object...</p>
-<p>The object is extruded along the whole length of all internal curves. By default,
-the width of the extrusion is constant, but you have two ways to control it,
-the <em>半径</em> property of control points(see above), and the &#8220;taper&#8221; object.</p>
-<p>The taper curve is evaluated along <em>the local X axis</em>,
-using <em>the local Y axis</em> for width control. Note also that:</p>
+<p>这些挤出使用一个或者两个额外的曲线物体,来创建非常复杂有组织的形状.</p>
+<p>启用这种类型的挤出, 你必须输入一个有效的曲线物体的名字到曲线 (你将要用作你的挤出的 &#8220;脊柱&#8221;)的
+<em>倒角物体</em> 栏. &#8220;倒角&#8221; 曲线将会控制挤出物体的交叉部分.
+不管<em>倒角物体</em> 曲线是2D或者3D并不重要, 但是如果它是封闭的,它将会创建一个 &#8220;管状&#8221; 挤出;
+否则你将会得到一种水槽或者滑梯物体...</p>
+<p>物体沿着所有内部曲线的整条长度挤出. 默认情况下,
+挤出的宽度时不变的, 但是你有两种方式去控制它,
+控制点的 <em>半径</em> 属性(见上文), 和 &#8220;锥化&#8221; 物体.</p>
+<p>锥化曲线由 <em>自身X轴</em> 给定值,
+用 <em>自身Y轴</em> 做宽度控制. 还需要注意的是:</p>
 <ul class="simple">
-<li>It must be an <em>open curve</em>.</li>
-<li>The taper is applied independently to all curves of the extruded object.</li>
-<li>Only the first curve in a <em>TaperOb</em> is evaluated, even if you have several separated segments.</li>
-<li>The scaling starts at the first control-point on the left
-and moves along the curve to the last control-point on the right.</li>
-<li>Negative scaling, (negative local Y on the taper curve) is possible as well.
-However, rendering artifacts may appear.</li>
-<li>Might need to increase the curve resolution to see more detail of the taper</li>
-<li>With closed curves, the taper curve in <em>TaperOb</em> acts along the whole curve (perimeter of the object),
-not just the length of the object, and varies the extrusion depth. In these cases,
-you want the relative height of the <em>TaperOb</em>
+<li>它必须是一条<em>开放的曲线</em> .</li>
+<li>锥化应用独立于挤出物体的所有曲线, 尽管你有几条分开的线段.</li>
+<li>缩放从左边的第一个控制点并且沿着曲线移动到右边的最后一个控制点.</li>
+<li>负向缩放, (锥化曲线自身Y轴负向) 可能会很好.
+然而, 渲染伪影可能会出现.</li>
+<li>可能需要增加曲线的分辨率来看到锥化效果的更多细节</li>
+<li>对于封闭曲线, <em>锥化物体</em> 的锥化曲线作用到整条曲线(物体的周长),
+不仅仅是物体的长度, and varies the extrusion depth. In these cases,
+you want the relative height of the <em>锥化物体</em>
 Taper curve at both ends to be the same, so that the cyclic point
 (the place where the endpoint of the curve connects to the beginning) is a smooth transition.</li>
 </ul>
 <div class="section" id="examples">
 <h3>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<p>Let us taper a simple curve circle extruded object using a taper curve. Add a curve,
-then exit <em>编辑模式</em>. Add another one (a closed one, like a circle); call it &#8220;BevelCurve&#8221;,
-and enter its name in the <em>BevOb</em> field of the first curve
-(<em>Curve and Surface</em> tab). We now have a pipe.
-Add a third curve while in <em>物体模式</em> and call it &#8220;TaperCurve&#8221;.
-Adjust the left control-point by raising it up about 5 units.</p>
-<p>Now return to the Object tab,
-and edit the first curve&#8217;s <em>TaperOb</em> field in the Curve and Surface panel to reference the new taper curve
-which we called <em>TaperCurve</em>.
-When you hit enter the taper curve is applied immediately,
-with the results shown in Fig. <a class="reference internal" href="#fig-curves-extrude-taber-curve"><span class="std std-ref">Taper extruded curve.</span></a>.</p>
+<p>让我们锥化一条简单的由圆环挤出的曲线物体通过使用锥化曲线. 添加一条曲线,
+然后退出 <em>编辑模式</em>. 添加另外一条(一条封闭, 比如一条圆环); 成为 &#8220;倒角曲线&#8221;,
+然后在第一条曲线的 <em>倒角物体</em> 栏输入它的名字
+(<em>曲线和曲面</em> 标签). 现在我们有了一条管道.
+在 <em>物体模式</em>添加第三条曲线, 称它为 &#8220;锥化曲线&#8221;.
+调整左边控制点抬起5个单位.</p>
+<p>现在回到物体标签,然后编辑第一条曲线的曲线和曲面面板的 <em>锥化物体</em> 栏,指定我们称为 <em>锥化曲线</em> 的新的锥化曲线.
+当我们输入锥化曲线时会立即应用,
+结果显示在图 <a class="reference internal" href="#fig-curves-extrude-taber-curve"><span class="std std-ref">锥化挤出曲线.</span></a>.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -345,42 +335,42 @@ with the results shown in Fig. <a class="reference internal" href="#fig-curves-e
 <tbody valign="top">
 <tr class="row-odd"><td><div class="first last figure" id="id10">
 <span id="fig-curves-extrude-taber-curve"></span><img alt="../../../_images/curves-simple-taper-ex.jpg" src="../../../_images/curves-simple-taper-ex.jpg" />
-<p class="caption"><span class="caption-text">Taper extruded curve.</span></p>
+<p class="caption"><span class="caption-text">锥化挤出曲线.</span></p>
 </div>
 </td>
 <td><div class="first last figure" id="id11">
 <img alt="../../../_images/curves-simple-taper-ex-solid.jpg" src="../../../_images/curves-simple-taper-ex-solid.jpg" />
-<p class="caption"><span class="caption-text">Taper solid mode.</span></p>
+<p class="caption"><span class="caption-text">锥化实体模式.</span></p>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<p>You can see the <em>taper curve</em> being applied to the <em>extruded object</em>.
-Notice how the pipe&#8217;s volume shrinks to nothing as the taper curve goes from left to right.
-If the taper curve went below the local Y axis the pipe&#8217;s inside would become the outside,
+<p>你可以看到<em>锥化曲线</em> 应用到了 <em>挤出物体</em>.
+Notice how the pipe&#8217;s volume shrinks to nothing as the 锥化曲线 goes from left to right.
+If the 锥化曲线 went below the local Y axis the pipe&#8217;s inside would become the outside,
 which would lead to rendering artifacts.
 Of course as an artist that may be what you are looking for!</p>
 <div class="figure" id="id12">
 <span id="fig-curves-extrude-taber1"></span><img alt="../../../_images/curvestaper02.jpg" src="../../../_images/curvestaper02.jpg" />
-<p class="caption"><span class="caption-text">Taper example 1.</span></p>
+<p class="caption"><span class="caption-text">锥化例1.</span></p>
 </div>
-<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber1"><span class="std std-ref">Taper example 1.</span></a>
-you can clearly see the effect the left taper curve has on the right curve object. Here the
-left taper curve is closer to the object center and that results in a smaller curve object to
+<p>在图<a class="reference internal" href="#fig-curves-extrude-taber1"><span class="std std-ref">锥化例1中.</span></a>
+you can clearly see the effect the left 锥化曲线 has on the right curve object. Here the
+left 锥化曲线 is closer to the object center and that results in a smaller curve object to
 the right.</p>
 <div class="figure" id="id13">
 <span id="fig-curves-extrude-taber2"></span><img alt="../../../_images/curvestaper03.jpg" src="../../../_images/curvestaper03.jpg" />
-<p class="caption"><span class="caption-text">Taper example 2.</span></p>
+<p class="caption"><span class="caption-text">锥化例2.</span></p>
 </div>
-<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber2"><span class="std std-ref">Taper example 2.</span></a> a control point in the taper curve to the left is moved away from the
+<p>在图<a class="reference internal" href="#fig-curves-extrude-taber2"><span class="std std-ref">锥化例2中.</span></a> a control point in the 锥化曲线 to the left is moved away from the
 center and that gives a wider result to the curve object on the right.</p>
 <div class="figure" id="id14">
 <span id="fig-curves-extrude-taber3"></span><img alt="../../../_images/curvestaper04.jpg" src="../../../_images/curvestaper04.jpg" />
-<p class="caption"><span class="caption-text">Taper example 3.</span></p>
+<p class="caption"><span class="caption-text">锥化例3.</span></p>
 </div>
-<p>In Fig. <a class="reference internal" href="#fig-curves-extrude-taber3"><span class="std std-ref">Taper example 3.</span></a> we see the use of a more irregular taper curve applied to a curve circle.</p>
-<p>代办事项: add some &#8220;bevel&#8221; extrusion with <em>Tilt</em> examples.</p>
+<p>在图<a class="reference internal" href="#fig-curves-extrude-taber3"><span class="std std-ref">锥化例3中.</span></a> 我们看到将一条非常不规则的锥化曲线应用到一条圆环曲线.</p>
+<p>代办事项: 添加一些使用 <em>倾斜</em> 的 &#8220;倒角&#8221; 挤出的例子.</p>
 </div>
 </div>
 </div>
@@ -450,17 +440,6 @@ center and that gives a wider result to the curve object on the right.</p>
       });
   </script>
   
- 
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-1418081-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </div>
 
 

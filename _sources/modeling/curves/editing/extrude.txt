@@ -47,7 +47,7 @@ Tilt
 
       30 degree Mean Tilt of all control points.
 
-Bevel Depth
+倒角深度
    This will add a bevel to the extrusion. See below for its effects...
    Note that the bevel makes the extrusion wider and higher.
    If set to 0.0, there is no bevel.
@@ -57,7 +57,7 @@ Bevel Depth
       倒角深度 of 0.25, fill set to full, zero Mean Tilt.
 
 Bevel Resolution
-   Controls the resolution of the bevel created by a *Bevel Depth* higher than zero.
+   Controls the resolution of the bevel created by a *倒角深度* higher than zero.
    If set the to 0 (the default), the bevel is a simple "flat" surface.
    Higher values will smooth, round off the bevel, similar to the resolution settings of the curve itself...
 
@@ -70,7 +70,7 @@ Bevel Resolution
 
    .. figure:: /images/curves_extrude_closed2d_fillboth_offset-1.jpg
 
-      -1 offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.
+      -1 offset, 0.5 extrusion, 0.25 倒角深度, 10 倒角分辨率.
 
 半径
    The 半径 allows you to directly control the width of the extrusion along the “spinal” curve.
@@ -89,7 +89,7 @@ Bevel Resolution
 We have three sub-classes of results, depending on whether the curve is open or closed or 3D:
 
 开放的2D曲线
-   The extrusion will create a "wall" or "ribbon" following the curve shape. If using a *Bevel Depth*,
+   The extrusion will create a "wall" or "ribbon" following the curve shape. If using a *倒角深度*,
    the wall becomes a sort of slide or gutter.
    If your normals are facing the wrong way you can switch their direction as shown
    :ref:`here <curve-switch_direction>`
@@ -97,7 +97,7 @@ We have three sub-classes of results, depending on whether the curve is open or 
    .. figure:: /images/curves_extrude_open2d_fill_none.jpg
 
       开放的2D曲线 with :kbd:`Alt-C`, fill set to none,
-      zero offset, 0.5 extrusion, 0.25 Bevel Depth, 10 倒角分辨率.
+      zero offset, 0.5 extrusion, 0.25 倒角深度, 10 倒角分辨率.
 
 封闭的2D曲线
    This is probably the most useful situation, as it will quickly create a volume, with (by default)
@@ -108,7 +108,7 @@ We have three sub-classes of results, depending on whether the curve is open or 
 
    .. figure:: /images/curves_extrude_closed2d_fill_both.jpg
 
-      封闭的2D曲线, 0.5 extrude, 0.25 Bevel Depth, 10 倒角分辨率, Fill: Both.
+      封闭的2D曲线, 0.5 extrude, 0.25 倒角深度, 10 倒角分辨率, Fill: Both.
 
 3D曲线
    Here the fact that the curve is closed or not has no importance - you will never get a volume with an extruded 3D
@@ -126,7 +126,7 @@ to create very complex organic shapes.
 
 To enable this type of extrusion, you have to type a valid curve object name in the
 *BevOb* field of the curve you are going to use as the "spinal column" of your
-extrusion. The "bevel" curve will control the cross section of the extruded object.
+extrusion. The "bevel" curve will control the cross section of the 挤出物体.
 Whether the *BevOb* curve is 2D or 3D has no importance, but if it is closed,
 it will create a "tube-like" extrusion;
 otherwise you will get a sort of gutter or slide object...
@@ -135,18 +135,18 @@ The object is extruded along the whole length of all internal curves. By default
 the width of the extrusion is constant, but you have two ways to control it,
 the *半径* property of control points(see above), and the "taper" object.
 
-The taper curve is evaluated along *the local X axis*,
+The 锥化曲线 is evaluated along *the local X axis*,
 using *the local Y axis* for width control. Note also that:
 
 - It must be an *open curve*.
-- The taper is applied independently to all curves of the extruded object.
+- The taper is applied independently to all curves of the 挤出物体.
 - Only the first curve in a *TaperOb* is evaluated, even if you have several separated segments.
 - The scaling starts at the first control-point on the left
   and moves along the curve to the last control-point on the right.
-- Negative scaling, (negative local Y on the taper curve) is possible as well.
+- Negative scaling, (negative local Y on the 锥化曲线) is possible as well.
   However, rendering artifacts may appear.
 - Might need to increase the curve resolution to see more detail of the taper
-- With closed curves, the taper curve in *TaperOb* acts along the whole curve (perimeter of the object),
+- With closed curves, the 锥化曲线 in *TaperOb* acts along the whole curve (perimeter of the object),
   not just the length of the object, and varies the extrusion depth. In these cases,
   you want the relative height of the *TaperOb*
   Taper curve at both ends to be the same, so that the cyclic point
@@ -159,7 +159,7 @@ using *the local Y axis* for width control. Note also that:
 .. TODO: add some "simple" extrusion examples.
    TODO: add some "bevel" extrusion with *半径* examples.
 
-Let us taper a simple curve circle extruded object using a taper curve. Add a curve,
+Let us taper a simple curve circle 挤出物体 using a 锥化曲线. Add a curve,
 then exit *编辑模式*. Add another one (a closed one, like a circle); call it "BevelCurve",
 and enter its name in the *BevOb* field of the first curve
 (*Curve and Surface* tab). We now have a pipe.
@@ -167,9 +167,9 @@ Add a third curve while in *物体模式* and call it "TaperCurve".
 Adjust the left control-point by raising it up about 5 units.
 
 Now return to the Object tab,
-and edit the first curve's *TaperOb* field in the Curve and Surface panel to reference the new taper curve
+and edit the first curve's *TaperOb* field in the Curve and Surface panel to reference the new 锥化曲线
 which we called *TaperCurve*.
-When you hit enter the taper curve is applied immediately,
+When you hit enter the 锥化曲线 is applied immediately,
 with the results shown in Fig. :ref:`fig-curves-extrude-taber-curve`.
 
 .. list-table::
@@ -185,9 +185,9 @@ with the results shown in Fig. :ref:`fig-curves-extrude-taber-curve`.
           Taper solid mode.
 
 
-You can see the *taper curve* being applied to the *extruded object*.
-Notice how the pipe's volume shrinks to nothing as the taper curve goes from left to right.
-If the taper curve went below the local Y axis the pipe's inside would become the outside,
+You can see the *锥化曲线* being applied to the *挤出物体*.
+Notice how the pipe's volume shrinks to nothing as the 锥化曲线 goes from left to right.
+If the 锥化曲线 went below the local Y axis the pipe's inside would become the outside,
 which would lead to rendering artifacts.
 Of course as an artist that may be what you are looking for!
 
@@ -199,8 +199,8 @@ Of course as an artist that may be what you are looking for!
 
 
 In Fig. :ref:`fig-curves-extrude-taber1`
-you can clearly see the effect the left taper curve has on the right curve object. Here the
-left taper curve is closer to the object center and that results in a smaller curve object to
+you can clearly see the effect the left 锥化曲线 has on the right curve object. Here the
+left 锥化曲线 is closer to the object center and that results in a smaller curve object to
 the right.
 
 .. _fig-curves-extrude-taber2:
@@ -210,7 +210,7 @@ the right.
    Taper example 2.
 
 
-In Fig. :ref:`fig-curves-extrude-taber2` a control point in the taper curve to the left is moved away from the
+In Fig. :ref:`fig-curves-extrude-taber2` a control point in the 锥化曲线 to the left is moved away from the
 center and that gives a wider result to the curve object on the right.
 
 .. _fig-curves-extrude-taber3:
@@ -220,7 +220,7 @@ center and that gives a wider result to the curve object on the right.
    Taper example 3.
 
 
-In Fig. :ref:`fig-curves-extrude-taber3` we see the use of a more irregular taper curve applied to a curve circle.
+In Fig. :ref:`fig-curves-extrude-taber3` we see the use of a more irregular 锥化曲线 applied to a curve circle.
 
 
 TODO: add some "bevel" extrusion with *Tilt* examples.
