@@ -311,10 +311,9 @@
 然而, 渲染伪影可能会出现.</li>
 <li>可能需要增加曲线的分辨率来看到锥化效果的更多细节</li>
 <li>对于封闭曲线, <em>锥化物体</em> 的锥化曲线作用到整条曲线(物体的周长),
-不仅仅是物体的长度, and varies the extrusion depth. In these cases,
-you want the relative height of the <em>锥化物体</em>
-Taper curve at both ends to be the same, so that the cyclic point
-(the place where the endpoint of the curve connects to the beginning) is a smooth transition.</li>
+不仅仅是物体的长度, 改变挤出深度. 既然如此,
+你想要 <em>锥化物体</em> 的锥化曲线两端的高度比例是一样的, 因此循环点
+(曲线的终点连接开始的位置)是一个平滑过度.</li>
 </ul>
 <div class="section" id="examples">
 <h3>例子<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
@@ -347,24 +346,21 @@ Taper curve at both ends to be the same, so that the cyclic point
 </tbody>
 </table>
 <p>你可以看到<em>锥化曲线</em> 应用到了 <em>挤出物体</em>.
-Notice how the pipe&#8217;s volume shrinks to nothing as the 锥化曲线 goes from left to right.
-If the 锥化曲线 went below the local Y axis the pipe&#8217;s inside would become the outside,
-which would lead to rendering artifacts.
-Of course as an artist that may be what you are looking for!</p>
+注意管道的体积时如何缩放到没有因为锥化曲线从左到右.
+如果锥化曲线自身Y轴坐标下降管道的内部可能会变成外部,
+这将会可能导致渲染伪影.
+当然作为一位艺术家那可能正是你所寻找的!</p>
 <div class="figure" id="id12">
 <span id="fig-curves-extrude-taber1"></span><img alt="../../../_images/curvestaper02.jpg" src="../../../_images/curvestaper02.jpg" />
 <p class="caption"><span class="caption-text">锥化例1.</span></p>
 </div>
 <p>在图<a class="reference internal" href="#fig-curves-extrude-taber1"><span class="std std-ref">锥化例1中.</span></a>
-you can clearly see the effect the left 锥化曲线 has on the right curve object. Here the
-left 锥化曲线 is closer to the object center and that results in a smaller curve object to
-the right.</p>
+你能清楚的看到左边锥化曲线对右边曲线物体的影响. 这里左边锥化曲线立物体的中心很近,所以结果就是右边就是一个较小的曲线物体.</p>
 <div class="figure" id="id13">
 <span id="fig-curves-extrude-taber2"></span><img alt="../../../_images/curvestaper03.jpg" src="../../../_images/curvestaper03.jpg" />
 <p class="caption"><span class="caption-text">锥化例2.</span></p>
 </div>
-<p>在图<a class="reference internal" href="#fig-curves-extrude-taber2"><span class="std std-ref">锥化例2中.</span></a> a control point in the 锥化曲线 to the left is moved away from the
-center and that gives a wider result to the curve object on the right.</p>
+<p>在图<a class="reference internal" href="#fig-curves-extrude-taber2"><span class="std std-ref">锥化例2中.</span></a> 左边锥化曲线的一个控制点远离中心然后右边曲线物体产生了一个更宽的效果.</p>
 <div class="figure" id="id14">
 <span id="fig-curves-extrude-taber3"></span><img alt="../../../_images/curvestaper04.jpg" src="../../../_images/curvestaper04.jpg" />
 <p class="caption"><span class="caption-text">锥化例3.</span></p>

@@ -193,12 +193,12 @@ to twist the &#8220;curved&#8221; object around it.
 Unfortunately, the other <em>半径</em> property is not used (it would have been possible, for example,
 to make it control the size of the &#8220;curved&#8221; object...).</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
+<p class="first admonition-title">提示</p>
 <p class="last">Try to position your object over the curve immediately after you have added it,
 before adding the curve deform. This gives the best control over how the deformation works.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">注意</p>
 <p>Use modifiers!</p>
 <p class="last">The <em>曲线形变</em> relationship is now also a modifier, called <a class="reference internal" href="../../modifiers/deform/curve.html"><span class="doc">Curve</span></a>.
 The <em>Curve</em> modifier function acts the same as its counterpart,
@@ -237,20 +237,19 @@ This option is in <em>Object Data</em> properties.</p>
 </div>
 <div class="section" id="example">
 <h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Let us make a simple example:</p>
+<p>让我们制作一个简单的例子:</p>
 <ul class="simple">
-<li>Remove default cube object from scene and add a Monkey with
-<span class="menuselection">Add ‣ Mesh ‣ Monkey</span></li>
-<li>Press <code class="kbd docutils literal"><span class="pre">Tab</span></code> to exit <em>编辑模式</em>.</li>
-<li>Now add a curve with <span class="menuselection">Add ‣ Curve ‣ 贝塞尔曲线</span>.</li>
+<li>从场景中移除默认的立方体物体然后添加一只猴子通过
+<span class="menuselection">添加 ‣ 网格 ‣ 猴子</span></li>
+<li>按 <code class="kbd docutils literal"><span class="pre">Tab</span></code> 退出 <em>编辑模式</em>.</li>
+<li>现在添加一条曲线通过 <span class="menuselection">添加 ‣ 曲线 ‣ 贝塞尔曲线</span>.</li>
 </ul>
 <div class="figure" id="id4">
 <span id="fig-curves-deform-edit"></span><img alt="../../../_images/curvesdeform_exampleeditcurve.jpg" src="../../../_images/curvesdeform_exampleeditcurve.jpg" />
-<p class="caption"><span class="caption-text">Edit Curve.</span></p>
+<p class="caption"><span class="caption-text">编辑曲线.</span></p>
 </div>
 <ul class="simple">
-<li>While in <em>编辑模式</em>, move the control points of the curve
-as shown in Fig. <a class="reference internal" href="#fig-curves-deform-edit"><span class="std std-ref">Edit Curve.</span></a>, then exit <em>编辑模式</em> <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</li>
+<li>当在 <em>编辑模式</em>, 移动曲线控制点如图 <a class="reference internal" href="#fig-curves-deform-edit"><span class="std std-ref">编辑曲线.</span></a> 所示, 然后退出 <em>编辑模式</em> <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</li>
 </ul>
 <div class="figure" id="id5">
 <span id="fig-curves-deform-monkey-curve"></span><img alt="../../../_images/curvesdeform_examplemonkeyoncurve1.jpg" src="../../../_images/curvesdeform_examplemonkeyoncurve1.jpg" />
@@ -265,7 +264,7 @@ and optionally change the dominant axis to Y.</li>
 </ul>
 </li>
 <li>Or you can choose the old, deprecated method (note that it creates a &#8220;virtual&#8221; modifier...):<ul>
-<li>Select the Monkey <code class="kbd docutils literal"><span class="pre">RMB</span></code>, and then shift select the curve <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>.</li>
+<li>选择猴子 <code class="kbd docutils literal"><span class="pre">RMB</span></code>, 然后加选曲线 <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code>.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code> to open up the <em>Make Parent</em> menu.</li>
 <li>Select <span class="menuselection">Make Parent ‣ 曲线形变</span>.</li>
 </ul>
@@ -275,21 +274,21 @@ and optionally change the dominant axis to Y.</li>
 in the Y-direction (the dominant axis by default), the monkey will deform nicely along the curve.</li>
 </ul>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
+<p class="first admonition-title">提示</p>
 <p class="last">If you press <code class="kbd docutils literal"><span class="pre">MMB</span></code> (or one of <code class="kbd docutils literal"><span class="pre">X</span></code>, <code class="kbd docutils literal"><span class="pre">Y</span></code>, <code class="kbd docutils literal"><span class="pre">Z</span></code>)
 while moving the Monkey you will constrain the movement to one axis only.</p>
 </div>
 <ul class="simple">
-<li>In Fig. <a class="reference internal" href="#fig-curves-deform-monkey-deform"><span class="std std-ref">Monkey deformations.</span></a>, you can see the Monkey at different positions along the curve.</li>
+<li>在图<a class="reference internal" href="#fig-curves-deform-monkey-deform"><span class="std std-ref">猴子形变中.</span></a>, you can see the Monkey at different positions along the curve.</li>
 </ul>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
+<p class="first admonition-title">提示</p>
 <p class="last">Moving the Monkey in directions other than the dominant axis will create some odd deformations.
 Sometimes this is what you want to achieve, so you will need to experiment and try it out!</p>
 </div>
 <div class="figure" id="id6">
 <span id="fig-curves-deform-monkey-deform"></span><a class="reference internal image-reference" href="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg"><img alt="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg" src="../../../_images/curvesdeform_examplemonkeyoncurve2.jpg" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-text">Monkey deformations.</span></p>
+<p class="caption"><span class="caption-text">猴子形变.</span></p>
 </div>
 </div>
 </div>
