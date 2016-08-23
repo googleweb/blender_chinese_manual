@@ -12,7 +12,7 @@ Language
 ========
 
 At :menuselection:`File --> 用户首选项 --> System`, enable *International Fonts* to choose the
-*Language* and what to translate from *界面*, *Tooltips* and *New Data*.
+*Language* and what to translate from *界面*, *工具提示* and *New Data*.
 
 See :ref:`prefs-system-international` for details.
 

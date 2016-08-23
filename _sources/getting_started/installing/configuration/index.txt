@@ -1,6 +1,6 @@
 
 ######################
-  Configuring Blender
+  配置Blender
 ######################
 
 .. toctree::

@@ -94,7 +94,7 @@ Open/close the *Mesh Tools* panel using :kbd:`T`.
 When entering *编辑模式*, several mesh tools become available.
 
 Most of these tools are also available as shortcuts
-(displayed in the *Tooltips* for each tool) and/or in the *Specials* menu
+(displayed in the *工具提示* for each tool) and/or in the *Specials* menu
 :kbd:`W`, the *Edge* menu :kbd:`Ctrl-E` ,and *Face* menu
 :kbd:`Ctrl-F`.
 For each tool a context-sensitive menu is opened at the bottom of the *Tool Shelf*.

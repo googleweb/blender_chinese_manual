@@ -10,14 +10,14 @@ of a real-world object or expresses your imagination of abstract objects.
 
 There are three primary types of modeling - mesh modeling, curve/surface modeling, and meta modeling.
 
-:doc:`Mesh 建模 </modeling/meshes/introduction>`
+:doc:`网格建模 </modeling/meshes/introduction>`
    is done within the *3D视图* and typically begins with a primitive shape (e.g. circle, cube, cylinder...).
 
    This :doc:`Mesh Primitive </editors/3dview/object/types/primitives>`
    is defined by an array of points in 3D space called vertices (singular form is :term:`Vertex`).
    From there you might begin extruding faces and moving vertices to create a larger, more complex shape.
 
-   Mesh 建模 Modes
+   网格建模模式
       The 3D视图 has three principal modes that allow for the creation of,
       editing and manipulation of the mesh models.
       Each of the three modes have a variety of tools. Some tools may be found in one or more of the modes.

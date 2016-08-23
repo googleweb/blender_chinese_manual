@@ -6,7 +6,7 @@
 Blender has a range of built-in and web-based help options.
 
 
-Tooltips
+工具提示
 ========
 
 .. figure:: /images/ui_tooltip_example.png
@@ -22,7 +22,7 @@ The *Python:* text included last may be of interest to you if you're an animator
 or automating tasks, see :ref:`scripting-index`.
 
 
-Context Sensitive Manual Access
+基于上下文的手册入口
 ===============================
 
 .. admonition:: 参考
@@ -48,7 +48,7 @@ This opens a webpage relating to the button under the cursor, supporting both to
 
 .. _help-menu:
 
-Help Menu
+帮助菜单
 =========
 
 In the 信息编辑器 headers *Help* menu is a group of web links.
@@ -64,7 +64,7 @@ The same links can also be found in the :ref:`splash`.
    :width: 165px
    :align: right
 
-   Help Menu.
+   帮助菜单.
 
 
 - :doc:`This is a link for the Official Blender手册 </contents>` -
