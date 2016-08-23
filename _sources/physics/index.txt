@@ -11,7 +11,7 @@
    baking.rst
 
 
-Physic Types
+物理类型
 ============
 
 .. toctree::
