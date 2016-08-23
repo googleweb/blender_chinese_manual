@@ -44,7 +44,7 @@ Boundary
    Scale the offset to give more even thickness.
 偏移量 Relative
    Scale the offset by surrounding geometry.
-Thickness
+厚度
    Set the size of the inset.
 Depth
    Raise or lower the newly inset faces to add depth.

@@ -8,7 +8,7 @@ Distorted Noise
    Distorted Noise 纹理 Panels.
 
 
-*Distortion Noise* takes the option that you pick from *Noise Basis* and filters it, to create hybrid pattern.
+*畸变 Noise* takes the option that you pick from *Noise Basis* and filters it, to create hybrid pattern.
 
 Often used for
    Grunge, very complex and versatile
@@ -19,11 +19,11 @@ Result(s)
 Options
 =======
 
-Noise Distortion
+Noise 畸变
    The texture to use to distort another
 Basis
    The texture to be distorted
 Noise
    The size of the noise generated
-Distortion
-   The amount that *Distortion Noise* affects *Basis*
+畸变
+   The amount that *畸变 Noise* affects *Basis*

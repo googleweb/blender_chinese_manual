@@ -16,7 +16,7 @@ Random
    Deselect alternating faces, to create a checker like pattern.
 Select Every N Number of Vertices
    Selects vertices that are multiples of N.
-Sharp Edges
+锐利
    This tool selects all edges between two faces forming an angle greater than the angle option,
    Where an increasing angle selects sharper edges.
 Linked Flat Faces :kbd:`Ctrl-Shift-Alt-F`

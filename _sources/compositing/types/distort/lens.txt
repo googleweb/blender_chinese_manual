@@ -1,13 +1,13 @@
 
 ********************
-Lens Distortion Node
+Lens 畸变 Node
 ********************
 
 .. figure:: /images/compositing_nodes_lensdistortion.png
    :align: right
    :width: 150px
 
-   Lens Distortion Node.
+   Lens 畸变 Node.
 
 Use this node to simulate distortions that real camera lenses produce.
 

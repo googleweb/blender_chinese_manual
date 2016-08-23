@@ -34,7 +34,7 @@ Edge Angle
    Split Angle
       On 0: all edges are split. On 180: no edges are split.
 
-Sharp Edges
+锐利
    When enabled, edges will be split if they were marked as sharp using :menuselection:`Edge Specials --> Mark Sharp`
    (Menu shortcut: :kbd:`Ctrl-E` in 编辑模式).
 

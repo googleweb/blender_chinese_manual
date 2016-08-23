@@ -18,7 +18,7 @@ Options
    Wireframe Modifier.
 
 
-Thickness
+厚度
    The depth or size of the wireframes.
 偏移量
    A value between (-1 to 1) to change whether the wireframes are
@@ -44,9 +44,9 @@ Crease Edges
 
    Crease Weight
       Define how much crease (0 to 1) (no to full) the junctions should receive.
-Even Thickness
+Even 厚度
    Maintain thickness by adjusting for sharp corners. Sometimes improves quality but also increases computation time.
-Relative Thickness
+Relative 厚度
    Determine edge thickness by the length of the edge - longer edges are thicker.
 Boundary
    Creates wireframes on mesh island boundaries.
@@ -82,6 +82,6 @@ in the examples below.
 
 .. warning::
 
-  Wireframe thickness is an approximation. While *Even Thickness* should yield good results in many cases,
+  Wireframe thickness is an approximation. While *Even 厚度* should yield good results in many cases,
   skinny faces can cause ugly spikes. In this case you can either reduce the extreme angles in the geometry
-  or disable the *Even Thickness* option.
+  or disable the *Even 厚度* option.

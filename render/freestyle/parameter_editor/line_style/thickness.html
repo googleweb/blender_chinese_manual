@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Thickness &mdash; Blender参考手册</title>
+  <title>厚度 &mdash; Blender参考手册</title>
   
 
   
@@ -165,7 +165,7 @@
       
           <li><a href="index.html">Line Style &amp; 修改器</a> &raquo;</li>
       
-    <li>Thickness</li>
+    <li>厚度</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -180,15 +180,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="thickness">
-<h1>Thickness<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h1>
+<h1>厚度<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h1>
 <p>In this tab you control the thickness of your strokes.</p>
 <div class="figure align-right">
 <a class="reference internal image-reference" href="../../../../_images/render-freestyle-line_style_thickness.jpg"><img alt="../../../../_images/render-freestyle-line_style_thickness.jpg" src="../../../../_images/render-freestyle-line_style_thickness.jpg" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
-<dt>Base Thickness</dt>
+<dt>Base 厚度</dt>
 <dd>The base thickness for this line style.</dd>
-<dt>Thickness Position</dt>
+<dt>厚度 Position</dt>
 <dd><p class="first">Control the position of stroke thickness from the original (backbone) stroke geometry. There are four choices:</p>
 <dl class="last docutils">
 <dt>Center</dt>
@@ -199,7 +199,7 @@
 <dd>The strokes are drawn outside the object boundary.</dd>
 <dt>Relative</dt>
 <dd>This allows you to specify the relative position by a number between <code class="docutils literal"><span class="pre">0.0</span></code> (inside) and <code class="docutils literal"><span class="pre">1.0</span></code> (outside),
-in the <em>Thickness Ratio</em> numeric field just below.</dd>
+in the <em>厚度 Ratio</em> numeric field just below.</dd>
 </dl>
 </dd>
 </dl>
@@ -244,7 +244,7 @@ It generates different thickness based on the orientation of the stroke.</p>
 <dd>The angle (orientation) of the virtual drawing tool, from the vertical axis of the picture.
 For example, an angle of <code class="docutils literal"><span class="pre">0.0</span></code> mimics a pen aligned with the vertical axis, hence the thickest
 strokes will be the vertical ones, and the thinnest, the horizontal ones.</dd>
-<dt>Min Thickness and Max Thickness</dt>
+<dt>Min 厚度 and Max 厚度</dt>
 <dd>The minimum and maximum generated thickness (as explained above,
 minimum is used when the stroke&#8217;s direction is perpendicular to the main <em>Orientation</em>, and maximum,
 when aligned with it).</dd>
@@ -330,7 +330,7 @@ the result will not be blurred between materials along the strokes.</p>
 <a class="reference internal image-reference" href="../../../../_images/render-freestyle_ui_thickness_noise.png"><img alt="../../../../_images/render-freestyle_ui_thickness_noise.png" src="../../../../_images/render-freestyle_ui_thickness_noise.png" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
-<dt>Min Thickness and Max Thickness</dt>
+<dt>Min 厚度 and Max 厚度</dt>
 <dd>The minimum and maximum assigned thickness.</dd>
 <dt>Asymmetric</dt>
 <dd>Allows the thickness to be distributed unevenly at every point. Internally, the stroke is represented as a
@@ -346,10 +346,10 @@ can be created by assigning different values to either side of the backbone.</dd
 <a class="reference internal image-reference" href="../../../../_images/render-freestyle_ui_thickness_tangent.png"><img alt="../../../../_images/render-freestyle_ui_thickness_tangent.png" src="../../../../_images/render-freestyle_ui_thickness_tangent.png" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
-<dt>Min Thickness and Max Thickness</dt>
+<dt>Min 厚度 and Max 厚度</dt>
 <dd>The minimum and maximum assigned thickness.</dd>
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the
+<dd>Either a linear progression (from <em>Min 厚度</em> to <em>Max 厚度</em>, which may be inverted with the
 <em>Invert</em> option), or a custom mapping curve (on the same range).</dd>
 <dt>Min Angle and Max Angle</dt>
 <dd>The range of input values to the mapping. Out-of-range input values will be clamped by the Min and Max angles
@@ -372,13 +372,13 @@ the <em>Face Smoothness</em> option has to be turned on and the object needs to 
 <a class="reference internal image-reference" href="../../../../_images/render-freestyle_ui_thickness_curvature3d.png"><img alt="../../../../_images/render-freestyle_ui_thickness_curvature3d.png" src="../../../../_images/render-freestyle_ui_thickness_curvature3d.png" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
-<dt>Min Thickness and Max Thickness</dt>
+<dt>Min 厚度 and Max 厚度</dt>
 <dd>The minimum and maximum assigned thickness.</dd>
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the <em>Invert</em>
+<dd>Either a linear progression (from <em>Min 厚度</em> to <em>Max 厚度</em>, which may be inverted with the <em>Invert</em>
 option), or a custom mapping curve (on the same range).</dd>
 <dt>Min Curvature and Max Curvature</dt>
-<dd>The limits of the mapping of the Min and Max Thickness.
+<dd>The limits of the mapping of the Min and Max 厚度.
 If the current point of the stroke is at <em>Min Curvature</em> or less from the target,
 it will take the start thickness of the mapping, and conversely,
 if it is at <em>Max Curvature</em> or more from the target, it will take the end thickness of the mapping.</dd>
@@ -398,10 +398,10 @@ its thickness value is not touched by this modifier.</p>
 <a class="reference internal image-reference" href="../../../../_images/render-freestyle_ui_thickness_crease_angle.png"><img alt="../../../../_images/render-freestyle_ui_thickness_crease_angle.png" src="../../../../_images/render-freestyle_ui_thickness_crease_angle.png" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
-<dt>Min Thickness and Max Thickness</dt>
+<dt>Min 厚度 and Max 厚度</dt>
 <dd>The minimum and maximum assigned thickness.</dd>
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the <em>Invert</em>
+<dd>Either a linear progression (from <em>Min 厚度</em> to <em>Max 厚度</em>, which may be inverted with the <em>Invert</em>
 option), or a custom mapping curve (on the same range).</dd>
 </dl>
 </div>

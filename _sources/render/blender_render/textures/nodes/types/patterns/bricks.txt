@@ -20,7 +20,7 @@ Bricks 1, Bricks 2
    Sets the color range of the bricks. Brick colors are chosen randomly between these two colors.
 Mortar
    Sets the mortar color, in between the bricks.
-Thickness
+厚度
    Sets the thickness of the mortar.
 Bias
    The bias of randomly chosen colors,

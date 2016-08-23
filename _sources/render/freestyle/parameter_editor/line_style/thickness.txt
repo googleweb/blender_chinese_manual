@@ -1,6 +1,6 @@
 
 *********
-Thickness
+厚度
 *********
 
 In this tab you control the thickness of your strokes.
@@ -9,10 +9,10 @@ In this tab you control the thickness of your strokes.
    :width: 300px
    :align: right
 
-Base Thickness
+Base 厚度
    The base thickness for this line style.
 
-Thickness Position
+厚度 Position
    Control the position of stroke thickness from the original (backbone) stroke geometry. There are four choices:
 
    Center
@@ -23,7 +23,7 @@ Thickness Position
       The strokes are drawn outside the object boundary.
    Relative
       This allows you to specify the relative position by a number between ``0.0`` (inside) and ``1.0`` (outside),
-      in the *Thickness Ratio* numeric field just below.
+      in the *厚度 Ratio* numeric field just below.
 
 The thickness position options are applied only to strokes of edge types
 *Silhouette* and *Border*,
@@ -75,7 +75,7 @@ Orientation
    For example, an angle of ``0.0`` mimics a pen aligned with the vertical axis, hence the thickest
    strokes will be the vertical ones, and the thinnest, the horizontal ones.
 
-Min Thickness and Max Thickness
+Min 厚度 and Max 厚度
    The minimum and maximum generated thickness (as explained above,
    minimum is used when the stroke's direction is perpendicular to the main *Orientation*, and maximum,
    when aligned with it).
@@ -181,7 +181,7 @@ The *Noise* modifier uses a pseudo-random number generator to variably distribut
    :width: 300px
    :align: right
 
-Min Thickness and Max Thickness
+Min 厚度 and Max 厚度
    The minimum and maximum assigned thickness.
 
 Asymmetric
@@ -200,11 +200,11 @@ This modifier bases its effect on the traveling direction of the stroke evaluate
    :width: 300px
    :align: right
 
-Min Thickness and Max Thickness
+Min 厚度 and Max 厚度
    The minimum and maximum assigned thickness.
 
 Mapping
-   Either a linear progression (from *Min Thickness* to *Max Thickness*, which may be inverted with the
+   Either a linear progression (from *Min 厚度* to *Max 厚度*, which may be inverted with the
    *Invert* option), or a custom mapping curve (on the same range).
 
 Min Angle and Max Angle
@@ -231,15 +231,15 @@ the *Face Smoothness* option has to be turned on and the object needs to have *S
    :width: 300px
    :align: right
 
-Min Thickness and Max Thickness
+Min 厚度 and Max 厚度
    The minimum and maximum assigned thickness.
 
 Mapping
-   Either a linear progression (from *Min Thickness* to *Max Thickness*, which may be inverted with the *Invert*
+   Either a linear progression (from *Min 厚度* to *Max 厚度*, which may be inverted with the *Invert*
    option), or a custom mapping curve (on the same range).
 
 Min Curvature and Max Curvature
-   The limits of the mapping of the Min and Max Thickness.
+   The limits of the mapping of the Min and Max 厚度.
    If the current point of the stroke is at *Min Curvature* or less from the target,
    it will take the start thickness of the mapping, and conversely,
    if it is at *Max Curvature* or more from the target, it will take the end thickness of the mapping.
@@ -264,9 +264,9 @@ its thickness value is not touched by this modifier.
    :width: 300px
    :align: right
 
-Min Thickness and Max Thickness
+Min 厚度 and Max 厚度
    The minimum and maximum assigned thickness.
 
 Mapping
-   Either a linear progression (from *Min Thickness* to *Max Thickness*, which may be inverted with the *Invert*
+   Either a linear progression (from *Min 厚度* to *Max 厚度*, which may be inverted with the *Invert*
    option), or a custom mapping curve (on the same range).

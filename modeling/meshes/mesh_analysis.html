@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mesh Analysis &mdash; Blender参考手册</title>
+  <title>网格分析 &mdash; Blender参考手册</title>
   
 
   
@@ -94,12 +94,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh_structures.html">Vertices, Edges and Faces</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Mesh Analysis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#overhang">Overhang</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#thickness">Thickness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#intersections">Intersections</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#distortion">Distortion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sharp-edges">Sharp Edges</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">网格分析</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overhang">悬垂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thickness">厚度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intersections">交集</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distortion">畸变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sharp-edges">锐利</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
@@ -163,7 +163,7 @@
       
           <li><a href="index.html">网格</a> &raquo;</li>
       
-    <li>Mesh Analysis</li>
+    <li>网格分析</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -178,7 +178,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mesh-analysis">
-<h1>Mesh Analysis<a class="headerlink" href="#mesh-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>网格分析<a class="headerlink" href="#mesh-analysis" title="Permalink to this headline">¶</a></h1>
 <p>Mesh analysis is useful for displaying attributes of the mesh that may impact certain use
 cases.</p>
 <p>The mesh analysis works in editmode and shows areas with a high value in red,
@@ -186,25 +186,25 @@ and areas with a low value in blue.
 几何体 outside the range is displayed grey.</p>
 <p>Currently the different modes target 3D-printing as their primary use.</p>
 <div class="section" id="overhang">
-<h2>Overhang<a class="headerlink" href="#overhang" title="Permalink to this headline">¶</a></h2>
+<h2>悬垂<a class="headerlink" href="#overhang" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../_images/editmode_mesh_statvis_overhang.jpg"><img alt="../../_images/editmode_mesh_statvis_overhang.jpg" src="../../_images/editmode_mesh_statvis_overhang.jpg" style="height: 260px;" /></a>
-<p class="caption"><span class="caption-text">Overhang.</span></p>
+<p class="caption"><span class="caption-text">悬垂.</span></p>
 </div>
 <p>Extrusion 3D printers have a physical limit to the overhang that can be printed,
 this display mode shows the overhang with angle range and axis selection.</p>
 </div>
 <div class="section" id="thickness">
-<h2>Thickness<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h2>
+<h2>厚度<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="../../_images/editmode_mesh_statvis_thick.jpg"><img alt="../../_images/editmode_mesh_statvis_thick.jpg" src="../../_images/editmode_mesh_statvis_thick.jpg" style="height: 260px;" /></a>
-<p class="caption"><span class="caption-text">Thickness.</span></p>
+<p class="caption"><span class="caption-text">厚度.</span></p>
 </div>
 <p>Printers have a limited <em>wall-thickness</em> where very thin areas cannot be printed,
 this test uses ray casting and a distance range to the thickness of the geometry.</p>
 </div>
 <div class="section" id="intersections">
-<h2>Intersections<a class="headerlink" href="#intersections" title="Permalink to this headline">¶</a></h2>
+<h2>交集<a class="headerlink" href="#intersections" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../../_images/editmode_mesh_statvis_intersect.jpg"><img alt="../../_images/editmode_mesh_statvis_intersect.jpg" src="../../_images/editmode_mesh_statvis_intersect.jpg" style="height: 260px;" /></a>
 <p class="caption"><span class="caption-text">Intersecting faces.</span></p>
@@ -214,17 +214,17 @@ where the inside/outside of a model cannot be reliably detected.</p>
 <p>Unlike other display modes, intersections have no variance and are either on or off.</p>
 </div>
 <div class="section" id="distortion">
-<h2>Distortion<a class="headerlink" href="#distortion" title="Permalink to this headline">¶</a></h2>
+<h2>畸变<a class="headerlink" href="#distortion" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../../_images/editmode_mesh_statvis_distort.jpg"><img alt="../../_images/editmode_mesh_statvis_distort.jpg" src="../../_images/editmode_mesh_statvis_distort.jpg" style="height: 260px;" /></a>
 <p class="caption"><span class="caption-text">Distorted Faces.</span></p>
 </div>
 <p>Distorted geometry can cause problems since the triangulation of a distorted ngon is undefined.</p>
-<p>Distortion is measured by faces which are not flat,
+<p>畸变 is measured by faces which are not flat,
 with parts of the face pointing in different directions.</p>
 </div>
 <div class="section" id="sharp-edges">
-<h2>Sharp Edges<a class="headerlink" href="#sharp-edges" title="Permalink to this headline">¶</a></h2>
+<h2>锐利<a class="headerlink" href="#sharp-edges" title="Permalink to this headline">¶</a></h2>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../../_images/editmode_mesh_statvis_sharp.jpg"><img alt="../../_images/editmode_mesh_statvis_sharp.jpg" src="../../_images/editmode_mesh_statvis_sharp.jpg" style="height: 260px;" /></a>
 <p class="caption"><span class="caption-text">Sharp edges.</span></p>

@@ -353,7 +353,7 @@ Underline
 
    Position
       This allows you to shift vertically the position of the underline.
-   Thickness
+   厚度
       This controls the thickness of the underline.
 
 .. figure:: /images/textfontsettings.jpg

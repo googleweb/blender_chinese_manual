@@ -196,7 +196,7 @@
 <p class="caption"><span class="caption-text">Solidify Modifier.</span></p>
 </div>
 <dl class="docutils">
-<dt>Thickness</dt>
+<dt>厚度</dt>
 <dd>The depth to be solidified.</dd>
 <dt>偏移量</dt>
 <dd>A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
@@ -241,7 +241,7 @@ so vertices with lower weights will be less thick.</p>
 </dd>
 <dt>Flip Normals</dt>
 <dd>Reverse the normals of all geometry (both the inner and outer surfaces).</dd>
-<dt>Even Thickness</dt>
+<dt>Even 厚度</dt>
 <dd>Maintain thickness by adjusting for sharp corners.
 Sometimes improves quality but also increases computation time.</dd>
 <dt>High Quality Normals</dt>
@@ -283,9 +283,9 @@ the thickness will vary on different sides of the object.</p>
 <div class="section" id="known-limitations">
 <h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="even-thickness">
-<h3>Even Thickness<a class="headerlink" href="#even-thickness" title="Permalink to this headline">¶</a></h3>
+<h3>Even 厚度<a class="headerlink" href="#even-thickness" title="Permalink to this headline">¶</a></h3>
 <p>Solidify thickness is an approximation.
-While &#8220;Even Thickness&#8221; and &#8220;High Quality Normals&#8221; should yield good results,
+While &#8220;Even 厚度&#8221; and &#8220;High Quality Normals&#8221; should yield good results,
 the final wall thickness is not guaranteed and may vary depending on the mesh topology.</p>
 <p>In order to maintain precise wall thickness in every case, we would need to add/remove faces on the offset shell,
 something this modifier doesn&#8217;t do since this would add a lot of complexity and slow down the modifier.</p>

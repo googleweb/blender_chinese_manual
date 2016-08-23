@@ -239,7 +239,7 @@ The second input is a list of shaders that will be responsible for the shading o
 
    shaders_list = [
        SamplingShader(5.0),
-       ConstantThicknessShader(2),
+       Constant厚度Shader(2),
        ConstantColorShader(0.2,0.2,0.2,1),
        ]
    Operators.create(DensityUP1D(8,0.1, IntegrationType.MEAN), shaders_list)

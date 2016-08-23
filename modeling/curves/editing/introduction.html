@@ -240,11 +240,10 @@
 <div class="line">面板:    曲线工具</div>
 </div>
 </div>
-<p><a class="reference internal" href="../../../editors/3dview/transform/transform_control/precision/snap.html"><span class="doc">Mesh snapping</span></a>
-also works with curve components.
-Both control points and their handles will be affected by snapping,
-except for within itself (other components of the active curve).
-吸附 works with 2D curves but points will be constrained to the local XY axes.</p>
+<p><a class="reference internal" href="../../../editors/3dview/transform/transform_control/precision/snap.html"><span class="doc">网格吸附</span></a>
+对曲线组件同样有效.控制点和他们的控制柄都会受到吸附的影响,
+除了它自己内部(活动曲线的其他组件).
+吸附对2D曲线有效但是控制点会被约束到自身XY轴.</p>
 </div>
 <div class="section" id="deforming-tools">
 <h2>变形工具<a class="headerlink" href="#deforming-tools" title="Permalink to this headline">¶</a></h2>
@@ -255,10 +254,10 @@ except for within itself (other components of the active curve).
 <div class="line">菜单:     <span class="menuselection">曲线 ‣ 变换</span></div>
 </div>
 </div>
-<p>The <em>To Sphere</em>, <em>Shear</em>, <em>Warp</em> and <em>Push/Pull</em> transform tools are described in the
-<a class="reference internal" href="../../../editors/3dview/transform/introduction.html"><span class="doc">变换ations</span></a> sections.
-The two other tools, <em>Tilt</em> and <em>Shrink/Fatten 半径</em> are related to
-<a class="reference internal" href="extrude.html"><span class="doc">曲线挤出</span></a>.</p>
+<p><em>球形化</em>, <em>切变</em>, <em>弯绕</em> 和 <em>推/拉</em> 变换工具的描述在
+<a class="reference internal" href="../../../editors/3dview/transform/introduction.html"><span class="doc">变换</span></a> 章节.
+另外两个工具, <em>倾斜</em> 和 <em>法线缩放半径</em> 与
+<a class="reference internal" href="extrude.html"><span class="doc">曲线挤出</span></a> 有关.</p>
 <div class="section" id="smoothing">
 <h3>平滑<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
 <div class="refbox admonition">
@@ -268,21 +267,19 @@ The two other tools, <em>Tilt</em> and <em>Shrink/Fatten 半径</em> are related
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">W</span></code> <span class="menuselection">‣ 平滑</span></div>
 </div>
 </div>
-<p>Curve smoothing is available through the specials menu. For 贝塞尔曲线, this smoothing
-operation reduces the distance between the selected control point/s and
-their neighbors, while keeping the neighbors anchored.
-Does not effect control point tangents.</p>
+<p>曲线平滑可通过特殊菜单. 对于贝塞尔曲线, 平滑操作减少了所选选邻控制点间的距离, 同时保持邻居固定.
+不影响控制点的切线.</p>
 <div class="figure" id="id2">
 <img alt="../../../_images/modeling_curves_smoothing_example1.jpg" src="../../../_images/modeling_curves_smoothing_example1.jpg" />
-<p class="caption"><span class="caption-text">Original, unsmoothed Curve.</span></p>
+<p class="caption"><span class="caption-text">原始, 未平滑的曲线.</span></p>
 </div>
 <div class="figure" id="id3">
 <img alt="../../../_images/modeling_curves_smoothing_example2.jpg" src="../../../_images/modeling_curves_smoothing_example2.jpg" />
-<p class="caption"><span class="caption-text">Entire curve smoothed over 200 times by holding <code class="kbd docutils literal"><span class="pre">Shift-R</span></code> to repeat last step.</span></p>
+<p class="caption"><span class="caption-text">整条曲线平滑超过200次通过按住 <code class="kbd docutils literal"><span class="pre">Shift-R</span></code> 重复上一步.</span></p>
 </div>
 <div class="figure" id="id4">
 <img alt="../../../_images/modeling_curves_smoothing_example3.jpg" src="../../../_images/modeling_curves_smoothing_example3.jpg" />
-<p class="caption"><span class="caption-text">Only three control points in the center smoothed over 200 times.</span></p>
+<p class="caption"><span class="caption-text">仅中心三个控制点平滑超过200次.</span></p>
 </div>
 </div>
 </div>
@@ -296,8 +293,8 @@ Does not effect control point tangents.</p>
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code></div>
 </div>
 </div>
-<p>The <em>镜像</em> tool is also available, behaving exactly as with
-<a class="reference internal" href="../../meshes/editing/deforming/mirror.html"><span class="doc">mesh vertices</span></a>,</p>
+<p> <em>镜像</em> 工具也是可用的, 表现正如
+<a class="reference internal" href="../../meshes/editing/deforming/mirror.html"><span class="doc">网格</span></a>,</p>
 </div>
 <div class="section" id="set-bezier-handle-type">
 <h2>贝塞尔曲线控制柄类型<a class="headerlink" href="#set-bezier-handle-type" title="Permalink to this headline">¶</a></h2>
@@ -310,9 +307,9 @@ Does not effect control point tangents.</p>
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">V</span></code></div>
 </div>
 </div>
-<p>Handle types are a property of <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线.</span></a> and can be used to alter features of the curve.
-For example, switching to <em>Vector handles</em> can be used to create curves with sharp corners.
-Read the <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线</span></a> page for more details.</p>
+<p>控制柄类型是 <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线</span></a> 的一个属性. 可以用来改变曲线的特征.
+例如, 切换到 <em>矢量 控制柄</em> 可以用于创建带有锋利边角的曲线.
+阅读 <a class="reference internal" href="../introduction.html"><span class="doc">贝塞尔曲线</span></a> 页面获取更过细节.</p>
 </div>
 <div class="section" id="extending-curves">
 <span id="modeling-curves-extending"></span><h2>曲线挤出<a class="headerlink" href="#extending-curves" title="Permalink to this headline">¶</a></h2>
@@ -324,12 +321,12 @@ Read the <a class="reference internal" href="../introduction.html"><span class="
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>, <code class="kbd docutils literal"><span class="pre">E</span></code></div>
 </div>
 </div>
-<p>Once a curve is created you can add new segments (in fact,
-new control points defining new segments), either by extruding,
-or placing new handles with <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>.
-Each new segment is added to one end of the curve.
-The 贝塞尔曲线 can only be extend at the endpoints.
-<code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> on inner control points will make unconnected duplicates.</p>
+<p>一条曲线一旦创建你就可以添加新的线段(事实上,
+新的控制点定义新的线段), 通过挤出,
+或者安置新的控制柄使用 <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code>.
+每一个新的线段被添加到曲线的一端.
+贝塞尔曲线只能在端点处延伸.
+<code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> 在内部控制点上将会创建非连接复制点.</p>
 </div>
 <div class="section" id="subdivision">
 <span id="modeling-curves-subdivision"></span><h2>细分<a class="headerlink" href="#subdivision" title="Permalink to this headline">¶</a></h2>
@@ -342,10 +339,9 @@ The 贝塞尔曲线 can only be extend at the endpoints.
 <div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">W</span></code></div>
 </div>
 </div>
-<p>Curve subdivision simply subdivides all selected segments by adding one or more control points
-between the selected segments. To control the number of cuts,
-press <code class="kbd docutils literal"><span class="pre">W</span></code> to make a single subdivision.
-Then press <code class="kbd docutils literal"><span class="pre">F6</span></code> to bring up the <em>Number of Cuts</em> menu.</p>
+<p>曲线细分简单细分所有选择的线段通过在所选线段间添加一个或者多个控制点. 为了控制切割次数,
+按 <code class="kbd docutils literal"><span class="pre">W</span></code> 进行一次细分.
+然后按 <code class="kbd docutils literal"><span class="pre">F6</span></code> 呼出 <em>切割次数</em> 菜单.</p>
 </div>
 <div class="section" id="duplication">
 <h2>复制<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h2>

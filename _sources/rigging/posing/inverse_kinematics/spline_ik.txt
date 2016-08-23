@@ -63,7 +63,7 @@ By default, this option is not enabled,
 and the bones will be made to follow the curve in its untransformed position.
 
 
-Thickness Controls
+厚度 Controls
 ------------------
 
 The thickness of the bones in the chain is controlled using the constraint's 'XZ Scale Mode'

@@ -15,7 +15,7 @@ Scale
    Overall texture scale.
 Detail
    Amount of noise detail.
-Distortion
+畸变
    Amount of distortion.
 
 

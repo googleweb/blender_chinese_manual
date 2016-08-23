@@ -1,7 +1,7 @@
 ..    TODO/Review: {{review|split=X|text=splitted mesh - mesh analysis}} .
 
 *************
-Mesh Analysis
+网格分析
 *************
 
 Mesh analysis is useful for displaying attributes of the mesh that may impact certain use
@@ -14,33 +14,33 @@ and areas with a low value in blue.
 Currently the different modes target 3D-printing as their primary use.
 
 
-Overhang
+悬垂
 ========
 
 .. figure:: /images/editmode_mesh_statvis_overhang.jpg
    :height: 260px
 
-   Overhang.
+   悬垂.
 
 
 Extrusion 3D printers have a physical limit to the overhang that can be printed,
 this display mode shows the overhang with angle range and axis selection.
 
 
-Thickness
+厚度
 =========
 
 .. figure:: /images/editmode_mesh_statvis_thick.jpg
    :height: 260px
 
-   Thickness.
+   厚度.
 
 
 Printers have a limited *wall-thickness* where very thin areas cannot be printed,
 this test uses ray casting and a distance range to the thickness of the geometry.
 
 
-Intersections
+交集
 =============
 
 .. figure:: /images/editmode_mesh_statvis_intersect.jpg
@@ -55,7 +55,7 @@ where the inside/outside of a model cannot be reliably detected.
 Unlike other display modes, intersections have no variance and are either on or off.
 
 
-Distortion
+畸变
 ==========
 
 .. figure:: /images/editmode_mesh_statvis_distort.jpg
@@ -66,11 +66,11 @@ Distortion
 
 Distorted geometry can cause problems since the triangulation of a distorted ngon is undefined.
 
-Distortion is measured by faces which are not flat,
+畸变 is measured by faces which are not flat,
 with parts of the face pointing in different directions.
 
 
-Sharp Edges
+锐利
 ===========
 
 .. figure:: /images/editmode_mesh_statvis_sharp.jpg

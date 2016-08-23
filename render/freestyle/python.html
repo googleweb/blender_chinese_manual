@@ -369,7 +369,7 @@ A Chain that doesn&#8217;t satisfy the condition won&#8217;t lead to a Stroke.
 The second input is a list of shaders that will be responsible for the shading of each built stroke.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">shaders_list</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">SamplingShader</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
-    <span class="n">ConstantThicknessShader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">Constant厚度Shader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
     <span class="n">ConstantColorShader</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
     <span class="p">]</span>
 <span class="n">Operators</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">DensityUP1D</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">IntegrationType</span><span class="o">.</span><span class="n">MEAN</span><span class="p">),</span> <span class="n">shaders_list</span><span class="p">)</span>

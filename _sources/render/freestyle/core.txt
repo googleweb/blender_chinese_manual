@@ -12,7 +12,7 @@ Core Options
 Activating Freestyle in the *渲染* tab of the Properties Editor will
 give you the following options:
 
-Line Thickness
+Line 厚度
    There are two different modes for defining the base line thickness:
 
    Absolute
@@ -22,5 +22,5 @@ Line Thickness
       For instance, the *unit line thickness* is 1.0 with the image height set to 480 px, 1.5 with 720 px
       and 2.0 with 960 px.
 
-Line Thickness
+Line 厚度
    Only for *Absolute* line thickness: base line thickness in pixels is 1.0 by default.

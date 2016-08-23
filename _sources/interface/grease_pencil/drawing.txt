@@ -80,7 +80,7 @@ Fill
    Sets the color of the interior space enclosed by the strokes.
    Increase the opacity from zero to make the fill visible.
    Fill works best on convex shapes.
-Thickness
+厚度
    Width of the line strokes.
 X-Ray
    Makes the lines visible when they pass behind other objects in the scene.

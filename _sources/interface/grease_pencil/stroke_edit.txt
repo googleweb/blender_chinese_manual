@@ -39,7 +39,7 @@ The selected points are highlighted as in the image above.
 
 .. hint::
 
-   Set the layer's *Stroke Thickness* to 1 to make the points more visible.
+   Set the layer's *Stroke 厚度* to 1 to make the points more visible.
 
 
 Use the mouse to select the points, or one of the selection buttons in the panel as detailed in
@@ -155,8 +155,8 @@ Smooth
    Affect Pressure
        Use this option to perform smoothing on stroke thickness values.
 
-Thickness
-   The Thickness Brush can be used to increase or decrease the thickness of the parts of the stroke under the cursor.
+厚度
+   The 厚度 Brush can be used to increase or decrease the thickness of the parts of the stroke under the cursor.
 Grab
    Takes the stroke points which fall within the brush circle when the sculpting action begins,
    and allows you to translate this set of points. 

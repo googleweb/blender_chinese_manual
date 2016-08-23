@@ -25,7 +25,7 @@ Properties
 Pixel Size
    When enabled, the size of edge lines are set in screen space.
 Size
-   Thickness of the edge lines.
+   厚度 of the edge lines.
 
 
 Outputs

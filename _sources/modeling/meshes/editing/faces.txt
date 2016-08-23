@@ -222,7 +222,7 @@ uniformly to give volume to a :term:`non-manifold` surface.
 This is also available as a :doc:`Modifier </modeling/modifiers/generate/solidify>`.
 After using the tool, you can set the offset distance in the Tool Palette.
 
-Thickness
+厚度
    Amount to offset the newly created surface.
    Positive values offset the surface inward relative to the normals.
    Negative values offset outward.

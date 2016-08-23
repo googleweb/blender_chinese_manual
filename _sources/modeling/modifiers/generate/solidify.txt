@@ -14,7 +14,7 @@ Options
    Solidify Modifier.
 
 
-Thickness
+厚度
    The depth to be solidified.
 偏移量
    A value between (-1 to 1) to locate the solidified output inside or outside the original mesh.
@@ -59,7 +59,7 @@ Crease
 
 Flip Normals
    Reverse the normals of all geometry (both the inner and outer surfaces).
-Even Thickness
+Even 厚度
    Maintain thickness by adjusting for sharp corners.
    Sometimes improves quality but also increases computation time.
 High Quality Normals
@@ -99,11 +99,11 @@ Material Index 偏移量
 Known Limitations
 =================
 
-Even Thickness
+Even 厚度
 --------------
 
 Solidify thickness is an approximation.
-While "Even Thickness" and "High Quality Normals" should yield good results,
+While "Even 厚度" and "High Quality Normals" should yield good results,
 the final wall thickness is not guaranteed and may vary depending on the mesh topology.
 
 In order to maintain precise wall thickness in every case, we would need to add/remove faces on the offset shell,

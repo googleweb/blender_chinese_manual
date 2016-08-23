@@ -172,7 +172,7 @@ function. UV maps and vertex colors can be retrieved using their name.
 ``geom:curve_intercept``
    Point along the strand, from root to tip
 ``geom:curve_thickness``
-   Thickness of the strand
+   厚度 of the strand
 ``geom:curve_tangent_normal``
    Tangent Normal of the strand
 ``path:ray_length``
